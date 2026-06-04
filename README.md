@@ -17,6 +17,7 @@ A mobile-friendly web quiz for Reproductive Block MCQs — all years combined.
 - **Answer explanations** — a simple medical explanation shown under every question in quiz, review, and browse modes
 - **AI prediction** — for questions with no answer or a seemingly wrong answer, an AI prediction with a brief rationale is shown (the site's own answer is kept as the baseline)
 - **Med 445 — King Saud University** logo in the corner
+- **Two themes** — Light (default) and Dark, switchable from the top-left toggle (choice is remembered)
 - Fully responsive — works on mobile, tablet, and desktop
 
 ## How to Deploy on GitHub Pages
