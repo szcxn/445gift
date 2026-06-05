@@ -18,6 +18,8 @@ A mobile-friendly web quiz for Reproductive Block MCQs — all years combined.
 - **AI prediction** — for questions with no answer or a seemingly wrong answer, an AI prediction with a brief rationale is shown (the site's own answer is kept as the baseline)
 - **Med 445 — King Saud University** logo in the corner
 - **Two themes** — Light (default) and Dark, switchable from the top-left toggle (choice is remembered)
+- **Auto-save & resume** — progress is saved to your browser automatically; reopen or refresh and choose to resume your session or start over (with a Reset Saved Progress option)
+- Subtle animated glassmorphism footer with credits
 - Fully responsive — works on mobile, tablet, and desktop
 
 ## How to Deploy on GitHub Pages
