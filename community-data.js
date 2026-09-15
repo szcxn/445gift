@@ -1,0 +1,1 @@
+window.GIFT445_COMMUNITY_QUESTIONS = [];

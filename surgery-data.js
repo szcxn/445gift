@@ -1,0 +1,1 @@
+window.GIFT445_SURGERY_QUESTIONS = [];

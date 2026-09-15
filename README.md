@@ -1,48 +1,61 @@
-# Reproductive Block MCQ
+# Gift 445 Medical Question Bank
 
-A mobile-friendly web quiz for Reproductive Block MCQs — all years combined.
-
-## Live Site
-
-[Open Quiz →](https://YOUR-USERNAME.github.io/reproductive-mcq/)
+A responsive question bank for Medicine, Surgery, and Community Medicine.
 
 ## Features
 
-- 637 questions across 10 batches (434–444)
-- Filter by **batch** (دفعة) or by **subject** (مادة)
-- Every question shows its **original reference** (Batch + Q number)
-- Repeated questions across batches are flagged with 🔄
-- Shuffle mode, score ring, mistake review, retry wrong answers
-- **Browse mode** — read all questions with answers visible
-- **Answer explanations** — a simple medical explanation shown under every question in quiz, review, and browse modes
-- **AI prediction** — for questions with no answer or a seemingly wrong answer, an AI prediction with a brief rationale is shown (the site's own answer is kept as the baseline)
-- **Med 445 — King Saud University** logo in the corner
-- **Two themes** — Light (default) and Dark, switchable from the top-left toggle (choice is remembered)
-- **Auto-save & resume** — progress is saved to your browser automatically; reopen or refresh and choose to resume your session or start over (with a Reset Saved Progress option)
-- Subtle animated glassmorphism footer with credits
-- Fully responsive — works on mobile, tablet, and desktop
+- Subject, batch, cycle, and lecture navigation
+- Complete-subject and complete-cycle practice
+- Light and dark themes
+- Per-device progress and answer saving
+- Mobile-first, static hosting with no account required
+- Duplicate protection using stable question IDs, source locations, and normalized stems
 
-## How to Deploy on GitHub Pages
+## Project structure
 
-1. Create a new GitHub repository
-2. Upload `index.html` to the root
-3. Go to **Settings → Pages**
-4. Set source to **main branch / root**
-5. Your site will be live at `https://username.github.io/repo-name/`
+- `index.html` — interface, navigation, and quiz behavior
+- `medicine-data.js` — Medicine questions
+- `surgery-data.js` — Surgery questions
+- `community-data.js` — Community Medicine questions
+- `445-logo.png` — public branding
 
-## Batch Status
+## Adding questions
 
-| Batch | Questions | Notes |
-|-------|-----------|-------|
-| 444 | 42 | Complete |
-| 443 | 79 | Complete (Q66 absent from source PDF) |
-| 442 | 69 | Complete (no Q-number prefix in PDF) |
-| 441 | 46 | Complete |
-| 439 | 81 | Complete ✓ |
-| 438 | 68 | Complete ✓ |
-| 437 | 61 | Complete ✓ |
-| 436 | 66 | Complete ✓ |
-| 435 | 92 | Complete ✓ |
-| 434 | 33 | **Incomplete** — PDF cuts off at Q33; Q34–Q53 absent |
+Add questions to the matching subject data file. Each file exports an array on `window` and can be updated independently.
 
-**Total: 637 questions**
+```js
+{
+  id: "subject-batch-topic-q001",
+  subjectId: "medicine",
+  cycle: "Cardiology",
+  lecture: "Acute Coronary Syndromes",
+  lectureOrder: 2,
+  assessment: "Final",
+  sourceBatch: "445",
+  stem: "Question text",
+  options: [
+    { id: "A", text: "Option A" },
+    { id: "B", text: "Option B" },
+    { id: "C", text: "Option C" },
+    { id: "D", text: "Option D" }
+  ],
+  sourceAnswer: "A",
+  explanation: "Concise explanation.",
+  sourceLocations: [
+    { assessment: "Final", batch: "445", questionNumber: 1 }
+  ],
+  references: []
+}
+```
+
+For a subject organized directly by lecture, set `cycle` to `null`. For cycle-based navigation, use a consistent cycle name and lecture titles. Keep every `id` unique and stable so saved progress continues to work after updates.
+
+## Local preview
+
+Serve the repository with any static web server, for example:
+
+```bash
+python3 -m http.server 8765
+```
+
+Then open `http://127.0.0.1:8765/`.
