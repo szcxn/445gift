@@ -584,6 +584,71 @@
     .batch-panel[hidden] { display: none; }
     .batch-panel .route-grid { margin-top: 10px; }
 
+    .lecture-mix-groups {
+      display: grid;
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .lecture-mix-group {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 15px;
+      background: var(--panel-soft);
+    }
+
+    .lecture-mix-group h3 {
+      margin: 0;
+      padding: 13px 15px;
+      border-bottom: 1px solid var(--line);
+      font-size: 13px;
+    }
+
+    .lecture-mix-options {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1px;
+      background: var(--line);
+    }
+
+    .lecture-mix-option {
+      display: grid;
+      grid-template-columns: 22px minmax(0, 1fr);
+      gap: 10px;
+      align-items: center;
+      min-height: 58px;
+      padding: 11px 14px;
+      background: var(--panel);
+      cursor: pointer;
+    }
+
+    .lecture-mix-option:hover { background: var(--accent-soft); }
+    .lecture-mix-option input { width: 17px; height: 17px; accent-color: var(--accent); }
+    .lecture-mix-option strong { display: block; font-size: 12px; line-height: 1.35; }
+    .lecture-mix-option small { display: block; margin-top: 3px; color: var(--muted); font-size: 10px; }
+
+    .lecture-mix-toolbar {
+      position: sticky;
+      bottom: 10px;
+      z-index: 3;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      margin-top: 16px;
+      padding: 13px;
+      border: 1px solid var(--line-strong);
+      border-radius: 14px;
+      background: color-mix(in srgb, var(--panel) 94%, transparent);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+
+    .lecture-mix-summary { color: var(--muted); font-size: 11px; line-height: 1.45; }
+    .lecture-mix-summary strong { display: block; color: var(--text); font-size: 13px; }
+    .lecture-mix-actions { display: flex; gap: 8px; flex-shrink: 0; }
+
     .quiz-toolbar {
       display: flex;
       align-items: center;
@@ -723,6 +788,79 @@
     .footer-contact a { color: var(--muted); text-decoration: none; }
     .footer-contact a:hover { color: var(--accent); text-decoration: underline; text-underline-offset: 2px; }
 
+    .donation-section {
+      display: grid;
+      margin-top: 58px;
+      place-items: center;
+    }
+
+    .donation-card {
+      display: grid;
+      width: min(100%, 460px);
+      overflow: hidden;
+      color: var(--text);
+      text-align: center;
+      text-decoration: none;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      background: var(--panel);
+      box-shadow: var(--shadow);
+      transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+    }
+
+    .donation-card:hover {
+      border-color: #4b9b84;
+      box-shadow: var(--shadow-strong);
+      transform: translateY(-3px);
+    }
+
+    .donation-card:focus-visible {
+      outline: 3px solid rgba(75, 155, 132, .28);
+      outline-offset: 4px;
+    }
+
+    .donation-image-wrap {
+      display: grid;
+      min-height: 175px;
+      place-items: center;
+      padding: clamp(16px, 3.5vw, 26px);
+      background: #ffffff;
+    }
+
+    .donation-image {
+      display: block;
+      width: min(100%, 320px);
+      height: auto;
+      border-radius: 14px;
+    }
+
+    .donation-copy {
+      display: grid;
+      gap: 12px;
+      padding: 21px clamp(18px, 4vw, 30px) 24px;
+      direction: rtl;
+      background: linear-gradient(145deg, color-mix(in srgb, #43917b 9%, var(--panel)), var(--panel));
+      font-family: "Geeza Pro", "Noto Naskh Arabic", "Amiri", Tahoma, Arial, serif;
+    }
+
+    .donation-quote {
+      font-size: clamp(24px, 3.2vw, 30px);
+      font-weight: 700;
+      line-height: 1.65;
+    }
+
+    .donation-cta {
+      width: fit-content;
+      margin: 2px auto 0;
+      padding: 9px 20px;
+      color: #ffffff;
+      border-radius: 999px;
+      background: #286f60;
+      font-family: Inter, "SF Pro Text", "Segoe UI", Arial, sans-serif;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
     @keyframes reveal {
       from { opacity: 0; transform: translateY(5px); }
       to { opacity: 1; transform: translateY(0); }
@@ -759,11 +897,19 @@
       .subject-card h3 { overflow-wrap: anywhere; }
       .workspace { padding: 20px; }
       .route-grid { grid-template-columns: 1fr; }
+      .lecture-mix-options { grid-template-columns: 1fr; }
+      .lecture-mix-toolbar { align-items: stretch; flex-direction: column; }
+      .lecture-mix-actions { width: 100%; }
+      .lecture-mix-actions button { flex: 1; }
       .route-section-head { align-items: flex-start; flex-direction: column; gap: 4px; }
       .quiz-toolbar { align-items: stretch; flex-direction: column; }
       .quiz-actions button { flex: 1; min-width: 0; }
       .question-card { padding: 17px; }
       .question-meta { flex-direction: column; }
+      .donation-section { margin-top: 42px; }
+      .donation-card { border-radius: 19px; }
+      .donation-image-wrap { min-height: 150px; padding: 18px; }
+      .donation-copy { padding: 19px 16px 22px; }
       footer { align-items: flex-start; flex-direction: column; }
       .footer-meta { justify-items: start; text-align: left; }
     }
@@ -784,10 +930,10 @@
     <header class="topbar">
       <div class="brand">
         <span class="brand-mark" aria-hidden="true"><img src="445-logo.png" alt=""></span>
-        <span class="brand-copy"><span>Medical Question Bank</span><small>Gift 445 · King Saud University</small></span>
+        <span class="brand-copy"><span>Medical Question Bank</span><small>Gift 445</small></span>
       </div>
       <div class="topbar-actions">
-        <span class="status" id="save-status">Saved on this device</span>
+        <span class="status" id="save-status">Local saving ready</span>
         <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark mode">
           <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
             <circle cx="12" cy="12" r="3.5"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.65 17.65l1.42 1.42M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.65 6.35l1.42-1.42"></path>
@@ -811,7 +957,7 @@
       </div>
       <div class="hero-identity">
         <div class="hero-logo-frame">
-          <img class="hero-logo" src="445-logo.png" alt="Gift 445 batch logo, King Saud University">
+          <img class="hero-logo" src="445-logo.png" alt="Gift 445 batch logo">
         </div>
       </div>
     </section>
@@ -826,16 +972,26 @@
       <section class="workspace" id="workspace" aria-live="polite"></section>
     </section>
 
+    <section class="donation-section" aria-label="Ehsan donation campaign">
+      <a class="donation-card" href="https://ehsan.sa/donationcampaign/details/1266759" target="_blank" rel="noopener noreferrer" aria-label="Open the Ehsan donation campaign">
+        <span class="donation-image-wrap"><img class="donation-image" src="ehsan-donation.jpg" alt="شعار منصة إحسان"></span>
+        <span class="donation-copy" lang="ar">
+          <span class="donation-quote">مَا نَقَصَ مَالٌ مِنْ صَدَقَةٍ</span>
+          <span class="donation-cta">اضغط هنا للتبرع عبر إحسان</span>
+        </span>
+      </a>
+    </section>
+
     <footer>
       <span class="footer-brand"><img src="445-logo.png" alt=""><span>Medical Question Bank</span></span>
       <span class="footer-meta">
-        <span class="footer-credit">Designed by Mohammed Al Muaddi</span>
+        <span class="footer-credit">Made by Mohammed Al Muaddi</span>
         <span class="footer-contact">For suggestions or to report an issue: <a href="mailto:mhmdalmdy2@gmail.com">mhmdalmdy2@gmail.com</a></span>
       </span>
     </footer>
   </main>
 
-  <script src="medicine-data.js"></script>
+  <script src="medicine-data.js?v=20260921-neph-audit"></script>
   <script src="surgery-data.js"></script>
   <script src="community-data.js"></script>
   <script>
@@ -942,10 +1098,17 @@
     }
 
     function persistState() {
+      const hasQuizState = appState.quiz.questionIds.length > 0 || Object.keys(appState.quiz.answers).length > 0 || appState.quiz.flagged.length > 0;
+      if (!hasQuizState) {
+        appState.savedAt = 0;
+        try { localStorage.removeItem(STORAGE_KEY); } catch (_) {}
+        saveStatus.textContent = "Local saving ready";
+        return true;
+      }
       appState.savedAt = Date.now();
       try {
         localStorage.setItem(STORAGE_KEY, JSON.stringify(appState));
-        saveStatus.textContent = "Saved on this device";
+        saveStatus.textContent = hasResumableProgress() ? "Progress saved on this device" : "Local saving ready";
         return true;
       } catch (_) {
         saveStatus.textContent = "Saving unavailable";
@@ -992,7 +1155,7 @@
 
     function renderResumePanel() {
       const subject = SUBJECTS.find(item => item.id === appState.navigation.subjectId);
-      if (!subject || !appState.savedAt) {
+      if (!subject || !hasResumableProgress()) {
         resumePanel.classList.remove("visible");
         resumePanel.innerHTML = "";
         return;
@@ -1014,13 +1177,23 @@
       document.getElementById("reset-progress").addEventListener("click", resetSavedProgress);
     }
 
+    function hasResumableProgress() {
+      const resumableModes = new Set(["all", "assessment", "batch", "cycle", "lecture", "lecture-mix"]);
+      const validQuestionIds = appState.quiz.questionIds.filter(id => QUESTION_BANK.some(question => question.id === id));
+      return Boolean(
+        appState.savedAt
+        && appState.navigation.subjectId
+        && resumableModes.has(appState.navigation.mode)
+        && validQuestionIds.length
+      );
+    }
+
     function resetSavedProgress() {
-      if (!window.confirm("Reset all saved progress on this device?")) return;
       appState = freshState();
       try { localStorage.removeItem(STORAGE_KEY); } catch (_) {}
       closeWorkspace();
       renderResumePanel();
-      saveStatus.textContent = "Ready to save on this device";
+      saveStatus.textContent = "No saved progress";
     }
 
     function openSubject(subjectId) {
@@ -1042,6 +1215,7 @@
         .sort((a, b) => Number(b.batch) - Number(a.batch) || a.assessment.localeCompare(b.assessment));
       const directLectures = [...new Set(questions.filter(question => !question.cycle && question.lecture).map(question => question.lecture))]
         .sort((a, b) => a.localeCompare(b));
+      const lectureCount = new Set(questions.filter(question => question.lecture).map(question => `${question.cycle || ""}|${question.lecture}`)).size;
 
       workspaceElement.innerHTML = questions.length ? `
         ${workspaceHeader(subject.name, "Selected subject")}
@@ -1065,6 +1239,13 @@
             <div class="batch-panel" id="batch-list" hidden><div class="route-grid">
               ${batches.map(({ assessment, batch }) => `<button class="route-card batch-card" type="button" data-assessment="${escapeHtml(assessment)}" data-batch="${escapeHtml(batch)}"><strong>Batch ${escapeHtml(batch)} · ${escapeHtml(assessment)}</strong><span>${questionCountLabel(questionsForBatch(subjectId, assessment, batch).length)}</span></button>`).join("")}
             </div></div>
+          </section>` : ""}
+        ${lectureCount >= 2 ? `
+          <section class="route-section">
+            <div class="route-section-head"><h3>By Lecture</h3><p>Select several lectures and mix their questions into one test.</p></div>
+            <div class="route-grid">
+              <button class="route-card featured lecture-mix-card" type="button"><strong>Create a Mixed Lecture Quiz</strong><span>Choose from ${lectureCount} lectures · question order is shuffled</span></button>
+            </div>
           </section>` : ""}
         ${cycles.length ? `
           <section class="route-section">
@@ -1111,6 +1292,7 @@
       workspaceElement.querySelectorAll(".cycle-card").forEach(card => {
         card.addEventListener("click", () => openCycle(subjectId, card.dataset.cycle));
       });
+      workspaceElement.querySelector(".lecture-mix-card")?.addEventListener("click", () => openLectureMixer(subjectId));
       workspaceElement.querySelectorAll(".direct-lecture-card").forEach(card => {
         card.addEventListener("click", () => openLecture(subjectId, null, card.dataset.lecture));
       });
@@ -1147,6 +1329,7 @@
         <section class="route-section">
           <div class="route-section-head"><h3>By Lecture</h3><p>Questions are grouped by their matching lecture.</p></div>
         <div class="route-grid">
+          ${lectures.length >= 2 ? `<button class="route-card featured cycle-lecture-mix-card" type="button"><strong>Mix ${escapeHtml(cycle)} Lectures</strong><span>Select lectures and shuffle their questions together</span></button>` : ""}
           ${lectures.map(lecture => {
             const lectureQuestions = questions.filter(question => question.lecture === lecture);
             const answered = lectureQuestions.filter(question => appState.quiz.answers[question.id]).length;
@@ -1158,12 +1341,125 @@
       bindWorkspaceClose();
       workspaceElement.querySelector('[data-action="subject"]').addEventListener("click", () => openSubject(subjectId));
       workspaceElement.querySelector(".cycle-all-card").addEventListener("click", () => openCycleQuestions(subjectId, cycle));
+      workspaceElement.querySelector(".cycle-lecture-mix-card")?.addEventListener("click", () => openLectureMixer(subjectId, cycle));
       workspaceElement.querySelectorAll(".lecture-card").forEach(card => {
         card.addEventListener("click", () => openLecture(subjectId, cycle, card.dataset.lecture));
       });
       appState.navigation = { subjectId, cycle, lecture: null, mode: null, assessment: null, batch: null, title: cycle };
       persistState();
       renderResumePanel();
+    }
+
+    function openLectureMixer(subjectId, cycleFilter = null) {
+      const subject = SUBJECTS.find(item => item.id === subjectId);
+      if (!subject) return;
+      const questions = questionsFor(subjectId).filter(question => question.lecture && (!cycleFilter || question.cycle === cycleFilter));
+      const grouped = new Map();
+
+      questions.forEach(question => {
+        const cycle = question.cycle || "General";
+        if (!grouped.has(cycle)) grouped.set(cycle, new Map());
+        const lectures = grouped.get(cycle);
+        const current = lectures.get(question.lecture) || { count: 0, order: Infinity };
+        current.count += 1;
+        current.order = Math.min(current.order, Number.isInteger(question.lectureOrder) ? question.lectureOrder : Infinity);
+        lectures.set(question.lecture, current);
+      });
+
+      const cycles = [...grouped.keys()].sort((a, b) => {
+        const aIndex = CYCLE_ORDER.indexOf(a);
+        const bIndex = CYCLE_ORDER.indexOf(b);
+        return (aIndex < 0 ? 999 : aIndex) - (bIndex < 0 ? 999 : bIndex) || a.localeCompare(b);
+      });
+
+      workspaceElement.innerHTML = `
+        ${workspaceHeader(cycleFilter ? `${cycleFilter} Lecture Mix` : "Mixed Lecture Quiz", "By lecture")}
+        <nav class="workspace-path" aria-label="Breadcrumb">
+          <button class="crumb-button" type="button" data-action="subject">${escapeHtml(subject.name)}</button><span>›</span>${cycleFilter ? `<button class="crumb-button" type="button" data-action="cycle">${escapeHtml(cycleFilter)}</button><span>›</span>` : ""}<span>Choose lectures</span>
+        </nav>
+        <section class="route-section">
+          <div class="route-section-head"><h3>Select two or more lectures</h3><p>The quiz hides lecture names and shuffles all selected questions together.</p></div>
+          <div class="lecture-mix-groups">
+            ${cycles.map(cycle => {
+              const lectures = [...grouped.get(cycle).entries()].sort((a, b) => (a[1].order - b[1].order) || a[0].localeCompare(b[0]));
+              return `<section class="lecture-mix-group">
+                <h3>${escapeHtml(cycle)}</h3>
+                <div class="lecture-mix-options">
+                  ${lectures.map(([lecture, details]) => `<label class="lecture-mix-option">
+                    <input class="lecture-mix-check" type="checkbox" data-cycle="${escapeHtml(cycle === "General" ? "" : cycle)}" data-lecture="${escapeHtml(lecture)}">
+                    <span><strong>${escapeHtml(lecture)}</strong><small>${questionCountLabel(details.count)}</small></span>
+                  </label>`).join("")}
+                </div>
+              </section>`;
+            }).join("")}
+          </div>
+          <div class="lecture-mix-toolbar">
+            <div class="lecture-mix-summary" aria-live="polite"><strong>Choose at least two lectures</strong><span>0 questions selected</span></div>
+            <div class="lecture-mix-actions">
+              <button class="text-button" type="button" data-action="clear-lectures">Clear</button>
+              <button class="primary-button" type="button" data-action="start-lecture-mix" disabled>Start Mixed Quiz</button>
+            </div>
+          </div>
+        </section>`;
+      workspaceElement.classList.add("visible");
+      bindWorkspaceClose();
+      workspaceElement.querySelector('[data-action="subject"]').addEventListener("click", () => openSubject(subjectId));
+      workspaceElement.querySelector('[data-action="cycle"]')?.addEventListener("click", () => openCycle(subjectId, cycleFilter));
+
+      const checks = [...workspaceElement.querySelectorAll(".lecture-mix-check")];
+      const startButton = workspaceElement.querySelector('[data-action="start-lecture-mix"]');
+      const summary = workspaceElement.querySelector(".lecture-mix-summary");
+
+      function selectedLectureQuestions() {
+        const selected = checks.filter(check => check.checked);
+        const selectedKeys = new Set(selected.map(check => `${check.dataset.cycle}|${check.dataset.lecture}`));
+        const selectedQuestions = questions.filter(question => selectedKeys.has(`${question.cycle || ""}|${question.lecture}`));
+        return { selected, selectedQuestions };
+      }
+
+      function updateLectureMixSummary() {
+        const { selected, selectedQuestions } = selectedLectureQuestions();
+        const ready = selected.length >= 2;
+        startButton.disabled = !ready;
+        summary.innerHTML = `<strong>${ready ? `${selected.length} lectures selected` : "Choose at least two lectures"}</strong><span>${questionCountLabel(selectedQuestions.length)} selected</span>`;
+      }
+
+      checks.forEach(check => check.addEventListener("change", updateLectureMixSummary));
+      workspaceElement.querySelector('[data-action="clear-lectures"]').addEventListener("click", () => {
+        checks.forEach(check => { check.checked = false; });
+        updateLectureMixSummary();
+      });
+      startButton.addEventListener("click", () => {
+        const { selected, selectedQuestions } = selectedLectureQuestions();
+        if (selected.length < 2 || !selectedQuestions.length) return;
+        const shuffled = shuffleQuestions(selectedQuestions);
+        openQuestionSet("Mixed Lecture Quiz", shuffled, {
+          subjectId,
+          cycle: null,
+          lecture: null,
+          mode: "lecture-mix",
+          assessment: null,
+          batch: null,
+          title: `Mixed Lecture Quiz · ${selected.length} lectures`
+        });
+      });
+
+      appState.navigation = { subjectId, cycle: null, lecture: null, mode: "lecture-picker", assessment: null, batch: null, title: "Choose lectures" };
+      persistState();
+      renderResumePanel();
+      workspaceElement.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    }
+
+    function shuffleQuestions(questions) {
+      const shuffled = [...questions];
+      const randomValues = new Uint32Array(shuffled.length);
+      if (window.crypto?.getRandomValues) window.crypto.getRandomValues(randomValues);
+      for (let index = shuffled.length - 1; index > 0; index -= 1) {
+        const random = window.crypto?.getRandomValues ? randomValues[index] / 4294967296 : Math.random();
+        const swapIndex = Math.floor(random * (index + 1));
+        [shuffled[index], shuffled[swapIndex]] = [shuffled[swapIndex], shuffled[index]];
+      }
+      return shuffled;
     }
 
     function openLecture(subjectId, cycle, lecture, resume = false) {
@@ -1267,12 +1563,14 @@
       const acceptedAnswers = sourceAnswers(question);
       const sourceRefs = (question.sourceLocations || []).map(location => [location.assessment, location.batch ? `Batch ${location.batch}` : null, location.questionNumber ? `Q${location.questionNumber}` : null].filter(Boolean).join(" · ")).join(" · ");
       const subject = SUBJECTS.find(item => item.id === question.subjectId);
-      const questionMeta = [question.assessment, question.sourceBatch ? `Batch ${question.sourceBatch}` : null, question.cycle].filter(Boolean).join(" · ");
+      const questionMeta = appState.navigation.mode === "lecture-mix"
+        ? "Mixed lecture quiz"
+        : [question.assessment, question.sourceBatch ? `Batch ${question.sourceBatch}` : null, question.cycle].filter(Boolean).join(" · ");
       const reviewStatuses = ["needs-review", "conflict"];
-      const aiText = question.verification === "source-only"
-        ? "Reference status: the recorded answer is retained; individual medical verification is pending."
-        : question.aiAnswer
+      const aiText = question.aiAnswer
         ? `AI assessment: expected answer ${question.aiAnswer}${acceptedAnswers.includes(question.aiAnswer) ? " · matches the reference answer" : " · differs from the reference answer"}`
+        : question.verification === "source-only"
+        ? "Reference status: the recorded answer is retained; individual medical verification is pending."
         : `AI assessment: ${question.aiSuggestion || "No single answer can be confirmed from the available information."}`;
       return `
         <article class="question-card" data-question-card="${question.id}">
@@ -1328,6 +1626,8 @@
 
     function resumeNavigation() {
       const { subjectId, cycle, lecture, mode, assessment, batch } = appState.navigation;
+      if (subjectId && mode === "lecture-picker") return openLectureMixer(subjectId);
+      if (subjectId && mode === "lecture-mix" && appState.quiz.questionIds.length) return renderQuestionSetView();
       if (subjectId && ["all", "assessment", "batch"].includes(mode)) return openCollection(subjectId, mode, assessment, batch, true);
       if (subjectId && cycle && mode === "cycle") return openCycleQuestions(subjectId, cycle, true);
       if (subjectId && lecture) return openLecture(subjectId, cycle, lecture, true);
