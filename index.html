@@ -14,6 +14,21 @@
       document.documentElement.dataset.theme = savedTheme || systemTheme;
     })();
   </script>
+  <script>
+    (() => {
+      if (window.location.protocol !== "https:") return;
+      !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],Object.defineProperty(u,"toString",{configurable:!0,enumerable:!0,writable:!0,value:function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e}}),Object.defineProperty(u.people,"toString",{configurable:!0,enumerable:!0,writable:!0,value:function(){return u.toString(1)+".people (stub)"}}),o="init capture register register_once register_for_session unregister unregister_for_session getFeatureFlag getFeatureFlagResult isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey getNextSurveyStep identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty createPersonProfile opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing debug".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+      posthog.init("phc_ppYgmak7fUuL82DoFMm2bpbWqTzeMMeUo6bjWe2a4Ej3", {
+        api_host: "https://us.i.posthog.com",
+        defaults: "2026-05-30",
+        autocapture: false,
+        disable_session_recording: true,
+        person_profiles: "identified_only",
+        capture_pageview: true,
+        capture_pageleave: true
+      });
+    })();
+  </script>
   <style>
     :root {
       color-scheme: light;
@@ -1059,7 +1074,40 @@
     const workspaceElement = document.getElementById("workspace");
     const resumePanel = document.getElementById("resume-panel");
     const saveStatus = document.getElementById("save-status");
+    const completedQuizKeys = new Set();
     let appState = loadSavedState();
+
+    function captureAnalytics(eventName, properties = {}) {
+      if (!window.posthog?.capture) return;
+      window.posthog.capture(eventName, {
+        app: "gift445",
+        ...properties
+      });
+    }
+
+    function quizAnalyticsProperties(navigation = appState.navigation, questionCount = appState.quiz.questionIds.length) {
+      return {
+        subject: navigation.subjectId || null,
+        quiz_mode: navigation.mode || null,
+        cycle: navigation.cycle || null,
+        lecture: navigation.lecture || null,
+        assessment: navigation.assessment || null,
+        batch: navigation.batch || null,
+        question_count: questionCount
+      };
+    }
+
+    function currentQuizKey() {
+      return [
+        appState.navigation.subjectId,
+        appState.navigation.mode,
+        appState.navigation.cycle,
+        appState.navigation.lecture,
+        appState.navigation.assessment,
+        appState.navigation.batch,
+        appState.quiz.questionIds.length
+      ].join("|");
+    }
 
     function freshState() {
       return JSON.parse(JSON.stringify(EMPTY_STATE));
@@ -1125,7 +1173,9 @@
     }
 
     themeToggle.addEventListener("click", () => {
-      applyTheme(root.dataset.theme === "dark" ? "light" : "dark");
+      const theme = root.dataset.theme === "dark" ? "light" : "dark";
+      applyTheme(theme);
+      captureAnalytics("theme_changed", { theme });
     });
 
     function questionsFor(subjectId) {
@@ -1189,7 +1239,13 @@
     }
 
     function resetSavedProgress() {
+      captureAnalytics("progress_reset", {
+        subject: appState.navigation.subjectId || null,
+        quiz_mode: appState.navigation.mode || null,
+        answered_count: Object.keys(appState.quiz.answers).length
+      });
       appState = freshState();
+      completedQuizKeys.clear();
       try { localStorage.removeItem(STORAGE_KEY); } catch (_) {}
       closeWorkspace();
       renderResumePanel();
@@ -1216,6 +1272,13 @@
       const directLectures = [...new Set(questions.filter(question => !question.cycle && question.lecture).map(question => question.lecture))]
         .sort((a, b) => a.localeCompare(b));
       const lectureCount = new Set(questions.filter(question => question.lecture).map(question => `${question.cycle || ""}|${question.lecture}`)).size;
+
+      captureAnalytics("subject_opened", {
+        subject: subjectId,
+        question_count: questions.length,
+        cycle_count: cycles.length,
+        lecture_count: lectureCount
+      });
 
       workspaceElement.innerHTML = questions.length ? `
         ${workspaceHeader(subject.name, "Selected subject")}
@@ -1314,6 +1377,13 @@
       });
       const lectures = [...lectureOrder.keys()].sort((a, b) => (lectureOrder.get(a) - lectureOrder.get(b)) || a.localeCompare(b));
       const answeredInCycle = questions.filter(question => appState.quiz.answers[question.id]).length;
+
+      captureAnalytics("cycle_opened", {
+        subject: subjectId,
+        cycle,
+        question_count: questions.length,
+        lecture_count: lectures.length
+      });
 
       workspaceElement.innerHTML = `
         ${workspaceHeader(cycle, "Selected cycle")}
@@ -1502,6 +1572,7 @@
       appState.navigation = navigation;
       appState.quiz.questionIds = ids;
       if (!resume || !sameSet) appState.quiz.currentIndex = 0;
+      captureAnalytics(resume && sameSet ? "quiz_resumed" : "quiz_started", quizAnalyticsProperties(navigation, ids.length));
       renderQuestionSetView();
       persistState();
       renderResumePanel();
@@ -1596,6 +1667,7 @@
     function answerQuestion(questionId, optionId) {
       const question = QUESTION_BANK.find(item => item.id === questionId);
       if (!question || !question.options.some(option => option.id === optionId)) return;
+      const wasAlreadyAnswered = Boolean(appState.quiz.answers[questionId]);
       appState.quiz.answers[questionId] = optionId;
       persistState();
       const card = workspaceElement.querySelector(`[data-question-card="${questionId}"]`);
@@ -1609,9 +1681,25 @@
       });
       card.querySelector(".answer-panel").classList.add("visible");
       const progress = workspaceElement.querySelector(".quiz-progress");
+      const answered = appState.quiz.questionIds.filter(id => appState.quiz.answers[id]).length;
       if (progress) {
-        const answered = appState.quiz.questionIds.filter(id => appState.quiz.answers[id]).length;
         progress.innerHTML = `<strong>${appState.quiz.currentIndex + 1} of ${appState.quiz.questionIds.length}</strong> · ${answered} answered`;
+      }
+      if (!wasAlreadyAnswered) {
+        captureAnalytics("question_answered", {
+          ...quizAnalyticsProperties(),
+          answered_count: answered
+        });
+      }
+      if (answered === appState.quiz.questionIds.length) {
+        const quizKey = currentQuizKey();
+        if (!completedQuizKeys.has(quizKey)) {
+          completedQuizKeys.add(quizKey);
+          captureAnalytics("quiz_completed", {
+            ...quizAnalyticsProperties(),
+            answered_count: answered
+          });
+        }
       }
     }
 
