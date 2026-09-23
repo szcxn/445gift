@@ -3,3 +3,6 @@ __pycache__/
 *.py[cod]
 assets/
 tools/
+reviews/
+source-materials/
+tmp/

@@ -548,6 +548,7 @@
     }
 
     .route-card:hover { transform: translateY(-2px); border-color: var(--accent); box-shadow: 0 12px 28px rgba(8, 75, 111, .09); }
+    .route-card:disabled { cursor: default; opacity: .58; transform: none; box-shadow: none; }
     .route-card:focus-visible { outline: 3px solid var(--accent-soft); outline-offset: 2px; }
     .route-card strong { display: block; margin-bottom: 8px; font-size: 16px; }
     .route-card span { color: var(--muted); font-size: 12px; }
@@ -604,6 +605,21 @@
       gap: 14px;
       margin-top: 18px;
     }
+
+    .lecture-assessment-picker {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .lecture-assessment-card[aria-expanded="true"] {
+      border-color: var(--accent);
+      background: var(--accent-soft);
+      box-shadow: 0 12px 28px rgba(8, 75, 111, .09);
+    }
+
+    .lecture-assessment-panel[hidden] { display: none; }
 
     .lecture-mix-group {
       overflow: hidden;
@@ -704,6 +720,33 @@
     }
 
     .question-stem { margin: 0 0 17px; font-size: 15px; font-weight: 650; line-height: 1.6; }
+    .repeat-note {
+      display: inline-flex;
+      margin: -5px 0 16px;
+      padding: 6px 10px;
+      border: 1px solid color-mix(in srgb, var(--accent) 22%, var(--line));
+      border-radius: 999px;
+      background: color-mix(in srgb, var(--accent) 8%, var(--surface));
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 750;
+      line-height: 1.35;
+    }
+    .question-images {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 10px;
+      margin: -3px 0 17px;
+    }
+    .question-images img {
+      display: block;
+      width: 100%;
+      max-height: 420px;
+      object-fit: contain;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: #fff;
+    }
     .options { display: grid; gap: 8px; }
 
     .option-button {
@@ -912,6 +955,7 @@
       .subject-card h3 { overflow-wrap: anywhere; }
       .workspace { padding: 20px; }
       .route-grid { grid-template-columns: 1fr; }
+      .lecture-assessment-picker { grid-template-columns: 1fr; }
       .lecture-mix-options { grid-template-columns: 1fr; }
       .lecture-mix-toolbar { align-items: stretch; flex-direction: column; }
       .lecture-mix-actions { width: 100%; }
@@ -1007,7 +1051,8 @@
   </main>
 
   <script src="medicine-data.js?v=20260922-gastro-review"></script>
-  <script src="surgery-data.js"></script>
+  <script src="surgery-catalog.js?v=20260923-surgery-legacy-order"></script>
+  <script src="surgery-data.js?v=20260923-surgery-legacy-order"></script>
   <script src="community-data.js"></script>
   <script>
     const SUBJECTS = [
@@ -1036,26 +1081,30 @@
 
     function deduplicateQuestions(questions) {
       const seenIds = new Set();
-      const seenSources = new Set();
-      const seenStems = new Set();
+      const seenQuestionVariants = new Set();
 
       return questions.filter(question => {
-        const sourceKey = (question.sourceLocations || [])
-          .map(location => `${question.subjectId}|${location.assessment}|${location.batch}|${location.questionNumber}`)
-          .sort()
-          .join("||");
         const stemKey = String(question.stem || "")
           .toLowerCase()
           .replace(/[^a-z0-9]+/g, " ")
           .trim();
+        const optionSetKey = (question.options || [])
+          .map(option => String(option.text || "")
+            .toLowerCase()
+            .replace(/[^a-z0-9]+/g, " ")
+            .trim())
+          .filter(Boolean)
+          .sort()
+          .join("||");
+        const questionVariantKey = stemKey && optionSetKey
+          ? `${question.subjectId || "unknown"}|||${stemKey}|||${optionSetKey}`
+          : "";
         const duplicate = seenIds.has(question.id)
-          || (sourceKey && seenSources.has(sourceKey))
-          || (stemKey && seenStems.has(stemKey));
+          || (questionVariantKey && seenQuestionVariants.has(questionVariantKey));
 
         if (duplicate) return false;
         seenIds.add(question.id);
-        if (sourceKey) seenSources.add(sourceKey);
-        if (stemKey) seenStems.add(stemKey);
+        if (questionVariantKey) seenQuestionVariants.add(questionVariantKey);
         return true;
       });
     }
@@ -1184,7 +1233,9 @@
 
     function renderSubjects() {
       subjectsElement.innerHTML = SUBJECTS.map(subject => {
-        const count = questionsFor(subject.id).length;
+        const subjectQuestions = questionsFor(subject.id);
+        const count = subjectQuestions.length;
+        const countLabel = count ? questionCountLabel(count) : "Coming soon";
         return `
           <button class="subject-card" style="--subject-color:${subject.color}" data-subject="${subject.id}" aria-label="Open ${subject.name}">
             <span class="card-top">
@@ -1193,7 +1244,7 @@
             </span>
             <h3>${subject.name}</h3>
             <p>${subject.description}</p>
-            <span class="card-footer"><span>${count ? questionCountLabel(count) : "Coming soon"}</span><span class="card-arrow" aria-hidden="true">→</span></span>
+            <span class="card-footer"><span>${countLabel}</span><span class="card-arrow" aria-hidden="true">→</span></span>
           </button>`;
       }).join("");
 
@@ -1256,22 +1307,27 @@
       const subject = SUBJECTS.find(item => item.id === subjectId);
       if (!subject) return;
       const questions = questionsFor(subjectId);
+      const lectureCatalog = subjectId === "surgery" ? (window.GIFT445_SURGERY_CATALOG || []) : [];
+      const catalogLectures = lectureCatalog.flatMap(group => group.lectures);
+      const catalogAssessments = [...new Set(lectureCatalog.map(group => group.assessment).filter(Boolean))];
       const cycles = [...new Set(questions.map(question => question.cycle).filter(Boolean))]
         .sort((a, b) => {
           const aIndex = CYCLE_ORDER.indexOf(a);
           const bIndex = CYCLE_ORDER.indexOf(b);
           return (aIndex < 0 ? 999 : aIndex) - (bIndex < 0 ? 999 : bIndex) || a.localeCompare(b);
         });
-      const assessments = [...new Set(questions.map(question => question.assessment).filter(Boolean))]
+      const assessments = [...new Set([...catalogAssessments, ...questions.map(question => question.assessment).filter(Boolean)])]
         .sort((a, b) => ["Midterm", "Final"].indexOf(a) - ["Midterm", "Final"].indexOf(b) || a.localeCompare(b));
       const batches = [...new Set(questions.flatMap(question => question.sourceLocations || [])
         .filter(location => location.batch)
         .map(location => `${location.assessment || "Assessment"}|${location.batch}`))]
         .map(value => { const [assessment, batch] = value.split("|"); return { assessment, batch }; })
         .sort((a, b) => Number(b.batch) - Number(a.batch) || a.assessment.localeCompare(b.assessment));
-      const directLectures = [...new Set(questions.filter(question => !question.cycle && question.lecture).map(question => question.lecture))]
-        .sort((a, b) => a.localeCompare(b));
-      const lectureCount = new Set(questions.filter(question => question.lecture).map(question => `${question.cycle || ""}|${question.lecture}`)).size;
+      const directLectures = catalogLectures.length
+        ? catalogLectures
+        : [...new Set(questions.filter(question => !question.cycle && question.lecture).map(question => question.lecture))].sort((a, b) => a.localeCompare(b));
+      const lectureCount = new Set([...catalogLectures, ...questions.filter(question => question.lecture).map(question => question.lecture)]).size;
+      const quizLectureCount = new Set(questions.filter(question => question.lecture).map(question => `${question.cycle || ""}|${question.lecture}`)).size;
 
       captureAnalytics("subject_opened", {
         subject: subjectId,
@@ -1280,18 +1336,18 @@
         lecture_count: lectureCount
       });
 
-      workspaceElement.innerHTML = questions.length ? `
+      workspaceElement.innerHTML = (questions.length || catalogLectures.length) ? `
         ${workspaceHeader(subject.name, "Selected subject")}
-        <section class="route-section">
+        ${(questions.length || assessments.length) ? `<section class="route-section">
           <div class="route-section-head"><h3>Quick Review</h3><p>Progress is saved on this device.</p></div>
           <div class="route-grid">
-            <button class="route-card featured collection-card" type="button" data-mode="all"><strong>All ${escapeHtml(subject.name)} Questions</strong><span>${questionCountLabel(questions.length)} in one sequence</span></button>
+            ${questions.length ? `<button class="route-card featured collection-card" type="button" data-mode="all"><strong>All ${escapeHtml(subject.name)} Questions</strong><span>${questionCountLabel(questions.length)} in one sequence</span></button>` : ""}
             ${assessments.map(assessment => {
               const count = questionsForAssessment(subjectId, assessment).length;
-              return `<button class="route-card collection-card" type="button" data-mode="assessment" data-assessment="${escapeHtml(assessment)}"><strong>All ${escapeHtml(assessment)}</strong><span>${questionCountLabel(count)}</span></button>`;
+              return `<button class="route-card collection-card" type="button" data-mode="assessment" data-assessment="${escapeHtml(assessment)}" ${count ? "" : "disabled"}><strong>${escapeHtml(assessment)}</strong><span>${count ? questionCountLabel(count) : "No questions from Gift"}</span></button>`;
             }).join("")}
           </div>
-        </section>
+        </section>` : ""}
         ${batches.length ? `
           <section class="route-section">
             <div class="route-section-head"><h3>By Batch</h3><p>Open the list only when you need it.</p></div>
@@ -1300,14 +1356,20 @@
               <span class="batch-toggle-icon" aria-hidden="true">⌄</span>
             </button>
             <div class="batch-panel" id="batch-list" hidden><div class="route-grid">
-              ${batches.map(({ assessment, batch }) => `<button class="route-card batch-card" type="button" data-assessment="${escapeHtml(assessment)}" data-batch="${escapeHtml(batch)}"><strong>Batch ${escapeHtml(batch)} · ${escapeHtml(assessment)}</strong><span>${questionCountLabel(questionsForBatch(subjectId, assessment, batch).length)}</span></button>`).join("")}
+              ${batches.map(({ assessment, batch }) => `<button class="route-card batch-card" type="button" data-assessment="${escapeHtml(assessment)}" data-batch="${escapeHtml(batch)}"><strong>${escapeHtml(batchDisplayName(subjectId, batch))} · ${escapeHtml(assessment)}</strong><span>${escapeHtml(batchCountLabel(subjectId, assessment, batch))}</span></button>`).join("")}
             </div></div>
+          </section>` : lectureCatalog.length ? `
+          <section class="route-section">
+            <div class="route-section-head"><h3>By Batch</h3><p>Batch collections will appear after the question review is complete.</p></div>
+            <div class="route-grid">
+              <button class="route-card" type="button" disabled><strong>Batch Questions</strong><span>No questions from Gift</span></button>
+            </div>
           </section>` : ""}
-        ${lectureCount >= 2 ? `
+        ${quizLectureCount >= 2 ? `
           <section class="route-section">
             <div class="route-section-head"><h3>By Lecture</h3><p>Select several lectures and mix their questions into one test.</p></div>
             <div class="route-grid">
-              <button class="route-card featured lecture-mix-card" type="button"><strong>Create a Mixed Lecture Quiz</strong><span>Choose from ${lectureCount} lectures · question order is shuffled</span></button>
+              <button class="route-card featured lecture-mix-card" type="button"><strong>Create a Mixed Lecture Quiz</strong><span>Choose from ${quizLectureCount} lectures · question order is shuffled</span></button>
             </div>
           </section>` : ""}
         ${cycles.length ? `
@@ -1320,7 +1382,29 @@
               }).join("")}
             </div>
           </section>` : ""}
-        ${directLectures.length ? `
+        ${lectureCatalog.length ? `
+          <section class="route-section">
+            <div class="route-section-head"><h3>By Lecture</h3><p>Choose Midterm or Final, then open a block to see its lectures.</p></div>
+            <div class="lecture-assessment-picker">
+              ${catalogAssessments.map(assessment => {
+                const groups = lectureCatalog.filter(group => group.assessment === assessment);
+                const sessionCount = groups.reduce((total, group) => total + group.lectures.length, 0);
+                const questionCount = questionsForAssessment(subjectId, assessment).length;
+                return `<button class="route-card lecture-assessment-card" type="button" data-lecture-assessment="${escapeHtml(assessment)}" aria-expanded="false"><strong>${escapeHtml(assessment)}</strong><span>${groups.length} blocks · ${sessionCount} sessions${questionCount ? ` · ${questionCountLabel(questionCount)}` : ""}</span></button>`;
+              }).join("")}
+            </div>
+            ${catalogAssessments.map(assessment => `<div class="lecture-assessment-panel lecture-mix-groups" data-lecture-panel="${escapeHtml(assessment)}" hidden>
+              ${lectureCatalog.filter(group => group.assessment === assessment).map(group => `<section class="lecture-mix-group">
+                  <h3>${escapeHtml(group.block)}</h3>
+                  <div class="route-grid">
+                    ${group.lectures.map(lecture => {
+                      const count = questions.filter(question => !question.cycle && question.lecture === lecture).length;
+                      return `<button class="route-card direct-lecture-card" type="button" data-lecture="${escapeHtml(lecture)}" ${count ? "" : "disabled"}><strong>${escapeHtml(lecture)}</strong><span>${count ? questionCountLabel(count) : "No questions from Gift"}</span></button>`;
+                    }).join("")}
+                  </div>
+                </section>`).join("")}
+            </div>`).join("")}
+          </section>` : directLectures.length ? `
           <section class="route-section">
             <div class="route-section-head"><h3>By Lecture</h3><p>Choose a lecture for focused practice.</p></div>
             <div class="route-grid">
@@ -1346,6 +1430,23 @@
             : "Choose a batch and assessment below";
         });
       }
+      workspaceElement.querySelectorAll(".lecture-assessment-card").forEach(card => {
+        card.addEventListener("click", () => {
+          const assessment = card.dataset.lectureAssessment;
+          const wasOpen = card.getAttribute("aria-expanded") === "true";
+          workspaceElement.querySelectorAll(".lecture-assessment-card").forEach(button => {
+            button.setAttribute("aria-expanded", "false");
+          });
+          workspaceElement.querySelectorAll(".lecture-assessment-panel").forEach(panel => {
+            panel.hidden = true;
+          });
+          if (!wasOpen) {
+            card.setAttribute("aria-expanded", "true");
+            const panel = workspaceElement.querySelector(`[data-lecture-panel="${CSS.escape(assessment)}"]`);
+            if (panel) panel.hidden = false;
+          }
+        });
+      });
       workspaceElement.querySelectorAll(".collection-card").forEach(card => {
         card.addEventListener("click", () => openCollection(subjectId, card.dataset.mode, card.dataset.assessment || null));
       });
@@ -1546,7 +1647,20 @@
       return questionsFor(subjectId).filter(question => (question.sourceLocations || []).some(location => location.assessment === assessment && String(location.batch) === String(batch)));
     }
 
+    function batchCountLabel(subjectId, assessment, batch) {
+      const questions = questionsForBatch(subjectId, assessment, batch);
+      if (subjectId === "surgery") return questionCountLabel(questions.length);
+      const sourceEntries = questions.reduce((total, question) => total + (question.sourceLocations || [])
+        .filter(location => location.assessment === assessment && String(location.batch) === String(batch)).length, 0);
+      return sourceEntries === questions.length
+        ? questionCountLabel(questions.length)
+        : `${sourceEntries} source entries · ${questions.length} unique questions`;
+    }
+
     function questionsForAssessment(subjectId, assessment) {
+      if (subjectId === "surgery") {
+        return questionsFor(subjectId).filter(question => question.assessment === assessment);
+      }
       return questionsFor(subjectId).filter(question => question.assessment === assessment || (question.sourceLocations || []).some(location => location.assessment === assessment));
     }
 
@@ -1560,7 +1674,7 @@
         title = `All ${assessment} Questions`;
       } else if (mode === "batch") {
         questions = questionsForBatch(subjectId, assessment, batch);
-        title = `Batch ${batch} · ${assessment}`;
+        title = `${batchDisplayName(subjectId, batch)} · ${assessment}`;
       }
       openQuestionSet(title, questions, { subjectId, cycle: null, lecture: null, mode, assessment, batch, title }, resume);
     }
@@ -1632,11 +1746,27 @@
       const selected = appState.quiz.answers[question.id] || null;
       const revealed = Boolean(selected);
       const acceptedAnswers = sourceAnswers(question);
-      const sourceRefs = (question.sourceLocations || []).map(location => [location.assessment, location.batch ? `Batch ${location.batch}` : null, location.questionNumber ? `Q${location.questionNumber}` : null].filter(Boolean).join(" · ")).join(" · ");
+      const sourceLocations = question.sourceLocations || [];
+      const sourceRefs = sourceLocations.map(location => [
+        question.subjectId === "surgery" && String(location.batch) === "444" && location.sourceType === "Q Bank" ? null : location.sourceType,
+        location.assessment,
+        location.batch ? batchDisplayName(question.subjectId, location.batch) : null,
+        question.subjectId === "surgery" ? null : (location.questionNumber ? `Q${location.questionNumber}` : null)
+      ].filter(Boolean).join(" · ")).join(" · ");
+      const repeatedBatches = [...new Set(sourceLocations.map(location => location.batch).filter(Boolean))]
+        .sort((a, b) => Number(b) - Number(a));
+      const repeatText = sourceLocations.length > 1
+        ? (repeatedBatches.length > 1
+          ? `Repeated question · Batches: ${repeatedBatches.join(", ")}`
+          : `Repeated question · Batch: ${repeatedBatches[0] || "source file"}`)
+        : "";
       const subject = SUBJECTS.find(item => item.id === question.subjectId);
+      const sourceMetaLabel = question.subjectId === "surgery" && String(question.sourceBatch) === "444" && question.sourceLabel === "Q Bank"
+        ? null
+        : question.sourceLabel;
       const questionMeta = appState.navigation.mode === "lecture-mix"
         ? "Mixed lecture quiz"
-        : [question.assessment, question.sourceBatch ? `Batch ${question.sourceBatch}` : null, question.cycle].filter(Boolean).join(" · ");
+        : [appState.navigation.mode === "batch" ? appState.navigation.assessment : question.assessment, sourceMetaLabel, question.sourceBatch ? batchDisplayName(question.subjectId, question.sourceBatch) : null, question.cycle].filter(Boolean).join(" · ");
       const reviewStatuses = ["needs-review", "conflict"];
       const aiText = question.aiAnswer
         ? `AI assessment: expected answer ${question.aiAnswer}${acceptedAnswers.includes(question.aiAnswer) ? " · matches the reference answer" : " · differs from the reference answer"}`
@@ -1647,6 +1777,8 @@
         <article class="question-card" data-question-card="${question.id}">
           <div class="question-meta"><span>Question ${index + 1} of ${total}</span><span>${escapeHtml(questionMeta)}</span></div>
           <p class="question-stem">${escapeHtml(question.stem)}</p>
+          ${repeatText ? `<p class="repeat-note">${escapeHtml(repeatText)}</p>` : ""}
+          ${(question.images || []).length ? `<div class="question-images">${question.images.map((image, imageIndex) => `<img src="${escapeHtml(image)}" alt="Question image ${imageIndex + 1}" loading="lazy">`).join("")}</div>` : ""}
           <div class="options">
             ${question.options.map(option => {
               const selectedClass = selected === option.id ? " selected" : "";
@@ -1658,7 +1790,7 @@
             <p class="answer-summary">Reference answer: ${escapeHtml(question.sourceAnswerNote || acceptedAnswers.join(" or ") || "Not provided")}${reviewStatuses.includes(question.verification) ? " · needs review" : question.verification === "source-only" ? " · reference answer only" : ""}</p>
             <p class="ai-note">${escapeHtml(aiText)}</p>
             <p class="answer-explanation">${escapeHtml(question.explanation)}</p>
-            <p class="source-note">Reference: ${escapeHtml(subject?.name || "Medical")} Question Bank${sourceRefs ? ` · ${escapeHtml(sourceRefs)}` : ""}</p>
+            <p class="source-note">Reference: ${escapeHtml(question.sourceLabel || `${subject?.name || "Medical"} Question Bank`)}${sourceRefs ? ` · ${escapeHtml(sourceRefs)}` : ""}</p>
             ${(question.references || []).length ? `<div class="reference-list">${question.references.map(reference => `<a href="${escapeHtml(reference.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(reference.title)} ↗</a>`).join("")}</div>` : ""}
           </div>
         </article>`;
@@ -1710,6 +1842,10 @@
 
     function questionCountLabel(count) {
       return `${count} ${count === 1 ? "question" : "questions"}`;
+    }
+
+    function batchDisplayName(subjectId, batch) {
+      return subjectId === "surgery" && String(batch) === "444" ? "Q Bank 444" : `Batch ${batch}`;
     }
 
     function resumeNavigation() {
