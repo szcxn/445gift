@@ -1053,6 +1053,7 @@
   <script src="medicine-data.js?v=20260922-gastro-review"></script>
   <script src="surgery-catalog.js?v=20260923-surgery-legacy-order"></script>
   <script src="surgery-data.js?v=20260923-surgery-legacy-order"></script>
+  <script src="surgery-midterm-reviews.js?v=20260924-legacy-lecture-distribution"></script>
   <script src="community-data.js"></script>
   <script>
     const SUBJECTS = [
@@ -1746,6 +1747,10 @@
       const selected = appState.quiz.answers[question.id] || null;
       const revealed = Boolean(selected);
       const acceptedAnswers = sourceAnswers(question);
+      const proposedAnswers = Array.isArray(question.aiAnswer) ? question.aiAnswer : (question.aiAnswer ? [question.aiAnswer] : []);
+      const gradingAnswers = proposedAnswers.length
+        ? proposedAnswers
+        : question.verification === "needs-review" ? [] : acceptedAnswers;
       const sourceLocations = question.sourceLocations || [];
       const sourceRefs = sourceLocations.map(location => [
         question.subjectId === "surgery" && String(location.batch) === "444" && location.sourceType === "Q Bank" ? null : location.sourceType,
@@ -1768,11 +1773,11 @@
         ? "Mixed lecture quiz"
         : [appState.navigation.mode === "batch" ? appState.navigation.assessment : question.assessment, sourceMetaLabel, question.sourceBatch ? batchDisplayName(question.subjectId, question.sourceBatch) : null, question.cycle].filter(Boolean).join(" · ");
       const reviewStatuses = ["needs-review", "conflict"];
-      const aiText = question.aiAnswer
-        ? `AI assessment: expected answer ${question.aiAnswer}${acceptedAnswers.includes(question.aiAnswer) ? " · matches the reference answer" : " · differs from the reference answer"}`
+      const aiText = proposedAnswers.length
+        ? `AI opinion: expected answer ${proposedAnswers.join(" or ")}${acceptedAnswers.length && proposedAnswers.every(answer => acceptedAnswers.includes(answer)) ? " · matches the reference answer" : acceptedAnswers.length ? " · differs from the reference answer" : " · no reference answer was recorded"}`
         : question.verification === "source-only"
         ? "Reference status: the recorded answer is retained; individual medical verification is pending."
-        : `AI assessment: ${question.aiSuggestion || "No single answer can be confirmed from the available information."}`;
+        : `AI opinion: ${question.aiSuggestion || "No single answer can be confirmed from the available information."}`;
       return `
         <article class="question-card" data-question-card="${question.id}">
           <div class="question-meta"><span>Question ${index + 1} of ${total}</span><span>${escapeHtml(questionMeta)}</span></div>
@@ -1782,7 +1787,7 @@
           <div class="options">
             ${question.options.map(option => {
               const selectedClass = selected === option.id ? " selected" : "";
-              const resultClass = revealed && acceptedAnswers.includes(option.id) ? " correct" : (revealed && selected === option.id ? " incorrect" : "");
+              const resultClass = revealed && gradingAnswers.includes(option.id) ? " correct" : (revealed && gradingAnswers.length && selected === option.id ? " incorrect" : "");
               return `<button class="option-button${selectedClass}${resultClass}" type="button" data-question="${question.id}" data-option="${option.id}" aria-pressed="${selected === option.id}"><span class="option-letter">${option.id}</span><span>${escapeHtml(option.text)}</span></button>`;
             }).join("")}
           </div>
@@ -1804,11 +1809,15 @@
       persistState();
       const card = workspaceElement.querySelector(`[data-question-card="${questionId}"]`);
       const acceptedAnswers = sourceAnswers(question);
+      const proposedAnswers = Array.isArray(question.aiAnswer) ? question.aiAnswer : (question.aiAnswer ? [question.aiAnswer] : []);
+      const gradingAnswers = proposedAnswers.length
+        ? proposedAnswers
+        : question.verification === "needs-review" ? [] : acceptedAnswers;
       card.querySelectorAll(".option-button").forEach(button => {
         const isSelected = button.dataset.option === optionId;
         button.classList.toggle("selected", isSelected);
-        button.classList.toggle("correct", acceptedAnswers.includes(button.dataset.option));
-        button.classList.toggle("incorrect", isSelected && !acceptedAnswers.includes(optionId));
+        button.classList.toggle("correct", gradingAnswers.includes(button.dataset.option));
+        button.classList.toggle("incorrect", isSelected && gradingAnswers.length > 0 && !gradingAnswers.includes(optionId));
         button.setAttribute("aria-pressed", String(isSelected));
       });
       card.querySelector(".answer-panel").classList.add("visible");
