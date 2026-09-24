@@ -1051,9 +1051,9 @@
   </main>
 
   <script src="medicine-data.js?v=20260922-gastro-review"></script>
-  <script src="surgery-catalog.js?v=20260923-surgery-legacy-order"></script>
+  <script src="surgery-catalog.js?v=20260924-empty-nutrition"></script>
   <script src="surgery-data.js?v=20260923-surgery-legacy-order"></script>
-  <script src="surgery-midterm-reviews.js?v=20260924-legacy-lecture-distribution"></script>
+  <script src="surgery-midterm-reviews.js?v=20260924-hide-nutrition"></script>
   <script src="community-data.js"></script>
   <script>
     const SUBJECTS = [
@@ -1078,7 +1078,7 @@
       ...(window.GIFT445_QUESTIONS || []),
       ...(window.GIFT445_SURGERY_QUESTIONS || []),
       ...(window.GIFT445_COMMUNITY_QUESTIONS || [])
-    ]);
+    ].filter(question => !question.excluded));
 
     function deduplicateQuestions(questions) {
       const seenIds = new Set();
