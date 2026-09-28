@@ -1,11 +1,14 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#eef7fb">
   <title>Gift 445 — Medical Question Bank</title>
   <link rel="icon" type="image/png" href="445-logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri+Quran&amp;family=Cairo:wght@600;700&amp;family=Tajawal:wght@400;500;700&amp;display=swap" rel="stylesheet">
   <script>
     (() => {
       let savedTheme = null;
@@ -30,6 +33,18 @@
     })();
   </script>
   <style>
+    :where([lang="ar"]) {
+      direction: rtl;
+      font-family: "Tajawal", Tahoma, Arial, sans-serif;
+      line-height: 1.7;
+    }
+
+    code, pre, kbd, samp, .ltr {
+      direction: ltr;
+      text-align: left;
+      unicode-bidi: isolate;
+    }
+
     :root {
       color-scheme: light;
       --page: #eef7fb;
@@ -852,9 +867,16 @@
       place-items: center;
     }
 
+    .donation-wrap {
+      position: relative;
+      width: min(100%, 520px);
+      padding-top: 42px;
+    }
+
     .donation-card {
       display: grid;
       width: min(100%, 460px);
+      margin: 0 auto;
       overflow: hidden;
       color: var(--text);
       text-align: center;
@@ -896,15 +918,58 @@
       display: grid;
       gap: 12px;
       padding: 21px clamp(18px, 4vw, 30px) 24px;
-      direction: rtl;
       background: linear-gradient(145deg, color-mix(in srgb, #43917b 9%, var(--panel)), var(--panel));
-      font-family: "Geeza Pro", "Noto Naskh Arabic", "Amiri", Tahoma, Arial, serif;
+      font-family: "Tajawal", Tahoma, Arial, sans-serif;
+    }
+
+    .donation-note {
+      position: absolute;
+      z-index: 2;
+      top: 4px;
+      right: 1px;
+      max-width: min(88%, 355px);
+      padding: 12px 18px 11px;
+      color: #4d4327;
+      text-align: center;
+      border: 1px solid #e0ca78;
+      border-radius: 5px 8px 6px 7px;
+      background: #fff4c7;
+      box-shadow: 0 10px 24px rgba(36, 43, 51, .16);
+      font-family: "Tajawal", Tahoma, Arial, sans-serif;
+      font-size: clamp(15px, 2.2vw, 17px);
+      font-weight: 650;
+      line-height: 1.65;
+      text-decoration: none;
+      cursor: pointer;
+      transform: rotate(2.4deg);
+      transform-origin: 82% 20%;
+      transition: transform .24s ease, box-shadow .24s ease;
+    }
+
+    .donation-note::before {
+      position: absolute;
+      top: -8px;
+      right: 28px;
+      width: 62px;
+      height: 17px;
+      content: "";
+      border: 1px solid rgba(169, 144, 74, .18);
+      background: rgba(239, 222, 158, .76);
+      box-shadow: 0 2px 4px rgba(63, 52, 24, .08);
+      transform: rotate(-5deg);
+    }
+
+    .donation-wrap:hover .donation-note,
+    .donation-wrap:focus-within .donation-note {
+      box-shadow: 0 14px 28px rgba(36, 43, 51, .2);
+      transform: translateY(-4px) rotate(.4deg);
     }
 
     .donation-quote {
-      font-size: clamp(24px, 3.2vw, 30px);
-      font-weight: 700;
-      line-height: 1.65;
+      font-family: "Amiri Quran", "Amiri", "Cairo", serif;
+      font-size: clamp(28px, 3.8vw, 36px);
+      font-weight: 400;
+      line-height: 1.8;
     }
 
     .donation-cta {
@@ -966,6 +1031,15 @@
       .question-card { padding: 17px; }
       .question-meta { flex-direction: column; }
       .donation-section { margin-top: 42px; }
+      .donation-wrap { padding-top: 50px; }
+      .donation-note {
+        top: 3px;
+        right: 8px;
+        max-width: calc(100% - 26px);
+        padding: 10px 14px;
+        font-size: 14px;
+        transform: rotate(1.5deg);
+      }
       .donation-card { border-radius: 19px; }
       .donation-image-wrap { min-height: 150px; padding: 18px; }
       .donation-copy { padding: 19px 16px 22px; }
@@ -1032,13 +1106,16 @@
     </section>
 
     <section class="donation-section" aria-label="Ehsan donation campaign">
-      <a class="donation-card" href="https://ehsan.sa/donationcampaign/details/1266759" target="_blank" rel="noopener noreferrer" aria-label="Open the Ehsan donation campaign">
-        <span class="donation-image-wrap"><img class="donation-image" src="ehsan-donation.jpg" alt="شعار منصة إحسان"></span>
-        <span class="donation-copy" lang="ar">
-          <span class="donation-quote">مَا نَقَصَ مَالٌ مِنْ صَدَقَةٍ</span>
-          <span class="donation-cta">اضغط هنا للتبرع عبر إحسان</span>
-        </span>
-      </a>
+      <div class="donation-wrap">
+        <a class="donation-note" href="https://ehsan.sa/donationcampaign/details/1266759" target="_blank" rel="noopener noreferrer" lang="ar" dir="rtl" aria-label="تبرع عبر إحسان">دقيقة من وقتك تبارك لك في مالك وفي عملك</a>
+        <a class="donation-card" href="https://ehsan.sa/donationcampaign/details/1266759" target="_blank" rel="noopener noreferrer" aria-label="Open the Ehsan donation campaign">
+          <span class="donation-image-wrap"><img class="donation-image" src="ehsan-donation.jpg" alt="شعار منصة إحسان"></span>
+          <span class="donation-copy" lang="ar" dir="rtl">
+            <span class="donation-quote">مَا نَقَصَ مَالٌ مِنْ صَدَقَةٍ</span>
+            <span class="donation-cta">اضغط هنا للتبرع عبر إحسان</span>
+          </span>
+        </a>
+      </div>
     </section>
 
     <footer>
@@ -1051,15 +1128,18 @@
   </main>
 
   <script src="medicine-data.js?v=20260922-gastro-review"></script>
+  <script src="medicine-reference-overrides.js?v=20260929-source-integrity-2"></script>
   <script src="surgery-catalog.js?v=20260924-empty-nutrition"></script>
   <script src="surgery-data.js?v=20260923-surgery-legacy-order"></script>
   <script src="surgery-midterm-reviews.js?v=20260924-hide-nutrition"></script>
-  <script src="community-data.js"></script>
+  <script src="surgery-reference-overrides.js?v=20260929-reference-priority"></script>
+  <script src="community-catalog.js?v=20260929-community-final-structure"></script>
+  <script src="community-data.js?v=20260929-community-mid"></script>
   <script>
     const SUBJECTS = [
       { id: "medicine", name: "Medicine", code: "MED", index: "01", description: "Review the full bank or study by batch, cycle, and lecture.", color: "#087eb6" },
       { id: "surgery", name: "Surgery", code: "SUR", index: "02", description: "Review questions by batch, cycle, or lecture.", color: "#d45b4e" },
-      { id: "community", name: "Community Medicine", code: "COM", index: "03", description: "Review questions by batch, cycle, or lecture.", color: "#168c82" }
+      { id: "community", name: "Community Medicine", code: "COM", index: "03", description: "Review midterm questions and browse the final lecture structure.", color: "#168c82" }
     ];
 
     const CYCLE_ORDER = [
@@ -1232,6 +1312,10 @@
       return QUESTION_BANK.filter(question => question.subjectId === subjectId);
     }
 
+    function isQuestionAvailableInLecture(question, subjectId) {
+      return subjectId !== "surgery" || !question.hideFromLecture;
+    }
+
     function renderSubjects() {
       subjectsElement.innerHTML = SUBJECTS.map(subject => {
         const subjectQuestions = questionsFor(subject.id);
@@ -1308,7 +1392,11 @@
       const subject = SUBJECTS.find(item => item.id === subjectId);
       if (!subject) return;
       const questions = questionsFor(subjectId);
-      const lectureCatalog = subjectId === "surgery" ? (window.GIFT445_SURGERY_CATALOG || []) : [];
+      const lectureCatalog = subjectId === "surgery"
+        ? (window.GIFT445_SURGERY_CATALOG || [])
+        : subjectId === "community"
+          ? (window.GIFT445_COMMUNITY_CATALOG || [])
+          : [];
       const catalogLectures = lectureCatalog.flatMap(group => group.lectures);
       const catalogAssessments = [...new Set(lectureCatalog.map(group => group.assessment).filter(Boolean))];
       const cycles = [...new Set(questions.map(question => question.cycle).filter(Boolean))]
@@ -1328,7 +1416,9 @@
         ? catalogLectures
         : [...new Set(questions.filter(question => !question.cycle && question.lecture).map(question => question.lecture))].sort((a, b) => a.localeCompare(b));
       const lectureCount = new Set([...catalogLectures, ...questions.filter(question => question.lecture).map(question => question.lecture)]).size;
-      const quizLectureCount = new Set(questions.filter(question => question.lecture).map(question => `${question.cycle || ""}|${question.lecture}`)).size;
+      const quizLectureCount = new Set(questions
+        .filter(question => question.lecture && isQuestionAvailableInLecture(question, subjectId))
+        .map(question => `${question.cycle || ""}|${question.lecture}`)).size;
 
       captureAnalytics("subject_opened", {
         subject: subjectId,
@@ -1385,13 +1475,13 @@
           </section>` : ""}
         ${lectureCatalog.length ? `
           <section class="route-section">
-            <div class="route-section-head"><h3>By Lecture</h3><p>Choose Midterm or Final, then open a block to see its lectures.</p></div>
+            <div class="route-section-head"><h3>By Lecture</h3><p>${catalogAssessments.length > 1 ? "Choose Midterm or Final, then open a block to see its lectures." : "Open Midterm, then choose the lecture you want to review."}</p></div>
             <div class="lecture-assessment-picker">
               ${catalogAssessments.map(assessment => {
                 const groups = lectureCatalog.filter(group => group.assessment === assessment);
                 const sessionCount = groups.reduce((total, group) => total + group.lectures.length, 0);
                 const questionCount = questionsForAssessment(subjectId, assessment).length;
-                return `<button class="route-card lecture-assessment-card" type="button" data-lecture-assessment="${escapeHtml(assessment)}" aria-expanded="false"><strong>${escapeHtml(assessment)}</strong><span>${groups.length} blocks · ${sessionCount} sessions${questionCount ? ` · ${questionCountLabel(questionCount)}` : ""}</span></button>`;
+                return `<button class="route-card lecture-assessment-card" type="button" data-lecture-assessment="${escapeHtml(assessment)}" aria-expanded="false"><strong>${escapeHtml(assessment)}</strong><span>${groups.length} blocks · ${sessionCount} lectures${questionCount ? ` · ${questionCountLabel(questionCount)}` : ""}</span></button>`;
               }).join("")}
             </div>
             ${catalogAssessments.map(assessment => `<div class="lecture-assessment-panel lecture-mix-groups" data-lecture-panel="${escapeHtml(assessment)}" hidden>
@@ -1399,7 +1489,7 @@
                   <h3>${escapeHtml(group.block)}</h3>
                   <div class="route-grid">
                     ${group.lectures.map(lecture => {
-                      const count = questions.filter(question => !question.cycle && question.lecture === lecture).length;
+                      const count = questions.filter(question => !question.cycle && question.lecture === lecture && isQuestionAvailableInLecture(question, subjectId)).length;
                       return `<button class="route-card direct-lecture-card" type="button" data-lecture="${escapeHtml(lecture)}" ${count ? "" : "disabled"}><strong>${escapeHtml(lecture)}</strong><span>${count ? questionCountLabel(count) : "No questions from Gift"}</span></button>`;
                     }).join("")}
                   </div>
@@ -1410,7 +1500,7 @@
             <div class="route-section-head"><h3>By Lecture</h3><p>Choose a lecture for focused practice.</p></div>
             <div class="route-grid">
               ${directLectures.map(lecture => {
-                const count = questions.filter(question => !question.cycle && question.lecture === lecture).length;
+                const count = questions.filter(question => !question.cycle && question.lecture === lecture && isQuestionAvailableInLecture(question, subjectId)).length;
                 return `<button class="route-card direct-lecture-card" type="button" data-lecture="${escapeHtml(lecture)}"><strong>${escapeHtml(lecture)}</strong><span>${questionCountLabel(count)}</span></button>`;
               }).join("")}
             </div>
@@ -1525,7 +1615,9 @@
     function openLectureMixer(subjectId, cycleFilter = null) {
       const subject = SUBJECTS.find(item => item.id === subjectId);
       if (!subject) return;
-      const questions = questionsFor(subjectId).filter(question => question.lecture && (!cycleFilter || question.cycle === cycleFilter));
+      const questions = questionsFor(subjectId).filter(question => question.lecture
+        && isQuestionAvailableInLecture(question, subjectId)
+        && (!cycleFilter || question.cycle === cycleFilter));
       const grouped = new Map();
 
       questions.forEach(question => {
@@ -1555,7 +1647,7 @@
             ${cycles.map(cycle => {
               const lectures = [...grouped.get(cycle).entries()].sort((a, b) => (a[1].order - b[1].order) || a[0].localeCompare(b[0]));
               return `<section class="lecture-mix-group">
-                <h3>${escapeHtml(cycle)}</h3>
+                <h3>${escapeHtml(cycle === "General" && subjectId === "community" ? "Midterm Lectures" : cycle)}</h3>
                 <div class="lecture-mix-options">
                   ${lectures.map(([lecture, details]) => `<label class="lecture-mix-option">
                     <input class="lecture-mix-check" type="checkbox" data-cycle="${escapeHtml(cycle === "General" ? "" : cycle)}" data-lecture="${escapeHtml(lecture)}">
@@ -1635,7 +1727,12 @@
     }
 
     function openLecture(subjectId, cycle, lecture, resume = false) {
-      const questions = questionsFor(subjectId).filter(question => question.lecture === lecture && (!cycle || question.cycle === cycle));
+      const questions = questionsFor(subjectId).filter(question => question.lecture === lecture
+        && isQuestionAvailableInLecture(question, subjectId)
+        && (!cycle || question.cycle === cycle));
+      if (subjectId === "surgery" || subjectId === "medicine" || subjectId === "community") {
+        questions.sort((left, right) => (left.referenceOrder ?? Number.MAX_SAFE_INTEGER) - (right.referenceOrder ?? Number.MAX_SAFE_INTEGER));
+      }
       openQuestionSet(lecture, questions, { subjectId, cycle, lecture, mode: "lecture", assessment: null, batch: null, title: lecture }, resume);
     }
 
@@ -1645,7 +1742,17 @@
     }
 
     function questionsForBatch(subjectId, assessment, batch) {
-      return questionsFor(subjectId).filter(question => (question.sourceLocations || []).some(location => location.assessment === assessment && String(location.batch) === String(batch)));
+      const matchingLocation = question => (question.sourceLocations || []).find(location => location.assessment === assessment && String(location.batch) === String(batch));
+      return questionsFor(subjectId)
+        .filter(question => matchingLocation(question))
+        .sort((left, right) => {
+          const leftNumber = Number(matchingLocation(left)?.questionNumber);
+          const rightNumber = Number(matchingLocation(right)?.questionNumber);
+          if (Number.isFinite(leftNumber) && Number.isFinite(rightNumber)) return leftNumber - rightNumber;
+          if (Number.isFinite(leftNumber)) return -1;
+          if (Number.isFinite(rightNumber)) return 1;
+          return 0;
+        });
     }
 
     function batchCountLabel(subjectId, assessment, batch) {

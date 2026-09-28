@@ -15,8 +15,13 @@ A responsive question bank for Medicine, Surgery, and Community Medicine.
 
 - `index.html` — interface, navigation, and quiz behavior
 - `medicine-data.js` — Medicine questions
+- `medicine-reference-overrides.js` — reviewed Medicine corrections, references, ordering, and source images
 - `surgery-data.js` — Surgery questions
+- `surgery-catalog.js` — Surgery lecture structure
+- `surgery-reference-overrides.js` — Surgery source labels and reference corrections
 - `community-data.js` — Community Medicine questions
+- `community-catalog.js` — Community Medicine lecture structure
+- `question-media/` — source images used by questions
 - `445-logo.png` — public branding
 
 ## Adding questions
@@ -49,6 +54,8 @@ Add questions to the matching subject data file. Each file exports an array on `
 ```
 
 For a subject organized directly by lecture, set `cycle` to `null`. For cycle-based navigation, use a consistent cycle name and lecture titles. Keep every `id` unique and stable so saved progress continues to work after updates.
+
+When correcting a published question, prefer an override file so the imported source bank remains intact. Keep `sourceAnswer` unchanged, place an independently reviewed answer in `aiAnswer`, and use `verification` to distinguish `confirmed`, `supported`, `conflict`, `needs-review`, and `source-only` items.
 
 ## Local preview
 
