@@ -1,0 +1,4186 @@
+{
+  "sourceFile": "Copy of MID.docx",
+  "sourceSha256": "46f8c8c07aa2631b71db60d11762f9356e0ad8281037b6da631574665ac21752",
+  "questionOccurrences": 695,
+  "questionLocations": [
+    {
+      "batch": "443",
+      "questionNumber": 1,
+      "id": "medicine-443-mid-valvular-q01"
+    },
+    {
+      "batch": "443",
+      "questionNumber": 2,
+      "id": "medicine-443-mid-acs-q02"
+    },
+    {
+      "batch": "443",
+      "questionNumber": 3,
+      "id": "medicine-443-mid-hf-q03"
+    },
+    {
+      "batch": "443",
+      "questionNumber": 4,
+      "id": "medicine-443-mid-rhd-q04"
+    },
+    {
+      "batch": "443",
+      "questionNumber": 5,
+      "id": "medicine-443-mid-ie-q05"
+    },
+    {
+      "batch": "443",
+      "questionNumber": 6,
+      "id": "medicine-443-mid-acs-q06"
+    },
+    {
+      "batch": "443",
+      "questionNumber": 7,
+      "id": "medicine-443-mid-hf-q07"
+    },
+    {
+      "batch": "443",
+      "questionNumber": 8,
+      "id": "medicine-443-mid-arrhythmia-q08"
+    },
+    {
+      "batch": "443",
+      "questionNumber": 9,
+      "id": "medicine-443-mid-ie-q09"
+    },
+    {
+      "batch": "443",
+      "questionNumber": 10,
+      "id": "medicine-443-mid-valvular-q10"
+    },
+    {
+      "batch": "443",
+      "questionNumber": 11,
+      "id": "medicine-443-mid-rhd-q11"
+    },
+    {
+      "batch": "443",
+      "questionNumber": 12,
+      "id": "medicine-443-mid-arrhythmia-q12"
+    },
+    {
+      "batch": "443",
+      "questionNumber": 13,
+      "id": "medicine-443-mid-acs-q13"
+    },
+    {
+      "batch": "443",
+      "questionNumber": 14,
+      "id": "medicine-443-mid-valvular-q14"
+    },
+    {
+      "batch": "443",
+      "questionNumber": 15,
+      "id": "medicine-443-mid-hf-q15"
+    },
+    {
+      "batch": "443",
+      "questionNumber": 16,
+      "id": "medicine-443-mid-arrhythmia-q16"
+    },
+    {
+      "batch": "443",
+      "questionNumber": 17,
+      "id": "medicine-midterm-443-pulmonary-q017"
+    },
+    {
+      "batch": "443",
+      "questionNumber": 18,
+      "id": "medicine-midterm-443-pulmonary-q018"
+    },
+    {
+      "batch": "443",
+      "questionNumber": 19,
+      "id": "medicine-midterm-443-pulmonary-q019"
+    },
+    {
+      "batch": "443",
+      "questionNumber": 20,
+      "id": "medicine-midterm-443-pulmonary-q020"
+    },
+    {
+      "batch": "443",
+      "questionNumber": 21,
+      "id": "medicine-midterm-443-pulmonary-q021"
+    },
+    {
+      "batch": "443",
+      "questionNumber": 22,
+      "id": "medicine-midterm-443-pulmonary-q022"
+    },
+    {
+      "batch": "443",
+      "questionNumber": 23,
+      "id": "medicine-midterm-443-pulmonary-q023"
+    },
+    {
+      "batch": "443",
+      "questionNumber": 24,
+      "id": "medicine-midterm-443-pulmonary-q024"
+    },
+    {
+      "batch": "443",
+      "questionNumber": 25,
+      "id": "medicine-midterm-443-pulmonary-q025"
+    },
+    {
+      "batch": "443",
+      "questionNumber": 26,
+      "id": "medicine-midterm-443-pulmonary-q026"
+    },
+    {
+      "batch": "443",
+      "questionNumber": 27,
+      "id": "medicine-midterm-443-pulmonary-q027"
+    },
+    {
+      "batch": "443",
+      "questionNumber": 28,
+      "id": "medicine-midterm-443-pulmonary-q028"
+    },
+    {
+      "batch": "443",
+      "questionNumber": 29,
+      "id": "medicine-midterm-443-pulmonary-q029"
+    },
+    {
+      "batch": "443",
+      "questionNumber": 30,
+      "id": "medicine-midterm-443-pulmonary-q030"
+    },
+    {
+      "batch": "443",
+      "questionNumber": 31,
+      "id": "medicine-midterm-443-pulmonary-q031"
+    },
+    {
+      "batch": "443",
+      "questionNumber": 32,
+      "id": "medicine-midterm-443-pulmonary-q032"
+    },
+    {
+      "batch": "443",
+      "questionNumber": 33,
+      "id": "medicine-midterm-443-pulmonary-q033"
+    },
+    {
+      "batch": "443",
+      "questionNumber": 34,
+      "id": "medicine-midterm-443-nephrology-q034"
+    },
+    {
+      "batch": "443",
+      "questionNumber": 35,
+      "id": "medicine-midterm-443-nephrology-q035"
+    },
+    {
+      "batch": "443",
+      "questionNumber": 36,
+      "id": "medicine-midterm-443-nephrology-q036"
+    },
+    {
+      "batch": "443",
+      "questionNumber": 37,
+      "id": "medicine-midterm-443-nephrology-q037"
+    },
+    {
+      "batch": "443",
+      "questionNumber": 38,
+      "id": "medicine-midterm-443-nephrology-q038"
+    },
+    {
+      "batch": "443",
+      "questionNumber": 39,
+      "id": "medicine-midterm-443-nephrology-q039"
+    },
+    {
+      "batch": "443",
+      "questionNumber": 40,
+      "id": "medicine-midterm-443-nephrology-q040"
+    },
+    {
+      "batch": "443",
+      "questionNumber": 41,
+      "id": "medicine-midterm-443-nephrology-q041"
+    },
+    {
+      "batch": "443",
+      "questionNumber": 42,
+      "id": "medicine-midterm-443-nephrology-q042"
+    },
+    {
+      "batch": "443",
+      "questionNumber": 43,
+      "id": "medicine-midterm-443-nephrology-q043"
+    },
+    {
+      "batch": "443",
+      "questionNumber": 44,
+      "id": "medicine-midterm-443-nephrology-q044"
+    },
+    {
+      "batch": "443",
+      "questionNumber": 45,
+      "id": "medicine-midterm-443-git-hepatobiliary-q045"
+    },
+    {
+      "batch": "443",
+      "questionNumber": 46,
+      "id": "medicine-midterm-443-git-hepatobiliary-q046"
+    },
+    {
+      "batch": "443",
+      "questionNumber": 47,
+      "id": "medicine-midterm-443-git-hepatobiliary-q047"
+    },
+    {
+      "batch": "443",
+      "questionNumber": 48,
+      "id": "medicine-midterm-443-git-hepatobiliary-q048"
+    },
+    {
+      "batch": "443",
+      "questionNumber": 49,
+      "id": "medicine-midterm-443-git-hepatobiliary-q049"
+    },
+    {
+      "batch": "443",
+      "questionNumber": 50,
+      "id": "medicine-midterm-443-git-hepatobiliary-q050"
+    },
+    {
+      "batch": "443",
+      "questionNumber": 51,
+      "id": "medicine-midterm-443-git-hepatobiliary-q051"
+    },
+    {
+      "batch": "443",
+      "questionNumber": 52,
+      "id": "medicine-midterm-443-git-hepatobiliary-q052"
+    },
+    {
+      "batch": "443",
+      "questionNumber": 53,
+      "id": "medicine-midterm-443-git-hepatobiliary-q053"
+    },
+    {
+      "batch": "443",
+      "questionNumber": 54,
+      "id": "medicine-midterm-443-git-hepatobiliary-q054"
+    },
+    {
+      "batch": "443",
+      "questionNumber": 55,
+      "id": "medicine-midterm-443-git-hepatobiliary-q055"
+    },
+    {
+      "batch": "443",
+      "questionNumber": 56,
+      "id": "medicine-midterm-443-git-hepatobiliary-q056"
+    },
+    {
+      "batch": "443",
+      "questionNumber": 57,
+      "id": "medicine-midterm-443-git-hepatobiliary-q057"
+    },
+    {
+      "batch": "443",
+      "questionNumber": 58,
+      "id": "medicine-midterm-443-git-hepatobiliary-q058"
+    },
+    {
+      "batch": "443",
+      "questionNumber": 59,
+      "id": "medicine-midterm-443-git-hepatobiliary-q059"
+    },
+    {
+      "batch": "443",
+      "questionNumber": 60,
+      "id": "medicine-midterm-443-git-hepatobiliary-q060"
+    },
+    {
+      "batch": "442",
+      "questionNumber": 1,
+      "id": "medicine-midterm-442-cardiology-q001"
+    },
+    {
+      "batch": "442",
+      "questionNumber": 2,
+      "id": "medicine-midterm-442-cardiology-q002"
+    },
+    {
+      "batch": "442",
+      "questionNumber": 3,
+      "id": "medicine-midterm-442-cardiology-q003"
+    },
+    {
+      "batch": "442",
+      "questionNumber": 4,
+      "id": "medicine-midterm-442-cardiology-q004"
+    },
+    {
+      "batch": "442",
+      "questionNumber": 5,
+      "id": "medicine-midterm-442-cardiology-q005"
+    },
+    {
+      "batch": "442",
+      "questionNumber": 6,
+      "id": "medicine-midterm-442-cardiology-q006"
+    },
+    {
+      "batch": "442",
+      "questionNumber": 7,
+      "id": "medicine-midterm-442-cardiology-q007"
+    },
+    {
+      "batch": "442",
+      "questionNumber": 8,
+      "id": "medicine-midterm-442-cardiology-q008"
+    },
+    {
+      "batch": "442",
+      "questionNumber": 9,
+      "id": "medicine-midterm-442-cardiology-q009"
+    },
+    {
+      "batch": "442",
+      "questionNumber": 10,
+      "id": "medicine-midterm-442-cardiology-q010"
+    },
+    {
+      "batch": "442",
+      "questionNumber": 11,
+      "id": "medicine-midterm-442-cardiology-q011"
+    },
+    {
+      "batch": "442",
+      "questionNumber": 12,
+      "id": "medicine-midterm-442-cardiology-q012"
+    },
+    {
+      "batch": "442",
+      "questionNumber": 13,
+      "id": "medicine-midterm-442-cardiology-q013"
+    },
+    {
+      "batch": "442",
+      "questionNumber": 14,
+      "id": "medicine-midterm-442-cardiology-q014"
+    },
+    {
+      "batch": "442",
+      "questionNumber": 15,
+      "id": "medicine-midterm-442-cardiology-q015"
+    },
+    {
+      "batch": "442",
+      "questionNumber": 16,
+      "id": "medicine-midterm-442-cardiology-q016"
+    },
+    {
+      "batch": "442",
+      "questionNumber": 17,
+      "id": "medicine-midterm-442-cardiology-q017"
+    },
+    {
+      "batch": "442",
+      "questionNumber": 18,
+      "id": "medicine-midterm-442-pulmonary-q018"
+    },
+    {
+      "batch": "442",
+      "questionNumber": 19,
+      "id": "medicine-midterm-442-pulmonary-q019"
+    },
+    {
+      "batch": "442",
+      "questionNumber": 20,
+      "id": "medicine-midterm-442-pulmonary-q020"
+    },
+    {
+      "batch": "442",
+      "questionNumber": 21,
+      "id": "medicine-midterm-442-pulmonary-q021"
+    },
+    {
+      "batch": "442",
+      "questionNumber": 22,
+      "id": "medicine-midterm-442-pulmonary-q022"
+    },
+    {
+      "batch": "442",
+      "questionNumber": 23,
+      "id": "medicine-midterm-442-pulmonary-q023"
+    },
+    {
+      "batch": "442",
+      "questionNumber": 24,
+      "id": "medicine-midterm-442-pulmonary-q024"
+    },
+    {
+      "batch": "442",
+      "questionNumber": 25,
+      "id": "medicine-midterm-442-pulmonary-q025"
+    },
+    {
+      "batch": "442",
+      "questionNumber": 26,
+      "id": "medicine-midterm-442-pulmonary-q026"
+    },
+    {
+      "batch": "442",
+      "questionNumber": 27,
+      "id": "medicine-midterm-442-pulmonary-q027"
+    },
+    {
+      "batch": "442",
+      "questionNumber": 28,
+      "id": "medicine-midterm-442-pulmonary-q028"
+    },
+    {
+      "batch": "442",
+      "questionNumber": 29,
+      "id": "medicine-midterm-442-pulmonary-q029"
+    },
+    {
+      "batch": "442",
+      "questionNumber": 30,
+      "id": "medicine-midterm-442-pulmonary-q030"
+    },
+    {
+      "batch": "442",
+      "questionNumber": 31,
+      "id": "medicine-midterm-442-pulmonary-q031"
+    },
+    {
+      "batch": "442",
+      "questionNumber": 32,
+      "id": "medicine-midterm-442-nephrology-q032"
+    },
+    {
+      "batch": "442",
+      "questionNumber": 33,
+      "id": "medicine-midterm-442-nephrology-q033"
+    },
+    {
+      "batch": "442",
+      "questionNumber": 34,
+      "id": "medicine-midterm-442-nephrology-q034"
+    },
+    {
+      "batch": "442",
+      "questionNumber": 35,
+      "id": "medicine-midterm-442-nephrology-q035"
+    },
+    {
+      "batch": "442",
+      "questionNumber": 36,
+      "id": "medicine-midterm-442-nephrology-q036"
+    },
+    {
+      "batch": "442",
+      "questionNumber": 37,
+      "id": "medicine-midterm-442-nephrology-q037"
+    },
+    {
+      "batch": "442",
+      "questionNumber": 38,
+      "id": "medicine-midterm-442-nephrology-q038"
+    },
+    {
+      "batch": "442",
+      "questionNumber": 39,
+      "id": "medicine-midterm-442-nephrology-q039"
+    },
+    {
+      "batch": "442",
+      "questionNumber": 40,
+      "id": "medicine-midterm-442-git-hepatobiliary-q040"
+    },
+    {
+      "batch": "442",
+      "questionNumber": 41,
+      "id": "medicine-midterm-442-git-hepatobiliary-q041"
+    },
+    {
+      "batch": "442",
+      "questionNumber": 42,
+      "id": "medicine-midterm-442-git-hepatobiliary-q042"
+    },
+    {
+      "batch": "442",
+      "questionNumber": 43,
+      "id": "medicine-midterm-442-git-hepatobiliary-q043"
+    },
+    {
+      "batch": "442",
+      "questionNumber": 44,
+      "id": "medicine-midterm-442-git-hepatobiliary-q044"
+    },
+    {
+      "batch": "442",
+      "questionNumber": 45,
+      "id": "medicine-midterm-442-git-hepatobiliary-q045"
+    },
+    {
+      "batch": "442",
+      "questionNumber": 46,
+      "id": "medicine-midterm-442-git-hepatobiliary-q046"
+    },
+    {
+      "batch": "442",
+      "questionNumber": 47,
+      "id": "medicine-midterm-442-git-hepatobiliary-q047"
+    },
+    {
+      "batch": "442",
+      "questionNumber": 48,
+      "id": "medicine-midterm-442-git-hepatobiliary-q048"
+    },
+    {
+      "batch": "441",
+      "questionNumber": 1,
+      "id": "medicine-midterm-441-cardiology-q001"
+    },
+    {
+      "batch": "441",
+      "questionNumber": 2,
+      "id": "medicine-midterm-441-cardiology-q002"
+    },
+    {
+      "batch": "441",
+      "questionNumber": 3,
+      "id": "medicine-midterm-441-cardiology-q003"
+    },
+    {
+      "batch": "441",
+      "questionNumber": 4,
+      "id": "medicine-midterm-441-cardiology-q004"
+    },
+    {
+      "batch": "441",
+      "questionNumber": 5,
+      "id": "medicine-midterm-441-cardiology-q005"
+    },
+    {
+      "batch": "441",
+      "questionNumber": 6,
+      "id": "medicine-midterm-441-cardiology-q006"
+    },
+    {
+      "batch": "441",
+      "questionNumber": 7,
+      "id": "medicine-midterm-441-cardiology-q007"
+    },
+    {
+      "batch": "441",
+      "questionNumber": 8,
+      "id": "medicine-midterm-441-cardiology-q008"
+    },
+    {
+      "batch": "441",
+      "questionNumber": 9,
+      "id": "medicine-midterm-441-cardiology-q009"
+    },
+    {
+      "batch": "441",
+      "questionNumber": 10,
+      "id": "medicine-midterm-441-cardiology-q010"
+    },
+    {
+      "batch": "441",
+      "questionNumber": 11,
+      "id": "medicine-midterm-441-cardiology-q011"
+    },
+    {
+      "batch": "441",
+      "questionNumber": 12,
+      "id": "medicine-midterm-441-cardiology-q012"
+    },
+    {
+      "batch": "441",
+      "questionNumber": 13,
+      "id": "medicine-midterm-441-cardiology-q013"
+    },
+    {
+      "batch": "441",
+      "questionNumber": 14,
+      "id": "medicine-midterm-441-cardiology-q014"
+    },
+    {
+      "batch": "441",
+      "questionNumber": 15,
+      "id": "medicine-midterm-441-cardiology-q015"
+    },
+    {
+      "batch": "441",
+      "questionNumber": 16,
+      "id": "medicine-midterm-441-cardiology-q016"
+    },
+    {
+      "batch": "441",
+      "questionNumber": 17,
+      "id": "medicine-midterm-441-cardiology-q017"
+    },
+    {
+      "batch": "441",
+      "questionNumber": 18,
+      "id": "medicine-midterm-441-cardiology-q018"
+    },
+    {
+      "batch": "441",
+      "questionNumber": 19,
+      "id": "medicine-midterm-441-cardiology-q019"
+    },
+    {
+      "batch": "441",
+      "questionNumber": 20,
+      "id": "medicine-midterm-441-cardiology-q020"
+    },
+    {
+      "batch": "441",
+      "questionNumber": 21,
+      "id": "medicine-midterm-441-cardiology-q021"
+    },
+    {
+      "batch": "441",
+      "questionNumber": 22,
+      "id": "medicine-midterm-441-cardiology-q022"
+    },
+    {
+      "batch": "441",
+      "questionNumber": 23,
+      "id": "medicine-midterm-441-cardiology-q023"
+    },
+    {
+      "batch": "441",
+      "questionNumber": 24,
+      "id": "medicine-midterm-441-cardiology-q024"
+    },
+    {
+      "batch": "441",
+      "questionNumber": 25,
+      "id": "medicine-midterm-441-cardiology-q025"
+    },
+    {
+      "batch": "441",
+      "questionNumber": 26,
+      "id": "medicine-midterm-441-cardiology-q026"
+    },
+    {
+      "batch": "441",
+      "questionNumber": 27,
+      "id": "medicine-midterm-441-cardiology-q027"
+    },
+    {
+      "batch": "441",
+      "questionNumber": 28,
+      "id": "medicine-midterm-441-cardiology-q028"
+    },
+    {
+      "batch": "441",
+      "questionNumber": 29,
+      "id": "medicine-midterm-441-cardiology-q029"
+    },
+    {
+      "batch": "441",
+      "questionNumber": 30,
+      "id": "medicine-midterm-441-cardiology-q030"
+    },
+    {
+      "batch": "441",
+      "questionNumber": 31,
+      "id": "medicine-midterm-441-cardiology-q031"
+    },
+    {
+      "batch": "441",
+      "questionNumber": 32,
+      "id": "medicine-midterm-441-cardiology-q032"
+    },
+    {
+      "batch": "441",
+      "questionNumber": 33,
+      "id": "medicine-midterm-441-cardiology-q033"
+    },
+    {
+      "batch": "441",
+      "questionNumber": 34,
+      "id": "medicine-midterm-441-cardiology-q034"
+    },
+    {
+      "batch": "441",
+      "questionNumber": 35,
+      "id": "medicine-midterm-441-cardiology-q035"
+    },
+    {
+      "batch": "441",
+      "questionNumber": 36,
+      "id": "medicine-midterm-441-cardiology-q036"
+    },
+    {
+      "batch": "441",
+      "questionNumber": 37,
+      "id": "medicine-midterm-441-cardiology-q037"
+    },
+    {
+      "batch": "441",
+      "questionNumber": 38,
+      "id": "medicine-midterm-441-cardiology-q038"
+    },
+    {
+      "batch": "441",
+      "questionNumber": 39,
+      "id": "medicine-midterm-441-nephrology-q039"
+    },
+    {
+      "batch": "441",
+      "questionNumber": 40,
+      "id": "medicine-midterm-441-nephrology-q040"
+    },
+    {
+      "batch": "441",
+      "questionNumber": 41,
+      "id": "medicine-midterm-441-nephrology-q041"
+    },
+    {
+      "batch": "441",
+      "questionNumber": 42,
+      "id": "medicine-midterm-441-nephrology-q042"
+    },
+    {
+      "batch": "441",
+      "questionNumber": 43,
+      "id": "medicine-midterm-441-nephrology-q043"
+    },
+    {
+      "batch": "441",
+      "questionNumber": 44,
+      "id": "medicine-midterm-441-nephrology-q044"
+    },
+    {
+      "batch": "441",
+      "questionNumber": 45,
+      "id": "medicine-midterm-441-nephrology-q045"
+    },
+    {
+      "batch": "441",
+      "questionNumber": 46,
+      "id": "medicine-midterm-441-git-hepatobiliary-q046"
+    },
+    {
+      "batch": "441",
+      "questionNumber": 47,
+      "id": "medicine-midterm-441-git-hepatobiliary-q047"
+    },
+    {
+      "batch": "441",
+      "questionNumber": 48,
+      "id": "medicine-midterm-441-git-hepatobiliary-q048"
+    },
+    {
+      "batch": "441",
+      "questionNumber": 49,
+      "id": "medicine-midterm-441-git-hepatobiliary-q049"
+    },
+    {
+      "batch": "441",
+      "questionNumber": 50,
+      "id": "medicine-midterm-441-git-hepatobiliary-q050"
+    },
+    {
+      "batch": "441",
+      "questionNumber": 51,
+      "id": "medicine-midterm-441-git-hepatobiliary-q051"
+    },
+    {
+      "batch": "441",
+      "questionNumber": 52,
+      "id": "medicine-midterm-441-git-hepatobiliary-q052"
+    },
+    {
+      "batch": "441",
+      "questionNumber": 53,
+      "id": "medicine-midterm-441-git-hepatobiliary-q053"
+    },
+    {
+      "batch": "441",
+      "questionNumber": 54,
+      "id": "medicine-midterm-441-git-hepatobiliary-q054"
+    },
+    {
+      "batch": "441",
+      "questionNumber": 55,
+      "id": "medicine-midterm-441-git-hepatobiliary-q055"
+    },
+    {
+      "batch": "441",
+      "questionNumber": 56,
+      "id": "medicine-midterm-441-git-hepatobiliary-q056"
+    },
+    {
+      "batch": "441",
+      "questionNumber": 57,
+      "id": "medicine-midterm-441-git-hepatobiliary-q057"
+    },
+    {
+      "batch": "441",
+      "questionNumber": 58,
+      "id": "medicine-midterm-441-git-hepatobiliary-q058"
+    },
+    {
+      "batch": "441",
+      "questionNumber": 59,
+      "id": "medicine-midterm-441-git-hepatobiliary-q059"
+    },
+    {
+      "batch": "441",
+      "questionNumber": 60,
+      "id": "medicine-midterm-441-git-hepatobiliary-q060"
+    },
+    {
+      "batch": "439",
+      "questionNumber": 1,
+      "id": "medicine-midterm-439-cardiology-q001"
+    },
+    {
+      "batch": "439",
+      "questionNumber": 2,
+      "id": "medicine-midterm-439-cardiology-q002"
+    },
+    {
+      "batch": "439",
+      "questionNumber": 3,
+      "id": "medicine-midterm-439-cardiology-q003"
+    },
+    {
+      "batch": "439",
+      "questionNumber": 4,
+      "id": "medicine-midterm-439-cardiology-q004"
+    },
+    {
+      "batch": "439",
+      "questionNumber": 5,
+      "id": "medicine-midterm-439-cardiology-q005"
+    },
+    {
+      "batch": "439",
+      "questionNumber": 6,
+      "id": "medicine-midterm-439-cardiology-q006"
+    },
+    {
+      "batch": "439",
+      "questionNumber": 7,
+      "id": "medicine-midterm-439-cardiology-q007"
+    },
+    {
+      "batch": "439",
+      "questionNumber": 8,
+      "id": "medicine-midterm-439-cardiology-q008"
+    },
+    {
+      "batch": "439",
+      "questionNumber": 9,
+      "id": "medicine-midterm-439-cardiology-q009"
+    },
+    {
+      "batch": "439",
+      "questionNumber": 10,
+      "id": "medicine-midterm-439-cardiology-q010"
+    },
+    {
+      "batch": "439",
+      "questionNumber": 11,
+      "id": "medicine-midterm-439-cardiology-q011"
+    },
+    {
+      "batch": "439",
+      "questionNumber": 12,
+      "id": "medicine-midterm-439-cardiology-q012"
+    },
+    {
+      "batch": "439",
+      "questionNumber": 13,
+      "id": "medicine-midterm-439-cardiology-q013"
+    },
+    {
+      "batch": "439",
+      "questionNumber": 14,
+      "id": "medicine-midterm-439-cardiology-q014"
+    },
+    {
+      "batch": "439",
+      "questionNumber": 15,
+      "id": "medicine-midterm-442-pulmonary-q029"
+    },
+    {
+      "batch": "439",
+      "questionNumber": 16,
+      "id": "medicine-midterm-439-pulmonary-q016"
+    },
+    {
+      "batch": "439",
+      "questionNumber": 17,
+      "id": "medicine-midterm-439-pulmonary-q017"
+    },
+    {
+      "batch": "439",
+      "questionNumber": 18,
+      "id": "medicine-midterm-439-pulmonary-q018"
+    },
+    {
+      "batch": "439",
+      "questionNumber": 19,
+      "id": "medicine-midterm-439-pulmonary-q019"
+    },
+    {
+      "batch": "439",
+      "questionNumber": 20,
+      "id": "medicine-midterm-439-pulmonary-q020"
+    },
+    {
+      "batch": "439",
+      "questionNumber": 21,
+      "id": "medicine-midterm-439-pulmonary-q021"
+    },
+    {
+      "batch": "439",
+      "questionNumber": 22,
+      "id": "medicine-midterm-439-pulmonary-q022"
+    },
+    {
+      "batch": "439",
+      "questionNumber": 23,
+      "id": "medicine-midterm-439-pulmonary-q023"
+    },
+    {
+      "batch": "439",
+      "questionNumber": 24,
+      "id": "medicine-midterm-439-pulmonary-q024"
+    },
+    {
+      "batch": "439",
+      "questionNumber": 25,
+      "id": "medicine-midterm-439-pulmonary-q025"
+    },
+    {
+      "batch": "439",
+      "questionNumber": 26,
+      "id": "medicine-midterm-439-pulmonary-q026"
+    },
+    {
+      "batch": "439",
+      "questionNumber": 27,
+      "id": "medicine-midterm-439-pulmonary-q027"
+    },
+    {
+      "batch": "439",
+      "questionNumber": 28,
+      "id": "medicine-midterm-439-pulmonary-q028"
+    },
+    {
+      "batch": "439",
+      "questionNumber": 29,
+      "id": "medicine-midterm-439-nephrology-q029"
+    },
+    {
+      "batch": "439",
+      "questionNumber": 30,
+      "id": "medicine-midterm-439-nephrology-q030"
+    },
+    {
+      "batch": "439",
+      "questionNumber": 31,
+      "id": "medicine-midterm-439-nephrology-q031"
+    },
+    {
+      "batch": "439",
+      "questionNumber": 32,
+      "id": "medicine-midterm-439-nephrology-q032"
+    },
+    {
+      "batch": "439",
+      "questionNumber": 33,
+      "id": "medicine-midterm-439-nephrology-q033"
+    },
+    {
+      "batch": "439",
+      "questionNumber": 34,
+      "id": "medicine-midterm-439-nephrology-q034"
+    },
+    {
+      "batch": "439",
+      "questionNumber": 35,
+      "id": "medicine-midterm-439-nephrology-q035"
+    },
+    {
+      "batch": "439",
+      "questionNumber": 36,
+      "id": "medicine-midterm-439-nephrology-q036"
+    },
+    {
+      "batch": "439",
+      "questionNumber": 37,
+      "id": "medicine-midterm-439-nephrology-q037"
+    },
+    {
+      "batch": "439",
+      "questionNumber": 38,
+      "id": "medicine-midterm-439-nephrology-q038"
+    },
+    {
+      "batch": "439",
+      "questionNumber": 39,
+      "id": "medicine-midterm-439-nephrology-q039"
+    },
+    {
+      "batch": "439",
+      "questionNumber": 40,
+      "id": "medicine-midterm-439-nephrology-q040"
+    },
+    {
+      "batch": "439",
+      "questionNumber": 41,
+      "id": "medicine-midterm-439-nephrology-q041"
+    },
+    {
+      "batch": "439",
+      "questionNumber": 42,
+      "id": "medicine-midterm-439-nephrology-q042"
+    },
+    {
+      "batch": "439",
+      "questionNumber": 43,
+      "id": "medicine-midterm-439-nephrology-q043"
+    },
+    {
+      "batch": "439",
+      "questionNumber": 44,
+      "id": "medicine-midterm-439-nephrology-q044"
+    },
+    {
+      "batch": "439",
+      "questionNumber": 45,
+      "id": "medicine-midterm-439-nephrology-q045"
+    },
+    {
+      "batch": "439",
+      "questionNumber": 46,
+      "id": "medicine-midterm-439-nephrology-q046"
+    },
+    {
+      "batch": "439",
+      "questionNumber": 47,
+      "id": "medicine-midterm-439-nephrology-q047"
+    },
+    {
+      "batch": "439",
+      "questionNumber": 48,
+      "id": "medicine-midterm-439-nephrology-q048"
+    },
+    {
+      "batch": "439",
+      "questionNumber": 49,
+      "id": "medicine-midterm-442-git-hepatobiliary-q047"
+    },
+    {
+      "batch": "439",
+      "questionNumber": 50,
+      "id": "medicine-midterm-439-nephrology-q050"
+    },
+    {
+      "batch": "439",
+      "questionNumber": 51,
+      "id": "medicine-midterm-439-nephrology-q051"
+    },
+    {
+      "batch": "439",
+      "questionNumber": 52,
+      "id": "medicine-midterm-439-nephrology-q052"
+    },
+    {
+      "batch": "439",
+      "questionNumber": 53,
+      "id": "medicine-midterm-439-nephrology-q053"
+    },
+    {
+      "batch": "439",
+      "questionNumber": 54,
+      "id": "medicine-midterm-439-nephrology-q054"
+    },
+    {
+      "batch": "439",
+      "questionNumber": 55,
+      "id": "medicine-midterm-439-nephrology-q055"
+    },
+    {
+      "batch": "439",
+      "questionNumber": 56,
+      "id": "medicine-midterm-439-nephrology-q056"
+    },
+    {
+      "batch": "439",
+      "questionNumber": 57,
+      "id": "medicine-midterm-439-nephrology-q057"
+    },
+    {
+      "batch": "439",
+      "questionNumber": 58,
+      "id": "medicine-midterm-439-nephrology-q058"
+    },
+    {
+      "batch": "439",
+      "questionNumber": 59,
+      "id": "medicine-midterm-439-nephrology-q059"
+    },
+    {
+      "batch": "439",
+      "questionNumber": 60,
+      "id": "medicine-midterm-439-nephrology-q060"
+    },
+    {
+      "batch": "438",
+      "questionNumber": 1,
+      "id": "medicine-midterm-438-cardiology-q001"
+    },
+    {
+      "batch": "438",
+      "questionNumber": 2,
+      "id": "medicine-midterm-438-cardiology-q002"
+    },
+    {
+      "batch": "438",
+      "questionNumber": 3,
+      "id": "medicine-midterm-438-cardiology-q003"
+    },
+    {
+      "batch": "438",
+      "questionNumber": 4,
+      "id": "medicine-midterm-438-cardiology-q004"
+    },
+    {
+      "batch": "438",
+      "questionNumber": 5,
+      "id": "medicine-midterm-438-cardiology-q005"
+    },
+    {
+      "batch": "438",
+      "questionNumber": 6,
+      "id": "medicine-midterm-438-cardiology-q006"
+    },
+    {
+      "batch": "438",
+      "questionNumber": 7,
+      "id": "medicine-midterm-438-cardiology-q007"
+    },
+    {
+      "batch": "438",
+      "questionNumber": 8,
+      "id": "medicine-midterm-438-cardiology-q008"
+    },
+    {
+      "batch": "438",
+      "questionNumber": 9,
+      "id": "medicine-midterm-438-cardiology-q009"
+    },
+    {
+      "batch": "438",
+      "questionNumber": 10,
+      "id": "medicine-midterm-438-cardiology-q010"
+    },
+    {
+      "batch": "438",
+      "questionNumber": 11,
+      "id": "medicine-midterm-438-cardiology-q011"
+    },
+    {
+      "batch": "438",
+      "questionNumber": 12,
+      "id": "medicine-midterm-438-cardiology-q012"
+    },
+    {
+      "batch": "438",
+      "questionNumber": 13,
+      "id": "medicine-midterm-438-cardiology-q013"
+    },
+    {
+      "batch": "438",
+      "questionNumber": 14,
+      "id": "medicine-midterm-438-cardiology-q014"
+    },
+    {
+      "batch": "438",
+      "questionNumber": 15,
+      "id": "medicine-midterm-438-pulmonary-q015"
+    },
+    {
+      "batch": "438",
+      "questionNumber": 16,
+      "id": "medicine-midterm-438-pulmonary-q016"
+    },
+    {
+      "batch": "438",
+      "questionNumber": 17,
+      "id": "medicine-midterm-438-pulmonary-q017"
+    },
+    {
+      "batch": "438",
+      "questionNumber": 18,
+      "id": "medicine-midterm-438-pulmonary-q018"
+    },
+    {
+      "batch": "438",
+      "questionNumber": 19,
+      "id": "medicine-midterm-438-pulmonary-q019"
+    },
+    {
+      "batch": "438",
+      "questionNumber": 20,
+      "id": "medicine-midterm-438-pulmonary-q020"
+    },
+    {
+      "batch": "438",
+      "questionNumber": 21,
+      "id": "medicine-midterm-438-pulmonary-q021"
+    },
+    {
+      "batch": "438",
+      "questionNumber": 22,
+      "id": "medicine-midterm-438-pulmonary-q022"
+    },
+    {
+      "batch": "438",
+      "questionNumber": 23,
+      "id": "medicine-midterm-438-pulmonary-q023"
+    },
+    {
+      "batch": "438",
+      "questionNumber": 24,
+      "id": "medicine-midterm-438-pulmonary-q024"
+    },
+    {
+      "batch": "438",
+      "questionNumber": 25,
+      "id": "medicine-midterm-438-pulmonary-q025"
+    },
+    {
+      "batch": "438",
+      "questionNumber": 26,
+      "id": "medicine-midterm-438-pulmonary-q026"
+    },
+    {
+      "batch": "438",
+      "questionNumber": 27,
+      "id": "medicine-midterm-438-pulmonary-q027"
+    },
+    {
+      "batch": "438",
+      "questionNumber": 28,
+      "id": "medicine-midterm-438-pulmonary-q028"
+    },
+    {
+      "batch": "438",
+      "questionNumber": 29,
+      "id": "medicine-midterm-438-pulmonary-q029"
+    },
+    {
+      "batch": "438",
+      "questionNumber": 30,
+      "id": "medicine-midterm-438-pulmonary-q030"
+    },
+    {
+      "batch": "438",
+      "questionNumber": 31,
+      "id": "medicine-midterm-438-nephrology-q031"
+    },
+    {
+      "batch": "438",
+      "questionNumber": 32,
+      "id": "medicine-midterm-438-nephrology-q032"
+    },
+    {
+      "batch": "438",
+      "questionNumber": 33,
+      "id": "medicine-midterm-438-nephrology-q033"
+    },
+    {
+      "batch": "438",
+      "questionNumber": 34,
+      "id": "medicine-midterm-438-nephrology-q034"
+    },
+    {
+      "batch": "438",
+      "questionNumber": 35,
+      "id": "medicine-midterm-438-nephrology-q035"
+    },
+    {
+      "batch": "438",
+      "questionNumber": 36,
+      "id": "medicine-midterm-438-nephrology-q036"
+    },
+    {
+      "batch": "438",
+      "questionNumber": 37,
+      "id": "medicine-midterm-438-nephrology-q037"
+    },
+    {
+      "batch": "438",
+      "questionNumber": 38,
+      "id": "medicine-midterm-438-nephrology-q038"
+    },
+    {
+      "batch": "438",
+      "questionNumber": 39,
+      "id": "medicine-midterm-438-nephrology-q039"
+    },
+    {
+      "batch": "438",
+      "questionNumber": 40,
+      "id": "medicine-midterm-438-nephrology-q040"
+    },
+    {
+      "batch": "438",
+      "questionNumber": 41,
+      "id": "medicine-midterm-438-nephrology-q041"
+    },
+    {
+      "batch": "438",
+      "questionNumber": 42,
+      "id": "medicine-midterm-438-nephrology-q042"
+    },
+    {
+      "batch": "438",
+      "questionNumber": 43,
+      "id": "medicine-midterm-438-nephrology-q043"
+    },
+    {
+      "batch": "438",
+      "questionNumber": 44,
+      "id": "medicine-midterm-438-git-hepatobiliary-q044"
+    },
+    {
+      "batch": "438",
+      "questionNumber": 45,
+      "id": "medicine-midterm-438-git-hepatobiliary-q045"
+    },
+    {
+      "batch": "438",
+      "questionNumber": 46,
+      "id": "medicine-midterm-438-git-hepatobiliary-q046"
+    },
+    {
+      "batch": "438",
+      "questionNumber": 47,
+      "id": "medicine-midterm-438-git-hepatobiliary-q047"
+    },
+    {
+      "batch": "438",
+      "questionNumber": 48,
+      "id": "medicine-midterm-438-git-hepatobiliary-q048"
+    },
+    {
+      "batch": "438",
+      "questionNumber": 49,
+      "id": "medicine-midterm-438-git-hepatobiliary-q049"
+    },
+    {
+      "batch": "438",
+      "questionNumber": 50,
+      "id": "medicine-midterm-438-git-hepatobiliary-q050"
+    },
+    {
+      "batch": "438",
+      "questionNumber": 51,
+      "id": "medicine-midterm-438-git-hepatobiliary-q051"
+    },
+    {
+      "batch": "438",
+      "questionNumber": 52,
+      "id": "medicine-midterm-438-git-hepatobiliary-q052"
+    },
+    {
+      "batch": "438",
+      "questionNumber": 53,
+      "id": "medicine-midterm-438-git-hepatobiliary-q053"
+    },
+    {
+      "batch": "438",
+      "questionNumber": 54,
+      "id": "medicine-midterm-438-git-hepatobiliary-q054"
+    },
+    {
+      "batch": "438",
+      "questionNumber": 55,
+      "id": "medicine-midterm-438-git-hepatobiliary-q055"
+    },
+    {
+      "batch": "438",
+      "questionNumber": 56,
+      "id": "medicine-midterm-438-git-hepatobiliary-q056"
+    },
+    {
+      "batch": "438",
+      "questionNumber": 57,
+      "id": "medicine-midterm-438-git-hepatobiliary-q056"
+    },
+    {
+      "batch": "438",
+      "questionNumber": 58,
+      "id": "medicine-midterm-438-git-hepatobiliary-q058"
+    },
+    {
+      "batch": "438",
+      "questionNumber": 59,
+      "id": "medicine-midterm-438-git-hepatobiliary-q059"
+    },
+    {
+      "batch": "438",
+      "questionNumber": 60,
+      "id": "medicine-midterm-438-git-hepatobiliary-q060"
+    },
+    {
+      "batch": "437",
+      "questionNumber": 1,
+      "id": "medicine-midterm-437-cardiology-q001"
+    },
+    {
+      "batch": "437",
+      "questionNumber": 2,
+      "id": "medicine-midterm-437-cardiology-q002"
+    },
+    {
+      "batch": "437",
+      "questionNumber": 3,
+      "id": "medicine-midterm-437-cardiology-q003"
+    },
+    {
+      "batch": "437",
+      "questionNumber": 4,
+      "id": "medicine-midterm-437-cardiology-q004"
+    },
+    {
+      "batch": "437",
+      "questionNumber": 5,
+      "id": "medicine-midterm-437-cardiology-q005"
+    },
+    {
+      "batch": "437",
+      "questionNumber": 6,
+      "id": "medicine-midterm-437-cardiology-q006"
+    },
+    {
+      "batch": "437",
+      "questionNumber": 7,
+      "id": "medicine-midterm-437-cardiology-q007"
+    },
+    {
+      "batch": "437",
+      "questionNumber": 8,
+      "id": "medicine-midterm-437-cardiology-q008"
+    },
+    {
+      "batch": "437",
+      "questionNumber": 9,
+      "id": "medicine-midterm-437-pulmonary-q009"
+    },
+    {
+      "batch": "437",
+      "questionNumber": 10,
+      "id": "medicine-midterm-437-pulmonary-q010"
+    },
+    {
+      "batch": "437",
+      "questionNumber": 11,
+      "id": "medicine-midterm-437-pulmonary-q011"
+    },
+    {
+      "batch": "437",
+      "questionNumber": 12,
+      "id": "medicine-midterm-437-pulmonary-q012"
+    },
+    {
+      "batch": "437",
+      "questionNumber": 13,
+      "id": "medicine-midterm-437-pulmonary-q013"
+    },
+    {
+      "batch": "437",
+      "questionNumber": 14,
+      "id": "medicine-midterm-437-pulmonary-q014"
+    },
+    {
+      "batch": "437",
+      "questionNumber": 15,
+      "id": "medicine-midterm-437-pulmonary-q015"
+    },
+    {
+      "batch": "437",
+      "questionNumber": 16,
+      "id": "medicine-midterm-437-pulmonary-q016"
+    },
+    {
+      "batch": "437",
+      "questionNumber": 17,
+      "id": "medicine-midterm-437-pulmonary-q017"
+    },
+    {
+      "batch": "437",
+      "questionNumber": 18,
+      "id": "medicine-midterm-437-pulmonary-q018"
+    },
+    {
+      "batch": "437",
+      "questionNumber": 19,
+      "id": "medicine-midterm-437-pulmonary-q019"
+    },
+    {
+      "batch": "437",
+      "questionNumber": 20,
+      "id": "medicine-midterm-437-pulmonary-q020"
+    },
+    {
+      "batch": "437",
+      "questionNumber": 21,
+      "id": "medicine-midterm-437-pulmonary-q021"
+    },
+    {
+      "batch": "437",
+      "questionNumber": 22,
+      "id": "medicine-midterm-437-pulmonary-q022"
+    },
+    {
+      "batch": "437",
+      "questionNumber": 23,
+      "id": "medicine-midterm-437-pulmonary-q023"
+    },
+    {
+      "batch": "437",
+      "questionNumber": 24,
+      "id": "medicine-midterm-437-nephrology-q024"
+    },
+    {
+      "batch": "437",
+      "questionNumber": 25,
+      "id": "medicine-midterm-437-nephrology-q025"
+    },
+    {
+      "batch": "437",
+      "questionNumber": 26,
+      "id": "medicine-midterm-437-nephrology-q026"
+    },
+    {
+      "batch": "437",
+      "questionNumber": 27,
+      "id": "medicine-midterm-437-nephrology-q027"
+    },
+    {
+      "batch": "437",
+      "questionNumber": 28,
+      "id": "medicine-midterm-437-nephrology-q028"
+    },
+    {
+      "batch": "437",
+      "questionNumber": 29,
+      "id": "medicine-midterm-437-nephrology-q029"
+    },
+    {
+      "batch": "437",
+      "questionNumber": 30,
+      "id": "medicine-midterm-437-git-hepatobiliary-q030"
+    },
+    {
+      "batch": "437",
+      "questionNumber": 31,
+      "id": "medicine-midterm-437-git-hepatobiliary-q031"
+    },
+    {
+      "batch": "437",
+      "questionNumber": 32,
+      "id": "medicine-midterm-437-git-hepatobiliary-q032"
+    },
+    {
+      "batch": "437",
+      "questionNumber": 33,
+      "id": "medicine-midterm-437-git-hepatobiliary-q033"
+    },
+    {
+      "batch": "437",
+      "questionNumber": 34,
+      "id": "medicine-midterm-437-git-hepatobiliary-q034"
+    },
+    {
+      "batch": "437",
+      "questionNumber": 35,
+      "id": "medicine-midterm-437-git-hepatobiliary-q035"
+    },
+    {
+      "batch": "437",
+      "questionNumber": 36,
+      "id": "medicine-midterm-437-git-hepatobiliary-q036"
+    },
+    {
+      "batch": "436",
+      "questionNumber": 1,
+      "id": "medicine-midterm-436-cardiology-q001"
+    },
+    {
+      "batch": "436",
+      "questionNumber": 2,
+      "id": "medicine-midterm-436-cardiology-q002"
+    },
+    {
+      "batch": "436",
+      "questionNumber": 3,
+      "id": "medicine-midterm-436-cardiology-q003"
+    },
+    {
+      "batch": "436",
+      "questionNumber": 4,
+      "id": "medicine-midterm-436-cardiology-q004"
+    },
+    {
+      "batch": "436",
+      "questionNumber": 5,
+      "id": "medicine-midterm-437-cardiology-q008"
+    },
+    {
+      "batch": "436",
+      "questionNumber": 6,
+      "id": "medicine-midterm-436-cardiology-q006"
+    },
+    {
+      "batch": "436",
+      "questionNumber": 7,
+      "id": "medicine-midterm-436-cardiology-q007"
+    },
+    {
+      "batch": "436",
+      "questionNumber": 8,
+      "id": "medicine-midterm-436-cardiology-q008"
+    },
+    {
+      "batch": "436",
+      "questionNumber": 9,
+      "id": "medicine-midterm-436-cardiology-q009"
+    },
+    {
+      "batch": "436",
+      "questionNumber": 10,
+      "id": "medicine-midterm-436-cardiology-q010"
+    },
+    {
+      "batch": "436",
+      "questionNumber": 11,
+      "id": "medicine-midterm-436-cardiology-q011"
+    },
+    {
+      "batch": "436",
+      "questionNumber": 12,
+      "id": "medicine-midterm-436-cardiology-q012"
+    },
+    {
+      "batch": "436",
+      "questionNumber": 13,
+      "id": "medicine-midterm-436-cardiology-q013"
+    },
+    {
+      "batch": "436",
+      "questionNumber": 14,
+      "id": "medicine-midterm-436-cardiology-q014"
+    },
+    {
+      "batch": "436",
+      "questionNumber": 15,
+      "id": "medicine-midterm-436-cardiology-q015"
+    },
+    {
+      "batch": "436",
+      "questionNumber": 16,
+      "id": "medicine-midterm-436-cardiology-q016"
+    },
+    {
+      "batch": "436",
+      "questionNumber": 17,
+      "id": "medicine-midterm-436-cardiology-q017"
+    },
+    {
+      "batch": "436",
+      "questionNumber": 18,
+      "id": "medicine-midterm-436-cardiology-q018"
+    },
+    {
+      "batch": "436",
+      "questionNumber": 19,
+      "id": "medicine-midterm-436-cardiology-q019"
+    },
+    {
+      "batch": "436",
+      "questionNumber": 20,
+      "id": "medicine-midterm-436-cardiology-q020"
+    },
+    {
+      "batch": "436",
+      "questionNumber": 21,
+      "id": "medicine-midterm-436-cardiology-q021"
+    },
+    {
+      "batch": "436",
+      "questionNumber": 22,
+      "id": "medicine-midterm-436-pulmonary-q022"
+    },
+    {
+      "batch": "436",
+      "questionNumber": 23,
+      "id": "medicine-midterm-436-pulmonary-q023"
+    },
+    {
+      "batch": "436",
+      "questionNumber": 24,
+      "id": "medicine-midterm-436-pulmonary-q024"
+    },
+    {
+      "batch": "436",
+      "questionNumber": 25,
+      "id": "medicine-midterm-436-pulmonary-q025"
+    },
+    {
+      "batch": "436",
+      "questionNumber": 26,
+      "id": "medicine-midterm-436-pulmonary-q026"
+    },
+    {
+      "batch": "436",
+      "questionNumber": 27,
+      "id": "medicine-midterm-436-pulmonary-q027"
+    },
+    {
+      "batch": "436",
+      "questionNumber": 28,
+      "id": "medicine-midterm-439-pulmonary-q027"
+    },
+    {
+      "batch": "436",
+      "questionNumber": 29,
+      "id": "medicine-midterm-436-pulmonary-q029"
+    },
+    {
+      "batch": "436",
+      "questionNumber": 30,
+      "id": "medicine-midterm-436-pulmonary-q030"
+    },
+    {
+      "batch": "436",
+      "questionNumber": 31,
+      "id": "medicine-midterm-436-pulmonary-q031"
+    },
+    {
+      "batch": "436",
+      "questionNumber": 32,
+      "id": "medicine-midterm-436-pulmonary-q032"
+    },
+    {
+      "batch": "436",
+      "questionNumber": 33,
+      "id": "medicine-midterm-436-pulmonary-q033"
+    },
+    {
+      "batch": "436",
+      "questionNumber": 34,
+      "id": "medicine-midterm-436-pulmonary-q034"
+    },
+    {
+      "batch": "436",
+      "questionNumber": 35,
+      "id": "medicine-midterm-436-pulmonary-q035"
+    },
+    {
+      "batch": "436",
+      "questionNumber": 36,
+      "id": "medicine-midterm-436-pulmonary-q036"
+    },
+    {
+      "batch": "436",
+      "questionNumber": 37,
+      "id": "medicine-midterm-436-pulmonary-q037"
+    },
+    {
+      "batch": "436",
+      "questionNumber": 38,
+      "id": "medicine-midterm-436-pulmonary-q038"
+    },
+    {
+      "batch": "436",
+      "questionNumber": 39,
+      "id": "medicine-midterm-436-pulmonary-q039"
+    },
+    {
+      "batch": "436",
+      "questionNumber": 40,
+      "id": "medicine-midterm-436-pulmonary-q040"
+    },
+    {
+      "batch": "436",
+      "questionNumber": 41,
+      "id": "medicine-midterm-436-pulmonary-q041"
+    },
+    {
+      "batch": "436",
+      "questionNumber": 42,
+      "id": "medicine-midterm-436-pulmonary-q042"
+    },
+    {
+      "batch": "436",
+      "questionNumber": 43,
+      "id": "medicine-midterm-436-pulmonary-q043"
+    },
+    {
+      "batch": "436",
+      "questionNumber": 44,
+      "id": "medicine-midterm-436-pulmonary-q044"
+    },
+    {
+      "batch": "436",
+      "questionNumber": 45,
+      "id": "medicine-midterm-436-pulmonary-q045"
+    },
+    {
+      "batch": "436",
+      "questionNumber": 46,
+      "id": "medicine-midterm-436-pulmonary-q046"
+    },
+    {
+      "batch": "436",
+      "questionNumber": 47,
+      "id": "medicine-midterm-436-pulmonary-q047"
+    },
+    {
+      "batch": "436",
+      "questionNumber": 48,
+      "id": "medicine-midterm-436-pulmonary-q048"
+    },
+    {
+      "batch": "436",
+      "questionNumber": 49,
+      "id": "medicine-midterm-436-pulmonary-q049"
+    },
+    {
+      "batch": "436",
+      "questionNumber": 50,
+      "id": "medicine-midterm-436-nephrology-q050"
+    },
+    {
+      "batch": "436",
+      "questionNumber": 51,
+      "id": "medicine-midterm-436-nephrology-q051"
+    },
+    {
+      "batch": "436",
+      "questionNumber": 52,
+      "id": "medicine-midterm-436-nephrology-q052"
+    },
+    {
+      "batch": "436",
+      "questionNumber": 53,
+      "id": "medicine-midterm-436-nephrology-q053"
+    },
+    {
+      "batch": "436",
+      "questionNumber": 54,
+      "id": "medicine-midterm-436-nephrology-q054"
+    },
+    {
+      "batch": "436",
+      "questionNumber": 55,
+      "id": "medicine-midterm-436-nephrology-q055"
+    },
+    {
+      "batch": "436",
+      "questionNumber": 56,
+      "id": "medicine-midterm-436-nephrology-q056"
+    },
+    {
+      "batch": "436",
+      "questionNumber": 57,
+      "id": "medicine-midterm-436-nephrology-q057"
+    },
+    {
+      "batch": "436",
+      "questionNumber": 58,
+      "id": "medicine-midterm-436-nephrology-q058"
+    },
+    {
+      "batch": "436",
+      "questionNumber": 59,
+      "id": "medicine-midterm-436-nephrology-q059"
+    },
+    {
+      "batch": "436",
+      "questionNumber": 60,
+      "id": "medicine-midterm-436-nephrology-q060"
+    },
+    {
+      "batch": "436",
+      "questionNumber": 61,
+      "id": "medicine-midterm-436-nephrology-q061"
+    },
+    {
+      "batch": "436",
+      "questionNumber": 62,
+      "id": "medicine-midterm-436-nephrology-q062"
+    },
+    {
+      "batch": "436",
+      "questionNumber": 63,
+      "id": "medicine-midterm-436-nephrology-q063"
+    },
+    {
+      "batch": "436",
+      "questionNumber": 64,
+      "id": "medicine-midterm-436-nephrology-q064"
+    },
+    {
+      "batch": "436",
+      "questionNumber": 65,
+      "id": "medicine-midterm-436-nephrology-q065"
+    },
+    {
+      "batch": "436",
+      "questionNumber": 66,
+      "id": "medicine-midterm-436-nephrology-q066"
+    },
+    {
+      "batch": "436",
+      "questionNumber": 67,
+      "id": "medicine-midterm-436-git-hepatobiliary-q067"
+    },
+    {
+      "batch": "436",
+      "questionNumber": 68,
+      "id": "medicine-midterm-436-git-hepatobiliary-q068"
+    },
+    {
+      "batch": "436",
+      "questionNumber": 69,
+      "id": "medicine-midterm-436-git-hepatobiliary-q069"
+    },
+    {
+      "batch": "436",
+      "questionNumber": 70,
+      "id": "medicine-midterm-436-git-hepatobiliary-q070"
+    },
+    {
+      "batch": "436",
+      "questionNumber": 71,
+      "id": "medicine-midterm-436-git-hepatobiliary-q071"
+    },
+    {
+      "batch": "436",
+      "questionNumber": 72,
+      "id": "medicine-midterm-436-git-hepatobiliary-q072"
+    },
+    {
+      "batch": "436",
+      "questionNumber": 73,
+      "id": "medicine-midterm-436-git-hepatobiliary-q073"
+    },
+    {
+      "batch": "436",
+      "questionNumber": 74,
+      "id": "medicine-midterm-436-git-hepatobiliary-q074"
+    },
+    {
+      "batch": "436",
+      "questionNumber": 75,
+      "id": "medicine-midterm-436-git-hepatobiliary-q075"
+    },
+    {
+      "batch": "436",
+      "questionNumber": 76,
+      "id": "medicine-midterm-436-git-hepatobiliary-q076"
+    },
+    {
+      "batch": "436",
+      "questionNumber": 77,
+      "id": "medicine-midterm-436-git-hepatobiliary-q077"
+    },
+    {
+      "batch": "436",
+      "questionNumber": 78,
+      "id": "medicine-midterm-436-git-hepatobiliary-q078"
+    },
+    {
+      "batch": "436",
+      "questionNumber": 79,
+      "id": "medicine-midterm-436-git-hepatobiliary-q079"
+    },
+    {
+      "batch": "436",
+      "questionNumber": 80,
+      "id": "medicine-midterm-436-git-hepatobiliary-q080"
+    },
+    {
+      "batch": "436",
+      "questionNumber": 81,
+      "id": "medicine-midterm-436-git-hepatobiliary-q069"
+    },
+    {
+      "batch": "436",
+      "questionNumber": 82,
+      "id": "medicine-midterm-436-git-hepatobiliary-q082"
+    },
+    {
+      "batch": "436",
+      "questionNumber": 83,
+      "id": "medicine-midterm-436-git-hepatobiliary-q083"
+    },
+    {
+      "batch": "436",
+      "questionNumber": 84,
+      "id": "medicine-midterm-436-git-hepatobiliary-q084"
+    },
+    {
+      "batch": "436",
+      "questionNumber": 85,
+      "id": "medicine-midterm-436-git-hepatobiliary-q085"
+    },
+    {
+      "batch": "435",
+      "questionNumber": 1,
+      "id": "medicine-midterm-435-cardiology-q001"
+    },
+    {
+      "batch": "435",
+      "questionNumber": 2,
+      "id": "medicine-midterm-435-cardiology-q002"
+    },
+    {
+      "batch": "435",
+      "questionNumber": 3,
+      "id": "medicine-midterm-435-cardiology-q003"
+    },
+    {
+      "batch": "435",
+      "questionNumber": 4,
+      "id": "medicine-midterm-435-cardiology-q004"
+    },
+    {
+      "batch": "435",
+      "questionNumber": 5,
+      "id": "medicine-midterm-435-cardiology-q005"
+    },
+    {
+      "batch": "435",
+      "questionNumber": 6,
+      "id": "medicine-midterm-435-cardiology-q006"
+    },
+    {
+      "batch": "435",
+      "questionNumber": 7,
+      "id": "medicine-midterm-435-cardiology-q007"
+    },
+    {
+      "batch": "435",
+      "questionNumber": 8,
+      "id": "medicine-midterm-435-cardiology-q008"
+    },
+    {
+      "batch": "435",
+      "questionNumber": 9,
+      "id": "medicine-midterm-435-cardiology-q009"
+    },
+    {
+      "batch": "435",
+      "questionNumber": 10,
+      "id": "medicine-midterm-435-cardiology-q010"
+    },
+    {
+      "batch": "435",
+      "questionNumber": 11,
+      "id": "medicine-midterm-435-cardiology-q011"
+    },
+    {
+      "batch": "435",
+      "questionNumber": 12,
+      "id": "medicine-midterm-435-cardiology-q012"
+    },
+    {
+      "batch": "435",
+      "questionNumber": 13,
+      "id": "medicine-midterm-435-cardiology-q013"
+    },
+    {
+      "batch": "435",
+      "questionNumber": 14,
+      "id": "medicine-midterm-435-cardiology-q014"
+    },
+    {
+      "batch": "435",
+      "questionNumber": 15,
+      "id": "medicine-midterm-435-pulmonary-q015"
+    },
+    {
+      "batch": "435",
+      "questionNumber": 16,
+      "id": "medicine-midterm-435-pulmonary-q016"
+    },
+    {
+      "batch": "435",
+      "questionNumber": 17,
+      "id": "medicine-midterm-435-pulmonary-q017"
+    },
+    {
+      "batch": "435",
+      "questionNumber": 18,
+      "id": "medicine-midterm-435-pulmonary-q018"
+    },
+    {
+      "batch": "435",
+      "questionNumber": 19,
+      "id": "medicine-midterm-435-pulmonary-q019"
+    },
+    {
+      "batch": "435",
+      "questionNumber": 20,
+      "id": "medicine-midterm-435-pulmonary-q020"
+    },
+    {
+      "batch": "435",
+      "questionNumber": 21,
+      "id": "medicine-midterm-435-pulmonary-q021"
+    },
+    {
+      "batch": "435",
+      "questionNumber": 22,
+      "id": "medicine-midterm-435-pulmonary-q022"
+    },
+    {
+      "batch": "435",
+      "questionNumber": 23,
+      "id": "medicine-midterm-435-pulmonary-q023"
+    },
+    {
+      "batch": "435",
+      "questionNumber": 24,
+      "id": "medicine-midterm-435-pulmonary-q024"
+    },
+    {
+      "batch": "435",
+      "questionNumber": 25,
+      "id": "medicine-midterm-435-pulmonary-q025"
+    },
+    {
+      "batch": "435",
+      "questionNumber": 26,
+      "id": "medicine-midterm-435-pulmonary-q026"
+    },
+    {
+      "batch": "435",
+      "questionNumber": 27,
+      "id": "medicine-midterm-435-pulmonary-q027"
+    },
+    {
+      "batch": "435",
+      "questionNumber": 28,
+      "id": "medicine-midterm-435-pulmonary-q028"
+    },
+    {
+      "batch": "435",
+      "questionNumber": 29,
+      "id": "medicine-midterm-435-pulmonary-q029"
+    },
+    {
+      "batch": "435",
+      "questionNumber": 30,
+      "id": "medicine-midterm-435-pulmonary-q030"
+    },
+    {
+      "batch": "435",
+      "questionNumber": 31,
+      "id": "medicine-midterm-435-pulmonary-q031"
+    },
+    {
+      "batch": "435",
+      "questionNumber": 32,
+      "id": "medicine-midterm-435-pulmonary-q032"
+    },
+    {
+      "batch": "435",
+      "questionNumber": 33,
+      "id": "medicine-midterm-435-nephrology-q033"
+    },
+    {
+      "batch": "435",
+      "questionNumber": 34,
+      "id": "medicine-midterm-435-nephrology-q034"
+    },
+    {
+      "batch": "435",
+      "questionNumber": 35,
+      "id": "medicine-midterm-435-nephrology-q035"
+    },
+    {
+      "batch": "435",
+      "questionNumber": 36,
+      "id": "medicine-midterm-435-nephrology-q036"
+    },
+    {
+      "batch": "435",
+      "questionNumber": 37,
+      "id": "medicine-midterm-435-nephrology-q037"
+    },
+    {
+      "batch": "435",
+      "questionNumber": 38,
+      "id": "medicine-midterm-435-nephrology-q038"
+    },
+    {
+      "batch": "435",
+      "questionNumber": 39,
+      "id": "medicine-midterm-435-nephrology-q039"
+    },
+    {
+      "batch": "435",
+      "questionNumber": 40,
+      "id": "medicine-midterm-435-nephrology-q040"
+    },
+    {
+      "batch": "435",
+      "questionNumber": 41,
+      "id": "medicine-midterm-435-git-hepatobiliary-q041"
+    },
+    {
+      "batch": "435",
+      "questionNumber": 42,
+      "id": "medicine-midterm-435-git-hepatobiliary-q042"
+    },
+    {
+      "batch": "435",
+      "questionNumber": 43,
+      "id": "medicine-midterm-435-git-hepatobiliary-q043"
+    },
+    {
+      "batch": "435",
+      "questionNumber": 44,
+      "id": "medicine-midterm-435-git-hepatobiliary-q044"
+    },
+    {
+      "batch": "435",
+      "questionNumber": 45,
+      "id": "medicine-midterm-435-git-hepatobiliary-q045"
+    },
+    {
+      "batch": "435",
+      "questionNumber": 46,
+      "id": "medicine-midterm-435-git-hepatobiliary-q046"
+    },
+    {
+      "batch": "435",
+      "questionNumber": 47,
+      "id": "medicine-midterm-435-git-hepatobiliary-q047"
+    },
+    {
+      "batch": "435",
+      "questionNumber": 48,
+      "id": "medicine-midterm-435-git-hepatobiliary-q048"
+    },
+    {
+      "batch": "435",
+      "questionNumber": 49,
+      "id": "medicine-midterm-435-git-hepatobiliary-q049"
+    },
+    {
+      "batch": "435",
+      "questionNumber": 50,
+      "id": "medicine-midterm-435-git-hepatobiliary-q050"
+    },
+    {
+      "batch": "435",
+      "questionNumber": 51,
+      "id": "medicine-midterm-435-git-hepatobiliary-q051"
+    },
+    {
+      "batch": "435",
+      "questionNumber": 52,
+      "id": "medicine-midterm-436-git-hepatobiliary-q072"
+    },
+    {
+      "batch": "435",
+      "questionNumber": 53,
+      "id": "medicine-midterm-435-git-hepatobiliary-q053"
+    },
+    {
+      "batch": "435",
+      "questionNumber": 54,
+      "id": "medicine-midterm-435-git-hepatobiliary-q054"
+    },
+    {
+      "batch": "435",
+      "questionNumber": 55,
+      "id": "medicine-midterm-435-git-hepatobiliary-q055"
+    },
+    {
+      "batch": "434",
+      "questionNumber": 1,
+      "id": "medicine-midterm-434-cardiology-q001"
+    },
+    {
+      "batch": "434",
+      "questionNumber": 2,
+      "id": "medicine-midterm-434-cardiology-q002"
+    },
+    {
+      "batch": "434",
+      "questionNumber": 3,
+      "id": "medicine-midterm-434-cardiology-q003"
+    },
+    {
+      "batch": "434",
+      "questionNumber": 4,
+      "id": "medicine-midterm-434-cardiology-q004"
+    },
+    {
+      "batch": "434",
+      "questionNumber": 5,
+      "id": "medicine-midterm-434-cardiology-q005"
+    },
+    {
+      "batch": "434",
+      "questionNumber": 6,
+      "id": "medicine-midterm-434-cardiology-q006"
+    },
+    {
+      "batch": "434",
+      "questionNumber": 7,
+      "id": "medicine-midterm-434-cardiology-q007"
+    },
+    {
+      "batch": "434",
+      "questionNumber": 8,
+      "id": "medicine-midterm-434-cardiology-q008"
+    },
+    {
+      "batch": "434",
+      "questionNumber": 9,
+      "id": "medicine-midterm-434-cardiology-q009"
+    },
+    {
+      "batch": "434",
+      "questionNumber": 10,
+      "id": "medicine-midterm-434-cardiology-q010"
+    },
+    {
+      "batch": "434",
+      "questionNumber": 11,
+      "id": "medicine-midterm-434-cardiology-q011"
+    },
+    {
+      "batch": "434",
+      "questionNumber": 12,
+      "id": "medicine-midterm-434-cardiology-q012"
+    },
+    {
+      "batch": "434",
+      "questionNumber": 13,
+      "id": "medicine-midterm-434-cardiology-q013"
+    },
+    {
+      "batch": "434",
+      "questionNumber": 14,
+      "id": "medicine-midterm-434-cardiology-q014"
+    },
+    {
+      "batch": "434",
+      "questionNumber": 15,
+      "id": "medicine-midterm-434-cardiology-q015"
+    },
+    {
+      "batch": "434",
+      "questionNumber": 16,
+      "id": "medicine-midterm-434-cardiology-q016"
+    },
+    {
+      "batch": "434",
+      "questionNumber": 17,
+      "id": "medicine-midterm-434-cardiology-q017"
+    },
+    {
+      "batch": "434",
+      "questionNumber": 18,
+      "id": "medicine-midterm-434-cardiology-q018"
+    },
+    {
+      "batch": "434",
+      "questionNumber": 19,
+      "id": "medicine-midterm-434-cardiology-q019"
+    },
+    {
+      "batch": "434",
+      "questionNumber": 20,
+      "id": "medicine-midterm-434-cardiology-q020"
+    },
+    {
+      "batch": "434",
+      "questionNumber": 21,
+      "id": "medicine-midterm-434-cardiology-q021"
+    },
+    {
+      "batch": "434",
+      "questionNumber": 22,
+      "id": "medicine-midterm-434-pulmonary-q022"
+    },
+    {
+      "batch": "434",
+      "questionNumber": 23,
+      "id": "medicine-midterm-434-pulmonary-q023"
+    },
+    {
+      "batch": "434",
+      "questionNumber": 24,
+      "id": "medicine-midterm-434-pulmonary-q024"
+    },
+    {
+      "batch": "434",
+      "questionNumber": 25,
+      "id": "medicine-midterm-434-pulmonary-q025"
+    },
+    {
+      "batch": "434",
+      "questionNumber": 26,
+      "id": "medicine-midterm-434-pulmonary-q026"
+    },
+    {
+      "batch": "434",
+      "questionNumber": 27,
+      "id": "medicine-midterm-434-pulmonary-q027"
+    },
+    {
+      "batch": "434",
+      "questionNumber": 28,
+      "id": "medicine-midterm-434-pulmonary-q028"
+    },
+    {
+      "batch": "434",
+      "questionNumber": 29,
+      "id": "medicine-midterm-434-pulmonary-q029"
+    },
+    {
+      "batch": "434",
+      "questionNumber": 30,
+      "id": "medicine-midterm-434-pulmonary-q030"
+    },
+    {
+      "batch": "434",
+      "questionNumber": 31,
+      "id": "medicine-midterm-434-pulmonary-q031"
+    },
+    {
+      "batch": "434",
+      "questionNumber": 32,
+      "id": "medicine-midterm-434-nephrology-q032"
+    },
+    {
+      "batch": "434",
+      "questionNumber": 33,
+      "id": "medicine-midterm-434-nephrology-q033"
+    },
+    {
+      "batch": "434",
+      "questionNumber": 34,
+      "id": "medicine-midterm-434-nephrology-q034"
+    },
+    {
+      "batch": "434",
+      "questionNumber": 35,
+      "id": "medicine-midterm-434-nephrology-q035"
+    },
+    {
+      "batch": "434",
+      "questionNumber": 36,
+      "id": "medicine-midterm-434-nephrology-q036"
+    },
+    {
+      "batch": "434",
+      "questionNumber": 37,
+      "id": "medicine-midterm-434-nephrology-q037"
+    },
+    {
+      "batch": "434",
+      "questionNumber": 38,
+      "id": "medicine-midterm-434-git-hepatobiliary-q038"
+    },
+    {
+      "batch": "434",
+      "questionNumber": 39,
+      "id": "medicine-midterm-434-git-hepatobiliary-q039"
+    },
+    {
+      "batch": "434",
+      "questionNumber": 40,
+      "id": "medicine-midterm-434-git-hepatobiliary-q040"
+    },
+    {
+      "batch": "434",
+      "questionNumber": 41,
+      "id": "medicine-midterm-434-git-hepatobiliary-q041"
+    },
+    {
+      "batch": "434",
+      "questionNumber": 42,
+      "id": "medicine-midterm-434-git-hepatobiliary-q042"
+    },
+    {
+      "batch": "434",
+      "questionNumber": 43,
+      "id": "medicine-midterm-434-git-hepatobiliary-q043"
+    },
+    {
+      "batch": "434",
+      "questionNumber": 44,
+      "id": "medicine-midterm-434-git-hepatobiliary-q044"
+    },
+    {
+      "batch": "434",
+      "questionNumber": 45,
+      "id": "medicine-midterm-434-git-hepatobiliary-q045"
+    },
+    {
+      "batch": "434",
+      "questionNumber": 46,
+      "id": "medicine-midterm-434-git-hepatobiliary-q046"
+    },
+    {
+      "batch": "433",
+      "questionNumber": 1,
+      "id": "medicine-midterm-433-cardiology-q001"
+    },
+    {
+      "batch": "433",
+      "questionNumber": 2,
+      "id": "medicine-midterm-433-cardiology-q002"
+    },
+    {
+      "batch": "433",
+      "questionNumber": 3,
+      "id": "medicine-midterm-433-cardiology-q003"
+    },
+    {
+      "batch": "433",
+      "questionNumber": 4,
+      "id": "medicine-midterm-433-cardiology-q004"
+    },
+    {
+      "batch": "433",
+      "questionNumber": 5,
+      "id": "medicine-midterm-433-cardiology-q005"
+    },
+    {
+      "batch": "433",
+      "questionNumber": 6,
+      "id": "medicine-midterm-434-cardiology-q019"
+    },
+    {
+      "batch": "433",
+      "questionNumber": 7,
+      "id": "medicine-midterm-433-cardiology-q007"
+    },
+    {
+      "batch": "433",
+      "questionNumber": 8,
+      "id": "medicine-midterm-433-cardiology-q008"
+    },
+    {
+      "batch": "433",
+      "questionNumber": 9,
+      "id": "medicine-midterm-433-cardiology-q009"
+    },
+    {
+      "batch": "433",
+      "questionNumber": 10,
+      "id": "medicine-midterm-433-cardiology-q010"
+    },
+    {
+      "batch": "433",
+      "questionNumber": 11,
+      "id": "medicine-midterm-433-cardiology-q011"
+    },
+    {
+      "batch": "433",
+      "questionNumber": 12,
+      "id": "medicine-midterm-433-cardiology-q012"
+    },
+    {
+      "batch": "433",
+      "questionNumber": 13,
+      "id": "medicine-midterm-433-cardiology-q013"
+    },
+    {
+      "batch": "433",
+      "questionNumber": 14,
+      "id": "medicine-midterm-433-cardiology-q014"
+    },
+    {
+      "batch": "433",
+      "questionNumber": 15,
+      "id": "medicine-midterm-433-cardiology-q015"
+    },
+    {
+      "batch": "433",
+      "questionNumber": 16,
+      "id": "medicine-midterm-433-pulmonary-q016"
+    },
+    {
+      "batch": "433",
+      "questionNumber": 17,
+      "id": "medicine-midterm-433-pulmonary-q017"
+    },
+    {
+      "batch": "433",
+      "questionNumber": 18,
+      "id": "medicine-midterm-433-pulmonary-q018"
+    },
+    {
+      "batch": "433",
+      "questionNumber": 19,
+      "id": "medicine-midterm-433-pulmonary-q019"
+    },
+    {
+      "batch": "433",
+      "questionNumber": 20,
+      "id": "medicine-midterm-433-pulmonary-q020"
+    },
+    {
+      "batch": "433",
+      "questionNumber": 21,
+      "id": "medicine-midterm-433-pulmonary-q021"
+    },
+    {
+      "batch": "433",
+      "questionNumber": 22,
+      "id": "medicine-midterm-433-pulmonary-q022"
+    },
+    {
+      "batch": "433",
+      "questionNumber": 23,
+      "id": "medicine-midterm-433-pulmonary-q023"
+    },
+    {
+      "batch": "433",
+      "questionNumber": 24,
+      "id": "medicine-midterm-433-pulmonary-q024"
+    },
+    {
+      "batch": "433",
+      "questionNumber": 25,
+      "id": "medicine-midterm-433-pulmonary-q025"
+    },
+    {
+      "batch": "433",
+      "questionNumber": 26,
+      "id": "medicine-midterm-433-pulmonary-q026"
+    },
+    {
+      "batch": "433",
+      "questionNumber": 27,
+      "id": "medicine-midterm-433-pulmonary-q027"
+    },
+    {
+      "batch": "433",
+      "questionNumber": 28,
+      "id": "medicine-midterm-433-pulmonary-q028"
+    },
+    {
+      "batch": "433",
+      "questionNumber": 29,
+      "id": "medicine-midterm-433-pulmonary-q029"
+    },
+    {
+      "batch": "433",
+      "questionNumber": 30,
+      "id": "medicine-midterm-433-nephrology-q030"
+    },
+    {
+      "batch": "433",
+      "questionNumber": 31,
+      "id": "medicine-midterm-433-nephrology-q031"
+    },
+    {
+      "batch": "433",
+      "questionNumber": 32,
+      "id": "medicine-midterm-433-nephrology-q032"
+    },
+    {
+      "batch": "433",
+      "questionNumber": 34,
+      "id": "medicine-midterm-433-nephrology-q034"
+    },
+    {
+      "batch": "433",
+      "questionNumber": 35,
+      "id": "medicine-midterm-433-nephrology-q035"
+    },
+    {
+      "batch": "433",
+      "questionNumber": 36,
+      "id": "medicine-midterm-433-nephrology-q036"
+    },
+    {
+      "batch": "433",
+      "questionNumber": 37,
+      "id": "medicine-midterm-433-nephrology-q037"
+    },
+    {
+      "batch": "433",
+      "questionNumber": 38,
+      "id": "medicine-midterm-433-nephrology-q038"
+    },
+    {
+      "batch": "433",
+      "questionNumber": 39,
+      "id": "medicine-midterm-433-git-hepatobiliary-q039"
+    },
+    {
+      "batch": "433",
+      "questionNumber": 40,
+      "id": "medicine-midterm-433-git-hepatobiliary-q040"
+    },
+    {
+      "batch": "433",
+      "questionNumber": 41,
+      "id": "medicine-midterm-433-git-hepatobiliary-q041"
+    },
+    {
+      "batch": "433",
+      "questionNumber": 42,
+      "id": "medicine-midterm-433-git-hepatobiliary-q042"
+    },
+    {
+      "batch": "433",
+      "questionNumber": 43,
+      "id": "medicine-midterm-433-git-hepatobiliary-q043"
+    },
+    {
+      "batch": "433",
+      "questionNumber": 44,
+      "id": "medicine-midterm-433-git-hepatobiliary-q044"
+    },
+    {
+      "batch": "433",
+      "questionNumber": 45,
+      "id": "medicine-midterm-433-git-hepatobiliary-q045"
+    },
+    {
+      "batch": "433",
+      "questionNumber": 46,
+      "id": "medicine-midterm-433-git-hepatobiliary-q046"
+    },
+    {
+      "batch": "433",
+      "questionNumber": 47,
+      "id": "medicine-midterm-433-git-hepatobiliary-q047"
+    },
+    {
+      "batch": "433",
+      "questionNumber": 48,
+      "id": "medicine-midterm-433-git-hepatobiliary-q048"
+    },
+    {
+      "batch": "433",
+      "questionNumber": 49,
+      "id": "medicine-midterm-433-git-hepatobiliary-q049"
+    },
+    {
+      "batch": "432",
+      "questionNumber": 1,
+      "id": "medicine-midterm-432-cardiology-q001"
+    },
+    {
+      "batch": "432",
+      "questionNumber": 2,
+      "id": "medicine-midterm-432-cardiology-q002"
+    },
+    {
+      "batch": "432",
+      "questionNumber": 3,
+      "id": "medicine-midterm-432-cardiology-q003"
+    },
+    {
+      "batch": "432",
+      "questionNumber": 4,
+      "id": "medicine-midterm-432-cardiology-q004"
+    },
+    {
+      "batch": "432",
+      "questionNumber": 5,
+      "id": "medicine-midterm-432-cardiology-q005"
+    },
+    {
+      "batch": "432",
+      "questionNumber": 6,
+      "id": "medicine-midterm-432-cardiology-q006"
+    },
+    {
+      "batch": "432",
+      "questionNumber": 7,
+      "id": "medicine-midterm-432-cardiology-q007"
+    },
+    {
+      "batch": "432",
+      "questionNumber": 8,
+      "id": "medicine-midterm-432-cardiology-q008"
+    },
+    {
+      "batch": "432",
+      "questionNumber": 9,
+      "id": "medicine-midterm-432-cardiology-q009"
+    },
+    {
+      "batch": "432",
+      "questionNumber": 10,
+      "id": "medicine-midterm-432-cardiology-q010"
+    },
+    {
+      "batch": "432",
+      "questionNumber": 11,
+      "id": "medicine-midterm-432-cardiology-q011"
+    },
+    {
+      "batch": "432",
+      "questionNumber": 12,
+      "id": "medicine-midterm-432-cardiology-q012"
+    },
+    {
+      "batch": "432",
+      "questionNumber": 13,
+      "id": "medicine-midterm-432-cardiology-q013"
+    },
+    {
+      "batch": "432",
+      "questionNumber": 14,
+      "id": "medicine-midterm-432-cardiology-q014"
+    },
+    {
+      "batch": "432",
+      "questionNumber": 15,
+      "id": "medicine-midterm-432-cardiology-q015"
+    },
+    {
+      "batch": "432",
+      "questionNumber": 16,
+      "id": "medicine-midterm-432-pulmonary-q016"
+    },
+    {
+      "batch": "432",
+      "questionNumber": 17,
+      "id": "medicine-midterm-432-pulmonary-q017"
+    },
+    {
+      "batch": "432",
+      "questionNumber": 18,
+      "id": "medicine-midterm-432-pulmonary-q018"
+    },
+    {
+      "batch": "432",
+      "questionNumber": 19,
+      "id": "medicine-midterm-432-pulmonary-q019"
+    },
+    {
+      "batch": "432",
+      "questionNumber": 20,
+      "id": "medicine-midterm-432-pulmonary-q020"
+    },
+    {
+      "batch": "432",
+      "questionNumber": 21,
+      "id": "medicine-midterm-432-pulmonary-q021"
+    },
+    {
+      "batch": "432",
+      "questionNumber": 22,
+      "id": "medicine-midterm-432-pulmonary-q022"
+    },
+    {
+      "batch": "432",
+      "questionNumber": 23,
+      "id": "medicine-midterm-432-pulmonary-q023"
+    },
+    {
+      "batch": "432",
+      "questionNumber": 24,
+      "id": "medicine-midterm-432-pulmonary-q024"
+    },
+    {
+      "batch": "432",
+      "questionNumber": 25,
+      "id": "medicine-midterm-432-nephrology-q025"
+    },
+    {
+      "batch": "432",
+      "questionNumber": 26,
+      "id": "medicine-midterm-432-nephrology-q026"
+    },
+    {
+      "batch": "432",
+      "questionNumber": 27,
+      "id": "medicine-midterm-432-nephrology-q027"
+    },
+    {
+      "batch": "432",
+      "questionNumber": 28,
+      "id": "medicine-midterm-432-nephrology-q028"
+    },
+    {
+      "batch": "432",
+      "questionNumber": 29,
+      "id": "medicine-midterm-432-nephrology-q029"
+    },
+    {
+      "batch": "432",
+      "questionNumber": 30,
+      "id": "medicine-midterm-432-git-hepatobiliary-q030"
+    },
+    {
+      "batch": "432",
+      "questionNumber": 31,
+      "id": "medicine-midterm-432-git-hepatobiliary-q031"
+    },
+    {
+      "batch": "432",
+      "questionNumber": 32,
+      "id": "medicine-midterm-432-git-hepatobiliary-q032"
+    },
+    {
+      "batch": "432",
+      "questionNumber": 33,
+      "id": "medicine-midterm-432-git-hepatobiliary-q033"
+    },
+    {
+      "batch": "432",
+      "questionNumber": 34,
+      "id": "medicine-midterm-432-git-hepatobiliary-q034"
+    },
+    {
+      "batch": "431",
+      "questionNumber": 1,
+      "id": "medicine-midterm-431-cardiology-q001"
+    },
+    {
+      "batch": "431",
+      "questionNumber": 2,
+      "id": "medicine-midterm-431-cardiology-q002"
+    },
+    {
+      "batch": "431",
+      "questionNumber": 3,
+      "id": "medicine-midterm-431-cardiology-q003"
+    },
+    {
+      "batch": "431",
+      "questionNumber": 4,
+      "id": "medicine-midterm-431-cardiology-q004"
+    },
+    {
+      "batch": "431",
+      "questionNumber": 5,
+      "id": "medicine-midterm-431-cardiology-q005"
+    },
+    {
+      "batch": "431",
+      "questionNumber": 6,
+      "id": "medicine-midterm-431-cardiology-q006"
+    },
+    {
+      "batch": "431",
+      "questionNumber": 7,
+      "id": "medicine-midterm-431-cardiology-q007"
+    },
+    {
+      "batch": "431",
+      "questionNumber": 8,
+      "id": "medicine-midterm-431-cardiology-q008"
+    },
+    {
+      "batch": "431",
+      "questionNumber": 9,
+      "id": "medicine-midterm-431-cardiology-q009"
+    },
+    {
+      "batch": "431",
+      "questionNumber": 10,
+      "id": "medicine-midterm-431-cardiology-q010"
+    },
+    {
+      "batch": "431",
+      "questionNumber": 11,
+      "id": "medicine-midterm-431-cardiology-q011"
+    },
+    {
+      "batch": "431",
+      "questionNumber": 12,
+      "id": "medicine-midterm-431-cardiology-q012"
+    },
+    {
+      "batch": "431",
+      "questionNumber": 13,
+      "id": "medicine-midterm-431-cardiology-q013"
+    },
+    {
+      "batch": "431",
+      "questionNumber": 14,
+      "id": "medicine-midterm-431-cardiology-q014"
+    },
+    {
+      "batch": "431",
+      "questionNumber": 15,
+      "id": "medicine-midterm-431-cardiology-q015"
+    },
+    {
+      "batch": "431",
+      "questionNumber": 16,
+      "id": "medicine-midterm-431-cardiology-q016"
+    },
+    {
+      "batch": "431",
+      "questionNumber": 17,
+      "id": "medicine-midterm-431-cardiology-q017"
+    },
+    {
+      "batch": "431",
+      "questionNumber": 18,
+      "id": "medicine-midterm-431-cardiology-q018"
+    },
+    {
+      "batch": "431",
+      "questionNumber": 19,
+      "id": "medicine-midterm-431-pulmonary-q019"
+    },
+    {
+      "batch": "431",
+      "questionNumber": 20,
+      "id": "medicine-midterm-431-pulmonary-q020"
+    },
+    {
+      "batch": "431",
+      "questionNumber": 21,
+      "id": "medicine-midterm-431-pulmonary-q021"
+    },
+    {
+      "batch": "431",
+      "questionNumber": 22,
+      "id": "medicine-midterm-431-pulmonary-q022"
+    },
+    {
+      "batch": "431",
+      "questionNumber": 23,
+      "id": "medicine-midterm-431-pulmonary-q023"
+    },
+    {
+      "batch": "431",
+      "questionNumber": 24,
+      "id": "medicine-midterm-431-pulmonary-q024"
+    },
+    {
+      "batch": "431",
+      "questionNumber": 25,
+      "id": "medicine-midterm-431-pulmonary-q025"
+    },
+    {
+      "batch": "431",
+      "questionNumber": 26,
+      "id": "medicine-midterm-431-pulmonary-q026"
+    },
+    {
+      "batch": "431",
+      "questionNumber": 27,
+      "id": "medicine-midterm-431-pulmonary-q027"
+    },
+    {
+      "batch": "431",
+      "questionNumber": 28,
+      "id": "medicine-midterm-431-pulmonary-q028"
+    },
+    {
+      "batch": "431",
+      "questionNumber": 29,
+      "id": "medicine-midterm-431-pulmonary-q029"
+    },
+    {
+      "batch": "431",
+      "questionNumber": 30,
+      "id": "medicine-midterm-431-pulmonary-q030"
+    },
+    {
+      "batch": "431",
+      "questionNumber": 31,
+      "id": "medicine-midterm-431-pulmonary-q031"
+    },
+    {
+      "batch": "431",
+      "questionNumber": 32,
+      "id": "medicine-midterm-431-pulmonary-q032"
+    },
+    {
+      "batch": "431",
+      "questionNumber": 33,
+      "id": "medicine-midterm-431-pulmonary-q033"
+    },
+    {
+      "batch": "431",
+      "questionNumber": 34,
+      "id": "medicine-midterm-431-nephrology-q034"
+    },
+    {
+      "batch": "431",
+      "questionNumber": 35,
+      "id": "medicine-midterm-431-nephrology-q035"
+    },
+    {
+      "batch": "431",
+      "questionNumber": 36,
+      "id": "medicine-midterm-431-nephrology-q036"
+    },
+    {
+      "batch": "431",
+      "questionNumber": 37,
+      "id": "medicine-midterm-431-nephrology-q037"
+    },
+    {
+      "batch": "431",
+      "questionNumber": 38,
+      "id": "medicine-midterm-431-nephrology-q038"
+    },
+    {
+      "batch": "431",
+      "questionNumber": 39,
+      "id": "medicine-midterm-431-nephrology-q039"
+    },
+    {
+      "batch": "431",
+      "questionNumber": 40,
+      "id": "medicine-midterm-431-git-hepatobiliary-q040"
+    },
+    {
+      "batch": "431",
+      "questionNumber": 41,
+      "id": "medicine-midterm-431-git-hepatobiliary-q041"
+    },
+    {
+      "batch": "431",
+      "questionNumber": 42,
+      "id": "medicine-midterm-431-git-hepatobiliary-q042"
+    },
+    {
+      "batch": "431",
+      "questionNumber": 43,
+      "id": "medicine-midterm-431-git-hepatobiliary-q043"
+    },
+    {
+      "batch": "431",
+      "questionNumber": 44,
+      "id": "medicine-midterm-431-git-hepatobiliary-q044"
+    },
+    {
+      "batch": "431",
+      "questionNumber": 45,
+      "id": "medicine-midterm-431-git-hepatobiliary-q045"
+    },
+    {
+      "batch": "431",
+      "questionNumber": 46,
+      "id": "medicine-midterm-431-git-hepatobiliary-q046"
+    },
+    {
+      "batch": "431",
+      "questionNumber": 47,
+      "id": "medicine-midterm-431-git-hepatobiliary-q047"
+    },
+    {
+      "batch": "431",
+      "questionNumber": 48,
+      "id": "medicine-midterm-431-git-hepatobiliary-q048"
+    },
+    {
+      "batch": "431",
+      "questionNumber": 49,
+      "id": "medicine-midterm-431-git-hepatobiliary-q049"
+    },
+    {
+      "batch": "431",
+      "questionNumber": 50,
+      "id": "medicine-midterm-431-git-hepatobiliary-q050"
+    },
+    {
+      "batch": "431",
+      "questionNumber": 51,
+      "id": "medicine-midterm-431-git-hepatobiliary-q051"
+    },
+    {
+      "batch": "431",
+      "questionNumber": 52,
+      "id": "medicine-midterm-431-git-hepatobiliary-q052"
+    },
+    {
+      "batch": "431",
+      "questionNumber": 53,
+      "id": "medicine-midterm-431-git-hepatobiliary-q053"
+    },
+    {
+      "batch": "431",
+      "questionNumber": 54,
+      "id": "medicine-midterm-431-git-hepatobiliary-q054"
+    },
+    {
+      "batch": "431",
+      "questionNumber": 55,
+      "id": "medicine-midterm-431-git-hepatobiliary-q055"
+    },
+    {
+      "batch": "431",
+      "questionNumber": 56,
+      "id": "medicine-midterm-431-git-hepatobiliary-q056"
+    },
+    {
+      "batch": "431",
+      "questionNumber": 57,
+      "id": "medicine-midterm-431-git-hepatobiliary-q057"
+    },
+    {
+      "batch": "431",
+      "questionNumber": 58,
+      "id": "medicine-midterm-431-git-hepatobiliary-q058"
+    },
+    {
+      "batch": "430",
+      "questionNumber": 1,
+      "id": "medicine-midterm-430-cardiology-q001"
+    },
+    {
+      "batch": "430",
+      "questionNumber": 2,
+      "id": "medicine-midterm-430-cardiology-q002"
+    },
+    {
+      "batch": "430",
+      "questionNumber": 3,
+      "id": "medicine-midterm-430-cardiology-q003"
+    },
+    {
+      "batch": "430",
+      "questionNumber": 4,
+      "id": "medicine-midterm-430-cardiology-q004"
+    },
+    {
+      "batch": "430",
+      "questionNumber": 5,
+      "id": "medicine-midterm-430-cardiology-q005"
+    },
+    {
+      "batch": "430",
+      "questionNumber": 6,
+      "id": "medicine-midterm-430-cardiology-q006"
+    },
+    {
+      "batch": "430",
+      "questionNumber": 7,
+      "id": "medicine-midterm-430-cardiology-q007"
+    },
+    {
+      "batch": "430",
+      "questionNumber": 8,
+      "id": "medicine-midterm-430-cardiology-q008"
+    },
+    {
+      "batch": "430",
+      "questionNumber": 9,
+      "id": "medicine-midterm-430-cardiology-q009"
+    },
+    {
+      "batch": "430",
+      "questionNumber": 10,
+      "id": "medicine-midterm-430-cardiology-q010"
+    },
+    {
+      "batch": "430",
+      "questionNumber": 11,
+      "id": "medicine-midterm-430-cardiology-q011"
+    },
+    {
+      "batch": "430",
+      "questionNumber": 12,
+      "id": "medicine-midterm-430-pulmonary-q012"
+    },
+    {
+      "batch": "430",
+      "questionNumber": 13,
+      "id": "medicine-midterm-430-pulmonary-q013"
+    },
+    {
+      "batch": "430",
+      "questionNumber": 14,
+      "id": "medicine-midterm-430-pulmonary-q014"
+    },
+    {
+      "batch": "430",
+      "questionNumber": 15,
+      "id": "medicine-midterm-430-pulmonary-q015"
+    },
+    {
+      "batch": "430",
+      "questionNumber": 16,
+      "id": "medicine-midterm-430-pulmonary-q016"
+    },
+    {
+      "batch": "430",
+      "questionNumber": 17,
+      "id": "medicine-midterm-430-pulmonary-q017"
+    },
+    {
+      "batch": "430",
+      "questionNumber": 18,
+      "id": "medicine-midterm-430-pulmonary-q018"
+    },
+    {
+      "batch": "430",
+      "questionNumber": 19,
+      "id": "medicine-midterm-430-pulmonary-q019"
+    },
+    {
+      "batch": "430",
+      "questionNumber": 20,
+      "id": "medicine-midterm-430-pulmonary-q020"
+    },
+    {
+      "batch": "430",
+      "questionNumber": 21,
+      "id": "medicine-midterm-430-pulmonary-q021"
+    },
+    {
+      "batch": "430",
+      "questionNumber": 22,
+      "id": "medicine-midterm-430-nephrology-q022"
+    },
+    {
+      "batch": "430",
+      "questionNumber": 23,
+      "id": "medicine-midterm-430-nephrology-q023"
+    },
+    {
+      "batch": "430",
+      "questionNumber": 24,
+      "id": "medicine-midterm-430-nephrology-q024"
+    },
+    {
+      "batch": "430",
+      "questionNumber": 25,
+      "id": "medicine-midterm-430-nephrology-q025"
+    },
+    {
+      "batch": "430",
+      "questionNumber": 26,
+      "id": "medicine-midterm-430-nephrology-q026"
+    },
+    {
+      "batch": "430",
+      "questionNumber": 27,
+      "id": "medicine-midterm-430-nephrology-q027"
+    },
+    {
+      "batch": "430",
+      "questionNumber": 28,
+      "id": "medicine-midterm-430-nephrology-q028"
+    },
+    {
+      "batch": "430",
+      "questionNumber": 29,
+      "id": "medicine-midterm-430-nephrology-q029"
+    },
+    {
+      "batch": "430",
+      "questionNumber": 30,
+      "id": "medicine-midterm-430-git-hepatobiliary-q030"
+    },
+    {
+      "batch": "430",
+      "questionNumber": 31,
+      "id": "medicine-midterm-430-git-hepatobiliary-q031"
+    },
+    {
+      "batch": "430",
+      "questionNumber": 32,
+      "id": "medicine-midterm-430-git-hepatobiliary-q032"
+    },
+    {
+      "batch": "430",
+      "questionNumber": 33,
+      "id": "medicine-midterm-430-git-hepatobiliary-q033"
+    },
+    {
+      "batch": "430",
+      "questionNumber": 34,
+      "id": "medicine-midterm-430-git-hepatobiliary-q034"
+    },
+    {
+      "batch": "430",
+      "questionNumber": 35,
+      "id": "medicine-midterm-430-git-hepatobiliary-q035"
+    },
+    {
+      "batch": "430",
+      "questionNumber": 36,
+      "id": "medicine-midterm-430-git-hepatobiliary-q036"
+    },
+    {
+      "batch": "430",
+      "questionNumber": 37,
+      "id": "medicine-midterm-430-git-hepatobiliary-q037"
+    },
+    {
+      "batch": "430",
+      "questionNumber": 38,
+      "id": "medicine-midterm-430-git-hepatobiliary-q038"
+    },
+    {
+      "batch": "430",
+      "questionNumber": 39,
+      "id": "medicine-midterm-430-git-hepatobiliary-q039"
+    },
+    {
+      "batch": "430",
+      "questionNumber": 40,
+      "id": "medicine-midterm-430-git-hepatobiliary-q040"
+    },
+    {
+      "batch": "430",
+      "questionNumber": 41,
+      "id": "medicine-midterm-430-git-hepatobiliary-q041"
+    },
+    {
+      "batch": "430",
+      "questionNumber": 42,
+      "id": "medicine-midterm-430-git-hepatobiliary-q042"
+    },
+    {
+      "batch": "430",
+      "questionNumber": 43,
+      "id": "medicine-midterm-430-git-hepatobiliary-q043"
+    },
+    {
+      "batch": "430",
+      "questionNumber": 44,
+      "id": "medicine-midterm-430-git-hepatobiliary-q044"
+    },
+    {
+      "batch": "430",
+      "questionNumber": 45,
+      "id": "medicine-midterm-430-git-hepatobiliary-q045"
+    }
+  ],
+  "topLevelTables": 22,
+  "nestedTables": 12,
+  "tables": {
+    "medicine-midterm-442-nephrology-q039": [
+      {
+        "rows": [
+          [
+            "Arterial blood gasses",
+            "pH 7.20"
+          ],
+          [
+            "P02",
+            "100 mmHg"
+          ],
+          [
+            "НСОЗ",
+            "7mmol/L"
+          ],
+          [
+            "Na",
+            "138 mmol/L"
+          ],
+          [
+            "K",
+            "3.9 mmol/L"
+          ],
+          [
+            "Cl",
+            "95 mmol/L"
+          ]
+        ],
+        "sourceBatch": "442",
+        "questionNumber": 39
+      }
+    ],
+    "medicine-midterm-441-cardiology-q035": [
+      {
+        "rows": [
+          [
+            "Fluid analysis"
+          ],
+          [
+            "Color",
+            "Pus"
+          ],
+          [
+            "Cell count",
+            "17,000 celled mainly polymorph"
+          ],
+          [
+            "pH",
+            "7.1"
+          ],
+          [
+            "glucose",
+            "20 mg/dl"
+          ],
+          [
+            "protein fluid and serum ratio",
+            "0.9"
+          ],
+          [
+            "LDH fluid and serum ratio",
+            "1.2"
+          ],
+          [
+            "culture",
+            "pending"
+          ]
+        ],
+        "sourceBatch": "441",
+        "questionNumber": 35
+      }
+    ],
+    "medicine-midterm-441-nephrology-q041": [
+      {
+        "rows": [
+          [
+            "serum creatinine",
+            "100 mmol/L"
+          ],
+          [
+            "serum albumin",
+            "36 g/L"
+          ],
+          [
+            "urine albumin/creatinine ratio",
+            "1000 mg/g"
+          ],
+          [
+            "HbA1c",
+            "8.2%"
+          ]
+        ],
+        "sourceBatch": "441",
+        "questionNumber": 41
+      }
+    ],
+    "medicine-midterm-441-nephrology-q042": [
+      {
+        "rows": [
+          [
+            "Serum creatinine",
+            "70 mcmol/L"
+          ],
+          [
+            "Serum potassium",
+            "3.7 mmol/L"
+          ],
+          [
+            "Serum sodium",
+            "140 mmol/L"
+          ],
+          [
+            "Urine albumin/creatinine ratio",
+            "450 mg/g"
+          ]
+        ],
+        "sourceBatch": "441",
+        "questionNumber": 42
+      }
+    ],
+    "medicine-midterm-441-nephrology-q044": [
+      {
+        "rows": [
+          [
+            "Serum sodium",
+            "125 mEq/L"
+          ],
+          [
+            "Creatinine",
+            "120 μmol/l"
+          ],
+          [
+            "Urine sodium",
+            "85 meq/L"
+          ],
+          [
+            "Urine osmolality",
+            "600 mOsm/Kg"
+          ]
+        ],
+        "sourceBatch": "441",
+        "questionNumber": 44
+      }
+    ],
+    "medicine-midterm-441-git-hepatobiliary-q052": [
+      {
+        "rows": [
+          [
+            "Sodium",
+            "108 mmol/l"
+          ],
+          [
+            "creatinine",
+            "90 mmol/l"
+          ],
+          [
+            "potassium",
+            "3.5 mmol/l"
+          ]
+        ],
+        "sourceBatch": "441",
+        "questionNumber": 52
+      }
+    ],
+    "medicine-midterm-441-git-hepatobiliary-q057": [
+      {
+        "rows": [
+          [
+            "WBC",
+            "9 x 10 9 L"
+          ],
+          [
+            "Hb",
+            "12.5 pg/dL"
+          ],
+          [
+            "PLT",
+            "301 x 10 3 /L"
+          ],
+          [
+            "ALT",
+            "61 U/L"
+          ],
+          [
+            "AST",
+            "84 U/L"
+          ],
+          [
+            "ALP",
+            "130 IU/L"
+          ],
+          [
+            "GGT",
+            "Nrmal"
+          ],
+          [
+            "Total bilirubin is Normal"
+          ]
+        ],
+        "sourceBatch": "441",
+        "questionNumber": 57
+      }
+    ],
+    "medicine-midterm-439-nephrology-q035": [
+      {
+        "rows": [
+          [
+            "Serum sodium",
+            "126 mEq/L"
+          ],
+          [
+            "Serum creatinine",
+            "175 mEq/L"
+          ],
+          [
+            "Urine osmolality",
+            "1000 mOsml/kg"
+          ],
+          [
+            "Urine sodium concentration",
+            "4mEq/L"
+          ]
+        ],
+        "sourceBatch": "439",
+        "questionNumber": 35
+      }
+    ],
+    "medicine-midterm-439-nephrology-q036": [
+      {
+        "rows": [
+          [
+            "Sodium",
+            "108 mmol/L"
+          ],
+          [
+            "Creatinine",
+            "90 umol/L"
+          ],
+          [
+            "Potassium",
+            "3.5 mmol/L"
+          ]
+        ],
+        "sourceBatch": "439",
+        "questionNumber": 36
+      }
+    ],
+    "medicine-midterm-439-nephrology-q037": [
+      {
+        "rows": [
+          [
+            "Arterial blood gases",
+            "pH 7.47"
+          ],
+          [
+            "PO2",
+            "86 mmHg"
+          ],
+          [
+            "PaCO2",
+            "45 mmHg"
+          ],
+          [
+            "HCO3",
+            "34 mmol/L"
+          ],
+          [
+            "Na",
+            "142 mmol/L"
+          ],
+          [
+            "K",
+            "3.0 mmol/L"
+          ],
+          [
+            "Cl",
+            "85 mmol/L"
+          ]
+        ],
+        "sourceBatch": "439",
+        "questionNumber": 37
+      }
+    ],
+    "medicine-midterm-439-nephrology-q038": [
+      {
+        "rows": [
+          [
+            "Arterial blood gases",
+            "pH 7.20"
+          ],
+          [
+            "PO2",
+            "100 mmHg"
+          ],
+          [
+            "PaCO2",
+            "20 mmHg"
+          ],
+          [
+            "HCO3",
+            "7 mmol/L"
+          ],
+          [
+            "Na",
+            "138 mmol/L"
+          ],
+          [
+            "K",
+            "3.9 mmol/L"
+          ],
+          [
+            "Cl",
+            "95 mmol/L"
+          ]
+        ],
+        "sourceBatch": "439",
+        "questionNumber": 38
+      }
+    ],
+    "medicine-midterm-439-nephrology-q039": [
+      {
+        "rows": [
+          [
+            "Serum Sodium",
+            "146 mmol"
+          ],
+          [
+            "Creatinine",
+            "75 umol/L"
+          ],
+          [
+            "Urine osmolality",
+            "80 mOsmol/kg"
+          ],
+          [
+            "Glucose",
+            "11 mmol/l"
+          ]
+        ],
+        "sourceBatch": "439",
+        "questionNumber": 39
+      }
+    ],
+    "medicine-midterm-439-nephrology-q040": [
+      {
+        "rows": [
+          [
+            "Sodium concentration",
+            "126 mmol/L"
+          ],
+          [
+            "Potassium concentration",
+            "3.8 mmol/L"
+          ],
+          [
+            "Chloride concentration",
+            "96 mmol/L"
+          ],
+          [
+            "Bicarbonate level",
+            "24 mmol/L"
+          ],
+          [
+            "serum urea",
+            "2.1 mmol/L"
+          ],
+          [
+            "Glucose and creatinine levels",
+            "Normal"
+          ],
+          [
+            "Serum osmolality",
+            "258 mOsm/L"
+          ],
+          [
+            "Urinary sodium",
+            "56 mEq/L"
+          ],
+          [
+            "Urinary osmolality",
+            "360 mOsm/kg"
+          ],
+          [
+            "Thyroid function tests",
+            "Within normal limits"
+          ]
+        ],
+        "sourceBatch": "439",
+        "questionNumber": 40
+      }
+    ],
+    "medicine-midterm-439-nephrology-q041": [
+      {
+        "rows": [
+          [
+            "Arterial blood gases",
+            "pH 7.25"
+          ],
+          [
+            "PO2",
+            "101 mmHg"
+          ],
+          [
+            "PaCO2",
+            "31 mmHg"
+          ],
+          [
+            "HCO3",
+            "17 mmol/L"
+          ],
+          [
+            "Na",
+            "134 mmol/L"
+          ],
+          [
+            "K",
+            "3.4 mmol/L"
+          ],
+          [
+            "Cl",
+            "104 mmol/L"
+          ]
+        ],
+        "sourceBatch": "439",
+        "questionNumber": 41
+      }
+    ],
+    "medicine-midterm-439-nephrology-q042": [
+      {
+        "rows": [
+          [
+            "Serum Creatinine",
+            "68 mmol/L"
+          ],
+          [
+            "Serum Potassium",
+            "3.9 mmol/L"
+          ],
+          [
+            "Serum Sodium",
+            "138 mmol/L"
+          ],
+          [
+            "Urine albumin/creatinine ratio",
+            "350 mg/g (was 100mg/g a year ago)"
+          ],
+          [
+            "HbA1c",
+            "6.8%"
+          ],
+          [
+            "LDL",
+            "1.8 mmol/L"
+          ],
+          [
+            "Triglyceride",
+            "1.2 mmol/L"
+          ]
+        ],
+        "sourceBatch": "439",
+        "questionNumber": 42
+      }
+    ],
+    "medicine-midterm-439-nephrology-q043": [
+      {
+        "rows": [
+          [
+            "Arterial blood gases",
+            "pH 7.21"
+          ],
+          [
+            "PO2",
+            "61.5 mmHg"
+          ],
+          [
+            "PaCO2",
+            "83 mmHg"
+          ],
+          [
+            "HCO3",
+            "34 mmol/L"
+          ],
+          [
+            "Renal panel Na",
+            "140 mmol/L"
+          ],
+          [
+            "K",
+            "4.7 mmol/L"
+          ],
+          [
+            "Cl",
+            "94 mmol/L"
+          ]
+        ],
+        "sourceBatch": "439",
+        "questionNumber": 43
+      }
+    ],
+    "medicine-midterm-439-nephrology-q044": [
+      {
+        "rows": [
+          [
+            "Arterial blood gases",
+            "pH 7.49"
+          ],
+          [
+            "PO2",
+            "100 mmHg"
+          ],
+          [
+            "PaCO2",
+            "12 mmHg"
+          ],
+          [
+            "HCO3",
+            "49 mmol/L"
+          ],
+          [
+            "K",
+            "4.7 mmol/L"
+          ],
+          [
+            "Cl",
+            "94 mmol/L"
+          ]
+        ],
+        "sourceBatch": "439",
+        "questionNumber": 44
+      }
+    ],
+    "medicine-midterm-439-nephrology-q057": [
+      {
+        "rows": [
+          [
+            "WBC: 9x10 9 /L",
+            "AST 298 IU/L"
+          ],
+          [
+            "Hemoglobin: 12.5 g/dL",
+            "ALP 150 IU/L"
+          ],
+          [
+            "PLT: 301 x 10 9 /L",
+            "GGT 150 IU/L"
+          ],
+          [
+            "ALT 150 IU/L",
+            "Total bilirubin is normal"
+          ]
+        ],
+        "sourceBatch": "439",
+        "questionNumber": 57
+      }
+    ],
+    "medicine-midterm-439-nephrology-q058": [
+      {
+        "rows": [
+          [
+            "ALP: 300 IU/L",
+            "Direct bilirubin: 50 mg/dL"
+          ],
+          [
+            "GGT: 100 IU/L",
+            "WCC: 12 x 10 9 /L"
+          ],
+          [
+            "ALT: 1200 U/L",
+            "Hgb: 13 gm/dL"
+          ],
+          [
+            "AST: 900 U/L",
+            "PLT: 290"
+          ],
+          [
+            "Total bilirubin: 60 mg/dL"
+          ]
+        ],
+        "sourceBatch": "439",
+        "questionNumber": 58
+      }
+    ],
+    "medicine-midterm-438-pulmonary-q021": [
+      {
+        "rows": [
+          [
+            "Color",
+            "Turbid"
+          ],
+          [
+            "Cells",
+            "Mostly PMNs"
+          ],
+          [
+            "pH",
+            "7.5"
+          ],
+          [
+            "Glucose",
+            "20"
+          ],
+          [
+            "Protein fluid to serum ratio",
+            "0.8"
+          ],
+          [
+            "LDH fluid to serum ratio",
+            "0.9"
+          ]
+        ],
+        "sourceBatch": "438",
+        "questionNumber": 21
+      }
+    ],
+    "medicine-midterm-438-nephrology-q032": [
+      {
+        "rows": [
+          [
+            "BP",
+            "hypotensive"
+          ],
+          [
+            "HR",
+            "tachycardia"
+          ],
+          [
+            "Temperature",
+            "High"
+          ],
+          [
+            "Sodium",
+            "Low"
+          ]
+        ],
+        "sourceBatch": "438",
+        "questionNumber": 32
+      }
+    ],
+    "medicine-midterm-438-nephrology-q041": [
+      {
+        "rows": [
+          [
+            "BP",
+            "Normal"
+          ],
+          [
+            "Creatinine",
+            "60"
+          ],
+          [
+            "SpO2",
+            "97%"
+          ],
+          [
+            "Albumin Creatinine Ratio",
+            "450 mg/g"
+          ],
+          [
+            "Na",
+            "138"
+          ],
+          [
+            "K",
+            "3.9"
+          ],
+          [
+            "HbA1C",
+            "6.8%"
+          ]
+        ],
+        "sourceBatch": "438",
+        "questionNumber": 41
+      }
+    ]
+  },
+  "siteLocationsAbsentFromThisSource": [
+    {
+      "batch": "429",
+      "questionNumber": 59,
+      "id": "medicine-midterm-430-git-hepatobiliary-q037"
+    },
+    {
+      "batch": "433",
+      "questionNumber": 50,
+      "id": "medicine-midterm-433-git-hepatobiliary-q047"
+    },
+    {
+      "batch": "434",
+      "questionNumber": 54,
+      "id": "medicine-midterm-434-pulmonary-q028"
+    },
+    {
+      "batch": "434",
+      "questionNumber": 55,
+      "id": "medicine-midterm-434-pulmonary-q031"
+    },
+    {
+      "batch": "434",
+      "questionNumber": 56,
+      "id": "medicine-midterm-434-git-hepatobiliary-q046"
+    }
+  ]
+}

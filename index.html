@@ -750,6 +750,12 @@
     }
 
     .question-stem { margin: 0 0 17px; font-size: 15px; font-weight: 650; line-height: 1.6; }
+    .question-table-wrap { overflow-x: auto; margin: 0 0 18px; }
+    .question-source-table { width: 100%; border-collapse: collapse; font-size: 14px; line-height: 1.5; }
+    .question-source-table caption { padding: 0 0 9px; text-align: left; font-weight: 700; }
+    .question-source-table td { padding: 9px 12px; border: 1px solid var(--line); text-align: left; vertical-align: top; }
+    .question-source-table tr:nth-child(even) { background: var(--panel-soft); }
+    .question-table-note { margin: -8px 0 18px; font-size: 12px; color: var(--muted); }
     .repeat-note {
       display: inline-flex;
       margin: -5px 0 16px;
@@ -1103,7 +1109,7 @@
         <span class="site-updates-label" id="site-updates-title">What's new</span>
         <time datetime="2026-10-05">October 5, 2026</time>
       </div>
-      <p><strong>Medicine MID:</strong> Original lecture excerpts with page references, clearer explanations, and questions organized by lecture.</p>
+      <p><strong>Medicine MID:</strong> Restored question tables and lab results, updated explanations, and original lecture excerpts with page references.</p>
     </aside>
 
     <section class="hero" aria-labelledby="page-title">
@@ -1161,6 +1167,7 @@
   <script src="medicine-mid-444-renal-gi-review.js?v=20261005-english-2"></script>
   <script src="medicine-mid-explanation-completion.js?v=20261005-publish-1"></script>
   <script src="medicine-mid-lecture-evidence.js?v=20261005-evidence-1"></script>
+  <script src="medicine-mid-source-tables.js?v=20261005-tables-1"></script>
   <script src="surgery-catalog.js?v=20260924-empty-nutrition"></script>
   <script src="surgery-data.js?v=20260923-surgery-legacy-order"></script>
   <script src="surgery-midterm-reviews.js?v=20260924-hide-nutrition"></script>
@@ -1209,8 +1216,9 @@
           .filter(Boolean)
           .sort()
           .join("||");
+        const tableKey = JSON.stringify((question.sourceTables || []).map(table => table.rows));
         const questionVariantKey = stemKey && optionSetKey
-          ? `${question.subjectId || "unknown"}|||${stemKey}|||${optionSetKey}`
+          ? `${question.subjectId || "unknown"}|||${stemKey}|||${optionSetKey}|||${tableKey}`
           : "";
         const duplicate = seenIds.has(question.id)
           || (questionVariantKey && seenQuestionVariants.has(questionVariantKey));
@@ -1926,6 +1934,7 @@
         <article class="question-card" data-question-card="${question.id}">
           <div class="question-meta"><span>Question ${index + 1} of ${total}</span><span>${escapeHtml(questionMeta)}</span></div>
           <p class="question-stem">${escapeHtml(question.stem)}</p>
+          ${renderSourceTables(question)}
           ${repeatText ? `<p class="repeat-note">${escapeHtml(repeatText)}</p>` : ""}
           ${(question.images || []).length ? `<div class="question-images">${question.images.map((image, imageIndex) => `<img src="${escapeHtml(image)}" alt="Question image ${imageIndex + 1}" loading="lazy">`).join("")}</div>` : ""}
           <div class="options">
@@ -1945,6 +1954,12 @@
             ${(question.references || []).length ? `<div class="reference-list">${question.references.map(reference => `<a href="${escapeHtml(reference.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(reference.title)} ↗</a>`).join("")}</div>` : ""}
           </div>
         </article>`;
+    }
+
+    function renderSourceTables(question) {
+      const tables = question.sourceTables || [];
+      if (!tables.length) return "";
+      return tables.map((table, index) => `<div class="question-table-wrap" lang="en" dir="ltr"><table class="question-source-table"><caption>Results from the original question${tables.length > 1 ? ` · Table ${index + 1}` : ""}</caption><tbody>${table.rows.map(row => `<tr>${row.map(cell => `<td${row.length === 1 ? ` colspan="${Math.max(...table.rows.map(cells => cells.length))}"` : ""}>${escapeHtml(cell)}</td>`).join("")}</tr>`).join("")}</tbody></table></div>`).join("") + `<p class="question-table-note">Values and units are reproduced as recorded in the source.</p>`;
     }
 
     function renderLectureEvidence(question) {

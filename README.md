@@ -84,3 +84,7 @@ python3 -m http.server 8765
 ```
 
 Then open `http://127.0.0.1:8765/`.
+
+Medicine MID source-table audit (2026-10-05): the available original `Copy of MID.docx` has 695 question occurrences, all matched against existing MID questions by source location and content. It contains 22 question tables, including 12 nested tables in one of them. All cells are restored by `medicine-mid-source-tables.js` and displayed before the answer choices. The preceding text import omitted numerical content from 20 tables and omitted the qualitative table in another question; one table already had its values in the stem. Reviews of all 22 associated questions are updated. Original source units and inconsistent blood gases are preserved and explained rather than silently corrected. This audit establishes coverage for that Medicine MID source, not completeness of every Gift document or other subject.
+
+Table validation: `node tests/medicine-mid-source-tables.test.cjs`. The fixture records the original DOCX hash, independent source-question inventory and exact table cells. Distinct questions with different table data are retained during duplicate filtering.
