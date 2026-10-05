@@ -1,0 +1,168 @@
+{
+  "medicine-midterm-443-pulmonary-q017": {
+    "verified": true,
+    "pdfId": "16EcLYmDUK21x7fH64qZSBWvOBQ5lnas1",
+    "title": "L4) Pulmonary Embolism",
+    "url": "https://drive.google.com/file/d/16EcLYmDUK21x7fH64qZSBWvOBQ5lnas1/view?usp=drivesdk",
+    "page": 24,
+    "sourceSha256": "18f2eff7e9e920d58356669ef4476f00faca769f7b3bcf243c62c90d69355ac7",
+    "pageTextSha256": "4516d77cac6eadb1c2db13053d437780e1b151efdb74ea0b7a0c1f841430e7e7",
+    "extraction": "pdfplumber-text-flow-whitespace-only",
+    "quote": "444: Massive Pulmonary Embolism patient have a clot, we use thrombolytic therapy to remove the clot, and we use anticoagulant to prevent further clots. Indication Hemodynamic Instability . 3 Hypoxia on 100% oxygen. Right Ventricular Dysfunction by echocardiography. 443: Only in massive PE use thrombolytic +438: anticoagulants . Any other PE use anticoagulant only (Thrombolytic doesn't show any improvement in mortality in these cases).",
+    "quoteParts": [
+      "444: Massive Pulmonary Embolism patient have a clot, we use thrombolytic therapy to remove the clot, and we use anticoagulant to prevent further clots.",
+      "Indication Hemodynamic Instability . 3 Hypoxia on 100% oxygen. Right Ventricular Dysfunction by echocardiography.",
+      "443: Only in massive PE use thrombolytic +438: anticoagulants . Any other PE use anticoagulant only (Thrombolytic doesn't show any improvement in mortality in these cases)."
+    ],
+    "relation": "teaching",
+    "statement": "This page contains the lecture’s thrombolysis indications, including RV dysfunction, together with its restriction to massive PE.",
+    "note": "The quotation is from the original Teamwork 444 PDF. Apply the stated conditions to the question; the Gift key is shown separately."
+  },
+  "medicine-midterm-433-pulmonary-q028": {
+    "verified": true,
+    "pdfId": "16EcLYmDUK21x7fH64qZSBWvOBQ5lnas1",
+    "title": "L4) Pulmonary Embolism",
+    "url": "https://drive.google.com/file/d/16EcLYmDUK21x7fH64qZSBWvOBQ5lnas1/view?usp=drivesdk",
+    "page": 24,
+    "sourceSha256": "18f2eff7e9e920d58356669ef4476f00faca769f7b3bcf243c62c90d69355ac7",
+    "pageTextSha256": "4516d77cac6eadb1c2db13053d437780e1b151efdb74ea0b7a0c1f841430e7e7",
+    "extraction": "pdfplumber-text-flow-whitespace-only",
+    "quote": "Indication Hemodynamic Instability . 3 Hypoxia on 100% oxygen. Right Ventricular Dysfunction by echocardiography. 443: Only in massive PE use thrombolytic +438: anticoagulants . Any other PE use anticoagulant only (Thrombolytic doesn't show any improvement in mortality in these cases).",
+    "quoteParts": [
+      "Indication Hemodynamic Instability . 3 Hypoxia on 100% oxygen. Right Ventricular Dysfunction by echocardiography.",
+      "443: Only in massive PE use thrombolytic +438: anticoagulants . Any other PE use anticoagulant only (Thrombolytic doesn't show any improvement in mortality in these cases)."
+    ],
+    "relation": "teaching",
+    "statement": "Hypoxia on 100% oxygen is explicitly listed on this page. The same page qualifies thrombolysis by the massive-PE setting.",
+    "note": "The quotation is from the original Teamwork 444 PDF. Apply the stated conditions to the question; the Gift key is shown separately."
+  },
+  "medicine-midterm-436-pulmonary-q041": {
+    "verified": true,
+    "pdfId": "16EcLYmDUK21x7fH64qZSBWvOBQ5lnas1",
+    "title": "L4) Pulmonary Embolism",
+    "url": "https://drive.google.com/file/d/16EcLYmDUK21x7fH64qZSBWvOBQ5lnas1/view?usp=drivesdk",
+    "page": 24,
+    "sourceSha256": "18f2eff7e9e920d58356669ef4476f00faca769f7b3bcf243c62c90d69355ac7",
+    "pageTextSha256": "4516d77cac6eadb1c2db13053d437780e1b151efdb74ea0b7a0c1f841430e7e7",
+    "extraction": "pdfplumber-text-flow-whitespace-only",
+    "quote": "Indication Hemodynamic Instability . 3 Hypoxia on 100% oxygen. Right Ventricular Dysfunction by echocardiography. (e.g., hypotension [systolic BP < 90 mmHg] and tachycardia",
+    "quoteParts": [
+      "Indication Hemodynamic Instability . 3 Hypoxia on 100% oxygen. Right Ventricular Dysfunction by echocardiography.",
+      "(e.g., hypotension [systolic BP < 90 mmHg] and tachycardia"
+    ],
+    "relation": "teaching",
+    "statement": "The lecture provides the hypotension threshold. The printed systolic BP of exactly 90 is a boundary case, rather than a literal match to <90.",
+    "note": "The quotation is from the original Teamwork 444 PDF. Apply the stated conditions to the question; the Gift key is shown separately."
+  },
+  "medicine-midterm-443-git-hepatobiliary-q054": {
+    "verified": true,
+    "pdfId": "16cjsaT65dFurwEmh8PdIU8S1X1xUCXJz",
+    "title": "6) Abnormal Liver Enzymes With Selected Common Liver Diseases ",
+    "url": "https://drive.google.com/file/d/16cjsaT65dFurwEmh8PdIU8S1X1xUCXJz/view?usp=drivesdk",
+    "page": 7,
+    "sourceSha256": "9849487f343fd47194cf81bb6c9d63bf00f979e695a09e1a74917b82787c929d",
+    "pageTextSha256": "b02a79a9dcf2dc326fd41eec01bd989fdfe7ec99f2d9875e136ee8def1afbffd",
+    "extraction": "pdfplumber-text-flow-whitespace-only",
+    "quote": "Key points to remember (cholestatic pattern? Do US abdomen — if dilated duct, then ERCP, but if you suspect cancer, you can do CT). If there is no dilation but with high suspicion? Do ERCP , Moderate suspicion? MRCP first.",
+    "quoteParts": [
+      "Key points to remember (cholestatic pattern? Do US abdomen — if dilated duct, then ERCP, but if you suspect cancer, you can do CT).",
+      "If there is no dilation but with high suspicion? Do ERCP , Moderate suspicion? MRCP first."
+    ],
+    "relation": "teaching",
+    "statement": "The lecture’s own summary selects ERCP for duct dilation. Its probability-based branches and cancer exception remain relevant.",
+    "note": "The quotation is from the original Teamwork 444 PDF. Apply the stated conditions to the question; the Gift key is shown separately."
+  },
+  "medicine-midterm-441-git-hepatobiliary-q048": {
+    "verified": true,
+    "pdfId": "1yPmz7Wr7nMmvXx66n8qtaKKNTD-vy9uE",
+    "title": "1) Gastrointestinal Bleeding.pdf",
+    "url": "https://drive.google.com/file/d/1yPmz7Wr7nMmvXx66n8qtaKKNTD-vy9uE/view?usp=drivesdk",
+    "page": 21,
+    "sourceSha256": "4675cd365321a3d7b20a729a79abd83a5667fb0c451cb04a5a202799fd852ff6",
+    "pageTextSha256": "6e1e4ffa4f659d3c568e56bdb4f8786b3319827be65d8ad964a6b06184a14508",
+    "extraction": "pdfplumber-text-flow-whitespace-only",
+    "quote": "-Initial IV bolus 50mcg (can be repeated in the first hour if ongoing bleeding)- Continuous IV infusion of 50 mcg \\h 2-5 days 5-7 days or until discharge 443: Dr : I need you to know The 4 differences between variceal and nonvariceal: 1- octreotide 2- antibiotics 3- beta blocker 4- timing of endoscopy \"12h for variceal\"",
+    "quoteParts": [
+      "-Initial IV bolus 50mcg (can be repeated in the first hour if ongoing bleeding)- Continuous IV infusion of 50 mcg \\h",
+      "2-5 days 5-7 days or until discharge",
+      "443: Dr : I need you to know The 4 differences between variceal and nonvariceal: 1- octreotide 2- antibiotics 3- beta blocker 4- timing of endoscopy \"12h for variceal\""
+    ],
+    "relation": "teaching",
+    "statement": "Octreotide and antibiotics are both in the lecture’s variceal-bleeding plan. In the duration table, vasoactive therapy is 2–5 days and antibiotics 5–7 days or until discharge; option C’s 24 hours is shorter.",
+    "note": "The quotation is from the original Teamwork 444 PDF. Apply the stated conditions to the question; the Gift key is shown separately."
+  },
+  "medicine-midterm-441-git-hepatobiliary-q058": {
+    "verified": true,
+    "pdfId": "1Qriuhbb34zoe496wiWlOMtZSxmVe-Tze",
+    "title": "2) Abdominal Pain Including IBS.pdf",
+    "url": "https://drive.google.com/file/d/1Qriuhbb34zoe496wiWlOMtZSxmVe-Tze/view?usp=drivesdk",
+    "page": 24,
+    "sourceSha256": "7b0a33852bb8c3de4fbf630c4e2ae9048e285fecff42081ce15ef07fbcc9e2ad",
+    "pageTextSha256": "4f1d8cf9443eb7a742dff24d93b00ae1a6a6fed34b852507ace25d456a3dd317",
+    "extraction": "pdfplumber-text-flow-whitespace-only",
+    "quote": "Treatment regimen (all of them are 1st line therapy. But it depends on the region.) PPI, amoxicillin 1 gm, clarithromycin 500 mg all twice daily for 7-14 days. Can be used as 1st line treatment (But not in Saudi) Bismuth 525 mg, metronidazole 500 mg, tetracycline 500 mg all four times daily with PPI twice daily for 7-14 days. 1st line treatment in Saudi (7-14 days) first line along with quadruple therapy in Saudi Arabia (if both are choices in the exam, choose quadruple)",
+    "quoteParts": [
+      "Treatment regimen (all of them are 1st line therapy. But it depends on the region.)",
+      "PPI, amoxicillin 1 gm, clarithromycin 500 mg all twice daily for 7-14 days. Can be used as 1st line treatment (But not in Saudi)",
+      "Bismuth 525 mg, metronidazole 500 mg, tetracycline 500 mg all four times daily with PPI twice daily for 7-14 days. 1st line treatment in Saudi (7-14 days)",
+      "first line along with quadruple therapy in Saudi Arabia (if both are choices in the exam, choose quadruple)"
+    ],
+    "relation": "teaching",
+    "statement": "Both triple and quadruple regimens appear, but the lecture explicitly prefers quadruple therapy for Saudi exam questions.",
+    "note": "The quotation is from the original Teamwork 444 PDF. Apply the stated conditions to the question; the Gift key is shown separately."
+  },
+  "medicine-midterm-438-cardiology-q012": {
+    "verified": true,
+    "pdfId": "1QT9a9BIARoOzKLNQ9sxjMm5MJt4tjNHX",
+    "title": "L5) Rheumatic Heart Disease",
+    "url": "https://drive.google.com/file/d/1QT9a9BIARoOzKLNQ9sxjMm5MJt4tjNHX/view?usp=drivesdk",
+    "page": 11,
+    "sourceSha256": "6d44f0857f92ea1d3ae1218a8a612bdbc880f7d12c5b82ca2aae7f928641cd0a",
+    "pageTextSha256": "6b4d5a7e93d009e8c26ca430c69c555031b46d7ad39d3d51b1ba3c382521697f",
+    "extraction": "pdfplumber-text-flow-whitespace-only",
+    "quote": "Salicylates: Aspirin1 60/75-100 mg/kg/day (max 8 g/day) (we give high dose unlike CAD which is 81mg and giving antacids to avoid ADRs )",
+    "quoteParts": [
+      "Salicylates: Aspirin1 60/75-100 mg/kg/day (max 8 g/day)",
+      "(we give high dose unlike CAD which is 81mg and giving antacids to avoid ADRs )"
+    ],
+    "relation": "teaching",
+    "statement": "The lecture explicitly contrasts high-dose salicylates for acute rheumatic fever with the 81 mg CAD dose. This differs from the recorded Gift option A.",
+    "note": "The quotation is from the original Teamwork 444 PDF. Apply the stated conditions to the question; the Gift key is shown separately."
+  },
+  "medicine-midterm-438-pulmonary-q026": {
+    "verified": true,
+    "pdfId": "1aDTJ2XUNs-OnJ_HupfzsbBkAIq-CQ9NJ",
+    "title": "L3) Community Acquired Pneumonia",
+    "url": "https://drive.google.com/file/d/1aDTJ2XUNs-OnJ_HupfzsbBkAIq-CQ9NJ/view?usp=drivesdk",
+    "page": 14,
+    "sourceSha256": "2ccb24aaa4c56d4c0b6b746e6c1a03e62005f3de2cb64621be5f3390b81aaf06",
+    "pageTextSha256": "be81d8c4a4deb67c8bd2af9e74a51bc393f10239202136fb75c693222dd045b9",
+    "extraction": "pdfplumber-text-flow-whitespace-only",
+    "quote": "-Suspicion of atypical CAP: Macrolide (Azithromycin - Zithromax) or Doxycycline. -Start with: 3 gen cephalosporin & if you feel that the symptoms are related to atypical add Azithromycin",
+    "quoteParts": [
+      "-Suspicion of atypical CAP: Macrolide (Azithromycin - Zithromax) or Doxycycline.",
+      "-Start with: 3 gen cephalosporin & if you feel that the symptoms are related to atypical add Azithromycin"
+    ],
+    "relation": "background",
+    "statement": "These are the lecture’s outpatient atypical-CAP and hospital-treatment choices. This page does not by itself establish the site of care for this tachypneic patient.",
+    "note": "Background only: this original passage does not establish the exact answer to the question."
+  },
+  "medicine-midterm-436-nephrology-q060": {
+    "verified": true,
+    "pdfId": "1_dy4GfUD6SBHNCumY_HRMbt6cY2_ZXKW",
+    "title": "L1) Hypertension",
+    "url": "https://drive.google.com/file/d/1_dy4GfUD6SBHNCumY_HRMbt6cY2_ZXKW/view?usp=drivesdk",
+    "page": 13,
+    "sourceSha256": "fdbe8f0abb50af05ac3fe94e416fa689032eab6c7001178accfdb85294d70d31",
+    "pageTextSha256": "b4d15cceefea1a4533cac86b52fffb7b064223ad3165b34658b25f58c7fcfd75",
+    "extraction": "pdfplumber-text-flow-whitespace-only",
+    "quote": "Management Lifestyle modification 443: “don’t underestimate lifestyle modifications” So when the patient has BP of > 130/80 but < 140/90, we calculate his risk of having CVD, if the percentage < 10% we go for lifestyle modifications “non-pharmacological” for the next 3-6 months, then we monitor BP again",
+    "quoteParts": [
+      "Management Lifestyle modification 443: “don’t underestimate lifestyle modifications”",
+      "So when the patient has BP of > 130/80 but < 140/90, we calculate his risk of having CVD, if the percentage < 10% we go for lifestyle modifications “non-pharmacological” for the next 3-6 months, then we monitor BP again"
+    ],
+    "relation": "background",
+    "statement": "Lifestyle modification is taught, but the lifestyle-only risk branch uses BP below 140/90. The question’s systolic BP of exactly 140 is not within that branch.",
+    "note": "Background only: this original passage does not establish the exact answer to the question."
+  }
+}

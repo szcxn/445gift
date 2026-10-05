@@ -20,6 +20,7 @@ A responsive question bank for Medicine, Surgery, and Community Medicine.
 - `medicine-mid-444-review.js` — MID Cardiology/Pulmonology lecture-page links, 444 lecture order, and independent medical review notes
 - `medicine-mid-444-renal-gi-review.js` — MID Nephrology/Gastroenterology concept-page anchors, English explanations, reviewed choices, and current external sources
 - `medicine-mid-explanation-completion.js` — explicit rationales for remaining imported MID placeholders and older-bank items; ambiguity checks and external references
+- `medicine-mid-gift-first-review.js` — final Medicine MID practice policy, tentative interpretations, management qualifications and verified replacement lecture excerpts
 - `surgery-data.js` — Surgery questions
 - `surgery-catalog.js` — Surgery lecture structure
 - `surgery-reference-overrides.js` — Surgery source labels and reference corrections
@@ -61,6 +62,8 @@ For a subject organized directly by lecture, set `cycle` to `null`. For cycle-ba
 
 When correcting a published question, prefer an override file so the imported source bank remains intact. Keep `sourceAnswer` unchanged, place an independently reviewed answer in `aiAnswer`, and use `verification` to distinguish `confirmed`, `supported`, `conflict`, `needs-review`, and `source-only` items.
 
+Medicine MID now has a separate final practice policy: `giftReview.gradingAnswers` follows the recorded Gift key, while `giftReview.possibleAnswers` is a tentative opinion only. Both initial rendering and click feedback use the same grading helper. Do not use `aiAnswer` to overwrite this MID grading policy. Other subjects and assessments retain their existing behavior.
+
 The four Medicine cycles (Cardiology, Pulmonology, Nephrology, Gastroenterology) include **MID 444 · Lecture Review** and preserve the original bank answers. Original lecture text is displayed separately from clinical interpretation and external sources. PDF pages count the cover as page 1. A topic match is never presented as proof of an answer.
 
 Nephrology/Gastroenterology adds 283 question-specific English explanations: 201 supported, 15 conflicts, and 67 needing review. All four blocks use English medical reviews, evidence notes and interface labels. The original imported keys and stable question IDs remain unchanged. Related IBD and diabetic-CKD items have been moved to the lecture that actually teaches their concept. Detailed audit reports are maintained separately from the published site.
@@ -90,3 +93,9 @@ Medicine MID source-table audit (2026-10-05): the available original `Copy of MI
 Table validation: `node tests/medicine-mid-source-tables.test.cjs`. The fixture records the original DOCX hash, independent source-question inventory and exact table cells. Distinct questions with different table data are retained during duplicate filtering.
 
 Question display order (2026-10-05): normal collections, cycles and individual lectures start with the newest batch. Repeated questions use the newest recorded batch for the selected assessment; questions with no numeric batch appear last. Existing order within a batch is stable, batch-specific practice keeps its source question numbers, and mixed lecture quizzes retain their shuffled order. Sorting operates on copies after the existing duplicate filter, preserving question IDs and content. Resuming a saved quiz tracks the current question by ID so a changed display order does not reset the learner's position or answers. Validation: `node tests/newest-batch-order.test.cjs` covers all three subjects and the saved-progress transition.
+
+Gift-first MID update (2026-10-05): all 687 MID items show the recorded bank key separately from a tentative interpretation. 636 items use bank-based feedback; 51 with no key, incomplete choices or identified source inconsistencies remain explicitly ungraded. Multiple recorded keys are retained. In the post-hemostasis PPI question, D repeats B's 72-hour PPI option and is accepted as equivalent without rewriting the original B key. Question IDs, keys, content, tables, media and saved progress remain intact.
+
+44 interpretations were revised, including every existing key/opinion disagreement. Management and next-step candidates have an explicit course-focus note: direct lecture teaching, background only, or no verified passage. Nine replacement evidence records were independently re-extracted from the original PDF pages with `pdfplumber` text flow and `x_tolerance=1`, checked for exact whitespace-normalized quotations, and matched to source SHA-256 hashes. The PE thrombolysis and variceal-bleeding treatment tables were also visually checked. The final policy has 624 verified passages (446 teaching, 178 background only), with 63 items still having no verified lecture passage. Prior test counts describe their individual review stages.
+
+Final policy validation: `node tests/medicine-mid-gift-first.test.cjs` loads the full live script order and checks all 687 questions and every option for consistent click/reload grading, source preservation, neutral feedback for source defects, English-only medical notes, and unchanged behavior outside Medicine MID. Do not interpret green bank-based feedback as proof that a disputed key is the current clinical recommendation; the source key and lecture discrepancy remain visible together.

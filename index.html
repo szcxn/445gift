@@ -1109,7 +1109,7 @@
         <span class="site-updates-label" id="site-updates-title">What's new</span>
         <time datetime="2026-10-05">October 5, 2026</time>
       </div>
-      <p><strong>Latest update:</strong> Questions now start with the newest batch. Medicine MID includes restored tables, updated explanations, and original lecture excerpts with page references.</p>
+      <p><strong>Latest update:</strong> Medicine MID practice now follows Gift answer keys, with separate review notes and lecture-based management guidance. Questions start with the newest batch.</p>
     </aside>
 
     <section class="hero" aria-labelledby="page-title">
@@ -1168,6 +1168,7 @@
   <script src="medicine-mid-explanation-completion.js?v=20261005-publish-1"></script>
   <script src="medicine-mid-lecture-evidence.js?v=20261005-evidence-1"></script>
   <script src="medicine-mid-source-tables.js?v=20261005-tables-1"></script>
+  <script src="medicine-mid-gift-first-review.js?v=20261005-gift-first-1"></script>
   <script src="surgery-catalog.js?v=20260924-empty-nutrition"></script>
   <script src="surgery-data.js?v=20260923-surgery-legacy-order"></script>
   <script src="surgery-midterm-reviews.js?v=20260924-hide-nutrition"></script>
@@ -1909,9 +1910,8 @@
       const acceptedAnswers = sourceAnswers(question);
       const proposedAnswers = Array.isArray(question.aiAnswer) ? question.aiAnswer : (question.aiAnswer ? [question.aiAnswer] : []);
       const reviewStatuses = ["needs-review", "conflict"];
-      const gradingAnswers = question.verification === "needs-review" ? [] : proposedAnswers.length
-        ? proposedAnswers
-        : reviewStatuses.includes(question.verification) ? [] : acceptedAnswers;
+      const gradingAnswers = gradingAnswersForQuestion(question);
+      const giftReview = question.giftReview;
       const sourceLocations = question.sourceLocations || [];
       const sourceRefs = sourceLocations.map(location => [
         question.subjectId === "surgery" && String(location.batch) === "444" && location.sourceType === "Q Bank" ? null : location.sourceType,
@@ -1937,7 +1937,11 @@
       const questionMeta = appState.navigation.mode === "lecture-mix"
         ? "Mixed lecture quiz"
         : [appState.navigation.mode === "batch" ? appState.navigation.assessment : question.assessment, sourceMetaLabel, displayedBatch ? batchDisplayName(question.subjectId, displayedBatch) : null, appState.navigation.mode === "cycle" && appState.navigation.assessment === "Midterm" ? question.lecture : question.cycle].filter(Boolean).join(" · ");
-      const aiText = proposedAnswers.length
+      const aiText = giftReview
+        ? giftReview.possibleAnswers.length
+          ? `Tentative opinion: I would consider ${giftReview.possibleAnswers.join(" or ")}${acceptedAnswers.length && giftReview.possibleAnswers.every(answer => acceptedAnswers.includes(answer)) ? " · agrees with the recorded Gift key" : acceptedAnswers.length ? " · possible alternative; the Gift key is retained" : " · no Gift key was recorded"}. See the reasoning and qualifications below.`
+          : "Tentative opinion: I cannot choose confidently from the available information. The recorded Gift key is shown separately."
+        : proposedAnswers.length
         ? `AI opinion: ${question.verification === "needs-review" ? "provisional choice" : "expected answer"} ${proposedAnswers.join(" or ")}${acceptedAnswers.length && proposedAnswers.every(answer => acceptedAnswers.includes(answer)) ? " · matches the reference answer" : acceptedAnswers.length ? " · differs from the reference answer" : " · no reference answer was recorded"}`
         : question.verification === "source-only"
         ? "Reference status: the recorded answer is retained; individual medical verification is pending."
@@ -1956,16 +1960,27 @@
               return `<button class="option-button${selectedClass}${resultClass}" type="button" data-question="${question.id}" data-option="${option.id}" aria-pressed="${selected === option.id}"><span class="option-letter">${option.id}</span><span>${escapeHtml(option.text)}</span></button>`;
             }).join("")}
           </div>
-          <div class="answer-panel${revealed ? " visible" : ""}${reviewStatuses.includes(question.verification) ? " review" : ""}">
-            <p class="answer-summary">Reference answer: ${escapeHtml(question.sourceAnswerNote || acceptedAnswers.join(" or ") || "Not provided")}${reviewStatuses.includes(question.verification) ? " · needs review" : question.verification === "source-only" ? " · reference answer only" : ""}</p>
+          <div class="answer-panel${revealed ? " visible" : ""}${(giftReview ? giftReview.warning || giftReview.ungradedReason : reviewStatuses.includes(question.verification)) ? " review" : ""}">
+            <p class="answer-summary">${giftReview ? "Gift key" : "Reference answer"}: ${escapeHtml(question.sourceAnswerNote || acceptedAnswers.join(" or ") || "Not provided")}${giftReview ? gradingAnswers.length ? " · used for bank-based practice" : " · not scored" : reviewStatuses.includes(question.verification) ? " · needs review" : question.verification === "source-only" ? " · reference answer only" : ""}</p>
+            ${giftReview ? `<p class="source-note">${escapeHtml(giftReview.ungradedReason || "Answer feedback follows the recorded Gift key. Review notes explain possible interpretations and lecture differences; they do not replace the key.")}${acceptedAnswers.length > 1 ? " Multiple recorded keys are retained." : ""}</p>` : ""}
             <p class="ai-note">${escapeHtml(aiText)}</p>
+            ${giftReview?.managementNote ? `<p class="review-opinion" lang="en" dir="ltr">${escapeHtml(giftReview.managementNote)}</p>` : ""}
             ${renderLectureEvidence(question)}
-            ${!question.reviewOpinion ? `<p class="answer-explanation"><strong>${question.subjectId === "medicine" && question.assessment === "Midterm" ? "Clinical interpretation (separate from the lecture text): " : ""}</strong>${escapeHtml(question.explanation)}</p>` : ""}
-            ${question.reviewOpinion ? `<p class="review-opinion" lang="en" dir="ltr"><strong>${question.subjectId === "medicine" && question.assessment === "Midterm" ? "Clinical interpretation (separate from the lecture text):" : "Medical review:"}</strong> ${escapeHtml(question.reviewOpinion)}</p>` : ""}
+            ${giftReview ? `<p class="review-opinion" lang="en" dir="ltr"><strong>Tentative interpretation:</strong> ${escapeHtml(giftReview.interpretation)}</p>` : !question.reviewOpinion ? `<p class="answer-explanation"><strong>${question.subjectId === "medicine" && question.assessment === "Midterm" ? "Clinical interpretation (separate from the lecture text): " : ""}</strong>${escapeHtml(question.explanation)}</p>` : ""}
+            ${!giftReview && question.reviewOpinion ? `<p class="review-opinion" lang="en" dir="ltr"><strong>${question.subjectId === "medicine" && question.assessment === "Midterm" ? "Clinical interpretation (separate from the lecture text):" : "Medical review:"}</strong> ${escapeHtml(question.reviewOpinion)}</p>` : ""}
             <p class="source-note">Reference: ${escapeHtml(question.sourceLabel || `${subject?.name || "Medical"} Question Bank`)}${sourceRefs ? ` · ${escapeHtml(sourceRefs)}` : ""}</p>
             ${(question.references || []).length ? `<div class="reference-list">${question.references.map(reference => `<a href="${escapeHtml(reference.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(reference.title)} ↗</a>`).join("")}</div>` : ""}
           </div>
         </article>`;
+    }
+
+    function gradingAnswersForQuestion(question) {
+      if (question.subjectId === "medicine" && question.assessment === "Midterm" && question.giftReview?.policy === "gift-key-first") {
+        return question.giftReview.gradingAnswers;
+      }
+      const proposed = Array.isArray(question.aiAnswer) ? question.aiAnswer : question.aiAnswer ? [question.aiAnswer] : [];
+      return question.verification === "needs-review" ? [] : proposed.length
+        ? proposed : ["needs-review", "conflict"].includes(question.verification) ? [] : sourceAnswers(question);
     }
 
     function newestQuestionBatch(question, assessment = null) {
@@ -2002,11 +2017,7 @@
       appState.quiz.answers[questionId] = optionId;
       persistState();
       const card = workspaceElement.querySelector(`[data-question-card="${questionId}"]`);
-      const acceptedAnswers = sourceAnswers(question);
-      const proposedAnswers = Array.isArray(question.aiAnswer) ? question.aiAnswer : (question.aiAnswer ? [question.aiAnswer] : []);
-      const gradingAnswers = question.verification === "needs-review" ? [] : proposedAnswers.length
-        ? proposedAnswers
-        : ["needs-review", "conflict"].includes(question.verification) ? [] : acceptedAnswers;
+      const gradingAnswers = gradingAnswersForQuestion(question);
       card.querySelectorAll(".option-button").forEach(button => {
         const isSelected = button.dataset.option === optionId;
         button.classList.toggle("selected", isSelected);
