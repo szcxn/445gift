@@ -1109,7 +1109,7 @@
         <span class="site-updates-label" id="site-updates-title">What's new</span>
         <time datetime="2026-10-05">October 5, 2026</time>
       </div>
-      <p><strong>Medicine MID:</strong> Restored question tables and lab results, updated explanations, and original lecture excerpts with page references.</p>
+      <p><strong>Latest update:</strong> Questions now start with the newest batch. Medicine MID includes restored tables, updated explanations, and original lecture excerpts with page references.</p>
     </aside>
 
     <section class="hero" aria-labelledby="page-title">
@@ -1832,14 +1832,22 @@
       openQuestionSet(title, questions, { subjectId, cycle: null, lecture: null, mode, assessment, batch, title }, resume);
     }
 
+    function orderQuestionsNewestFirst(questions, assessment = null) {
+      return [...questions].sort((left, right) => newestQuestionBatch(right, assessment) - newestQuestionBatch(left, assessment));
+    }
+
     function openQuestionSet(title, questions, navigation, resume = false) {
       if (!questions.length) return;
-      const ids = questions.map(question => question.id);
-      const sameSet = ids.length === appState.quiz.questionIds.length && ids.every((id, index) => appState.quiz.questionIds[index] === id);
+      const ordered = ["batch", "lecture-mix"].includes(navigation.mode)
+        ? questions
+        : orderQuestionsNewestFirst(questions, navigation.assessment);
+      const ids = ordered.map(question => question.id);
+      const currentQuestionId = appState.quiz.questionIds[appState.quiz.currentIndex];
+      const resumeIndex = resume ? ids.indexOf(currentQuestionId) : -1;
       appState.navigation = navigation;
       appState.quiz.questionIds = ids;
-      if (!resume || !sameSet) appState.quiz.currentIndex = 0;
-      captureAnalytics(resume && sameSet ? "quiz_resumed" : "quiz_started", quizAnalyticsProperties(navigation, ids.length));
+      appState.quiz.currentIndex = resumeIndex >= 0 ? resumeIndex : 0;
+      captureAnalytics(resumeIndex >= 0 ? "quiz_resumed" : "quiz_started", quizAnalyticsProperties(navigation, ids.length));
       renderQuestionSetView();
       persistState();
       renderResumePanel();
@@ -1922,9 +1930,13 @@
       const sourceMetaLabel = question.subjectId === "surgery" && String(question.sourceBatch) === "444" && question.sourceLabel === "Q Bank"
         ? null
         : question.sourceLabel;
+      const newestBatch = newestQuestionBatch(question, appState.navigation.assessment);
+      const displayedBatch = appState.navigation.mode === "batch"
+        ? appState.navigation.batch || question.sourceBatch
+        : newestBatch > 0 ? String(newestBatch) : question.sourceBatch;
       const questionMeta = appState.navigation.mode === "lecture-mix"
         ? "Mixed lecture quiz"
-        : [appState.navigation.mode === "batch" ? appState.navigation.assessment : question.assessment, sourceMetaLabel, question.sourceBatch ? batchDisplayName(question.subjectId, question.sourceBatch) : null, appState.navigation.mode === "cycle" && appState.navigation.assessment === "Midterm" ? question.lecture : question.cycle].filter(Boolean).join(" · ");
+        : [appState.navigation.mode === "batch" ? appState.navigation.assessment : question.assessment, sourceMetaLabel, displayedBatch ? batchDisplayName(question.subjectId, displayedBatch) : null, appState.navigation.mode === "cycle" && appState.navigation.assessment === "Midterm" ? question.lecture : question.cycle].filter(Boolean).join(" · ");
       const aiText = proposedAnswers.length
         ? `AI opinion: ${question.verification === "needs-review" ? "provisional choice" : "expected answer"} ${proposedAnswers.join(" or ")}${acceptedAnswers.length && proposedAnswers.every(answer => acceptedAnswers.includes(answer)) ? " · matches the reference answer" : acceptedAnswers.length ? " · differs from the reference answer" : " · no reference answer was recorded"}`
         : question.verification === "source-only"
@@ -1954,6 +1966,17 @@
             ${(question.references || []).length ? `<div class="reference-list">${question.references.map(reference => `<a href="${escapeHtml(reference.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(reference.title)} ↗</a>`).join("")}</div>` : ""}
           </div>
         </article>`;
+    }
+
+    function newestQuestionBatch(question, assessment = null) {
+      const batches = (question.sourceLocations || [])
+        .filter(location => !assessment || location.assessment === assessment)
+        .map(location => location.batch);
+      if (!assessment || question.assessment === assessment) batches.push(question.sourceBatch);
+      return batches.reduce((latest, batch) => {
+        const number = /^\d+$/.test(String(batch ?? "")) ? Number(batch) : -1;
+        return Number.isSafeInteger(number) && number > 0 ? Math.max(latest, number) : latest;
+      }, -1);
     }
 
     function renderSourceTables(question) {
