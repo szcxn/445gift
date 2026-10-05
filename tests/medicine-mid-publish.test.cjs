@@ -50,6 +50,7 @@ for (const q of mid) {
   renderer.appState.quiz.answers[q.id] = q.options[0].id;
   const output = renderer.renderQuestion(q, 0, 687);
   assert.ok(output.includes(renderer.escapeHtml(q.reviewOpinion || q.explanation)), `Explanation not shown: ${q.id}`);
+  assert.ok(output.includes("Clinical interpretation (separate from the lecture text):"), `Clinical/lecture distinction missing: ${q.id}`);
   assert.ok(!/\p{Script=Arabic}/u.test(output), `Medical content is not English: ${q.id}`);
   if (q.verification === "needs-review" || (q.verification === "conflict" && !q.aiAnswer)) {
     assert.ok(!/option-button[^"\n]*\b(?:correct|incorrect)\b/.test(output), `Ambiguous question graded: ${q.id}`);

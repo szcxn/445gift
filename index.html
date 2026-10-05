@@ -1938,8 +1938,8 @@
           <div class="answer-panel${revealed ? " visible" : ""}${reviewStatuses.includes(question.verification) ? " review" : ""}">
             <p class="answer-summary">Reference answer: ${escapeHtml(question.sourceAnswerNote || acceptedAnswers.join(" or ") || "Not provided")}${reviewStatuses.includes(question.verification) ? " · needs review" : question.verification === "source-only" ? " · reference answer only" : ""}</p>
             <p class="ai-note">${escapeHtml(aiText)}</p>
-            ${!question.reviewOpinion ? `<p class="answer-explanation">${escapeHtml(question.explanation)}</p>` : ""}
             ${renderLectureEvidence(question)}
+            ${!question.reviewOpinion ? `<p class="answer-explanation"><strong>${question.subjectId === "medicine" && question.assessment === "Midterm" ? "Clinical interpretation (separate from the lecture text): " : ""}</strong>${escapeHtml(question.explanation)}</p>` : ""}
             ${question.reviewOpinion ? `<p class="review-opinion" lang="en" dir="ltr"><strong>${question.subjectId === "medicine" && question.assessment === "Midterm" ? "Clinical interpretation (separate from the lecture text):" : "Medical review:"}</strong> ${escapeHtml(question.reviewOpinion)}</p>` : ""}
             <p class="source-note">Reference: ${escapeHtml(question.sourceLabel || `${subject?.name || "Medical"} Question Bank`)}${sourceRefs ? ` · ${escapeHtml(sourceRefs)}` : ""}</p>
             ${(question.references || []).length ? `<div class="reference-list">${question.references.map(reference => `<a href="${escapeHtml(reference.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(reference.title)} ↗</a>`).join("")}</div>` : ""}
