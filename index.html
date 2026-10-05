@@ -226,6 +226,21 @@
     [data-theme="dark"] .sun-icon { display: none; }
     [data-theme="dark"] .moon-icon { display: block; }
 
+    .site-updates {
+      margin-top: 20px;
+      padding: 16px 20px;
+      border: 1px solid var(--line-strong);
+      border-radius: 16px;
+      background: var(--accent-soft);
+      color: var(--text);
+      text-align: left;
+    }
+
+    .site-updates-head { display: flex; align-items: center; flex-wrap: wrap; gap: 8px 14px; }
+    .site-updates-label { color: var(--accent); font-weight: 700; }
+    .site-updates time { color: var(--muted); font-size: .82rem; }
+    .site-updates p { margin: 6px 0 0; font-size: .95rem; }
+
     .hero {
       position: relative;
       display: grid;
@@ -809,6 +824,10 @@
     .ai-note { margin: 0 0 10px; color: var(--accent); font-size: 12px; font-weight: 700; }
     .answer-explanation { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.65; }
     .source-note { margin: 12px 0 0; color: var(--faint); font-size: 11px; line-height: 1.55; }
+    .lecture-evidence, .review-opinion { margin: 10px 0 0; padding: 9px 11px; border-radius: 8px; font-size: 12px; line-height: 1.7; direction: ltr; text-align: left; }
+    .lecture-evidence { background: rgba(71, 132, 162, .1); color: var(--muted); }
+    .review-opinion { background: rgba(193, 138, 57, .12); color: var(--text); }
+    .lecture-evidence a { color: var(--accent); font-weight: 700; text-underline-offset: 3px; }
     .reference-list { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 12px; }
     .reference-list a { color: var(--accent); font-size: 11px; font-weight: 700; text-underline-offset: 3px; }
 
@@ -1078,6 +1097,14 @@
       </div>
     </header>
 
+    <aside class="site-updates" lang="en" dir="ltr" aria-labelledby="site-updates-title">
+      <div class="site-updates-head">
+        <span class="site-updates-label" id="site-updates-title">What's new</span>
+        <time datetime="2026-10-05">October 5, 2026</time>
+      </div>
+      <p><strong>Medicine MID:</strong> Lecture references, clearer answer explanations, and questions organized by lecture for easier revision.</p>
+    </aside>
+
     <section class="hero" aria-labelledby="page-title">
       <div class="hero-copy">
         <h1 id="page-title">A Structured Medical Question Bank.</h1>
@@ -1129,6 +1156,9 @@
 
   <script src="medicine-data.js?v=20260922-gastro-review"></script>
   <script src="medicine-reference-overrides.js?v=20260929-source-integrity-2"></script>
+  <script src="medicine-mid-444-review.js?v=20261005-english-2"></script>
+  <script src="medicine-mid-444-renal-gi-review.js?v=20261005-english-2"></script>
+  <script src="medicine-mid-explanation-completion.js?v=20261005-publish-1"></script>
   <script src="surgery-catalog.js?v=20260924-empty-nutrition"></script>
   <script src="surgery-data.js?v=20260923-surgery-legacy-order"></script>
   <script src="surgery-midterm-reviews.js?v=20260924-hide-nutrition"></script>
@@ -1569,6 +1599,7 @@
       });
       const lectures = [...lectureOrder.keys()].sort((a, b) => (lectureOrder.get(a) - lectureOrder.get(b)) || a.localeCompare(b));
       const answeredInCycle = questions.filter(question => appState.quiz.answers[question.id]).length;
+      const reviewedMidQuestions = questions.filter(question => question.lectureEvidence);
 
       captureAnalytics("cycle_opened", {
         subject: subjectId,
@@ -1586,6 +1617,7 @@
           <div class="route-section-head"><h3>Cycle Practice</h3><p>One continuous test across all questions in this cycle.</p></div>
           <div class="route-grid">
             <button class="route-card featured cycle-all-card" type="button"><strong>Test all ${escapeHtml(cycle)} questions</strong><span>${questionCountLabel(questions.length)} · ${answeredInCycle} answered</span></button>
+            ${reviewedMidQuestions.length ? `<button class="route-card featured cycle-mid-review-card" type="button"><strong>MID 444 · Lecture Review</strong><span>${questionCountLabel(reviewedMidQuestions.length)} · Lecture pages, medical notes, and reviewed answers</span></button>` : ""}
           </div>
         </section>
         <section class="route-section">
@@ -1603,6 +1635,7 @@
       bindWorkspaceClose();
       workspaceElement.querySelector('[data-action="subject"]').addEventListener("click", () => openSubject(subjectId));
       workspaceElement.querySelector(".cycle-all-card").addEventListener("click", () => openCycleQuestions(subjectId, cycle));
+      workspaceElement.querySelector(".cycle-mid-review-card")?.addEventListener("click", () => openCycleQuestions(subjectId, cycle, false, "Midterm"));
       workspaceElement.querySelector(".cycle-lecture-mix-card")?.addEventListener("click", () => openLectureMixer(subjectId, cycle));
       workspaceElement.querySelectorAll(".lecture-card").forEach(card => {
         card.addEventListener("click", () => openLecture(subjectId, cycle, card.dataset.lecture));
@@ -1736,9 +1769,11 @@
       openQuestionSet(lecture, questions, { subjectId, cycle, lecture, mode: "lecture", assessment: null, batch: null, title: lecture }, resume);
     }
 
-    function openCycleQuestions(subjectId, cycle, resume = false) {
-      const questions = questionsFor(subjectId).filter(question => question.cycle === cycle);
-      openQuestionSet(`All ${cycle} Questions`, questions, { subjectId, cycle, lecture: null, mode: "cycle", assessment: null, batch: null, title: `All ${cycle} Questions` }, resume);
+    function openCycleQuestions(subjectId, cycle, resume = false, assessment = null) {
+      const questions = questionsFor(subjectId).filter(question => question.cycle === cycle && (!assessment || question.assessment === assessment));
+      if (assessment === "Midterm") questions.sort((left, right) => (left.lectureOrder ?? 999) - (right.lectureOrder ?? 999) || (left.referenceOrder ?? 999999) - (right.referenceOrder ?? 999999));
+      const title = assessment ? `${cycle} · MID 444 Lecture Review` : `All ${cycle} Questions`;
+      openQuestionSet(title, questions, { subjectId, cycle, lecture: null, mode: "cycle", assessment, batch: null, title }, resume);
     }
 
     function questionsForBatch(subjectId, assessment, batch) {
@@ -1855,9 +1890,10 @@
       const revealed = Boolean(selected);
       const acceptedAnswers = sourceAnswers(question);
       const proposedAnswers = Array.isArray(question.aiAnswer) ? question.aiAnswer : (question.aiAnswer ? [question.aiAnswer] : []);
-      const gradingAnswers = proposedAnswers.length
+      const reviewStatuses = ["needs-review", "conflict"];
+      const gradingAnswers = question.verification === "needs-review" ? [] : proposedAnswers.length
         ? proposedAnswers
-        : question.verification === "needs-review" ? [] : acceptedAnswers;
+        : reviewStatuses.includes(question.verification) ? [] : acceptedAnswers;
       const sourceLocations = question.sourceLocations || [];
       const sourceRefs = sourceLocations.map(location => [
         question.subjectId === "surgery" && String(location.batch) === "444" && location.sourceType === "Q Bank" ? null : location.sourceType,
@@ -1878,10 +1914,9 @@
         : question.sourceLabel;
       const questionMeta = appState.navigation.mode === "lecture-mix"
         ? "Mixed lecture quiz"
-        : [appState.navigation.mode === "batch" ? appState.navigation.assessment : question.assessment, sourceMetaLabel, question.sourceBatch ? batchDisplayName(question.subjectId, question.sourceBatch) : null, question.cycle].filter(Boolean).join(" · ");
-      const reviewStatuses = ["needs-review", "conflict"];
+        : [appState.navigation.mode === "batch" ? appState.navigation.assessment : question.assessment, sourceMetaLabel, question.sourceBatch ? batchDisplayName(question.subjectId, question.sourceBatch) : null, appState.navigation.mode === "cycle" && appState.navigation.assessment === "Midterm" ? question.lecture : question.cycle].filter(Boolean).join(" · ");
       const aiText = proposedAnswers.length
-        ? `AI opinion: expected answer ${proposedAnswers.join(" or ")}${acceptedAnswers.length && proposedAnswers.every(answer => acceptedAnswers.includes(answer)) ? " · matches the reference answer" : acceptedAnswers.length ? " · differs from the reference answer" : " · no reference answer was recorded"}`
+        ? `AI opinion: ${question.verification === "needs-review" ? "provisional choice" : "expected answer"} ${proposedAnswers.join(" or ")}${acceptedAnswers.length && proposedAnswers.every(answer => acceptedAnswers.includes(answer)) ? " · matches the reference answer" : acceptedAnswers.length ? " · differs from the reference answer" : " · no reference answer was recorded"}`
         : question.verification === "source-only"
         ? "Reference status: the recorded answer is retained; individual medical verification is pending."
         : `AI opinion: ${question.aiSuggestion || "No single answer can be confirmed from the available information."}`;
@@ -1901,7 +1936,11 @@
           <div class="answer-panel${revealed ? " visible" : ""}${reviewStatuses.includes(question.verification) ? " review" : ""}">
             <p class="answer-summary">Reference answer: ${escapeHtml(question.sourceAnswerNote || acceptedAnswers.join(" or ") || "Not provided")}${reviewStatuses.includes(question.verification) ? " · needs review" : question.verification === "source-only" ? " · reference answer only" : ""}</p>
             <p class="ai-note">${escapeHtml(aiText)}</p>
-            <p class="answer-explanation">${escapeHtml(question.explanation)}</p>
+            ${!question.reviewOpinion ? `<p class="answer-explanation">${escapeHtml(question.explanation)}</p>` : ""}
+            ${question.lectureEvidence ? `<p class="lecture-evidence" lang="en" dir="ltr">${question.lectureEvidence.outside
+              ? escapeHtml(question.lectureEvidence.note)
+              : `Teamwork 444 lecture reference: <a href="${escapeHtml(question.lectureEvidence.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(question.lectureEvidence.title)} ↗</a> · PDF page ${question.lectureEvidence.page}.${question.lectureEvidence.topic ? `<br>Cited topic: <span>${escapeHtml(question.lectureEvidence.topic)}</span>` : ""}<br>${escapeHtml(question.lectureEvidence.note)}`}</p>` : ""}
+            ${question.reviewOpinion ? `<p class="review-opinion" lang="en" dir="ltr"><strong>Medical review:</strong> ${escapeHtml(question.reviewOpinion)}</p>` : ""}
             <p class="source-note">Reference: ${escapeHtml(question.sourceLabel || `${subject?.name || "Medical"} Question Bank`)}${sourceRefs ? ` · ${escapeHtml(sourceRefs)}` : ""}</p>
             ${(question.references || []).length ? `<div class="reference-list">${question.references.map(reference => `<a href="${escapeHtml(reference.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(reference.title)} ↗</a>`).join("")}</div>` : ""}
           </div>
@@ -1917,9 +1956,9 @@
       const card = workspaceElement.querySelector(`[data-question-card="${questionId}"]`);
       const acceptedAnswers = sourceAnswers(question);
       const proposedAnswers = Array.isArray(question.aiAnswer) ? question.aiAnswer : (question.aiAnswer ? [question.aiAnswer] : []);
-      const gradingAnswers = proposedAnswers.length
+      const gradingAnswers = question.verification === "needs-review" ? [] : proposedAnswers.length
         ? proposedAnswers
-        : question.verification === "needs-review" ? [] : acceptedAnswers;
+        : ["needs-review", "conflict"].includes(question.verification) ? [] : acceptedAnswers;
       card.querySelectorAll(".option-button").forEach(button => {
         const isSelected = button.dataset.option === optionId;
         button.classList.toggle("selected", isSelected);
@@ -1969,7 +2008,7 @@
       if (subjectId && mode === "lecture-picker") return openLectureMixer(subjectId);
       if (subjectId && mode === "lecture-mix" && appState.quiz.questionIds.length) return renderQuestionSetView();
       if (subjectId && ["all", "assessment", "batch"].includes(mode)) return openCollection(subjectId, mode, assessment, batch, true);
-      if (subjectId && cycle && mode === "cycle") return openCycleQuestions(subjectId, cycle, true);
+      if (subjectId && cycle && mode === "cycle") return openCycleQuestions(subjectId, cycle, true, assessment);
       if (subjectId && lecture) return openLecture(subjectId, cycle, lecture, true);
       if (subjectId && cycle) return openCycle(subjectId, cycle);
       if (subjectId) openSubject(subjectId);

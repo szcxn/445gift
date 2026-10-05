@@ -1,0 +1,193 @@
+{
+  "lectures": [
+    {
+      "id": "1I3UMmNfimUTmYFGNO7qh0eDr6wFj9UBU",
+      "title": "L6) Infective Endocarditis",
+      "cycle": "Cardiology",
+      "url": "https://drive.google.com/file/d/1I3UMmNfimUTmYFGNO7qh0eDr6wFj9UBU/view?usp=drivesdk",
+      "pageCount": 19
+    },
+    {
+      "id": "18hnnemESftiXgB2QGC2AIZ-S7w9rqzsO",
+      "title": "L3) Heart Failure 1",
+      "cycle": "Cardiology",
+      "url": "https://drive.google.com/file/d/18hnnemESftiXgB2QGC2AIZ-S7w9rqzsO/view?usp=drivesdk",
+      "pageCount": 25
+    },
+    {
+      "id": "1TZg-aMyl5na6z9HDHd68FhzFC3APzi9t",
+      "title": "L4) Heart Failure 2",
+      "cycle": "Cardiology",
+      "url": "https://drive.google.com/file/d/1TZg-aMyl5na6z9HDHd68FhzFC3APzi9t/view?usp=drivesdk",
+      "pageCount": 19
+    },
+    {
+      "id": "1JT8nx58IXD1mDCSNTYHclhOcOWQdu-G2",
+      "title": "L2) Acute Coronary Syndrome",
+      "cycle": "Cardiology",
+      "url": "https://drive.google.com/file/d/1JT8nx58IXD1mDCSNTYHclhOcOWQdu-G2/view?usp=drivesdk",
+      "pageCount": 24
+    },
+    {
+      "id": "1Vl13g8KTcjkqeqSTegxBSqCyeAzRGuhI",
+      "title": "L7) Valvular Heart Disease ",
+      "cycle": "Cardiology",
+      "url": "https://drive.google.com/file/d/1Vl13g8KTcjkqeqSTegxBSqCyeAzRGuhI/view?usp=drivesdk",
+      "pageCount": 30
+    },
+    {
+      "id": "1QT9a9BIARoOzKLNQ9sxjMm5MJt4tjNHX",
+      "title": "L5) Rheumatic Heart Disease",
+      "cycle": "Cardiology",
+      "url": "https://drive.google.com/file/d/1QT9a9BIARoOzKLNQ9sxjMm5MJt4tjNHX/view?usp=drivesdk",
+      "pageCount": 19
+    },
+    {
+      "id": "1gCvvaY4jLMl7e_0OAOEQv2P4BkJDSKJ8",
+      "title": "L1) Arrhythmias",
+      "cycle": "Cardiology",
+      "url": "https://drive.google.com/file/d/1gCvvaY4jLMl7e_0OAOEQv2P4BkJDSKJ8/view?usp=drivesdk",
+      "pageCount": 27
+    },
+    {
+      "id": "1aDTJ2XUNs-OnJ_HupfzsbBkAIq-CQ9NJ",
+      "title": "L3) Community Acquired Pneumonia",
+      "cycle": "Pulmonology",
+      "url": "https://drive.google.com/file/d/1aDTJ2XUNs-OnJ_HupfzsbBkAIq-CQ9NJ/view?usp=drivesdk",
+      "pageCount": 19
+    },
+    {
+      "id": "1v7dkJaz7Th6DVP5TFbXB197oY_3OT9Ou",
+      "title": "L6) Pleural Effusion",
+      "cycle": "Pulmonology",
+      "url": "https://drive.google.com/file/d/1v7dkJaz7Th6DVP5TFbXB197oY_3OT9Ou/view?usp=drivesdk",
+      "pageCount": 17
+    },
+    {
+      "id": "1DMww5BoHJaKpKLmsYP-QOaa12IleGTDO",
+      "title": "L5) Investigation of Lung Disease",
+      "cycle": "Pulmonology",
+      "url": "https://drive.google.com/file/d/1DMww5BoHJaKpKLmsYP-QOaa12IleGTDO/view?usp=drivesdk",
+      "pageCount": 23
+    },
+    {
+      "id": "16EcLYmDUK21x7fH64qZSBWvOBQ5lnas1",
+      "title": "L4) Pulmonary Embolism",
+      "cycle": "Pulmonology",
+      "url": "https://drive.google.com/file/d/16EcLYmDUK21x7fH64qZSBWvOBQ5lnas1/view?usp=drivesdk",
+      "pageCount": 27
+    },
+    {
+      "id": "1acFY1FaIq6gbrMAE_jn2BoSi5-VqzGek",
+      "title": "L2) COPD",
+      "cycle": "Pulmonology",
+      "url": "https://drive.google.com/file/d/1acFY1FaIq6gbrMAE_jn2BoSi5-VqzGek/view?usp=drivesdk",
+      "pageCount": 30
+    },
+    {
+      "id": "1PrgUki4ev_p-J7MjAjk1r0Bvl5ktaGm_",
+      "title": "L1) Bronchial asthma",
+      "cycle": "Pulmonology",
+      "url": "https://drive.google.com/file/d/1PrgUki4ev_p-J7MjAjk1r0Bvl5ktaGm_/view?usp=drivesdk",
+      "pageCount": 19
+    },
+    {
+      "id": "17UACHWXWWZAUiTlKeltN5fYqSjrN_lkt",
+      "title": "L5) Electrolyte Imbalance II",
+      "cycle": "Nephrology",
+      "url": "https://drive.google.com/file/d/17UACHWXWWZAUiTlKeltN5fYqSjrN_lkt/view?usp=drivesdk",
+      "pageCount": 15
+    },
+    {
+      "id": "17tswsOTMldBxMAoOb7_SL9Ca5MMbbeV-",
+      "title": "L7) Glomerular Diseases",
+      "cycle": "Nephrology",
+      "url": "https://drive.google.com/file/d/17tswsOTMldBxMAoOb7_SL9Ca5MMbbeV-/view?usp=drivesdk",
+      "pageCount": 31
+    },
+    {
+      "id": "1hQTZlWUidirIDofWH03W2EUaLpGYbH1v",
+      "title": "L6) Chronic Kidney Injury",
+      "cycle": "Nephrology",
+      "url": "https://drive.google.com/file/d/1hQTZlWUidirIDofWH03W2EUaLpGYbH1v/view?usp=drivesdk",
+      "pageCount": 23
+    },
+    {
+      "id": "1nhXmxlOTe8gHMAfdmaFlpVaf2pQaxc9r",
+      "title": "L4) Acute Kidney Injury",
+      "cycle": "Nephrology",
+      "url": "https://drive.google.com/file/d/1nhXmxlOTe8gHMAfdmaFlpVaf2pQaxc9r/view?usp=drivesdk",
+      "pageCount": 33
+    },
+    {
+      "id": "1E9_qaYaRC_HFjX4TpKtm8GNe0cjb4kyo",
+      "title": "L3) Electrolyte Imbalance I",
+      "cycle": "Nephrology",
+      "url": "https://drive.google.com/file/d/1E9_qaYaRC_HFjX4TpKtm8GNe0cjb4kyo/view?usp=drivesdk",
+      "pageCount": 20
+    },
+    {
+      "id": "1O_LvJvUEmy4sP8vzo0L8pid0VKK5ZieV",
+      "title": "L2) Acid base disorders",
+      "cycle": "Nephrology",
+      "url": "https://drive.google.com/file/d/1O_LvJvUEmy4sP8vzo0L8pid0VKK5ZieV/view?usp=drivesdk",
+      "pageCount": 22
+    },
+    {
+      "id": "1_dy4GfUD6SBHNCumY_HRMbt6cY2_ZXKW",
+      "title": "L1) Hypertension",
+      "cycle": "Nephrology",
+      "url": "https://drive.google.com/file/d/1_dy4GfUD6SBHNCumY_HRMbt6cY2_ZXKW/view?usp=drivesdk",
+      "pageCount": 19
+    },
+    {
+      "id": "1pvxa6sWYbW_hGJoY25P97bvklm2_tdYj",
+      "title": "3) Liver cirrhosis & Complications .pdf",
+      "cycle": "Gastroenterology",
+      "url": "https://drive.google.com/file/d/1pvxa6sWYbW_hGJoY25P97bvklm2_tdYj/view?usp=drivesdk",
+      "pageCount": 21
+    },
+    {
+      "id": "1KtPBFP9GmjyqXXMjasa5lxn5aJxFRZkO",
+      "title": "7) Esophageal diseases",
+      "cycle": "Gastroenterology",
+      "url": "https://drive.google.com/file/d/1KtPBFP9GmjyqXXMjasa5lxn5aJxFRZkO/view?usp=drivesdk",
+      "pageCount": 20
+    },
+    {
+      "id": "16cjsaT65dFurwEmh8PdIU8S1X1xUCXJz",
+      "title": "6) Abnormal Liver Enzymes With Selected Common Liver Diseases ",
+      "cycle": "Gastroenterology",
+      "url": "https://drive.google.com/file/d/16cjsaT65dFurwEmh8PdIU8S1X1xUCXJz/view?usp=drivesdk",
+      "pageCount": 32
+    },
+    {
+      "id": "1Qriuhbb34zoe496wiWlOMtZSxmVe-Tze",
+      "title": "2) Abdominal Pain Including IBS.pdf",
+      "cycle": "Gastroenterology",
+      "url": "https://drive.google.com/file/d/1Qriuhbb34zoe496wiWlOMtZSxmVe-Tze/view?usp=drivesdk",
+      "pageCount": 37
+    },
+    {
+      "id": "1GwgVEYGMF_4EodwkOaHLxTWcSvSIewON",
+      "title": "5) Non-Alcoholic Fatty Liver",
+      "cycle": "Gastroenterology",
+      "url": "https://drive.google.com/file/d/1GwgVEYGMF_4EodwkOaHLxTWcSvSIewON/view?usp=drivesdk",
+      "pageCount": 14
+    },
+    {
+      "id": "1yPmz7Wr7nMmvXx66n8qtaKKNTD-vy9uE",
+      "title": "1) Gastrointestinal Bleeding.pdf",
+      "cycle": "Gastroenterology",
+      "url": "https://drive.google.com/file/d/1yPmz7Wr7nMmvXx66n8qtaKKNTD-vy9uE/view?usp=drivesdk",
+      "pageCount": 28
+    },
+    {
+      "id": "1cz5o2-_TM0RqXZBfVet5Ii0Gt9pkgjlr",
+      "title": "4) Chronic Diarrhea Including Celiac Disease.pdf",
+      "cycle": "Gastroenterology",
+      "url": "https://drive.google.com/file/d/1cz5o2-_TM0RqXZBfVet5Ii0Gt9pkgjlr/view?usp=drivesdk",
+      "pageCount": 24
+    }
+  ]
+}
