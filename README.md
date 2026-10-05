@@ -61,7 +61,7 @@ For a subject organized directly by lecture, set `cycle` to `null`. For cycle-ba
 
 When correcting a published question, prefer an override file so the imported source bank remains intact. Keep `sourceAnswer` unchanged, place an independently reviewed answer in `aiAnswer`, and use `verification` to distinguish `confirmed`, `supported`, `conflict`, `needs-review`, and `source-only` items.
 
-The four Medicine cycles (Cardiology, Pulmonology, Nephrology, Gastroenterology) include **MID 444 · Lecture Review**. It follows the 444 lecture sequence and then PDF-page order, with source answers kept separate from medical opinions. Review covers 663 MID questions: 656 have related lecture-page anchors and 7 older-bank topics are explicitly outside these lectures. Final questions and other subjects are not part of this update. Page numbers include the cover; caveats identify partial teaching support and external evidence. Items with insufficient information, missing options/labs, or non-unique choices are not marked correct or incorrect.
+The four Medicine cycles (Cardiology, Pulmonology, Nephrology, Gastroenterology) include **MID 444 · Lecture Review** and preserve the original bank answers. Original lecture text is displayed separately from clinical interpretation and external sources. PDF pages count the cover as page 1. A topic match is never presented as proof of an answer.
 
 Nephrology/Gastroenterology adds 283 question-specific English explanations: 201 supported, 15 conflicts, and 67 needing review. All four blocks use English medical reviews, evidence notes and interface labels. The original imported keys and stable question IDs remain unchanged. Related IBD and diabetic-CKD items have been moved to the lecture that actually teaches their concept. Detailed audit reports are maintained separately from the published site.
 
@@ -71,7 +71,9 @@ The update strip is at the top of `index.html`. It highlights user-facing study 
 
 Review validation: `node tests/medicine-mid-444-review.test.cjs`.
 Integration validation: `node tests/medicine-mid-444-renal-gi-review.test.cjs` (all 663 reviewed MID items, preserved prior reviews/source keys, bounded pages, and neutral grading for uncertain questions).
-Release validation: `node tests/medicine-mid-publish.test.cjs` (all 687 Medicine MID explanations and final grading behavior). Lecture-page checks use the portable manifest in `tests/fixtures/`.
+Release validation: `node tests/medicine-mid-publish.test.cjs` (all 687 Medicine MID explanations and final grading behavior) and `node tests/medicine-mid-lecture-evidence.test.cjs` (final provenance and rendering).
+
+Original-PDF evidence audit: 622 questions have checked original-page excerpts: 443 teaching passages and 179 explicitly marked background-only passages. 37 current-block questions have no verified supporting passage and show no lecture page claim; 28 older or unassigned questions also have no verified passage. Two excerpts are visually checked figure labels. Text quotations retain original wording with whitespace normalization only. Topic-only citations from earlier review stages are replaced at runtime by `medicine-mid-lecture-evidence.js`; they are not displayed as verified evidence. Original PDFs, full extracted page text, and the independent PDF validation script remain in the private reference directory outside the published site. Source-file hashes and page limits are recorded in the portable manifest in `tests/fixtures/`.
 
 ## Local preview
 

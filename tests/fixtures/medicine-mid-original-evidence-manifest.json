@@ -1,0 +1,229 @@
+{
+  "checkedOn": "2026-10-05",
+  "pageNumbering": "PDF pages counted from the cover as page 1",
+  "sources": [
+    {
+      "id": "1I3UMmNfimUTmYFGNO7qh0eDr6wFj9UBU",
+      "title": "L6) Infective Endocarditis",
+      "pageCount": 19,
+      "sha256": "a034fbe51dc7e24ae34d62925a7709436238a385d71ea1c83b0659d9b7a90b92",
+      "url": "https://drive.google.com/file/d/1I3UMmNfimUTmYFGNO7qh0eDr6wFj9UBU/view?usp=drivesdk"
+    },
+    {
+      "id": "18hnnemESftiXgB2QGC2AIZ-S7w9rqzsO",
+      "title": "L3) Heart Failure 1",
+      "pageCount": 25,
+      "sha256": "631d86033ca09aeaab3ceee74ecb45461d5b11737589e2f491d5642a4404e162",
+      "url": "https://drive.google.com/file/d/18hnnemESftiXgB2QGC2AIZ-S7w9rqzsO/view?usp=drivesdk"
+    },
+    {
+      "id": "1TZg-aMyl5na6z9HDHd68FhzFC3APzi9t",
+      "title": "L4) Heart Failure 2",
+      "pageCount": 19,
+      "sha256": "6150f49d66c87815e5ea93d1406a6ae968de0a329d6430be4c07f7bdcb0c3118",
+      "url": "https://drive.google.com/file/d/1TZg-aMyl5na6z9HDHd68FhzFC3APzi9t/view?usp=drivesdk"
+    },
+    {
+      "id": "1JT8nx58IXD1mDCSNTYHclhOcOWQdu-G2",
+      "title": "L2) Acute Coronary Syndrome",
+      "pageCount": 24,
+      "sha256": "400809f5f922ae4d72de5a9d8373c6106b6bc9b815c3d82ae61d04e5d970abbb",
+      "url": "https://drive.google.com/file/d/1JT8nx58IXD1mDCSNTYHclhOcOWQdu-G2/view?usp=drivesdk"
+    },
+    {
+      "id": "1Vl13g8KTcjkqeqSTegxBSqCyeAzRGuhI",
+      "title": "L7) Valvular Heart Disease",
+      "pageCount": 30,
+      "sha256": "e3f6819986a1a5818564cca8f399bc8afcb3ab32a5503c254ac59bb629296dd4",
+      "url": "https://drive.google.com/file/d/1Vl13g8KTcjkqeqSTegxBSqCyeAzRGuhI/view?usp=drivesdk"
+    },
+    {
+      "id": "1QT9a9BIARoOzKLNQ9sxjMm5MJt4tjNHX",
+      "title": "L5) Rheumatic Heart Disease",
+      "pageCount": 19,
+      "sha256": "6d44f0857f92ea1d3ae1218a8a612bdbc880f7d12c5b82ca2aae7f928641cd0a",
+      "url": "https://drive.google.com/file/d/1QT9a9BIARoOzKLNQ9sxjMm5MJt4tjNHX/view?usp=drivesdk"
+    },
+    {
+      "id": "1gCvvaY4jLMl7e_0OAOEQv2P4BkJDSKJ8",
+      "title": "L1) Arrhythmias",
+      "pageCount": 27,
+      "sha256": "39bda5ee5234dc5baf8116ccb32b9dae034b15ae8d3a00ec7b03b6e135e5ff31",
+      "url": "https://drive.google.com/file/d/1gCvvaY4jLMl7e_0OAOEQv2P4BkJDSKJ8/view?usp=drivesdk"
+    },
+    {
+      "id": "1aDTJ2XUNs-OnJ_HupfzsbBkAIq-CQ9NJ",
+      "title": "L3) Community Acquired Pneumonia",
+      "pageCount": 19,
+      "sha256": "2ccb24aaa4c56d4c0b6b746e6c1a03e62005f3de2cb64621be5f3390b81aaf06",
+      "url": "https://drive.google.com/file/d/1aDTJ2XUNs-OnJ_HupfzsbBkAIq-CQ9NJ/view?usp=drivesdk"
+    },
+    {
+      "id": "1v7dkJaz7Th6DVP5TFbXB197oY_3OT9Ou",
+      "title": "L6) Pleural Effusion",
+      "pageCount": 17,
+      "sha256": "240a93dd2b8893fcae59671265cd70c25dc4eecb84dd6a5a5109375c18606603",
+      "url": "https://drive.google.com/file/d/1v7dkJaz7Th6DVP5TFbXB197oY_3OT9Ou/view?usp=drivesdk"
+    },
+    {
+      "id": "1DMww5BoHJaKpKLmsYP-QOaa12IleGTDO",
+      "title": "L5) Investigation of Lung Disease",
+      "pageCount": 23,
+      "sha256": "c9cef322cdbd1e30d9c922a3cdb422797ed1b4e45fb40120421af3aa8657f9e4",
+      "url": "https://drive.google.com/file/d/1DMww5BoHJaKpKLmsYP-QOaa12IleGTDO/view?usp=drivesdk"
+    },
+    {
+      "id": "16EcLYmDUK21x7fH64qZSBWvOBQ5lnas1",
+      "title": "L4) Pulmonary Embolism",
+      "pageCount": 27,
+      "sha256": "18f2eff7e9e920d58356669ef4476f00faca769f7b3bcf243c62c90d69355ac7",
+      "url": "https://drive.google.com/file/d/16EcLYmDUK21x7fH64qZSBWvOBQ5lnas1/view?usp=drivesdk"
+    },
+    {
+      "id": "1acFY1FaIq6gbrMAE_jn2BoSi5-VqzGek",
+      "title": "L2) COPD",
+      "pageCount": 30,
+      "sha256": "00125563c53dd2ece95d8101da35d367923902c4d6d9e926d4a83b9837ba7805",
+      "url": "https://drive.google.com/file/d/1acFY1FaIq6gbrMAE_jn2BoSi5-VqzGek/view?usp=drivesdk"
+    },
+    {
+      "id": "1PrgUki4ev_p-J7MjAjk1r0Bvl5ktaGm_",
+      "title": "L1) Bronchial asthma",
+      "pageCount": 19,
+      "sha256": "83b54ccedf790eec54f2dfdc6ea45f6ad17f6fc41fb9bee842a07d7641c8b3dd",
+      "url": "https://drive.google.com/file/d/1PrgUki4ev_p-J7MjAjk1r0Bvl5ktaGm_/view?usp=drivesdk"
+    },
+    {
+      "id": "17UACHWXWWZAUiTlKeltN5fYqSjrN_lkt",
+      "title": "L5) Electrolyte Imbalance II",
+      "pageCount": 15,
+      "sha256": "da623508bedfbe46d3170241775e3d3284b77e4fc1bdd367e5181a2461fa0505",
+      "url": "https://drive.google.com/file/d/17UACHWXWWZAUiTlKeltN5fYqSjrN_lkt/view?usp=drivesdk"
+    },
+    {
+      "id": "17tswsOTMldBxMAoOb7_SL9Ca5MMbbeV-",
+      "title": "L7) Glomerular Diseases",
+      "pageCount": 31,
+      "sha256": "329df2c9768aad94fa8fd30df8635dfcac9bebf8a2f711095f784f028766b384",
+      "url": "https://drive.google.com/file/d/17tswsOTMldBxMAoOb7_SL9Ca5MMbbeV-/view?usp=drivesdk"
+    },
+    {
+      "id": "1hQTZlWUidirIDofWH03W2EUaLpGYbH1v",
+      "title": "L6) Chronic Kidney Injury",
+      "pageCount": 23,
+      "sha256": "32d20f6b4264ef5944c6ea03b83668a3db7b3e05b1534043eb6e1fc31d180df5",
+      "url": "https://drive.google.com/file/d/1hQTZlWUidirIDofWH03W2EUaLpGYbH1v/view?usp=drivesdk"
+    },
+    {
+      "id": "1nhXmxlOTe8gHMAfdmaFlpVaf2pQaxc9r",
+      "title": "L4) Acute Kidney Injury",
+      "pageCount": 33,
+      "sha256": "ccbff1b5551d567b14c438102321a1eaa91feeb6d7c81e878c166a307e6caf5f",
+      "url": "https://drive.google.com/file/d/1nhXmxlOTe8gHMAfdmaFlpVaf2pQaxc9r/view?usp=drivesdk"
+    },
+    {
+      "id": "1E9_qaYaRC_HFjX4TpKtm8GNe0cjb4kyo",
+      "title": "L3) Electrolyte Imbalance I",
+      "pageCount": 20,
+      "sha256": "67428791acbd328689554c7f0a9cfd82c7576df2f27cbff134034ad426813f88",
+      "url": "https://drive.google.com/file/d/1E9_qaYaRC_HFjX4TpKtm8GNe0cjb4kyo/view?usp=drivesdk"
+    },
+    {
+      "id": "1O_LvJvUEmy4sP8vzo0L8pid0VKK5ZieV",
+      "title": "L2) Acid base disorders",
+      "pageCount": 22,
+      "sha256": "624d68dc8e31e193c70593253500a6c924ad036d97761b67d61991ce6da426dc",
+      "url": "https://drive.google.com/file/d/1O_LvJvUEmy4sP8vzo0L8pid0VKK5ZieV/view?usp=drivesdk"
+    },
+    {
+      "id": "1_dy4GfUD6SBHNCumY_HRMbt6cY2_ZXKW",
+      "title": "L1) Hypertension",
+      "pageCount": 19,
+      "sha256": "fdbe8f0abb50af05ac3fe94e416fa689032eab6c7001178accfdb85294d70d31",
+      "url": "https://drive.google.com/file/d/1_dy4GfUD6SBHNCumY_HRMbt6cY2_ZXKW/view?usp=drivesdk"
+    },
+    {
+      "id": "1pvxa6sWYbW_hGJoY25P97bvklm2_tdYj",
+      "title": "3) Liver cirrhosis & Complications .pdf",
+      "pageCount": 21,
+      "sha256": "75f29532470211f14c17e74d4c7ccc6f75dea553cc649ed05233ce53b576b06f",
+      "url": "https://drive.google.com/file/d/1pvxa6sWYbW_hGJoY25P97bvklm2_tdYj/view?usp=drivesdk"
+    },
+    {
+      "id": "1KtPBFP9GmjyqXXMjasa5lxn5aJxFRZkO",
+      "title": "7) Esophageal diseases",
+      "pageCount": 20,
+      "sha256": "98b01fcd3930af47831d7b196ace4a513e9069cac3559c635b7b5474dce6d93f",
+      "url": "https://drive.google.com/file/d/1KtPBFP9GmjyqXXMjasa5lxn5aJxFRZkO/view?usp=drivesdk"
+    },
+    {
+      "id": "16cjsaT65dFurwEmh8PdIU8S1X1xUCXJz",
+      "title": "6) Abnormal Liver Enzymes With Selected Common Liver Diseases",
+      "pageCount": 32,
+      "sha256": "9849487f343fd47194cf81bb6c9d63bf00f979e695a09e1a74917b82787c929d",
+      "url": "https://drive.google.com/file/d/16cjsaT65dFurwEmh8PdIU8S1X1xUCXJz/view?usp=drivesdk"
+    },
+    {
+      "id": "1Qriuhbb34zoe496wiWlOMtZSxmVe-Tze",
+      "title": "2) Abdominal Pain Including IBS.pdf",
+      "pageCount": 37,
+      "sha256": "7b0a33852bb8c3de4fbf630c4e2ae9048e285fecff42081ce15ef07fbcc9e2ad",
+      "url": "https://drive.google.com/file/d/1Qriuhbb34zoe496wiWlOMtZSxmVe-Tze/view?usp=drivesdk"
+    },
+    {
+      "id": "1GwgVEYGMF_4EodwkOaHLxTWcSvSIewON",
+      "title": "5) Non-Alcoholic Fatty Liver",
+      "pageCount": 14,
+      "sha256": "bb82820ab4306030d803edac2084a169fb0df5e91f9a72f281244389cabb4e93",
+      "url": "https://drive.google.com/file/d/1GwgVEYGMF_4EodwkOaHLxTWcSvSIewON/view?usp=drivesdk"
+    },
+    {
+      "id": "1yPmz7Wr7nMmvXx66n8qtaKKNTD-vy9uE",
+      "title": "1) Gastrointestinal Bleeding.pdf",
+      "pageCount": 28,
+      "sha256": "4675cd365321a3d7b20a729a79abd83a5667fb0c451cb04a5a202799fd852ff6",
+      "url": "https://drive.google.com/file/d/1yPmz7Wr7nMmvXx66n8qtaKKNTD-vy9uE/view?usp=drivesdk"
+    },
+    {
+      "id": "1cz5o2-_TM0RqXZBfVet5Ii0Gt9pkgjlr",
+      "title": "4) Chronic Diarrhea Including Celiac Disease.pdf",
+      "pageCount": 24,
+      "sha256": "e0a936b748a395f57ee4964caa5e48f0cfe634a4bad9c59ee7a738033b9c3792",
+      "url": "https://drive.google.com/file/d/1cz5o2-_TM0RqXZBfVet5Ii0Gt9pkgjlr/view?usp=drivesdk"
+    }
+  ],
+  "manualFigureTranscriptions": [
+    {
+      "questionId": "medicine-midterm-435-pulmonary-q022",
+      "pdfId": "1acFY1FaIq6gbrMAE_jn2BoSi5-VqzGek",
+      "page": 5,
+      "quoteParts": [
+        "Altered fat metabolism contributing to weight loss",
+        "↑ Prevalence of osteoporosis"
+      ],
+      "sourceSha256": "00125563c53dd2ece95d8101da35d367923902c4d6d9e926d4a83b9837ba7805",
+      "renderedPageSha256": "9e48a3159817832e9d08b1b106893581ecad43225c73d6f7f9a5b0083aed193b"
+    },
+    {
+      "questionId": "medicine-midterm-443-pulmonary-q029",
+      "pdfId": "1PrgUki4ev_p-J7MjAjk1r0Bvl5ktaGm_",
+      "page": 15,
+      "quoteParts": [
+        "ASSESS CLINICAL PROGRESS FREQUENTLY",
+        "MEASURE LUNG FUNCTION",
+        "in all patients one hour after initial treatment"
+      ],
+      "sourceSha256": "83b54ccedf790eec54f2dfdc6ea45f6ad17f6fc41fb9bee842a07d7641c8b3dd",
+      "renderedPageSha256": "f9893d7980b001a60962de731f36038c4bd55b06c0227a530ddb6c0b2d652041"
+    }
+  ],
+  "counts": {
+    "total": 687,
+    "verifiedPassages": 622,
+    "teachingPassages": 443,
+    "backgroundOnly": 179,
+    "noVerifiedPassage": 37,
+    "unassignedOrOlderQuestions": 28,
+    "figureTranscriptions": 2
+  }
+}

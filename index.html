@@ -828,6 +828,7 @@
     .lecture-evidence { background: rgba(71, 132, 162, .1); color: var(--muted); }
     .review-opinion { background: rgba(193, 138, 57, .12); color: var(--text); }
     .lecture-evidence a { color: var(--accent); font-weight: 700; text-underline-offset: 3px; }
+    .lecture-quote { display: block; margin: 8px 0; padding: 8px 10px; border-left: 3px solid var(--accent); color: var(--text); white-space: normal; }
     .reference-list { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 12px; }
     .reference-list a { color: var(--accent); font-size: 11px; font-weight: 700; text-underline-offset: 3px; }
 
@@ -1102,7 +1103,7 @@
         <span class="site-updates-label" id="site-updates-title">What's new</span>
         <time datetime="2026-10-05">October 5, 2026</time>
       </div>
-      <p><strong>Medicine MID:</strong> Lecture references, clearer answer explanations, and questions organized by lecture for easier revision.</p>
+      <p><strong>Medicine MID:</strong> Original lecture excerpts with page references, clearer explanations, and questions organized by lecture.</p>
     </aside>
 
     <section class="hero" aria-labelledby="page-title">
@@ -1159,6 +1160,7 @@
   <script src="medicine-mid-444-review.js?v=20261005-english-2"></script>
   <script src="medicine-mid-444-renal-gi-review.js?v=20261005-english-2"></script>
   <script src="medicine-mid-explanation-completion.js?v=20261005-publish-1"></script>
+  <script src="medicine-mid-lecture-evidence.js?v=20261005-evidence-1"></script>
   <script src="surgery-catalog.js?v=20260924-empty-nutrition"></script>
   <script src="surgery-data.js?v=20260923-surgery-legacy-order"></script>
   <script src="surgery-midterm-reviews.js?v=20260924-hide-nutrition"></script>
@@ -1937,14 +1939,22 @@
             <p class="answer-summary">Reference answer: ${escapeHtml(question.sourceAnswerNote || acceptedAnswers.join(" or ") || "Not provided")}${reviewStatuses.includes(question.verification) ? " · needs review" : question.verification === "source-only" ? " · reference answer only" : ""}</p>
             <p class="ai-note">${escapeHtml(aiText)}</p>
             ${!question.reviewOpinion ? `<p class="answer-explanation">${escapeHtml(question.explanation)}</p>` : ""}
-            ${question.lectureEvidence ? `<p class="lecture-evidence" lang="en" dir="ltr">${question.lectureEvidence.outside
-              ? escapeHtml(question.lectureEvidence.note)
-              : `Teamwork 444 lecture reference: <a href="${escapeHtml(question.lectureEvidence.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(question.lectureEvidence.title)} ↗</a> · PDF page ${question.lectureEvidence.page}.${question.lectureEvidence.topic ? `<br>Cited topic: <span>${escapeHtml(question.lectureEvidence.topic)}</span>` : ""}<br>${escapeHtml(question.lectureEvidence.note)}`}</p>` : ""}
-            ${question.reviewOpinion ? `<p class="review-opinion" lang="en" dir="ltr"><strong>Medical review:</strong> ${escapeHtml(question.reviewOpinion)}</p>` : ""}
+            ${renderLectureEvidence(question)}
+            ${question.reviewOpinion ? `<p class="review-opinion" lang="en" dir="ltr"><strong>${question.subjectId === "medicine" && question.assessment === "Midterm" ? "Clinical interpretation (separate from the lecture text):" : "Medical review:"}</strong> ${escapeHtml(question.reviewOpinion)}</p>` : ""}
             <p class="source-note">Reference: ${escapeHtml(question.sourceLabel || `${subject?.name || "Medical"} Question Bank`)}${sourceRefs ? ` · ${escapeHtml(sourceRefs)}` : ""}</p>
             ${(question.references || []).length ? `<div class="reference-list">${question.references.map(reference => `<a href="${escapeHtml(reference.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(reference.title)} ↗</a>`).join("")}</div>` : ""}
           </div>
         </article>`;
+    }
+
+    function renderLectureEvidence(question) {
+      const evidence = question.lectureEvidence;
+      if (!evidence) return "";
+      // Never turn a topic match or an inherited page number into evidence of an answer.
+      const verified = evidence.verified === true && evidence.quote && evidence.sourceSha256 && Number.isInteger(evidence.page) && evidence.page > 0;
+      return `<p class="lecture-evidence" lang="en" dir="ltr">${verified
+        ? `<strong>${evidence.relation === "background" ? "Related lecture text — background only:" : "Original lecture text:"}</strong> <a href="${escapeHtml(evidence.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(evidence.title)} ↗</a> · PDF page ${evidence.page} (counting the cover as page 1).${(evidence.quoteParts || [evidence.quote]).map(quote => `<span class="lecture-quote">“${escapeHtml(quote)}”</span>`).join("")}${escapeHtml(evidence.statement)}<br>${escapeHtml(evidence.note)}`
+        : escapeHtml(evidence.verified === false ? evidence.note : "No supporting lecture passage has been verified for this question. The clinical interpretation below is not a quotation from Teamwork 444.")}</p>`;
     }
 
     function answerQuestion(questionId, optionId) {
