@@ -3,6 +3,7 @@ const root=path.resolve(__dirname,'..'),html=fs.readFileSync(path.join(root,'ind
 vm.createContext(c);
 for(const m of html.matchAll(/<script src="([^"?]+)/g)){const p=path.join(root,m[1]);if(fs.existsSync(p))vm.runInContext(fs.readFileSync(p,'utf8'),c);}
 const plain=x=>JSON.parse(JSON.stringify(x)),questions=plain(c.window.GIFT445_INFORMATICS_QUESTIONS),hidden=new Set(fixture.hiddenIds);
+const arabicOcr=/[\u0600-\u06ff\u0750-\u077f\ufb50-\ufdff\ufe70-\ufeff]/u;
 assert.equal(questions.length,376);assert.equal(new Set(questions.map(q=>q.id)).size,376);assert.equal(hidden.size,72);
 assert.equal(questions.filter(q=>q.informaticsReviewStatus==='reviewed').length,376);
 assert.equal(questions.filter(q=>q.informaticsReviewStatus==='pending').length,0);
@@ -11,8 +12,8 @@ for(const q of questions){
  assert.ok(!hidden.has(q.id));assert.equal(q.assessment,'Midterm');assert.equal(q.cycle,null);assert.ok(q.lecture&&q.lectureOrder>=1&&q.lectureOrder<=5);
  for(const [key,value] of Object.entries(expected.get(q.id)))assert.deepEqual(q[key],value,`${q.id}: source ${key} changed`);
  assert.equal(q.informaticsReviewStatus,'reviewed');assert.ok(q.informaticsEvidence.length);assert.ok(q.explanation.length>90);assert.doesNotMatch(q.explanation,/not yet been verified|verification is pending/);assert.equal(q.giftReview.interpretation,q.explanation);assert.ok(q.informaticsLectures.includes(q.lecture));
- assert.equal(q.teamworkReview.sourceSet,'Teamwork MED444');assert.equal(q.teamworkReview.reviewedSlideBySlide,true);assert.equal(q.teamworkReview.lectureId,q.lecturePlacement.lectureId);assert.doesNotMatch(q.explanation,/\bpage[s]? \d+/i);
- for(const e of q.informaticsEvidence){assert.equal(e.sourceSet,'Teamwork MED444');assert.match(e.lectureTitle,/^Teamwork MED444/);assert.ok(e.pdfPage>=1&&e.pdfPage<=fixture.lecturePages[e.filename]);assert.equal(e.sourceSha256,fixture.lectureHashes[e.filename]);assert.ok(e.quote);assert.ok(fs.existsSync(path.join(root,e.image)));assert.ok(fs.existsSync(path.join(root,e.url.split('#')[0])));}
+ assert.equal(q.teamworkReview.sourceSet,'Teamwork MED444');assert.equal(q.teamworkReview.reviewedSlideBySlide,true);assert.equal(q.teamworkReview.lectureId,q.lecturePlacement.lectureId);assert.doesNotMatch(q.explanation,/\bpage[s]? \d+/i);assert.doesNotMatch(q.explanation,arabicOcr);assert.doesNotMatch(q.informaticsSlideAnswer?.basis||'',arabicOcr);
+ for(const e of q.informaticsEvidence){assert.equal(e.sourceSet,'Teamwork MED444');assert.match(e.lectureTitle,/^Teamwork MED444/);assert.doesNotMatch(e.quote,arabicOcr);assert.ok(e.pdfPage>=1&&e.pdfPage<=fixture.lecturePages[e.filename]);assert.equal(e.sourceSha256,fixture.lectureHashes[e.filename]);assert.ok(e.quote);assert.ok(fs.existsSync(path.join(root,e.image)));assert.ok(fs.existsSync(path.join(root,e.url.split('#')[0])));}
  for(const image of q.images)assert.ok(fs.existsSync(path.join(root,image)));
  const keys=Array.isArray(q.sourceAnswer)?q.sourceAnswer:q.sourceAnswer?[q.sourceAnswer]:[];
  if(q.giftReview.gradingAnswers.length)assert.deepEqual(q.giftReview.gradingAnswers,keys);else assert.ok(q.giftReview.ungradedReason);

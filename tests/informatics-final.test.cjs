@@ -2,6 +2,7 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('n
 const root=path.resolve(__dirname,'..'),html=fs.readFileSync(path.join(root,'index.html'),'utf8'),c={window:{}},plain=x=>JSON.parse(JSON.stringify(x));vm.createContext(c);
 for(const m of html.matchAll(/<script src="([^"?]+)/g)){const p=path.join(root,m[1]);if(fs.existsSync(p))vm.runInContext(fs.readFileSync(p,'utf8'),c);}
 const final=plain(c.window.GIFT445_INFORMATICS_FINAL_QUESTIONS),mid=plain(c.window.GIFT445_INFORMATICS_QUESTIONS),fixture=JSON.parse(fs.readFileSync(path.join(root,'tests/fixtures/informatics-final.json')));
+const arabicOcr=/[\u0600-\u06ff\u0750-\u077f\ufb50-\ufdff\ufe70-\ufeff]/u;
 assert.equal(final.length,431);assert.equal(new Set(final.map(q=>q.id)).size,431);
 assert.deepEqual(Object.fromEntries(Object.keys(fixture.batchCounts).map(b=>[b,final.filter(q=>q.sourceBatch===b).length])),fixture.batchCounts);
 assert.equal(final.filter(q=>q.informaticsReviewStatus==='reviewed').length,240);assert.equal(final.filter(q=>q.informaticsReviewStatus==='deferred').length,191);
@@ -13,8 +14,8 @@ for(const [i,q] of final.entries()){
  if(q.giftReview.gradingAnswers.length)assert.deepEqual(q.giftReview.gradingAnswers,keys);else assert.ok(q.giftReview.ungradedReason);
  if(q.informaticsReviewStatus==='reviewed'){
   assert.ok(q.informaticsPracticeScopes.includes('Midterm'));assert.ok(q.explanation.length>90);assert.equal(q.explanation,q.giftReview.interpretation);assert.ok(q.informaticsEvidence.length);
-  assert.equal(q.teamworkReview.sourceSet,'Teamwork MED444');assert.equal(q.teamworkReview.reviewedSlideBySlide,true);assert.doesNotMatch(q.explanation,/\bpage[s]? \d+/i);
-  for(const e of q.informaticsEvidence){assert.equal(e.sourceSet,'Teamwork MED444');assert.match(e.lectureTitle,/^Teamwork MED444/);assert.ok(e.quote&&e.sourceSha256);assert.ok(fs.existsSync(path.join(root,e.image)));assert.ok(fs.existsSync(path.join(root,e.url.split('#')[0])));}
+  assert.equal(q.teamworkReview.sourceSet,'Teamwork MED444');assert.equal(q.teamworkReview.reviewedSlideBySlide,true);assert.doesNotMatch(q.explanation,/\bpage[s]? \d+/i);assert.doesNotMatch(q.explanation,arabicOcr);assert.doesNotMatch(q.informaticsSlideAnswer?.basis||'',arabicOcr);
+  for(const e of q.informaticsEvidence){assert.equal(e.sourceSet,'Teamwork MED444');assert.match(e.lectureTitle,/^Teamwork MED444/);assert.doesNotMatch(e.quote,arabicOcr);assert.ok(e.quote&&e.sourceSha256);assert.ok(fs.existsSync(path.join(root,e.image)));assert.ok(fs.existsSync(path.join(root,e.url.split('#')[0])));}
  }else{assert.equal(q.explanation,'');assert.equal(q.giftReview.interpretation,'');assert.equal(q.informaticsEvidence.length,0);assert.ok(!q.informaticsSlideAnswer);assert.ok(!q.teamworkReview);}
  for(const image of q.images)assert.ok(fs.existsSync(path.join(root,image)));
 }
