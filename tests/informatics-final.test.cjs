@@ -13,8 +13,9 @@ for(const [i,q] of final.entries()){
  if(q.giftReview.gradingAnswers.length)assert.deepEqual(q.giftReview.gradingAnswers,keys);else assert.ok(q.giftReview.ungradedReason);
  if(q.informaticsReviewStatus==='reviewed'){
   assert.ok(q.informaticsPracticeScopes.includes('Midterm'));assert.ok(q.explanation.length>90);assert.equal(q.explanation,q.giftReview.interpretation);assert.ok(q.informaticsEvidence.length);
-  for(const e of q.informaticsEvidence){assert.ok(e.quote&&e.sourceSha256);assert.ok(fs.existsSync(path.join(root,e.image)));assert.ok(fs.existsSync(path.join(root,e.url.split('#')[0])));}
- }else{assert.equal(q.explanation,'');assert.equal(q.giftReview.interpretation,'');assert.equal(q.informaticsEvidence.length,0);assert.ok(!q.informaticsSlideAnswer);}
+  assert.equal(q.teamworkReview.sourceSet,'Teamwork MED444');assert.equal(q.teamworkReview.reviewedSlideBySlide,true);assert.doesNotMatch(q.explanation,/\bpage[s]? \d+/i);
+  for(const e of q.informaticsEvidence){assert.equal(e.sourceSet,'Teamwork MED444');assert.match(e.lectureTitle,/^Teamwork MED444/);assert.ok(e.quote&&e.sourceSha256);assert.ok(fs.existsSync(path.join(root,e.image)));assert.ok(fs.existsSync(path.join(root,e.url.split('#')[0])));}
+ }else{assert.equal(q.explanation,'');assert.equal(q.giftReview.interpretation,'');assert.equal(q.informaticsEvidence.length,0);assert.ok(!q.informaticsSlideAnswer);assert.ok(!q.teamworkReview);}
  for(const image of q.images)assert.ok(fs.existsSync(path.join(root,image)));
 }
 function load(name){const start=html.indexOf(`    function ${name}(`),end=html.indexOf('\n    }\n',start)+6;assert.ok(start>=0);vm.runInContext(html.slice(start,end),c);}

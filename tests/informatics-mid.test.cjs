@@ -11,12 +11,14 @@ for(const q of questions){
  assert.ok(!hidden.has(q.id));assert.equal(q.assessment,'Midterm');assert.equal(q.cycle,null);assert.ok(q.lecture&&q.lectureOrder>=1&&q.lectureOrder<=5);
  for(const [key,value] of Object.entries(expected.get(q.id)))assert.deepEqual(q[key],value,`${q.id}: source ${key} changed`);
  assert.equal(q.informaticsReviewStatus,'reviewed');assert.ok(q.informaticsEvidence.length);assert.ok(q.explanation.length>90);assert.doesNotMatch(q.explanation,/not yet been verified|verification is pending/);assert.equal(q.giftReview.interpretation,q.explanation);assert.ok(q.informaticsLectures.includes(q.lecture));
- for(const e of q.informaticsEvidence){assert.ok(e.pdfPage>=1&&e.pdfPage<=fixture.lecturePages[e.filename]);assert.equal(e.sourceSha256,fixture.lectureHashes[e.filename]);assert.ok(e.quote);assert.ok(fs.existsSync(path.join(root,e.image)));assert.ok(fs.existsSync(path.join(root,e.url.split('#')[0])));}
+ assert.equal(q.teamworkReview.sourceSet,'Teamwork MED444');assert.equal(q.teamworkReview.reviewedSlideBySlide,true);assert.equal(q.teamworkReview.lectureId,q.lecturePlacement.lectureId);assert.doesNotMatch(q.explanation,/\bpage[s]? \d+/i);
+ for(const e of q.informaticsEvidence){assert.equal(e.sourceSet,'Teamwork MED444');assert.match(e.lectureTitle,/^Teamwork MED444/);assert.ok(e.pdfPage>=1&&e.pdfPage<=fixture.lecturePages[e.filename]);assert.equal(e.sourceSha256,fixture.lectureHashes[e.filename]);assert.ok(e.quote);assert.ok(fs.existsSync(path.join(root,e.image)));assert.ok(fs.existsSync(path.join(root,e.url.split('#')[0])));}
  for(const image of q.images)assert.ok(fs.existsSync(path.join(root,image)));
  const keys=Array.isArray(q.sourceAnswer)?q.sourceAnswer:q.sourceAnswer?[q.sourceAnswer]:[];
  if(q.giftReview.gradingAnswers.length)assert.deepEqual(q.giftReview.gradingAnswers,keys);else assert.ok(q.giftReview.ungradedReason);
 }
 for(const [file,hash] of Object.entries(fixture.lectureHashes))assert.equal(crypto.createHash('sha256').update(fs.readFileSync(path.join(root,'lecture-media/informatics',file))).digest('hex'),hash);
+assert.equal(fixture.teamworkSourceSet,'Teamwork MED444');assert.equal(fixture.teamworkReviewedCount,616);
 const catalog=plain(c.window.GIFT445_INFORMATICS_CATALOG);assert.deepEqual(catalog.map(g=>g.assessment),['Midterm','Final','Final']);assert.equal(catalog[0].lectures.length,5);
 for(const q of questions)assert.equal(catalog[0].lectures[q.lectureOrder-1],q.lecture);
 function load(name){const start=html.indexOf(`    function ${name}(`),end=html.indexOf('\n    }\n',start)+6;assert.ok(start>=0);vm.runInContext(html.slice(start,end),c);}
@@ -36,7 +38,7 @@ for(const q of questions)for(const option of q.options){
 }
 for(const q of questions){const a=q.informaticsSlideAnswer;assert.ok(a);assert.ok(['supported','preference','unresolved'].includes(a.confidence));if(a.confidence==='unresolved')assert.equal(a.answers.length,0);for(const answer of a.answers)assert.ok(q.options.some(o=>o.id===answer&&o.text));const output=r.renderQuestion(q,0);assert.ok(output.includes(r.escapeHtml(a.basis)));}
 for(const [batch,number,answer,confidence] of [['443',1,'A','supported'],['443',25,'A','supported'],['443',11,'B','preference'],['434',16,'A','preference'],['435',11,'B','preference']]){const q=questions.find(q=>q.sourceBatch===batch&&q.sourceLocations[0].questionNumber===number);assert.deepEqual(q.informaticsSlideAnswer.answers,[answer]);assert.equal(q.informaticsSlideAnswer.confidence,confidence);assert.ok(!q.giftReview.gradingAnswers.includes(answer));}
-assert.match(html,/Informatics added/);assert.match(html,/2026-10-08/);
+assert.match(html,/Informatics Midterm updated/);assert.match(html,/Teamwork 444 slide evidence/);assert.match(html,/2026-10-09/);
 load('openLecture');let opened=null;c.openQuestionSet=(title,items)=>{opened=plain(items)};c.isQuestionAvailableInLecture=()=>true;
 c.openLecture('informatics',null,'AI in Healthcare');assert.equal(opened.length,17);assert.equal(new Set(opened.map(q=>q.id)).size,17);assert.equal(opened.filter(q=>q.lecture==='AI in Healthcare').length,17);
 const both=questions.filter(q=>q.informaticsLectures.some(l=>['AI in Healthcare','Clinical Decision Support'].includes(l)));assert.equal(both.length,79);assert.equal(new Set(both.map(q=>q.id)).size,79);

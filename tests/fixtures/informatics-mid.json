@@ -77,18 +77,18 @@
     "informatics-mid-430-p3088"
   ],
   "lecturePages": {
-    "01-introduction.pdf": 52,
-    "02-clinical-data.pdf": 21,
-    "03-ehr.pdf": 26,
-    "04-cds.pdf": 34,
-    "05-overgaard.pdf": 76
+    "01-introduction.pdf": 13,
+    "02-clinical-data.pdf": 14,
+    "03-ehr.pdf": 12,
+    "04-cds.pdf": 16,
+    "05-overgaard.pdf": 26
   },
   "lectureHashes": {
-    "01-introduction.pdf": "a0207736b56be1e37dc4e82190821ddd2da24cfc21002c6bb9ed2a6d319f7b34",
-    "02-clinical-data.pdf": "d308373c78732a07dce4aada4ade4a8a3aa7f217592d68152cb8e0fa01d6067a",
-    "03-ehr.pdf": "d1ed79a72680f3a399e8b136c029458cb87c6adac606c88c2d07a8850ec2ae92",
-    "04-cds.pdf": "2f053600dbee7a13e6e1bdc53c7c8401bf34fa8b7f829cf77213edd1eaa1c02f",
-    "05-overgaard.pdf": "8cca7e263d023592738372cbb44ebab854c5a1fcf522abb61e95549379db5aae"
+    "01-introduction.pdf": "ce7b9b5b5ffbd5ad1feb6842fd96a43c7a8cf6697024900cc11636578354c282",
+    "02-clinical-data.pdf": "929278290c1a2a8e42f4ea2d8407dc13fb8d54d942a5989c6c8d0adffe493040",
+    "03-ehr.pdf": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
+    "04-cds.pdf": "6788f6cadc9e9a0e002b463311b8f20f0f08fe7e349cafbf282f5ba47eff510e",
+    "05-overgaard.pdf": "b79239320e3c094d204f81d9b5be20c5018a5343afcd431dd283cb8d254b8469"
   },
   "questions": [
     {
@@ -15514,5 +15514,7 @@
       "lecture": "Electronic Health Records",
       "lectureOrder": 3
     }
-  ]
+  ],
+  "teamworkSourceSet": "Teamwork MED444",
+  "teamworkReviewedCount": 616
 }
