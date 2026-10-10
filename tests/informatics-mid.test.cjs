@@ -43,8 +43,10 @@ assert.match(html,/Informatics added/);assert.match(html,/2026-10-08/);
 load('openLecture');let opened=null;c.openQuestionSet=(title,items)=>{opened=plain(items)};c.isQuestionAvailableInLecture=()=>true;
 c.openLecture('informatics',null,'AI in Healthcare');assert.equal(opened.length,17);assert.equal(new Set(opened.map(q=>q.id)).size,17);assert.equal(opened.filter(q=>q.lecture==='AI in Healthcare').length,17);
 const both=questions.filter(q=>q.informaticsLectures.some(l=>['AI in Healthcare','Clinical Decision Support'].includes(l)));assert.equal(both.length,79);assert.equal(new Set(both.map(q=>q.id)).size,79);
-assert.equal(questions.filter(q=>q.informaticsEvidenceStatus==='direct').length,249);assert.equal(questions.filter(q=>q.informaticsEvidenceStatus==='related').length,127);
+assert.equal(questions.filter(q=>q.informaticsEvidenceStatus==='direct').length,290);assert.equal(questions.filter(q=>q.informaticsEvidenceStatus==='related').length,86);
 const ehr=questions.filter(q=>q.teamworkReview.lectureId==='E');assert.equal(ehr.length,98);assert.equal(ehr.filter(q=>q.informaticsSlideAnswer.confidence==='supported').length,57);assert.equal(ehr.filter(q=>q.informaticsSlideAnswer.confidence==='preference').length,10);assert.equal(ehr.filter(q=>q.informaticsSlideAnswer.confidence==='unresolved').length,31);
+const midScope=[...questions,...plain(c.window.GIFT445_INFORMATICS_FINAL_QUESTIONS).filter(q=>q.informaticsPracticeScopes?.includes('Midterm'))];assert.equal(midScope.length,616);assert.deepEqual(Object.fromEntries(['supported','preference','unresolved'].map(status=>[status,midScope.filter(q=>q.informaticsSlideAnswer.confidence===status).length])),{supported:465,preference:35,unresolved:116});
+assert.match(html,/id: "informatics"[^\n]+color: "#b77900"/);assert.match(html,/subject-card\[data-subject="informatics"\][^{]+\{[^}]+#ffd54a/s);
 for(const q of questions)for(const e of q.informaticsEvidence)assert.ok(['direct','related'].includes(e.supportRole));
 // Render the actual subject route to catch template-scope errors in cards and counts.
 for(const name of ['openSubject','questionsForAssessment','batchCountLabel','questionCountLabel','isQuestionAvailableInLecture','batchDisplayName'])load(name);

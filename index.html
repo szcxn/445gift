@@ -516,6 +516,10 @@
 
     .subject-card:hover .card-arrow { transform: translateX(3px); }
 
+    :root[data-theme="dark"] .subject-card[data-subject="informatics"] {
+      --subject-color: #ffd54a !important;
+    }
+
     .workspace {
       display: none;
       margin-top: 14px;
@@ -1177,15 +1181,15 @@
   <script src="community-catalog.js?v=20260929-community-final-structure"></script>
   <script src="community-data.js?v=20260929-community-mid"></script>
   <script src="informatics-catalog.js?v=20261008-final-2"></script>
-  <script src="informatics-data.js?v=20261008-mid-5"></script>
-  <script src="informatics-final-data.js?v=20261008-final-2"></script>
+  <script src="informatics-data.js?v=20261010-mid-6"></script>
+  <script src="informatics-final-data.js?v=20261010-final-3"></script>
   <script src="informatics-final-resources.js?v=20261008-final-2"></script>
   <script>
     const SUBJECTS = [
       { id: "medicine", name: "Medicine", code: "MED", index: "01", description: "Review the full bank or study by batch, cycle, and lecture.", color: "#087eb6" },
       { id: "surgery", name: "Surgery", code: "SUR", index: "02", description: "Review questions by batch, cycle, or lecture.", color: "#d45b4e" },
       { id: "community", name: "Community Medicine", code: "COM", index: "03", description: "Review midterm questions and browse the final lecture structure.", color: "#168c82" },
-      { id: "informatics", name: "Informatics", code: "INF", index: "04", description: "Study by lecture or batch, with slide-based Midterm reviews and organized Final questions.", color: "#7560bc" }
+      { id: "informatics", name: "Informatics", code: "INF", index: "04", description: "Study by lecture or batch, with slide-based Midterm reviews and organized Final questions.", color: "#b77900" }
     ];
 
     const CYCLE_ORDER = [

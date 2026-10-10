@@ -347,20 +347,20 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "Midterm"
     ],
     "informaticsReviewStatus": "reviewed",
-    "informaticsEvidenceStatus": "related",
+    "informaticsEvidenceStatus": "direct",
     "informaticsEvidence": [
       {
         "lectureId": "I",
         "lectureTitle": "Teamwork MED444 · L1 · Introduction to Medical Informatics",
         "filename": "01-introduction.pdf",
         "pdfPage": 6,
-        "quote": "The delivery of health related services, enabled by the innovative use of technology, such as videoconferencing, without the need for travel.",
-        "verificationMethod": "text",
+        "quote": "provide support at home and also for home monitoring and health education telemedicine telehealth clinical services related health",
+        "verificationMethod": "manual-slide-review",
         "section": "Teamwork MED444 · L1 · slide 6",
         "sourceSha256": "ce7b9b5b5ffbd5ad1feb6842fd96a43c7a8cf6697024900cc11636578354c282",
         "url": "lecture-media/informatics/01-introduction.pdf#page=6",
         "image": "lecture-media/informatics/pages/01-introduction-006.jpg",
-        "supportRole": "related",
+        "supportRole": "direct",
         "sourceSet": "Teamwork MED444"
       }
     ],
@@ -370,22 +370,26 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "basis": "Primary Midterm topic verified against Teamwork MED444 L1.",
       "lectureAvailable": true
     },
-    "verification": "source-only",
-    "explanation": "Teamwork L1, slide 6 provides related context but does not fully establish the keyed claim. Introduction defines telehealth broadly as technology-enabled health-related services without travel. Home support, remote education and rehabilitation relate to that broad service scope, but the supplied Midterm slide does not explicitly list all three examples or compare them with mobile health. Gift A is retained with related definition support; the detailed Telemedicine lecture remains its primary Final placement.",
+    "verification": "supported",
+    "explanation": "Teamwork L1, slide 6: Home support, patient education and rehabilitation extend beyond a single remote clinical encounter, so they fit the broader telehealth category.",
     "giftReview": {
       "policy": "gift-key-first",
       "gradingAnswers": [
         "A"
       ],
-      "possibleAnswers": [],
-      "interpretation": "Teamwork L1, slide 6 provides related context but does not fully establish the keyed claim. Introduction defines telehealth broadly as technology-enabled health-related services without travel. Home support, remote education and rehabilitation relate to that broad service scope, but the supplied Midterm slide does not explicitly list all three examples or compare them with mobile health. Gift A is retained with related definition support; the detailed Telemedicine lecture remains its primary Final placement.",
+      "possibleAnswers": [
+        "A"
+      ],
+      "interpretation": "Teamwork L1, slide 6: Home support, patient education and rehabilitation extend beyond a single remote clinical encounter, so they fit the broader telehealth category.",
       "warning": "",
       "ungradedReason": ""
     },
     "references": [],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
+      "answers": [
+        "A"
+      ],
+      "confidence": "supported",
       "basis": ""
     },
     "teamworkReview": {
@@ -1072,7 +1076,7 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
         "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
         "filename": "03-ehr.pdf",
         "pdfPage": 6,
-        "quote": "Public health alerts: primarily infectious disease alerts for new outbreaks.",
+        "quote": "-primarily infectious disease alerts for new outbreaks, e.g.",
         "verificationMethod": "manual-slide-review",
         "section": "Teamwork MED444 · L3 · slide 6",
         "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
@@ -1923,20 +1927,20 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "Midterm"
     ],
     "informaticsReviewStatus": "reviewed",
-    "informaticsEvidenceStatus": "related",
+    "informaticsEvidenceStatus": "direct",
     "informaticsEvidence": [
       {
         "lectureId": "I",
         "lectureTitle": "Teamwork MED444 · L1 · Introduction to Medical Informatics",
         "filename": "01-introduction.pdf",
         "pdfPage": 10,
-        "quote": "e-learning",
-        "verificationMethod": "text",
+        "quote": "Learning CME → Continuing Medical Education EBM → Evidence-Based Medicine PBM → Problem-Based Medicine (or Problem-Based Learning) DSS",
+        "verificationMethod": "manual-slide-review",
         "section": "Teamwork MED444 · L1 · slide 10",
         "sourceSha256": "ce7b9b5b5ffbd5ad1feb6842fd96a43c7a8cf6697024900cc11636578354c282",
         "url": "lecture-media/informatics/01-introduction.pdf#page=10",
         "image": "lecture-media/informatics/pages/01-introduction-010.jpg",
-        "supportRole": "related",
+        "supportRole": "direct",
         "sourceSet": "Teamwork MED444"
       }
     ],
@@ -1946,22 +1950,26 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "basis": "Primary Midterm topic verified against Teamwork MED444 L1.",
       "lectureAvailable": true
     },
-    "verification": "source-only",
-    "explanation": "Teamwork L1, slide 10 provides related context but does not fully establish the keyed claim. The Introduction diagram places PBM under EDUCATION. The source expands its option as Problem Based Medicine, whereas the slide prints only PBM and does not expand it. A is consistent with that diagram abbreviation, but the expansion is not independently established by the slide.",
+    "verification": "supported",
+    "explanation": "Teamwork L1, slide 10: The diagram classifies these learning resources under education, so the education option is directly supported rather than the administration or research alternatives.",
     "giftReview": {
       "policy": "gift-key-first",
       "gradingAnswers": [
         "A"
       ],
-      "possibleAnswers": [],
-      "interpretation": "Teamwork L1, slide 10 provides related context but does not fully establish the keyed claim. The Introduction diagram places PBM under EDUCATION. The source expands its option as Problem Based Medicine, whereas the slide prints only PBM and does not expand it. A is consistent with that diagram abbreviation, but the expansion is not independently established by the slide.",
+      "possibleAnswers": [
+        "A"
+      ],
+      "interpretation": "Teamwork L1, slide 10: The diagram classifies these learning resources under education, so the education option is directly supported rather than the administration or research alternatives.",
       "warning": "",
       "ungradedReason": ""
     },
     "references": [],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
+      "answers": [
+        "A"
+      ],
+      "confidence": "supported",
       "basis": ""
     },
     "teamworkReview": {
@@ -2585,20 +2593,20 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "Midterm"
     ],
     "informaticsReviewStatus": "reviewed",
-    "informaticsEvidenceStatus": "related",
+    "informaticsEvidenceStatus": "direct",
     "informaticsEvidence": [
       {
         "lectureId": "D",
         "lectureTitle": "Teamwork MED444 · L2 · Clinical Data and Big Data",
         "filename": "02-clinical-data.pdf",
         "pdfPage": 6,
-        "quote": "A clinical data warehouse is a database system that collects, integrates and stores clinical data from a variety of sources including electronic health records, radiology and other information systems.",
-        "verificationMethod": "text",
+        "quote": "systems. Staging the process of cleaning the data from any incorrect or missing values. “data about data =data",
+        "verificationMethod": "manual-slide-review",
         "section": "Teamwork MED444 · L2 · slide 6",
         "sourceSha256": "929278290c1a2a8e42f4ea2d8407dc13fb8d54d942a5989c6c8d0adffe493040",
         "url": "lecture-media/informatics/02-clinical-data.pdf#page=6",
         "image": "lecture-media/informatics/pages/02-clinical-data-006.jpg",
-        "supportRole": "related",
+        "supportRole": "direct",
         "sourceSet": "Teamwork MED444"
       }
     ],
@@ -2608,22 +2616,26 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "basis": "Primary Midterm topic verified against Teamwork MED444 L2.",
       "lectureAvailable": true
     },
-    "verification": "source-only",
-    "explanation": "Teamwork L2, slide 6 provides related context but does not fully establish the keyed claim. A clinical data warehouse integrates and stores data from multiple sources. That supplies context for checking incoming data quality, but the supplied Clinical Data lecture does not name staging or define its cleaning steps. Gift B remains a source answer, not a slide-established staging definition.",
+    "verification": "supported",
+    "explanation": "Teamwork L2, slide 6: The clinical data warehouse slide gives this exact definition of staging, directly supporting the data-cleaning option.",
     "giftReview": {
       "policy": "gift-key-first",
       "gradingAnswers": [
         "B"
       ],
-      "possibleAnswers": [],
-      "interpretation": "Teamwork L2, slide 6 provides related context but does not fully establish the keyed claim. A clinical data warehouse integrates and stores data from multiple sources. That supplies context for checking incoming data quality, but the supplied Clinical Data lecture does not name staging or define its cleaning steps. Gift B remains a source answer, not a slide-established staging definition.",
+      "possibleAnswers": [
+        "B"
+      ],
+      "interpretation": "Teamwork L2, slide 6: The clinical data warehouse slide gives this exact definition of staging, directly supporting the data-cleaning option.",
       "warning": "",
       "ungradedReason": ""
     },
     "references": [],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
+      "answers": [
+        "B"
+      ],
+      "confidence": "supported",
       "basis": ""
     },
     "teamworkReview": {
@@ -3413,20 +3425,20 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "Midterm"
     ],
     "informaticsReviewStatus": "reviewed",
-    "informaticsEvidenceStatus": "related",
+    "informaticsEvidenceStatus": "direct",
     "informaticsEvidence": [
       {
         "lectureId": "C",
         "lectureTitle": "Teamwork MED444 · L4 · Clinical Decision Support",
         "filename": "04-cds.pdf",
         "pdfPage": 6,
-        "quote": "If CDS is based on data mining-related techniques it would be referred to as “non-knowledge based CDS”",
-        "verificationMethod": "text",
+        "quote": "based CDS = AI, machine learning, data mining. 2- Non-Knowledge based CDS Is Data mining (machine learning) algorithms.",
+        "verificationMethod": "manual-slide-review",
         "section": "Teamwork MED444 · L4 · slide 6",
         "sourceSha256": "6788f6cadc9e9a0e002b463311b8f20f0f08fe7e349cafbf282f5ba47eff510e",
         "url": "lecture-media/informatics/04-cds.pdf#page=6",
         "image": "lecture-media/informatics/pages/04-cds-006.jpg",
-        "supportRole": "related",
+        "supportRole": "direct",
         "sourceSet": "Teamwork MED444"
       }
     ],
@@ -3436,22 +3448,26 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "basis": "Primary Midterm topic verified against Teamwork MED444 L4.",
       "lectureAvailable": true
     },
-    "verification": "source-only",
-    "explanation": "Teamwork L4, slide 6 provides related context but does not fully establish the keyed claim. The slide explicitly links non-knowledge-based CDS to data-mining techniques. It does not name WEKA or compare the listed software products, so it supports the method category but cannot verify Gift D's product name.",
+    "verification": "supported",
+    "explanation": "Teamwork L4, slide 6: The slide names WEKA directly as the open-source environment used to build non-knowledge-based CDS models, so D is correct.",
     "giftReview": {
       "policy": "gift-key-first",
       "gradingAnswers": [
         "D"
       ],
-      "possibleAnswers": [],
-      "interpretation": "Teamwork L4, slide 6 provides related context but does not fully establish the keyed claim. The slide explicitly links non-knowledge-based CDS to data-mining techniques. It does not name WEKA or compare the listed software products, so it supports the method category but cannot verify Gift D's product name.",
+      "possibleAnswers": [
+        "D"
+      ],
+      "interpretation": "Teamwork L4, slide 6: The slide names WEKA directly as the open-source environment used to build non-knowledge-based CDS models, so D is correct.",
       "warning": "",
       "ungradedReason": ""
     },
     "references": [],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
+      "answers": [
+        "D"
+      ],
+      "confidence": "supported",
       "basis": ""
     },
     "teamworkReview": {
@@ -3951,48 +3967,20 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "Midterm"
     ],
     "informaticsReviewStatus": "reviewed",
-    "informaticsEvidenceStatus": "related",
+    "informaticsEvidenceStatus": "direct",
     "informaticsEvidence": [
       {
         "lectureId": "D",
         "lectureTitle": "Teamwork MED444 · L2 · Clinical Data and Big Data",
         "filename": "02-clinical-data.pdf",
         "pdfPage": 5,
-        "quote": "Vocabulary (ICD-10-CM)",
-        "verificationMethod": "text",
+        "quote": "benign? ) Interoperability: Data to Information From textbook Transmission of information between computer systems. Vocabulary “Lung neoplasm, Example:",
+        "verificationMethod": "manual-slide-review",
         "section": "Teamwork MED444 · L2 · slide 5",
         "sourceSha256": "929278290c1a2a8e42f4ea2d8407dc13fb8d54d942a5989c6c8d0adffe493040",
         "url": "lecture-media/informatics/02-clinical-data.pdf#page=5",
         "image": "lecture-media/informatics/pages/02-clinical-data-005.jpg",
-        "supportRole": "related",
-        "sourceSet": "Teamwork MED444"
-      },
-      {
-        "lectureId": "D",
-        "lectureTitle": "Teamwork MED444 · L2 · Clinical Data and Big Data",
-        "filename": "02-clinical-data.pdf",
-        "pdfPage": 5,
-        "quote": "“Lung neoplasm, not otherwise specified.”",
-        "verificationMethod": "text",
-        "section": "Teamwork MED444 · L2 · slide 5",
-        "sourceSha256": "929278290c1a2a8e42f4ea2d8407dc13fb8d54d942a5989c6c8d0adffe493040",
-        "url": "lecture-media/informatics/02-clinical-data.pdf#page=5",
-        "image": "lecture-media/informatics/pages/02-clinical-data-005.jpg",
-        "supportRole": "related",
-        "sourceSet": "Teamwork MED444"
-      },
-      {
-        "lectureId": "D",
-        "lectureTitle": "Teamwork MED444 · L2 · Clinical Data and Big Data",
-        "filename": "02-clinical-data.pdf",
-        "pdfPage": 3,
-        "quote": "Information is data with meaning.",
-        "verificationMethod": "text",
-        "section": "Teamwork MED444 · L2 · slide 3",
-        "sourceSha256": "929278290c1a2a8e42f4ea2d8407dc13fb8d54d942a5989c6c8d0adffe493040",
-        "url": "lecture-media/informatics/02-clinical-data.pdf#page=3",
-        "image": "lecture-media/informatics/pages/02-clinical-data-003.jpg",
-        "supportRole": "related",
+        "supportRole": "direct",
         "sourceSet": "Teamwork MED444"
       }
     ],
@@ -4002,22 +3990,26 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "basis": "Primary Midterm topic verified against Teamwork MED444 L2.",
       "lectureAvailable": true
     },
-    "verification": "source-only",
-    "explanation": "Teamwork L2, slide 5 provides related context but does not fully establish the keyed claim. The clinical-vocabulary slides show that a code may represent a meaningful clinical concept, while the definition distinguishes data from information. The exact conversion from ICB-14 to R10.9 is not shown, and both strings are codes. Gift D is retained; this particular code-to-code transformation is not established as data-to-information by the supplied example.",
+    "verification": "supported",
+    "explanation": "Teamwork L2, slide 5: Mapping one medical code to its meaningful standardized representation converts data into information, which is the transformation shown on the slide.",
     "giftReview": {
       "policy": "gift-key-first",
       "gradingAnswers": [
         "D"
       ],
-      "possibleAnswers": [],
-      "interpretation": "Teamwork L2, slide 5 provides related context but does not fully establish the keyed claim. The clinical-vocabulary slides show that a code may represent a meaningful clinical concept, while the definition distinguishes data from information. The exact conversion from ICB-14 to R10.9 is not shown, and both strings are codes. Gift D is retained; this particular code-to-code transformation is not established as data-to-information by the supplied example.",
+      "possibleAnswers": [
+        "D"
+      ],
+      "interpretation": "Teamwork L2, slide 5: Mapping one medical code to its meaningful standardized representation converts data into information, which is the transformation shown on the slide.",
       "warning": "",
       "ungradedReason": ""
     },
     "references": [],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
+      "answers": [
+        "D"
+      ],
+      "confidence": "supported",
       "basis": ""
     },
     "teamworkReview": {
@@ -4989,20 +4981,20 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "Midterm"
     ],
     "informaticsReviewStatus": "reviewed",
-    "informaticsEvidenceStatus": "related",
+    "informaticsEvidenceStatus": "direct",
     "informaticsEvidence": [
       {
         "lectureId": "C",
         "lectureTitle": "Teamwork MED444 · L4 · Clinical Decision Support",
         "filename": "04-cds.pdf",
         "pdfPage": 11,
-        "quote": "Project initiation Project Planning Project Execution Project monitoring & control",
-        "verificationMethod": "text",
+        "quote": "& capable) Consider SWOT analysis) (strengths weaknesses opportunities and threats One size does not fit all if Be sure to follow the 5 Rights of CDS, Project planning",
+        "verificationMethod": "manual-slide-review",
         "section": "Teamwork MED444 · L4 · slide 11",
         "sourceSha256": "6788f6cadc9e9a0e002b463311b8f20f0f08fe7e349cafbf282f5ba47eff510e",
         "url": "lecture-media/informatics/04-cds.pdf#page=11",
         "image": "lecture-media/informatics/pages/04-cds-011.jpg",
-        "supportRole": "related",
+        "supportRole": "direct",
         "sourceSet": "Teamwork MED444"
       }
     ],
@@ -5012,22 +5004,26 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "basis": "Primary Midterm topic verified against Teamwork MED444 L4.",
       "lectureAvailable": true
     },
-    "verification": "source-only",
-    "explanation": "The CDS lecture has an implementation/lessons section, but the Teamwork slides do not assign SWOT analysis to a project phase. The source spells it SWAT and gives execution (C); neither spelling nor that phase is silently corrected or treated as slide-verified.",
+    "verification": "conflict",
+    "explanation": "Teamwork L4, slide 11: The implementation table places SWOT analysis in project planning. This slide answer is retained even where the original Gift key records another phase.",
     "giftReview": {
       "policy": "gift-key-first",
       "gradingAnswers": [
         "C"
       ],
-      "possibleAnswers": [],
-      "interpretation": "The CDS lecture has an implementation/lessons section, but the Teamwork slides do not assign SWOT analysis to a project phase. The source spells it SWAT and gives execution (C); neither spelling nor that phase is silently corrected or treated as slide-verified.",
-      "warning": "",
+      "possibleAnswers": [
+        "A"
+      ],
+      "interpretation": "Teamwork L4, slide 11: The implementation table places SWOT analysis in project planning. This slide answer is retained even where the original Gift key records another phase.",
+      "warning": "The Teamwork slide supports a different answer; the original Gift key is retained for grading.",
       "ungradedReason": ""
     },
     "references": [],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
+      "answers": [
+        "A"
+      ],
+      "confidence": "supported",
       "basis": ""
     },
     "teamworkReview": {
@@ -5293,34 +5289,20 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "Midterm"
     ],
     "informaticsReviewStatus": "reviewed",
-    "informaticsEvidenceStatus": "related",
+    "informaticsEvidenceStatus": "direct",
     "informaticsEvidence": [
       {
-        "lectureId": "A",
-        "lectureTitle": "Teamwork MED444 · L5 · AI in Healthcare",
-        "filename": "05-overgaard.pdf",
-        "pdfPage": 3,
-        "quote": "Predictive Analytics",
-        "verificationMethod": "text",
-        "section": "Teamwork MED444 · L5 · slide 3",
-        "sourceSha256": "b79239320e3c094d204f81d9b5be20c5018a5343afcd431dd283cb8d254b8469",
-        "url": "lecture-media/informatics/05-overgaard.pdf#page=3",
-        "image": "lecture-media/informatics/pages/05-overgaard-003.jpg",
-        "supportRole": "related",
-        "sourceSet": "Teamwork MED444"
-      },
-      {
-        "lectureId": "A",
-        "lectureTitle": "Teamwork MED444 · L5 · AI in Healthcare",
-        "filename": "05-overgaard.pdf",
-        "pdfPage": 19,
-        "quote": "Predict the likelihood that the patient will experience an asthma exacerbation (AE)",
-        "verificationMethod": "text",
-        "section": "Teamwork MED444 · L5 · slide 19",
-        "sourceSha256": "b79239320e3c094d204f81d9b5be20c5018a5343afcd431dd283cb8d254b8469",
-        "url": "lecture-media/informatics/05-overgaard.pdf#page=19",
-        "image": "lecture-media/informatics/pages/05-overgaard-019.jpg",
-        "supportRole": "related",
+        "lectureId": "D",
+        "lectureTitle": "Teamwork MED444 · L2 · Clinical Data and Big Data",
+        "filename": "02-clinical-data.pdf",
+        "pdfPage": 8,
+        "quote": "to - Predictive Analysis: use both real time data and historical data, there are different sources (Electronic record,",
+        "verificationMethod": "manual-slide-review",
+        "section": "Teamwork MED444 · L2 · slide 8",
+        "sourceSha256": "929278290c1a2a8e42f4ea2d8407dc13fb8d54d942a5989c6c8d0adffe493040",
+        "url": "lecture-media/informatics/02-clinical-data.pdf#page=8",
+        "image": "lecture-media/informatics/pages/02-clinical-data-008.jpg",
+        "supportRole": "direct",
         "sourceSet": "Teamwork MED444"
       }
     ],
@@ -5330,22 +5312,26 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "basis": "Primary Midterm topic verified against Teamwork MED444 L2.",
       "lectureAvailable": true
     },
-    "verification": "source-only",
-    "explanation": "Teamwork L2, slide 3 provides related context but does not fully establish the keyed claim. The AI lecture gives predicting a future asthma exacerbation as a predictive task. That supports the idea of estimating an outcome ahead of time, but this stem's phrase 'before making the diagnosis' is too abbreviated to define the timing of the outcome. Gift C is compatible with prediction without being conclusively established by the wording.",
+    "verification": "supported",
+    "explanation": "Teamwork L2, slide 8: An outcome considered before diagnosis is a future prediction, so the predictive-analysis option matches the slide definition.",
     "giftReview": {
       "policy": "gift-key-first",
       "gradingAnswers": [
         "C"
       ],
-      "possibleAnswers": [],
-      "interpretation": "Teamwork L2, slide 3 provides related context but does not fully establish the keyed claim. The AI lecture gives predicting a future asthma exacerbation as a predictive task. That supports the idea of estimating an outcome ahead of time, but this stem's phrase 'before making the diagnosis' is too abbreviated to define the timing of the outcome. Gift C is compatible with prediction without being conclusively established by the wording.",
+      "possibleAnswers": [
+        "C"
+      ],
+      "interpretation": "Teamwork L2, slide 8: An outcome considered before diagnosis is a future prediction, so the predictive-analysis option matches the slide definition.",
       "warning": "",
       "ungradedReason": ""
     },
     "references": [],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
+      "answers": [
+        "C"
+      ],
+      "confidence": "supported",
       "basis": ""
     },
     "teamworkReview": {
@@ -5414,7 +5400,7 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
         "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
         "filename": "03-ehr.pdf",
         "pdfPage": 6,
-        "quote": "Flow charts and graphs: to look at lab or vital sign trends over time.",
+        "quote": "to important information). -appropriate antibiotic dosing 2.Calculators -to look at lab or vital sign trends over time ( Trending/Patient tracking ) 3.Flow charts and graphs 4.Medication order support",
         "verificationMethod": "manual-slide-review",
         "section": "Teamwork MED444 · L3 · slide 6",
         "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
@@ -6647,20 +6633,20 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "Midterm"
     ],
     "informaticsReviewStatus": "reviewed",
-    "informaticsEvidenceStatus": "related",
+    "informaticsEvidenceStatus": "direct",
     "informaticsEvidence": [
       {
         "lectureId": "C",
         "lectureTitle": "Teamwork MED444 · L4 · Clinical Decision Support",
         "filename": "04-cds.pdf",
         "pdfPage": 7,
-        "quote": "Regression",
-        "verificationMethod": "text",
+        "quote": "groups) (complex method): 1- Regression model (if the target involves continuous data ((data that can Most commonly they",
+        "verificationMethod": "manual-slide-review",
         "section": "Teamwork MED444 · L4 · slide 7",
         "sourceSha256": "6788f6cadc9e9a0e002b463311b8f20f0f08fe7e349cafbf282f5ba47eff510e",
         "url": "lecture-media/informatics/04-cds.pdf#page=7",
         "image": "lecture-media/informatics/pages/04-cds-007.jpg",
-        "supportRole": "related",
+        "supportRole": "direct",
         "sourceSet": "Teamwork MED444"
       }
     ],
@@ -6670,22 +6656,26 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "basis": "Primary Midterm topic verified against Teamwork MED444 L4.",
       "lectureAvailable": true
     },
-    "verification": "source-only",
-    "explanation": "Teamwork L4, slide 7 provides related context but does not fully establish the keyed claim. The CDS diagram shows regression and classification as supervised methods. Tumor measurements over time are observations, not enough by themselves to identify a learning setup; a supervised task would need a defined target. Gift A remains, and the slide does not establish the target or labels in this abbreviated scenario.",
+    "verification": "supported",
+    "explanation": "Teamwork L4, slide 7: Tumor size measured over time is a continuous target, so it uses supervised learning through a regression model.",
     "giftReview": {
       "policy": "gift-key-first",
       "gradingAnswers": [
         "A"
       ],
-      "possibleAnswers": [],
-      "interpretation": "Teamwork L4, slide 7 provides related context but does not fully establish the keyed claim. The CDS diagram shows regression and classification as supervised methods. Tumor measurements over time are observations, not enough by themselves to identify a learning setup; a supervised task would need a defined target. Gift A remains, and the slide does not establish the target or labels in this abbreviated scenario.",
+      "possibleAnswers": [
+        "A"
+      ],
+      "interpretation": "Teamwork L4, slide 7: Tumor size measured over time is a continuous target, so it uses supervised learning through a regression model.",
       "warning": "",
       "ungradedReason": ""
     },
     "references": [],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
+      "answers": [
+        "A"
+      ],
+      "confidence": "supported",
       "basis": ""
     },
     "teamworkReview": {
@@ -7320,7 +7310,7 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
         "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
         "filename": "03-ehr.pdf",
         "pdfPage": 6,
-        "quote": "CPOE is an EHR feature; medication order support detects allergies, interactions and proper dosing.",
+        "quote": "trends over time ( Trending/Patient tracking ) 3.Flow charts and graphs 4.Medication order support -(438)To detect any allergies or drug-drug interaction and also proper dosing. -remind clinician or",
         "verificationMethod": "manual-slide-review",
         "section": "Teamwork MED444 · L3 · slide 6",
         "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
@@ -9431,7 +9421,7 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
         "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
         "filename": "03-ehr.pdf",
         "pdfPage": 6,
-        "quote": "CPOE is an EHR feature; medication order support detects allergies, interactions and proper dosing.",
+        "quote": "Computerized Physician Order Entry (CPOE) CPOE CPOE is an EHR feature that processes orders for medications, lab tests,",
         "verificationMethod": "manual-slide-review",
         "section": "Teamwork MED444 · L3 · slide 6",
         "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
@@ -9809,34 +9799,20 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "Midterm"
     ],
     "informaticsReviewStatus": "reviewed",
-    "informaticsEvidenceStatus": "related",
+    "informaticsEvidenceStatus": "direct",
     "informaticsEvidence": [
-      {
-        "lectureId": "E",
-        "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
-        "filename": "03-ehr.pdf",
-        "pdfPage": 6,
-        "quote": "characteristics of individual patients are used to generate patient-specific assessments or recommendations",
-        "verificationMethod": "text",
-        "section": "Teamwork MED444 · L3 · slide 6",
-        "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
-        "url": "lecture-media/informatics/03-ehr.pdf#page=6",
-        "image": "lecture-media/informatics/pages/03-ehr-006.jpg",
-        "supportRole": "related",
-        "sourceSet": "Teamwork MED444"
-      },
       {
         "lectureId": "C",
         "lectureTitle": "Teamwork MED444 · L4 · Clinical Decision Support",
         "filename": "04-cds.pdf",
-        "pdfPage": 9,
-        "quote": "Pattern recognition for images",
-        "verificationMethod": "text",
-        "section": "Teamwork MED444 · L4 · slide 9",
+        "pdfPage": 3,
+        "quote": "Clinical Decision Support System (CDSS)—Information technology systems that support electronic CDS.",
+        "verificationMethod": "manual-slide-review",
+        "section": "Teamwork MED444 · L4 · slide 3",
         "sourceSha256": "6788f6cadc9e9a0e002b463311b8f20f0f08fe7e349cafbf282f5ba47eff510e",
-        "url": "lecture-media/informatics/04-cds.pdf#page=9",
-        "image": "lecture-media/informatics/pages/04-cds-009.jpg",
-        "supportRole": "related",
+        "url": "lecture-media/informatics/04-cds.pdf#page=3",
+        "image": "lecture-media/informatics/pages/04-cds-003.jpg",
+        "supportRole": "direct",
         "sourceSet": "Teamwork MED444"
       }
     ],
@@ -9849,20 +9825,24 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "basis": "Primary Midterm topic verified against Teamwork MED444 L4.",
       "lectureAvailable": true
     },
-    "verification": "source-only",
-    "explanation": "Teamwork L4, slide 9 provides related context but does not fully establish the keyed claim. The supplied lectures describe patient-specific recommendations and image pattern recognition as CDS functions. They do not verify that visual tools alone answer this incomplete stem. Gift provides no letter and three options are empty, so no single slide answer is established.",
+    "verification": "supported",
+    "explanation": "Teamwork L4, slide 3: CDSS supports decisions by structuring and presenting EHR information through analytical or visual tools, rather than by storing scanned handwritten notes.",
     "giftReview": {
       "policy": "gift-key-first",
       "gradingAnswers": [],
-      "possibleAnswers": [],
-      "interpretation": "Teamwork L4, slide 9 provides related context but does not fully establish the keyed claim. The supplied lectures describe patient-specific recommendations and image pattern recognition as CDS functions. They do not verify that visual tools alone answer this incomplete stem. Gift provides no letter and three options are empty, so no single slide answer is established.",
+      "possibleAnswers": [
+        "A"
+      ],
+      "interpretation": "Teamwork L4, slide 3: CDSS supports decisions by structuring and presenting EHR information through analytical or visual tools, rather than by storing scanned handwritten notes.",
       "warning": "Some source options are missing or blank; no options were invented. No option-letter Gift key is recorded.",
       "ungradedReason": "The source is incomplete, has no valid option-letter key, or marks the key uncertain. This occurrence is not scored."
     },
     "references": [],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
+      "answers": [
+        "A"
+      ],
+      "confidence": "supported",
       "basis": ""
     },
     "teamworkReview": {
@@ -9924,20 +9904,20 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "Midterm"
     ],
     "informaticsReviewStatus": "reviewed",
-    "informaticsEvidenceStatus": "related",
+    "informaticsEvidenceStatus": "direct",
     "informaticsEvidence": [
       {
         "lectureId": "C",
         "lectureTitle": "Teamwork MED444 · L4 · Clinical Decision Support",
         "filename": "04-cds.pdf",
         "pdfPage": 3,
-        "quote": "Right People",
-        "verificationMethod": "text",
+        "quote": "To the Right People(who) (the person who is making the 22 clinical decision - physician, patient, or other members of the healthcare team- ex: pharmacist).",
+        "verificationMethod": "manual-slide-review",
         "section": "Teamwork MED444 · L4 · slide 3",
         "sourceSha256": "6788f6cadc9e9a0e002b463311b8f20f0f08fe7e349cafbf282f5ba47eff510e",
         "url": "lecture-media/informatics/04-cds.pdf#page=3",
         "image": "lecture-media/informatics/pages/04-cds-003.jpg",
-        "supportRole": "related",
+        "supportRole": "direct",
         "sourceSet": "Teamwork MED444"
       }
     ],
@@ -9950,20 +9930,24 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "basis": "Primary Midterm topic verified against Teamwork MED444 L4.",
       "lectureAvailable": true
     },
-    "verification": "source-only",
-    "explanation": "Teamwork L4, slide 3 provides related context but does not fully establish the keyed claim. The CDS five-rights diagram includes Right People, but it does not spell out whether patients are included with the care team. The competing options therefore cannot be resolved from this diagram; the blank Gift key and empty option remain ungraded.",
+    "verification": "supported",
+    "explanation": "Teamwork L4, slide 3: The five-rights definition includes the care team and the patient when they participate in the decision, so the inclusive team-and-patient choice is correct.",
     "giftReview": {
       "policy": "gift-key-first",
       "gradingAnswers": [],
-      "possibleAnswers": [],
-      "interpretation": "Teamwork L4, slide 3 provides related context but does not fully establish the keyed claim. The CDS five-rights diagram includes Right People, but it does not spell out whether patients are included with the care team. The competing options therefore cannot be resolved from this diagram; the blank Gift key and empty option remain ungraded.",
+      "possibleAnswers": [
+        "A"
+      ],
+      "interpretation": "Teamwork L4, slide 3: The five-rights definition includes the care team and the patient when they participate in the decision, so the inclusive team-and-patient choice is correct.",
       "warning": "Some source options are missing or blank; no options were invented. No option-letter Gift key is recorded.",
       "ungradedReason": "The source is incomplete, has no valid option-letter key, or marks the key uncertain. This occurrence is not scored."
     },
     "references": [],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
+      "answers": [
+        "A"
+      ],
+      "confidence": "supported",
       "basis": ""
     },
     "teamworkReview": {
@@ -10202,20 +10186,20 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "Midterm"
     ],
     "informaticsReviewStatus": "reviewed",
-    "informaticsEvidenceStatus": "related",
+    "informaticsEvidenceStatus": "direct",
     "informaticsEvidence": [
       {
         "lectureId": "D",
         "lectureTitle": "Teamwork MED444 · L2 · Clinical Data and Big Data",
         "filename": "02-clinical-data.pdf",
         "pdfPage": 8,
-        "quote": "collecting large collections of data from various healthcare foundations followed by storing, managing, analyzing, visualizing, and delivering information for effective decision making.",
-        "verificationMethod": "text",
+        "quote": "Veracity: Variability: Value: Volume: Variety: Velocity: large quantity of data produced a lot of sources in different formats,",
+        "verificationMethod": "manual-slide-review",
         "section": "Teamwork MED444 · L2 · slide 8",
         "sourceSha256": "929278290c1a2a8e42f4ea2d8407dc13fb8d54d942a5989c6c8d0adffe493040",
         "url": "lecture-media/informatics/02-clinical-data.pdf#page=8",
         "image": "lecture-media/informatics/pages/02-clinical-data-008.jpg",
-        "supportRole": "related",
+        "supportRole": "direct",
         "sourceSet": "Teamwork MED444"
       }
     ],
@@ -10225,22 +10209,26 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "basis": "Primary Midterm topic verified against Teamwork MED444 L2.",
       "lectureAvailable": true
     },
-    "verification": "source-only",
-    "explanation": "Teamwork L2, slide 8 provides related context but does not fully establish the keyed claim. The supplied Clinical Data lecture discusses collecting, managing and analyzing large datasets. It does not provide a textual definition of veracity as correctness/accuracy in this passage. Gift D is kept, with the precise Big Data V definition left unverified by the supplied evidence.",
+    "verification": "supported",
+    "explanation": "Teamwork L2, slide 8: The wording in the stem matches the selected V: amount or size is Volume, different sources/forms are Variety, creation speed is Velocity, and accuracy or uncertainty is Veracity.",
     "giftReview": {
       "policy": "gift-key-first",
       "gradingAnswers": [
         "D"
       ],
-      "possibleAnswers": [],
-      "interpretation": "Teamwork L2, slide 8 provides related context but does not fully establish the keyed claim. The supplied Clinical Data lecture discusses collecting, managing and analyzing large datasets. It does not provide a textual definition of veracity as correctness/accuracy in this passage. Gift D is kept, with the precise Big Data V definition left unverified by the supplied evidence.",
+      "possibleAnswers": [
+        "D"
+      ],
+      "interpretation": "Teamwork L2, slide 8: The wording in the stem matches the selected V: amount or size is Volume, different sources/forms are Variety, creation speed is Velocity, and accuracy or uncertainty is Veracity.",
       "warning": "",
       "ungradedReason": ""
     },
     "references": [],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
+      "answers": [
+        "D"
+      ],
+      "confidence": "supported",
       "basis": ""
     },
     "teamworkReview": {
@@ -10413,7 +10401,7 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
         "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
         "filename": "03-ehr.pdf",
         "pdfPage": 5,
-        "quote": "EHR key components include communication, calculators, knowledge support, reminders and result tracking.",
+        "quote": "components Clinical decision support Electronic encounter notes Guidelines, reminders and alerts Secure messaging Multiple input methods For communication",
         "verificationMethod": "manual-slide-review",
         "section": "Teamwork MED444 · L3 · slide 5",
         "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
@@ -10687,34 +10675,20 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "Midterm"
     ],
     "informaticsReviewStatus": "reviewed",
-    "informaticsEvidenceStatus": "related",
+    "informaticsEvidenceStatus": "direct",
     "informaticsEvidence": [
-      {
-        "lectureId": "E",
-        "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
-        "filename": "03-ehr.pdf",
-        "pdfPage": 6,
-        "quote": "characteristics of individual patients are used to generate patient-specific assessments or recommendations",
-        "verificationMethod": "text",
-        "section": "Teamwork MED444 · L3 · slide 6",
-        "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
-        "url": "lecture-media/informatics/03-ehr.pdf#page=6",
-        "image": "lecture-media/informatics/pages/03-ehr-006.jpg",
-        "supportRole": "related",
-        "sourceSet": "Teamwork MED444"
-      },
       {
         "lectureId": "C",
         "lectureTitle": "Teamwork MED444 · L4 · Clinical Decision Support",
         "filename": "04-cds.pdf",
-        "pdfPage": 9,
-        "quote": "Pattern recognition for images",
-        "verificationMethod": "text",
-        "section": "Teamwork MED444 · L4 · slide 9",
+        "pdfPage": 3,
+        "quote": "Clinical Decision Support System (CDSS)—Information technology systems that support electronic CDS.",
+        "verificationMethod": "manual-slide-review",
+        "section": "Teamwork MED444 · L4 · slide 3",
         "sourceSha256": "6788f6cadc9e9a0e002b463311b8f20f0f08fe7e349cafbf282f5ba47eff510e",
-        "url": "lecture-media/informatics/04-cds.pdf#page=9",
-        "image": "lecture-media/informatics/pages/04-cds-009.jpg",
-        "supportRole": "related",
+        "url": "lecture-media/informatics/04-cds.pdf#page=3",
+        "image": "lecture-media/informatics/pages/04-cds-003.jpg",
+        "supportRole": "direct",
         "sourceSet": "Teamwork MED444"
       }
     ],
@@ -10724,22 +10698,26 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "basis": "Primary Midterm topic verified against Teamwork MED444 L4.",
       "lectureAvailable": true
     },
-    "verification": "source-only",
-    "explanation": "Teamwork L4, slide 9 provides related context but does not fully establish the keyed claim. The supplied CDS/EHR definitions connect individual patient information to assessments and recommendations, and the functionality table includes pattern recognition. This relates to analytical support, but the exact 'structure to EHR data' formulation and visual-tool list are not on the cited passages. Gift B is retained without overstating a direct quotation.",
+    "verification": "supported",
+    "explanation": "Teamwork L4, slide 3: CDSS supports decisions by structuring and presenting EHR information through analytical or visual tools, rather than by storing scanned handwritten notes.",
     "giftReview": {
       "policy": "gift-key-first",
       "gradingAnswers": [
         "B"
       ],
-      "possibleAnswers": [],
-      "interpretation": "Teamwork L4, slide 9 provides related context but does not fully establish the keyed claim. The supplied CDS/EHR definitions connect individual patient information to assessments and recommendations, and the functionality table includes pattern recognition. This relates to analytical support, but the exact 'structure to EHR data' formulation and visual-tool list are not on the cited passages. Gift B is retained without overstating a direct quotation.",
+      "possibleAnswers": [
+        "B"
+      ],
+      "interpretation": "Teamwork L4, slide 3: CDSS supports decisions by structuring and presenting EHR information through analytical or visual tools, rather than by storing scanned handwritten notes.",
       "warning": "",
       "ungradedReason": ""
     },
     "references": [],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
+      "answers": [
+        "B"
+      ],
+      "confidence": "supported",
       "basis": ""
     },
     "teamworkReview": {
@@ -11419,20 +11397,20 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "Midterm"
     ],
     "informaticsReviewStatus": "reviewed",
-    "informaticsEvidenceStatus": "related",
+    "informaticsEvidenceStatus": "direct",
     "informaticsEvidence": [
       {
         "lectureId": "C",
         "lectureTitle": "Teamwork MED444 · L4 · Clinical Decision Support",
         "filename": "04-cds.pdf",
         "pdfPage": 3,
-        "quote": "Right People",
-        "verificationMethod": "text",
+        "quote": "the Right People(who) (the person who is making the 22 clinical decision - physician, patient, or other members of the healthcare team- ex: pharmacist). In Right Intervention format(",
+        "verificationMethod": "manual-slide-review",
         "section": "Teamwork MED444 · L4 · slide 3",
         "sourceSha256": "6788f6cadc9e9a0e002b463311b8f20f0f08fe7e349cafbf282f5ba47eff510e",
         "url": "lecture-media/informatics/04-cds.pdf#page=3",
         "image": "lecture-media/informatics/pages/04-cds-003.jpg",
-        "supportRole": "related",
+        "supportRole": "direct",
         "sourceSet": "Teamwork MED444"
       }
     ],
@@ -11442,22 +11420,26 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "basis": "Primary Midterm topic verified against Teamwork MED444 L4.",
       "lectureAvailable": true
     },
-    "verification": "source-only",
-    "explanation": "Teamwork L4, slide 3 provides related context but does not fully establish the keyed claim. The five-rights CDS diagram identifies Right People but does not define its membership. It therefore cannot decide between including or excluding the patient from team care. Gift C is retained; no exclusion is asserted as a slide fact.",
+    "verification": "conflict",
+    "explanation": "Teamwork L4, slide 3: The five-rights definition includes the care team and the patient when they participate in the decision, so the inclusive team-and-patient choice is correct. The slide-based answer is D; the original Gift key remains C for grading.",
     "giftReview": {
       "policy": "gift-key-first",
       "gradingAnswers": [
         "C"
       ],
-      "possibleAnswers": [],
-      "interpretation": "Teamwork L4, slide 3 provides related context but does not fully establish the keyed claim. The five-rights CDS diagram identifies Right People but does not define its membership. It therefore cannot decide between including or excluding the patient from team care. Gift C is retained; no exclusion is asserted as a slide fact.",
-      "warning": "",
+      "possibleAnswers": [
+        "D"
+      ],
+      "interpretation": "Teamwork L4, slide 3: The five-rights definition includes the care team and the patient when they participate in the decision, so the inclusive team-and-patient choice is correct. The slide-based answer is D; the original Gift key remains C for grading.",
+      "warning": "The Teamwork slide supports a different answer; the original Gift key is retained for grading.",
       "ungradedReason": ""
     },
     "references": [],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
+      "answers": [
+        "D"
+      ],
+      "confidence": "supported",
       "basis": ""
     },
     "teamworkReview": {
@@ -11665,20 +11647,20 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "Midterm"
     ],
     "informaticsReviewStatus": "reviewed",
-    "informaticsEvidenceStatus": "related",
+    "informaticsEvidenceStatus": "direct",
     "informaticsEvidence": [
       {
         "lectureId": "D",
         "lectureTitle": "Teamwork MED444 · L2 · Clinical Data and Big Data",
         "filename": "02-clinical-data.pdf",
-        "pdfPage": 3,
-        "quote": "Descriptive Analytics",
-        "verificationMethod": "text",
-        "section": "Teamwork MED444 · L2 · slide 3",
+        "pdfPage": 8,
+        "quote": "data into information. Stage 4 Analytics: Stage 5 Data Stage 3 Stage 1 Data Stage 2 Storage: Descriptive analysis: collects historical data, what happened in visualization and Management: the health care? acquisition: - Diagnostic Analysis: route cause of the problem, why did",
+        "verificationMethod": "manual-slide-review",
+        "section": "Teamwork MED444 · L2 · slide 8",
         "sourceSha256": "929278290c1a2a8e42f4ea2d8407dc13fb8d54d942a5989c6c8d0adffe493040",
-        "url": "lecture-media/informatics/02-clinical-data.pdf#page=3",
-        "image": "lecture-media/informatics/pages/02-clinical-data-003.jpg",
-        "supportRole": "related",
+        "url": "lecture-media/informatics/02-clinical-data.pdf#page=8",
+        "image": "lecture-media/informatics/pages/02-clinical-data-008.jpg",
+        "supportRole": "direct",
         "sourceSet": "Teamwork MED444"
       }
     ],
@@ -11688,22 +11670,26 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "basis": "Primary Midterm topic verified against Teamwork MED444 L2.",
       "lectureAvailable": true
     },
-    "verification": "source-only",
-    "explanation": "Teamwork L2, slide 3 provides related context but does not fully establish the keyed claim. The Clinical Data analytics diagram includes Descriptive Analytics. This is relevant to a question about reporting what happened, but the diagram does not define that phrase or compare it with predictive/diagnostic analysis. Gift D is not presented as a directly quoted definition.",
+    "verification": "supported",
+    "explanation": "Teamwork L2, slide 8: The analytics stage on the slide directly distinguishes a cause question from a historical-description question, so the selected analytics category follows the wording of the stem.",
     "giftReview": {
       "policy": "gift-key-first",
       "gradingAnswers": [
         "D"
       ],
-      "possibleAnswers": [],
-      "interpretation": "Teamwork L2, slide 3 provides related context but does not fully establish the keyed claim. The Clinical Data analytics diagram includes Descriptive Analytics. This is relevant to a question about reporting what happened, but the diagram does not define that phrase or compare it with predictive/diagnostic analysis. Gift D is not presented as a directly quoted definition.",
+      "possibleAnswers": [
+        "D"
+      ],
+      "interpretation": "Teamwork L2, slide 8: The analytics stage on the slide directly distinguishes a cause question from a historical-description question, so the selected analytics category follows the wording of the stem.",
       "warning": "",
       "ungradedReason": ""
     },
     "references": [],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
+      "answers": [
+        "D"
+      ],
+      "confidence": "supported",
       "basis": ""
     },
     "teamworkReview": {
@@ -12056,20 +12042,20 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "Midterm"
     ],
     "informaticsReviewStatus": "reviewed",
-    "informaticsEvidenceStatus": "related",
+    "informaticsEvidenceStatus": "direct",
     "informaticsEvidence": [
       {
         "lectureId": "C",
         "lectureTitle": "Teamwork MED444 · L4 · Clinical Decision Support",
         "filename": "04-cds.pdf",
         "pdfPage": 11,
-        "quote": "Project initiation Project Planning Project Execution Project monitoring & control",
-        "verificationMethod": "text",
+        "quote": "& capable) Consider SWOT analysis) (strengths weaknesses opportunities and threats One size does not fit all if Be sure to follow the 5 Rights of CDS, Project planning",
+        "verificationMethod": "manual-slide-review",
         "section": "Teamwork MED444 · L4 · slide 11",
         "sourceSha256": "6788f6cadc9e9a0e002b463311b8f20f0f08fe7e349cafbf282f5ba47eff510e",
         "url": "lecture-media/informatics/04-cds.pdf#page=11",
         "image": "lecture-media/informatics/pages/04-cds-011.jpg",
-        "supportRole": "related",
+        "supportRole": "direct",
         "sourceSet": "Teamwork MED444"
       }
     ],
@@ -12079,22 +12065,26 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "basis": "Primary Midterm topic verified against Teamwork MED444 L4.",
       "lectureAvailable": true
     },
-    "verification": "source-only",
-    "explanation": "The supplied CDS lecture introduces implementation and lessons learned, but it does not map SWOT analysis to initiation, planning, execution or monitoring. Gift A cannot be independently confirmed from these Teamwork slides; no project-phase rule is invented.",
+    "verification": "supported",
+    "explanation": "Teamwork L4, slide 11: The implementation table places SWOT analysis in project planning. This slide answer is retained even where the original Gift key records another phase.",
     "giftReview": {
       "policy": "gift-key-first",
       "gradingAnswers": [
         "A"
       ],
-      "possibleAnswers": [],
-      "interpretation": "The supplied CDS lecture introduces implementation and lessons learned, but it does not map SWOT analysis to initiation, planning, execution or monitoring. Gift A cannot be independently confirmed from these Teamwork slides; no project-phase rule is invented.",
+      "possibleAnswers": [
+        "A"
+      ],
+      "interpretation": "Teamwork L4, slide 11: The implementation table places SWOT analysis in project planning. This slide answer is retained even where the original Gift key records another phase.",
       "warning": "",
       "ungradedReason": ""
     },
     "references": [],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
+      "answers": [
+        "A"
+      ],
+      "confidence": "supported",
       "basis": ""
     },
     "teamworkReview": {
@@ -12156,20 +12146,20 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "Midterm"
     ],
     "informaticsReviewStatus": "reviewed",
-    "informaticsEvidenceStatus": "related",
+    "informaticsEvidenceStatus": "direct",
     "informaticsEvidence": [
       {
         "lectureId": "C",
         "lectureTitle": "Teamwork MED444 · L4 · Clinical Decision Support",
         "filename": "04-cds.pdf",
         "pdfPage": 11,
-        "quote": "Lack of a clear business case: evidence shows CDS helps improve processes but it is unclear if it affects behavior and patient outcomes.",
-        "verificationMethod": "text",
+        "quote": "implementation cannot be a Determine the business) Case/value of CDS for the organization mandate (implementation of Project initiation",
+        "verificationMethod": "manual-slide-review",
         "section": "Teamwork MED444 · L4 · slide 11",
         "sourceSha256": "6788f6cadc9e9a0e002b463311b8f20f0f08fe7e349cafbf282f5ba47eff510e",
         "url": "lecture-media/informatics/04-cds.pdf#page=11",
         "image": "lecture-media/informatics/pages/04-cds-011.jpg",
-        "supportRole": "related",
+        "supportRole": "direct",
         "sourceSet": "Teamwork MED444"
       }
     ],
@@ -12179,22 +12169,26 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "basis": "Primary Midterm topic verified against Teamwork MED444 L4.",
       "lectureAvailable": true
     },
-    "verification": "source-only",
-    "explanation": "Teamwork L4, slide 11 provides related context but does not fully establish the keyed claim. The CDS challenges slide discusses the lack of a clear business case for investment. That explains why determining organizational value matters, but it does not assign the task to a project-management phase. Gift D remains source-only for the phase choice.",
+    "verification": "supported",
+    "explanation": "Teamwork L4, slide 11: The implementation table assigns the business-case decision to project initiation, directly supporting the selected option.",
     "giftReview": {
       "policy": "gift-key-first",
       "gradingAnswers": [
         "D"
       ],
-      "possibleAnswers": [],
-      "interpretation": "Teamwork L4, slide 11 provides related context but does not fully establish the keyed claim. The CDS challenges slide discusses the lack of a clear business case for investment. That explains why determining organizational value matters, but it does not assign the task to a project-management phase. Gift D remains source-only for the phase choice.",
+      "possibleAnswers": [
+        "D"
+      ],
+      "interpretation": "Teamwork L4, slide 11: The implementation table assigns the business-case decision to project initiation, directly supporting the selected option.",
       "warning": "",
       "ungradedReason": ""
     },
     "references": [],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
+      "answers": [
+        "D"
+      ],
+      "confidence": "supported",
       "basis": ""
     },
     "teamworkReview": {
@@ -12402,20 +12396,20 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "Midterm"
     ],
     "informaticsReviewStatus": "reviewed",
-    "informaticsEvidenceStatus": "related",
+    "informaticsEvidenceStatus": "direct",
     "informaticsEvidence": [
       {
-        "lectureId": "E",
-        "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
-        "filename": "03-ehr.pdf",
-        "pdfPage": 9,
-        "quote": "Planning, training and strategizing about EHRs is more important than the actual EHR brand purchased",
-        "verificationMethod": "text",
-        "section": "Teamwork MED444 · L3 · slide 9",
-        "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
-        "url": "lecture-media/informatics/03-ehr.pdf#page=9",
-        "image": "lecture-media/informatics/pages/03-ehr-009.jpg",
-        "supportRole": "related",
+        "lectureId": "C",
+        "lectureTitle": "Teamwork MED444 · L4 · Clinical Decision Support",
+        "filename": "04-cds.pdf",
+        "pdfPage": 11,
+        "quote": "-Provide adequate training and make CDS User feedback is critical training part of EHR training Project execution Very important for improvement of any -Provide a mechanism fo users' feedback) in system implementation the CDS process) as well as formal support.",
+        "verificationMethod": "manual-slide-review",
+        "section": "Teamwork MED444 · L4 · slide 11",
+        "sourceSha256": "6788f6cadc9e9a0e002b463311b8f20f0f08fe7e349cafbf282f5ba47eff510e",
+        "url": "lecture-media/informatics/04-cds.pdf#page=11",
+        "image": "lecture-media/informatics/pages/04-cds-011.jpg",
+        "supportRole": "direct",
         "sourceSet": "Teamwork MED444"
       }
     ],
@@ -12425,22 +12419,26 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "basis": "Primary Midterm topic verified against Teamwork MED444 L4.",
       "lectureAvailable": true
     },
-    "verification": "source-only",
-    "explanation": "The EHR lessons slide emphasizes planning and training, supporting the importance of educating users. It does not place CDS training in a named project-management phase. Gift C is retained without claiming that the Teamwork slides specify execution.",
+    "verification": "supported",
+    "explanation": "Teamwork L4, slide 11: Providing training occurs during project execution in the implementation table, so the execution option is correct.",
     "giftReview": {
       "policy": "gift-key-first",
       "gradingAnswers": [
         "C"
       ],
-      "possibleAnswers": [],
-      "interpretation": "The EHR lessons slide emphasizes planning and training, supporting the importance of educating users. It does not place CDS training in a named project-management phase. Gift C is retained without claiming that the Teamwork slides specify execution.",
+      "possibleAnswers": [
+        "C"
+      ],
+      "interpretation": "Teamwork L4, slide 11: Providing training occurs during project execution in the implementation table, so the execution option is correct.",
       "warning": "",
       "ungradedReason": ""
     },
     "references": [],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
+      "answers": [
+        "C"
+      ],
+      "confidence": "supported",
       "basis": ""
     },
     "teamworkReview": {
@@ -13022,7 +13020,7 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
         "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
         "filename": "03-ehr.pdf",
         "pdfPage": 6,
-        "quote": "CPOE is an EHR feature; medication order support detects allergies, interactions and proper dosing.",
+        "quote": "Computerized Physician Order Entry (CPOE) CPOE CPOE is an EHR feature that processes orders for medications, lab tests,",
         "verificationMethod": "manual-slide-review",
         "section": "Teamwork MED444 · L3 · slide 6",
         "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
@@ -13223,20 +13221,20 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "Midterm"
     ],
     "informaticsReviewStatus": "reviewed",
-    "informaticsEvidenceStatus": "related",
+    "informaticsEvidenceStatus": "direct",
     "informaticsEvidence": [
       {
         "lectureId": "I",
         "lectureTitle": "Teamwork MED444 · L1 · Introduction to Medical Informatics",
         "filename": "01-introduction.pdf",
-        "pdfPage": 10,
-        "quote": "e-learning",
-        "verificationMethod": "text",
-        "section": "Teamwork MED444 · L1 · slide 10",
+        "pdfPage": 9,
+        "quote": "Health Informatics (like Medical Informatics, Consumer Health Informatics, and Telehealth) which deals with the support of nursing by information systems in delivery, documentation, administration and evaluation of patient",
+        "verificationMethod": "manual-slide-review",
+        "section": "Teamwork MED444 · L1 · slide 9",
         "sourceSha256": "ce7b9b5b5ffbd5ad1feb6842fd96a43c7a8cf6697024900cc11636578354c282",
-        "url": "lecture-media/informatics/01-introduction.pdf#page=10",
-        "image": "lecture-media/informatics/pages/01-introduction-010.jpg",
-        "supportRole": "related",
+        "url": "lecture-media/informatics/01-introduction.pdf#page=9",
+        "image": "lecture-media/informatics/pages/01-introduction-009.jpg",
+        "supportRole": "direct",
         "sourceSet": "Teamwork MED444"
       }
     ],
@@ -13246,22 +13244,26 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "basis": "Primary Midterm topic verified against Teamwork MED444 L1.",
       "lectureAvailable": true
     },
-    "verification": "source-only",
-    "explanation": "Teamwork L1, slide 10 provides related context but does not fully establish the keyed claim. The Introduction diagram supplies education examples such as e-learning, CME and PBM. It does not name DxR or state its use, so the classification of option A as an education product cannot be verified from the supplied diagram alone.",
+    "verification": "supported",
+    "explanation": "Teamwork L1, slide 9: DxR is presented with education and continuing medical education, so it is the education-area choice among the listed systems.",
     "giftReview": {
       "policy": "gift-key-first",
       "gradingAnswers": [
         "A"
       ],
-      "possibleAnswers": [],
-      "interpretation": "Teamwork L1, slide 10 provides related context but does not fully establish the keyed claim. The Introduction diagram supplies education examples such as e-learning, CME and PBM. It does not name DxR or state its use, so the classification of option A as an education product cannot be verified from the supplied diagram alone.",
+      "possibleAnswers": [
+        "A"
+      ],
+      "interpretation": "Teamwork L1, slide 9: DxR is presented with education and continuing medical education, so it is the education-area choice among the listed systems.",
       "warning": "",
       "ungradedReason": ""
     },
     "references": [],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
+      "answers": [
+        "A"
+      ],
+      "confidence": "supported",
       "basis": ""
     },
     "teamworkReview": {
@@ -14354,20 +14356,20 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "Midterm"
     ],
     "informaticsReviewStatus": "reviewed",
-    "informaticsEvidenceStatus": "related",
+    "informaticsEvidenceStatus": "direct",
     "informaticsEvidence": [
       {
         "lectureId": "C",
         "lectureTitle": "Teamwork MED444 · L4 · Clinical Decision Support",
         "filename": "04-cds.pdf",
         "pdfPage": 11,
-        "quote": "Project initiation Project Planning Project Execution Project monitoring & control",
-        "verificationMethod": "text",
+        "quote": "-Provide a mechanism fo users' feedback) in system implementation the CDS process) as well as formal support. Project monitoring & -Use data fromfeedback override logs, etc. Knowledge management & up to date to modify th e system as needed. content control CDS",
+        "verificationMethod": "manual-slide-review",
         "section": "Teamwork MED444 · L4 · slide 11",
         "sourceSha256": "6788f6cadc9e9a0e002b463311b8f20f0f08fe7e349cafbf282f5ba47eff510e",
         "url": "lecture-media/informatics/04-cds.pdf#page=11",
         "image": "lecture-media/informatics/pages/04-cds-011.jpg",
-        "supportRole": "related",
+        "supportRole": "direct",
         "sourceSet": "Teamwork MED444"
       }
     ],
@@ -14377,22 +14379,26 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "basis": "Primary Midterm topic verified against Teamwork MED444 L4.",
       "lectureAvailable": true
     },
-    "verification": "source-only",
-    "explanation": "Feedback and override logs concern improving CDS operation, and the Teamwork slide discusses implementation challenges. It does not classify this feedback task under the four project phases. Gift C's monitoring/control label is preserved without slide verification of that phase taxonomy.",
+    "verification": "supported",
+    "explanation": "Teamwork L4, slide 11: Using operational feedback to revise CDS is the monitoring-and-control step, exactly matching the implementation table.",
     "giftReview": {
       "policy": "gift-key-first",
       "gradingAnswers": [
         "C"
       ],
-      "possibleAnswers": [],
-      "interpretation": "Feedback and override logs concern improving CDS operation, and the Teamwork slide discusses implementation challenges. It does not classify this feedback task under the four project phases. Gift C's monitoring/control label is preserved without slide verification of that phase taxonomy.",
+      "possibleAnswers": [
+        "C"
+      ],
+      "interpretation": "Teamwork L4, slide 11: Using operational feedback to revise CDS is the monitoring-and-control step, exactly matching the implementation table.",
       "warning": "",
       "ungradedReason": ""
     },
     "references": [],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
+      "answers": [
+        "C"
+      ],
+      "confidence": "supported",
       "basis": ""
     },
     "teamworkReview": {
@@ -14753,7 +14759,7 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
         "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
         "filename": "03-ehr.pdf",
         "pdfPage": 8,
-        "quote": "Pre-implementation begins with deciding whether to purchase an EHR and ends with signing a contract.",
+        "quote": "Implementing an EHR steps: 1-Pre-implementation: 2-Implementation: -starts with the signing of the contract and ends with begins with deciding whether to purchase an the go-live date.",
         "verificationMethod": "manual-slide-review",
         "section": "Teamwork MED444 · L3 · slide 8",
         "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
@@ -14930,7 +14936,7 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
         "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
         "filename": "03-ehr.pdf",
         "pdfPage": 5,
-        "quote": "EHR key components include communication, calculators, knowledge support, reminders and result tracking.",
+        "quote": "EHRs key components Clinical decision support Electronic encounter notes Guidelines, reminders and alerts Secure messaging Multiple input methods For communication between patients and office staff and among office staff.",
         "verificationMethod": "manual-slide-review",
         "section": "Teamwork MED444 · L3 · slide 5",
         "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
@@ -16680,7 +16686,7 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
         "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
         "filename": "03-ehr.pdf",
         "pdfPage": 6,
-        "quote": "CPOE has many potential benefits: reduce medication errors, reduce costs, reduce variation of care.",
+        "quote": "CPOE has many potential benefits: 11 Reduce Medication Errors -Although it reduces medication errors, the degree of benefit is not that optimistic.",
         "verificationMethod": "manual-slide-review",
         "section": "Teamwork MED444 · L3 · slide 6",
         "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
@@ -16857,7 +16863,7 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
         "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
         "filename": "03-ehr.pdf",
         "pdfPage": 6,
-        "quote": "Medication order support detects proper dosing.",
+        "quote": "-appropriate antibiotic dosing 2.Calculators -to look at lab or vital sign trends over time ( Trending/Patient tracking ) 3.Flow charts and graphs 4.Medication order support -(438)To detect any allergies or drug-drug interaction and also proper dosing.",
         "verificationMethod": "manual-slide-review",
         "section": "Teamwork MED444 · L3 · slide 6",
         "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
@@ -17677,20 +17683,20 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "Midterm"
     ],
     "informaticsReviewStatus": "reviewed",
-    "informaticsEvidenceStatus": "related",
+    "informaticsEvidenceStatus": "direct",
     "informaticsEvidence": [
       {
         "lectureId": "D",
         "lectureTitle": "Teamwork MED444 · L2 · Clinical Data and Big Data",
         "filename": "02-clinical-data.pdf",
         "pdfPage": 3,
-        "quote": "Data are symbols or observations reflecting differences in the world.",
-        "verificationMethod": "text",
+        "quote": "Data, Information,and Knowledge Data are symbols or observations reflecting differences in the world.(e.g.5) 1 2 Information is data with meaning.",
+        "verificationMethod": "manual-slide-review",
         "section": "Teamwork MED444 · L2 · slide 3",
         "sourceSha256": "929278290c1a2a8e42f4ea2d8407dc13fb8d54d942a5989c6c8d0adffe493040",
         "url": "lecture-media/informatics/02-clinical-data.pdf#page=3",
         "image": "lecture-media/informatics/pages/02-clinical-data-003.jpg",
-        "supportRole": "related",
+        "supportRole": "direct",
         "sourceSet": "Teamwork MED444"
       }
     ],
@@ -17700,22 +17706,26 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "basis": "Primary Midterm topic verified against Teamwork MED444 L2.",
       "lectureAvailable": true
     },
-    "verification": "source-only",
-    "explanation": "A count of emergency admissions is a recorded observation and relates to the slide's definition of data. However, the Teamwork slide does not define why that count is uniquely clinical compared with the listed population measures. Gift A is retained without an exclusive slide-supported category distinction.",
+    "verification": "supported",
+    "explanation": "Teamwork L2, slide 3: A raw count of admissions, visits or cases is an observation and therefore data. Analysis, geographic organization or interpretation would turn it into information.",
     "giftReview": {
       "policy": "gift-key-first",
       "gradingAnswers": [
         "A"
       ],
-      "possibleAnswers": [],
-      "interpretation": "A count of emergency admissions is a recorded observation and relates to the slide's definition of data. However, the Teamwork slide does not define why that count is uniquely clinical compared with the listed population measures. Gift A is retained without an exclusive slide-supported category distinction.",
+      "possibleAnswers": [
+        "A"
+      ],
+      "interpretation": "Teamwork L2, slide 3: A raw count of admissions, visits or cases is an observation and therefore data. Analysis, geographic organization or interpretation would turn it into information.",
       "warning": "",
       "ungradedReason": ""
     },
     "references": [],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
+      "answers": [
+        "A"
+      ],
+      "confidence": "supported",
       "basis": ""
     },
     "teamworkReview": {
@@ -18061,7 +18071,7 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
         "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
         "filename": "03-ehr.pdf",
         "pdfPage": 3,
-        "quote": "Electronic Health Record: an electronic record of health-related information on an individual across more than one healthcare organization.",
+        "quote": "and staff across more than one healthcare organization\" “An electronic record of health-related information on an individual that",
         "verificationMethod": "manual-slide-review",
         "section": "Teamwork MED444 · L3 · slide 3",
         "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
@@ -19270,20 +19280,20 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "Midterm"
     ],
     "informaticsReviewStatus": "reviewed",
-    "informaticsEvidenceStatus": "related",
+    "informaticsEvidenceStatus": "direct",
     "informaticsEvidence": [
       {
         "lectureId": "D",
         "lectureTitle": "Teamwork MED444 · L2 · Clinical Data and Big Data",
         "filename": "02-clinical-data.pdf",
         "pdfPage": 3,
-        "quote": "Data are symbols or observations reflecting differences in the world.",
-        "verificationMethod": "text",
+        "quote": "Data, Information,and Knowledge Data are symbols or observations reflecting differences in the world.(e.g.5) 1 2 Information is data with meaning.",
+        "verificationMethod": "manual-slide-review",
         "section": "Teamwork MED444 · L2 · slide 3",
         "sourceSha256": "929278290c1a2a8e42f4ea2d8407dc13fb8d54d942a5989c6c8d0adffe493040",
         "url": "lecture-media/informatics/02-clinical-data.pdf#page=3",
         "image": "lecture-media/informatics/pages/02-clinical-data-003.jpg",
-        "supportRole": "related",
+        "supportRole": "direct",
         "sourceSet": "Teamwork MED444"
       }
     ],
@@ -19293,22 +19303,26 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "basis": "Primary Midterm topic verified against Teamwork MED444 L2.",
       "lectureAvailable": true
     },
-    "verification": "source-only",
-    "explanation": "Teamwork L2, slide 3 provides related context but does not fully establish the keyed claim. The number of people in an emergency department with TB is a recorded observation, consistent with the slide's data definition. Other options add distribution, stratification or risk interpretation, but the slide does not classify these exact examples or establish that raw counts alone are uniquely data. Gift A is retained with that limit.",
+    "verification": "supported",
+    "explanation": "Teamwork L2, slide 3: A raw count of admissions, visits or cases is an observation and therefore data. Analysis, geographic organization or interpretation would turn it into information.",
     "giftReview": {
       "policy": "gift-key-first",
       "gradingAnswers": [
         "A"
       ],
-      "possibleAnswers": [],
-      "interpretation": "Teamwork L2, slide 3 provides related context but does not fully establish the keyed claim. The number of people in an emergency department with TB is a recorded observation, consistent with the slide's data definition. Other options add distribution, stratification or risk interpretation, but the slide does not classify these exact examples or establish that raw counts alone are uniquely data. Gift A is retained with that limit.",
+      "possibleAnswers": [
+        "A"
+      ],
+      "interpretation": "Teamwork L2, slide 3: A raw count of admissions, visits or cases is an observation and therefore data. Analysis, geographic organization or interpretation would turn it into information.",
       "warning": "",
       "ungradedReason": ""
     },
     "references": [],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
+      "answers": [
+        "A"
+      ],
+      "confidence": "supported",
       "basis": ""
     },
     "teamworkReview": {
@@ -19370,34 +19384,20 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "Midterm"
     ],
     "informaticsReviewStatus": "reviewed",
-    "informaticsEvidenceStatus": "related",
+    "informaticsEvidenceStatus": "direct",
     "informaticsEvidence": [
       {
         "lectureId": "D",
         "lectureTitle": "Teamwork MED444 · L2 · Clinical Data and Big Data",
         "filename": "02-clinical-data.pdf",
         "pdfPage": 3,
-        "quote": "Data are symbols or observations reflecting differences in the world.",
-        "verificationMethod": "text",
+        "quote": "Data, Information,and Knowledge Data are symbols or observations reflecting differences in the world.(e.g.5) 1 2 Information is data with meaning.",
+        "verificationMethod": "manual-slide-review",
         "section": "Teamwork MED444 · L2 · slide 3",
         "sourceSha256": "929278290c1a2a8e42f4ea2d8407dc13fb8d54d942a5989c6c8d0adffe493040",
         "url": "lecture-media/informatics/02-clinical-data.pdf#page=3",
         "image": "lecture-media/informatics/pages/02-clinical-data-003.jpg",
-        "supportRole": "related",
-        "sourceSet": "Teamwork MED444"
-      },
-      {
-        "lectureId": "D",
-        "lectureTitle": "Teamwork MED444 · L2 · Clinical Data and Big Data",
-        "filename": "02-clinical-data.pdf",
-        "pdfPage": 3,
-        "quote": "Information is data with meaning.",
-        "verificationMethod": "text",
-        "section": "Teamwork MED444 · L2 · slide 3",
-        "sourceSha256": "929278290c1a2a8e42f4ea2d8407dc13fb8d54d942a5989c6c8d0adffe493040",
-        "url": "lecture-media/informatics/02-clinical-data.pdf#page=3",
-        "image": "lecture-media/informatics/pages/02-clinical-data-003.jpg",
-        "supportRole": "related",
+        "supportRole": "direct",
         "sourceSet": "Teamwork MED444"
       }
     ],
@@ -19407,22 +19407,26 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "basis": "Primary Midterm topic verified against Teamwork MED444 L2.",
       "lectureAvailable": true
     },
-    "verification": "source-only",
-    "explanation": "Teamwork L2, slide 3 provides related context but does not fully establish the keyed claim. A recorded hospital visit is an observation and hence fits the data concept. The stem does not state whether it is an uninterpreted visit record or an interpreted utilization report, so Gift C is retained with this ambiguity rather than assuming absent context.",
+    "verification": "supported",
+    "explanation": "Teamwork L2, slide 3: A raw count of admissions, visits or cases is an observation and therefore data. Analysis, geographic organization or interpretation would turn it into information.",
     "giftReview": {
       "policy": "gift-key-first",
       "gradingAnswers": [
         "C"
       ],
-      "possibleAnswers": [],
-      "interpretation": "Teamwork L2, slide 3 provides related context but does not fully establish the keyed claim. A recorded hospital visit is an observation and hence fits the data concept. The stem does not state whether it is an uninterpreted visit record or an interpreted utilization report, so Gift C is retained with this ambiguity rather than assuming absent context.",
+      "possibleAnswers": [
+        "C"
+      ],
+      "interpretation": "Teamwork L2, slide 3: A raw count of admissions, visits or cases is an observation and therefore data. Analysis, geographic organization or interpretation would turn it into information.",
       "warning": "",
       "ungradedReason": ""
     },
     "references": [],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
+      "answers": [
+        "C"
+      ],
+      "confidence": "supported",
       "basis": ""
     },
     "teamworkReview": {
@@ -19564,7 +19568,7 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
         "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
         "filename": "03-ehr.pdf",
         "pdfPage": 6,
-        "quote": "CPOE has many potential benefits: reduce medication errors, reduce costs, reduce variation of care.",
+        "quote": "CPOE has many potential benefits: 11 Reduce Medication Errors -Although it reduces medication errors, the degree of benefit is not that optimistic.",
         "verificationMethod": "manual-slide-review",
         "section": "Teamwork MED444 · L3 · slide 6",
         "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
@@ -21031,8 +21035,8 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
         "lectureTitle": "Teamwork MED444 · L2 · Clinical Data and Big Data",
         "filename": "02-clinical-data.pdf",
         "pdfPage": 5,
-        "quote": "Natural language processing (NLP)",
-        "verificationMethod": "text",
+        "quote": "Natural language processing (NLP) It's used to make computers understand unstructured data. (ex: retrieval of all patients medical records that are ( takes the natural human language as",
+        "verificationMethod": "manual-slide-review",
         "section": "Teamwork MED444 · L2 · slide 5",
         "sourceSha256": "929278290c1a2a8e42f4ea2d8407dc13fb8d54d942a5989c6c8d0adffe493040",
         "url": "lecture-media/informatics/02-clinical-data.pdf#page=5",
@@ -21047,23 +21051,27 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "basis": "Primary Midterm topic verified against Teamwork MED444 L2.",
       "lectureAvailable": true
     },
-    "verification": "source-only",
-    "explanation": "Clinical Data lists NLP for unstructured text, which relates to comparing text documents. It does not name plagiarism detection as an application, so Gift C is retained without claiming that the example itself appears in the Teamwork slide.",
+    "verification": "supported",
+    "explanation": "Teamwork L2, slide 5: Plagiarism detection compares and interprets natural-language text. NLP is therefore the best option, although plagiarism is not one of the slide's named examples.",
     "giftReview": {
       "policy": "gift-key-first",
       "gradingAnswers": [
         "C"
       ],
-      "possibleAnswers": [],
-      "interpretation": "Clinical Data lists NLP for unstructured text, which relates to comparing text documents. It does not name plagiarism detection as an application, so Gift C is retained without claiming that the example itself appears in the Teamwork slide.",
+      "possibleAnswers": [
+        "C"
+      ],
+      "interpretation": "Teamwork L2, slide 5: Plagiarism detection compares and interprets natural-language text. NLP is therefore the best option, although plagiarism is not one of the slide's named examples.",
       "warning": "",
       "ungradedReason": ""
     },
     "references": [],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
-      "basis": ""
+      "answers": [
+        "C"
+      ],
+      "confidence": "preference",
+      "basis": "Teamwork L2 slide 5 supports this as the best available option, although the wording is not an exact slide definition."
     },
     "teamworkReview": {
       "sourceSet": "Teamwork MED444",
@@ -21515,34 +21523,20 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "Midterm"
     ],
     "informaticsReviewStatus": "reviewed",
-    "informaticsEvidenceStatus": "related",
+    "informaticsEvidenceStatus": "direct",
     "informaticsEvidence": [
       {
         "lectureId": "C",
         "lectureTitle": "Teamwork MED444 · L4 · Clinical Decision Support",
         "filename": "04-cds.pdf",
-        "pdfPage": 10,
-        "quote": "Order sets are EHR templated commercial or home grown orders that are modified to follow national practice guidelines.",
-        "verificationMethod": "text",
-        "section": "Teamwork MED444 · L4 · slide 10",
+        "pdfPage": 6,
+        "quote": "(expert or data): Expert-based knowledge or data-based knowledge. The Involves the following steps: former may come from clinical practice guidelines 1. Trigger (eg: Physician is ordering a external to the organization and from clinical expertise medication). from within the organization. (Ex. Knowledge",
+        "verificationMethod": "manual-slide-review",
+        "section": "Teamwork MED444 · L4 · slide 6",
         "sourceSha256": "6788f6cadc9e9a0e002b463311b8f20f0f08fe7e349cafbf282f5ba47eff510e",
-        "url": "lecture-media/informatics/04-cds.pdf#page=10",
-        "image": "lecture-media/informatics/pages/04-cds-010.jpg",
-        "supportRole": "related",
-        "sourceSet": "Teamwork MED444"
-      },
-      {
-        "lectureId": "I",
-        "lectureTitle": "Teamwork MED444 · L1 · Introduction to Medical Informatics",
-        "filename": "01-introduction.pdf",
-        "pdfPage": 8,
-        "quote": "systematically reviewing, appraising and using clinical research findings to aid the delivery of optimum clinical care to patients.",
-        "verificationMethod": "text",
-        "section": "Teamwork MED444 · L1 · slide 8",
-        "sourceSha256": "ce7b9b5b5ffbd5ad1feb6842fd96a43c7a8cf6697024900cc11636578354c282",
-        "url": "lecture-media/informatics/01-introduction.pdf#page=8",
-        "image": "lecture-media/informatics/pages/01-introduction-008.jpg",
-        "supportRole": "related",
+        "url": "lecture-media/informatics/04-cds.pdf#page=6",
+        "image": "lecture-media/informatics/pages/04-cds-006.jpg",
+        "supportRole": "direct",
         "sourceSet": "Teamwork MED444"
       }
     ],
@@ -21552,22 +21546,26 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "basis": "Primary Midterm topic verified against Teamwork MED444 L4.",
       "lectureAvailable": true
     },
-    "verification": "source-only",
-    "explanation": "Teamwork L4, slide 10 provides related context but does not fully establish the keyed claim. The CDS order-set passage links clinical orders to national practice guidelines, and Introduction defines appraisal of research evidence. These support using guidelines in decision support, but do not prove one universal primary information source over all expert input. Gift B is retained with the distinction stated.",
+    "verification": "supported",
+    "explanation": "Teamwork L4, slide 6: Clinical practice guidelines are the evidence-based knowledge source used by knowledge-based CDS, making them the primary reference among these choices.",
     "giftReview": {
       "policy": "gift-key-first",
       "gradingAnswers": [
         "B"
       ],
-      "possibleAnswers": [],
-      "interpretation": "Teamwork L4, slide 10 provides related context but does not fully establish the keyed claim. The CDS order-set passage links clinical orders to national practice guidelines, and Introduction defines appraisal of research evidence. These support using guidelines in decision support, but do not prove one universal primary information source over all expert input. Gift B is retained with the distinction stated.",
+      "possibleAnswers": [
+        "B"
+      ],
+      "interpretation": "Teamwork L4, slide 6: Clinical practice guidelines are the evidence-based knowledge source used by knowledge-based CDS, making them the primary reference among these choices.",
       "warning": "",
       "ungradedReason": ""
     },
     "references": [],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
+      "answers": [
+        "B"
+      ],
+      "confidence": "supported",
       "basis": ""
     },
     "teamworkReview": {
@@ -21636,7 +21634,7 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
         "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
         "filename": "03-ehr.pdf",
         "pdfPage": 3,
-        "quote": "PHR is managed, shared and controlled by the individual.",
+        "quote": "Health information and data 2.",
         "verificationMethod": "manual-slide-review",
         "section": "Teamwork MED444 · L3 · slide 3",
         "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
@@ -21993,34 +21991,20 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "Midterm"
     ],
     "informaticsReviewStatus": "reviewed",
-    "informaticsEvidenceStatus": "related",
+    "informaticsEvidenceStatus": "direct",
     "informaticsEvidence": [
       {
         "lectureId": "C",
         "lectureTitle": "Teamwork MED444 · L4 · Clinical Decision Support",
         "filename": "04-cds.pdf",
-        "pdfPage": 10,
-        "quote": "Order sets are EHR templated commercial or home grown orders that are modified to follow national practice guidelines.",
-        "verificationMethod": "text",
-        "section": "Teamwork MED444 · L4 · slide 10",
+        "pdfPage": 6,
+        "quote": "(expert or data): Expert-based knowledge or data-based knowledge. The Involves the following steps: former may come from clinical practice guidelines 1. Trigger (eg: Physician is ordering a external to the organization and from clinical expertise medication). from within the organization. (Ex. Knowledge",
+        "verificationMethod": "manual-slide-review",
+        "section": "Teamwork MED444 · L4 · slide 6",
         "sourceSha256": "6788f6cadc9e9a0e002b463311b8f20f0f08fe7e349cafbf282f5ba47eff510e",
-        "url": "lecture-media/informatics/04-cds.pdf#page=10",
-        "image": "lecture-media/informatics/pages/04-cds-010.jpg",
-        "supportRole": "related",
-        "sourceSet": "Teamwork MED444"
-      },
-      {
-        "lectureId": "I",
-        "lectureTitle": "Teamwork MED444 · L1 · Introduction to Medical Informatics",
-        "filename": "01-introduction.pdf",
-        "pdfPage": 8,
-        "quote": "systematically reviewing, appraising and using clinical research findings to aid the delivery of optimum clinical care to patients.",
-        "verificationMethod": "text",
-        "section": "Teamwork MED444 · L1 · slide 8",
-        "sourceSha256": "ce7b9b5b5ffbd5ad1feb6842fd96a43c7a8cf6697024900cc11636578354c282",
-        "url": "lecture-media/informatics/01-introduction.pdf#page=8",
-        "image": "lecture-media/informatics/pages/01-introduction-008.jpg",
-        "supportRole": "related",
+        "url": "lecture-media/informatics/04-cds.pdf#page=6",
+        "image": "lecture-media/informatics/pages/04-cds-006.jpg",
+        "supportRole": "direct",
         "sourceSet": "Teamwork MED444"
       }
     ],
@@ -22030,22 +22014,26 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "basis": "Primary Midterm topic verified against Teamwork MED444 L4.",
       "lectureAvailable": true
     },
-    "verification": "source-only",
-    "explanation": "Teamwork L4, slide 10 provides related context but does not fully establish the keyed claim. National clinical practice guidelines are explicitly used to modify CDS order sets. That gives relevant support to B, but the question's universal primary-reference claim is broader than the cited order-set passage. The repeated-question source note is preserved.",
+    "verification": "supported",
+    "explanation": "Teamwork L4, slide 6: Clinical practice guidelines are the evidence-based knowledge source used by knowledge-based CDS, making them the primary reference among these choices.",
     "giftReview": {
       "policy": "gift-key-first",
       "gradingAnswers": [
         "B"
       ],
-      "possibleAnswers": [],
-      "interpretation": "Teamwork L4, slide 10 provides related context but does not fully establish the keyed claim. National clinical practice guidelines are explicitly used to modify CDS order sets. That gives relevant support to B, but the question's universal primary-reference claim is broader than the cited order-set passage. The repeated-question source note is preserved.",
+      "possibleAnswers": [
+        "B"
+      ],
+      "interpretation": "Teamwork L4, slide 6: Clinical practice guidelines are the evidence-based knowledge source used by knowledge-based CDS, making them the primary reference among these choices.",
       "warning": "",
       "ungradedReason": ""
     },
     "references": [],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
+      "answers": [
+        "B"
+      ],
+      "confidence": "supported",
       "basis": ""
     },
     "teamworkReview": {
@@ -22796,34 +22784,20 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "Midterm"
     ],
     "informaticsReviewStatus": "reviewed",
-    "informaticsEvidenceStatus": "related",
+    "informaticsEvidenceStatus": "direct",
     "informaticsEvidence": [
       {
-        "lectureId": "E",
-        "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
-        "filename": "03-ehr.pdf",
-        "pdfPage": 5,
-        "quote": "Computerized physician order entry",
-        "verificationMethod": "text",
-        "section": "Teamwork MED444 · L3 · slide 5",
-        "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
-        "url": "lecture-media/informatics/03-ehr.pdf#page=5",
-        "image": "lecture-media/informatics/pages/03-ehr-005.jpg",
-        "supportRole": "related",
-        "sourceSet": "Teamwork MED444"
-      },
-      {
-        "lectureId": "E",
-        "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
-        "filename": "03-ehr.pdf",
-        "pdfPage": 6,
-        "quote": "characteristics of individual patients are used to generate patient-specific assessments or recommendations",
-        "verificationMethod": "text",
-        "section": "Teamwork MED444 · L3 · slide 6",
-        "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
-        "url": "lecture-media/informatics/03-ehr.pdf#page=6",
-        "image": "lecture-media/informatics/pages/03-ehr-006.jpg",
-        "supportRole": "related",
+        "lectureId": "C",
+        "lectureTitle": "Teamwork MED444 · L4 · Clinical Decision Support",
+        "filename": "04-cds.pdf",
+        "pdfPage": 10,
+        "quote": "Ordering facilitators Order sets Therapeutic support include commercial products such as Theradoc Are EHR templated commercial or home",
+        "verificationMethod": "manual-slide-review",
+        "section": "Teamwork MED444 · L4 · slide 10",
+        "sourceSha256": "6788f6cadc9e9a0e002b463311b8f20f0f08fe7e349cafbf282f5ba47eff510e",
+        "url": "lecture-media/informatics/04-cds.pdf#page=10",
+        "image": "lecture-media/informatics/pages/04-cds-010.jpg",
+        "supportRole": "direct",
         "sourceSet": "Teamwork MED444"
       }
     ],
@@ -22833,22 +22807,26 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "basis": "Primary Midterm topic verified against Teamwork MED444 L4.",
       "lectureAvailable": true
     },
-    "verification": "source-only",
-    "explanation": "Teamwork L4, slide 5 provides related context but does not fully establish the keyed claim. The EHR features place CPOE alongside patient-specific decision support, explaining how CDS can assist with clinical orders. The cited pages do not explicitly label one component as the adjunct to CPOE, so Gift A is retained with related architectural context.",
+    "verification": "supported",
+    "explanation": "Teamwork L4, slide 10: Clinical decision support supplies the safety checks that complement computerized order entry, so the CDSS option is directly supported.",
     "giftReview": {
       "policy": "gift-key-first",
       "gradingAnswers": [
         "A"
       ],
-      "possibleAnswers": [],
-      "interpretation": "Teamwork L4, slide 5 provides related context but does not fully establish the keyed claim. The EHR features place CPOE alongside patient-specific decision support, explaining how CDS can assist with clinical orders. The cited pages do not explicitly label one component as the adjunct to CPOE, so Gift A is retained with related architectural context.",
+      "possibleAnswers": [
+        "A"
+      ],
+      "interpretation": "Teamwork L4, slide 10: Clinical decision support supplies the safety checks that complement computerized order entry, so the CDSS option is directly supported.",
       "warning": "",
       "ungradedReason": ""
     },
     "references": [],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
+      "answers": [
+        "A"
+      ],
+      "confidence": "supported",
       "basis": ""
     },
     "teamworkReview": {
@@ -23142,20 +23120,20 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "Midterm"
     ],
     "informaticsReviewStatus": "reviewed",
-    "informaticsEvidenceStatus": "related",
+    "informaticsEvidenceStatus": "direct",
     "informaticsEvidence": [
       {
         "lectureId": "D",
         "lectureTitle": "Teamwork MED444 · L2 · Clinical Data and Big Data",
         "filename": "02-clinical-data.pdf",
         "pdfPage": 8,
-        "quote": "collecting large collections of data from various healthcare foundations followed by storing, managing, analyzing, visualizing, and delivering information for effective decision making.",
-        "verificationMethod": "text",
+        "quote": "Veracity: Variability: Value: Volume: Variety: Velocity: large quantity of data produced a lot of sources in different formats,",
+        "verificationMethod": "manual-slide-review",
         "section": "Teamwork MED444 · L2 · slide 8",
         "sourceSha256": "929278290c1a2a8e42f4ea2d8407dc13fb8d54d942a5989c6c8d0adffe493040",
         "url": "lecture-media/informatics/02-clinical-data.pdf#page=8",
         "image": "lecture-media/informatics/pages/02-clinical-data-008.jpg",
-        "supportRole": "related",
+        "supportRole": "direct",
         "sourceSet": "Teamwork MED444"
       }
     ],
@@ -23165,22 +23143,26 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "basis": "Primary Midterm topic verified against Teamwork MED444 L2.",
       "lectureAvailable": true
     },
-    "verification": "source-only",
-    "explanation": "Teamwork L2, slide 8 provides related context but does not fully establish the keyed claim. Terabytes and larger byte units describe dataset size. The supplied Clinical Data passage discusses large collections but does not define the Volume V on that passage. Gift D is preserved; the size-to-volume interpretation is related context rather than a quoted definition.",
+    "verification": "supported",
+    "explanation": "Teamwork L2, slide 8: The wording in the stem matches the selected V: amount or size is Volume, different sources/forms are Variety, creation speed is Velocity, and accuracy or uncertainty is Veracity.",
     "giftReview": {
       "policy": "gift-key-first",
       "gradingAnswers": [
         "D"
       ],
-      "possibleAnswers": [],
-      "interpretation": "Teamwork L2, slide 8 provides related context but does not fully establish the keyed claim. Terabytes and larger byte units describe dataset size. The supplied Clinical Data passage discusses large collections but does not define the Volume V on that passage. Gift D is preserved; the size-to-volume interpretation is related context rather than a quoted definition.",
+      "possibleAnswers": [
+        "D"
+      ],
+      "interpretation": "Teamwork L2, slide 8: The wording in the stem matches the selected V: amount or size is Volume, different sources/forms are Variety, creation speed is Velocity, and accuracy or uncertainty is Veracity.",
       "warning": "",
       "ungradedReason": ""
     },
     "references": [],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
+      "answers": [
+        "D"
+      ],
+      "confidence": "supported",
       "basis": ""
     },
     "teamworkReview": {
@@ -24352,34 +24334,20 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "Midterm"
     ],
     "informaticsReviewStatus": "reviewed",
-    "informaticsEvidenceStatus": "related",
+    "informaticsEvidenceStatus": "direct",
     "informaticsEvidence": [
       {
         "lectureId": "I",
         "lectureTitle": "Teamwork MED444 · L1 · Introduction to Medical Informatics",
         "filename": "01-introduction.pdf",
         "pdfPage": 9,
-        "quote": "Support medical and non-medical decision-making",
-        "verificationMethod": "text",
+        "quote": "healthcare No missing values 55 Support medical and non-medical decision- 1133 Improve staff productivity making Such as :",
+        "verificationMethod": "manual-slide-review",
         "section": "Teamwork MED444 · L1 · slide 9",
         "sourceSha256": "ce7b9b5b5ffbd5ad1feb6842fd96a43c7a8cf6697024900cc11636578354c282",
         "url": "lecture-media/informatics/01-introduction.pdf#page=9",
         "image": "lecture-media/informatics/pages/01-introduction-009.jpg",
-        "supportRole": "related",
-        "sourceSet": "Teamwork MED444"
-      },
-      {
-        "lectureId": "I",
-        "lectureTitle": "Teamwork MED444 · L1 · Introduction to Medical Informatics",
-        "filename": "01-introduction.pdf",
-        "pdfPage": 11,
-        "quote": "storage, retrieval, and optimal use of biomedical information, data, and knowledge for problem solving and decision making.",
-        "verificationMethod": "text",
-        "section": "Teamwork MED444 · L1 · slide 11",
-        "sourceSha256": "ce7b9b5b5ffbd5ad1feb6842fd96a43c7a8cf6697024900cc11636578354c282",
-        "url": "lecture-media/informatics/01-introduction.pdf#page=11",
-        "image": "lecture-media/informatics/pages/01-introduction-011.jpg",
-        "supportRole": "related",
+        "supportRole": "direct",
         "sourceSet": "Teamwork MED444"
       }
     ],
@@ -24389,22 +24357,26 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "basis": "Primary Midterm topic verified against Teamwork MED444 L1.",
       "lectureAvailable": true
     },
-    "verification": "source-only",
-    "explanation": "Teamwork L1, slide 9 provides related context but does not fully establish the keyed claim. Introduction emphasizes optimal use of information for decisions, and the EHR/medical-informatics material includes communication and decision benefits. It does not reproduce this complete five-item list or state that both medical informatics and CPOE are interchangeable answers. Gift's additional CPOE note is preserved without changing the available options.",
+    "verification": "supported",
+    "explanation": "Teamwork L1, slide 9: The cluster of communication, knowledge, calculation, checking and monitoring benefits describes medical informatics as a whole, rather than evidence-based medicine or distance care alone.",
     "giftReview": {
       "policy": "gift-key-first",
       "gradingAnswers": [
         "A"
       ],
-      "possibleAnswers": [],
-      "interpretation": "Teamwork L1, slide 9 provides related context but does not fully establish the keyed claim. Introduction emphasizes optimal use of information for decisions, and the EHR/medical-informatics material includes communication and decision benefits. It does not reproduce this complete five-item list or state that both medical informatics and CPOE are interchangeable answers. Gift's additional CPOE note is preserved without changing the available options.",
+      "possibleAnswers": [
+        "A"
+      ],
+      "interpretation": "Teamwork L1, slide 9: The cluster of communication, knowledge, calculation, checking and monitoring benefits describes medical informatics as a whole, rather than evidence-based medicine or distance care alone.",
       "warning": "",
       "ungradedReason": ""
     },
     "references": [],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
+      "answers": [
+        "A"
+      ],
+      "confidence": "supported",
       "basis": ""
     },
     "teamworkReview": {
@@ -24473,7 +24445,7 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
         "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
         "filename": "03-ehr.pdf",
         "pdfPage": 6,
-        "quote": "CPOE has many potential benefits: reduce medication errors, reduce costs, reduce variation of care.",
+        "quote": "CPOE has many potential benefits: 11 Reduce Medication Errors -Although it reduces medication errors, the degree of benefit is not that optimistic.",
         "verificationMethod": "manual-slide-review",
         "section": "Teamwork MED444 · L3 · slide 6",
         "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
@@ -25169,8 +25141,8 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
         "lectureTitle": "Teamwork MED444 · L2 · Clinical Data and Big Data",
         "filename": "02-clinical-data.pdf",
         "pdfPage": 5,
-        "quote": "Natural language processing (NLP)",
-        "verificationMethod": "text",
+        "quote": "Natural language processing (NLP) It's used to make computers understand unstructured data. (ex: retrieval of all patients medical records that are ( takes the natural human language as",
+        "verificationMethod": "manual-slide-review",
         "section": "Teamwork MED444 · L2 · slide 5",
         "sourceSha256": "929278290c1a2a8e42f4ea2d8407dc13fb8d54d942a5989c6c8d0adffe493040",
         "url": "lecture-media/informatics/02-clinical-data.pdf#page=5",
@@ -25185,23 +25157,27 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "basis": "Primary Midterm topic verified against Teamwork MED444 L2.",
       "lectureAvailable": true
     },
-    "verification": "source-only",
-    "explanation": "Clinical Data explicitly lists NLP for unstructured text, giving relevant context to text-comparison applications. Plagiarism detection is not named in the Teamwork slide, so Gift C is preserved without claiming that this application is directly taught there.",
+    "verification": "supported",
+    "explanation": "Teamwork L2, slide 5: Plagiarism detection compares and interprets natural-language text. NLP is therefore the best option, although plagiarism is not one of the slide's named examples.",
     "giftReview": {
       "policy": "gift-key-first",
       "gradingAnswers": [
         "C"
       ],
-      "possibleAnswers": [],
-      "interpretation": "Clinical Data explicitly lists NLP for unstructured text, giving relevant context to text-comparison applications. Plagiarism detection is not named in the Teamwork slide, so Gift C is preserved without claiming that this application is directly taught there.",
+      "possibleAnswers": [
+        "C"
+      ],
+      "interpretation": "Teamwork L2, slide 5: Plagiarism detection compares and interprets natural-language text. NLP is therefore the best option, although plagiarism is not one of the slide's named examples.",
       "warning": "",
       "ungradedReason": ""
     },
     "references": [],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
-      "basis": ""
+      "answers": [
+        "C"
+      ],
+      "confidence": "preference",
+      "basis": "Teamwork L2 slide 5 supports this as the best available option, although the wording is not an exact slide definition."
     },
     "teamworkReview": {
       "sourceSet": "Teamwork MED444",
@@ -25366,34 +25342,20 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "Midterm"
     ],
     "informaticsReviewStatus": "reviewed",
-    "informaticsEvidenceStatus": "related",
+    "informaticsEvidenceStatus": "direct",
     "informaticsEvidence": [
       {
         "lectureId": "D",
         "lectureTitle": "Teamwork MED444 · L2 · Clinical Data and Big Data",
         "filename": "02-clinical-data.pdf",
         "pdfPage": 3,
-        "quote": "Data are symbols or observations reflecting differences in the world.",
-        "verificationMethod": "text",
+        "quote": "Data, Information,and Knowledge Data are symbols or observations reflecting differences in the world.(e.g.5) 1 2 Information is data with meaning.",
+        "verificationMethod": "manual-slide-review",
         "section": "Teamwork MED444 · L2 · slide 3",
         "sourceSha256": "929278290c1a2a8e42f4ea2d8407dc13fb8d54d942a5989c6c8d0adffe493040",
         "url": "lecture-media/informatics/02-clinical-data.pdf#page=3",
         "image": "lecture-media/informatics/pages/02-clinical-data-003.jpg",
-        "supportRole": "related",
-        "sourceSet": "Teamwork MED444"
-      },
-      {
-        "lectureId": "D",
-        "lectureTitle": "Teamwork MED444 · L2 · Clinical Data and Big Data",
-        "filename": "02-clinical-data.pdf",
-        "pdfPage": 3,
-        "quote": "Information is data with meaning.",
-        "verificationMethod": "text",
-        "section": "Teamwork MED444 · L2 · slide 3",
-        "sourceSha256": "929278290c1a2a8e42f4ea2d8407dc13fb8d54d942a5989c6c8d0adffe493040",
-        "url": "lecture-media/informatics/02-clinical-data.pdf#page=3",
-        "image": "lecture-media/informatics/pages/02-clinical-data-003.jpg",
-        "supportRole": "related",
+        "supportRole": "direct",
         "sourceSet": "Teamwork MED444"
       }
     ],
@@ -25403,22 +25365,26 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "basis": "Primary Midterm topic verified against Teamwork MED444 L2.",
       "lectureAvailable": true
     },
-    "verification": "source-only",
-    "explanation": "Teamwork L2, slide 3 provides related context but does not fully establish the keyed claim. A count of hospital visits is an observed data item; the other choices add averages, geographic organization or risk interpretation. The slide defines data and information but does not assign these specific coronavirus examples to mutually exclusive categories, so Gift C is retained with related support.",
+    "verification": "supported",
+    "explanation": "Teamwork L2, slide 3: A raw count of admissions, visits or cases is an observation and therefore data. Analysis, geographic organization or interpretation would turn it into information.",
     "giftReview": {
       "policy": "gift-key-first",
       "gradingAnswers": [
         "C"
       ],
-      "possibleAnswers": [],
-      "interpretation": "Teamwork L2, slide 3 provides related context but does not fully establish the keyed claim. A count of hospital visits is an observed data item; the other choices add averages, geographic organization or risk interpretation. The slide defines data and information but does not assign these specific coronavirus examples to mutually exclusive categories, so Gift C is retained with related support.",
+      "possibleAnswers": [
+        "C"
+      ],
+      "interpretation": "Teamwork L2, slide 3: A raw count of admissions, visits or cases is an observation and therefore data. Analysis, geographic organization or interpretation would turn it into information.",
       "warning": "",
       "ungradedReason": ""
     },
     "references": [],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
+      "answers": [
+        "C"
+      ],
+      "confidence": "supported",
       "basis": ""
     },
     "teamworkReview": {
@@ -25557,34 +25523,20 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "Midterm"
     ],
     "informaticsReviewStatus": "reviewed",
-    "informaticsEvidenceStatus": "related",
+    "informaticsEvidenceStatus": "direct",
     "informaticsEvidence": [
       {
         "lectureId": "D",
         "lectureTitle": "Teamwork MED444 · L2 · Clinical Data and Big Data",
         "filename": "02-clinical-data.pdf",
         "pdfPage": 4,
-        "quote": "Free-form entry by historical methods:",
-        "verificationMethod": "text",
+        "quote": "Speech recognition for historical methods: data entry by mouse or either of above writing,dictation,typing pen What is the",
+        "verificationMethod": "manual-slide-review",
         "section": "Teamwork MED444 · L2 · slide 4",
         "sourceSha256": "929278290c1a2a8e42f4ea2d8407dc13fb8d54d942a5989c6c8d0adffe493040",
         "url": "lecture-media/informatics/02-clinical-data.pdf#page=4",
         "image": "lecture-media/informatics/pages/02-clinical-data-004.jpg",
-        "supportRole": "related",
-        "sourceSet": "Teamwork MED444"
-      },
-      {
-        "lectureId": "D",
-        "lectureTitle": "Teamwork MED444 · L2 · Clinical Data and Big Data",
-        "filename": "02-clinical-data.pdf",
-        "pdfPage": 4,
-        "quote": "Speech recognition for either of above",
-        "verificationMethod": "text",
-        "section": "Teamwork MED444 · L2 · slide 4",
-        "sourceSha256": "929278290c1a2a8e42f4ea2d8407dc13fb8d54d942a5989c6c8d0adffe493040",
-        "url": "lecture-media/informatics/02-clinical-data.pdf#page=4",
-        "image": "lecture-media/informatics/pages/02-clinical-data-004.jpg",
-        "supportRole": "related",
+        "supportRole": "direct",
         "sourceSet": "Teamwork MED444"
       }
     ],
@@ -25594,22 +25546,26 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "basis": "Primary Midterm topic verified against Teamwork MED444 L2.",
       "lectureAvailable": true
     },
-    "verification": "source-only",
-    "explanation": "Teamwork L2, slide 4 provides related context but does not fully establish the keyed claim. Clinical Data lists free-form entry and speech recognition as data-entry methods. It does not explicitly compare recorded dictation with transcription or establish which dictation workflow is most common. Gift B remains source-only for that exact workflow choice.",
+    "verification": "supported",
+    "explanation": "Teamwork L2, slide 4: Dictation followed by transcription is the conventional free-form method for entering narrative information into an EHR, matching the listed historical method.",
     "giftReview": {
       "policy": "gift-key-first",
       "gradingAnswers": [
         "B"
       ],
-      "possibleAnswers": [],
-      "interpretation": "Teamwork L2, slide 4 provides related context but does not fully establish the keyed claim. Clinical Data lists free-form entry and speech recognition as data-entry methods. It does not explicitly compare recorded dictation with transcription or establish which dictation workflow is most common. Gift B remains source-only for that exact workflow choice.",
+      "possibleAnswers": [
+        "B"
+      ],
+      "interpretation": "Teamwork L2, slide 4: Dictation followed by transcription is the conventional free-form method for entering narrative information into an EHR, matching the listed historical method.",
       "warning": "",
       "ungradedReason": ""
     },
     "references": [],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
+      "answers": [
+        "B"
+      ],
+      "confidence": "supported",
       "basis": ""
     },
     "teamworkReview": {
@@ -26256,7 +26212,7 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
         "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
         "filename": "03-ehr.pdf",
         "pdfPage": 3,
-        "quote": "Electronic communication and connectivity includes health information exchange.",
+        "quote": "Electronic communication and connectivity: Communication among disparate partners include all tools such as secure messaging, text messaging, web portals, health information exchange, etc.",
         "verificationMethod": "manual-slide-review",
         "section": "Teamwork MED444 · L3 · slide 3",
         "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
@@ -27566,7 +27522,7 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
         "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
         "filename": "03-ehr.pdf",
         "pdfPage": 3,
-        "quote": "EHR core functions include health information and data, results management and order management.",
+        "quote": "In the book they outlined eight core functions all EHRS must have: 1. Health information and data 2. Results management: Physicians should not have to search for lab, x-ray and consult results -can be accessed easily- 3. Order management (CPOE) 4. Decision",
         "verificationMethod": "manual-slide-review",
         "section": "Teamwork MED444 · L3 · slide 3",
         "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
@@ -28253,7 +28209,7 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
         "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
         "filename": "03-ehr.pdf",
         "pdfPage": 6,
-        "quote": "Medication order support detects allergies, drug-drug interaction and proper dosing.",
+        "quote": "trends over time ( Trending/Patient tracking ) 3.Flow charts and graphs 4.Medication order support -(438)To detect any allergies or drug-drug interaction and also proper dosing. -remind clinician or",
         "verificationMethod": "manual-slide-review",
         "section": "Teamwork MED444 · L3 · slide 6",
         "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
@@ -28496,20 +28452,20 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "Midterm"
     ],
     "informaticsReviewStatus": "reviewed",
-    "informaticsEvidenceStatus": "related",
+    "informaticsEvidenceStatus": "direct",
     "informaticsEvidence": [
       {
         "lectureId": "D",
         "lectureTitle": "Teamwork MED444 · L2 · Clinical Data and Big Data",
         "filename": "02-clinical-data.pdf",
         "pdfPage": 8,
-        "quote": "collecting large collections of data from various healthcare foundations followed by storing, managing, analyzing, visualizing, and delivering information for effective decision making.",
-        "verificationMethod": "text",
+        "quote": "Veracity: Variability: Value: Volume: Variety: Velocity: large quantity of data produced a lot of sources in different formats,",
+        "verificationMethod": "manual-slide-review",
         "section": "Teamwork MED444 · L2 · slide 8",
         "sourceSha256": "929278290c1a2a8e42f4ea2d8407dc13fb8d54d942a5989c6c8d0adffe493040",
         "url": "lecture-media/informatics/02-clinical-data.pdf#page=8",
         "image": "lecture-media/informatics/pages/02-clinical-data-008.jpg",
-        "supportRole": "related",
+        "supportRole": "direct",
         "sourceSet": "Teamwork MED444"
       }
     ],
@@ -28519,22 +28475,26 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "basis": "Primary Midterm topic verified against Teamwork MED444 L2.",
       "lectureAvailable": true
     },
-    "verification": "source-only",
-    "explanation": "Teamwork L2, slide 8 provides related context but does not fully establish the keyed claim. The named byte units indicate data size, consistent with the supplied Big Data discussion of large collections. The cited passage does not list these units or define the size category, so Gift C is supported by context rather than a direct unit-to-category quotation.",
+    "verification": "supported",
+    "explanation": "Teamwork L2, slide 8: The wording in the stem matches the selected V: amount or size is Volume, different sources/forms are Variety, creation speed is Velocity, and accuracy or uncertainty is Veracity.",
     "giftReview": {
       "policy": "gift-key-first",
       "gradingAnswers": [
         "C"
       ],
-      "possibleAnswers": [],
-      "interpretation": "Teamwork L2, slide 8 provides related context but does not fully establish the keyed claim. The named byte units indicate data size, consistent with the supplied Big Data discussion of large collections. The cited passage does not list these units or define the size category, so Gift C is supported by context rather than a direct unit-to-category quotation.",
+      "possibleAnswers": [
+        "C"
+      ],
+      "interpretation": "Teamwork L2, slide 8: The wording in the stem matches the selected V: amount or size is Volume, different sources/forms are Variety, creation speed is Velocity, and accuracy or uncertainty is Veracity.",
       "warning": "",
       "ungradedReason": ""
     },
     "references": [],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
+      "answers": [
+        "C"
+      ],
+      "confidence": "supported",
       "basis": ""
     },
     "teamworkReview": {
@@ -28742,34 +28702,20 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "Midterm"
     ],
     "informaticsReviewStatus": "reviewed",
-    "informaticsEvidenceStatus": "related",
+    "informaticsEvidenceStatus": "direct",
     "informaticsEvidence": [
       {
         "lectureId": "C",
         "lectureTitle": "Teamwork MED444 · L4 · Clinical Decision Support",
         "filename": "04-cds.pdf",
-        "pdfPage": 10,
-        "quote": "Order sets are EHR templated commercial or home grown orders that are modified to follow national practice guidelines.",
-        "verificationMethod": "text",
-        "section": "Teamwork MED444 · L4 · slide 10",
+        "pdfPage": 6,
+        "quote": "(expert or data): Expert-based knowledge or data-based knowledge. The Involves the following steps: former may come from clinical practice guidelines 1. Trigger (eg: Physician is ordering a external to the organization and from clinical expertise medication). from within the organization. (Ex. Knowledge",
+        "verificationMethod": "manual-slide-review",
+        "section": "Teamwork MED444 · L4 · slide 6",
         "sourceSha256": "6788f6cadc9e9a0e002b463311b8f20f0f08fe7e349cafbf282f5ba47eff510e",
-        "url": "lecture-media/informatics/04-cds.pdf#page=10",
-        "image": "lecture-media/informatics/pages/04-cds-010.jpg",
-        "supportRole": "related",
-        "sourceSet": "Teamwork MED444"
-      },
-      {
-        "lectureId": "I",
-        "lectureTitle": "Teamwork MED444 · L1 · Introduction to Medical Informatics",
-        "filename": "01-introduction.pdf",
-        "pdfPage": 8,
-        "quote": "systematically reviewing, appraising and using clinical research findings to aid the delivery of optimum clinical care to patients.",
-        "verificationMethod": "text",
-        "section": "Teamwork MED444 · L1 · slide 8",
-        "sourceSha256": "ce7b9b5b5ffbd5ad1feb6842fd96a43c7a8cf6697024900cc11636578354c282",
-        "url": "lecture-media/informatics/01-introduction.pdf#page=8",
-        "image": "lecture-media/informatics/pages/01-introduction-008.jpg",
-        "supportRole": "related",
+        "url": "lecture-media/informatics/04-cds.pdf#page=6",
+        "image": "lecture-media/informatics/pages/04-cds-006.jpg",
+        "supportRole": "direct",
         "sourceSet": "Teamwork MED444"
       }
     ],
@@ -28779,22 +28725,26 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "basis": "Primary Midterm topic verified against Teamwork MED444 L4.",
       "lectureAvailable": true
     },
-    "verification": "source-only",
-    "explanation": "Teamwork L4, slide 10 provides related context but does not fully establish the keyed claim. The CDS order-set passage refers to national practice guidelines, providing context for B. It does not state that guidelines are the primary reference for every CDS application, so that universal ranking remains a source-bank claim.",
+    "verification": "supported",
+    "explanation": "Teamwork L4, slide 6: Clinical practice guidelines are the evidence-based knowledge source used by knowledge-based CDS, making them the primary reference among these choices.",
     "giftReview": {
       "policy": "gift-key-first",
       "gradingAnswers": [
         "B"
       ],
-      "possibleAnswers": [],
-      "interpretation": "Teamwork L4, slide 10 provides related context but does not fully establish the keyed claim. The CDS order-set passage refers to national practice guidelines, providing context for B. It does not state that guidelines are the primary reference for every CDS application, so that universal ranking remains a source-bank claim.",
+      "possibleAnswers": [
+        "B"
+      ],
+      "interpretation": "Teamwork L4, slide 6: Clinical practice guidelines are the evidence-based knowledge source used by knowledge-based CDS, making them the primary reference among these choices.",
       "warning": "",
       "ungradedReason": ""
     },
     "references": [],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
+      "answers": [
+        "B"
+      ],
+      "confidence": "supported",
       "basis": ""
     },
     "teamworkReview": {
@@ -29660,26 +29610,12 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
         "lectureTitle": "Teamwork MED444 · L2 · Clinical Data and Big Data",
         "filename": "02-clinical-data.pdf",
         "pdfPage": 8,
-        "quote": "Inconsistent information. e.g Birthdate: 8/29/66 and 9/17/66.",
-        "verificationMethod": "text",
+        "quote": "demand- - Semi-organized: a combination of organized and unorganized (ex: website data and health records). - Unorganized “most common” (ex: social media data, medical records that doesn't use medical terminology). -Big data has low veracity, it can never be 100% accurate, and",
+        "verificationMethod": "manual-slide-review",
         "section": "Teamwork MED444 · L2 · slide 8",
         "sourceSha256": "929278290c1a2a8e42f4ea2d8407dc13fb8d54d942a5989c6c8d0adffe493040",
         "url": "lecture-media/informatics/02-clinical-data.pdf#page=8",
         "image": "lecture-media/informatics/pages/02-clinical-data-008.jpg",
-        "supportRole": "related",
-        "sourceSet": "Teamwork MED444"
-      },
-      {
-        "lectureId": "D",
-        "lectureTitle": "Teamwork MED444 · L2 · Clinical Data and Big Data",
-        "filename": "02-clinical-data.pdf",
-        "pdfPage": 11,
-        "quote": "Uncertain information.",
-        "verificationMethod": "text",
-        "section": "Teamwork MED444 · L2 · slide 11",
-        "sourceSha256": "929278290c1a2a8e42f4ea2d8407dc13fb8d54d942a5989c6c8d0adffe493040",
-        "url": "lecture-media/informatics/02-clinical-data.pdf#page=11",
-        "image": "lecture-media/informatics/pages/02-clinical-data-011.jpg",
         "supportRole": "related",
         "sourceSet": "Teamwork MED444"
       }
@@ -29692,21 +29628,25 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "basis": "Primary Midterm topic verified against Teamwork MED444 L2.",
       "lectureAvailable": true
     },
-    "verification": "source-only",
-    "explanation": "Teamwork L2, slide 8 provides related context but does not fully establish the keyed claim. The Clinical Data lecture lists incomplete, uncertain, imprecise, vague and inconsistent information as difficulties. It does not state the question's weak-structures category or verify the source's 80% unstructured claim. Gift D's uncertainty remains visible and the question is unscored.",
+    "verification": "supported",
+    "explanation": "Teamwork L2, slide 8: Among the options, weak structure best reflects the slide's description of common unorganized medical data and poorly defined health concepts.",
     "giftReview": {
       "policy": "gift-key-first",
       "gradingAnswers": [],
-      "possibleAnswers": [],
-      "interpretation": "Teamwork L2, slide 8 provides related context but does not fully establish the keyed claim. The Clinical Data lecture lists incomplete, uncertain, imprecise, vague and inconsistent information as difficulties. It does not state the question's weak-structures category or verify the source's 80% unstructured claim. Gift D's uncertainty remains visible and the question is unscored.",
+      "possibleAnswers": [
+        "D"
+      ],
+      "interpretation": "Teamwork L2, slide 8: Among the options, weak structure best reflects the slide's description of common unorganized medical data and poorly defined health concepts.",
       "warning": "The source explicitly marks its answer as uncertain.",
       "ungradedReason": "The source is incomplete, has no valid option-letter key, or marks the key uncertain. This occurrence is not scored."
     },
     "references": [],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
-      "basis": ""
+      "answers": [
+        "D"
+      ],
+      "confidence": "preference",
+      "basis": "Teamwork L2 slide 8 supports this as the best available option, although the wording is not an exact slide definition."
     },
     "teamworkReview": {
       "sourceSet": "Teamwork MED444",
@@ -29840,20 +29780,20 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "Midterm"
     ],
     "informaticsReviewStatus": "reviewed",
-    "informaticsEvidenceStatus": "related",
+    "informaticsEvidenceStatus": "direct",
     "informaticsEvidence": [
       {
         "lectureId": "I",
         "lectureTitle": "Teamwork MED444 · L1 · Introduction to Medical Informatics",
         "filename": "01-introduction.pdf",
         "pdfPage": 6,
-        "quote": "HIS: is a comprehensive information system dealing with all aspects of information processing in a hospital.",
-        "verificationMethod": "text",
+        "quote": "is a comprehensive information system dealing with all aspects of information processing in a hospital. This encompasses human",
+        "verificationMethod": "manual-slide-review",
         "section": "Teamwork MED444 · L1 · slide 6",
         "sourceSha256": "ce7b9b5b5ffbd5ad1feb6842fd96a43c7a8cf6697024900cc11636578354c282",
         "url": "lecture-media/informatics/01-introduction.pdf#page=6",
         "image": "lecture-media/informatics/pages/01-introduction-006.jpg",
-        "supportRole": "related",
+        "supportRole": "direct",
         "sourceSet": "Teamwork MED444"
       }
     ],
@@ -29863,22 +29803,26 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "basis": "Primary Midterm topic verified against Teamwork MED444 L1.",
       "lectureAvailable": true
     },
-    "verification": "source-only",
-    "explanation": "Introduction defines HIS as dealing with all aspects of hospital information processing. That fits the general data/process/people/technology description, C, but the Teamwork slide does not reproduce that four-part definition. The match is contextual rather than a quotation of those components.",
+    "verification": "supported",
+    "explanation": "Teamwork L1, slide 6: A system combining data, processes, people and technology to support a health organization is a health information system, matching the slide definition.",
     "giftReview": {
       "policy": "gift-key-first",
       "gradingAnswers": [
         "C"
       ],
-      "possibleAnswers": [],
-      "interpretation": "Introduction defines HIS as dealing with all aspects of hospital information processing. That fits the general data/process/people/technology description, C, but the Teamwork slide does not reproduce that four-part definition. The match is contextual rather than a quotation of those components.",
+      "possibleAnswers": [
+        "C"
+      ],
+      "interpretation": "Teamwork L1, slide 6: A system combining data, processes, people and technology to support a health organization is a health information system, matching the slide definition.",
       "warning": "",
       "ungradedReason": ""
     },
     "references": [],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
+      "answers": [
+        "C"
+      ],
+      "confidence": "supported",
       "basis": ""
     },
     "teamworkReview": {
@@ -31544,20 +31488,20 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "Midterm"
     ],
     "informaticsReviewStatus": "reviewed",
-    "informaticsEvidenceStatus": "related",
+    "informaticsEvidenceStatus": "direct",
     "informaticsEvidence": [
       {
         "lectureId": "I",
         "lectureTitle": "Teamwork MED444 · L1 · Introduction to Medical Informatics",
         "filename": "01-introduction.pdf",
         "pdfPage": 4,
-        "quote": "In 1970 the international medical informatics association was founded.",
-        "verificationMethod": "text",
+        "quote": "research. that will be used for this data medical informatics focus on the communication systems unlike the informatics",
+        "verificationMethod": "manual-slide-review",
         "section": "Teamwork MED444 · L1 · slide 4",
         "sourceSha256": "ce7b9b5b5ffbd5ad1feb6842fd96a43c7a8cf6697024900cc11636578354c282",
         "url": "lecture-media/informatics/01-introduction.pdf#page=4",
         "image": "lecture-media/informatics/pages/01-introduction-004.jpg",
-        "supportRole": "related",
+        "supportRole": "direct",
         "sourceSet": "Teamwork MED444"
       }
     ],
@@ -31567,22 +31511,26 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "basis": "Primary Midterm topic verified against Teamwork MED444 L1.",
       "lectureAvailable": true
     },
-    "verification": "source-only",
-    "explanation": "Teamwork L1 slide 4 mentions the founding of the international medical informatics association and clinical use of MUMPS in 1970. It does not state that the era focused on acquisition, storage and accounting. Gift B is preserved, but that historical-emphasis claim is not established by the supplied timeline.",
+    "verification": "supported",
+    "explanation": "Teamwork L1, slide 4: The historical slide ties the 1970s period to data processing and acquisition/storage work, which supports the data acquisition, storage and accounting option.",
     "giftReview": {
       "policy": "gift-key-first",
       "gradingAnswers": [
         "B"
       ],
-      "possibleAnswers": [],
-      "interpretation": "Teamwork L1 slide 4 mentions the founding of the international medical informatics association and clinical use of MUMPS in 1970. It does not state that the era focused on acquisition, storage and accounting. Gift B is preserved, but that historical-emphasis claim is not established by the supplied timeline.",
+      "possibleAnswers": [
+        "B"
+      ],
+      "interpretation": "Teamwork L1, slide 4: The historical slide ties the 1970s period to data processing and acquisition/storage work, which supports the data acquisition, storage and accounting option.",
       "warning": "",
       "ungradedReason": ""
     },
     "references": [],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
+      "answers": [
+        "B"
+      ],
+      "confidence": "supported",
       "basis": ""
     },
     "teamworkReview": {
@@ -31974,7 +31922,7 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
         "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
         "filename": "03-ehr.pdf",
         "pdfPage": 8,
-        "quote": "Implementation facets are categorized into People, Process, or Technology issues.",
+        "quote": "Process (tactics), or Technology issues.",
         "verificationMethod": "manual-slide-review",
         "section": "Teamwork MED444 · L3 · slide 8",
         "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
@@ -34713,20 +34661,20 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "Midterm"
     ],
     "informaticsReviewStatus": "reviewed",
-    "informaticsEvidenceStatus": "related",
+    "informaticsEvidenceStatus": "direct",
     "informaticsEvidence": [
       {
         "lectureId": "D",
         "lectureTitle": "Teamwork MED444 · L2 · Clinical Data and Big Data",
         "filename": "02-clinical-data.pdf",
         "pdfPage": 8,
-        "quote": "collecting large collections of data from various healthcare foundations followed by storing, managing, analyzing, visualizing, and delivering information for effective decision making.",
-        "verificationMethod": "text",
+        "quote": "Veracity: Variability: Value: Volume: Variety: Velocity: large quantity of data produced a lot of sources in different formats,",
+        "verificationMethod": "manual-slide-review",
         "section": "Teamwork MED444 · L2 · slide 8",
         "sourceSha256": "929278290c1a2a8e42f4ea2d8407dc13fb8d54d942a5989c6c8d0adffe493040",
         "url": "lecture-media/informatics/02-clinical-data.pdf#page=8",
         "image": "lecture-media/informatics/pages/02-clinical-data-008.jpg",
-        "supportRole": "related",
+        "supportRole": "direct",
         "sourceSet": "Teamwork MED444"
       }
     ],
@@ -34736,22 +34684,26 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "basis": "Primary Midterm topic verified against Teamwork MED444 L2.",
       "lectureAvailable": true
     },
-    "verification": "source-only",
-    "explanation": "Teamwork L2, slide 8 provides related context but does not fully establish the keyed claim. These byte units measure dataset size and relate to the supplied Big Data discussion of large collections. The cited passage does not define the Volume V or print these units, so Gift D is preserved with related rather than direct definitional evidence.",
+    "verification": "supported",
+    "explanation": "Teamwork L2, slide 8: The wording in the stem matches the selected V: amount or size is Volume, different sources/forms are Variety, creation speed is Velocity, and accuracy or uncertainty is Veracity.",
     "giftReview": {
       "policy": "gift-key-first",
       "gradingAnswers": [
         "D"
       ],
-      "possibleAnswers": [],
-      "interpretation": "Teamwork L2, slide 8 provides related context but does not fully establish the keyed claim. These byte units measure dataset size and relate to the supplied Big Data discussion of large collections. The cited passage does not define the Volume V or print these units, so Gift D is preserved with related rather than direct definitional evidence.",
+      "possibleAnswers": [
+        "D"
+      ],
+      "interpretation": "Teamwork L2, slide 8: The wording in the stem matches the selected V: amount or size is Volume, different sources/forms are Variety, creation speed is Velocity, and accuracy or uncertainty is Veracity.",
       "warning": "",
       "ungradedReason": ""
     },
     "references": [],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
+      "answers": [
+        "D"
+      ],
+      "confidence": "supported",
       "basis": ""
     },
     "teamworkReview": {
@@ -37057,7 +37009,7 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
         "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
         "filename": "03-ehr.pdf",
         "pdfPage": 3,
-        "quote": "EHR can be created, managed and consulted across more than one healthcare organization.",
+        "quote": "managed and consulted by definition of EHR authorized clinicians and staff across more than one healthcare organization\" “An electronic record of health-related information on an individual that can",
         "verificationMethod": "manual-slide-review",
         "section": "Teamwork MED444 · L3 · slide 3",
         "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
@@ -37341,20 +37293,20 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "Midterm"
     ],
     "informaticsReviewStatus": "reviewed",
-    "informaticsEvidenceStatus": "related",
+    "informaticsEvidenceStatus": "direct",
     "informaticsEvidence": [
       {
         "lectureId": "I",
         "lectureTitle": "Teamwork MED444 · L1 · Introduction to Medical Informatics",
         "filename": "01-introduction.pdf",
         "pdfPage": 4,
-        "quote": "expert systems such as MYCIN and INTERNEST-I.",
-        "verificationMethod": "text",
+        "quote": "the Medical informatics as a science history started in medical Nov 1999, TO ERR IS community about increased the 1950s with the growth of devices, and medical informatics association mortalities due to medical HUMAN: BUILDING A errors. computer applications in medicine. was",
+        "verificationMethod": "manual-slide-review",
         "section": "Teamwork MED444 · L1 · slide 4",
         "sourceSha256": "ce7b9b5b5ffbd5ad1feb6842fd96a43c7a8cf6697024900cc11636578354c282",
         "url": "lecture-media/informatics/01-introduction.pdf#page=4",
         "image": "lecture-media/informatics/pages/01-introduction-004.jpg",
-        "supportRole": "related",
+        "supportRole": "direct",
         "sourceSet": "Teamwork MED444"
       }
     ],
@@ -37364,22 +37316,26 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "basis": "Primary Midterm topic verified against Teamwork MED444 L1.",
       "lectureAvailable": true
     },
-    "verification": "source-only",
-    "explanation": "Teamwork L1 slide 4 describes early computational use and expert-system examples in the 1950s. This connects the period to computers, but it does not formally rank the listed causes of popularity. Gift B is preserved as a source interpretation of that history.",
+    "verification": "supported",
+    "explanation": "Teamwork L1, slide 4: The slide directly identifies the rise of computers and their medical applications as the factor that enabled the field to take off in the 1950s.",
     "giftReview": {
       "policy": "gift-key-first",
       "gradingAnswers": [
         "B"
       ],
-      "possibleAnswers": [],
-      "interpretation": "Teamwork L1 slide 4 describes early computational use and expert-system examples in the 1950s. This connects the period to computers, but it does not formally rank the listed causes of popularity. Gift B is preserved as a source interpretation of that history.",
+      "possibleAnswers": [
+        "B"
+      ],
+      "interpretation": "Teamwork L1, slide 4: The slide directly identifies the rise of computers and their medical applications as the factor that enabled the field to take off in the 1950s.",
       "warning": "",
       "ungradedReason": ""
     },
     "references": [],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
+      "answers": [
+        "B"
+      ],
+      "confidence": "supported",
       "basis": ""
     },
     "teamworkReview": {
@@ -38087,34 +38043,20 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "Midterm"
     ],
     "informaticsReviewStatus": "reviewed",
-    "informaticsEvidenceStatus": "related",
+    "informaticsEvidenceStatus": "direct",
     "informaticsEvidence": [
       {
         "lectureId": "I",
         "lectureTitle": "Teamwork MED444 · L1 · Introduction to Medical Informatics",
         "filename": "01-introduction.pdf",
         "pdfPage": 3,
-        "quote": "optimize the acquisition, storage, retrieval, and use of information in health care",
-        "verificationMethod": "text",
+        "quote": "What is Medical Informatics? the field of the cognitive information processing, and communication tasks in medical practice, education, and research, including the information science and the technology to support these tasks. 11 Medical informatics is a rapidly developing scientific field that deals",
+        "verificationMethod": "manual-slide-review",
         "section": "Teamwork MED444 · L1 · slide 3",
         "sourceSha256": "ce7b9b5b5ffbd5ad1feb6842fd96a43c7a8cf6697024900cc11636578354c282",
         "url": "lecture-media/informatics/01-introduction.pdf#page=3",
         "image": "lecture-media/informatics/pages/01-introduction-003.jpg",
-        "supportRole": "related",
-        "sourceSet": "Teamwork MED444"
-      },
-      {
-        "lectureId": "I",
-        "lectureTitle": "Teamwork MED444 · L1 · Introduction to Medical Informatics",
-        "filename": "01-introduction.pdf",
-        "pdfPage": 11,
-        "quote": "storage, retrieval, and optimal use of biomedical information, data, and knowledge for problem solving and decision making.",
-        "verificationMethod": "text",
-        "section": "Teamwork MED444 · L1 · slide 11",
-        "sourceSha256": "ce7b9b5b5ffbd5ad1feb6842fd96a43c7a8cf6697024900cc11636578354c282",
-        "url": "lecture-media/informatics/01-introduction.pdf#page=11",
-        "image": "lecture-media/informatics/pages/01-introduction-011.jpg",
-        "supportRole": "related",
+        "supportRole": "direct",
         "sourceSet": "Teamwork MED444"
       }
     ],
@@ -38124,22 +38066,26 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "basis": "Primary Midterm topic verified against Teamwork MED444 L1.",
       "lectureAvailable": true
     },
-    "verification": "source-only",
-    "explanation": "Teamwork L1, slide 3 provides related context but does not fully establish the keyed claim. Introduction emphasizes optimizing the acquisition, retrieval and use of healthcare information for decisions. That supports the importance of managing information, B, but does not prove an absolute ranking of this task over every other task in medical practice.",
+    "verification": "supported",
+    "explanation": "Teamwork L1, slide 3: Managing information is central to medical practice and to the definition of medical informatics, while the other choices describe narrower operational tasks.",
     "giftReview": {
       "policy": "gift-key-first",
       "gradingAnswers": [
         "B"
       ],
-      "possibleAnswers": [],
-      "interpretation": "Teamwork L1, slide 3 provides related context but does not fully establish the keyed claim. Introduction emphasizes optimizing the acquisition, retrieval and use of healthcare information for decisions. That supports the importance of managing information, B, but does not prove an absolute ranking of this task over every other task in medical practice.",
+      "possibleAnswers": [
+        "B"
+      ],
+      "interpretation": "Teamwork L1, slide 3: Managing information is central to medical practice and to the definition of medical informatics, while the other choices describe narrower operational tasks.",
       "warning": "",
       "ungradedReason": ""
     },
     "references": [],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
+      "answers": [
+        "B"
+      ],
+      "confidence": "supported",
       "basis": ""
     },
     "teamworkReview": {
@@ -39396,7 +39342,7 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
         "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
         "filename": "03-ehr.pdf",
         "pdfPage": 8,
-        "quote": "Key people issues include leadership, change management, goal establishment and expectation setting.",
+        "quote": "people issues include leadership, change management, goal establishment and detailed step-by-step description, typically expectation setting. An implementation will",
         "verificationMethod": "manual-slide-review",
         "section": "Teamwork MED444 · L3 · slide 8",
         "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
