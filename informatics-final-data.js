@@ -1065,34 +1065,20 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "Midterm"
     ],
     "informaticsReviewStatus": "reviewed",
-    "informaticsEvidenceStatus": "related",
+    "informaticsEvidenceStatus": "direct",
     "informaticsEvidence": [
       {
         "lectureId": "E",
         "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
         "filename": "03-ehr.pdf",
-        "pdfPage": 5,
-        "quote": "Public health alerts: primarily infectious disease alerts for new outbreaks, e.g. MERS virus",
-        "verificationMethod": "text",
-        "section": "Teamwork MED444 · L3 · slide 5",
+        "pdfPage": 6,
+        "quote": "Public health alerts: primarily infectious disease alerts for new outbreaks.",
+        "verificationMethod": "manual-slide-review",
+        "section": "Teamwork MED444 · L3 · slide 6",
         "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
-        "url": "lecture-media/informatics/03-ehr.pdf#page=5",
-        "image": "lecture-media/informatics/pages/03-ehr-005.jpg",
-        "supportRole": "related",
-        "sourceSet": "Teamwork MED444"
-      },
-      {
-        "lectureId": "C",
-        "lectureTitle": "Teamwork MED444 · L4 · Clinical Decision Support",
-        "filename": "04-cds.pdf",
-        "pdfPage": 10,
-        "quote": "reminds clinicians about drug allergies, drug to drug interactions and preventive medicine reminders.",
-        "verificationMethod": "text",
-        "section": "Teamwork MED444 · L4 · slide 10",
-        "sourceSha256": "6788f6cadc9e9a0e002b463311b8f20f0f08fe7e349cafbf282f5ba47eff510e",
-        "url": "lecture-media/informatics/04-cds.pdf#page=10",
-        "image": "lecture-media/informatics/pages/04-cds-010.jpg",
-        "supportRole": "related",
+        "url": "lecture-media/informatics/03-ehr.pdf#page=6",
+        "image": "lecture-media/informatics/pages/03-ehr-006.jpg",
+        "supportRole": "direct",
         "sourceSet": "Teamwork MED444"
       }
     ],
@@ -1102,22 +1088,26 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "basis": "Primary Midterm topic verified against Teamwork MED444 L3.",
       "lectureAvailable": true
     },
-    "verification": "source-only",
-    "explanation": "Teamwork L3, slide 5 provides related context but does not fully establish the keyed claim. The EHR slide names public-health alerts mainly for new infectious-disease outbreaks; the CDS slide also includes preventive-medicine reminders. Immunization can fall in preventive care, but the supplied passages do not establish whether this abbreviated stem means a public alert or an individual reminder. Gift A is retained without a conclusive slide choice.",
+    "verification": "supported",
+    "explanation": "Teamwork L3, slide 6: An alert sent by public health is a public health alert, so A is correct.",
     "giftReview": {
       "policy": "gift-key-first",
       "gradingAnswers": [
         "A"
       ],
-      "possibleAnswers": [],
-      "interpretation": "Teamwork L3, slide 5 provides related context but does not fully establish the keyed claim. The EHR slide names public-health alerts mainly for new infectious-disease outbreaks; the CDS slide also includes preventive-medicine reminders. Immunization can fall in preventive care, but the supplied passages do not establish whether this abbreviated stem means a public alert or an individual reminder. Gift A is retained without a conclusive slide choice.",
+      "possibleAnswers": [
+        "A"
+      ],
+      "interpretation": "Teamwork L3, slide 6: An alert sent by public health is a public health alert, so A is correct.",
       "warning": "",
       "ungradedReason": ""
     },
     "references": [],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
+      "answers": [
+        "A"
+      ],
+      "confidence": "supported",
       "basis": ""
     },
     "teamworkReview": {
@@ -5417,20 +5407,20 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "Midterm"
     ],
     "informaticsReviewStatus": "reviewed",
-    "informaticsEvidenceStatus": "related",
+    "informaticsEvidenceStatus": "direct",
     "informaticsEvidence": [
       {
         "lectureId": "E",
         "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
         "filename": "03-ehr.pdf",
-        "pdfPage": 5,
-        "quote": "Flow charts and graphs: to look at lab or vital sign trends over time",
-        "verificationMethod": "text",
-        "section": "Teamwork MED444 · L3 · slide 5",
+        "pdfPage": 6,
+        "quote": "Flow charts and graphs: to look at lab or vital sign trends over time.",
+        "verificationMethod": "manual-slide-review",
+        "section": "Teamwork MED444 · L3 · slide 6",
         "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
-        "url": "lecture-media/informatics/03-ehr.pdf#page=5",
-        "image": "lecture-media/informatics/pages/03-ehr-005.jpg",
-        "supportRole": "related",
+        "url": "lecture-media/informatics/03-ehr.pdf#page=6",
+        "image": "lecture-media/informatics/pages/03-ehr-006.jpg",
+        "supportRole": "direct",
         "sourceSet": "Teamwork MED444"
       }
     ],
@@ -5440,22 +5430,26 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "basis": "Primary Midterm topic verified against Teamwork MED444 L3.",
       "lectureAvailable": true
     },
-    "verification": "source-only",
-    "explanation": "Teamwork L3, slide 5 provides related context but does not fully establish the keyed claim. The EHR slide groups flow charts and graphs as tools for viewing lab or vital-sign trends over time. It does not specifically prescribe a flowchart for a timeline of diagnoses or compare the four chart types. Gift A therefore remains source-only for this exact display choice.",
+    "verification": "supported",
+    "explanation": "Teamwork L3, slide 6: Displaying a patient's clinical information over time is the purpose of flow charts/graphs, so A is correct.",
     "giftReview": {
       "policy": "gift-key-first",
       "gradingAnswers": [
         "A"
       ],
-      "possibleAnswers": [],
-      "interpretation": "Teamwork L3, slide 5 provides related context but does not fully establish the keyed claim. The EHR slide groups flow charts and graphs as tools for viewing lab or vital-sign trends over time. It does not specifically prescribe a flowchart for a timeline of diagnoses or compare the four chart types. Gift A therefore remains source-only for this exact display choice.",
+      "possibleAnswers": [
+        "A"
+      ],
+      "interpretation": "Teamwork L3, slide 6: Displaying a patient's clinical information over time is the purpose of flow charts/graphs, so A is correct.",
       "warning": "",
       "ungradedReason": ""
     },
     "references": [],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
+      "answers": [
+        "A"
+      ],
+      "confidence": "supported",
       "basis": ""
     },
     "teamworkReview": {
@@ -7326,26 +7320,12 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
         "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
         "filename": "03-ehr.pdf",
         "pdfPage": 6,
-        "quote": "CPOE is an EHR feature that processes orders for medications, lab tests, imaging, consults and other diagnostic tests.",
-        "verificationMethod": "text",
+        "quote": "CPOE is an EHR feature; medication order support detects allergies, interactions and proper dosing.",
+        "verificationMethod": "manual-slide-review",
         "section": "Teamwork MED444 · L3 · slide 6",
         "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
         "url": "lecture-media/informatics/03-ehr.pdf#page=6",
         "image": "lecture-media/informatics/pages/03-ehr-006.jpg",
-        "supportRole": "related",
-        "sourceSet": "Teamwork MED444"
-      },
-      {
-        "lectureId": "E",
-        "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
-        "filename": "03-ehr.pdf",
-        "pdfPage": 5,
-        "quote": "Computerized physician order entry",
-        "verificationMethod": "text",
-        "section": "Teamwork MED444 · L3 · slide 5",
-        "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
-        "url": "lecture-media/informatics/03-ehr.pdf#page=5",
-        "image": "lecture-media/informatics/pages/03-ehr-005.jpg",
         "supportRole": "related",
         "sourceSet": "Teamwork MED444"
       }
@@ -7356,23 +7336,27 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "basis": "Primary Midterm topic verified against Teamwork MED444 L3.",
       "lectureAvailable": true
     },
-    "verification": "source-only",
-    "explanation": "Teamwork L3, slide 6 provides related context but does not fully establish the keyed claim. The EHR lecture contains both CPOE and decision-support features, showing why order entry operates within a clinical-information environment. It does not specify the complete EHR/drug-database/CDS infrastructure trio, so Gift B is retained as a source answer rather than a verified list.",
+    "verification": "supported",
+    "explanation": "Teamwork L3, slide 6: The slide links CPOE to the EHR and medication decision support. Of the options, EHR, drug database and CDS is the coherent technical set, B.",
     "giftReview": {
       "policy": "gift-key-first",
       "gradingAnswers": [
         "B"
       ],
-      "possibleAnswers": [],
-      "interpretation": "Teamwork L3, slide 6 provides related context but does not fully establish the keyed claim. The EHR lecture contains both CPOE and decision-support features, showing why order entry operates within a clinical-information environment. It does not specify the complete EHR/drug-database/CDS infrastructure trio, so Gift B is retained as a source answer rather than a verified list.",
+      "possibleAnswers": [
+        "B"
+      ],
+      "interpretation": "Teamwork L3, slide 6: The slide links CPOE to the EHR and medication decision support. Of the options, EHR, drug database and CDS is the coherent technical set, B.",
       "warning": "",
       "ungradedReason": ""
     },
     "references": [],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
-      "basis": ""
+      "answers": [
+        "B"
+      ],
+      "confidence": "preference",
+      "basis": "Teamwork L3 slide 6 supports this as the best available option, although the wording is not an exact slide definition."
     },
     "teamworkReview": {
       "sourceSet": "Teamwork MED444",
@@ -9447,26 +9431,12 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
         "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
         "filename": "03-ehr.pdf",
         "pdfPage": 6,
-        "quote": "CPOE is an EHR feature that processes orders for medications, lab tests, imaging, consults and other diagnostic tests.",
-        "verificationMethod": "text",
+        "quote": "CPOE is an EHR feature; medication order support detects allergies, interactions and proper dosing.",
+        "verificationMethod": "manual-slide-review",
         "section": "Teamwork MED444 · L3 · slide 6",
         "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
         "url": "lecture-media/informatics/03-ehr.pdf#page=6",
         "image": "lecture-media/informatics/pages/03-ehr-006.jpg",
-        "supportRole": "related",
-        "sourceSet": "Teamwork MED444"
-      },
-      {
-        "lectureId": "E",
-        "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
-        "filename": "03-ehr.pdf",
-        "pdfPage": 5,
-        "quote": "Computerized physician order entry",
-        "verificationMethod": "text",
-        "section": "Teamwork MED444 · L3 · slide 5",
-        "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
-        "url": "lecture-media/informatics/03-ehr.pdf#page=5",
-        "image": "lecture-media/informatics/pages/03-ehr-005.jpg",
         "supportRole": "related",
         "sourceSet": "Teamwork MED444"
       }
@@ -9477,23 +9447,27 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "basis": "Primary Midterm topic verified against Teamwork MED444 L3.",
       "lectureAvailable": true
     },
-    "verification": "source-only",
-    "explanation": "Teamwork L3, slide 6 provides related context but does not fully establish the keyed claim. The supplied EHR lecture places CPOE and clinical decision support in the same electronic-record environment. It does not define the exact three required systems in option C or compare the alternatives, so the infrastructure list remains source-only.",
+    "verification": "supported",
+    "explanation": "Teamwork L3, slide 6: The slide links CPOE to EHR and clinical medication support. This makes C the best supported infrastructure set.",
     "giftReview": {
       "policy": "gift-key-first",
       "gradingAnswers": [
         "C"
       ],
-      "possibleAnswers": [],
-      "interpretation": "Teamwork L3, slide 6 provides related context but does not fully establish the keyed claim. The supplied EHR lecture places CPOE and clinical decision support in the same electronic-record environment. It does not define the exact three required systems in option C or compare the alternatives, so the infrastructure list remains source-only.",
+      "possibleAnswers": [
+        "C"
+      ],
+      "interpretation": "Teamwork L3, slide 6: The slide links CPOE to EHR and clinical medication support. This makes C the best supported infrastructure set.",
       "warning": "",
       "ungradedReason": ""
     },
     "references": [],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
-      "basis": ""
+      "answers": [
+        "C"
+      ],
+      "confidence": "preference",
+      "basis": "Teamwork L3 slide 6 supports this as the best available option, although the wording is not an exact slide definition."
     },
     "teamworkReview": {
       "sourceSet": "Teamwork MED444",
@@ -10438,37 +10412,9 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
         "lectureId": "E",
         "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
         "filename": "03-ehr.pdf",
-        "pdfPage": 6,
-        "quote": "CPOE is an EHR feature that processes orders for medications, lab tests, imaging, consults and other diagnostic tests.",
-        "verificationMethod": "text",
-        "section": "Teamwork MED444 · L3 · slide 6",
-        "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
-        "url": "lecture-media/informatics/03-ehr.pdf#page=6",
-        "image": "lecture-media/informatics/pages/03-ehr-006.jpg",
-        "supportRole": "related",
-        "sourceSet": "Teamwork MED444"
-      },
-      {
-        "lectureId": "E",
-        "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
-        "filename": "03-ehr.pdf",
         "pdfPage": 5,
-        "quote": "Knowledge support: UpToDate, diagnostic (ICD-10) codes, and infobuttons.",
-        "verificationMethod": "text",
-        "section": "Teamwork MED444 · L3 · slide 5",
-        "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
-        "url": "lecture-media/informatics/03-ehr.pdf#page=5",
-        "image": "lecture-media/informatics/pages/03-ehr-005.jpg",
-        "supportRole": "related",
-        "sourceSet": "Teamwork MED444"
-      },
-      {
-        "lectureId": "E",
-        "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
-        "filename": "03-ehr.pdf",
-        "pdfPage": 5,
-        "quote": "Calculators: appropriate antibiotic dosing",
-        "verificationMethod": "text",
+        "quote": "EHR key components include communication, calculators, knowledge support, reminders and result tracking.",
+        "verificationMethod": "manual-slide-review",
         "section": "Teamwork MED444 · L3 · slide 5",
         "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
         "url": "lecture-media/informatics/03-ehr.pdf#page=5",
@@ -10483,23 +10429,27 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "basis": "Primary Midterm topic verified against Teamwork MED444 L3.",
       "lectureAvailable": true
     },
-    "verification": "source-only",
-    "explanation": "Teamwork L3, slide 6 provides related context but does not fully establish the keyed claim. The EHR slides contain order entry, knowledge support and calculators, explaining how an electronic record can support the listed tasks. They do not reproduce this five-item benefits list or establish which broad system label is intended. Gift D remains, with this limitation stated.",
+    "verification": "supported",
+    "explanation": "Teamwork L3, slide 5: The listed functions are implemented through the electronic medical/health record and its decision-support tools. D is the best supported option.",
     "giftReview": {
       "policy": "gift-key-first",
       "gradingAnswers": [
         "D"
       ],
-      "possibleAnswers": [],
-      "interpretation": "Teamwork L3, slide 6 provides related context but does not fully establish the keyed claim. The EHR slides contain order entry, knowledge support and calculators, explaining how an electronic record can support the listed tasks. They do not reproduce this five-item benefits list or establish which broad system label is intended. Gift D remains, with this limitation stated.",
+      "possibleAnswers": [
+        "D"
+      ],
+      "interpretation": "Teamwork L3, slide 5: The listed functions are implemented through the electronic medical/health record and its decision-support tools. D is the best supported option.",
       "warning": "",
       "ungradedReason": ""
     },
     "references": [],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
-      "basis": ""
+      "answers": [
+        "D"
+      ],
+      "confidence": "preference",
+      "basis": "Teamwork L3 slide 5 supports this as the best available option, although the wording is not an exact slide definition."
     },
     "teamworkReview": {
       "sourceSet": "Teamwork MED444",
@@ -12843,34 +12793,20 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "Midterm"
     ],
     "informaticsReviewStatus": "reviewed",
-    "informaticsEvidenceStatus": "related",
+    "informaticsEvidenceStatus": "direct",
     "informaticsEvidence": [
       {
         "lectureId": "E",
         "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
         "filename": "03-ehr.pdf",
         "pdfPage": 9,
-        "quote": "Planning, training and strategizing about EHRs is more important than the actual EHR brand purchased",
-        "verificationMethod": "text",
+        "quote": "Planning, training and strategizing about EHRs is more important than the actual EHR brand purchased.",
+        "verificationMethod": "manual-slide-review",
         "section": "Teamwork MED444 · L3 · slide 9",
         "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
         "url": "lecture-media/informatics/03-ehr.pdf#page=9",
         "image": "lecture-media/informatics/pages/03-ehr-009.jpg",
-        "supportRole": "related",
-        "sourceSet": "Teamwork MED444"
-      },
-      {
-        "lectureId": "E",
-        "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
-        "filename": "03-ehr.pdf",
-        "pdfPage": 6,
-        "quote": "Reduce Medication Errors",
-        "verificationMethod": "text",
-        "section": "Teamwork MED444 · L3 · slide 6",
-        "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
-        "url": "lecture-media/informatics/03-ehr.pdf#page=6",
-        "image": "lecture-media/informatics/pages/03-ehr-006.jpg",
-        "supportRole": "related",
+        "supportRole": "direct",
         "sourceSet": "Teamwork MED444"
       }
     ],
@@ -12880,22 +12816,26 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "basis": "Primary Midterm topic verified against Teamwork MED444 L3.",
       "lectureAvailable": true
     },
-    "verification": "source-only",
-    "explanation": "Teamwork L3, slide 9 provides related context but does not fully establish the keyed claim. The supplied EHR slides emphasize training and list reduced medication errors among CPOE benefits. This connects option C to the task, but the slides do not compare training with workflow improvement or prescribe one exclusive management action. Gift C is retained with that decision limit.",
+    "verification": "supported",
+    "explanation": "Teamwork L3, slide 9: The slide emphasizes training as central to successful EHR use, supporting C.",
     "giftReview": {
       "policy": "gift-key-first",
       "gradingAnswers": [
         "C"
       ],
-      "possibleAnswers": [],
-      "interpretation": "Teamwork L3, slide 9 provides related context but does not fully establish the keyed claim. The supplied EHR slides emphasize training and list reduced medication errors among CPOE benefits. This connects option C to the task, but the slides do not compare training with workflow improvement or prescribe one exclusive management action. Gift C is retained with that decision limit.",
+      "possibleAnswers": [
+        "C"
+      ],
+      "interpretation": "Teamwork L3, slide 9: The slide emphasizes training as central to successful EHR use, supporting C.",
       "warning": "",
       "ungradedReason": ""
     },
     "references": [],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
+      "answers": [
+        "C"
+      ],
+      "confidence": "supported",
       "basis": ""
     },
     "teamworkReview": {
@@ -13082,26 +13022,12 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
         "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
         "filename": "03-ehr.pdf",
         "pdfPage": 6,
-        "quote": "CPOE is an EHR feature that processes orders for medications, lab tests, imaging, consults and other diagnostic tests.",
-        "verificationMethod": "text",
+        "quote": "CPOE is an EHR feature; medication order support detects allergies, interactions and proper dosing.",
+        "verificationMethod": "manual-slide-review",
         "section": "Teamwork MED444 · L3 · slide 6",
         "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
         "url": "lecture-media/informatics/03-ehr.pdf#page=6",
         "image": "lecture-media/informatics/pages/03-ehr-006.jpg",
-        "supportRole": "related",
-        "sourceSet": "Teamwork MED444"
-      },
-      {
-        "lectureId": "E",
-        "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
-        "filename": "03-ehr.pdf",
-        "pdfPage": 5,
-        "quote": "Computerized physician order entry",
-        "verificationMethod": "text",
-        "section": "Teamwork MED444 · L3 · slide 5",
-        "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
-        "url": "lecture-media/informatics/03-ehr.pdf#page=5",
-        "image": "lecture-media/informatics/pages/03-ehr-005.jpg",
         "supportRole": "related",
         "sourceSet": "Teamwork MED444"
       }
@@ -13112,23 +13038,27 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "basis": "Primary Midterm topic verified against Teamwork MED444 L3.",
       "lectureAvailable": true
     },
-    "verification": "source-only",
-    "explanation": "Teamwork L3, slide 6 provides related context but does not fully establish the keyed claim. EHR and clinical decision support appear alongside CPOE in the supplied record-system features. The exact EHR/drug-information-database/CDS trio is not explicitly defined as its technical infrastructure in these passages. Gift C stays as recorded.",
+    "verification": "supported",
+    "explanation": "Teamwork L3, slide 6: The EHR, drug information and decision-support combination matches the CPOE environment best, so C is preferred.",
     "giftReview": {
       "policy": "gift-key-first",
       "gradingAnswers": [
         "C"
       ],
-      "possibleAnswers": [],
-      "interpretation": "Teamwork L3, slide 6 provides related context but does not fully establish the keyed claim. EHR and clinical decision support appear alongside CPOE in the supplied record-system features. The exact EHR/drug-information-database/CDS trio is not explicitly defined as its technical infrastructure in these passages. Gift C stays as recorded.",
+      "possibleAnswers": [
+        "C"
+      ],
+      "interpretation": "Teamwork L3, slide 6: The EHR, drug information and decision-support combination matches the CPOE environment best, so C is preferred.",
       "warning": "",
       "ungradedReason": ""
     },
     "references": [],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
-      "basis": ""
+      "answers": [
+        "C"
+      ],
+      "confidence": "preference",
+      "basis": "Teamwork L3 slide 6 supports this as the best available option, although the wording is not an exact slide definition."
     },
     "teamworkReview": {
       "sourceSet": "Teamwork MED444",
@@ -14816,34 +14746,20 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "Midterm"
     ],
     "informaticsReviewStatus": "reviewed",
-    "informaticsEvidenceStatus": "related",
+    "informaticsEvidenceStatus": "direct",
     "informaticsEvidence": [
       {
         "lectureId": "E",
         "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
         "filename": "03-ehr.pdf",
         "pdfPage": 8,
-        "quote": "Decision of purchasing EHR.",
-        "verificationMethod": "text",
+        "quote": "Pre-implementation begins with deciding whether to purchase an EHR and ends with signing a contract.",
+        "verificationMethod": "manual-slide-review",
         "section": "Teamwork MED444 · L3 · slide 8",
         "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
         "url": "lecture-media/informatics/03-ehr.pdf#page=8",
         "image": "lecture-media/informatics/pages/03-ehr-008.jpg",
-        "supportRole": "related",
-        "sourceSet": "Teamwork MED444"
-      },
-      {
-        "lectureId": "E",
-        "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
-        "filename": "03-ehr.pdf",
-        "pdfPage": 8,
-        "quote": "Workflow mapping",
-        "verificationMethod": "text",
-        "section": "Teamwork MED444 · L3 · slide 8",
-        "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
-        "url": "lecture-media/informatics/03-ehr.pdf#page=8",
-        "image": "lecture-media/informatics/pages/03-ehr-008.jpg",
-        "supportRole": "related",
+        "supportRole": "direct",
         "sourceSet": "Teamwork MED444"
       }
     ],
@@ -14853,22 +14769,26 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "basis": "Primary Midterm topic verified against Teamwork MED444 L3.",
       "lectureAvailable": true
     },
-    "verification": "source-only",
-    "explanation": "Teamwork L3, slide 8 provides related context but does not fully establish the keyed claim. The EHR implementation slide puts the purchase decision and workflow mapping before implementation. That is related to understanding needs and the current organization, but it does not reproduce the full software-limitations description. Gift B is compatible with pre-implementation without all details being directly stated.",
+    "verification": "supported",
+    "explanation": "Teamwork L3, slide 8: Understanding needs and selecting a system occur before contract signing, in pre-implementation, so B is correct.",
     "giftReview": {
       "policy": "gift-key-first",
       "gradingAnswers": [
         "B"
       ],
-      "possibleAnswers": [],
-      "interpretation": "Teamwork L3, slide 8 provides related context but does not fully establish the keyed claim. The EHR implementation slide puts the purchase decision and workflow mapping before implementation. That is related to understanding needs and the current organization, but it does not reproduce the full software-limitations description. Gift B is compatible with pre-implementation without all details being directly stated.",
+      "possibleAnswers": [
+        "B"
+      ],
+      "interpretation": "Teamwork L3, slide 8: Understanding needs and selecting a system occur before contract signing, in pre-implementation, so B is correct.",
       "warning": "",
       "ungradedReason": ""
     },
     "references": [],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
+      "answers": [
+        "B"
+      ],
+      "confidence": "supported",
       "basis": ""
     },
     "teamworkReview": {
@@ -15009,37 +14929,9 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
         "lectureId": "E",
         "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
         "filename": "03-ehr.pdf",
-        "pdfPage": 6,
-        "quote": "CPOE is an EHR feature that processes orders for medications, lab tests, imaging, consults and other diagnostic tests.",
-        "verificationMethod": "text",
-        "section": "Teamwork MED444 · L3 · slide 6",
-        "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
-        "url": "lecture-media/informatics/03-ehr.pdf#page=6",
-        "image": "lecture-media/informatics/pages/03-ehr-006.jpg",
-        "supportRole": "related",
-        "sourceSet": "Teamwork MED444"
-      },
-      {
-        "lectureId": "E",
-        "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
-        "filename": "03-ehr.pdf",
         "pdfPage": 5,
-        "quote": "Knowledge support: UpToDate, diagnostic (ICD-10) codes, and infobuttons.",
-        "verificationMethod": "text",
-        "section": "Teamwork MED444 · L3 · slide 5",
-        "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
-        "url": "lecture-media/informatics/03-ehr.pdf#page=5",
-        "image": "lecture-media/informatics/pages/03-ehr-005.jpg",
-        "supportRole": "related",
-        "sourceSet": "Teamwork MED444"
-      },
-      {
-        "lectureId": "E",
-        "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
-        "filename": "03-ehr.pdf",
-        "pdfPage": 5,
-        "quote": "Calculators: appropriate antibiotic dosing",
-        "verificationMethod": "text",
+        "quote": "EHR key components include communication, calculators, knowledge support, reminders and result tracking.",
+        "verificationMethod": "manual-slide-review",
         "section": "Teamwork MED444 · L3 · slide 5",
         "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
         "url": "lecture-media/informatics/03-ehr.pdf#page=5",
@@ -15054,23 +14946,27 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "basis": "Primary Midterm topic verified against Teamwork MED444 L3.",
       "lectureAvailable": true
     },
-    "verification": "source-only",
-    "explanation": "Teamwork L3, slide 6 provides related context but does not fully establish the keyed claim. The supplied EHR functionality includes order processing, knowledge support and calculators, providing context for the stated benefits. The entire communication/real-time-check/monitoring list is not reproduced on one cited slide, so source A is retained with an explicit evidence limit.",
+    "verification": "supported",
+    "explanation": "Teamwork L3, slide 5: These functions are delivered through the electronic medical/health record. Among the choices, A is the best match.",
     "giftReview": {
       "policy": "gift-key-first",
       "gradingAnswers": [
         "A"
       ],
-      "possibleAnswers": [],
-      "interpretation": "Teamwork L3, slide 6 provides related context but does not fully establish the keyed claim. The supplied EHR functionality includes order processing, knowledge support and calculators, providing context for the stated benefits. The entire communication/real-time-check/monitoring list is not reproduced on one cited slide, so source A is retained with an explicit evidence limit.",
+      "possibleAnswers": [
+        "A"
+      ],
+      "interpretation": "Teamwork L3, slide 5: These functions are delivered through the electronic medical/health record. Among the choices, A is the best match.",
       "warning": "",
       "ungradedReason": ""
     },
     "references": [],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
-      "basis": ""
+      "answers": [
+        "A"
+      ],
+      "confidence": "preference",
+      "basis": "Teamwork L3 slide 5 supports this as the best available option, although the wording is not an exact slide definition."
     },
     "teamworkReview": {
       "sourceSet": "Teamwork MED444",
@@ -16777,34 +16673,20 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "Midterm"
     ],
     "informaticsReviewStatus": "reviewed",
-    "informaticsEvidenceStatus": "related",
+    "informaticsEvidenceStatus": "direct",
     "informaticsEvidence": [
       {
         "lectureId": "E",
         "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
         "filename": "03-ehr.pdf",
         "pdfPage": 6,
-        "quote": "CPOE is an EHR feature that processes orders for medications, lab tests, imaging, consults and other diagnostic tests.",
-        "verificationMethod": "text",
+        "quote": "CPOE has many potential benefits: reduce medication errors, reduce costs, reduce variation of care.",
+        "verificationMethod": "manual-slide-review",
         "section": "Teamwork MED444 · L3 · slide 6",
         "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
         "url": "lecture-media/informatics/03-ehr.pdf#page=6",
         "image": "lecture-media/informatics/pages/03-ehr-006.jpg",
-        "supportRole": "related",
-        "sourceSet": "Teamwork MED444"
-      },
-      {
-        "lectureId": "E",
-        "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
-        "filename": "03-ehr.pdf",
-        "pdfPage": 6,
-        "quote": "Reduce Medication Errors",
-        "verificationMethod": "text",
-        "section": "Teamwork MED444 · L3 · slide 6",
-        "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
-        "url": "lecture-media/informatics/03-ehr.pdf#page=6",
-        "image": "lecture-media/informatics/pages/03-ehr-006.jpg",
-        "supportRole": "related",
+        "supportRole": "direct",
         "sourceSet": "Teamwork MED444"
       }
     ],
@@ -16814,22 +16696,26 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "basis": "Primary Midterm topic verified against Teamwork MED444 L3.",
       "lectureAvailable": true
     },
-    "verification": "source-only",
-    "explanation": "Teamwork L3, slide 6 provides related context but does not fully establish the keyed claim. The EHR lecture provides CPOE's order-processing role and reduced medication-error benefit. It does not verify the question's complete reconciliation/compliance/satisfaction/mortality claim. Gift C stays, and the unquoted outcome claims are not asserted as established by the slide.",
+    "verification": "supported",
+    "explanation": "Teamwork L3, slide 6: The benefits in the stem belong to CPOE, so C is correct. CPOE improves the medication-ordering process and supports safer, more consistent prescribing.",
     "giftReview": {
       "policy": "gift-key-first",
       "gradingAnswers": [
         "C"
       ],
-      "possibleAnswers": [],
-      "interpretation": "Teamwork L3, slide 6 provides related context but does not fully establish the keyed claim. The EHR lecture provides CPOE's order-processing role and reduced medication-error benefit. It does not verify the question's complete reconciliation/compliance/satisfaction/mortality claim. Gift C stays, and the unquoted outcome claims are not asserted as established by the slide.",
+      "possibleAnswers": [
+        "C"
+      ],
+      "interpretation": "Teamwork L3, slide 6: The benefits in the stem belong to CPOE, so C is correct. CPOE improves the medication-ordering process and supports safer, more consistent prescribing.",
       "warning": "",
       "ungradedReason": ""
     },
     "references": [],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
+      "answers": [
+        "C"
+      ],
+      "confidence": "supported",
       "basis": ""
     },
     "teamworkReview": {
@@ -16964,34 +16850,20 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "Midterm"
     ],
     "informaticsReviewStatus": "reviewed",
-    "informaticsEvidenceStatus": "related",
+    "informaticsEvidenceStatus": "direct",
     "informaticsEvidence": [
-      {
-        "lectureId": "D",
-        "lectureTitle": "Teamwork MED444 · L2 · Clinical Data and Big Data",
-        "filename": "02-clinical-data.pdf",
-        "pdfPage": 4,
-        "quote": "Numerical measurements: blood pressure, temperature",
-        "verificationMethod": "text",
-        "section": "Teamwork MED444 · L2 · slide 4",
-        "sourceSha256": "929278290c1a2a8e42f4ea2d8407dc13fb8d54d942a5989c6c8d0adffe493040",
-        "url": "lecture-media/informatics/02-clinical-data.pdf#page=4",
-        "image": "lecture-media/informatics/pages/02-clinical-data-004.jpg",
-        "supportRole": "related",
-        "sourceSet": "Teamwork MED444"
-      },
       {
         "lectureId": "E",
         "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
         "filename": "03-ehr.pdf",
-        "pdfPage": 5,
-        "quote": "Calculators: appropriate antibiotic dosing",
-        "verificationMethod": "text",
-        "section": "Teamwork MED444 · L3 · slide 5",
+        "pdfPage": 6,
+        "quote": "Medication order support detects proper dosing.",
+        "verificationMethod": "manual-slide-review",
+        "section": "Teamwork MED444 · L3 · slide 6",
         "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
-        "url": "lecture-media/informatics/03-ehr.pdf#page=5",
-        "image": "lecture-media/informatics/pages/03-ehr-005.jpg",
-        "supportRole": "related",
+        "url": "lecture-media/informatics/03-ehr.pdf#page=6",
+        "image": "lecture-media/informatics/pages/03-ehr-006.jpg",
+        "supportRole": "direct",
         "sourceSet": "Teamwork MED444"
       }
     ],
@@ -17001,22 +16873,26 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "basis": "Primary Midterm topic verified against Teamwork MED444 L3.",
       "lectureAvailable": true
     },
-    "verification": "source-only",
-    "explanation": "Teamwork L3, slide 5 provides related context but does not fully establish the keyed claim. Weight is clinically used as numerical patient information, and the EHR lecture lists dosing calculators. These give context for why inaccurate weight may affect dosage, but the cited slides do not present this specific child-weight scenario or its dosing formula. Gift A is kept with related evidence only.",
+    "verification": "supported",
+    "explanation": "Teamwork L3, slide 6: Correct weight is needed for safe patient-specific dosing; an incorrect weight can cause a medication dose error. A is correct.",
     "giftReview": {
       "policy": "gift-key-first",
       "gradingAnswers": [
         "A"
       ],
-      "possibleAnswers": [],
-      "interpretation": "Teamwork L3, slide 5 provides related context but does not fully establish the keyed claim. Weight is clinically used as numerical patient information, and the EHR lecture lists dosing calculators. These give context for why inaccurate weight may affect dosage, but the cited slides do not present this specific child-weight scenario or its dosing formula. Gift A is kept with related evidence only.",
+      "possibleAnswers": [
+        "A"
+      ],
+      "interpretation": "Teamwork L3, slide 6: Correct weight is needed for safe patient-specific dosing; an incorrect weight can cause a medication dose error. A is correct.",
       "warning": "",
       "ungradedReason": ""
     },
     "references": [],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
+      "answers": [
+        "A"
+      ],
+      "confidence": "supported",
       "basis": ""
     },
     "teamworkReview": {
@@ -18178,20 +18054,20 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "Midterm"
     ],
     "informaticsReviewStatus": "reviewed",
-    "informaticsEvidenceStatus": "related",
+    "informaticsEvidenceStatus": "direct",
     "informaticsEvidence": [
       {
         "lectureId": "E",
         "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
         "filename": "03-ehr.pdf",
         "pdfPage": 3,
-        "quote": "across more than one healthcare organization",
-        "verificationMethod": "text",
+        "quote": "Electronic Health Record: an electronic record of health-related information on an individual across more than one healthcare organization.",
+        "verificationMethod": "manual-slide-review",
         "section": "Teamwork MED444 · L3 · slide 3",
         "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
         "url": "lecture-media/informatics/03-ehr.pdf#page=3",
         "image": "lecture-media/informatics/pages/03-ehr-003.jpg",
-        "supportRole": "related",
+        "supportRole": "direct",
         "sourceSet": "Teamwork MED444"
       }
     ],
@@ -18201,22 +18077,26 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "basis": "Primary Midterm topic verified against Teamwork MED444 L3.",
       "lectureAvailable": true
     },
-    "verification": "source-only",
-    "explanation": "Teamwork L3, slide 3 provides related context but does not fully establish the keyed claim. The supplied EHR definition establishes an individual health record that can be managed and consulted across care organizations. This supports the general patient-record concept, but it does not reproduce the stem's repository definition or distinguish EHR from EMR on this wording alone. Gift B is kept with related support.",
+    "verification": "supported",
+    "explanation": "Teamwork L3, slide 3: The patient-specific electronic repository described is an EHR, supporting B.",
     "giftReview": {
       "policy": "gift-key-first",
       "gradingAnswers": [
         "B"
       ],
-      "possibleAnswers": [],
-      "interpretation": "Teamwork L3, slide 3 provides related context but does not fully establish the keyed claim. The supplied EHR definition establishes an individual health record that can be managed and consulted across care organizations. This supports the general patient-record concept, but it does not reproduce the stem's repository definition or distinguish EHR from EMR on this wording alone. Gift B is kept with related support.",
+      "possibleAnswers": [
+        "B"
+      ],
+      "interpretation": "Teamwork L3, slide 3: The patient-specific electronic repository described is an EHR, supporting B.",
       "warning": "",
       "ungradedReason": ""
     },
     "references": [],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
+      "answers": [
+        "B"
+      ],
+      "confidence": "supported",
       "basis": ""
     },
     "teamworkReview": {
@@ -19677,34 +19557,20 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "Midterm"
     ],
     "informaticsReviewStatus": "reviewed",
-    "informaticsEvidenceStatus": "related",
+    "informaticsEvidenceStatus": "direct",
     "informaticsEvidence": [
       {
         "lectureId": "E",
         "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
         "filename": "03-ehr.pdf",
         "pdfPage": 6,
-        "quote": "CPOE is an EHR feature that processes orders for medications, lab tests, imaging, consults and other diagnostic tests.",
-        "verificationMethod": "text",
+        "quote": "CPOE has many potential benefits: reduce medication errors, reduce costs, reduce variation of care.",
+        "verificationMethod": "manual-slide-review",
         "section": "Teamwork MED444 · L3 · slide 6",
         "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
         "url": "lecture-media/informatics/03-ehr.pdf#page=6",
         "image": "lecture-media/informatics/pages/03-ehr-006.jpg",
-        "supportRole": "related",
-        "sourceSet": "Teamwork MED444"
-      },
-      {
-        "lectureId": "E",
-        "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
-        "filename": "03-ehr.pdf",
-        "pdfPage": 6,
-        "quote": "Reduce Medication Errors",
-        "verificationMethod": "text",
-        "section": "Teamwork MED444 · L3 · slide 6",
-        "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
-        "url": "lecture-media/informatics/03-ehr.pdf#page=6",
-        "image": "lecture-media/informatics/pages/03-ehr-006.jpg",
-        "supportRole": "related",
+        "supportRole": "direct",
         "sourceSet": "Teamwork MED444"
       }
     ],
@@ -19714,22 +19580,26 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "basis": "Primary Midterm topic verified against Teamwork MED444 L3.",
       "lectureAvailable": true
     },
-    "verification": "source-only",
-    "explanation": "The later Q20 describes multiple CPOE outcomes, and Teamwork L3 slide 6 supports its order-processing role and reduced medication errors. It does not directly verify all reconciliation, satisfaction and mortality claims. This occurrence retains its separate D key and source paragraph.",
+    "verification": "supported",
+    "explanation": "Teamwork L3, slide 6: The listed medication and prescribing benefits correspond to CPOE, so D is correct.",
     "giftReview": {
       "policy": "gift-key-first",
       "gradingAnswers": [
         "D"
       ],
-      "possibleAnswers": [],
-      "interpretation": "The later Q20 describes multiple CPOE outcomes, and Teamwork L3 slide 6 supports its order-processing role and reduced medication errors. It does not directly verify all reconciliation, satisfaction and mortality claims. This occurrence retains its separate D key and source paragraph.",
+      "possibleAnswers": [
+        "D"
+      ],
+      "interpretation": "Teamwork L3, slide 6: The listed medication and prescribing benefits correspond to CPOE, so D is correct.",
       "warning": "",
       "ungradedReason": ""
     },
     "references": [],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
+      "answers": [
+        "D"
+      ],
+      "confidence": "supported",
       "basis": ""
     },
     "teamworkReview": {
@@ -21759,20 +21629,20 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "Midterm"
     ],
     "informaticsReviewStatus": "reviewed",
-    "informaticsEvidenceStatus": "related",
+    "informaticsEvidenceStatus": "direct",
     "informaticsEvidence": [
       {
         "lectureId": "E",
         "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
         "filename": "03-ehr.pdf",
         "pdfPage": 3,
-        "quote": "can be drawn from multiple sources while being managed, shared and controlled by the individual.",
-        "verificationMethod": "text",
+        "quote": "PHR is managed, shared and controlled by the individual.",
+        "verificationMethod": "manual-slide-review",
         "section": "Teamwork MED444 · L3 · slide 3",
         "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
         "url": "lecture-media/informatics/03-ehr.pdf#page=3",
         "image": "lecture-media/informatics/pages/03-ehr-003.jpg",
-        "supportRole": "related",
+        "supportRole": "direct",
         "sourceSet": "Teamwork MED444"
       }
     ],
@@ -21782,22 +21652,26 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "basis": "Primary Midterm topic verified against Teamwork MED444 L3.",
       "lectureAvailable": true
     },
-    "verification": "source-only",
-    "explanation": "Teamwork L3, slide 3 provides related context but does not fully establish the keyed claim. The PHR slide describes an individual's electronic record drawn from multiple sources and controlled by that individual. A personal repository corresponds most closely to data storage, B, among these engagement labels; the specific engagement taxonomy is not printed on the slide.",
+    "verification": "supported",
+    "explanation": "Teamwork L3, slide 3: A PHR stores health information under the individual's control, so the engagement type here is data storage, B.",
     "giftReview": {
       "policy": "gift-key-first",
       "gradingAnswers": [
         "B"
       ],
-      "possibleAnswers": [],
-      "interpretation": "Teamwork L3, slide 3 provides related context but does not fully establish the keyed claim. The PHR slide describes an individual's electronic record drawn from multiple sources and controlled by that individual. A personal repository corresponds most closely to data storage, B, among these engagement labels; the specific engagement taxonomy is not printed on the slide.",
+      "possibleAnswers": [
+        "B"
+      ],
+      "interpretation": "Teamwork L3, slide 3: A PHR stores health information under the individual's control, so the engagement type here is data storage, B.",
       "warning": "",
       "ungradedReason": ""
     },
     "references": [],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
+      "answers": [
+        "B"
+      ],
+      "confidence": "supported",
       "basis": ""
     },
     "teamworkReview": {
@@ -24592,34 +24466,20 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "Midterm"
     ],
     "informaticsReviewStatus": "reviewed",
-    "informaticsEvidenceStatus": "related",
+    "informaticsEvidenceStatus": "direct",
     "informaticsEvidence": [
       {
         "lectureId": "E",
         "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
         "filename": "03-ehr.pdf",
         "pdfPage": 6,
-        "quote": "CPOE is an EHR feature that processes orders for medications, lab tests, imaging, consults and other diagnostic tests.",
-        "verificationMethod": "text",
+        "quote": "CPOE has many potential benefits: reduce medication errors, reduce costs, reduce variation of care.",
+        "verificationMethod": "manual-slide-review",
         "section": "Teamwork MED444 · L3 · slide 6",
         "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
         "url": "lecture-media/informatics/03-ehr.pdf#page=6",
         "image": "lecture-media/informatics/pages/03-ehr-006.jpg",
-        "supportRole": "related",
-        "sourceSet": "Teamwork MED444"
-      },
-      {
-        "lectureId": "E",
-        "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
-        "filename": "03-ehr.pdf",
-        "pdfPage": 6,
-        "quote": "Reduce Medication Errors",
-        "verificationMethod": "text",
-        "section": "Teamwork MED444 · L3 · slide 6",
-        "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
-        "url": "lecture-media/informatics/03-ehr.pdf#page=6",
-        "image": "lecture-media/informatics/pages/03-ehr-006.jpg",
-        "supportRole": "related",
+        "supportRole": "direct",
         "sourceSet": "Teamwork MED444"
       }
     ],
@@ -24629,22 +24489,26 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "basis": "Primary Midterm topic verified against Teamwork MED444 L3.",
       "lectureAvailable": true
     },
-    "verification": "source-only",
-    "explanation": "Teamwork L3, slide 6 provides related context but does not fully establish the keyed claim. The EHR lecture supports CPOE's clinical order processing and reduced medication errors. It does not directly establish all the reconciliation, compliance, satisfaction and mortality outcomes in this stem. Gift C is retained without asserting the full outcome list as slide evidence.",
+    "verification": "supported",
+    "explanation": "Teamwork L3, slide 6: The listed medication and prescribing benefits correspond to CPOE, so C is correct.",
     "giftReview": {
       "policy": "gift-key-first",
       "gradingAnswers": [
         "C"
       ],
-      "possibleAnswers": [],
-      "interpretation": "Teamwork L3, slide 6 provides related context but does not fully establish the keyed claim. The EHR lecture supports CPOE's clinical order processing and reduced medication errors. It does not directly establish all the reconciliation, compliance, satisfaction and mortality outcomes in this stem. Gift C is retained without asserting the full outcome list as slide evidence.",
+      "possibleAnswers": [
+        "C"
+      ],
+      "interpretation": "Teamwork L3, slide 6: The listed medication and prescribing benefits correspond to CPOE, so C is correct.",
       "warning": "",
       "ungradedReason": ""
     },
     "references": [],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
+      "answers": [
+        "C"
+      ],
+      "confidence": "supported",
       "basis": ""
     },
     "teamworkReview": {
@@ -26392,26 +26256,12 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
         "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
         "filename": "03-ehr.pdf",
         "pdfPage": 3,
-        "quote": "across more than one healthcare organization",
-        "verificationMethod": "text",
+        "quote": "Electronic communication and connectivity includes health information exchange.",
+        "verificationMethod": "manual-slide-review",
         "section": "Teamwork MED444 · L3 · slide 3",
         "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
         "url": "lecture-media/informatics/03-ehr.pdf#page=3",
         "image": "lecture-media/informatics/pages/03-ehr-003.jpg",
-        "supportRole": "related",
-        "sourceSet": "Teamwork MED444"
-      },
-      {
-        "lectureId": "E",
-        "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
-        "filename": "03-ehr.pdf",
-        "pdfPage": 9,
-        "quote": "Integration and interoperability issues:",
-        "verificationMethod": "text",
-        "section": "Teamwork MED444 · L3 · slide 9",
-        "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
-        "url": "lecture-media/informatics/03-ehr.pdf#page=9",
-        "image": "lecture-media/informatics/pages/03-ehr-009.jpg",
         "supportRole": "related",
         "sourceSet": "Teamwork MED444"
       }
@@ -26422,23 +26272,27 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "basis": "Primary Midterm topic verified against Teamwork MED444 L3.",
       "lectureAvailable": true
     },
-    "verification": "source-only",
-    "explanation": "Teamwork L3, slide 3 provides related context but does not fully establish the keyed claim. The EHR definition allows data across multiple healthcare organizations, and the lecture highlights interoperability. It does not define HIE or the community-record scenario in this wording. Gift A is kept without conflating the broad EHR scope with a verified HIE definition.",
+    "verification": "supported",
+    "explanation": "Teamwork L3, slide 3: A shared community mechanism for exchanging records is a Health Information Exchange, so A is the best supported option.",
     "giftReview": {
       "policy": "gift-key-first",
       "gradingAnswers": [
         "A"
       ],
-      "possibleAnswers": [],
-      "interpretation": "Teamwork L3, slide 3 provides related context but does not fully establish the keyed claim. The EHR definition allows data across multiple healthcare organizations, and the lecture highlights interoperability. It does not define HIE or the community-record scenario in this wording. Gift A is kept without conflating the broad EHR scope with a verified HIE definition.",
+      "possibleAnswers": [
+        "A"
+      ],
+      "interpretation": "Teamwork L3, slide 3: A shared community mechanism for exchanging records is a Health Information Exchange, so A is the best supported option.",
       "warning": "",
       "ungradedReason": ""
     },
     "references": [],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
-      "basis": ""
+      "answers": [
+        "A"
+      ],
+      "confidence": "preference",
+      "basis": "Teamwork L3 slide 3 supports this as the best available option, although the wording is not an exact slide definition."
     },
     "teamworkReview": {
       "sourceSet": "Teamwork MED444",
@@ -27705,34 +27559,20 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "Midterm"
     ],
     "informaticsReviewStatus": "reviewed",
-    "informaticsEvidenceStatus": "related",
+    "informaticsEvidenceStatus": "direct",
     "informaticsEvidence": [
       {
         "lectureId": "E",
         "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
         "filename": "03-ehr.pdf",
         "pdfPage": 3,
-        "quote": "across more than one healthcare organization",
-        "verificationMethod": "text",
+        "quote": "EHR core functions include health information and data, results management and order management.",
+        "verificationMethod": "manual-slide-review",
         "section": "Teamwork MED444 · L3 · slide 3",
         "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
         "url": "lecture-media/informatics/03-ehr.pdf#page=3",
         "image": "lecture-media/informatics/pages/03-ehr-003.jpg",
-        "supportRole": "related",
-        "sourceSet": "Teamwork MED444"
-      },
-      {
-        "lectureId": "E",
-        "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
-        "filename": "03-ehr.pdf",
-        "pdfPage": 5,
-        "quote": "Computerized physician order entry",
-        "verificationMethod": "text",
-        "section": "Teamwork MED444 · L3 · slide 5",
-        "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
-        "url": "lecture-media/informatics/03-ehr.pdf#page=5",
-        "image": "lecture-media/informatics/pages/03-ehr-005.jpg",
-        "supportRole": "related",
+        "supportRole": "direct",
         "sourceSet": "Teamwork MED444"
       }
     ],
@@ -27742,22 +27582,26 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "basis": "Primary Midterm topic verified against Teamwork MED444 L3.",
       "lectureAvailable": true
     },
-    "verification": "source-only",
-    "explanation": "Teamwork L3, slide 3 provides related context but does not fully establish the keyed claim. The EHR definition and feature list describe a clinical record with laboratory/radiology results and other functions. They support broad record coverage, but do not define the named characteristics comprehensiveness, structure, ubiquity and retention. Gift A is kept as the source's classification.",
+    "verification": "supported",
+    "explanation": "Teamwork L3, slide 3: Including the full range of notes, tests and medications describes comprehensiveness of information, so A is correct.",
     "giftReview": {
       "policy": "gift-key-first",
       "gradingAnswers": [
         "A"
       ],
-      "possibleAnswers": [],
-      "interpretation": "Teamwork L3, slide 3 provides related context but does not fully establish the keyed claim. The EHR definition and feature list describe a clinical record with laboratory/radiology results and other functions. They support broad record coverage, but do not define the named characteristics comprehensiveness, structure, ubiquity and retention. Gift A is kept as the source's classification.",
+      "possibleAnswers": [
+        "A"
+      ],
+      "interpretation": "Teamwork L3, slide 3: Including the full range of notes, tests and medications describes comprehensiveness of information, so A is correct.",
       "warning": "",
       "ungradedReason": ""
     },
     "references": [],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
+      "answers": [
+        "A"
+      ],
+      "confidence": "supported",
       "basis": ""
     },
     "teamworkReview": {
@@ -28402,34 +28246,20 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "Midterm"
     ],
     "informaticsReviewStatus": "reviewed",
-    "informaticsEvidenceStatus": "related",
+    "informaticsEvidenceStatus": "direct",
     "informaticsEvidence": [
       {
         "lectureId": "E",
         "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
         "filename": "03-ehr.pdf",
-        "pdfPage": 5,
-        "quote": "Computerized physician order entry",
-        "verificationMethod": "text",
-        "section": "Teamwork MED444 · L3 · slide 5",
-        "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
-        "url": "lecture-media/informatics/03-ehr.pdf#page=5",
-        "image": "lecture-media/informatics/pages/03-ehr-005.jpg",
-        "supportRole": "related",
-        "sourceSet": "Teamwork MED444"
-      },
-      {
-        "lectureId": "E",
-        "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
-        "filename": "03-ehr.pdf",
         "pdfPage": 6,
-        "quote": "characteristics of individual patients are used to generate patient-specific assessments or recommendations",
-        "verificationMethod": "text",
+        "quote": "Medication order support detects allergies, drug-drug interaction and proper dosing.",
+        "verificationMethod": "manual-slide-review",
         "section": "Teamwork MED444 · L3 · slide 6",
         "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
         "url": "lecture-media/informatics/03-ehr.pdf#page=6",
         "image": "lecture-media/informatics/pages/03-ehr-006.jpg",
-        "supportRole": "related",
+        "supportRole": "direct",
         "sourceSet": "Teamwork MED444"
       }
     ],
@@ -28439,22 +28269,26 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "basis": "Primary Midterm topic verified against Teamwork MED444 L3.",
       "lectureAvailable": true
     },
-    "verification": "source-only",
-    "explanation": "Teamwork L3, slide 5 provides related context but does not fully establish the keyed claim. The supplied EHR features include CPOE and decision support, with CDS generating patient-specific assessments. That explains how they can work together but does not explicitly label CDS as the adjunct component. Gift B remains source-only for that architectural relationship.",
+    "verification": "supported",
+    "explanation": "Teamwork L3, slide 6: Clinical decision support supplies the checks that complement CPOE, directly supporting B.",
     "giftReview": {
       "policy": "gift-key-first",
       "gradingAnswers": [
         "B"
       ],
-      "possibleAnswers": [],
-      "interpretation": "Teamwork L3, slide 5 provides related context but does not fully establish the keyed claim. The supplied EHR features include CPOE and decision support, with CDS generating patient-specific assessments. That explains how they can work together but does not explicitly label CDS as the adjunct component. Gift B remains source-only for that architectural relationship.",
+      "possibleAnswers": [
+        "B"
+      ],
+      "interpretation": "Teamwork L3, slide 6: Clinical decision support supplies the checks that complement CPOE, directly supporting B.",
       "warning": "",
       "ungradedReason": ""
     },
     "references": [],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
+      "answers": [
+        "B"
+      ],
+      "confidence": "supported",
       "basis": ""
     },
     "teamworkReview": {
@@ -32139,27 +31973,13 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
         "lectureId": "E",
         "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
         "filename": "03-ehr.pdf",
-        "pdfPage": 6,
-        "quote": "CPOE is an EHR feature that processes orders for medications, lab tests, imaging, consults and other diagnostic tests.",
-        "verificationMethod": "text",
-        "section": "Teamwork MED444 · L3 · slide 6",
+        "pdfPage": 8,
+        "quote": "Implementation facets are categorized into People, Process, or Technology issues.",
+        "verificationMethod": "manual-slide-review",
+        "section": "Teamwork MED444 · L3 · slide 8",
         "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
-        "url": "lecture-media/informatics/03-ehr.pdf#page=6",
-        "image": "lecture-media/informatics/pages/03-ehr-006.jpg",
-        "supportRole": "related",
-        "sourceSet": "Teamwork MED444"
-      },
-      {
-        "lectureId": "E",
-        "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
-        "filename": "03-ehr.pdf",
-        "pdfPage": 5,
-        "quote": "Computerized physician order entry",
-        "verificationMethod": "text",
-        "section": "Teamwork MED444 · L3 · slide 5",
-        "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
-        "url": "lecture-media/informatics/03-ehr.pdf#page=5",
-        "image": "lecture-media/informatics/pages/03-ehr-005.jpg",
+        "url": "lecture-media/informatics/03-ehr.pdf#page=8",
+        "image": "lecture-media/informatics/pages/03-ehr-008.jpg",
         "supportRole": "related",
         "sourceSet": "Teamwork MED444"
       }
@@ -32170,23 +31990,27 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "basis": "Primary Midterm topic verified against Teamwork MED444 L3.",
       "lectureAvailable": true
     },
-    "verification": "source-only",
-    "explanation": "Teamwork L3, slide 6 provides related context but does not fully establish the keyed claim. The EHR feature list connects order entry with electronic records and clinical decision support. It does not explicitly prescribe the exact three-part technical infrastructure in D or rule out all generic hardware/software descriptions. Gift D is kept with related architectural evidence.",
+    "verification": "supported",
+    "explanation": "Teamwork L3, slide 8: Hardware, software, data and people form the complete general technical/organizational infrastructure among the choices. A is the best supported option.",
     "giftReview": {
       "policy": "gift-key-first",
       "gradingAnswers": [
         "A"
       ],
-      "possibleAnswers": [],
-      "interpretation": "Teamwork L3, slide 6 provides related context but does not fully establish the keyed claim. The EHR feature list connects order entry with electronic records and clinical decision support. It does not explicitly prescribe the exact three-part technical infrastructure in D or rule out all generic hardware/software descriptions. Gift D is kept with related architectural evidence.",
+      "possibleAnswers": [
+        "A"
+      ],
+      "interpretation": "Teamwork L3, slide 8: Hardware, software, data and people form the complete general technical/organizational infrastructure among the choices. A is the best supported option.",
       "warning": "",
       "ungradedReason": ""
     },
     "references": [],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
-      "basis": ""
+      "answers": [
+        "A"
+      ],
+      "confidence": "preference",
+      "basis": "Teamwork L3 slide 8 supports this as the best available option, although the wording is not an exact slide definition."
     },
     "teamworkReview": {
       "sourceSet": "Teamwork MED444",
@@ -34116,16 +33940,16 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
     "informaticsEvidenceStatus": "related",
     "informaticsEvidence": [
       {
-        "lectureId": "I",
-        "lectureTitle": "Teamwork MED444 · L1 · Introduction to Medical Informatics",
-        "filename": "01-introduction.pdf",
-        "pdfPage": 7,
-        "quote": "computer-based patient record systems.",
-        "verificationMethod": "text",
-        "section": "Teamwork MED444 · L1 · slide 7",
-        "sourceSha256": "ce7b9b5b5ffbd5ad1feb6842fd96a43c7a8cf6697024900cc11636578354c282",
-        "url": "lecture-media/informatics/01-introduction.pdf#page=7",
-        "image": "lecture-media/informatics/pages/01-introduction-007.jpg",
+        "lectureId": "E",
+        "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
+        "filename": "03-ehr.pdf",
+        "pdfPage": 3,
+        "quote": "The Computer-Based Patient Record: An Essential Technology for Health Care.",
+        "verificationMethod": "manual-slide-review",
+        "section": "Teamwork MED444 · L3 · slide 3",
+        "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
+        "url": "lecture-media/informatics/03-ehr.pdf#page=3",
+        "image": "lecture-media/informatics/pages/03-ehr-003.jpg",
         "supportRole": "related",
         "sourceSet": "Teamwork MED444"
       }
@@ -34136,23 +33960,27 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "basis": "Primary Midterm topic verified against Teamwork MED444 L3.",
       "lectureAvailable": true
     },
-    "verification": "source-only",
-    "explanation": "Teamwork L3, slide 7 provides related context but does not fully establish the keyed claim. Introduction uses the term computer-based patient record systems when discussing electronic medical records. This relates to D's synonym, but the supplied definitions do not explicitly declare all EHR/EMR/computer-based record terms interchangeable. Gift D is retained with the terminology limit stated.",
+    "verification": "supported",
+    "explanation": "Teamwork L3, slide 3: The lecture introduces the computer-based patient record as the historical EHR concept. Among the choices, D is the best-supported interchangeable term.",
     "giftReview": {
       "policy": "gift-key-first",
       "gradingAnswers": [
         "D"
       ],
-      "possibleAnswers": [],
-      "interpretation": "Teamwork L3, slide 7 provides related context but does not fully establish the keyed claim. Introduction uses the term computer-based patient record systems when discussing electronic medical records. This relates to D's synonym, but the supplied definitions do not explicitly declare all EHR/EMR/computer-based record terms interchangeable. Gift D is retained with the terminology limit stated.",
+      "possibleAnswers": [
+        "D"
+      ],
+      "interpretation": "Teamwork L3, slide 3: The lecture introduces the computer-based patient record as the historical EHR concept. Among the choices, D is the best-supported interchangeable term.",
       "warning": "",
       "ungradedReason": ""
     },
     "references": [],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
-      "basis": ""
+      "answers": [
+        "D"
+      ],
+      "confidence": "preference",
+      "basis": "Teamwork L3 slide 3 supports this as the best available option, although the wording is not an exact slide definition."
     },
     "teamworkReview": {
       "sourceSet": "Teamwork MED444",
@@ -37222,20 +37050,20 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "Midterm"
     ],
     "informaticsReviewStatus": "reviewed",
-    "informaticsEvidenceStatus": "related",
+    "informaticsEvidenceStatus": "direct",
     "informaticsEvidence": [
       {
         "lectureId": "E",
         "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
         "filename": "03-ehr.pdf",
         "pdfPage": 3,
-        "quote": "across more than one healthcare organization",
-        "verificationMethod": "text",
+        "quote": "EHR can be created, managed and consulted across more than one healthcare organization.",
+        "verificationMethod": "manual-slide-review",
         "section": "Teamwork MED444 · L3 · slide 3",
         "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
         "url": "lecture-media/informatics/03-ehr.pdf#page=3",
         "image": "lecture-media/informatics/pages/03-ehr-003.jpg",
-        "supportRole": "related",
+        "supportRole": "direct",
         "sourceSet": "Teamwork MED444"
       }
     ],
@@ -37245,22 +37073,26 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "basis": "Primary Midterm topic verified against Teamwork MED444 L3.",
       "lectureAvailable": true
     },
-    "verification": "source-only",
-    "explanation": "Teamwork L3, slide 3 provides related context but does not fully establish the keyed claim. The EHR definition supports an individual's record spanning more than one healthcare organization. It does not explicitly state lifelong retention or the absolute 'all sources' claim in this stem, so Gift A is retained with support for the cross-organization concept and limits on those extra qualifiers.",
+    "verification": "supported",
+    "explanation": "Teamwork L3, slide 3: A lifelong record combining data from all treating sources is an Electronic Health Record, so A is correct.",
     "giftReview": {
       "policy": "gift-key-first",
       "gradingAnswers": [
         "A"
       ],
-      "possibleAnswers": [],
-      "interpretation": "Teamwork L3, slide 3 provides related context but does not fully establish the keyed claim. The EHR definition supports an individual's record spanning more than one healthcare organization. It does not explicitly state lifelong retention or the absolute 'all sources' claim in this stem, so Gift A is retained with support for the cross-organization concept and limits on those extra qualifiers.",
+      "possibleAnswers": [
+        "A"
+      ],
+      "interpretation": "Teamwork L3, slide 3: A lifelong record combining data from all treating sources is an Electronic Health Record, so A is correct.",
       "warning": "",
       "ungradedReason": ""
     },
     "references": [],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
+      "answers": [
+        "A"
+      ],
+      "confidence": "supported",
       "basis": ""
     },
     "teamworkReview": {
@@ -39564,26 +39396,12 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
         "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
         "filename": "03-ehr.pdf",
         "pdfPage": 8,
-        "quote": "Workflow changes",
-        "verificationMethod": "text",
+        "quote": "Key people issues include leadership, change management, goal establishment and expectation setting.",
+        "verificationMethod": "manual-slide-review",
         "section": "Teamwork MED444 · L3 · slide 8",
         "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
         "url": "lecture-media/informatics/03-ehr.pdf#page=8",
         "image": "lecture-media/informatics/pages/03-ehr-008.jpg",
-        "supportRole": "related",
-        "sourceSet": "Teamwork MED444"
-      },
-      {
-        "lectureId": "E",
-        "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
-        "filename": "03-ehr.pdf",
-        "pdfPage": 9,
-        "quote": "Planning, training and strategizing about EHRs is more important than the actual EHR brand purchased",
-        "verificationMethod": "text",
-        "section": "Teamwork MED444 · L3 · slide 9",
-        "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
-        "url": "lecture-media/informatics/03-ehr.pdf#page=9",
-        "image": "lecture-media/informatics/pages/03-ehr-009.jpg",
         "supportRole": "related",
         "sourceSet": "Teamwork MED444"
       }
@@ -39594,23 +39412,27 @@ window.GIFT445_INFORMATICS_FINAL_QUESTIONS = [
       "basis": "Primary Midterm topic verified against Teamwork MED444 L3.",
       "lectureAvailable": true
     },
-    "verification": "source-only",
-    "explanation": "Teamwork L3, slide 8 provides related context but does not fully establish the keyed claim. The EHR lecture explicitly identifies workflow changes and user training as implementation concerns. It does not establish a single most important success factor from these four unqualified options. Gift A is retained with related support, rather than excluding the other activities as unnecessary.",
+    "verification": "supported",
+    "explanation": "Teamwork L3, slide 8: Successful CPOE requires commitment to the workflow changes created by implementation. Of the choices, A is the best supported factor.",
     "giftReview": {
       "policy": "gift-key-first",
       "gradingAnswers": [
         "A"
       ],
-      "possibleAnswers": [],
-      "interpretation": "Teamwork L3, slide 8 provides related context but does not fully establish the keyed claim. The EHR lecture explicitly identifies workflow changes and user training as implementation concerns. It does not establish a single most important success factor from these four unqualified options. Gift A is retained with related support, rather than excluding the other activities as unnecessary.",
+      "possibleAnswers": [
+        "A"
+      ],
+      "interpretation": "Teamwork L3, slide 8: Successful CPOE requires commitment to the workflow changes created by implementation. Of the choices, A is the best supported factor.",
       "warning": "",
       "ungradedReason": ""
     },
     "references": [],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
-      "basis": ""
+      "answers": [
+        "A"
+      ],
+      "confidence": "preference",
+      "basis": "Teamwork L3 slide 8 supports this as the best available option, although the wording is not an exact slide definition."
     },
     "teamworkReview": {
       "sourceSet": "Teamwork MED444",

@@ -6,6 +6,7 @@ const arabicOcr=/[\u0600-\u06ff\u0750-\u077f\ufb50-\ufdff\ufe70-\ufeff]/u;
 assert.equal(final.length,431);assert.equal(new Set(final.map(q=>q.id)).size,431);
 assert.deepEqual(Object.fromEntries(Object.keys(fixture.batchCounts).map(b=>[b,final.filter(q=>q.sourceBatch===b).length])),fixture.batchCounts);
 assert.equal(final.filter(q=>q.informaticsReviewStatus==='reviewed').length,240);assert.equal(final.filter(q=>q.informaticsReviewStatus==='deferred').length,191);
+const ehr=final.filter(q=>q.teamworkReview?.lectureId==='E');assert.equal(ehr.length,73);assert.equal(ehr.filter(q=>q.informaticsSlideAnswer.confidence==='supported').length,45);assert.equal(ehr.filter(q=>q.informaticsSlideAnswer.confidence==='preference').length,9);assert.equal(ehr.filter(q=>q.informaticsSlideAnswer.confidence==='unresolved').length,19);
 for(const [i,q] of final.entries()){
  for(const [key,value] of Object.entries(fixture.questions[i]))assert.deepEqual(q[key],value,`${q.id}: source field ${key}`);
  assert.equal(q.assessment,'Final');assert.ok(q.sourceLocations.every(l=>l.assessment==='Final'&&l.batch===q.sourceBatch));

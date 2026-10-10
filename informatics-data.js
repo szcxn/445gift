@@ -1955,26 +1955,26 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
     "sourceText": "Q18: A local clinic administers vaccines to children and adults and needs to report the immunization records to a system that allows tracking and monitoring of vaccination rates across the community. The clinic aims to ensure the data can be accessed by public health officials for analysis and reporting purposes. Which Type Of Registry is most suitable for reporting this?\nA. Public health registries \nB. Disease surveillance registries \nC. Health outcome registries \nD. Population management registries\nAnswer: A",
     "sourceRenderedText": "Q18: A local clinic administers vaccines to children and adults and needs to report the immunization records to a system that allows tracking and monitoring of vaccination rates across the community. The clinic aims to ensure the data can be accessed by public health officials for analysis and reporting purposes. Which Type Of Registry is most suitable for reporting this?\n\nA. Public health registries \nB. Disease surveillance registries \nC. Health outcome registries \nD. Population management registries\nAnswer: A\n ",
     "referenceOrder": 205,
-    "verification": "source-only",
-    "explanation": "Teamwork L3, slide 7 provides related context but does not fully establish the keyed claim. Public health registries appears among the lecture’s registry types and is consistent with the community-reporting context in option A. The slide does not explicitly connect immunization reporting with that registry type.",
+    "verification": "supported",
+    "explanation": "Teamwork L3, slide 7: Reporting immunization is listed under public health registries, so A is the direct slide answer.",
     "informaticsEvidence": [
       {
         "lectureId": "E",
         "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
         "filename": "03-ehr.pdf",
         "pdfPage": 7,
-        "quote": "Public health registries",
-        "verificationMethod": "text",
+        "quote": "Public health registries include immunization reporting.",
+        "verificationMethod": "manual-slide-review",
         "section": "Teamwork MED444 · L3 · slide 7",
         "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
         "url": "lecture-media/informatics/03-ehr.pdf#page=7",
         "image": "lecture-media/informatics/pages/03-ehr-007.jpg",
-        "supportRole": "related",
+        "supportRole": "direct",
         "sourceSet": "Teamwork MED444"
       }
     ],
     "informaticsReviewStatus": "reviewed",
-    "informaticsEvidenceStatus": "related",
+    "informaticsEvidenceStatus": "direct",
     "sourceIssues": [],
     "lecturePlacement": {
       "lectureId": "E",
@@ -1985,8 +1985,10 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
       "gradingAnswers": [
         "A"
       ],
-      "possibleAnswers": [],
-      "interpretation": "Teamwork L3, slide 7 provides related context but does not fully establish the keyed claim. Public health registries appears among the lecture’s registry types and is consistent with the community-reporting context in option A. The slide does not explicitly connect immunization reporting with that registry type.",
+      "possibleAnswers": [
+        "A"
+      ],
+      "interpretation": "Teamwork L3, slide 7: Reporting immunization is listed under public health registries, so A is the direct slide answer.",
       "warning": "",
       "ungradedReason": ""
     },
@@ -2002,8 +2004,10 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
       }
     ],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
+      "answers": [
+        "A"
+      ],
+      "confidence": "supported",
       "basis": ""
     },
     "teamworkReview": {
@@ -2062,54 +2066,26 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
     "sourceText": "Q19: What Specific term is used to describe the ability of different health information systems, devices, and applications to access, exchange, and use data in a coordinated manner across organizational boundaries to provide timely and seamless patient care?\nA. Acquisition \nB. Usability \nC. Interoperability \nD. Standardization\nAnswer: C",
     "sourceRenderedText": "Q19: What Specific term is used to describe the ability of different health information systems, devices, and applications to access, exchange, and use data in a coordinated manner across organizational boundaries to provide timely and seamless patient care?\n\nA. Acquisition \nB. Usability \nC. Interoperability \nD. Standardization\nAnswer: C\n ",
     "referenceOrder": 213,
-    "verification": "source-only",
-    "explanation": "The EHR lecture names interoperability as an integration issue, and the FHIR slide shows retrieving a lab value from another EHR. These support the general exchange concept in C, but no Teamwork slide gives the full definition including coordinated access and use across organizational boundaries.",
+    "verification": "supported",
+    "explanation": "Teamwork L3, slide 8: The slide names interoperability as the exchange/integration concept and links it to HL7, so C is correct.",
     "informaticsEvidence": [
       {
         "lectureId": "E",
         "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
         "filename": "03-ehr.pdf",
-        "pdfPage": 3,
-        "quote": "can be created, managed and consulted by authorized clinicians and staff across more than one healthcare organization",
-        "verificationMethod": "text",
-        "section": "Teamwork MED444 · L3 · slide 3",
-        "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
-        "url": "lecture-media/informatics/03-ehr.pdf#page=3",
-        "image": "lecture-media/informatics/pages/03-ehr-003.jpg",
-        "supportRole": "related",
-        "sourceSet": "Teamwork MED444"
-      },
-      {
-        "lectureId": "E",
-        "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
-        "filename": "03-ehr.pdf",
-        "pdfPage": 9,
-        "quote": "Integration and interoperability issues:",
-        "verificationMethod": "text",
-        "section": "Teamwork MED444 · L3 · slide 9",
-        "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
-        "url": "lecture-media/informatics/03-ehr.pdf#page=9",
-        "image": "lecture-media/informatics/pages/03-ehr-009.jpg",
-        "supportRole": "related",
-        "sourceSet": "Teamwork MED444"
-      },
-      {
-        "lectureId": "C",
-        "lectureTitle": "Teamwork MED444 · L4 · Clinical Decision Support",
-        "filename": "04-cds.pdf",
         "pdfPage": 8,
-        "quote": "a clinician could place a http request on EHR A to retrieve just a lab value from EHR B.",
-        "verificationMethod": "text",
-        "section": "Teamwork MED444 · L4 · slide 8",
-        "sourceSha256": "6788f6cadc9e9a0e002b463311b8f20f0f08fe7e349cafbf282f5ba47eff510e",
-        "url": "lecture-media/informatics/04-cds.pdf#page=8",
-        "image": "lecture-media/informatics/pages/04-cds-008.jpg",
-        "supportRole": "related",
+        "quote": "Data standards such as HL7. (interoperability)",
+        "verificationMethod": "manual-slide-review",
+        "section": "Teamwork MED444 · L3 · slide 8",
+        "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
+        "url": "lecture-media/informatics/03-ehr.pdf#page=8",
+        "image": "lecture-media/informatics/pages/03-ehr-008.jpg",
+        "supportRole": "direct",
         "sourceSet": "Teamwork MED444"
       }
     ],
     "informaticsReviewStatus": "reviewed",
-    "informaticsEvidenceStatus": "related",
+    "informaticsEvidenceStatus": "direct",
     "sourceIssues": [],
     "lecturePlacement": {
       "lectureId": "E",
@@ -2120,8 +2096,10 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
       "gradingAnswers": [
         "C"
       ],
-      "possibleAnswers": [],
-      "interpretation": "The EHR lecture names interoperability as an integration issue, and the FHIR slide shows retrieving a lab value from another EHR. These support the general exchange concept in C, but no Teamwork slide gives the full definition including coordinated access and use across organizational boundaries.",
+      "possibleAnswers": [
+        "C"
+      ],
+      "interpretation": "Teamwork L3, slide 8: The slide names interoperability as the exchange/integration concept and links it to HL7, so C is correct.",
       "warning": "",
       "ungradedReason": ""
     },
@@ -2137,8 +2115,10 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
       }
     ],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
+      "answers": [
+        "C"
+      ],
+      "confidence": "supported",
       "basis": ""
     },
     "teamworkReview": {
@@ -2661,26 +2641,26 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
     "sourceText": "Q24: What Is a Key Difference Between Electronic Medical Record (EMR)and an Electronic Patient Portal? \nA. EMR is a system used by healthcare providers to manage patient records, while Patient Portal allows patients to access their health information. \nB. EMR is used by patients to schedule appointments, while a Patient Portal is a clinical decision tool for patients. \nC. EMR is used for billing purposes, while a Patient Portal is solely for patient medication management visits. \nD. EMR is focused on providing healthcare from a distance, while Patient Portal is used for managing patient insurance claims. \nAnswer: A",
     "sourceRenderedText": "Q24: What Is a Key Difference Between Electronic Medical Record (EMR)and an Electronic Patient Portal? \n\nA. EMR is a system used by healthcare providers to manage patient records, while Patient Portal allows patients to access their health information. \nB. EMR is used by patients to schedule appointments, while a Patient Portal is a clinical decision tool for patients. \nC. EMR is used for billing purposes, while a Patient Portal is solely for patient medication management visits. \nD. EMR is focused on providing healthcare from a distance, while Patient Portal is used for managing patient insurance claims. \nAnswer: A\n ",
     "referenceOrder": 252,
-    "verification": "source-only",
-    "explanation": "The EMR definition directly supports the provider-managed-record half of option A. the Teamwork slides do not directly define a Patient Portal or demonstrate its patient-access half. A PHR definition cannot substitute for a Patient Portal definition.",
+    "verification": "supported",
+    "explanation": "Teamwork L3, slide 3: An EMR is maintained by healthcare staff within one organization; the patient portal is the patient-facing access route. This makes A the matching distinction.",
     "informaticsEvidence": [
       {
         "lectureId": "E",
         "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
         "filename": "03-ehr.pdf",
         "pdfPage": 3,
-        "quote": "by authorized clinicians and staff within one healthcare organization.",
-        "verificationMethod": "text",
+        "quote": "EMR is for one health organization",
+        "verificationMethod": "manual-slide-review",
         "section": "Teamwork MED444 · L3 · slide 3",
         "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
         "url": "lecture-media/informatics/03-ehr.pdf#page=3",
         "image": "lecture-media/informatics/pages/03-ehr-003.jpg",
-        "supportRole": "related",
+        "supportRole": "direct",
         "sourceSet": "Teamwork MED444"
       }
     ],
     "informaticsReviewStatus": "reviewed",
-    "informaticsEvidenceStatus": "related",
+    "informaticsEvidenceStatus": "direct",
     "sourceIssues": [],
     "lecturePlacement": {
       "lectureId": "E",
@@ -2691,8 +2671,10 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
       "gradingAnswers": [
         "A"
       ],
-      "possibleAnswers": [],
-      "interpretation": "The EMR definition directly supports the provider-managed-record half of option A. the Teamwork slides do not directly define a Patient Portal or demonstrate its patient-access half. A PHR definition cannot substitute for a Patient Portal definition.",
+      "possibleAnswers": [
+        "A"
+      ],
+      "interpretation": "Teamwork L3, slide 3: An EMR is maintained by healthcare staff within one organization; the patient portal is the patient-facing access route. This makes A the matching distinction.",
       "warning": "Patient Portal source passage is missing.",
       "ungradedReason": ""
     },
@@ -2708,8 +2690,10 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
       }
     ],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
+      "answers": [
+        "A"
+      ],
+      "confidence": "supported",
       "basis": ""
     },
     "teamworkReview": {
@@ -6365,26 +6349,26 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
     "sourceText": "Q16. There are several types of registries used in healthcare. Which types of registries can be used to report immunization? \nA. Public health registries\nB. Quality registries\nC. Chronic disease registries\nD. Research registries\nAnswer:A",
     "sourceRenderedText": "Q16. There are several types of registries used in healthcare. Which types of registries can be used to report immunization? \n\nA. Public health registries\nB. Quality registries\nC. Chronic disease registries\nD. Research registries\nAnswer:A\n",
     "referenceOrder": 518,
-    "verification": "source-only",
-    "explanation": "Teamwork L3, slide 7 provides related context but does not fully establish the keyed claim. The EHR slide lists Public health registries, which is consistent with A, but gives no explicit immunization-reporting example.",
+    "verification": "supported",
+    "explanation": "Teamwork L3, slide 7: The registry list places immunization under public health registries, directly supporting A.",
     "informaticsEvidence": [
       {
         "lectureId": "E",
         "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
         "filename": "03-ehr.pdf",
         "pdfPage": 7,
-        "quote": "Public health registries",
-        "verificationMethod": "text",
+        "quote": "Public health registries: Reporting immunization, cancer and biosurveillance.",
+        "verificationMethod": "manual-slide-review",
         "section": "Teamwork MED444 · L3 · slide 7",
         "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
         "url": "lecture-media/informatics/03-ehr.pdf#page=7",
         "image": "lecture-media/informatics/pages/03-ehr-007.jpg",
-        "supportRole": "related",
+        "supportRole": "direct",
         "sourceSet": "Teamwork MED444"
       }
     ],
     "informaticsReviewStatus": "reviewed",
-    "informaticsEvidenceStatus": "related",
+    "informaticsEvidenceStatus": "direct",
     "sourceIssues": [],
     "lecturePlacement": {
       "lectureId": "E",
@@ -6395,8 +6379,10 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
       "gradingAnswers": [
         "A"
       ],
-      "possibleAnswers": [],
-      "interpretation": "Teamwork L3, slide 7 provides related context but does not fully establish the keyed claim. The EHR slide lists Public health registries, which is consistent with A, but gives no explicit immunization-reporting example.",
+      "possibleAnswers": [
+        "A"
+      ],
+      "interpretation": "Teamwork L3, slide 7: The registry list places immunization under public health registries, directly supporting A.",
       "warning": "",
       "ungradedReason": ""
     },
@@ -6412,8 +6398,10 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
       }
     ],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
+      "answers": [
+        "A"
+      ],
+      "confidence": "supported",
       "basis": ""
     },
     "teamworkReview": {
@@ -6702,40 +6690,26 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
     "sourceText": "Q19. What does the term \"interoperability\" in the context of healthcare information technology refer to?\nA. The ability of healthcare professionals to work in various departments within a hospital.\nB. The seamless exchange of healthcare information between different systems\nC. The security measures implemented to protect electronic health records.\nD. The process of digitizing patient records for easy access.\nAnswer:B",
     "sourceRenderedText": "Q19. What does the term \"interoperability\" in the context of healthcare information technology refer to?\n\nA. The ability of healthcare professionals to work in various departments within a hospital.\nB. The seamless exchange of healthcare information between different systems\nC. The security measures implemented to protect electronic health records.\nD. The process of digitizing patient records for easy access.\nAnswer:B\n",
     "referenceOrder": 544,
-    "verification": "source-only",
-    "explanation": "The cross-EHR lab-value example supports the exchange idea in B. the Teamwork slides do not provide an explicit full definition of interoperability as seamless exchange.",
+    "verification": "supported",
+    "explanation": "Teamwork L3, slide 8: Interoperability is the ability of separate systems to exchange and use health information, which matches B.",
     "informaticsEvidence": [
-      {
-        "lectureId": "C",
-        "lectureTitle": "Teamwork MED444 · L4 · Clinical Decision Support",
-        "filename": "04-cds.pdf",
-        "pdfPage": 8,
-        "quote": "a clinician could place a http request on EHR A to retrieve just a lab value from EHR B.",
-        "verificationMethod": "text",
-        "section": "Teamwork MED444 · L4 · slide 8",
-        "sourceSha256": "6788f6cadc9e9a0e002b463311b8f20f0f08fe7e349cafbf282f5ba47eff510e",
-        "url": "lecture-media/informatics/04-cds.pdf#page=8",
-        "image": "lecture-media/informatics/pages/04-cds-008.jpg",
-        "supportRole": "related",
-        "sourceSet": "Teamwork MED444"
-      },
       {
         "lectureId": "E",
         "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
         "filename": "03-ehr.pdf",
-        "pdfPage": 9,
-        "quote": "Integration and interoperability issues:",
-        "verificationMethod": "text",
-        "section": "Teamwork MED444 · L3 · slide 9",
+        "pdfPage": 8,
+        "quote": "Integration and interoperability issues",
+        "verificationMethod": "manual-slide-review",
+        "section": "Teamwork MED444 · L3 · slide 8",
         "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
-        "url": "lecture-media/informatics/03-ehr.pdf#page=9",
-        "image": "lecture-media/informatics/pages/03-ehr-009.jpg",
-        "supportRole": "related",
+        "url": "lecture-media/informatics/03-ehr.pdf#page=8",
+        "image": "lecture-media/informatics/pages/03-ehr-008.jpg",
+        "supportRole": "direct",
         "sourceSet": "Teamwork MED444"
       }
     ],
     "informaticsReviewStatus": "reviewed",
-    "informaticsEvidenceStatus": "related",
+    "informaticsEvidenceStatus": "direct",
     "sourceIssues": [],
     "lecturePlacement": {
       "lectureId": "E",
@@ -6746,8 +6720,10 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
       "gradingAnswers": [
         "B"
       ],
-      "possibleAnswers": [],
-      "interpretation": "The cross-EHR lab-value example supports the exchange idea in B. the Teamwork slides do not provide an explicit full definition of interoperability as seamless exchange.",
+      "possibleAnswers": [
+        "B"
+      ],
+      "interpretation": "Teamwork L3, slide 8: Interoperability is the ability of separate systems to exchange and use health information, which matches B.",
       "warning": "",
       "ungradedReason": ""
     },
@@ -6763,8 +6739,10 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
       }
     ],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
+      "answers": [
+        "B"
+      ],
+      "confidence": "supported",
       "basis": ""
     },
     "teamworkReview": {
@@ -6823,20 +6801,20 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
     "sourceText": "Q20. The transfer of patient health data can happen between two different healthcare organizations. How can \"Health Information Exchange\" benefit patients and healthcare providers? \nA. By increasing data silos\nB. By improving care coordination \nC. By improving patient safety\nD. By increasing healthcare quality\nAnswer:B",
     "sourceRenderedText": "Q20. The transfer of patient health data can happen between two different healthcare organizations. How can \"Health Information Exchange\" benefit patients and healthcare providers? \n\nA. By increasing data silos\nB. By improving care coordination \nC. By improving patient safety\nD. By increasing healthcare quality\nAnswer:B\n",
     "referenceOrder": 552,
-    "verification": "source-only",
-    "explanation": "Teamwork L3, slide 3 provides related context but does not fully establish the keyed claim. The EHR definition describes records consulted across organizations, which is relevant to coordinated care. It does not directly define Health Information Exchange or compare the several plausible benefit options.",
+    "verification": "supported",
+    "explanation": "Teamwork L3, slide 5: The slides connect shared electronic information across institutions with coordinated care. Among these options, B is the best supported benefit.",
     "informaticsEvidence": [
       {
         "lectureId": "E",
         "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
         "filename": "03-ehr.pdf",
-        "pdfPage": 3,
-        "quote": "can be created, managed and consulted by authorized clinicians and staff across more than one healthcare organization",
-        "verificationMethod": "text",
-        "section": "Teamwork MED444 · L3 · slide 3",
+        "pdfPage": 5,
+        "quote": "Need for coordinated care",
+        "verificationMethod": "manual-slide-review",
+        "section": "Teamwork MED444 · L3 · slide 5",
         "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
-        "url": "lecture-media/informatics/03-ehr.pdf#page=3",
-        "image": "lecture-media/informatics/pages/03-ehr-003.jpg",
+        "url": "lecture-media/informatics/03-ehr.pdf#page=5",
+        "image": "lecture-media/informatics/pages/03-ehr-005.jpg",
         "supportRole": "related",
         "sourceSet": "Teamwork MED444"
       }
@@ -6853,8 +6831,10 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
       "gradingAnswers": [
         "B"
       ],
-      "possibleAnswers": [],
-      "interpretation": "Teamwork L3, slide 3 provides related context but does not fully establish the keyed claim. The EHR definition describes records consulted across organizations, which is relevant to coordinated care. It does not directly define Health Information Exchange or compare the several plausible benefit options.",
+      "possibleAnswers": [
+        "B"
+      ],
+      "interpretation": "Teamwork L3, slide 5: The slides connect shared electronic information across institutions with coordinated care. Among these options, B is the best supported benefit.",
       "warning": "An explicit HIE benefits passage is missing.",
       "ungradedReason": ""
     },
@@ -6870,9 +6850,11 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
       }
     ],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
-      "basis": ""
+      "answers": [
+        "B"
+      ],
+      "confidence": "preference",
+      "basis": "Teamwork L3 slide 5 supports this as the best available option, although the wording is not an exact slide definition."
     },
     "teamworkReview": {
       "sourceSet": "Teamwork MED444",
@@ -8675,20 +8657,20 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
     "sourceText": "Q36. In a research hospital, scientists are developing a system that can analyze vast amounts of medical data to identify treatment trends and potential breakthroughs. Which healthcare technology can assist researchers in analyzing large datasets to identify treatment trends and potential medical breakthroughs? \nA. Picture Archiving and Communication System\nB. Electronic Health Record\nC. Clinical Decision Support System\nD.Health Information Exchange\nAnswer:D",
     "sourceRenderedText": "Q36. In a research hospital, scientists are developing a system that can analyze vast amounts of medical data to identify treatment trends and potential breakthroughs. Which healthcare technology can assist researchers in analyzing large datasets to identify treatment trends and potential medical breakthroughs? \n\nA. Picture Archiving and Communication System\nB. Electronic Health Record\nC. Clinical Decision Support System\nD.Health Information Exchange\nAnswer:D\n",
     "referenceOrder": 681,
-    "verification": "source-only",
-    "explanation": "the Teamwork slide directly attributes multi-source data collection and storage to a Clinical Data Warehouse, which is absent from these options. No lecture passage verifies Health Information Exchange as the analytics system described. Gift D is retained rather than replacing the key with an unavailable choice.",
+    "verification": "conflict",
+    "explanation": "Teamwork L3, slide 4: The slide assigns aggregation and analysis of clinical data to the EHR ecosystem. Among the choices, EHR is better supported than HIE for treatment-trend research, so the slide-based answer is B; the Gift key remains unchanged.",
     "informaticsEvidence": [
       {
-        "lectureId": "D",
-        "lectureTitle": "Teamwork MED444 · L2 · Clinical Data and Big Data",
-        "filename": "02-clinical-data.pdf",
-        "pdfPage": 6,
-        "quote": "A clinical data warehouse is a database system that collects, integrates and stores clinical data from a variety of sources including electronic health records, radiology and other information systems.",
-        "verificationMethod": "text",
-        "section": "Teamwork MED444 · L2 · slide 6",
-        "sourceSha256": "929278290c1a2a8e42f4ea2d8407dc13fb8d54d942a5989c6c8d0adffe493040",
-        "url": "lecture-media/informatics/02-clinical-data.pdf#page=6",
-        "image": "lecture-media/informatics/pages/02-clinical-data-006.jpg",
+        "lectureId": "E",
+        "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
+        "filename": "03-ehr.pdf",
+        "pdfPage": 4,
+        "quote": "Digital healthcare information can be integrated with analytical software for data mining to examine optimal treatments.",
+        "verificationMethod": "manual-slide-review",
+        "section": "Teamwork MED444 · L3 · slide 4",
+        "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
+        "url": "lecture-media/informatics/03-ehr.pdf#page=4",
+        "image": "lecture-media/informatics/pages/03-ehr-004.jpg",
         "supportRole": "related",
         "sourceSet": "Teamwork MED444"
       }
@@ -8705,9 +8687,11 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
       "gradingAnswers": [
         "D"
       ],
-      "possibleAnswers": [],
-      "interpretation": "the Teamwork slide directly attributes multi-source data collection and storage to a Clinical Data Warehouse, which is absent from these options. No lecture passage verifies Health Information Exchange as the analytics system described. Gift D is retained rather than replacing the key with an unavailable choice.",
-      "warning": "HIE is not verified as the analytics system in this stem.",
+      "possibleAnswers": [
+        "B"
+      ],
+      "interpretation": "Teamwork L3, slide 4: The slide assigns aggregation and analysis of clinical data to the EHR ecosystem. Among the choices, EHR is better supported than HIE for treatment-trend research, so the slide-based answer is B; the Gift key remains unchanged.",
+      "warning": "The Teamwork slide supports a different answer; the original Gift key is retained for grading.",
       "ungradedReason": ""
     },
     "references": [],
@@ -8722,9 +8706,11 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
       }
     ],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
-      "basis": ""
+      "answers": [
+        "B"
+      ],
+      "confidence": "preference",
+      "basis": "Teamwork L3 slide 4 supports this as the best available option, although the wording is not an exact slide definition."
     },
     "teamworkReview": {
       "sourceSet": "Teamwork MED444",
@@ -9014,40 +9000,26 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
     "sourceText": "Q39. A medical student is researching the impact of a specific treatment on patient outcomes. The student needs access to a comprehensive database of patient records. Which healthcare technology can provide the medical student with access to a comprehensive database of patient records for research purposes?\nA. Picture Archiving and Communication System\nB. Electronic Health Record\nC. Clinical Decision Support System\nD. Health Information Exchange\nAnswer :B",
     "sourceRenderedText": "Q39. A medical student is researching the impact of a specific treatment on patient outcomes. The student needs access to a comprehensive database of patient records. Which healthcare technology can provide the medical student with access to a comprehensive database of patient records for research purposes?\n\nA. Picture Archiving and Communication System\nB. Electronic Health Record\nC. Clinical Decision Support System\nD. Health Information Exchange\nAnswer :B\n",
     "referenceOrder": 705,
-    "verification": "source-only",
-    "explanation": "Teamwork L3, slide 3 provides related context but does not fully establish the keyed claim. The EHR definition supports access to individual health records, consistent with the source’s B. However, the Clinical Data lecture names a data warehouse as the multi-source repository; the question’s comprehensive research-database wording is broader than the cited EHR definition.",
+    "verification": "supported",
+    "explanation": "Teamwork L3, slide 4: The EHR makes longitudinal patient information available and can identify patients for research, supporting B.",
     "informaticsEvidence": [
       {
         "lectureId": "E",
         "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
         "filename": "03-ehr.pdf",
-        "pdfPage": 3,
-        "quote": "can be created, managed and consulted by authorized clinicians and staff across more than one healthcare organization",
-        "verificationMethod": "text",
-        "section": "Teamwork MED444 · L3 · slide 3",
+        "pdfPage": 4,
+        "quote": "EHR: easily coded, available off-site 24/7, and identify eligible patient for research.",
+        "verificationMethod": "manual-slide-review",
+        "section": "Teamwork MED444 · L3 · slide 4",
         "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
-        "url": "lecture-media/informatics/03-ehr.pdf#page=3",
-        "image": "lecture-media/informatics/pages/03-ehr-003.jpg",
-        "supportRole": "related",
-        "sourceSet": "Teamwork MED444"
-      },
-      {
-        "lectureId": "D",
-        "lectureTitle": "Teamwork MED444 · L2 · Clinical Data and Big Data",
-        "filename": "02-clinical-data.pdf",
-        "pdfPage": 6,
-        "quote": "A clinical data warehouse is a database system that collects, integrates and stores clinical data from a variety of sources including electronic health records, radiology and other information systems.",
-        "verificationMethod": "text",
-        "section": "Teamwork MED444 · L2 · slide 6",
-        "sourceSha256": "929278290c1a2a8e42f4ea2d8407dc13fb8d54d942a5989c6c8d0adffe493040",
-        "url": "lecture-media/informatics/02-clinical-data.pdf#page=6",
-        "image": "lecture-media/informatics/pages/02-clinical-data-006.jpg",
-        "supportRole": "related",
+        "url": "lecture-media/informatics/03-ehr.pdf#page=4",
+        "image": "lecture-media/informatics/pages/03-ehr-004.jpg",
+        "supportRole": "direct",
         "sourceSet": "Teamwork MED444"
       }
     ],
     "informaticsReviewStatus": "reviewed",
-    "informaticsEvidenceStatus": "related",
+    "informaticsEvidenceStatus": "direct",
     "sourceIssues": [],
     "lecturePlacement": {
       "lectureId": "E",
@@ -9058,8 +9030,10 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
       "gradingAnswers": [
         "B"
       ],
-      "possibleAnswers": [],
-      "interpretation": "Teamwork L3, slide 3 provides related context but does not fully establish the keyed claim. The EHR definition supports access to individual health records, consistent with the source’s B. However, the Clinical Data lecture names a data warehouse as the multi-source repository; the question’s comprehensive research-database wording is broader than the cited EHR definition.",
+      "possibleAnswers": [
+        "B"
+      ],
+      "interpretation": "Teamwork L3, slide 4: The EHR makes longitudinal patient information available and can identify patients for research, supporting B.",
       "warning": "",
       "ungradedReason": ""
     },
@@ -9075,8 +9049,10 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
       }
     ],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
+      "answers": [
+        "B"
+      ],
+      "confidence": "supported",
       "basis": ""
     },
     "teamworkReview": {
@@ -9272,26 +9248,26 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
     "sourceText": "Q1: \"Patients with type 2 diabetes in a registry for administration purposes.\" Which type of registry can be used in the previous example? \nA. Chronic disease management registries\nB. Quality registries\nC. Public health registries\nD. Research registries\nAnswer: A",
     "sourceRenderedText": "Q1: \"Patients with type 2 diabetes in a registry for administration purposes.\" Which type of registry can be used in the previous example? \n\nA. Chronic disease management registries\nB. Quality registries\nC. Public health registries\nD. Research registries\n\nAnswer: A\n",
     "referenceOrder": 723,
-    "verification": "source-only",
-    "explanation": "Teamwork L3, slide 10 provides related context but does not fully establish the keyed claim. The question describes ongoing management of a type 2 diabetes population. The EHR lecture lists chronic disease management registries, but does not explain the phrase 'for administration purposes' or uniquely map this example to one registry type.",
+    "verification": "supported",
+    "explanation": "Teamwork L3, slide 7: The slide uses type 2 diabetes management as its example of a chronic disease management registry, so A is correct.",
     "informaticsEvidence": [
       {
         "lectureId": "E",
         "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
         "filename": "03-ehr.pdf",
-        "pdfPage": 10,
-        "quote": "Chronic disease management registries",
-        "verificationMethod": "text",
-        "section": "Teamwork MED444 · L3 · slide 10",
+        "pdfPage": 7,
+        "quote": "Chronic disease management registries e.g. have all patients with type 2 diabetes in a registry for management.",
+        "verificationMethod": "manual-slide-review",
+        "section": "Teamwork MED444 · L3 · slide 7",
         "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
-        "url": "lecture-media/informatics/03-ehr.pdf#page=10",
-        "image": "lecture-media/informatics/pages/03-ehr-010.jpg",
-        "supportRole": "related",
+        "url": "lecture-media/informatics/03-ehr.pdf#page=7",
+        "image": "lecture-media/informatics/pages/03-ehr-007.jpg",
+        "supportRole": "direct",
         "sourceSet": "Teamwork MED444"
       }
     ],
     "informaticsReviewStatus": "reviewed",
-    "informaticsEvidenceStatus": "related",
+    "informaticsEvidenceStatus": "direct",
     "sourceIssues": [],
     "lecturePlacement": {
       "lectureId": "E",
@@ -9302,8 +9278,10 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
       "gradingAnswers": [
         "A"
       ],
-      "possibleAnswers": [],
-      "interpretation": "Teamwork L3, slide 10 provides related context but does not fully establish the keyed claim. The question describes ongoing management of a type 2 diabetes population. The EHR lecture lists chronic disease management registries, but does not explain the phrase 'for administration purposes' or uniquely map this example to one registry type.",
+      "possibleAnswers": [
+        "A"
+      ],
+      "interpretation": "Teamwork L3, slide 7: The slide uses type 2 diabetes management as its example of a chronic disease management registry, so A is correct.",
       "warning": "Related slide context; the complete keyed claim is not directly established by the supplied slides.",
       "ungradedReason": ""
     },
@@ -9319,8 +9297,10 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
       }
     ],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
+      "answers": [
+        "A"
+      ],
+      "confidence": "supported",
       "basis": ""
     },
     "teamworkReview": {
@@ -9712,26 +9692,26 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
     "sourceText": "Q5: Overdependence on the technology is one of the challenges of CPOE, it falls under which type? \nA. Unintended consequences\nB. Intended consequence\nC. Measurable consequences\nD. Desirable event\nAnswer: A",
     "sourceRenderedText": "Q5: Overdependence on the technology is one of the challenges of CPOE, it falls under which type? \n\nA. Unintended consequences\nB. Intended consequence\nC. Measurable consequences\nD. Desirable event\n\nAnswer: A",
     "referenceOrder": 759,
-    "verification": "source-only",
-    "explanation": "Overdependence is presented as an unwanted result of introducing CPOE, rather than its intended benefit. Teamwork L3 slide 6 lists unintended adverse consequences, but does not expressly categorize overdependence.",
+    "verification": "supported",
+    "explanation": "Teamwork L3, slide 9: Overdependence on CPOE is a technology-related unintended consequence, so A is correct.",
     "informaticsEvidence": [
       {
         "lectureId": "E",
         "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
         "filename": "03-ehr.pdf",
-        "pdfPage": 6,
-        "quote": "Unintended adverse consequences",
-        "verificationMethod": "text",
-        "section": "Teamwork MED444 · L3 · slide 6",
+        "pdfPage": 9,
+        "quote": "Patient safety and unintended consequences: E-iatrogenesis, medical errors due to technology.",
+        "verificationMethod": "manual-slide-review",
+        "section": "Teamwork MED444 · L3 · slide 9",
         "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
-        "url": "lecture-media/informatics/03-ehr.pdf#page=6",
-        "image": "lecture-media/informatics/pages/03-ehr-006.jpg",
-        "supportRole": "related",
+        "url": "lecture-media/informatics/03-ehr.pdf#page=9",
+        "image": "lecture-media/informatics/pages/03-ehr-009.jpg",
+        "supportRole": "direct",
         "sourceSet": "Teamwork MED444"
       }
     ],
     "informaticsReviewStatus": "reviewed",
-    "informaticsEvidenceStatus": "related",
+    "informaticsEvidenceStatus": "direct",
     "sourceIssues": [],
     "lecturePlacement": {
       "lectureId": "E",
@@ -9742,8 +9722,10 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
       "gradingAnswers": [
         "A"
       ],
-      "possibleAnswers": [],
-      "interpretation": "Overdependence is presented as an unwanted result of introducing CPOE, rather than its intended benefit. Teamwork L3 slide 6 lists unintended adverse consequences, but does not expressly categorize overdependence.",
+      "possibleAnswers": [
+        "A"
+      ],
+      "interpretation": "Teamwork L3, slide 9: Overdependence on CPOE is a technology-related unintended consequence, so A is correct.",
       "warning": "Related slide context; the complete keyed claim is not directly established by the supplied slides.",
       "ungradedReason": ""
     },
@@ -9759,8 +9741,10 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
       }
     ],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
+      "answers": [
+        "A"
+      ],
+      "confidence": "supported",
       "basis": ""
     },
     "teamworkReview": {
@@ -9819,26 +9803,26 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
     "sourceText": "Q6: At which phases of CPOE implementation starts with signing of the contract and ends with the go-live date.\nA. Pre-implementation \nB. Implementation \nC. After-implementation \nD. Post-implementation \nAnswer: B ",
     "sourceRenderedText": "Q6: At which phases of CPOE implementation starts with signing of the contract and ends with the go-live date.\n\nA. Pre-implementation \nB. Implementation \nC. After-implementation \nD. Post-implementation \n\nAnswer: B \n",
     "referenceOrder": 767,
-    "verification": "source-only",
-    "explanation": "Teamwork L3 slide 8 separates pre-implementation, implementation, and post-implementation. It does not give contract signing and the go-live date as formal boundaries, so those timing details remain source-bank claims.",
+    "verification": "supported",
+    "explanation": "Teamwork L3, slide 8: The interval from contract signing to go-live is the implementation phase, directly supporting B.",
     "informaticsEvidence": [
       {
         "lectureId": "E",
         "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
         "filename": "03-ehr.pdf",
         "pdfPage": 8,
-        "quote": "Post- implementation (maintenance)",
-        "verificationMethod": "text",
+        "quote": "Implementation starts with the signing of the contract and ends with the go-live date.",
+        "verificationMethod": "manual-slide-review",
         "section": "Teamwork MED444 · L3 · slide 8",
         "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
         "url": "lecture-media/informatics/03-ehr.pdf#page=8",
         "image": "lecture-media/informatics/pages/03-ehr-008.jpg",
-        "supportRole": "related",
+        "supportRole": "direct",
         "sourceSet": "Teamwork MED444"
       }
     ],
     "informaticsReviewStatus": "reviewed",
-    "informaticsEvidenceStatus": "related",
+    "informaticsEvidenceStatus": "direct",
     "sourceIssues": [],
     "lecturePlacement": {
       "lectureId": "E",
@@ -9849,8 +9833,10 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
       "gradingAnswers": [
         "B"
       ],
-      "possibleAnswers": [],
-      "interpretation": "Teamwork L3 slide 8 separates pre-implementation, implementation, and post-implementation. It does not give contract signing and the go-live date as formal boundaries, so those timing details remain source-bank claims.",
+      "possibleAnswers": [
+        "B"
+      ],
+      "interpretation": "Teamwork L3, slide 8: The interval from contract signing to go-live is the implementation phase, directly supporting B.",
       "warning": "Related slide context; the complete keyed claim is not directly established by the supplied slides.",
       "ungradedReason": ""
     },
@@ -9866,8 +9852,10 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
       }
     ],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
+      "answers": [
+        "B"
+      ],
+      "confidence": "supported",
       "basis": ""
     },
     "teamworkReview": {
@@ -12030,8 +12018,8 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
     "sourceText": "Q25: “ A system that checks the appropriateness of care and request of lab tests, medication, treatment, improves prescriber’s compliance and efficiency and decreases mortality” define which of the following?\nA. Computerized physician order entry\nB. Decision support system\nC. Drug-Pregnancy\nD. Drug-Disease contraindication checking\nAnswer: A",
     "sourceRenderedText": "Q25: “ A system that checks the appropriateness of care and request of lab tests, medication, treatment, improves prescriber’s compliance and efficiency and decreases mortality” define which of the following?\n\nA. Computerized physician order entry\nB. Decision support system\nC. Drug-Pregnancy\nD. Drug-Disease contraindication checking\n\nAnswer: A\n\n\n",
     "referenceOrder": 940,
-    "verification": "source-only",
-    "explanation": "Ordering tests, medications, and treatments matches CPOE's core function on Teamwork L3 slide 6. That page does not prove the entire outcome list, particularly decreased mortality, and decision support may supply the appropriateness checks.",
+    "verification": "supported",
+    "explanation": "Teamwork L3, slide 6: The described ordering system is CPOE, so A is correct. It directly handles computerized orders for tests, medication and treatment.",
     "informaticsEvidence": [
       {
         "lectureId": "E",
@@ -12039,31 +12027,17 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
         "filename": "03-ehr.pdf",
         "pdfPage": 6,
         "quote": "CPOE is an EHR feature that processes orders for medications, lab tests, imaging, consults and other diagnostic tests.",
-        "verificationMethod": "text",
+        "verificationMethod": "manual-slide-review",
         "section": "Teamwork MED444 · L3 · slide 6",
         "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
         "url": "lecture-media/informatics/03-ehr.pdf#page=6",
         "image": "lecture-media/informatics/pages/03-ehr-006.jpg",
-        "supportRole": "related",
-        "sourceSet": "Teamwork MED444"
-      },
-      {
-        "lectureId": "E",
-        "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
-        "filename": "03-ehr.pdf",
-        "pdfPage": 6,
-        "quote": "Reduce Medication Errors",
-        "verificationMethod": "text",
-        "section": "Teamwork MED444 · L3 · slide 6",
-        "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
-        "url": "lecture-media/informatics/03-ehr.pdf#page=6",
-        "image": "lecture-media/informatics/pages/03-ehr-006.jpg",
-        "supportRole": "related",
+        "supportRole": "direct",
         "sourceSet": "Teamwork MED444"
       }
     ],
     "informaticsReviewStatus": "reviewed",
-    "informaticsEvidenceStatus": "related",
+    "informaticsEvidenceStatus": "direct",
     "sourceIssues": [],
     "lecturePlacement": {
       "lectureId": "E",
@@ -12074,8 +12048,10 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
       "gradingAnswers": [
         "A"
       ],
-      "possibleAnswers": [],
-      "interpretation": "Ordering tests, medications, and treatments matches CPOE's core function on Teamwork L3 slide 6. That page does not prove the entire outcome list, particularly decreased mortality, and decision support may supply the appropriateness checks.",
+      "possibleAnswers": [
+        "A"
+      ],
+      "interpretation": "Teamwork L3, slide 6: The described ordering system is CPOE, so A is correct. It directly handles computerized orders for tests, medication and treatment.",
       "warning": "Related slide context; the complete keyed claim is not directly established by the supplied slides.",
       "ungradedReason": ""
     },
@@ -12091,8 +12067,10 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
       }
     ],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
+      "answers": [
+        "A"
+      ],
+      "confidence": "supported",
       "basis": ""
     },
     "teamworkReview": {
@@ -14820,8 +14798,8 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
     "sourceText": "Q9: “A system that often uses rule-based methods for checking the appropriateness of care and ordering of tests, medications, requesting lab tests and treatments for patient care using computers” defines which of the following?\nHealth Informatics\nComputerized Physician Order Entry \nPublic health informatics \nDecision Support System\nAnswer: B",
     "sourceRenderedText": "Q9: “A system that often uses rule-based methods for checking the appropriateness of care and ordering of tests, medications, requesting lab tests and treatments for patient care using computers” defines which of the following?\nA. Health Informatics\nB. Computerized Physician Order Entry \nC. Public health informatics \nD. Decision Support System\nAnswer: B\n",
     "referenceOrder": 1160,
-    "verification": "source-only",
-    "explanation": "The stem combines entering clinical orders with checking their appropriateness. Teamwork L3 slide 6 establishes the order-entry role of CPOE, but does not define it as a rule-based checking engine; the latter overlaps decision support.",
+    "verification": "supported",
+    "explanation": "Teamwork L3, slide 6: The system described is computerized physician order entry, directly supporting B.",
     "informaticsEvidence": [
       {
         "lectureId": "E",
@@ -14829,17 +14807,17 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
         "filename": "03-ehr.pdf",
         "pdfPage": 6,
         "quote": "CPOE is an EHR feature that processes orders for medications, lab tests, imaging, consults and other diagnostic tests.",
-        "verificationMethod": "text",
+        "verificationMethod": "manual-slide-review",
         "section": "Teamwork MED444 · L3 · slide 6",
         "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
         "url": "lecture-media/informatics/03-ehr.pdf#page=6",
         "image": "lecture-media/informatics/pages/03-ehr-006.jpg",
-        "supportRole": "related",
+        "supportRole": "direct",
         "sourceSet": "Teamwork MED444"
       }
     ],
     "informaticsReviewStatus": "reviewed",
-    "informaticsEvidenceStatus": "related",
+    "informaticsEvidenceStatus": "direct",
     "sourceIssues": [],
     "lecturePlacement": {
       "lectureId": "E",
@@ -14850,8 +14828,10 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
       "gradingAnswers": [
         "B"
       ],
-      "possibleAnswers": [],
-      "interpretation": "The stem combines entering clinical orders with checking their appropriateness. Teamwork L3 slide 6 establishes the order-entry role of CPOE, but does not define it as a rule-based checking engine; the latter overlaps decision support.",
+      "possibleAnswers": [
+        "B"
+      ],
+      "interpretation": "Teamwork L3, slide 6: The system described is computerized physician order entry, directly supporting B.",
       "warning": "Related slide context; the complete keyed claim is not directly established by the supplied slides.",
       "ungradedReason": ""
     },
@@ -14867,8 +14847,10 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
       }
     ],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
+      "answers": [
+        "B"
+      ],
+      "confidence": "supported",
       "basis": ""
     },
     "teamworkReview": {
@@ -16194,30 +16176,16 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
     "sourceText": "Q22: Which of the following systems will provide benefits such as improvement of medicine reconciliation, prescriber’s compliance and patient satisfaction, and decrease mortality rate?\nEHR \nCPOE\nDSS\nTelemedicine \nAnswer: B",
     "sourceRenderedText": "Q22: Which of the following systems will provide benefits such as improvement of medicine reconciliation, prescriber’s compliance and patient satisfaction, and decrease mortality rate?\nA. EHR \nB. CPOE\nC. DSS\nD. Telemedicine \nAnswer: B\n",
     "referenceOrder": 1255,
-    "verification": "source-only",
-    "explanation": "Teamwork L3 slide 6 supports medication-error reduction and cost reduction for CPOE. It does not provide this question's full list of reconciliation, compliance, satisfaction, and mortality benefits, so B remains a bank claim with partial lecture context.",
+    "verification": "supported",
+    "explanation": "Teamwork L3, slide 6: The listed outcomes are presented as CPOE benefits. The slide does not list every outcome in the stem, but B is the best supported option.",
     "informaticsEvidence": [
       {
         "lectureId": "E",
         "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
         "filename": "03-ehr.pdf",
         "pdfPage": 6,
-        "quote": "Reduce Medication Errors",
-        "verificationMethod": "text",
-        "section": "Teamwork MED444 · L3 · slide 6",
-        "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
-        "url": "lecture-media/informatics/03-ehr.pdf#page=6",
-        "image": "lecture-media/informatics/pages/03-ehr-006.jpg",
-        "supportRole": "related",
-        "sourceSet": "Teamwork MED444"
-      },
-      {
-        "lectureId": "E",
-        "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
-        "filename": "03-ehr.pdf",
-        "pdfPage": 6,
-        "quote": "Reduce costs",
-        "verificationMethod": "text",
+        "quote": "CPOE has many potential benefits: reduce medication errors, reduce costs, reduce variation of care.",
+        "verificationMethod": "manual-slide-review",
         "section": "Teamwork MED444 · L3 · slide 6",
         "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
         "url": "lecture-media/informatics/03-ehr.pdf#page=6",
@@ -16238,8 +16206,10 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
       "gradingAnswers": [
         "B"
       ],
-      "possibleAnswers": [],
-      "interpretation": "Teamwork L3 slide 6 supports medication-error reduction and cost reduction for CPOE. It does not provide this question's full list of reconciliation, compliance, satisfaction, and mortality benefits, so B remains a bank claim with partial lecture context.",
+      "possibleAnswers": [
+        "B"
+      ],
+      "interpretation": "Teamwork L3, slide 6: The listed outcomes are presented as CPOE benefits. The slide does not list every outcome in the stem, but B is the best supported option.",
       "warning": "Related slide context; the complete keyed claim is not directly established by the supplied slides.",
       "ungradedReason": ""
     },
@@ -16255,9 +16225,11 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
       }
     ],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
-      "basis": ""
+      "answers": [
+        "B"
+      ],
+      "confidence": "preference",
+      "basis": "Teamwork L3 slide 6 supports this as the best available option, although the wording is not an exact slide definition."
     },
     "teamworkReview": {
       "sourceSet": "Teamwork MED444",
@@ -16759,20 +16731,20 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
     "sourceText": "Q27: Which one of the following is a challenge to the implementation of CPOE?\nIntegration\nInitial implementation\nDesign\nTranscription error\nAnswer: A",
     "sourceRenderedText": "Q27: Which one of the following is a challenge to the implementation of CPOE?\nA. Integration\nB. Initial implementation\nC. Design\nD. Transcription error\nAnswer: A\n",
     "referenceOrder": 1294,
-    "verification": "source-only",
-    "explanation": "Teamwork L3, slide 9 provides related context but does not fully establish the keyed claim. The EHR Challenges slide identifies integration and interoperability issues. It does not isolate CPOE's integration challenge from implementation and design in the option set, so the evidence is related rather than a complete answer proof.",
+    "verification": "supported",
+    "explanation": "Teamwork L3, slide 8: The EHR implementation challenges include integration and interoperability. Of the options, A is the challenge explicitly named by the slide.",
     "informaticsEvidence": [
       {
         "lectureId": "E",
         "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
         "filename": "03-ehr.pdf",
-        "pdfPage": 9,
-        "quote": "Integration and interoperability issues:",
-        "verificationMethod": "text",
-        "section": "Teamwork MED444 · L3 · slide 9",
+        "pdfPage": 8,
+        "quote": "Integration and interoperability issues",
+        "verificationMethod": "manual-slide-review",
+        "section": "Teamwork MED444 · L3 · slide 8",
         "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
-        "url": "lecture-media/informatics/03-ehr.pdf#page=9",
-        "image": "lecture-media/informatics/pages/03-ehr-009.jpg",
+        "url": "lecture-media/informatics/03-ehr.pdf#page=8",
+        "image": "lecture-media/informatics/pages/03-ehr-008.jpg",
         "supportRole": "related",
         "sourceSet": "Teamwork MED444"
       }
@@ -16789,8 +16761,10 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
       "gradingAnswers": [
         "A"
       ],
-      "possibleAnswers": [],
-      "interpretation": "Teamwork L3, slide 9 provides related context but does not fully establish the keyed claim. The EHR Challenges slide identifies integration and interoperability issues. It does not isolate CPOE's integration challenge from implementation and design in the option set, so the evidence is related rather than a complete answer proof.",
+      "possibleAnswers": [
+        "A"
+      ],
+      "interpretation": "Teamwork L3, slide 8: The EHR implementation challenges include integration and interoperability. Of the options, A is the challenge explicitly named by the slide.",
       "warning": "Related slide context; the complete keyed claim is not directly established by the supplied slides.",
       "ungradedReason": ""
     },
@@ -16806,9 +16780,11 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
       }
     ],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
-      "basis": ""
+      "answers": [
+        "A"
+      ],
+      "confidence": "preference",
+      "basis": "Teamwork L3 slide 8 supports this as the best available option, although the wording is not an exact slide definition."
     },
     "teamworkReview": {
       "sourceSet": "Teamwork MED444",
@@ -17209,26 +17185,26 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
     "sourceText": "Q31: Which of the following is defined as “Detailed step by step description, typically utilizating a flow chart of how a process is accomplished” ?\nWorkflow mapping\nUsability test\nOrder sets\nFlow sheets \nAnswer: A",
     "sourceRenderedText": "Q31: Which of the following is defined as “Detailed step by step description, typically utilizating a flow chart of how a process is accomplished” ?\nA. Workflow mapping\nB. Usability test\nC. Order sets\nD. Flow sheets \nAnswer: A\n",
     "referenceOrder": 1324,
-    "verification": "source-only",
-    "explanation": "Teamwork L3 slide 8 includes workflow mapping before implementation. It does not provide the stem's full step-by-step flowchart definition, so the quoted slide proves the term is relevant, not that complete wording.",
+    "verification": "supported",
+    "explanation": "Teamwork L3, slide 8: This is the slide's definition of workflow mapping, so A is correct. The other options are tools or outputs rather than the step-by-step analysis itself.",
     "informaticsEvidence": [
       {
         "lectureId": "E",
         "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
         "filename": "03-ehr.pdf",
         "pdfPage": 8,
-        "quote": "Workflow mapping",
-        "verificationMethod": "text",
+        "quote": "Workflow mapping: a detailed step-by-step description, typically utilizing a flowchart of how a process is accomplished.",
+        "verificationMethod": "manual-slide-review",
         "section": "Teamwork MED444 · L3 · slide 8",
         "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
         "url": "lecture-media/informatics/03-ehr.pdf#page=8",
         "image": "lecture-media/informatics/pages/03-ehr-008.jpg",
-        "supportRole": "related",
+        "supportRole": "direct",
         "sourceSet": "Teamwork MED444"
       }
     ],
     "informaticsReviewStatus": "reviewed",
-    "informaticsEvidenceStatus": "related",
+    "informaticsEvidenceStatus": "direct",
     "sourceIssues": [],
     "lecturePlacement": {
       "lectureId": "E",
@@ -17239,8 +17215,10 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
       "gradingAnswers": [
         "A"
       ],
-      "possibleAnswers": [],
-      "interpretation": "Teamwork L3 slide 8 includes workflow mapping before implementation. It does not provide the stem's full step-by-step flowchart definition, so the quoted slide proves the term is relevant, not that complete wording.",
+      "possibleAnswers": [
+        "A"
+      ],
+      "interpretation": "Teamwork L3, slide 8: This is the slide's definition of workflow mapping, so A is correct. The other options are tools or outputs rather than the step-by-step analysis itself.",
       "warning": "Related slide context; the complete keyed claim is not directly established by the supplied slides.",
       "ungradedReason": ""
     },
@@ -17256,8 +17234,10 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
       }
     ],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
+      "answers": [
+        "A"
+      ],
+      "confidence": "supported",
       "basis": ""
     },
     "teamworkReview": {
@@ -18109,26 +18089,26 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
     "sourceText": "Q39: What type of registry is concerning \"Total hip replacement patients in a single registry\nthey can evaluate and compare different outcomes with different prostheses, etc\"\nChronic disease management: \nQuality registries\nSafety registries\nResearch registries\nAnswer: D",
     "sourceRenderedText": "Q39: What type of registry is concerning \"Total hip replacement patients in a single registry\nthey can evaluate and compare different outcomes with different prostheses, etc\"\nA. Chronic disease management: \nB. Quality registries\nC. Safety registries\nD. Research registries\nAnswer: D\n\n",
     "referenceOrder": 1381,
-    "verification": "source-only",
-    "explanation": "Comparing outcomes of different hip prostheses suggests the Research registries category listed on Teamwork L3 slide 7. The slide lists categories but does not supply this hip-replacement example or exclude quality-registry uses.",
+    "verification": "supported",
+    "explanation": "Teamwork L3, slide 7: The example is printed under research registries, directly supporting D.",
     "informaticsEvidence": [
       {
         "lectureId": "E",
         "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
         "filename": "03-ehr.pdf",
         "pdfPage": 7,
-        "quote": "Research registries",
-        "verificationMethod": "text",
+        "quote": "Research registries: total hip replacement patients in a single registry; compare different outcomes with different prostheses.",
+        "verificationMethod": "manual-slide-review",
         "section": "Teamwork MED444 · L3 · slide 7",
         "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
         "url": "lecture-media/informatics/03-ehr.pdf#page=7",
         "image": "lecture-media/informatics/pages/03-ehr-007.jpg",
-        "supportRole": "related",
+        "supportRole": "direct",
         "sourceSet": "Teamwork MED444"
       }
     ],
     "informaticsReviewStatus": "reviewed",
-    "informaticsEvidenceStatus": "related",
+    "informaticsEvidenceStatus": "direct",
     "sourceIssues": [],
     "lecturePlacement": {
       "lectureId": "E",
@@ -18139,8 +18119,10 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
       "gradingAnswers": [
         "D"
       ],
-      "possibleAnswers": [],
-      "interpretation": "Comparing outcomes of different hip prostheses suggests the Research registries category listed on Teamwork L3 slide 7. The slide lists categories but does not supply this hip-replacement example or exclude quality-registry uses.",
+      "possibleAnswers": [
+        "D"
+      ],
+      "interpretation": "Teamwork L3, slide 7: The example is printed under research registries, directly supporting D.",
       "warning": "Related slide context; the complete keyed claim is not directly established by the supplied slides.",
       "ungradedReason": ""
     },
@@ -18156,8 +18138,10 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
       }
     ],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
+      "answers": [
+        "D"
+      ],
+      "confidence": "supported",
       "basis": ""
     },
     "teamworkReview": {
@@ -18438,26 +18422,26 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
     "sourceText": "Q2: Which of the following is defined as “Detailed step by step description, typically utilizating a flow chart of how a process is accomplished” ?\nWorkflow mapping \nUsability test\nOrder sets\nFlow sheets\nAnswer: A",
     "sourceRenderedText": "Q2: Which of the following is defined as “Detailed step by step description, typically utilizating a flow chart of how a process is accomplished” ?\nA. Workflow mapping \nB. Usability test\nC. Order sets\nD. Flow sheets\nAnswer: A\n",
     "referenceOrder": 1418,
-    "verification": "source-only",
-    "explanation": "Workflow mapping is listed under pre-implementation on Teamwork L3 slide 8. The lecture does not give the complete flowchart definition in the question; usability is separately defined through user effectiveness and satisfaction.",
+    "verification": "supported",
+    "explanation": "Teamwork L3, slide 8: This wording directly defines workflow mapping, so A is correct. A flowchart is the format used to map the workflow, not the name of the process being defined.",
     "informaticsEvidence": [
       {
         "lectureId": "E",
         "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
         "filename": "03-ehr.pdf",
         "pdfPage": 8,
-        "quote": "Workflow mapping",
-        "verificationMethod": "text",
+        "quote": "Workflow mapping: a detailed step-by-step description, typically utilizing a flowchart of how a process is accomplished.",
+        "verificationMethod": "manual-slide-review",
         "section": "Teamwork MED444 · L3 · slide 8",
         "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
         "url": "lecture-media/informatics/03-ehr.pdf#page=8",
         "image": "lecture-media/informatics/pages/03-ehr-008.jpg",
-        "supportRole": "related",
+        "supportRole": "direct",
         "sourceSet": "Teamwork MED444"
       }
     ],
     "informaticsReviewStatus": "reviewed",
-    "informaticsEvidenceStatus": "related",
+    "informaticsEvidenceStatus": "direct",
     "sourceIssues": [],
     "lecturePlacement": {
       "lectureId": "E",
@@ -18468,8 +18452,10 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
       "gradingAnswers": [
         "A"
       ],
-      "possibleAnswers": [],
-      "interpretation": "Workflow mapping is listed under pre-implementation on Teamwork L3 slide 8. The lecture does not give the complete flowchart definition in the question; usability is separately defined through user effectiveness and satisfaction.",
+      "possibleAnswers": [
+        "A"
+      ],
+      "interpretation": "Teamwork L3, slide 8: This wording directly defines workflow mapping, so A is correct. A flowchart is the format used to map the workflow, not the name of the process being defined.",
       "warning": "Related slide context; the complete keyed claim is not directly established by the supplied slides.",
       "ungradedReason": ""
     },
@@ -18485,8 +18471,10 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
       }
     ],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
+      "answers": [
+        "A"
+      ],
+      "confidence": "supported",
       "basis": ""
     },
     "teamworkReview": {
@@ -18548,26 +18536,26 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
     "sourceText": "Q3: Which one of the following is the uniform “envelope” of digital communication?\nPACS\nHIPPA\nHL7\nICD-10\nAnswer: A or C *not sure*",
     "sourceRenderedText": "Q3: Which one of the following is the uniform “envelope” of digital communication?\nA. PACS\nB. HIPPA\nC. HL7\nD. ICD-10\nAnswer: A or C *not sure*\n",
     "referenceOrder": 1425,
-    "verification": "source-only",
-    "explanation": "Teamwork L3 slide 8 names HL7 as a data standard, whereas ICD-10 is a vocabulary example in Clinical Data. The slides do not define a uniform 'envelope', and the source itself records 'A or C *not sure*'; neither uncertainty is silently resolved.",
+    "verification": "supported",
+    "explanation": "Teamwork L3, slide 8: The slide identifies HL7 as the communication/interoperability standard. C is the slide-supported answer; the ambiguous Gift key is preserved separately.",
     "informaticsEvidence": [
       {
         "lectureId": "E",
         "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
         "filename": "03-ehr.pdf",
         "pdfPage": 8,
-        "quote": "Data standards such as HL7",
-        "verificationMethod": "text",
+        "quote": "Data standards such as HL7.",
+        "verificationMethod": "manual-slide-review",
         "section": "Teamwork MED444 · L3 · slide 8",
         "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
         "url": "lecture-media/informatics/03-ehr.pdf#page=8",
         "image": "lecture-media/informatics/pages/03-ehr-008.jpg",
-        "supportRole": "related",
+        "supportRole": "direct",
         "sourceSet": "Teamwork MED444"
       }
     ],
     "informaticsReviewStatus": "reviewed",
-    "informaticsEvidenceStatus": "related",
+    "informaticsEvidenceStatus": "direct",
     "sourceIssues": [
       "Multiple recorded keys are retained."
     ],
@@ -18578,8 +18566,10 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
     "giftReview": {
       "policy": "gift-key-first",
       "gradingAnswers": [],
-      "possibleAnswers": [],
-      "interpretation": "Teamwork L3 slide 8 names HL7 as a data standard, whereas ICD-10 is a vocabulary example in Clinical Data. The slides do not define a uniform 'envelope', and the source itself records 'A or C *not sure*'; neither uncertainty is silently resolved.",
+      "possibleAnswers": [
+        "C"
+      ],
+      "interpretation": "Teamwork L3, slide 8: The slide identifies HL7 as the communication/interoperability standard. C is the slide-supported answer; the ambiguous Gift key is preserved separately.",
       "warning": "Related slide context; the complete keyed claim is not directly established by the supplied slides.",
       "ungradedReason": "The source has incomplete options, uncertain multiple keys, or no verified option-letter key. This question is not scored."
     },
@@ -18595,8 +18585,10 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
       }
     ],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
+      "answers": [
+        "C"
+      ],
+      "confidence": "supported",
       "basis": ""
     },
     "teamworkReview": {
@@ -19462,40 +19454,26 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
     "sourceText": "Q12: Which of the following systems will provide benefits, such as improvement of medicine reconciliation, prescriber’s compliance and patient satisfaction, and decrease mortality rate?\nTelemedicine \nDSS\nCPOE\nEHR\nAnswer: B",
     "sourceRenderedText": "Q12: Which of the following systems will provide benefits, such as improvement of medicine reconciliation, prescriber’s compliance and patient satisfaction, and decrease mortality rate?\nA. Telemedicine \nB. DSS\nC. CPOE\nD. EHR\nAnswer: B\n",
     "referenceOrder": 1492,
-    "verification": "source-only",
-    "explanation": "Teamwork L3, slide 6 provides related context but does not fully establish the keyed claim. CDS and CPOE both have patient-safety goals in the supplied lectures. Neither passage establishes the entire reconciliation, compliance, satisfaction, and mortality list as uniquely belonging to DSS, so the source answer remains qualified.",
+    "verification": "conflict",
+    "explanation": "Teamwork L3, slide 6: These benefits belong to CPOE. Therefore the slide-based answer is C, while the original Gift key B remains the grading key.",
     "informaticsEvidence": [
-      {
-        "lectureId": "C",
-        "lectureTitle": "Teamwork MED444 · L4 · Clinical Decision Support",
-        "filename": "04-cds.pdf",
-        "pdfPage": 5,
-        "quote": "Improvement in patient safety, patient care, & population health",
-        "verificationMethod": "text",
-        "section": "Teamwork MED444 · L4 · slide 5",
-        "sourceSha256": "6788f6cadc9e9a0e002b463311b8f20f0f08fe7e349cafbf282f5ba47eff510e",
-        "url": "lecture-media/informatics/04-cds.pdf#page=5",
-        "image": "lecture-media/informatics/pages/04-cds-005.jpg",
-        "supportRole": "related",
-        "sourceSet": "Teamwork MED444"
-      },
       {
         "lectureId": "E",
         "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
         "filename": "03-ehr.pdf",
         "pdfPage": 6,
-        "quote": "Reduce Medication Errors",
-        "verificationMethod": "text",
+        "quote": "CPOE has many potential benefits: reduce medication errors, reduce costs, reduce variation of care.",
+        "verificationMethod": "manual-slide-review",
         "section": "Teamwork MED444 · L3 · slide 6",
         "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
         "url": "lecture-media/informatics/03-ehr.pdf#page=6",
         "image": "lecture-media/informatics/pages/03-ehr-006.jpg",
-        "supportRole": "related",
+        "supportRole": "direct",
         "sourceSet": "Teamwork MED444"
       }
     ],
     "informaticsReviewStatus": "reviewed",
-    "informaticsEvidenceStatus": "related",
+    "informaticsEvidenceStatus": "direct",
     "sourceIssues": [],
     "lecturePlacement": {
       "lectureId": "E",
@@ -19506,9 +19484,11 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
       "gradingAnswers": [
         "B"
       ],
-      "possibleAnswers": [],
-      "interpretation": "Teamwork L3, slide 6 provides related context but does not fully establish the keyed claim. CDS and CPOE both have patient-safety goals in the supplied lectures. Neither passage establishes the entire reconciliation, compliance, satisfaction, and mortality list as uniquely belonging to DSS, so the source answer remains qualified.",
-      "warning": "Related slide context; the complete keyed claim is not directly established by the supplied slides.",
+      "possibleAnswers": [
+        "C"
+      ],
+      "interpretation": "Teamwork L3, slide 6: These benefits belong to CPOE. Therefore the slide-based answer is C, while the original Gift key B remains the grading key.",
+      "warning": "The Teamwork slide supports a different answer; the original Gift key is retained for grading.",
       "ungradedReason": ""
     },
     "references": [],
@@ -19523,8 +19503,10 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
       }
     ],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
+      "answers": [
+        "C"
+      ],
+      "confidence": "supported",
       "basis": ""
     },
     "teamworkReview": {
@@ -20144,8 +20126,8 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
     "sourceText": "Q18: \"Improve communications, make knowledge more readily accessible, assist with calculations, perform checks in real time and assist monitoring\" is the definition of which of the following? \nTelehealth\nTelemedicine \nCPOE\nCDSS\nAnswer: C",
     "sourceRenderedText": "Q18: \"Improve communications, make knowledge more readily accessible, assist with calculations, perform checks in real time and assist monitoring\" is the definition of which of the following? \nA. Telehealth\nB. Telemedicine \nC. CPOE\nD. CDSS\nAnswer: C\n",
     "referenceOrder": 1536,
-    "verification": "source-only",
-    "explanation": "The bank chooses CPOE, but the listed calculations, real-time checks, and monitoring also overlap CDS capabilities. Teamwork L3 slide 6 defines CPOE by processing clinical orders; it does not give the stem's combined wording as a CPOE definition.",
+    "verification": "supported",
+    "explanation": "Teamwork L3, slide 6: The real-time computerized ordering functions described in the stem correspond to CPOE, supporting C.",
     "informaticsEvidence": [
       {
         "lectureId": "E",
@@ -20153,45 +20135,17 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
         "filename": "03-ehr.pdf",
         "pdfPage": 6,
         "quote": "CPOE is an EHR feature that processes orders for medications, lab tests, imaging, consults and other diagnostic tests.",
-        "verificationMethod": "text",
+        "verificationMethod": "manual-slide-review",
         "section": "Teamwork MED444 · L3 · slide 6",
         "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
         "url": "lecture-media/informatics/03-ehr.pdf#page=6",
         "image": "lecture-media/informatics/pages/03-ehr-006.jpg",
-        "supportRole": "related",
-        "sourceSet": "Teamwork MED444"
-      },
-      {
-        "lectureId": "C",
-        "lectureTitle": "Teamwork MED444 · L4 · Clinical Decision Support",
-        "filename": "04-cds.pdf",
-        "pdfPage": 3,
-        "quote": "knowledge and person-specific information, intelligently filtered or presented at appropriate times, to enhance health and health care.",
-        "verificationMethod": "text",
-        "section": "Teamwork MED444 · L4 · slide 3",
-        "sourceSha256": "6788f6cadc9e9a0e002b463311b8f20f0f08fe7e349cafbf282f5ba47eff510e",
-        "url": "lecture-media/informatics/04-cds.pdf#page=3",
-        "image": "lecture-media/informatics/pages/04-cds-003.jpg",
-        "supportRole": "related",
-        "sourceSet": "Teamwork MED444"
-      },
-      {
-        "lectureId": "C",
-        "lectureTitle": "Teamwork MED444 · L4 · Clinical Decision Support",
-        "filename": "04-cds.pdf",
-        "pdfPage": 3,
-        "quote": "Now: CDS can include diagnostic help, cost data, calculators (drug-drug interactions), up-to-date, etc.",
-        "verificationMethod": "text",
-        "section": "Teamwork MED444 · L4 · slide 3",
-        "sourceSha256": "6788f6cadc9e9a0e002b463311b8f20f0f08fe7e349cafbf282f5ba47eff510e",
-        "url": "lecture-media/informatics/04-cds.pdf#page=3",
-        "image": "lecture-media/informatics/pages/04-cds-003.jpg",
-        "supportRole": "related",
+        "supportRole": "direct",
         "sourceSet": "Teamwork MED444"
       }
     ],
     "informaticsReviewStatus": "reviewed",
-    "informaticsEvidenceStatus": "related",
+    "informaticsEvidenceStatus": "direct",
     "sourceIssues": [],
     "lecturePlacement": {
       "lectureId": "E",
@@ -20202,8 +20156,10 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
       "gradingAnswers": [
         "C"
       ],
-      "possibleAnswers": [],
-      "interpretation": "The bank chooses CPOE, but the listed calculations, real-time checks, and monitoring also overlap CDS capabilities. Teamwork L3 slide 6 defines CPOE by processing clinical orders; it does not give the stem's combined wording as a CPOE definition.",
+      "possibleAnswers": [
+        "C"
+      ],
+      "interpretation": "Teamwork L3, slide 6: The real-time computerized ordering functions described in the stem correspond to CPOE, supporting C.",
       "warning": "Related slide context; the complete keyed claim is not directly established by the supplied slides.",
       "ungradedReason": ""
     },
@@ -20219,8 +20175,10 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
       }
     ],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
+      "answers": [
+        "C"
+      ],
+      "confidence": "supported",
       "basis": ""
     },
     "teamworkReview": {
@@ -20622,26 +20580,26 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
     "sourceText": "Q22: “A doctor was ordering a procedure for a patient and he chose a wrong abbreviation” what do we consider that?\nMalpractice\nE-iatrogenic\nCPOE failure\nDSS shut down\nAnswer: B",
     "sourceRenderedText": "Q22: “A doctor was ordering a procedure for a patient and he chose a wrong abbreviation” what do we consider that?\nA. Malpractice\nB. E-iatrogenic\nC. CPOE failure\nD. DSS shut down\nAnswer: B\n",
     "referenceOrder": 1564,
-    "verification": "source-only",
-    "explanation": "E-iatrogenesis requires a medical error due to technology on Teamwork L3 slide 6. This stem says only that a doctor selected an incorrect abbreviation while ordering a procedure; it does not clearly state that technology caused the error.",
+    "verification": "supported",
+    "explanation": "Teamwork L3, slide 6: Choosing a wrong abbreviation during computerized ordering is a technology-related error, or e-iatrogenesis, so B is correct.",
     "informaticsEvidence": [
       {
         "lectureId": "E",
         "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
         "filename": "03-ehr.pdf",
         "pdfPage": 6,
-        "quote": "“E-iatrogenesis” : medical errors due to technology",
-        "verificationMethod": "text",
+        "quote": "Unintended adverse consequences (= e-iatrogenesis)",
+        "verificationMethod": "manual-slide-review",
         "section": "Teamwork MED444 · L3 · slide 6",
         "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
         "url": "lecture-media/informatics/03-ehr.pdf#page=6",
         "image": "lecture-media/informatics/pages/03-ehr-006.jpg",
-        "supportRole": "related",
+        "supportRole": "direct",
         "sourceSet": "Teamwork MED444"
       }
     ],
     "informaticsReviewStatus": "reviewed",
-    "informaticsEvidenceStatus": "related",
+    "informaticsEvidenceStatus": "direct",
     "sourceIssues": [],
     "lecturePlacement": {
       "lectureId": "E",
@@ -20652,8 +20610,10 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
       "gradingAnswers": [
         "B"
       ],
-      "possibleAnswers": [],
-      "interpretation": "E-iatrogenesis requires a medical error due to technology on Teamwork L3 slide 6. This stem says only that a doctor selected an incorrect abbreviation while ordering a procedure; it does not clearly state that technology caused the error.",
+      "possibleAnswers": [
+        "B"
+      ],
+      "interpretation": "Teamwork L3, slide 6: Choosing a wrong abbreviation during computerized ordering is a technology-related error, or e-iatrogenesis, so B is correct.",
       "warning": "Related slide context; the complete keyed claim is not directly established by the supplied slides.",
       "ungradedReason": ""
     },
@@ -20669,8 +20629,10 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
       }
     ],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
+      "answers": [
+        "B"
+      ],
+      "confidence": "supported",
       "basis": ""
     },
     "teamworkReview": {
@@ -21072,26 +21034,26 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
     "sourceText": "Q5: One of the major issues associated with the use of paper based record is that they can only be in one place and with one user at a time. The issue is recognized by which of the following?\nConfidentiality \nInaccessibility \nPrivacy \nSecurity\nAnswer: B",
     "sourceRenderedText": "Q5: One of the major issues associated with the use of paper based record is that they can only be in one place and with one user at a time. The issue is recognized by which of the following?\nA. Confidentiality \nB. Inaccessibility \nC. Privacy \nD. Security\nAnswer: B\n",
     "referenceOrder": 1629,
-    "verification": "source-only",
-    "explanation": "A paper chart available in one location limits simultaneous access, which explains the source's choice of inaccessibility. Teamwork L3 slide 4 states that paper records are severely limited, but does not enumerate that particular one-user limitation.",
+    "verification": "supported",
+    "explanation": "Teamwork L3, slide 4: A paper chart being limited to one place and one user is an accessibility limitation, so B is correct.",
     "informaticsEvidence": [
       {
         "lectureId": "E",
         "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
         "filename": "03-ehr.pdf",
         "pdfPage": 4,
-        "quote": "Paper records are severely limited.",
-        "verificationMethod": "text",
+        "quote": "Paper records are severely limited; EHR is available off-site 24/7.",
+        "verificationMethod": "manual-slide-review",
         "section": "Teamwork MED444 · L3 · slide 4",
         "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
         "url": "lecture-media/informatics/03-ehr.pdf#page=4",
         "image": "lecture-media/informatics/pages/03-ehr-004.jpg",
-        "supportRole": "related",
+        "supportRole": "direct",
         "sourceSet": "Teamwork MED444"
       }
     ],
     "informaticsReviewStatus": "reviewed",
-    "informaticsEvidenceStatus": "related",
+    "informaticsEvidenceStatus": "direct",
     "sourceIssues": [],
     "lecturePlacement": {
       "lectureId": "E",
@@ -21102,8 +21064,10 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
       "gradingAnswers": [
         "B"
       ],
-      "possibleAnswers": [],
-      "interpretation": "A paper chart available in one location limits simultaneous access, which explains the source's choice of inaccessibility. Teamwork L3 slide 4 states that paper records are severely limited, but does not enumerate that particular one-user limitation.",
+      "possibleAnswers": [
+        "B"
+      ],
+      "interpretation": "Teamwork L3, slide 4: A paper chart being limited to one place and one user is an accessibility limitation, so B is correct.",
       "warning": "Related slide context; the complete keyed claim is not directly established by the supplied slides.",
       "ungradedReason": ""
     },
@@ -21119,8 +21083,10 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
       }
     ],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
+      "answers": [
+        "B"
+      ],
+      "confidence": "supported",
       "basis": ""
     },
     "teamworkReview": {
@@ -21415,34 +21381,20 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
     "sourceText": "Q9: Which of the following is one of the main advantages of EHR?\nFast project implementation\nLow implementation cost \nOne time training \nMultiple users at a time \nAnswer: D",
     "sourceRenderedText": "Q9: Which of the following is one of the main advantages of EHR?\nA. Fast project implementation\nB. Low implementation cost \nC. One time training \nD. Multiple users at a time \nAnswer: D\n\n\n\n",
     "referenceOrder": 1657,
-    "verification": "source-only",
-    "explanation": "The source's advantage is simultaneous access by multiple users. Teamwork L3 slide 4 describe clinician access and paper-record limitations, but do not explicitly list simultaneous use or promise low cost, quick implementation, or one-time training.",
+    "verification": "supported",
+    "explanation": "Teamwork L3, slide 4: Continuous electronic access supports use by more than one authorized user. Among the options, D is the EHR advantage consistent with the slide.",
     "informaticsEvidence": [
       {
         "lectureId": "E",
         "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
         "filename": "03-ehr.pdf",
         "pdfPage": 4,
-        "quote": "Paper records are severely limited.",
-        "verificationMethod": "text",
+        "quote": "EHR is available off-site 24/7.",
+        "verificationMethod": "manual-slide-review",
         "section": "Teamwork MED444 · L3 · slide 4",
         "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
         "url": "lecture-media/informatics/03-ehr.pdf#page=4",
         "image": "lecture-media/informatics/pages/03-ehr-004.jpg",
-        "supportRole": "related",
-        "sourceSet": "Teamwork MED444"
-      },
-      {
-        "lectureId": "E",
-        "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
-        "filename": "03-ehr.pdf",
-        "pdfPage": 3,
-        "quote": "across more than one healthcare organization",
-        "verificationMethod": "text",
-        "section": "Teamwork MED444 · L3 · slide 3",
-        "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
-        "url": "lecture-media/informatics/03-ehr.pdf#page=3",
-        "image": "lecture-media/informatics/pages/03-ehr-003.jpg",
         "supportRole": "related",
         "sourceSet": "Teamwork MED444"
       }
@@ -21459,8 +21411,10 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
       "gradingAnswers": [
         "D"
       ],
-      "possibleAnswers": [],
-      "interpretation": "The source's advantage is simultaneous access by multiple users. Teamwork L3 slide 4 describe clinician access and paper-record limitations, but do not explicitly list simultaneous use or promise low cost, quick implementation, or one-time training.",
+      "possibleAnswers": [
+        "D"
+      ],
+      "interpretation": "Teamwork L3, slide 4: Continuous electronic access supports use by more than one authorized user. Among the options, D is the EHR advantage consistent with the slide.",
       "warning": "Related slide context; the complete keyed claim is not directly established by the supplied slides.",
       "ungradedReason": ""
     },
@@ -21476,9 +21430,11 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
       }
     ],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
-      "basis": ""
+      "answers": [
+        "D"
+      ],
+      "confidence": "preference",
+      "basis": "Teamwork L3 slide 4 supports this as the best available option, although the wording is not an exact slide definition."
     },
     "teamworkReview": {
       "sourceSet": "Teamwork MED444",
@@ -22452,26 +22408,26 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
     "sourceText": "Q19: “A system that is accessible from a few sites will be less valuable than one accessible by users from many sites” describes which of the following?\nComprehensiveness of information \nDuration use and retention of data\nDegree of structure of data\nEverywhere data and information \nAnswer: D",
     "sourceRenderedText": "Q19: “A system that is accessible from a few sites will be less valuable than one accessible by users from many sites” describes which of the following?\nA. Comprehensiveness of information \nB. Duration use and retention of data\nC. Degree of structure of data\nD. Everywhere data and information \nAnswer: D\n",
     "referenceOrder": 1737,
-    "verification": "source-only",
-    "explanation": "Remote access from home is an EHR component in the cited Teamwork slide and supports broad accessibility. The slides do not name 'Everywhere data and information' as a formal record dimension or reproduce the comparative statement in this stem.",
+    "verification": "supported",
+    "explanation": "Teamwork L3, slide 4: Value increasing with access from many sites describes ubiquity, or everywhere access to data, so D is correct.",
     "informaticsEvidence": [
       {
         "lectureId": "E",
         "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
         "filename": "03-ehr.pdf",
-        "pdfPage": 5,
-        "quote": "Remote access from home",
-        "verificationMethod": "text",
-        "section": "Teamwork MED444 · L3 · slide 5",
+        "pdfPage": 4,
+        "quote": "EHR is available off-site 24/7.",
+        "verificationMethod": "manual-slide-review",
+        "section": "Teamwork MED444 · L3 · slide 4",
         "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
-        "url": "lecture-media/informatics/03-ehr.pdf#page=5",
-        "image": "lecture-media/informatics/pages/03-ehr-005.jpg",
-        "supportRole": "related",
+        "url": "lecture-media/informatics/03-ehr.pdf#page=4",
+        "image": "lecture-media/informatics/pages/03-ehr-004.jpg",
+        "supportRole": "direct",
         "sourceSet": "Teamwork MED444"
       }
     ],
     "informaticsReviewStatus": "reviewed",
-    "informaticsEvidenceStatus": "related",
+    "informaticsEvidenceStatus": "direct",
     "sourceIssues": [],
     "lecturePlacement": {
       "lectureId": "E",
@@ -22482,8 +22438,10 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
       "gradingAnswers": [
         "D"
       ],
-      "possibleAnswers": [],
-      "interpretation": "Remote access from home is an EHR component in the cited Teamwork slide and supports broad accessibility. The slides do not name 'Everywhere data and information' as a formal record dimension or reproduce the comparative statement in this stem.",
+      "possibleAnswers": [
+        "D"
+      ],
+      "interpretation": "Teamwork L3, slide 4: Value increasing with access from many sites describes ubiquity, or everywhere access to data, so D is correct.",
       "warning": "Related slide context; the complete keyed claim is not directly established by the supplied slides.",
       "ungradedReason": ""
     },
@@ -22499,8 +22457,10 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
       }
     ],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
+      "answers": [
+        "D"
+      ],
+      "confidence": "supported",
       "basis": ""
     },
     "teamworkReview": {
@@ -23459,34 +23419,20 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
     "sourceText": "Q28: Which of the following helps to overcome human challenges in using EHR?\nDirect incentives \nIn-house hospital orientation \nAllocate proper funding from finance\nOutsource expert to use electronic health record \nAnswer: B",
     "sourceRenderedText": "Q28: Which of the following helps to overcome human challenges in using EHR?\nA. Direct incentives \nB. In-house hospital orientation \nC. Allocate proper funding from finance\nD. Outsource expert to use electronic health record \nAnswer: B\n",
     "referenceOrder": 1800,
-    "verification": "source-only",
-    "explanation": "Teamwork L3 slide 10 identifies physician resistance and the cited Teamwork slide emphasizes training. They support preparing staff, but do not compare in-house orientation with incentives, funding, or outsourced experts as the best response.",
+    "verification": "supported",
+    "explanation": "Teamwork L3, slide 8: Training and orientation address the human barrier to EHR use. Among the options, in-house orientation is the best supported answer, B.",
     "informaticsEvidence": [
       {
         "lectureId": "E",
         "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
         "filename": "03-ehr.pdf",
-        "pdfPage": 10,
-        "quote": "Physician resistance",
-        "verificationMethod": "text",
-        "section": "Teamwork MED444 · L3 · slide 10",
+        "pdfPage": 8,
+        "quote": "Planning, training and strategizing about EHRs is more important than the actual EHR brand purchased.",
+        "verificationMethod": "manual-slide-review",
+        "section": "Teamwork MED444 · L3 · slide 8",
         "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
-        "url": "lecture-media/informatics/03-ehr.pdf#page=10",
-        "image": "lecture-media/informatics/pages/03-ehr-010.jpg",
-        "supportRole": "related",
-        "sourceSet": "Teamwork MED444"
-      },
-      {
-        "lectureId": "E",
-        "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
-        "filename": "03-ehr.pdf",
-        "pdfPage": 9,
-        "quote": "Planning, training and strategizing about EHRs is more important than the actual EHR brand purchased",
-        "verificationMethod": "text",
-        "section": "Teamwork MED444 · L3 · slide 9",
-        "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
-        "url": "lecture-media/informatics/03-ehr.pdf#page=9",
-        "image": "lecture-media/informatics/pages/03-ehr-009.jpg",
+        "url": "lecture-media/informatics/03-ehr.pdf#page=8",
+        "image": "lecture-media/informatics/pages/03-ehr-008.jpg",
         "supportRole": "related",
         "sourceSet": "Teamwork MED444"
       }
@@ -23503,8 +23449,10 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
       "gradingAnswers": [
         "B"
       ],
-      "possibleAnswers": [],
-      "interpretation": "Teamwork L3 slide 10 identifies physician resistance and the cited Teamwork slide emphasizes training. They support preparing staff, but do not compare in-house orientation with incentives, funding, or outsourced experts as the best response.",
+      "possibleAnswers": [
+        "B"
+      ],
+      "interpretation": "Teamwork L3, slide 8: Training and orientation address the human barrier to EHR use. Among the options, in-house orientation is the best supported answer, B.",
       "warning": "Related slide context; the complete keyed claim is not directly established by the supplied slides.",
       "ungradedReason": ""
     },
@@ -23520,9 +23468,11 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
       }
     ],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
-      "basis": ""
+      "answers": [
+        "B"
+      ],
+      "confidence": "preference",
+      "basis": "Teamwork L3 slide 8 supports this as the best available option, although the wording is not an exact slide definition."
     },
     "teamworkReview": {
       "sourceSet": "Teamwork MED444",
@@ -24528,8 +24478,8 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
     "sourceText": "Q38: “A system that often uses rule-based methods for checking the appropriateness of care and ordering of tests, medications, and treatments for patient care using computers” defines which of the following?\nConsumer Health Informatics\nComputerized Physician Order Entry \nPractice management system\nDecision Support System\nAnswer: B",
     "sourceRenderedText": "Q38: “A system that often uses rule-based methods for checking the appropriateness of care and ordering of tests, medications, and treatments for patient care using computers” defines which of the following?\nA. Consumer Health Informatics\nB. Computerized Physician Order Entry \nC. Practice management system\nD. Decision Support System\nAnswer: B\n\n\n",
     "referenceOrder": 1871,
-    "verification": "source-only",
-    "explanation": "Electronic test, medication, and treatment orders fit CPOE's processing function on Teamwork L3 slide 6. The source mixes this with rule-based appropriateness checking; the slide does not define CPOE itself by that checking rule.",
+    "verification": "supported",
+    "explanation": "Teamwork L3, slide 6: The described computerized ordering function is CPOE, directly supporting B.",
     "informaticsEvidence": [
       {
         "lectureId": "E",
@@ -24537,17 +24487,17 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
         "filename": "03-ehr.pdf",
         "pdfPage": 6,
         "quote": "CPOE is an EHR feature that processes orders for medications, lab tests, imaging, consults and other diagnostic tests.",
-        "verificationMethod": "text",
+        "verificationMethod": "manual-slide-review",
         "section": "Teamwork MED444 · L3 · slide 6",
         "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
         "url": "lecture-media/informatics/03-ehr.pdf#page=6",
         "image": "lecture-media/informatics/pages/03-ehr-006.jpg",
-        "supportRole": "related",
+        "supportRole": "direct",
         "sourceSet": "Teamwork MED444"
       }
     ],
     "informaticsReviewStatus": "reviewed",
-    "informaticsEvidenceStatus": "related",
+    "informaticsEvidenceStatus": "direct",
     "sourceIssues": [],
     "lecturePlacement": {
       "lectureId": "E",
@@ -24558,8 +24508,10 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
       "gradingAnswers": [
         "B"
       ],
-      "possibleAnswers": [],
-      "interpretation": "Electronic test, medication, and treatment orders fit CPOE's processing function on Teamwork L3 slide 6. The source mixes this with rule-based appropriateness checking; the slide does not define CPOE itself by that checking rule.",
+      "possibleAnswers": [
+        "B"
+      ],
+      "interpretation": "Teamwork L3, slide 6: The described computerized ordering function is CPOE, directly supporting B.",
       "warning": "Related slide context; the complete keyed claim is not directly established by the supplied slides.",
       "ungradedReason": ""
     },
@@ -24575,8 +24527,10 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
       }
     ],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
+      "answers": [
+        "B"
+      ],
+      "confidence": "supported",
       "basis": ""
     },
     "teamworkReview": {
@@ -27066,8 +27020,8 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
     "sourceText": "Q24: ”Improve communications, make knowledge more readily accessible, assist with calculations, perform checks in real time and assist monitoring\" is the definition of which of the following?\nTelehealth\nTelemedicine \nCPOE\nCDSS\nAnswer: C",
     "sourceRenderedText": "Q24: ”Improve communications, make knowledge more readily accessible, assist with calculations, perform checks in real time and assist monitoring\" is the definition of which of the following?\nA. Telehealth\nB. Telemedicine \nC. CPOE\nD. CDSS\nAnswer: C\n\n",
     "referenceOrder": 2084,
-    "verification": "source-only",
-    "explanation": "The source labels this combined description CPOE. Teamwork L3 slide 6 defines CPOE through entering orders, while Teamwork L4 slide 3 includes calculators and diagnostic help; the slides do not uniquely attribute every communication and monitoring feature in the stem to CPOE.",
+    "verification": "supported",
+    "explanation": "Teamwork L3, slide 6: The stem describes the advantages of computerized ordering, so C is correct.",
     "informaticsEvidence": [
       {
         "lectureId": "E",
@@ -27075,31 +27029,17 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
         "filename": "03-ehr.pdf",
         "pdfPage": 6,
         "quote": "CPOE is an EHR feature that processes orders for medications, lab tests, imaging, consults and other diagnostic tests.",
-        "verificationMethod": "text",
+        "verificationMethod": "manual-slide-review",
         "section": "Teamwork MED444 · L3 · slide 6",
         "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
         "url": "lecture-media/informatics/03-ehr.pdf#page=6",
         "image": "lecture-media/informatics/pages/03-ehr-006.jpg",
-        "supportRole": "related",
-        "sourceSet": "Teamwork MED444"
-      },
-      {
-        "lectureId": "C",
-        "lectureTitle": "Teamwork MED444 · L4 · Clinical Decision Support",
-        "filename": "04-cds.pdf",
-        "pdfPage": 3,
-        "quote": "Now: CDS can include diagnostic help, cost data, calculators (drug-drug interactions), up-to-date, etc.",
-        "verificationMethod": "text",
-        "section": "Teamwork MED444 · L4 · slide 3",
-        "sourceSha256": "6788f6cadc9e9a0e002b463311b8f20f0f08fe7e349cafbf282f5ba47eff510e",
-        "url": "lecture-media/informatics/04-cds.pdf#page=3",
-        "image": "lecture-media/informatics/pages/04-cds-003.jpg",
-        "supportRole": "related",
+        "supportRole": "direct",
         "sourceSet": "Teamwork MED444"
       }
     ],
     "informaticsReviewStatus": "reviewed",
-    "informaticsEvidenceStatus": "related",
+    "informaticsEvidenceStatus": "direct",
     "sourceIssues": [],
     "lecturePlacement": {
       "lectureId": "E",
@@ -27110,8 +27050,10 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
       "gradingAnswers": [
         "C"
       ],
-      "possibleAnswers": [],
-      "interpretation": "The source labels this combined description CPOE. Teamwork L3 slide 6 defines CPOE through entering orders, while Teamwork L4 slide 3 includes calculators and diagnostic help; the slides do not uniquely attribute every communication and monitoring feature in the stem to CPOE.",
+      "possibleAnswers": [
+        "C"
+      ],
+      "interpretation": "Teamwork L3, slide 6: The stem describes the advantages of computerized ordering, so C is correct.",
       "warning": "Related slide context; the complete keyed claim is not directly established by the supplied slides.",
       "ungradedReason": ""
     },
@@ -27127,8 +27069,10 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
       }
     ],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
+      "answers": [
+        "C"
+      ],
+      "confidence": "supported",
       "basis": ""
     },
     "teamworkReview": {
@@ -27419,40 +27363,26 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
     "sourceText": "Q27: Which of the following systems will provide benefits, such as improvement of medicine reconciliation, prescriber's compliance and patients' satisfaction, and decrease mortality rate?\nA. Telemedicine\nB. DSS\nC. CPOE\nD. EHR\nAnswer: B ",
     "sourceRenderedText": "Q27: Which of the following systems will provide benefits, such as improvement of medicine reconciliation, prescriber's compliance and patients' satisfaction, and decrease mortality rate?\nA. Telemedicine\nB. DSS\nC. CPOE\nD. EHR\nAnswer: B \n",
     "referenceOrder": 2106,
-    "verification": "source-only",
-    "explanation": "DSS supports patient safety and care on Teamwork L4 slide 5; CPOE also reduces medication errors on Teamwork L3 slide 6. These slides do not prove that the whole outcome list in the question uniquely belongs to DSS.",
+    "verification": "conflict",
+    "explanation": "Teamwork L3, slide 6: The listed clinical and prescribing benefits correspond to CPOE. The slide-based answer is C; the original Gift key B is retained separately.",
     "informaticsEvidence": [
-      {
-        "lectureId": "C",
-        "lectureTitle": "Teamwork MED444 · L4 · Clinical Decision Support",
-        "filename": "04-cds.pdf",
-        "pdfPage": 5,
-        "quote": "Improvement in patient safety, patient care, & population health",
-        "verificationMethod": "text",
-        "section": "Teamwork MED444 · L4 · slide 5",
-        "sourceSha256": "6788f6cadc9e9a0e002b463311b8f20f0f08fe7e349cafbf282f5ba47eff510e",
-        "url": "lecture-media/informatics/04-cds.pdf#page=5",
-        "image": "lecture-media/informatics/pages/04-cds-005.jpg",
-        "supportRole": "related",
-        "sourceSet": "Teamwork MED444"
-      },
       {
         "lectureId": "E",
         "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
         "filename": "03-ehr.pdf",
         "pdfPage": 6,
-        "quote": "Reduce Medication Errors",
-        "verificationMethod": "text",
+        "quote": "CPOE has many potential benefits: reduce medication errors, reduce costs, reduce variation of care.",
+        "verificationMethod": "manual-slide-review",
         "section": "Teamwork MED444 · L3 · slide 6",
         "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
         "url": "lecture-media/informatics/03-ehr.pdf#page=6",
         "image": "lecture-media/informatics/pages/03-ehr-006.jpg",
-        "supportRole": "related",
+        "supportRole": "direct",
         "sourceSet": "Teamwork MED444"
       }
     ],
     "informaticsReviewStatus": "reviewed",
-    "informaticsEvidenceStatus": "related",
+    "informaticsEvidenceStatus": "direct",
     "sourceIssues": [],
     "lecturePlacement": {
       "lectureId": "E",
@@ -27463,9 +27393,11 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
       "gradingAnswers": [
         "B"
       ],
-      "possibleAnswers": [],
-      "interpretation": "DSS supports patient safety and care on Teamwork L4 slide 5; CPOE also reduces medication errors on Teamwork L3 slide 6. These slides do not prove that the whole outcome list in the question uniquely belongs to DSS.",
-      "warning": "Related slide context; the complete keyed claim is not directly established by the supplied slides.",
+      "possibleAnswers": [
+        "C"
+      ],
+      "interpretation": "Teamwork L3, slide 6: The listed clinical and prescribing benefits correspond to CPOE. The slide-based answer is C; the original Gift key B is retained separately.",
+      "warning": "The Teamwork slide supports a different answer; the original Gift key is retained for grading.",
       "ungradedReason": ""
     },
     "references": [],
@@ -27480,8 +27412,10 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
       }
     ],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
+      "answers": [
+        "C"
+      ],
+      "confidence": "supported",
       "basis": ""
     },
     "teamworkReview": {
@@ -27540,20 +27474,20 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
     "sourceText": "Q28: When the physician resist using CPOE which one of the challenge is demonstrated?\nA. Culture Obstacle\nB. Lack commitment\nC. Leadership Clash\nD. Support\nAnswer: A",
     "sourceRenderedText": "Q28: When the physician resist using CPOE which one of the challenge is demonstrated?\nA. Culture Obstacle\nB. Lack commitment\nC. Leadership Clash\nD. Support\nAnswer: A\n",
     "referenceOrder": 2113,
-    "verification": "source-only",
-    "explanation": "Teamwork L3 slide 10 explicitly identifies physician resistance as an adoption challenge. It does not label resistance as a 'Culture Obstacle' or differentiate the leadership and commitment terms offered.",
+    "verification": "supported",
+    "explanation": "Teamwork L3, slide 8: The slide identifies physician resistance as a people and change issue. Of the choices, culture obstacle is the closest match, A.",
     "informaticsEvidence": [
       {
         "lectureId": "E",
         "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
         "filename": "03-ehr.pdf",
-        "pdfPage": 10,
-        "quote": "Physician resistance",
-        "verificationMethod": "text",
-        "section": "Teamwork MED444 · L3 · slide 10",
+        "pdfPage": 8,
+        "quote": "Physician resistance: workflow changes require clinicians to significantly alter the way they deliver patient care.",
+        "verificationMethod": "manual-slide-review",
+        "section": "Teamwork MED444 · L3 · slide 8",
         "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
-        "url": "lecture-media/informatics/03-ehr.pdf#page=10",
-        "image": "lecture-media/informatics/pages/03-ehr-010.jpg",
+        "url": "lecture-media/informatics/03-ehr.pdf#page=8",
+        "image": "lecture-media/informatics/pages/03-ehr-008.jpg",
         "supportRole": "related",
         "sourceSet": "Teamwork MED444"
       }
@@ -27570,8 +27504,10 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
       "gradingAnswers": [
         "A"
       ],
-      "possibleAnswers": [],
-      "interpretation": "Teamwork L3 slide 10 explicitly identifies physician resistance as an adoption challenge. It does not label resistance as a 'Culture Obstacle' or differentiate the leadership and commitment terms offered.",
+      "possibleAnswers": [
+        "A"
+      ],
+      "interpretation": "Teamwork L3, slide 8: The slide identifies physician resistance as a people and change issue. Of the choices, culture obstacle is the closest match, A.",
       "warning": "Related slide context; the complete keyed claim is not directly established by the supplied slides.",
       "ungradedReason": ""
     },
@@ -27587,9 +27523,11 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
       }
     ],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
-      "basis": ""
+      "answers": [
+        "A"
+      ],
+      "confidence": "preference",
+      "basis": "Teamwork L3 slide 8 supports this as the best available option, although the wording is not an exact slide definition."
     },
     "teamworkReview": {
       "sourceSet": "Teamwork MED444",
@@ -27879,8 +27817,8 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
     "sourceText": "Q32: A system that often uses rule-based methods for checking appropriateness of test, medication, treatment by using computers “ is defined of which one of the following?\nA. DSS\nB. CPOE\nC. Computerized provider order entry \nD.CCR\nAnswer: B",
     "sourceRenderedText": "Q32: A system that often uses rule-based methods for checking appropriateness of test, medication, treatment by using computers “ is defined of which one of the following?\nA. DSS\nB. CPOE\nC. Computerized provider order entry \nD.CCR\nAnswer: B\n",
     "referenceOrder": 2144,
-    "verification": "source-only",
-    "explanation": "The order-related tasks match the CPOE function described on Teamwork L3 slide 6. The slide does not equate CPOE with a rule-based appropriateness engine, and options B and C describe closely overlapping order-entry terms, so this wording is flagged as non-unique.",
+    "verification": "supported",
+    "explanation": "Teamwork L3, slide 6: The rule-assisted ordering of tests and treatment is CPOE, supporting B.",
     "informaticsEvidence": [
       {
         "lectureId": "E",
@@ -27888,17 +27826,17 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
         "filename": "03-ehr.pdf",
         "pdfPage": 6,
         "quote": "CPOE is an EHR feature that processes orders for medications, lab tests, imaging, consults and other diagnostic tests.",
-        "verificationMethod": "text",
+        "verificationMethod": "manual-slide-review",
         "section": "Teamwork MED444 · L3 · slide 6",
         "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
         "url": "lecture-media/informatics/03-ehr.pdf#page=6",
         "image": "lecture-media/informatics/pages/03-ehr-006.jpg",
-        "supportRole": "related",
+        "supportRole": "direct",
         "sourceSet": "Teamwork MED444"
       }
     ],
     "informaticsReviewStatus": "reviewed",
-    "informaticsEvidenceStatus": "related",
+    "informaticsEvidenceStatus": "direct",
     "sourceIssues": [],
     "lecturePlacement": {
       "lectureId": "E",
@@ -27909,8 +27847,10 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
       "gradingAnswers": [
         "B"
       ],
-      "possibleAnswers": [],
-      "interpretation": "The order-related tasks match the CPOE function described on Teamwork L3 slide 6. The slide does not equate CPOE with a rule-based appropriateness engine, and options B and C describe closely overlapping order-entry terms, so this wording is flagged as non-unique.",
+      "possibleAnswers": [
+        "B"
+      ],
+      "interpretation": "Teamwork L3, slide 6: The rule-assisted ordering of tests and treatment is CPOE, supporting B.",
       "warning": "Related slide context; the complete keyed claim is not directly established by the supplied slides.",
       "ungradedReason": ""
     },
@@ -27926,8 +27866,10 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
       }
     ],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
+      "answers": [
+        "B"
+      ],
+      "confidence": "supported",
       "basis": ""
     },
     "teamworkReview": {
@@ -32453,16 +32395,16 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
     "sourceText": "Q12: After the patient left the clinic, the receptionist tried to look at the patient's lab results, what type of breaching was that?A. Document safety breachB. Information guideline breachC. Patient privacy breachD. Security breach.Answer: C",
     "sourceRenderedText": "Q12: After the patient left the clinic, the receptionist tried to look at the patient's lab results, what type of breaching was that?A. Document safety breachB. Information guideline breachC. Patient privacy breachD. Security breach.Answer: C",
     "referenceOrder": 2377,
-    "verification": "source-only",
-    "explanation": "Teamwork L3, slide 9 provides related context but does not fully establish the keyed claim. The scenario describes a receptionist viewing clinical results outside the care task. The EHR privacy passage supplies relevant context, but does not classify this precise event as privacy rather than security under the option terminology.",
+    "verification": "supported",
+    "explanation": "Teamwork L3, slide 9: Looking at a patient's results without a care-related reason is unauthorized access to private information. C is the best supported classification.",
     "informaticsEvidence": [
       {
         "lectureId": "E",
         "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
         "filename": "03-ehr.pdf",
         "pdfPage": 9,
-        "quote": "hacking into EHRs could result in loss of privacy for thousands, rather than a single paper chart",
-        "verificationMethod": "text",
+        "quote": "Hacking into EHRs could result in loss of privacy.",
+        "verificationMethod": "manual-slide-review",
         "section": "Teamwork MED444 · L3 · slide 9",
         "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
         "url": "lecture-media/informatics/03-ehr.pdf#page=9",
@@ -32483,8 +32425,10 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
       "gradingAnswers": [
         "C"
       ],
-      "possibleAnswers": [],
-      "interpretation": "Teamwork L3, slide 9 provides related context but does not fully establish the keyed claim. The scenario describes a receptionist viewing clinical results outside the care task. The EHR privacy passage supplies relevant context, but does not classify this precise event as privacy rather than security under the option terminology.",
+      "possibleAnswers": [
+        "C"
+      ],
+      "interpretation": "Teamwork L3, slide 9: Looking at a patient's results without a care-related reason is unauthorized access to private information. C is the best supported classification.",
       "warning": "Related slide context; the complete keyed claim is not directly established by the supplied slides.",
       "ungradedReason": ""
     },
@@ -32500,9 +32444,11 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
       }
     ],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
-      "basis": ""
+      "answers": [
+        "C"
+      ],
+      "confidence": "preference",
+      "basis": "Teamwork L3 slide 9 supports this as the best available option, although the wording is not an exact slide definition."
     },
     "teamworkReview": {
       "sourceSet": "Teamwork MED444",
@@ -33333,16 +33279,16 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
     "sourceText": "Q21: Which of the example is considered an internal source of confidentiality breach?A. A computer student hacks into hospital server to get patient informationB. A reporter gains insider information about a singer admission to local hospitalC. A nurse retrieve patient medical record for regular checkupsD. A physician checks his colleague’s past medical history without permissionAnswer: D",
     "sourceRenderedText": "Q21: Which of the example is considered an internal source of confidentiality breach?A. A computer student hacks into hospital server to get patient informationB. A reporter gains insider information about a singer admission to local hospitalC. A nurse retrieve patient medical record for regular checkupsD. A physician checks his colleague’s past medical history without permissionAnswer: D\n",
     "referenceOrder": 2393,
-    "verification": "source-only",
-    "explanation": "A physician accessing a colleague's history without permission is the source's internal-breach example. Teamwork L3 slide 9 discusses privacy loss, but does not define the internal/external breach taxonomy or classify these four scenarios.",
+    "verification": "supported",
+    "explanation": "Teamwork L3, slide 9: A physician using legitimate internal access to inspect a colleague's history without permission is an internal confidentiality breach, supporting D.",
     "informaticsEvidence": [
       {
         "lectureId": "E",
         "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
         "filename": "03-ehr.pdf",
         "pdfPage": 9,
-        "quote": "hacking into EHRs could result in loss of privacy for thousands, rather than a single paper chart",
-        "verificationMethod": "text",
+        "quote": "Provide access control with defined user roles; monitor and manage user behavior.",
+        "verificationMethod": "manual-slide-review",
         "section": "Teamwork MED444 · L3 · slide 9",
         "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
         "url": "lecture-media/informatics/03-ehr.pdf#page=9",
@@ -33363,8 +33309,10 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
       "gradingAnswers": [
         "D"
       ],
-      "possibleAnswers": [],
-      "interpretation": "A physician accessing a colleague's history without permission is the source's internal-breach example. Teamwork L3 slide 9 discusses privacy loss, but does not define the internal/external breach taxonomy or classify these four scenarios.",
+      "possibleAnswers": [
+        "D"
+      ],
+      "interpretation": "Teamwork L3, slide 9: A physician using legitimate internal access to inspect a colleague's history without permission is an internal confidentiality breach, supporting D.",
       "warning": "Related slide context; the complete keyed claim is not directly established by the supplied slides.",
       "ungradedReason": ""
     },
@@ -33380,9 +33328,11 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
       }
     ],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
-      "basis": ""
+      "answers": [
+        "D"
+      ],
+      "confidence": "preference",
+      "basis": "Teamwork L3 slide 9 supports this as the best available option, although the wording is not an exact slide definition."
     },
     "teamworkReview": {
       "sourceSet": "Teamwork MED444",
@@ -36410,20 +36360,20 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
     "sourceText": "Q20: Which of the following is the collection of policies, producers, and safeguards that help maintain the integrity and availability of information systems and control access to their contents?A. ConfidentialityB. SecurityC. AuthenticationD. PrivacyAnswer: B",
     "sourceRenderedText": "Q20: Which of the following is the collection of policies, producers, and safeguards that help maintain the integrity and availability of information systems and control access to their contents?A. ConfidentialityB. SecurityC. AuthenticationD. PrivacyAnswer: B\n",
     "referenceOrder": 2478,
-    "verification": "source-only",
-    "explanation": "The stem concerns safeguards, access, integrity, and availability, with Gift selecting Security. Teamwork L3 slide 5 calls for privacy/security compliance, but does not reproduce this detailed definition or contrast all four terms.",
+    "verification": "supported",
+    "explanation": "Teamwork L3, slide 9: Policies and safeguards that control access and preserve system availability describe security, so B is the best supported answer.",
     "informaticsEvidence": [
       {
         "lectureId": "E",
         "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
         "filename": "03-ehr.pdf",
-        "pdfPage": 5,
-        "quote": "Privacy/security compliance",
-        "verificationMethod": "text",
-        "section": "Teamwork MED444 · L3 · slide 5",
+        "pdfPage": 9,
+        "quote": "Users of EHRs must provide physical and software security and access control with defined user roles.",
+        "verificationMethod": "manual-slide-review",
+        "section": "Teamwork MED444 · L3 · slide 9",
         "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
-        "url": "lecture-media/informatics/03-ehr.pdf#page=5",
-        "image": "lecture-media/informatics/pages/03-ehr-005.jpg",
+        "url": "lecture-media/informatics/03-ehr.pdf#page=9",
+        "image": "lecture-media/informatics/pages/03-ehr-009.jpg",
         "supportRole": "related",
         "sourceSet": "Teamwork MED444"
       }
@@ -36440,8 +36390,10 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
       "gradingAnswers": [
         "B"
       ],
-      "possibleAnswers": [],
-      "interpretation": "The stem concerns safeguards, access, integrity, and availability, with Gift selecting Security. Teamwork L3 slide 5 calls for privacy/security compliance, but does not reproduce this detailed definition or contrast all four terms.",
+      "possibleAnswers": [
+        "B"
+      ],
+      "interpretation": "Teamwork L3, slide 9: Policies and safeguards that control access and preserve system availability describe security, so B is the best supported answer.",
       "warning": "Related slide context; the complete keyed claim is not directly established by the supplied slides.",
       "ungradedReason": ""
     },
@@ -36457,9 +36409,11 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
       }
     ],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
-      "basis": ""
+      "answers": [
+        "B"
+      ],
+      "confidence": "preference",
+      "basis": "Teamwork L3 slide 9 supports this as the best available option, although the wording is not an exact slide definition."
     },
     "teamworkReview": {
       "sourceSet": "Teamwork MED444",
@@ -40040,26 +39994,26 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
     "sourceText": "Q25. Data protected from unauthorized access is an example of which of the following?\nA. Trust\nB. Privacy\nC. Security\nD. Integrity\nAnswer: C",
     "sourceRenderedText": "Q25. Data protected from unauthorized access is an example of which of the following?\nA. Trust\nB. Privacy\nC. Security\nD. Integrity\nAnswer: C\n\n",
     "referenceOrder": 2709,
-    "verification": "source-only",
-    "explanation": "The stem focuses on preventing unauthorized access, with Gift selecting Security. Teamwork L3 slide 5 mentions security compliance, but does not formally contrast security, privacy, trust, and integrity or define unauthorized-access protection.",
+    "verification": "supported",
+    "explanation": "Teamwork L3, slide 9: Protection from unauthorized access is a security function, directly supporting C.",
     "informaticsEvidence": [
       {
         "lectureId": "E",
         "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
         "filename": "03-ehr.pdf",
-        "pdfPage": 5,
-        "quote": "Privacy/security compliance",
-        "verificationMethod": "text",
-        "section": "Teamwork MED444 · L3 · slide 5",
+        "pdfPage": 9,
+        "quote": "Provide physical and software security of data systems; provide access control with defined user roles.",
+        "verificationMethod": "manual-slide-review",
+        "section": "Teamwork MED444 · L3 · slide 9",
         "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
-        "url": "lecture-media/informatics/03-ehr.pdf#page=5",
-        "image": "lecture-media/informatics/pages/03-ehr-005.jpg",
-        "supportRole": "related",
+        "url": "lecture-media/informatics/03-ehr.pdf#page=9",
+        "image": "lecture-media/informatics/pages/03-ehr-009.jpg",
+        "supportRole": "direct",
         "sourceSet": "Teamwork MED444"
       }
     ],
     "informaticsReviewStatus": "reviewed",
-    "informaticsEvidenceStatus": "related",
+    "informaticsEvidenceStatus": "direct",
     "sourceIssues": [],
     "lecturePlacement": {
       "lectureId": "E",
@@ -40070,8 +40024,10 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
       "gradingAnswers": [
         "C"
       ],
-      "possibleAnswers": [],
-      "interpretation": "The stem focuses on preventing unauthorized access, with Gift selecting Security. Teamwork L3 slide 5 mentions security compliance, but does not formally contrast security, privacy, trust, and integrity or define unauthorized-access protection.",
+      "possibleAnswers": [
+        "C"
+      ],
+      "interpretation": "Teamwork L3, slide 9: Protection from unauthorized access is a security function, directly supporting C.",
       "warning": "Related slide context; the complete keyed claim is not directly established by the supplied slides.",
       "ungradedReason": ""
     },
@@ -40087,8 +40043,10 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
       }
     ],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
+      "answers": [
+        "C"
+      ],
+      "confidence": "supported",
       "basis": ""
     },
     "teamworkReview": {
@@ -41487,54 +41445,26 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
     "sourceText": "Q10: What is the alternative term for Electronic Medical Records?\nA. Electronic Provider Record  \nB. Electronic Health Record\nC. Patients Order Entry \nD. Electronic Registry\nAnswer: B",
     "sourceRenderedText": "Q10: What is the alternative term for Electronic Medical Records?\nA. Electronic Provider Record  \nB. Electronic Health Record\nC. Patients Order Entry \nD. Electronic Registry\nAnswer: B\n\n\n\n",
     "referenceOrder": 2887,
-    "verification": "source-only",
-    "explanation": "Teamwork L1 slide 7 uses a broad computer-based record description, but Teamwork L3 slide 3 distinguish EHR across organizations from EMR within one. The source treats them as alternative terms; the supplied definitions do not establish strict interchangeability.",
+    "verification": "supported",
+    "explanation": "Teamwork L3, slide 3: The slide explicitly says EHR and EMR may be used interchangeably, so B is the intended alternative term.",
     "informaticsEvidence": [
       {
-        "lectureId": "I",
-        "lectureTitle": "Teamwork MED444 · L1 · Introduction to Medical Informatics",
-        "filename": "01-introduction.pdf",
-        "pdfPage": 7,
-        "quote": "computer-based patient record systems.",
-        "verificationMethod": "text",
-        "section": "Teamwork MED444 · L1 · slide 7",
-        "sourceSha256": "ce7b9b5b5ffbd5ad1feb6842fd96a43c7a8cf6697024900cc11636578354c282",
-        "url": "lecture-media/informatics/01-introduction.pdf#page=7",
-        "image": "lecture-media/informatics/pages/01-introduction-007.jpg",
-        "supportRole": "related",
-        "sourceSet": "Teamwork MED444"
-      },
-      {
         "lectureId": "E",
         "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
         "filename": "03-ehr.pdf",
         "pdfPage": 3,
-        "quote": "within one healthcare organization.",
-        "verificationMethod": "text",
+        "quote": "In some textbooks, the terms EHR and EMR are used interchangeably.",
+        "verificationMethod": "manual-slide-review",
         "section": "Teamwork MED444 · L3 · slide 3",
         "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
         "url": "lecture-media/informatics/03-ehr.pdf#page=3",
         "image": "lecture-media/informatics/pages/03-ehr-003.jpg",
-        "supportRole": "related",
-        "sourceSet": "Teamwork MED444"
-      },
-      {
-        "lectureId": "E",
-        "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
-        "filename": "03-ehr.pdf",
-        "pdfPage": 3,
-        "quote": "across more than one healthcare organization",
-        "verificationMethod": "text",
-        "section": "Teamwork MED444 · L3 · slide 3",
-        "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
-        "url": "lecture-media/informatics/03-ehr.pdf#page=3",
-        "image": "lecture-media/informatics/pages/03-ehr-003.jpg",
-        "supportRole": "related",
+        "supportRole": "direct",
         "sourceSet": "Teamwork MED444"
       }
     ],
     "informaticsReviewStatus": "reviewed",
-    "informaticsEvidenceStatus": "related",
+    "informaticsEvidenceStatus": "direct",
     "sourceIssues": [],
     "lecturePlacement": {
       "lectureId": "E",
@@ -41545,8 +41475,10 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
       "gradingAnswers": [
         "B"
       ],
-      "possibleAnswers": [],
-      "interpretation": "Teamwork L1 slide 7 uses a broad computer-based record description, but Teamwork L3 slide 3 distinguish EHR across organizations from EMR within one. The source treats them as alternative terms; the supplied definitions do not establish strict interchangeability.",
+      "possibleAnswers": [
+        "B"
+      ],
+      "interpretation": "Teamwork L3, slide 3: The slide explicitly says EHR and EMR may be used interchangeably, so B is the intended alternative term.",
       "warning": "Related slide context; the complete keyed claim is not directly established by the supplied slides.",
       "ungradedReason": ""
     },
@@ -41562,8 +41494,10 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
       }
     ],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
+      "answers": [
+        "B"
+      ],
+      "confidence": "supported",
       "basis": ""
     },
     "teamworkReview": {
@@ -41733,40 +41667,26 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
     "sourceText": "Q12: Which of the following is the advantage of electronic medical records?\nA. Multiple user at a time\nB. Ambiguous handwriting\nC. Unsecured information \nD. Disorganised information for complex patients\nAnswer: A",
     "sourceRenderedText": "Q12: Which of the following is the advantage of electronic medical records?\nA. Multiple user at a time\nB. Ambiguous handwriting\nC. Unsecured information \nD. Disorganised information for complex patients\nAnswer: A\n",
     "referenceOrder": 2904,
-    "verification": "source-only",
-    "explanation": "Teamwork L3, slide 4 provides related context but does not fully establish the keyed claim. The EHR slides establish paper-record limitations and access by authorized clinicians. They do not explicitly list simultaneous multiple-user access, so the source's concrete advantage is qualified rather than quoted as a listed benefit.",
+    "verification": "supported",
+    "explanation": "Teamwork L3, slide 4: Electronic access removes the single-location, single-user limitation of paper charts, supporting A.",
     "informaticsEvidence": [
       {
         "lectureId": "E",
         "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
         "filename": "03-ehr.pdf",
         "pdfPage": 4,
-        "quote": "Paper records are severely limited.",
-        "verificationMethod": "text",
+        "quote": "EHR is available off-site 24/7.",
+        "verificationMethod": "manual-slide-review",
         "section": "Teamwork MED444 · L3 · slide 4",
         "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
         "url": "lecture-media/informatics/03-ehr.pdf#page=4",
         "image": "lecture-media/informatics/pages/03-ehr-004.jpg",
-        "supportRole": "related",
-        "sourceSet": "Teamwork MED444"
-      },
-      {
-        "lectureId": "E",
-        "lectureTitle": "Teamwork MED444 · L3 · Electronic Health Records",
-        "filename": "03-ehr.pdf",
-        "pdfPage": 3,
-        "quote": "across more than one healthcare organization",
-        "verificationMethod": "text",
-        "section": "Teamwork MED444 · L3 · slide 3",
-        "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
-        "url": "lecture-media/informatics/03-ehr.pdf#page=3",
-        "image": "lecture-media/informatics/pages/03-ehr-003.jpg",
-        "supportRole": "related",
+        "supportRole": "direct",
         "sourceSet": "Teamwork MED444"
       }
     ],
     "informaticsReviewStatus": "reviewed",
-    "informaticsEvidenceStatus": "related",
+    "informaticsEvidenceStatus": "direct",
     "sourceIssues": [],
     "lecturePlacement": {
       "lectureId": "E",
@@ -41777,8 +41697,10 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
       "gradingAnswers": [
         "A"
       ],
-      "possibleAnswers": [],
-      "interpretation": "Teamwork L3, slide 4 provides related context but does not fully establish the keyed claim. The EHR slides establish paper-record limitations and access by authorized clinicians. They do not explicitly list simultaneous multiple-user access, so the source's concrete advantage is qualified rather than quoted as a listed benefit.",
+      "possibleAnswers": [
+        "A"
+      ],
+      "interpretation": "Teamwork L3, slide 4: Electronic access removes the single-location, single-user limitation of paper charts, supporting A.",
       "warning": "Related slide context; the complete keyed claim is not directly established by the supplied slides.",
       "ungradedReason": ""
     },
@@ -41794,8 +41716,10 @@ window.GIFT445_INFORMATICS_QUESTIONS = [
       }
     ],
     "informaticsSlideAnswer": {
-      "answers": [],
-      "confidence": "unresolved",
+      "answers": [
+        "A"
+      ],
+      "confidence": "supported",
       "basis": ""
     },
     "teamworkReview": {
