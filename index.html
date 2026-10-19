@@ -842,6 +842,19 @@
     .reference-list { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 12px; }
     .reference-list a { color: var(--accent); font-size: 11px; font-weight: 700; text-underline-offset: 3px; }
 
+    .medicine-feedback { font-size: 14px; line-height: 1.8; }
+    .medicine-feedback .answer-summary { font-size: 14px; line-height: 1.7; }
+    .medicine-explanation { margin: 14px 0 0; color: var(--text); }
+    .medicine-explanation strong { display: block; margin-bottom: 3px; }
+    .medicine-objection { margin: 12px 0; padding: 11px 14px; border-left: 3px solid #c18a39; border-radius: 6px; background: color-mix(in srgb, #c18a39 9%, var(--panel)); }
+    .medicine-objection p { margin: 3px 0 0; }
+    .medicine-source { margin: 14px 0 0; color: var(--muted); font-size: 12px; }
+    .medicine-source a { color: var(--accent); text-underline-offset: 3px; }
+    .medicine-slide { margin-top: 8px; }
+    .medicine-slide summary { width: fit-content; cursor: pointer; color: var(--accent); font-weight: 700; padding: 7px 0; }
+    .medicine-slide blockquote { margin: 6px 0 12px; padding-left: 12px; border-left: 2px solid var(--line-strong); color: var(--muted); font-size: 13px; }
+    .medicine-slide img { display: block; width: auto; max-width: 100%; height: auto; border-radius: 6px; background: #fff; }
+
     .close-button {
       width: 36px;
       height: 36px;
@@ -1174,6 +1187,7 @@
   <script src="medicine-mid-lecture-evidence.js?v=20261005-evidence-1"></script>
   <script src="medicine-mid-source-tables.js?v=20261005-tables-1"></script>
   <script src="medicine-mid-gift-first-review.js?v=20261005-gift-first-1"></script>
+  <script src="medicine-mid-study-review.js?v=20261020-study-1"></script>
   <script src="surgery-catalog.js?v=20260924-empty-nutrition"></script>
   <script src="surgery-data.js?v=20260923-surgery-legacy-order"></script>
   <script src="surgery-midterm-reviews.js?v=20260924-hide-nutrition"></script>
@@ -1938,6 +1952,7 @@
       const reviewStatuses = ["needs-review", "conflict"];
       const gradingAnswers = gradingAnswersForQuestion(question);
       const giftReview = question.giftReview;
+      const medicineStudy = question.subjectId === "medicine" && question.assessment === "Midterm" && question.medicineReview;
       const sourceLocations = question.sourceLocations || [];
       const sourceRefs = sourceLocations.map(location => [
         question.subjectId === "surgery" && String(location.batch) === "444" && location.sourceType === "Q Bank" ? null : location.sourceType,
@@ -1986,7 +2001,8 @@
               return `<button class="option-button${selectedClass}${resultClass}" type="button" data-question="${question.id}" data-option="${option.id}" aria-pressed="${selected === option.id}"><span class="option-letter">${option.id}</span><span>${escapeHtml(option.text)}</span></button>`;
             }).join("")}
           </div>
-          <div class="answer-panel${revealed ? " visible" : ""}${(giftReview ? giftReview.warning || giftReview.ungradedReason : reviewStatuses.includes(question.verification)) ? " review" : ""}">
+          <div class="answer-panel${revealed ? " visible" : ""}${(medicineStudy ? medicineStudy.objection || giftReview?.ungradedReason : giftReview ? giftReview.warning || giftReview.ungradedReason : reviewStatuses.includes(question.verification)) ? " review" : ""}">
+            ${medicineStudy ? renderMedicineExplanation(question, sourceRefs) : `
             <p class="answer-summary">${giftReview ? "Gift key" : "Reference answer"}: ${escapeHtml(question.sourceAnswerNote || acceptedAnswers.join(" or ") || "Not provided")}${giftReview ? gradingAnswers.length ? " · used for bank-based practice" : " · not scored" : reviewStatuses.includes(question.verification) ? " · needs review" : question.verification === "source-only" ? " · reference answer only" : ""}</p>
             ${giftReview && (question.subjectId !== "informatics" || giftReview.ungradedReason) ? `<p class="source-note">${escapeHtml(giftReview.ungradedReason || "Answer feedback follows the recorded Gift key. Review notes explain possible interpretations and lecture differences; they do not replace the key.")}${acceptedAnswers.length > 1 ? " Multiple recorded keys are retained." : ""}</p>` : ""}
             ${question.subjectId === "informatics" ? "" : `<p class="ai-note">${escapeHtml(aiText)}</p>`}
@@ -1998,8 +2014,27 @@
             ${!giftReview && question.reviewOpinion ? `<p class="review-opinion" lang="en" dir="ltr"><strong>${question.subjectId === "medicine" && question.assessment === "Midterm" ? "Clinical interpretation (separate from the lecture text):" : "Medical review:"}</strong> ${escapeHtml(question.reviewOpinion)}</p>` : ""}
             <p class="source-note">Reference: ${escapeHtml(question.sourceLabel || `${subject?.name || "Medical"} Question Bank`)}${sourceRefs ? ` · ${escapeHtml(sourceRefs)}` : ""}</p>
             ${(question.references || []).length ? `<div class="reference-list">${question.references.map(reference => `<a href="${escapeHtml(reference.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(reference.title)} ↗</a>`).join("")}</div>` : ""}
+            `}
           </div>
         </article>`;
+    }
+
+    function renderMedicineExplanation(question, sourceRefs = "") {
+      const review = question.medicineReview;
+      const key = sourceAnswers(question);
+      const answerText = answers => answers.map(answer => `${escapeHtml(answer)} — ${escapeHtml(question.options.find(option => option.id === answer)?.text || "Option missing in Gift")}`).join(" or ");
+      const different = review.answers.length && (review.answers.length !== key.length || review.answers.some(answer => !key.includes(answer)));
+      const evidence = review.evidence;
+      const canScore = gradingAnswersForQuestion(question).length > 0;
+      return `<div class="medicine-feedback" lang="en" dir="ltr">
+        <p class="answer-summary">Gift answer: ${key.length ? answerText(key) : "Not provided"}</p>
+        ${!canScore ? `<p class="source-note">Not scored: ${escapeHtml(question.giftReview?.ungradedReason || "The original question is incomplete.")}</p>` : ""}
+        ${different || review.objection ? `<div class="medicine-objection">${different ? `<strong>${review.confidence === "supported" ? "Reviewed answer" : "Suggested answer"}: ${answerText(review.answers)}</strong>` : ""}${review.objection ? `<p>${escapeHtml(review.objection)}</p>` : ""}</div>` : ""}
+        <p class="medicine-explanation"><strong>Explanation</strong>${escapeHtml(review.explanation)}</p>
+        <div class="medicine-source">${review.basis === "lecture" && evidence ? `Source: ${escapeHtml(evidence.title)} · PDF page ${evidence.page}` : "Clinical explanation"}${evidence ? `<details class="medicine-slide"><summary>${evidence.relation === "background" ? "Related slide" : "View supporting slide"}</summary><blockquote>${escapeHtml(evidence.quote)}</blockquote><a href="${escapeHtml(evidence.url)}" target="_blank" rel="noopener noreferrer">Open full lecture ↗</a>${evidence.image ? `<a href="${escapeHtml(evidence.image)}" target="_blank" rel="noopener noreferrer" aria-label="Open slide image at full size"><img src="${escapeHtml(evidence.image)}" alt="${escapeHtml(evidence.title)} — PDF page ${evidence.page}" loading="lazy"></a>` : ""}</details>` : ""}</div>
+        ${(review.references || []).length ? `<div class="reference-list">${review.references.map(reference => `<a href="${escapeHtml(reference.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(reference.title)} ↗</a>`).join("")}</div>` : ""}
+        ${sourceRefs ? `<p class="source-note">Gift · ${escapeHtml(sourceRefs)}</p>` : ""}
+      </div>`;
     }
 
     function gradingAnswersForQuestion(question) {

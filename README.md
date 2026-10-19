@@ -21,6 +21,8 @@ A responsive question bank for Medicine, Surgery, Community Medicine, and Inform
 - `medicine-mid-444-renal-gi-review.js` — MID Nephrology/Gastroenterology concept-page anchors, English explanations, reviewed choices, and current external sources
 - `medicine-mid-explanation-completion.js` — explicit rationales for remaining imported MID placeholders and older-bank items; ambiguity checks and external references
 - `medicine-mid-gift-first-review.js` — final Medicine MID practice policy, tentative interpretations, management qualifications and verified replacement lecture excerpts
+- `medicine-mid-study-review.js` — current Medicine MID explanations, independently reviewed answers, and exact original-page evidence; preserves the Gift grading policy
+- `lecture-media/medicine-mid/` — expandable original lecture page images used by the current MID explanations
 - `surgery-data.js` — Surgery questions
 - `surgery-catalog.js` — Surgery lecture structure
 - `surgery-reference-overrides.js` — Surgery source labels and reference corrections
@@ -65,7 +67,13 @@ For a subject organized directly by lecture, set `cycle` to `null`. For cycle-ba
 
 When correcting a published question, prefer an override file so the imported source bank remains intact. Keep `sourceAnswer` unchanged, place an independently reviewed answer in `aiAnswer`, and use `verification` to distinguish `confirmed`, `supported`, `conflict`, `needs-review`, and `source-only` items.
 
-Medicine MID now has a separate final practice policy: `giftReview.gradingAnswers` follows the recorded Gift key, while `giftReview.possibleAnswers` is a tentative opinion only. Both initial rendering and click feedback use the same grading helper. Do not use `aiAnswer` to overwrite this MID grading policy. Other subjects and assessments retain their existing behavior.
+Medicine MID has a separate practice policy: `giftReview.gradingAnswers` follows the recorded Gift key. Both initial rendering and click feedback use the same grading helper. Do not use `aiAnswer` or an independently reviewed answer to overwrite this MID grading policy. Other subjects and assessments retain their existing behavior.
+
+The current MID explanation layer is `medicine-mid-study-review.js`, loaded after the grading policy. All 687 questions show the Gift answer and a concise, question-specific explanation. A reviewed alternative appears only when it differs, with a clear reason for any disagreement or source limitation. The review covers all 27 available Teamwork 444 lecture PDFs (637 pages), including physician notes: 604 explanations use matching lecture teaching and 83 are explicitly labelled clinical explanations. There are 26 unresolved items whose missing or conflicting source details prevent a unique answer; they still have explanations. Original keys, grading, stems, options, tables, media, IDs, order and saved progress remain unchanged.
+
+The supporting evidence opens on request: exact original wording, the PDF page number (cover = 1), the original page image, and the full lecture link. Clinical explanations may include a related slide, clearly distinguished from direct answer support. Every quoted page was independently re-extracted from the original PDF and matched to its file hash; 244 unique page images are loaded lazily. `scripts/build-medicine-study-review.py` builds this layer from private authored reviews and originals outside the repository. `tests/fixtures/medicine-mid-study-review.json` records source hashes, coverage and checked pages. Validate the current live layer with `node tests/medicine-mid-study-review.test.cjs`; run all checks with `node --test tests/*.test.cjs`.
+
+The stage-specific counts and tests below describe earlier review layers, which remain as provenance and grading inputs. Their old multi-section feedback is superseded by the current MID explanation layer. Correction work does not add a public update announcement.
 
 The four Medicine cycles (Cardiology, Pulmonology, Nephrology, Gastroenterology) include **MID 444 · Lecture Review** and preserve the original bank answers. Original lecture text is displayed separately from clinical interpretation and external sources. PDF pages count the cover as page 1. A topic match is never presented as proof of an answer.
 
@@ -107,7 +115,7 @@ Gift-first MID update (2026-10-05): all 687 MID items show the recorded bank key
 
 44 interpretations were revised, including every existing key/opinion disagreement. Management and next-step candidates have an explicit course-focus note: direct lecture teaching, background only, or no verified passage. Nine replacement evidence records were independently re-extracted from the original PDF pages with `pdfplumber` text flow and `x_tolerance=1`, checked for exact whitespace-normalized quotations, and matched to source SHA-256 hashes. The PE thrombolysis and variceal-bleeding treatment tables were also visually checked. The final policy has 624 verified passages (446 teaching, 178 background only), with 63 items still having no verified lecture passage. Prior test counts describe their individual review stages.
 
-Final policy validation: `node tests/medicine-mid-gift-first.test.cjs` loads the full live script order and checks all 687 questions and every option for consistent click/reload grading, source preservation, neutral feedback for source defects, English-only medical notes, and unchanged behavior outside Medicine MID. Do not interpret green bank-based feedback as proof that a disputed key is the current clinical recommendation; the source key and lecture discrepancy remain visible together.
+Grading-policy stage validation: `node tests/medicine-mid-gift-first.test.cjs` checks all 687 questions and every option before the current study overlay for consistent click/reload grading, source preservation, neutral feedback for source defects, English-only medical notes, and unchanged behavior outside Medicine MID. The current-layer test above checks the complete live script order and feedback. Do not interpret green bank-based feedback as proof that a disputed key is the current clinical recommendation; the source key and lecture discrepancy remain visible together.
 
 ### Informatics Final source and practice scope
 

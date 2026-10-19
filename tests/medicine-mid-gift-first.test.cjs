@@ -8,6 +8,9 @@ const c = {window: {}};
 vm.createContext(c);
 let before;
 for (const match of html.matchAll(/<script src="([^"?]+)/g)) {
+  // Test this historical grading stage independently; the final study overlay
+  // and its simplified renderer have full live integration coverage separately.
+  if (match[1] === 'medicine-mid-study-review.js') continue;
   const file = path.join(root, match[1]);
   if (!fs.existsSync(file)) continue;
   if (match[1] === 'medicine-mid-gift-first-review.js') before = JSON.parse(JSON.stringify(c.window.GIFT445_QUESTIONS));
