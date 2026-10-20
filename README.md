@@ -10,7 +10,7 @@ A responsive question bank for Medicine, Surgery, Community Medicine, and Inform
 - Per-device progress and answer saving
 - Mobile-first, static hosting with no account required
 - Duplicate protection using stable question IDs, source locations, and normalized stems
-- Concise English update strip highlighting new study features
+- Concise Arabic update strip highlighting new study features
 - Permanent Arabic reminder to refresh the page periodically for updates
 
 ## Project structure
@@ -97,7 +97,7 @@ Nephrology/Gastroenterology adds 283 question-specific English explanations: 201
 
 The final explanation audit covers all **687 Medicine MID questions** already present in the bank: 663 in the four current blocks and 24 older questions filed in other blocks. 244 generic or pending imported explanations were replaced with explicit clinical rationales. Older items use external references without invented 444 lecture pages. Further ambiguity checks leave 115 current-block questions needing review; original keys, IDs, ordering, source images and Final questions are preserved. Ehsan donation text remains Arabic.
 
-The update strip is at the top of `index.html`. It highlights user-facing study features without internal review counts or workflow details. Keep future updates brief and scoped to the relevant subject and assessment.
+The update strip is at the top of `index.html`. It highlights user-facing study features without internal review counts or workflow details. Keep future updates brief, in Arabic, and scoped to the relevant subject and assessment. Use RTL layout for the update strip while retaining English medical explanations.
 
 Review validation: `node tests/medicine-mid-444-review.test.cjs`.
 Integration validation: `node tests/medicine-mid-444-renal-gi-review.test.cjs` (all 663 reviewed MID items, preserved prior reviews/source keys, bounded pages, and neutral grading for uncertain questions).

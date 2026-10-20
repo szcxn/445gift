@@ -70,13 +70,15 @@ assert.ok(target.every(q => q.reviewOpinion && q.reviewedOn === "2026-10-05"));
 assert.ok(target.filter(q => q.verification === "conflict").every(q => q.references?.length));
 const counts = JSON.parse(JSON.stringify(context.window.GIFT445_MID_444_REVIEW_COUNTS));
 assert.deepEqual(counts, { total: 663, lectureAnchored: 656, outsideLecture: 7, conflict: 40, needsReview: 102 });
-assert.ok(html.includes('class="site-updates" lang="en" dir="ltr"'));
-assert.ok(html.includes("Latest update:</strong> Menu improved"));
+assert.ok(html.includes('class="site-updates" lang="ar" dir="rtl"'));
+assert.ok(html.includes("أحدث تحديث:</strong> تطوير ضخم لشروح إجابات الباطنة والسيرجري للميد"));
+const siteUpdates = html.match(/<aside class="site-updates"[\s\S]*?<\/aside>/)[0];
+assert.ok(siteUpdates.includes("آخر التحديثات") && siteUpdates.includes("٢٠ أكتوبر ٢٠٢٦"));
 const donationSection = html.match(/<section class="donation-section"[\s\S]*?<\/section>/)[0];
 assert.ok(donationSection.includes('lang="ar" dir="rtl"') && donationSection.includes("اضغط هنا للتبرع عبر إحسان"));
 const refreshNotice = html.match(/<p class="refresh-notice"[\s\S]*?<\/p>/)[0];
 assert.ok(refreshNotice.includes('lang="ar" dir="rtl"') && refreshNotice.includes("حدثوا الصفحة بشكل دوري عشان توصلكم التحديثات"));
-assert.ok(!/\p{Script=Arabic}/u.test(html.replace(donationSection, "").replace(refreshNotice, "")), "The study interface must be in English; Ehsan and the refresh reminder remain Arabic");
+assert.ok(!/\p{Script=Arabic}/u.test(html.replace(donationSection, "").replace(refreshNotice, "").replace(siteUpdates, "")), "The study interface must be in English; updates, Ehsan and the refresh reminder remain Arabic");
 const medicalReviewStyle = html.match(/\.lecture-evidence, \.review-opinion\s*\{([^}]+)\}/)[1];
 assert.ok(/direction:\s*ltr/.test(medicalReviewStyle), "English medical reviews must retain LTR styles");
 for (const q of after.filter(q => q.lectureEvidence)) {
@@ -89,6 +91,6 @@ for (const q of after.filter(q => q.lectureEvidence)) {
     assert.ok(!/option-button[^"\n]*\b(?:correct|incorrect)\b/.test(output), `Uncertain item graded: ${q.id}`);
   }
 }
-console.log("PASS: all 663 MID items render; 283 new reviews have bounded pages; source keys, previous reviews and other scopes preserved; ambiguous choices stay ungraded; English update strip is present.");
+console.log("PASS: all 663 MID items render; 283 new reviews have bounded pages; source keys, previous reviews and other scopes preserved; ambiguous choices stay ungraded; Arabic update strip is present.");
 console.log(counts);
 if (process.env.MID_REVIEW_EXPORT) fs.writeFileSync(process.env.MID_REVIEW_EXPORT, JSON.stringify(after.filter(q => q.lectureEvidence), null, 2));
