@@ -10,6 +10,9 @@ const context = {window: {}};
 vm.createContext(context);
 let before;
 for (const match of html.matchAll(/<script src="([^"?]+)/g)) {
+  // This stage predates Final-source linking; the Final integration test loads
+  // both layers and checks the preserved MID reviews and source variants.
+  if (match[1] === 'medicine-final-mid-review.js') continue;
   const file = path.join(root, match[1]);
   if (!fs.existsSync(file)) continue;
   if (match[1] === 'medicine-mid-study-review.js') before = plain(context.window.GIFT445_QUESTIONS);
@@ -87,6 +90,10 @@ for (const question of mid) {
       const correct = question.giftReview.gradingAnswers.includes(button.dataset.option);
       assert.equal(button.classes.has('correct'), correct, question.id);
       const result = output.match(new RegExp(`<button class="(option-button[^\"]*)"[^>]*data-option="${button.dataset.option}"`));
+      if (!question.options.find(option => option.id === button.dataset.option).text.trim()) {
+        assert.equal(result, null, `An absent source option must not become an empty button: ${question.id}`);
+        continue;
+      }
       assert.ok(result);
       assert.equal(/\bcorrect\b/.test(result[1]), correct, question.id);
     }

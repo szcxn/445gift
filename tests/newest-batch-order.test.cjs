@@ -4,6 +4,7 @@ const path = require('node:path');
 const vm = require('node:vm');
 const root = path.resolve(__dirname, '..');
 const html = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
+const finalStudyIds = new Set(JSON.parse(fs.readFileSync(path.join(root,'tests/fixtures/medicine-final-mid-review.json'),'utf8')).selectedIds);
 const c = {window:{}}; vm.createContext(c);
 for(const m of html.matchAll(/<script src="([^"?]+)(?:\?[^" ]*)?"><\/script>/g)) if(fs.existsSync(path.join(root,m[1]))) vm.runInContext(fs.readFileSync(path.join(root,m[1]),'utf8'),c);
 // Capture the complete imported content before any display ordering is performed.
@@ -20,7 +21,7 @@ c.captureAnalytics=()=>{};c.quizAnalyticsProperties=()=>({});c.renderQuestionSet
 const plain=value=>JSON.parse(JSON.stringify(value));
 const sortedIds=value=>Array.from(value,q=>q.id).sort();
 const counts=Object.fromEntries(c.SUBJECTS.map(s=>[s.id,c.questionsFor(s.id).length]));
-assert.deepEqual(counts,{medicine:1421,surgery:1212,community:432});
+assert.deepEqual(counts,{medicine:1424,surgery:1212,community:432});
 function reset() {c.appState={navigation:{},quiz:{questionIds:[],currentIndex:0,answers:{},flagged:[],mode:null}};}
 function verifySet(input,assessment=null) {
  const unchanged=JSON.stringify(input);
@@ -45,7 +46,7 @@ for(const subject of c.SUBJECTS) {
   const set=questions.filter(q=>q.cycle===cycle);verifySet(set);checkedSets++;
   reset();c.openCycleQuestions(subject.id,cycle);assert.deepEqual(sortedIds(set),plain(c.appState.quiz.questionIds).sort());
   for(const assessment of ['Midterm','Final']) {
-   const subset=set.filter(q=>q.assessment===assessment);if(!subset.length)continue;
+   const subset=set.filter(q=>q.assessment===assessment || subject.id==='medicine'&&assessment==='Midterm'&&finalStudyIds.has(q.id));if(!subset.length)continue;
    reset();c.openCycleQuestions(subject.id,cycle,false,assessment);const shown=Array.from(c.appState.quiz.questionIds,id=>c.QUESTION_BANK.find(q=>q.id===id));verifySet(shown,assessment);assert.deepEqual(sortedIds(subset),plain(c.appState.quiz.questionIds).sort());checkedSets++;
   }
  }
@@ -78,4 +79,4 @@ reset();c.openQuestionSet('New',synthetic,{subjectId:'medicine',mode:'all'},fals
 reset();c.openQuestionSet('Mixed',synthetic,{subjectId:'medicine',mode:'lecture-mix'},false);assert.deepEqual(plain(c.appState.quiz.questionIds),['old','new','unknown']);
 assert.equal(JSON.stringify(c.window),originalContent,'Imported questions, keys, explanations, citations, tables, or images changed');
 for(const script of html.matchAll(/<script(?:\s[^>]*)?>([\s\S]*?)<\/script>/g)) new vm.Script(script[1]);
-console.log(`PASS: newest-batch order in ${checkedSets} real question sets; all 3,065 displayed question IDs/content preserved (Medicine 1,421, Surgery 1,212, Community 432); within-batch and shuffled order retained; saved current question, answers and flags survive reordering.`);
+console.log(`PASS: newest-batch order in ${checkedSets} real question sets; all 3,068 displayed question IDs/content preserved (Medicine 1,424, Surgery 1,212, Community 432); within-batch and shuffled order retained; saved current question, answers and flags survive reordering.`);

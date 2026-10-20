@@ -1188,6 +1188,7 @@
   <script src="medicine-mid-source-tables.js?v=20261005-tables-1"></script>
   <script src="medicine-mid-gift-first-review.js?v=20261005-gift-first-1"></script>
   <script src="medicine-mid-study-review.js?v=20261020-study-1"></script>
+  <script src="medicine-final-mid-review.js?v=20261020-final-mid-1"></script>
   <script src="surgery-catalog.js?v=20260924-empty-nutrition"></script>
   <script src="surgery-data.js?v=20260923-surgery-legacy-order"></script>
   <script src="surgery-midterm-reviews.js?v=20260924-hide-nutrition"></script>
@@ -1245,7 +1246,7 @@
           .join("||");
         const tableKey = JSON.stringify((question.sourceTables || []).map(table => table.rows));
         const questionVariantKey = stemKey && optionSetKey
-          ? `${question.subjectId || "unknown"}|||${stemKey}|||${optionSetKey}|||${tableKey}${question.subjectId === "informatics" ? `|||${question.id}` : ""}`
+          ? `${question.subjectId || "unknown"}|||${stemKey}|||${optionSetKey}|||${tableKey}${question.subjectId === "informatics" || question.medicineSourceVariantOf || question.medicineMidLecture ? `|||${question.id}` : ""}`
           : "";
         const duplicate = seenIds.has(question.id)
           || (questionVariantKey && seenQuestionVariants.has(questionVariantKey));
@@ -1380,6 +1381,7 @@
     }
 
     function isQuestionAvailableInLecture(question, subjectId) {
+      if (subjectId === "medicine" && question.assessment === "Final" && ["Cardiology", "Pulmonology", "Nephrology", "Gastroenterology"].includes(question.cycle)) return Boolean(question.medicineMidLecture);
       return subjectId !== "surgery" || !question.hideFromLecture;
     }
 
@@ -1634,7 +1636,7 @@
       const subject = SUBJECTS.find(item => item.id === subjectId);
       const questions = questionsFor(subjectId).filter(question => question.cycle === cycle);
       const lectureOrder = new Map();
-      questions.forEach(question => {
+      questions.filter(question => subjectId !== "medicine" || isQuestionAvailableInLecture(question, subjectId)).forEach(question => {
         if (question.lecture) {
           const order = Number.isInteger(question.lectureOrder) ? question.lectureOrder : Infinity;
           lectureOrder.set(question.lecture, Math.min(lectureOrder.get(question.lecture) ?? Infinity, order));
@@ -1642,7 +1644,7 @@
       });
       const lectures = [...lectureOrder.keys()].sort((a, b) => (lectureOrder.get(a) - lectureOrder.get(b)) || a.localeCompare(b));
       const answeredInCycle = questions.filter(question => appState.quiz.answers[question.id]).length;
-      const reviewedMidQuestions = questions.filter(question => question.lectureEvidence);
+      const reviewedMidQuestions = questions.filter(question => subjectId === "medicine" ? question.assessment === "Midterm" && question.lectureEvidence || question.medicineMidLecture : question.lectureEvidence);
 
       captureAnalytics("cycle_opened", {
         subject: subjectId,
@@ -1660,7 +1662,7 @@
           <div class="route-section-head"><h3>Cycle Practice</h3><p>One continuous test across all questions in this cycle.</p></div>
           <div class="route-grid">
             <button class="route-card featured cycle-all-card" type="button"><strong>Test all ${escapeHtml(cycle)} questions</strong><span>${questionCountLabel(questions.length)} · ${answeredInCycle} answered</span></button>
-            ${reviewedMidQuestions.length ? `<button class="route-card featured cycle-mid-review-card" type="button"><strong>MID 444 · Lecture Review</strong><span>${questionCountLabel(reviewedMidQuestions.length)} · Lecture pages, medical notes, and reviewed answers</span></button>` : ""}
+            ${reviewedMidQuestions.length ? `<button class="route-card featured cycle-mid-review-card" type="button"><strong>MID 444 · Lecture Review</strong><span>${questionCountLabel(reviewedMidQuestions.length)} · ${subjectId === "medicine" ? "Includes related Final questions" : "Lecture pages, medical notes, and reviewed answers"}</span></button>` : ""}
           </div>
         </section>
         <section class="route-section">
@@ -1668,7 +1670,7 @@
         <div class="route-grid">
           ${lectures.length >= 2 ? `<button class="route-card featured cycle-lecture-mix-card" type="button"><strong>Mix ${escapeHtml(cycle)} Lectures</strong><span>Select lectures and shuffle their questions together</span></button>` : ""}
           ${lectures.map(lecture => {
-            const lectureQuestions = questions.filter(question => question.lecture === lecture);
+            const lectureQuestions = questions.filter(question => question.lecture === lecture && (subjectId !== "medicine" || isQuestionAvailableInLecture(question, subjectId)));
             const answered = lectureQuestions.filter(question => appState.quiz.answers[question.id]).length;
             return `<button class="route-card lecture-card" type="button" data-lecture="${escapeHtml(lecture)}"><strong>${escapeHtml(lecture)}</strong><span>${questionCountLabel(lectureQuestions.length)} · ${answered} answered</span></button>`;
           }).join("")}
@@ -1819,7 +1821,7 @@
     }
 
     function openCycleQuestions(subjectId, cycle, resume = false, assessment = null) {
-      const questions = questionsFor(subjectId).filter(question => question.cycle === cycle && (!assessment || question.assessment === assessment));
+      const questions = questionsFor(subjectId).filter(question => question.cycle === cycle && (!assessment || question.assessment === assessment || subjectId === "medicine" && assessment === "Midterm" && question.medicineMidLecture));
       if (assessment === "Midterm") questions.sort((left, right) => (left.lectureOrder ?? 999) - (right.lectureOrder ?? 999) || (left.referenceOrder ?? 999999) - (right.referenceOrder ?? 999999));
       const title = assessment ? `${cycle} · MID 444 Lecture Review` : `All ${cycle} Questions`;
       openQuestionSet(title, questions, { subjectId, cycle, lecture: null, mode: "cycle", assessment, batch: null, title }, resume);
@@ -1946,13 +1948,13 @@
 
     function renderQuestion(question, index, total = 1) {
       const selected = appState.quiz.answers[question.id] || null;
-      const revealed = Boolean(selected);
+      const medicineStudy = question.subjectId === "medicine" && question.medicineReview;
+      const revealed = Boolean(selected) || medicineStudy && question.options.every(option => !option.text.trim());
       const acceptedAnswers = sourceAnswers(question);
       const proposedAnswers = Array.isArray(question.aiAnswer) ? question.aiAnswer : (question.aiAnswer ? [question.aiAnswer] : []);
       const reviewStatuses = ["needs-review", "conflict"];
       const gradingAnswers = gradingAnswersForQuestion(question);
       const giftReview = question.giftReview;
-      const medicineStudy = question.subjectId === "medicine" && question.assessment === "Midterm" && question.medicineReview;
       const sourceLocations = question.sourceLocations || [];
       const sourceRefs = sourceLocations.map(location => [
         question.subjectId === "surgery" && String(location.batch) === "444" && location.sourceType === "Q Bank" ? null : location.sourceType,
@@ -1975,9 +1977,10 @@
       const displayedBatch = appState.navigation.mode === "batch"
         ? appState.navigation.batch || question.sourceBatch
         : newestBatch > 0 ? String(newestBatch) : question.sourceBatch;
-      const questionMeta = appState.navigation.mode === "lecture-mix" && question.subjectId !== "informatics"
+      const examLabel = question.subjectId === "medicine" ? [...new Set(sourceLocations.map(location => location.assessment).filter(Boolean))].join(" / ") || question.assessment : question.assessment;
+      const questionMeta = appState.navigation.mode === "lecture-mix" && question.subjectId !== "informatics" && question.subjectId !== "medicine"
         ? "Mixed lecture quiz"
-        : [appState.navigation.mode === "batch" ? appState.navigation.assessment : question.assessment, sourceMetaLabel, displayedBatch ? batchDisplayName(question.subjectId, displayedBatch) : null, question.subjectId === "informatics" ? question.lecture : appState.navigation.mode === "cycle" && appState.navigation.assessment === "Midterm" ? question.lecture : question.cycle].filter(Boolean).join(" · ");
+        : [appState.navigation.mode === "batch" ? appState.navigation.assessment : examLabel, sourceMetaLabel, displayedBatch ? batchDisplayName(question.subjectId, displayedBatch) : null, question.subjectId === "medicine" && appState.navigation.mode === "lecture-mix" ? null : question.subjectId === "informatics" ? question.lecture : appState.navigation.mode === "cycle" && appState.navigation.assessment === "Midterm" ? question.lecture : question.cycle].filter(Boolean).join(" · ");
       const aiText = giftReview
         ? giftReview.possibleAnswers.length
           ? `Tentative opinion: I would consider ${giftReview.possibleAnswers.join(" or ")}${acceptedAnswers.length && giftReview.possibleAnswers.every(answer => acceptedAnswers.includes(answer)) ? " · agrees with the recorded Gift key" : acceptedAnswers.length ? " · possible alternative; the Gift key is retained" : " · no Gift key was recorded"}. See the reasoning and qualifications below.`
@@ -1995,10 +1998,10 @@
           ${repeatText ? `<p class="repeat-note">${escapeHtml(repeatText)}</p>` : ""}
           ${(question.images || []).length ? `<div class="question-images">${question.images.map((image, imageIndex) => `<img src="${escapeHtml(image)}" alt="Question image ${imageIndex + 1}" loading="lazy">`).join("")}</div>` : ""}
           <div class="options">
-            ${question.options.map(option => {
+            ${question.options.filter(option => !medicineStudy || option.text.trim()).map(option => {
               const selectedClass = selected === option.id ? " selected" : "";
               const resultClass = revealed && gradingAnswers.includes(option.id) ? " correct" : (revealed && gradingAnswers.length && selected === option.id ? " incorrect" : "");
-              return `<button class="option-button${selectedClass}${resultClass}" type="button" data-question="${question.id}" data-option="${option.id}" aria-pressed="${selected === option.id}"><span class="option-letter">${option.id}</span><span>${escapeHtml(option.text)}</span></button>`;
+              return `<button class="option-button${selectedClass}${resultClass}" type="button" data-question="${question.id}" data-option="${option.id}" aria-pressed="${selected === option.id}"><span class="option-letter">${escapeHtml(option.sourceLabel || option.id)}</span><span>${escapeHtml(option.text)}</span></button>`;
             }).join("")}
           </div>
           <div class="answer-panel${revealed ? " visible" : ""}${(medicineStudy ? medicineStudy.objection || giftReview?.ungradedReason : giftReview ? giftReview.warning || giftReview.ungradedReason : reviewStatuses.includes(question.verification)) ? " review" : ""}">
@@ -2038,7 +2041,7 @@
     }
 
     function gradingAnswersForQuestion(question) {
-      if ((question.subjectId === "informatics" || question.subjectId === "medicine" && question.assessment === "Midterm") && question.giftReview?.policy === "gift-key-first") {
+      if ((question.subjectId === "informatics" || question.subjectId === "medicine" && (question.assessment === "Midterm" || question.medicineMidLecture)) && question.giftReview?.policy === "gift-key-first") {
         return question.giftReview.gradingAnswers;
       }
       const proposed = Array.isArray(question.aiAnswer) ? question.aiAnswer : question.aiAnswer ? [question.aiAnswer] : [];

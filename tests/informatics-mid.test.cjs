@@ -26,7 +26,7 @@ function load(name){const start=html.indexOf(`    function ${name}(`),end=html.i
 for(const n of ['deduplicateQuestions','newestQuestionBatch','orderQuestionsNewestFirst','questionsFor','questionsForBatch'])load(n);
 c.QUESTION_BANK=c.deduplicateQuestions([...c.window.GIFT445_QUESTIONS,...c.window.GIFT445_SURGERY_QUESTIONS,...c.window.GIFT445_COMMUNITY_QUESTIONS,...c.window.GIFT445_INFORMATICS_QUESTIONS].filter(q=>!q.excluded));
 assert.equal(c.questionsFor('informatics').length,376);
-assert.deepEqual(Object.fromEntries(['medicine','surgery','community'].map(s=>[s,c.questionsFor(s).length])),{medicine:1421,surgery:1212,community:432});
+assert.deepEqual(Object.fromEntries(['medicine','surgery','community'].map(s=>[s,c.questionsFor(s).length])),{medicine:1424,surgery:1212,community:432});
 const ordered=c.orderQuestionsNewestFirst(c.questionsFor('informatics'),'Midterm');for(let i=1;i<ordered.length;i++)assert.ok(Number(ordered[i-1].sourceBatch)>=Number(ordered[i].sourceBatch));
 const b443=c.questionsForBatch('informatics','Midterm','443');assert.equal(b443.length,40);assert.equal(b443[16].sourceLocations[0].questionNumber,null);assert.equal(b443[15].sourceLocations[0].questionNumber,16);assert.equal(b443[17].sourceLocations[0].questionNumber,18);
 const r={appState:{quiz:{answers:{},questionIds:questions.map(q=>q.id),currentIndex:0},navigation:{mode:'batch',assessment:'Midterm'}},SUBJECTS:[{id:'informatics',name:'Informatics'}],QUESTION_BANK:questions,batchDisplayName:(_,b)=>`Batch ${b}`,escapeHtml:v=>String(v??'').replace(/[&<>'"]/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[ch])),persistState:()=>{},captureAnalytics:()=>{},quizAnalyticsProperties:()=>({}),completedQuizKeys:new Set(),currentQuizKey:()=> 'test'};
