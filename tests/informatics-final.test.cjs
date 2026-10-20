@@ -1,4 +1,6 @@
 const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),vm=require('node:vm');
+// Community now has its own audited source-conservation fixture.
+const communityFixture=JSON.parse(fs.readFileSync(path.join(__dirname,'fixtures/community-mid-review.json')));
 const root=path.resolve(__dirname,'..'),html=fs.readFileSync(path.join(root,'index.html'),'utf8'),c={window:{}},plain=x=>JSON.parse(JSON.stringify(x));vm.createContext(c);
 for(const m of html.matchAll(/<script src="([^"?]+)/g)){const p=path.join(root,m[1]);if(fs.existsSync(p))vm.runInContext(fs.readFileSync(p,'utf8'),c);}
 const final=plain(c.window.GIFT445_INFORMATICS_FINAL_QUESTIONS),mid=plain(c.window.GIFT445_INFORMATICS_QUESTIONS),fixture=JSON.parse(fs.readFileSync(path.join(root,'tests/fixtures/informatics-final.json')));
@@ -24,7 +26,7 @@ function load(name){const start=html.indexOf(`    function ${name}(`),end=html.i
 for(const n of ['deduplicateQuestions','newestQuestionBatch','orderQuestionsNewestFirst','questionsFor','questionsForBatch','questionsForAssessment','gradingAnswersForQuestion'])load(n);
 c.QUESTION_BANK=c.deduplicateQuestions([...c.window.GIFT445_QUESTIONS,...c.window.GIFT445_SURGERY_QUESTIONS,...c.window.GIFT445_COMMUNITY_QUESTIONS,...mid,...final].filter(q=>!q.excluded));
 assert.equal(c.questionsFor('informatics').length,807);assert.equal(c.questionsForAssessment('informatics','Midterm').length,616);assert.equal(c.questionsForAssessment('informatics','Final').length,431);
-assert.deepEqual(Object.fromEntries(['medicine','surgery','community'].map(s=>[s,c.questionsFor(s).length])),{medicine:1424,surgery:1212,community:432});
+assert.deepEqual(Object.fromEntries(['medicine','surgery','community'].map(s=>[s,c.questionsFor(s).length])),{medicine:1424,surgery:1212,community:communityFixture.counts.selected});
 const b436=plain(c.questionsForBatch('informatics','Final','436'));assert.equal(b436.length,31);
 for(const n of [20,21,22,23,24])assert.equal(b436.filter(q=>q.sourceLocations[0].questionNumber===n).length,2);
 for(let i=1;i<b436.length;i++)assert.ok(b436[i].referenceOrder>b436[i-1].referenceOrder);

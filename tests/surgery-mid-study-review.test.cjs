@@ -155,6 +155,6 @@ assert.deepEqual(byId.get('surgery-midterm-q0586').surgeryReview.answers, []);
 assert.deepEqual(byId.get('surgery-midterm-q0520').images, []);
 assert.deepEqual(byId.get('surgery-midterm-q0387').images, ['question-media/surgery/midterm-6f2d7023c7864bbc.png']);
 assert.equal(byId.get('surgery-midterm-q0743').lecture, 'Surgical Complications');
-assert.match(html, /أحدث تحديث:<\/strong> تطوير ضخم لشروح إجابات الباطنة والسيرجري للميد/);
+assert.match(html, /أحدث تحديث:<\/strong> إضافة مادتي الراديولوجي والريسيرش/);
 assert.match(html, /حدثوا الصفحة بشكل دوري عشان توصلكم التحديثات/);
 console.log(`PASS: ${selected.length} individual Surgery MID reviews, exact slide assets, preserved source records, original multi-keys, Gift-first click/revisit grading, neutral source defects, and unchanged other subjects/Final scope.`);

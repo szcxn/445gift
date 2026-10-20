@@ -71,7 +71,7 @@ assert.ok(target.filter(q => q.verification === "conflict").every(q => q.referen
 const counts = JSON.parse(JSON.stringify(context.window.GIFT445_MID_444_REVIEW_COUNTS));
 assert.deepEqual(counts, { total: 663, lectureAnchored: 656, outsideLecture: 7, conflict: 40, needsReview: 102 });
 assert.ok(html.includes('class="site-updates" lang="ar" dir="rtl"'));
-assert.ok(html.includes("أحدث تحديث:</strong> تطوير ضخم لشروح إجابات الباطنة والسيرجري للميد"));
+assert.ok(html.includes("تحديث سابق:</strong> تطوير ضخم لشروح إجابات الباطنة والسيرجري للميد"));
 const siteUpdates = html.match(/<aside class="site-updates"[\s\S]*?<\/aside>/)[0];
 assert.ok(siteUpdates.includes("آخر التحديثات") && siteUpdates.includes("٢٠ أكتوبر ٢٠٢٦"));
 const donationSection = html.match(/<section class="donation-section"[\s\S]*?<\/section>/)[0];

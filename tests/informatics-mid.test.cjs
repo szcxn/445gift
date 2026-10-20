@@ -1,4 +1,6 @@
 const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),vm=require('node:vm'),crypto=require('node:crypto');
+// Community now has its own audited source-conservation fixture.
+const communityFixture=JSON.parse(fs.readFileSync(path.join(__dirname,'fixtures/community-mid-review.json')));
 const root=path.resolve(__dirname,'..'),html=fs.readFileSync(path.join(root,'index.html'),'utf8'),fixture=JSON.parse(fs.readFileSync(path.join(__dirname,'fixtures/informatics-mid.json'))),c={window:{}};
 vm.createContext(c);
 for(const m of html.matchAll(/<script src="([^"?]+)/g)){const p=path.join(root,m[1]);if(fs.existsSync(p))vm.runInContext(fs.readFileSync(p,'utf8'),c);}
@@ -26,7 +28,7 @@ function load(name){const start=html.indexOf(`    function ${name}(`),end=html.i
 for(const n of ['deduplicateQuestions','newestQuestionBatch','orderQuestionsNewestFirst','questionsFor','questionsForBatch'])load(n);
 c.QUESTION_BANK=c.deduplicateQuestions([...c.window.GIFT445_QUESTIONS,...c.window.GIFT445_SURGERY_QUESTIONS,...c.window.GIFT445_COMMUNITY_QUESTIONS,...c.window.GIFT445_INFORMATICS_QUESTIONS].filter(q=>!q.excluded));
 assert.equal(c.questionsFor('informatics').length,376);
-assert.deepEqual(Object.fromEntries(['medicine','surgery','community'].map(s=>[s,c.questionsFor(s).length])),{medicine:1424,surgery:1212,community:432});
+assert.deepEqual(Object.fromEntries(['medicine','surgery','community'].map(s=>[s,c.questionsFor(s).length])),{medicine:1424,surgery:1212,community:communityFixture.counts.selected});
 const ordered=c.orderQuestionsNewestFirst(c.questionsFor('informatics'),'Midterm');for(let i=1;i<ordered.length;i++)assert.ok(Number(ordered[i-1].sourceBatch)>=Number(ordered[i].sourceBatch));
 const b443=c.questionsForBatch('informatics','Midterm','443');assert.equal(b443.length,40);assert.equal(b443[16].sourceLocations[0].questionNumber,null);assert.equal(b443[15].sourceLocations[0].questionNumber,16);assert.equal(b443[17].sourceLocations[0].questionNumber,18);
 const r={appState:{quiz:{answers:{},questionIds:questions.map(q=>q.id),currentIndex:0},navigation:{mode:'batch',assessment:'Midterm'}},SUBJECTS:[{id:'informatics',name:'Informatics'}],QUESTION_BANK:questions,batchDisplayName:(_,b)=>`Batch ${b}`,escapeHtml:v=>String(v??'').replace(/[&<>'"]/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[ch])),persistState:()=>{},captureAnalytics:()=>{},quizAnalyticsProperties:()=>({}),completedQuizKeys:new Set(),currentQuizKey:()=> 'test'};
@@ -40,7 +42,7 @@ for(const q of questions)for(const option of q.options){
 for(const q of questions){const a=q.informaticsSlideAnswer;assert.ok(a);assert.ok(['supported','preference','unresolved'].includes(a.confidence));if(a.confidence==='unresolved')assert.equal(a.answers.length,0);for(const answer of a.answers)assert.ok(q.options.some(o=>o.id===answer&&o.text));const output=r.renderQuestion(q,0);assert.ok(output.includes(r.escapeHtml(a.basis)));}
 for(const [batch,number,answer,confidence] of [['443',1,'A','supported'],['443',25,'A','supported'],['443',11,'B','preference'],['434',16,'A','preference'],['435',11,'B','preference']]){const q=questions.find(q=>q.sourceBatch===batch&&q.sourceLocations[0].questionNumber===number);assert.deepEqual(q.informaticsSlideAnswer.answers,[answer]);assert.equal(q.informaticsSlideAnswer.confidence,confidence);assert.ok(!q.giftReview.gradingAnswers.includes(answer));}
 assert.match(html,/إضافة مادة الإنفورماتكس/);assert.match(html,/2026-10-20/);
-assert.match(html,/أحدث تحديث:<\/strong> تطوير ضخم لشروح إجابات الباطنة والسيرجري للميد/);
+assert.match(html,/أحدث تحديث:<\/strong> إضافة مادتي الراديولوجي والريسيرش/);
 assert.match(html,/<p class="refresh-notice" lang="ar" dir="rtl"><strong>تنبيه:<\/strong> حدثوا الصفحة بشكل دوري عشان توصلكم التحديثات\.<\/p>/);
 load('openLecture');let opened=null;c.openQuestionSet=(title,items)=>{opened=plain(items)};c.isQuestionAvailableInLecture=()=>true;
 c.openLecture('informatics',null,'AI in Healthcare');assert.equal(opened.length,17);assert.equal(new Set(opened.map(q=>q.id)).size,17);assert.equal(opened.filter(q=>q.lecture==='AI in Healthcare').length,17);

@@ -1,6 +1,8 @@
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
+// Community now has its own audited source-conservation fixture.
+const communityFixture=JSON.parse(fs.readFileSync(path.join(__dirname,'fixtures/community-mid-review.json')));
 const vm = require('node:vm');
 const root = path.resolve(__dirname, '..');
 const html = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
@@ -21,7 +23,7 @@ c.captureAnalytics=()=>{};c.quizAnalyticsProperties=()=>({});c.renderQuestionSet
 const plain=value=>JSON.parse(JSON.stringify(value));
 const sortedIds=value=>Array.from(value,q=>q.id).sort();
 const counts=Object.fromEntries(c.SUBJECTS.map(s=>[s.id,c.questionsFor(s.id).length]));
-assert.deepEqual(counts,{medicine:1424,surgery:1212,community:432});
+assert.deepEqual(counts,{medicine:1424,surgery:1212,community:communityFixture.counts.selected});
 function reset() {c.appState={navigation:{},quiz:{questionIds:[],currentIndex:0,answers:{},flagged:[],mode:null}};}
 function verifySet(input,assessment=null) {
  const unchanged=JSON.stringify(input);
@@ -79,4 +81,4 @@ reset();c.openQuestionSet('New',synthetic,{subjectId:'medicine',mode:'all'},fals
 reset();c.openQuestionSet('Mixed',synthetic,{subjectId:'medicine',mode:'lecture-mix'},false);assert.deepEqual(plain(c.appState.quiz.questionIds),['old','new','unknown']);
 assert.equal(JSON.stringify(c.window),originalContent,'Imported questions, keys, explanations, citations, tables, or images changed');
 for(const script of html.matchAll(/<script(?:\s[^>]*)?>([\s\S]*?)<\/script>/g)) new vm.Script(script[1]);
-console.log(`PASS: newest-batch order in ${checkedSets} real question sets; all 3,068 displayed question IDs/content preserved (Medicine 1,424, Surgery 1,212, Community 432); within-batch and shuffled order retained; saved current question, answers and flags survive reordering.`);
+console.log(`PASS: newest-batch order in ${checkedSets} real question sets; all ${Object.values(counts).reduce((a,b)=>a+b,0)} displayed question IDs/content preserved (Medicine ${counts.medicine}, Surgery ${counts.surgery}, Community ${counts.community}); within-batch and shuffled order retained; saved current question, answers and flags survive reordering.`);
