@@ -72,7 +72,7 @@ assert.match(menu,/data-mode="assessment" data-assessment="Final" disabled/);
 const lectureCards=[...menu.matchAll(/<button class="route-card direct-lecture-card"[\s\S]*?<\/button>/g)].map(m=>m[0]);
 assert.equal(lectureCards.length,53);
 for(const title of finalTitles){const card=lectureCards.find(c=>c.includes(`data-lecture="${live.escapeHtml(title)}"`));assert.ok(card&&card.includes(' disabled')&&card.includes('Lecture names only'),title);}
-assert.match(menu,/Final · Midterm topics/,'Final-source batches must be clearly scoped to MID topics');
+assert.match(menu,/By Batch includes the complete original banks/,'Complete batches and lecture practice must be clearly distinguished');
 const renderer={
  appState:{navigation:{mode:'lecture',assessment:null},quiz:{answers:{},questionIds:questions.map(q=>q.id),currentIndex:0}},
  SUBJECTS:[{id:'research',name:'Research'}],QUESTION_BANK:questions,

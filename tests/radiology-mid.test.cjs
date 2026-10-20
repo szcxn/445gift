@@ -47,7 +47,7 @@ for(const title of finalTitles){live.appState.quiz.questionIds=[];live.openLectu
 for(const name of ['openSubject','questionCountLabel','batchCountLabel','batchDisplayName'])load(name);
 live.CYCLE_ORDER=[];live.workspaceHeader=t=>t;live.escapeHtml=v=>String(v??'').replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));live.bindWorkspaceClose=()=>{};
 live.workspaceElement={innerHTML:'',classList:{add(){}},querySelector:()=>null,querySelectorAll:()=>[],scrollIntoView(){}};live.openSubject('radiology');
-const menu=live.workspaceElement.innerHTML;assert.match(menu,/data-mode="assessment" data-assessment="Final" disabled/);assert.match(menu,/Final · Midterm topics/);
+const menu=live.workspaceElement.innerHTML;assert.match(menu,/data-mode="assessment" data-assessment="Final" disabled/);assert.match(menu,/By Batch includes the complete original banks/);
 const cards=[...menu.matchAll(/<button class="route-card direct-lecture-card"[\s\S]*?<\/button>/g)].map(m=>m[0]);assert.equal(cards.length,28);
 for(const title of finalTitles){const card=cards.find(c=>c.includes(`data-lecture="${live.escapeHtml(title)}"`));assert.ok(card&&card.includes(' disabled')&&card.includes('Lecture names only'),title);}
 const renderer={appState:{navigation:{mode:'lecture',assessment:null},quiz:{answers:{},questionIds:questions.map(q=>q.id),currentIndex:0}},SUBJECTS:[{id:'radiology',name:'Radiology'}],QUESTION_BANK:questions,escapeHtml:live.escapeHtml,persistState(){},captureAnalytics(){},quizAnalyticsProperties:()=>({}),completedQuizKeys:new Set(),currentQuizKey:()=> 'radiology-test'};

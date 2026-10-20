@@ -1,0 +1,1543 @@
+{
+  "repairs": [
+    {
+      "baseId": "medicine-midterm-438-git-hepatobiliary-q056",
+      "variantId": "medicine-source-438-midterm-q057",
+      "subjectId": "medicine",
+      "occurrences": [
+        {
+          "exam": "Midterm",
+          "batch": "438",
+          "number": 56,
+          "filename": "Copy of MID.docx",
+          "sha256": "46f8c8c07aa2631b71db60d11762f9356e0ad8281037b6da631574665ac21752",
+          "paragraph": 2492,
+          "paragraphs": [
+            {
+              "index": 2492,
+              "text": "Q56: Patient with dysphagia to solids and liquids with choking and nasal reqauragation"
+            },
+            {
+              "index": 2493,
+              "text": "A. achalasia"
+            },
+            {
+              "index": 2494,
+              "text": "B. scleroderma"
+            },
+            {
+              "index": 2495,
+              "text": "C. Esophageal adenocarcinoma"
+            },
+            {
+              "index": 2496,
+              "text": "D. CVS"
+            },
+            {
+              "index": 2497,
+              "text": "Answer: "
+            },
+            {
+              "index": 2498,
+              "text": ""
+            }
+          ]
+        },
+        {
+          "exam": "Midterm",
+          "batch": "438",
+          "number": 57,
+          "filename": "Copy of MID.docx",
+          "sha256": "46f8c8c07aa2631b71db60d11762f9356e0ad8281037b6da631574665ac21752",
+          "paragraph": 2499,
+          "paragraphs": [
+            {
+              "index": 2499,
+              "text": "Q57: Patient with dysphagia to solids and liquids with choking and nasal reqauragation"
+            },
+            {
+              "index": 2500,
+              "text": "A. achalasia"
+            },
+            {
+              "index": 2501,
+              "text": "B. scleroderma "
+            },
+            {
+              "index": 2502,
+              "text": "C. cerebrovascular disease"
+            },
+            {
+              "index": 2503,
+              "text": "D. esophageal adenocarcinoma"
+            },
+            {
+              "index": 2504,
+              "text": "Answer: C"
+            },
+            {
+              "index": 2505,
+              "text": ""
+            }
+          ]
+        }
+      ],
+      "expected": [
+        {
+          "stem": "Patient with dysphagia to solids and liquids with choking and nasal reqauragation",
+          "options": [
+            {
+              "id": "A",
+              "text": "achalasia"
+            },
+            {
+              "id": "B",
+              "text": "scleroderma"
+            },
+            {
+              "id": "C",
+              "text": "Esophageal adenocarcinoma"
+            },
+            {
+              "id": "D",
+              "text": "CVS"
+            }
+          ],
+          "sourceAnswer": null,
+          "sourceAnswerNote": "Not provided",
+          "sourceLocations": [
+            {
+              "assessment": "Midterm",
+              "batch": "438",
+              "questionNumber": 56
+            }
+          ],
+          "sourceOccurrenceIntegrity": {
+            "filename": "Copy of MID.docx",
+            "sha256": "46f8c8c07aa2631b71db60d11762f9356e0ad8281037b6da631574665ac21752",
+            "paragraphStart": 2492,
+            "paragraphEnd": 2498,
+            "questionNumber": 56
+          }
+        },
+        {
+          "stem": "Patient with dysphagia to solids and liquids with choking and nasal reqauragation",
+          "options": [
+            {
+              "id": "A",
+              "text": "achalasia"
+            },
+            {
+              "id": "B",
+              "text": "scleroderma"
+            },
+            {
+              "id": "C",
+              "text": "cerebrovascular disease"
+            },
+            {
+              "id": "D",
+              "text": "esophageal adenocarcinoma"
+            }
+          ],
+          "sourceAnswer": "C",
+          "sourceAnswerNote": "C",
+          "sourceLocations": [
+            {
+              "assessment": "Midterm",
+              "batch": "438",
+              "questionNumber": 57
+            }
+          ],
+          "sourceOccurrenceIntegrity": {
+            "filename": "Copy of MID.docx",
+            "sha256": "46f8c8c07aa2631b71db60d11762f9356e0ad8281037b6da631574665ac21752",
+            "paragraphStart": 2499,
+            "paragraphEnd": 2505,
+            "questionNumber": 57
+          }
+        }
+      ]
+    },
+    {
+      "baseId": "medicine-midterm-436-git-hepatobiliary-q069",
+      "variantId": "medicine-source-436-midterm-q081",
+      "subjectId": "medicine",
+      "occurrences": [
+        {
+          "exam": "Midterm",
+          "batch": "436",
+          "number": 69,
+          "filename": "Copy of MID.docx",
+          "sha256": "46f8c8c07aa2631b71db60d11762f9356e0ad8281037b6da631574665ac21752",
+          "paragraph": 3392,
+          "paragraphs": [
+            {
+              "index": 3392,
+              "text": "Q69: Which one of the following is a feature of Ulcerative colitis rather than crohn's disease?"
+            },
+            {
+              "index": 3393,
+              "text": "A.Crypt abscesses"
+            },
+            {
+              "index": 3394,
+              "text": "B.Transmural inflammation"
+            },
+            {
+              "index": 3395,
+              "text": "Answer:A"
+            },
+            {
+              "index": 3396,
+              "text": ""
+            }
+          ]
+        },
+        {
+          "exam": "Midterm",
+          "batch": "436",
+          "number": 81,
+          "filename": "Copy of MID.docx",
+          "sha256": "46f8c8c07aa2631b71db60d11762f9356e0ad8281037b6da631574665ac21752",
+          "paragraph": 3461,
+          "paragraphs": [
+            {
+              "index": 3461,
+              "text": "Q81: Which of the following is seen in ulcerative colitis but not in crohns?"
+            },
+            {
+              "index": 3462,
+              "text": "Crypt abscess"
+            },
+            {
+              "index": 3463,
+              "text": "Transmural"
+            },
+            {
+              "index": 3464,
+              "text": "Granulomatous"
+            },
+            {
+              "index": 3465,
+              "text": "Non-bloody stool"
+            },
+            {
+              "index": 3466,
+              "text": "Answer: A"
+            },
+            {
+              "index": 3467,
+              "text": ""
+            }
+          ]
+        }
+      ],
+      "expected": [
+        {
+          "stem": "Which one of the following is a feature of Ulcerative colitis rather than crohn's disease?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Crypt abscesses"
+            },
+            {
+              "id": "B",
+              "text": "Transmural inflammation"
+            }
+          ],
+          "sourceAnswer": "A",
+          "sourceAnswerNote": "A",
+          "sourceLocations": [
+            {
+              "assessment": "Midterm",
+              "batch": "436",
+              "questionNumber": 69
+            }
+          ],
+          "sourceOccurrenceIntegrity": {
+            "filename": "Copy of MID.docx",
+            "sha256": "46f8c8c07aa2631b71db60d11762f9356e0ad8281037b6da631574665ac21752",
+            "paragraphStart": 3392,
+            "paragraphEnd": 3396,
+            "questionNumber": 69
+          }
+        },
+        {
+          "stem": "Which of the following is seen in ulcerative colitis but not in crohns?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Crypt abscess"
+            },
+            {
+              "id": "B",
+              "text": "Transmural"
+            },
+            {
+              "id": "C",
+              "text": "Granulomatous"
+            },
+            {
+              "id": "D",
+              "text": "Non-bloody stool"
+            }
+          ],
+          "sourceAnswer": "A",
+          "sourceAnswerNote": "A",
+          "sourceLocations": [
+            {
+              "assessment": "Midterm",
+              "batch": "436",
+              "questionNumber": 81
+            }
+          ],
+          "sourceOccurrenceIntegrity": {
+            "filename": "Copy of MID.docx",
+            "sha256": "46f8c8c07aa2631b71db60d11762f9356e0ad8281037b6da631574665ac21752",
+            "paragraphStart": 3461,
+            "paragraphEnd": 3467,
+            "questionNumber": 81
+          }
+        }
+      ]
+    },
+    {
+      "baseId": "medicine-final-442-infectious-diseases-q039",
+      "variantId": "medicine-source-442-final-q044",
+      "subjectId": "medicine",
+      "occurrences": [
+        {
+          "exam": "Final",
+          "batch": "442",
+          "number": 39,
+          "filename": "Medicine Final - All Years MCQs_.docx",
+          "sha256": "47caf163ea492698d1afa0ab562b2e52c77cf167aed3425ac8c813fd70af99b6",
+          "paragraph": 1062,
+          "paragraphs": [
+            {
+              "index": 1062,
+              "text": "Q39: Which one of the following neurological complications of syphilis can commonly be seen in early infection?"
+            },
+            {
+              "index": 1063,
+              "text": "A. Meningovascular disease"
+            },
+            {
+              "index": 1064,
+              "text": "B. General paresis"
+            },
+            {
+              "index": 1065,
+              "text": "C. Syphilitic amyotrophy"
+            },
+            {
+              "index": 1066,
+              "text": "D. Syphilic cerebellar ataxia"
+            },
+            {
+              "index": 1067,
+              "text": "Answer: A"
+            },
+            {
+              "index": 1068,
+              "text": ""
+            },
+            {
+              "index": 1069,
+              "text": ""
+            }
+          ]
+        },
+        {
+          "exam": "Final",
+          "batch": "442",
+          "number": 44,
+          "filename": "Medicine Final - All Years MCQs_.docx",
+          "sha256": "47caf163ea492698d1afa0ab562b2e52c77cf167aed3425ac8c813fd70af99b6",
+          "paragraph": 1116,
+          "paragraphs": [
+            {
+              "index": 1116,
+              "text": "Q44: Which one of the following neurological complications of syphilis can commonly be seen in early infection?"
+            },
+            {
+              "index": 1117,
+              "text": "A. General paresis"
+            },
+            {
+              "index": 1118,
+              "text": "B. Meningovascular disease"
+            },
+            {
+              "index": 1119,
+              "text": "C. Syphilitic amyotrophy "
+            },
+            {
+              "index": 1120,
+              "text": "D. Syphilitic cerebellar ataxia "
+            },
+            {
+              "index": 1121,
+              "text": "Answer: B"
+            },
+            {
+              "index": 1122,
+              "text": ""
+            },
+            {
+              "index": 1123,
+              "text": ""
+            }
+          ]
+        }
+      ],
+      "expected": [
+        {
+          "stem": "Which one of the following neurological complications of syphilis can commonly be seen in early infection?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Meningovascular disease"
+            },
+            {
+              "id": "B",
+              "text": "General paresis"
+            },
+            {
+              "id": "C",
+              "text": "Syphilitic amyotrophy"
+            },
+            {
+              "id": "D",
+              "text": "Syphilic cerebellar ataxia"
+            }
+          ],
+          "sourceAnswer": "A",
+          "sourceAnswerNote": "A",
+          "sourceLocations": [
+            {
+              "assessment": "Final",
+              "batch": "442",
+              "questionNumber": 39
+            }
+          ],
+          "sourceOccurrenceIntegrity": {
+            "filename": "Medicine Final - All Years MCQs_.docx",
+            "sha256": "47caf163ea492698d1afa0ab562b2e52c77cf167aed3425ac8c813fd70af99b6",
+            "paragraphStart": 1062,
+            "paragraphEnd": 1069,
+            "questionNumber": 39
+          }
+        },
+        {
+          "stem": "Which one of the following neurological complications of syphilis can commonly be seen in early infection?",
+          "options": [
+            {
+              "id": "A",
+              "text": "General paresis"
+            },
+            {
+              "id": "B",
+              "text": "Meningovascular disease"
+            },
+            {
+              "id": "C",
+              "text": "Syphilitic amyotrophy"
+            },
+            {
+              "id": "D",
+              "text": "Syphilitic cerebellar ataxia"
+            }
+          ],
+          "sourceAnswer": "B",
+          "sourceAnswerNote": "B",
+          "sourceLocations": [
+            {
+              "assessment": "Final",
+              "batch": "442",
+              "questionNumber": 44
+            }
+          ],
+          "sourceOccurrenceIntegrity": {
+            "filename": "Medicine Final - All Years MCQs_.docx",
+            "sha256": "47caf163ea492698d1afa0ab562b2e52c77cf167aed3425ac8c813fd70af99b6",
+            "paragraphStart": 1116,
+            "paragraphEnd": 1123,
+            "questionNumber": 44
+          }
+        }
+      ]
+    },
+    {
+      "baseId": "surgery-midterm-q0151",
+      "variantId": "surgery-source-437-final-q048",
+      "subjectId": "surgery",
+      "occurrences": [
+        {
+          "exam": "Final",
+          "batch": "437",
+          "number": 2,
+          "filename": "surgery-final.docx",
+          "sha256": "fb6a390293bd688ed04b0ad2af0a6b48b7148da747462ea7b2dbf5c8c173c75e",
+          "paragraph": 1418,
+          "paragraphs": [
+            {
+              "index": 1418,
+              "text": "Q2: According to the Glasgow Coma Scale (GCS), a verbal score of 4 indicates which of the following? "
+            },
+            {
+              "index": 1419,
+              "text": "No response"
+            },
+            {
+              "index": 1420,
+              "text": "Confused response "
+            },
+            {
+              "index": 1421,
+              "text": "Incomprehensible response "
+            },
+            {
+              "index": 1422,
+              "text": "Inappropriate response "
+            },
+            {
+              "index": 1423,
+              "text": "Answer: B "
+            },
+            {
+              "index": 1424,
+              "text": ""
+            }
+          ]
+        },
+        {
+          "exam": "Final",
+          "batch": "437",
+          "number": 48,
+          "filename": "surgery-final.docx",
+          "sha256": "fb6a390293bd688ed04b0ad2af0a6b48b7148da747462ea7b2dbf5c8c173c75e",
+          "paragraph": 1781,
+          "paragraphs": [
+            {
+              "index": 1781,
+              "text": "Q48: According to the Glasgow Coma Scale (GCS), a verbal score of 4 indicates which of the following?"
+            },
+            {
+              "index": 1782,
+              "text": "A.    Confused response"
+            },
+            {
+              "index": 1783,
+              "text": "B.     Inappropriate response"
+            },
+            {
+              "index": 1784,
+              "text": "C.     Incomprehensible response"
+            },
+            {
+              "index": 1785,
+              "text": "D.    No response"
+            },
+            {
+              "index": 1786,
+              "text": "Answer:"
+            },
+            {
+              "index": 1787,
+              "text": ""
+            }
+          ]
+        }
+      ],
+      "expected": [
+        {
+          "stem": "According to the Glasgow Coma Scale (GCS), a verbal score of 4 indicates which of the following?",
+          "options": [
+            {
+              "id": "A",
+              "text": "No response"
+            },
+            {
+              "id": "B",
+              "text": "Confused response"
+            },
+            {
+              "id": "C",
+              "text": "Incomprehensible response"
+            },
+            {
+              "id": "D",
+              "text": "Inappropriate response"
+            }
+          ],
+          "sourceAnswer": "B",
+          "sourceAnswerNote": "B",
+          "sourceLocations": [
+            {
+              "assessment": "Final",
+              "batch": "437",
+              "questionNumber": 2,
+              "sourceType": "Gift",
+              "originalAssessment": "Final"
+            }
+          ],
+          "sourceOccurrenceIntegrity": {
+            "filename": "surgery-final.docx",
+            "sha256": "fb6a390293bd688ed04b0ad2af0a6b48b7148da747462ea7b2dbf5c8c173c75e",
+            "paragraphStart": 1418,
+            "paragraphEnd": 1424,
+            "questionNumber": 2
+          }
+        },
+        {
+          "stem": "According to the Glasgow Coma Scale (GCS), a verbal score of 4 indicates which of the following?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Confused response"
+            },
+            {
+              "id": "B",
+              "text": "Inappropriate response"
+            },
+            {
+              "id": "C",
+              "text": "Incomprehensible response"
+            },
+            {
+              "id": "D",
+              "text": "No response"
+            }
+          ],
+          "sourceAnswer": null,
+          "sourceAnswerNote": "Not provided",
+          "sourceLocations": [
+            {
+              "assessment": "Final",
+              "batch": "437",
+              "questionNumber": 48,
+              "sourceType": "Gift",
+              "originalAssessment": "Final"
+            }
+          ],
+          "sourceOccurrenceIntegrity": {
+            "filename": "surgery-final.docx",
+            "sha256": "fb6a390293bd688ed04b0ad2af0a6b48b7148da747462ea7b2dbf5c8c173c75e",
+            "paragraphStart": 1781,
+            "paragraphEnd": 1787,
+            "questionNumber": 48
+          }
+        }
+      ]
+    },
+    {
+      "baseId": "surgery-midterm-q0880",
+      "variantId": "surgery-source-437-final-q088",
+      "subjectId": "surgery",
+      "occurrences": [
+        {
+          "exam": "Final",
+          "batch": "437",
+          "number": 28,
+          "filename": "surgery-final.docx",
+          "sha256": "fb6a390293bd688ed04b0ad2af0a6b48b7148da747462ea7b2dbf5c8c173c75e",
+          "paragraph": 1626,
+          "paragraphs": [
+            {
+              "index": 1626,
+              "text": "Q28: A 67 year old male admitted to the vascular ward with little toe gangrene secondary to peripheral arterial disease (PAD). One of the following is a clinical presentation of Critical Lower Limb Ischemia. "
+            },
+            {
+              "index": 1627,
+              "text": "Rest pain"
+            },
+            {
+              "index": 1628,
+              "text": "Cold limb"
+            },
+            {
+              "index": 1629,
+              "text": "Darker skin at the shin"
+            },
+            {
+              "index": 1630,
+              "text": "Intermittent claudication "
+            },
+            {
+              "index": 1631,
+              "text": "Answer: A"
+            },
+            {
+              "index": 1632,
+              "text": ""
+            }
+          ]
+        },
+        {
+          "exam": "Final",
+          "batch": "437",
+          "number": 88,
+          "filename": "surgery-final.docx",
+          "sha256": "fb6a390293bd688ed04b0ad2af0a6b48b7148da747462ea7b2dbf5c8c173c75e",
+          "paragraph": 2142,
+          "paragraphs": [
+            {
+              "index": 2142,
+              "text": "Q88: A-67-year-old male admitted to the vascular ward with little toe gangrene secondary to peripheral arterial disease (PAD). One of the following is a clinical presentation of critical lower limb ischemia:"
+            },
+            {
+              "index": 2143,
+              "text": "A.    Darker skin at the shin"
+            },
+            {
+              "index": 2144,
+              "text": "B.     Cold limb"
+            },
+            {
+              "index": 2145,
+              "text": "C.     intermittent claudication"
+            },
+            {
+              "index": 2146,
+              "text": "D.    Rest pain"
+            },
+            {
+              "index": 2147,
+              "text": "Answer:"
+            },
+            {
+              "index": 2148,
+              "text": ""
+            }
+          ]
+        }
+      ],
+      "expected": [
+        {
+          "stem": "A 67 year old male admitted to the vascular ward with little toe gangrene secondary to peripheral arterial disease (PAD). One of the following is a clinical presentation of Critical Lower Limb Ischemia.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Rest pain"
+            },
+            {
+              "id": "B",
+              "text": "Cold limb"
+            },
+            {
+              "id": "C",
+              "text": "Darker skin at the shin"
+            },
+            {
+              "id": "D",
+              "text": "Intermittent claudication"
+            }
+          ],
+          "sourceAnswer": "A",
+          "sourceAnswerNote": "A",
+          "sourceLocations": [
+            {
+              "assessment": "Final",
+              "batch": "437",
+              "questionNumber": 28,
+              "sourceType": "Gift",
+              "originalAssessment": "Final"
+            }
+          ],
+          "sourceOccurrenceIntegrity": {
+            "filename": "surgery-final.docx",
+            "sha256": "fb6a390293bd688ed04b0ad2af0a6b48b7148da747462ea7b2dbf5c8c173c75e",
+            "paragraphStart": 1626,
+            "paragraphEnd": 1632,
+            "questionNumber": 28
+          }
+        },
+        {
+          "stem": "A-67-year-old male admitted to the vascular ward with little toe gangrene secondary to peripheral arterial disease (PAD). One of the following is a clinical presentation of critical lower limb ischemia:",
+          "options": [
+            {
+              "id": "A",
+              "text": "Darker skin at the shin"
+            },
+            {
+              "id": "B",
+              "text": "Cold limb"
+            },
+            {
+              "id": "C",
+              "text": "intermittent claudication"
+            },
+            {
+              "id": "D",
+              "text": "Rest pain"
+            }
+          ],
+          "sourceAnswer": null,
+          "sourceAnswerNote": "Not provided",
+          "sourceLocations": [
+            {
+              "assessment": "Final",
+              "batch": "437",
+              "questionNumber": 88,
+              "sourceType": "Gift",
+              "originalAssessment": "Final"
+            }
+          ],
+          "sourceOccurrenceIntegrity": {
+            "filename": "surgery-final.docx",
+            "sha256": "fb6a390293bd688ed04b0ad2af0a6b48b7148da747462ea7b2dbf5c8c173c75e",
+            "paragraphStart": 2142,
+            "paragraphEnd": 2148,
+            "questionNumber": 88
+          }
+        }
+      ]
+    }
+  ],
+  "sourceCounts": {
+    "research": [
+      {
+        "assessment": "Midterm",
+        "batch": "443",
+        "count": 30
+      },
+      {
+        "assessment": "Midterm",
+        "batch": "442",
+        "count": 26
+      },
+      {
+        "assessment": "Midterm",
+        "batch": "441",
+        "count": 40
+      },
+      {
+        "assessment": "Midterm",
+        "batch": "439",
+        "count": 35
+      },
+      {
+        "assessment": "Midterm",
+        "batch": "438",
+        "count": 40
+      },
+      {
+        "assessment": "Midterm",
+        "batch": "437",
+        "count": 38
+      },
+      {
+        "assessment": "Midterm",
+        "batch": "436",
+        "count": 38
+      },
+      {
+        "assessment": "Midterm",
+        "batch": "435",
+        "count": 40
+      },
+      {
+        "assessment": "Midterm",
+        "batch": "434",
+        "count": 23
+      },
+      {
+        "assessment": "Midterm",
+        "batch": "433",
+        "count": 41
+      },
+      {
+        "assessment": "Midterm",
+        "batch": "432",
+        "count": 50
+      },
+      {
+        "assessment": "Midterm",
+        "batch": "431",
+        "count": 40
+      },
+      {
+        "assessment": "Final",
+        "batch": "442",
+        "count": 39
+      },
+      {
+        "assessment": "Final",
+        "batch": "441",
+        "count": 40
+      },
+      {
+        "assessment": "Final",
+        "batch": "439",
+        "count": 51
+      },
+      {
+        "assessment": "Final",
+        "batch": "438",
+        "count": 50
+      },
+      {
+        "assessment": "Final",
+        "batch": "437",
+        "count": 20
+      },
+      {
+        "assessment": "Final",
+        "batch": "436",
+        "count": 34
+      },
+      {
+        "assessment": "Final",
+        "batch": "435",
+        "count": 50
+      },
+      {
+        "assessment": "Final",
+        "batch": "434",
+        "count": 47
+      },
+      {
+        "assessment": "Final",
+        "batch": "433",
+        "count": 49
+      },
+      {
+        "assessment": "Final",
+        "batch": "432",
+        "count": 43
+      },
+      {
+        "assessment": "Final",
+        "batch": "431",
+        "count": 43
+      }
+    ],
+    "radiology": [
+      {
+        "assessment": "Midterm",
+        "batch": "443",
+        "count": 36
+      },
+      {
+        "assessment": "Midterm",
+        "batch": "442",
+        "count": 41
+      },
+      {
+        "assessment": "Midterm",
+        "batch": "441",
+        "count": 35
+      },
+      {
+        "assessment": "Midterm",
+        "batch": "439",
+        "count": 79
+      },
+      {
+        "assessment": "Midterm",
+        "batch": "438",
+        "count": 92
+      },
+      {
+        "assessment": "Midterm",
+        "batch": "437",
+        "count": 55
+      },
+      {
+        "assessment": "Midterm",
+        "batch": "436",
+        "count": 72
+      },
+      {
+        "assessment": "Midterm",
+        "batch": "435",
+        "count": 62
+      },
+      {
+        "assessment": "Midterm",
+        "batch": "434",
+        "count": 32
+      },
+      {
+        "assessment": "Midterm",
+        "batch": "433",
+        "count": 28
+      },
+      {
+        "assessment": "Midterm",
+        "batch": "432",
+        "count": 34
+      },
+      {
+        "assessment": "Midterm",
+        "batch": "431",
+        "count": 23
+      },
+      {
+        "assessment": "Midterm",
+        "batch": "430",
+        "count": 39
+      },
+      {
+        "assessment": "Final",
+        "batch": "443",
+        "count": 30
+      },
+      {
+        "assessment": "Final",
+        "batch": "442",
+        "count": 34
+      },
+      {
+        "assessment": "Final",
+        "batch": "441",
+        "count": 58
+      },
+      {
+        "assessment": "Final",
+        "batch": "439",
+        "count": 80
+      },
+      {
+        "assessment": "Final",
+        "batch": "436",
+        "count": 31
+      },
+      {
+        "assessment": "Final",
+        "batch": "435",
+        "count": 25
+      },
+      {
+        "assessment": "Final",
+        "batch": "434",
+        "count": 15
+      },
+      {
+        "assessment": "Final",
+        "batch": "433",
+        "count": 56
+      },
+      {
+        "assessment": "Final",
+        "batch": "432",
+        "count": 33
+      },
+      {
+        "assessment": "Final",
+        "batch": "431",
+        "count": 55
+      },
+      {
+        "assessment": "Final",
+        "batch": "430",
+        "count": 26
+      }
+    ],
+    "community": [
+      {
+        "assessment": "Midterm",
+        "batch": "443",
+        "count": 13
+      },
+      {
+        "assessment": "Midterm",
+        "batch": "442",
+        "count": 32
+      },
+      {
+        "assessment": "Midterm",
+        "batch": "441",
+        "count": 25
+      },
+      {
+        "assessment": "Midterm",
+        "batch": "439",
+        "count": 61
+      },
+      {
+        "assessment": "Midterm",
+        "batch": "438",
+        "count": 59
+      },
+      {
+        "assessment": "Midterm",
+        "batch": "437",
+        "count": 33
+      },
+      {
+        "assessment": "Midterm",
+        "batch": "436",
+        "count": 35
+      },
+      {
+        "assessment": "Midterm",
+        "batch": "435",
+        "count": 40
+      },
+      {
+        "assessment": "Midterm",
+        "batch": "434",
+        "count": 57
+      },
+      {
+        "assessment": "Midterm",
+        "batch": "433",
+        "count": 39
+      },
+      {
+        "assessment": "Midterm",
+        "batch": "432",
+        "count": 52
+      },
+      {
+        "assessment": "Midterm",
+        "batch": "431",
+        "count": 60
+      },
+      {
+        "assessment": "Final",
+        "batch": "442",
+        "count": 2
+      },
+      {
+        "assessment": "Final",
+        "batch": "439",
+        "count": 29
+      },
+      {
+        "assessment": "Final",
+        "batch": "438",
+        "count": 73
+      },
+      {
+        "assessment": "Final",
+        "batch": "437",
+        "count": 22
+      },
+      {
+        "assessment": "Final",
+        "batch": "436",
+        "count": 14
+      },
+      {
+        "assessment": "Final",
+        "batch": "435",
+        "count": 23
+      },
+      {
+        "assessment": "Final",
+        "batch": "434",
+        "count": 45
+      },
+      {
+        "assessment": "Final",
+        "batch": "433",
+        "count": 34
+      },
+      {
+        "assessment": "Final",
+        "batch": "432",
+        "count": 30
+      },
+      {
+        "assessment": "Final",
+        "batch": "431",
+        "count": 14
+      },
+      {
+        "assessment": "Final",
+        "batch": "430",
+        "count": 59
+      }
+    ],
+    "informatics": [
+      {
+        "assessment": "Midterm",
+        "batch": "443",
+        "count": 40
+      },
+      {
+        "assessment": "Midterm",
+        "batch": "442",
+        "count": 40
+      },
+      {
+        "assessment": "Midterm",
+        "batch": "439",
+        "count": 40
+      },
+      {
+        "assessment": "Midterm",
+        "batch": "438",
+        "count": 40
+      },
+      {
+        "assessment": "Midterm",
+        "batch": "437",
+        "count": 23
+      },
+      {
+        "assessment": "Midterm",
+        "batch": "436",
+        "count": 40
+      },
+      {
+        "assessment": "Midterm",
+        "batch": "435",
+        "count": 37
+      },
+      {
+        "assessment": "Midterm",
+        "batch": "434",
+        "count": 34
+      },
+      {
+        "assessment": "Midterm",
+        "batch": "433",
+        "count": 38
+      },
+      {
+        "assessment": "Midterm",
+        "batch": "432",
+        "count": 40
+      },
+      {
+        "assessment": "Midterm",
+        "batch": "431",
+        "count": 36
+      },
+      {
+        "assessment": "Midterm",
+        "batch": "430",
+        "count": 40
+      },
+      {
+        "assessment": "Final",
+        "batch": "443",
+        "count": 39
+      },
+      {
+        "assessment": "Final",
+        "batch": "442",
+        "count": 31
+      },
+      {
+        "assessment": "Final",
+        "batch": "441",
+        "count": 17
+      },
+      {
+        "assessment": "Final",
+        "batch": "438",
+        "count": 38
+      },
+      {
+        "assessment": "Final",
+        "batch": "437",
+        "count": 60
+      },
+      {
+        "assessment": "Final",
+        "batch": "436",
+        "count": 31
+      },
+      {
+        "assessment": "Final",
+        "batch": "435",
+        "count": 30
+      },
+      {
+        "assessment": "Final",
+        "batch": "434",
+        "count": 54
+      },
+      {
+        "assessment": "Final",
+        "batch": "433",
+        "count": 60
+      },
+      {
+        "assessment": "Final",
+        "batch": "432",
+        "count": 36
+      },
+      {
+        "assessment": "Final",
+        "batch": "431",
+        "count": 35
+      }
+    ],
+    "medicine": [
+      {
+        "assessment": "Midterm",
+        "batch": "443",
+        "count": 60
+      },
+      {
+        "assessment": "Midterm",
+        "batch": "442",
+        "count": 48
+      },
+      {
+        "assessment": "Midterm",
+        "batch": "441",
+        "count": 60
+      },
+      {
+        "assessment": "Midterm",
+        "batch": "439",
+        "count": 60
+      },
+      {
+        "assessment": "Midterm",
+        "batch": "438",
+        "count": 60
+      },
+      {
+        "assessment": "Midterm",
+        "batch": "437",
+        "count": 36
+      },
+      {
+        "assessment": "Midterm",
+        "batch": "436",
+        "count": 85
+      },
+      {
+        "assessment": "Midterm",
+        "batch": "435",
+        "count": 55
+      },
+      {
+        "assessment": "Midterm",
+        "batch": "434",
+        "count": 46
+      },
+      {
+        "assessment": "Midterm",
+        "batch": "433",
+        "count": 48
+      },
+      {
+        "assessment": "Midterm",
+        "batch": "432",
+        "count": 34
+      },
+      {
+        "assessment": "Midterm",
+        "batch": "431",
+        "count": 58
+      },
+      {
+        "assessment": "Midterm",
+        "batch": "430",
+        "count": 45
+      },
+      {
+        "assessment": "Final",
+        "batch": "443",
+        "count": 73
+      },
+      {
+        "assessment": "Final",
+        "batch": "442",
+        "count": 80
+      },
+      {
+        "assessment": "Final",
+        "batch": "441",
+        "count": 80
+      },
+      {
+        "assessment": "Final",
+        "batch": "439",
+        "count": 72
+      },
+      {
+        "assessment": "Final",
+        "batch": "438",
+        "count": 40
+      },
+      {
+        "assessment": "Final",
+        "batch": "437",
+        "count": 58
+      },
+      {
+        "assessment": "Final",
+        "batch": "436",
+        "count": 42
+      },
+      {
+        "assessment": "Final",
+        "batch": "435",
+        "count": 68
+      },
+      {
+        "assessment": "Final",
+        "batch": "434",
+        "count": 55
+      },
+      {
+        "assessment": "Final",
+        "batch": "433",
+        "count": 51
+      },
+      {
+        "assessment": "Final",
+        "batch": "432",
+        "count": 42
+      },
+      {
+        "assessment": "Final",
+        "batch": "431",
+        "count": 44
+      },
+      {
+        "assessment": "Final",
+        "batch": "429",
+        "count": 60
+      }
+    ],
+    "surgery": [
+      {
+        "assessment": "Midterm",
+        "batch": "443",
+        "count": 46
+      },
+      {
+        "assessment": "Midterm",
+        "batch": "442",
+        "count": 40
+      },
+      {
+        "assessment": "Midterm",
+        "batch": "441",
+        "count": 58
+      },
+      {
+        "assessment": "Midterm",
+        "batch": "439",
+        "count": 70
+      },
+      {
+        "assessment": "Midterm",
+        "batch": "438",
+        "count": 77
+      },
+      {
+        "assessment": "Midterm",
+        "batch": "437",
+        "count": 41
+      },
+      {
+        "assessment": "Midterm",
+        "batch": "436",
+        "count": 63
+      },
+      {
+        "assessment": "Midterm",
+        "batch": "435",
+        "count": 50
+      },
+      {
+        "assessment": "Midterm",
+        "batch": "434",
+        "count": 36
+      },
+      {
+        "assessment": "Midterm",
+        "batch": "433",
+        "count": 45
+      },
+      {
+        "assessment": "Midterm",
+        "batch": "432",
+        "count": 44
+      },
+      {
+        "assessment": "Midterm",
+        "batch": "431",
+        "count": 32
+      },
+      {
+        "assessment": "Midterm",
+        "batch": "430",
+        "count": 56
+      },
+      {
+        "assessment": "Final",
+        "batch": "442",
+        "count": 44
+      },
+      {
+        "assessment": "Final",
+        "batch": "441",
+        "count": 23
+      },
+      {
+        "assessment": "Final",
+        "batch": "439",
+        "count": 55
+      },
+      {
+        "assessment": "Final",
+        "batch": "438",
+        "count": 50
+      },
+      {
+        "assessment": "Final",
+        "batch": "437",
+        "count": 91
+      },
+      {
+        "assessment": "Final",
+        "batch": "436",
+        "count": 34
+      },
+      {
+        "assessment": "Final",
+        "batch": "435",
+        "count": 2
+      },
+      {
+        "assessment": "Final",
+        "batch": "434",
+        "count": 19
+      },
+      {
+        "assessment": "Final",
+        "batch": "433",
+        "count": 46
+      },
+      {
+        "assessment": "Final",
+        "batch": "432",
+        "count": 25
+      },
+      {
+        "assessment": "Final",
+        "batch": "431",
+        "count": 48
+      },
+      {
+        "assessment": "Final",
+        "batch": "430",
+        "count": 41
+      },
+      {
+        "assessment": "Midterm",
+        "batch": "444",
+        "count": 104
+      },
+      {
+        "assessment": "Final",
+        "batch": "444",
+        "count": 38
+      }
+    ]
+  }
+}

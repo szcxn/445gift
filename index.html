@@ -1233,6 +1233,8 @@
   <script src="research-data.js?v=20261020-research-mid-1"></script>
   <script src="radiology-catalog.js?v=20261020-radiology-mid-1"></script>
   <script src="radiology-data.js?v=20261020-radiology-mid-1"></script>
+  <script src="batch-source-repairs.js?v=20261020-batch-audit-1"></script>
+  <script src="original-batches.js?v=20261020-complete-batches-1"></script>
   <script>
     const SUBJECTS = [
       { id: "medicine", name: "Medicine", code: "MED", index: "01", description: "Review the full bank or study by batch, cycle, and lecture.", color: "#087eb6" },
@@ -1255,7 +1257,7 @@
       "Hematology & Oncology"
     ];
 
-    const QUESTION_BANK = deduplicateQuestions([
+    const QUESTION_BANK = deduplicateQuestions(window.GIFT445_EXTEND_BATCH_BANK(window.GIFT445_REPAIR_BANK([
       ...(window.GIFT445_QUESTIONS || []),
       ...(window.GIFT445_SURGERY_QUESTIONS || []),
       ...(window.GIFT445_COMMUNITY_QUESTIONS || []),
@@ -1263,7 +1265,7 @@
       ...(window.GIFT445_INFORMATICS_FINAL_QUESTIONS || []),
       ...(window.GIFT445_RESEARCH_QUESTIONS || []),
       ...(window.GIFT445_RADIOLOGY_QUESTIONS || [])
-    ].filter(question => !question.excluded));
+    ].filter(question => !question.excluded))));
 
     function deduplicateQuestions(questions) {
       const seenIds = new Set();
@@ -1284,7 +1286,7 @@
           .join("||");
         const tableKey = JSON.stringify((question.sourceTables || []).map(table => table.rows));
         const questionVariantKey = stemKey && optionSetKey
-          ? `${question.subjectId || "unknown"}|||${stemKey}|||${optionSetKey}|||${tableKey}${question.subjectId === "informatics" || question.subjectId === "research" || question.subjectId === "radiology" || question.subjectId === "community" || question.medicineSourceVariantOf || question.medicineMidLecture ? `|||${question.id}` : ""}`
+          ? `${question.subjectId || "unknown"}|||${stemKey}|||${optionSetKey}|||${tableKey}${question.batchOnly || question.subjectId === "informatics" || question.subjectId === "research" || question.subjectId === "radiology" || question.subjectId === "community" || question.medicineSourceVariantOf || question.sourceOccurrenceVariantOf || question.medicineMidLecture ? `|||${question.id}` : ""}`
           : "";
         const duplicate = seenIds.has(question.id)
           || (questionVariantKey && seenQuestionVariants.has(questionVariantKey));
@@ -1415,7 +1417,7 @@
     });
 
     function questionsFor(subjectId) {
-      return QUESTION_BANK.filter(question => question.subjectId === subjectId);
+      return QUESTION_BANK.filter(question => question.subjectId === subjectId && !question.batchOnly);
     }
 
     function isQuestionAvailableInLecture(question, subjectId) {
@@ -1521,7 +1523,7 @@
         });
       const assessments = [...new Set([...catalogAssessments, ...questions.map(question => question.assessment).filter(Boolean)])]
         .sort((a, b) => ["Midterm", "Final"].indexOf(a) - ["Midterm", "Final"].indexOf(b) || a.localeCompare(b));
-      const batches = [...new Set(questions.flatMap(question => question.sourceLocations || [])
+      const batches = [...new Set([...questions.flatMap(question => question.sourceLocations || []), ...(window.GIFT445_BATCH_SOURCE_COUNTS?.[subjectId] || [])]
         .filter(location => location.batch)
         .map(location => `${location.assessment || "Assessment"}|${location.batch}`))]
         .map(value => { const [assessment, batch] = value.split("|"); return { assessment, batch }; })
@@ -1544,13 +1546,13 @@
       workspaceElement.innerHTML = (questions.length || catalogLectures.length) ? `
         ${workspaceHeader(subject.name, "Selected subject")}
         ${subjectId === "informatics" ? `<p class="source-note">Midterm practice: 376 Midterm questions + 240 Final-bank questions on Midterm topics, with slide-based explanations. Final-only questions are organized for later explanation. Each question keeps its original batch and exam label.</p>` : ""}
-        ${subjectId === "research" ? `<p class="source-note">Midterm practice includes matching questions from the Midterm and Final Gift banks, with explanations and checked lecture references. Original exam labels and Gift keys are retained. Final is a lecture list only; its questions have not been added.</p>` : ""}
-        ${subjectId === "radiology" ? `<p class="source-note">Midterm practice follows the verified lecture list, with explanations and checked lecture references. Original exam labels and Gift keys are retained. Final is a lecture list only.</p>` : ""}
-        ${subjectId === "community" ? `<p class="source-note">Midterm practice includes matching questions from the Midterm and Final Gift banks, with explanations and checked lecture references. Original exam labels and Gift keys are retained. Final is a lecture list only.</p>` : ""}
+        ${subjectId === "research" ? `<p class="source-note">Midterm lecture practice includes linked questions from both Gift banks, with explanations and checked lecture references. By Batch contains the complete original papers. Final lecture practice is a list of lecture names for later.</p>` : ""}
+        ${subjectId === "radiology" ? `<p class="source-note">Midterm lecture practice follows the verified lecture list, with explanations and checked lecture references. By Batch contains the complete original papers. Final lecture practice is a list of lecture names for later.</p>` : ""}
+        ${subjectId === "community" ? `<p class="source-note">Midterm lecture practice includes linked questions from both Gift banks, with explanations and checked lecture references. By Batch contains the complete original papers. Final lecture practice is a list of lecture names for later.</p>` : ""}
         ${(questions.length || assessments.length) ? `<section class="route-section">
           <div class="route-section-head"><h3>Quick Review</h3><p>Progress is saved on this device.</p></div>
           <div class="route-grid">
-            ${questions.length ? `<button class="route-card featured collection-card" type="button" data-mode="all"><strong>All ${escapeHtml(subject.name)} Questions</strong><span>${questionCountLabel(questions.length)} in one sequence</span></button>` : ""}
+            ${questions.length ? `<button class="route-card featured collection-card" type="button" data-mode="all"><strong>All ${escapeHtml(subject.name)} Study Questions</strong><span>${questionCountLabel(questions.length)} in one sequence</span></button>` : ""}
             ${assessments.map(assessment => {
               const count = questionsForAssessment(subjectId, assessment).length;
               return `<button class="route-card collection-card" type="button" data-mode="assessment" data-assessment="${escapeHtml(assessment)}" ${count ? "" : "disabled"}><strong>${escapeHtml(assessment)}</strong><span>${count ? questionCountLabel(count) : subjectId === "research" && assessment === "Final" ? "Lecture names only" : subjectId === "radiology" && assessment === "Final" ? "Lecture names only" : subjectId === "community" && assessment === "Final" ? "Lecture names only" : "No questions from Gift"}</span></button>`;
@@ -1564,8 +1566,10 @@
               <span class="batch-toggle-copy"><strong>Browse batches</strong><span class="batch-toggle-state">${batches.length} batch and assessment sets</span></span>
               <span class="batch-toggle-icon" aria-hidden="true">⌄</span>
             </button>
-            <div class="batch-panel" id="batch-list" hidden><div class="route-grid">
-              ${batches.map(({ assessment, batch }) => `<button class="route-card batch-card" type="button" data-assessment="${escapeHtml(assessment)}" data-batch="${escapeHtml(batch)}"><strong>${escapeHtml(batchDisplayName(subjectId, batch))} · ${escapeHtml(assessment)}${(subjectId === "research" || subjectId === "radiology" || subjectId === "community") && assessment === "Final" ? " · Midterm topics" : ""}</strong><span>${escapeHtml(batchCountLabel(subjectId, assessment, batch))}</span></button>`).join("")}
+            <div class="batch-panel" id="batch-list" hidden>
+              <p class="source-note">By Batch includes the complete original banks. By Lecture includes questions linked to each lecture. Original missing text and blank Gift keys are shown as recorded.</p>
+              <div class="route-grid">
+              ${batches.map(({ assessment, batch }) => `<button class="route-card batch-card" type="button" data-assessment="${escapeHtml(assessment)}" data-batch="${escapeHtml(batch)}" ${questionsForBatch(subjectId, assessment, batch).length ? "" : "disabled"}><strong>${escapeHtml(batchDisplayName(subjectId, batch))} · ${escapeHtml(assessment)}</strong><span>${escapeHtml(batchCountLabel(subjectId, assessment, batch))}</span></button>`).join("")}
             </div></div>
           </section>` : lectureCatalog.length ? `
           <section class="route-section">
@@ -1876,6 +1880,11 @@
     }
 
     function questionsForBatch(subjectId, assessment, batch) {
+      const originalIds = window.GIFT445_ORIGINAL_BATCH_INDEX?.[subjectId]?.[`${assessment}|${batch}`];
+      if (originalIds && QUESTION_BANK.some(question => question.batchOnly)) {
+        const byId = new Map(QUESTION_BANK.map(question => [question.id, question]));
+        return originalIds.map(id => byId.get(id)).filter(Boolean);
+      }
       const matchingLocation = question => (question.sourceLocations || []).find(location => location.assessment === assessment && String(location.batch) === String(batch));
       return questionsFor(subjectId)
         .filter(question => matchingLocation(question))
@@ -1892,6 +1901,8 @@
 
     function batchCountLabel(subjectId, assessment, batch) {
       const questions = questionsForBatch(subjectId, assessment, batch);
+      const originalCount = window.GIFT445_BATCH_SOURCE_COUNTS?.[subjectId]?.find(source => source.assessment === assessment && String(source.batch) === String(batch))?.count;
+      if (Number.isFinite(originalCount)) return questions.length === originalCount ? `${questionCountLabel(questions.length)} · Original batch` : `${questions.length} of ${originalCount} source questions${questions.length ? "" : " · None in current scope"}`;
       if (subjectId === "surgery") return questionCountLabel(questions.length);
       const sourceEntries = questions.reduce((total, question) => total + (question.sourceLocations || [])
         .filter(location => location.assessment === assessment && String(location.batch) === String(batch)).length, 0);
@@ -1915,7 +1926,7 @@
       const subject = SUBJECTS.find(item => item.id === subjectId);
       if (!subject) return;
       let questions = questionsFor(subjectId);
-      let title = `All ${subject.name} Questions`;
+      let title = `All ${subject.name} Study Questions`;
       if (mode === "assessment") {
         questions = questionsForAssessment(subjectId, assessment);
         title = `All ${assessment} Questions`;
@@ -2002,9 +2013,9 @@
 
     function renderQuestion(question, index, total = 1) {
       const selected = appState.quiz.answers[question.id] || null;
-      const studyReview = question.subjectId === "medicine" ? question.medicineReview : question.subjectId === "surgery" ? question.surgeryReview : question.subjectId === "research" ? question.researchReview : question.subjectId === "radiology" ? question.radiologyReview : question.subjectId === "community" ? question.communityReview : null;
-      const richMedia = question.subjectId === "radiology" || question.subjectId === "community";
-      const displayOptions = studyReview ? question.options.filter(option => richMedia && (option.images || []).length || option.text.trim() && (!(question.surgeryReview || question.researchReview || question.radiologyReview || question.communityReview) || !isMissingSourceOption(option.text, question.subjectId))) : question.options;
+      const studyReview = (question.subjectId === "medicine" ? question.medicineReview : question.subjectId === "surgery" ? question.surgeryReview : question.subjectId === "research" ? question.researchReview : question.subjectId === "radiology" ? question.radiologyReview : question.subjectId === "community" ? question.communityReview : null) || question.batchReview;
+      const richMedia = question.batchOnly || question.subjectId === "radiology" || question.subjectId === "community";
+      const displayOptions = studyReview ? question.options.filter(option => richMedia && (option.images || []).length || option.text.trim() && (!(question.batchOnly || question.surgeryReview || question.researchReview || question.radiologyReview || question.communityReview) || !isMissingSourceOption(option.text, question.subjectId))) : question.options;
       const revealed = Boolean(selected) || studyReview && !displayOptions.length;
       const acceptedAnswers = sourceAnswers(question);
       const proposedAnswers = Array.isArray(question.aiAnswer) ? question.aiAnswer : (question.aiAnswer ? [question.aiAnswer] : []);
@@ -2012,7 +2023,7 @@
       const gradingAnswers = gradingAnswersForQuestion(question);
       const giftReview = question.giftReview;
       const sourceLocations = question.sourceLocations || [];
-      const sourceRefs = sourceLocations.map(location => question.surgeryReview || question.researchReview || question.radiologyReview || question.communityReview ? [
+      const sourceRefs = sourceLocations.map(location => question.batchOnly || question.surgeryReview || question.researchReview || question.radiologyReview || question.communityReview ? [
         (location.originalAssessment || location.assessment) === "Q Bank" ? null : location.originalAssessment || location.assessment,
         location.batch ? `Batch ${location.batch}` : null,
         location.questionNumber ? `Q${location.questionNumber}` : null
@@ -2092,12 +2103,12 @@
     function renderMedicineExplanation(question, sourceRefs = "", review = question.medicineReview) {
       const key = sourceAnswers(question);
       const bankName = question.subjectId === "surgery" && question.sourceLabel === "Q Bank" ? "Q Bank" : "Gift";
-      const richMedia = question.subjectId === "radiology" || question.subjectId === "community";
+      const richMedia = question.batchOnly || question.subjectId === "radiology" || question.subjectId === "community";
       const writtenGiftAnswer = richMedia ? question.sourceAnswerText || "" : "";
       const writtenNote = (question.sourceAnswerNote || "").replace(/^\s*(?:Self\s+)?Answer\s*:\s*/i, "").trim();
       const repeatedWrittenAnswer = writtenGiftAnswer && (writtenNote === writtenGiftAnswer.trim() || question.communityReview && writtenNote && writtenGiftAnswer.trim().startsWith(writtenNote));
       const bareCommunityNote = question.communityReview && /^\s*(?:Self\s+)?Answer\s*:\s*$/i.test(question.sourceAnswerNote || "");
-      const originalNote = question.researchReview || question.radiologyReview || question.communityReview ? repeatedWrittenAnswer || bareCommunityNote ? "" : question.sourceAnswerNote || "" : question.surgeryReview && /\b(?:if|not sure|doctor|because|then|most likely)\b/i.test(question.sourceAnswerNote || "") ? question.sourceAnswerNote : "";
+      const originalNote = question.batchOnly ? !repeatedWrittenAnswer && writtenNote && !/^[A-H](?:\s*(?:or|and|[,/&+])\s*[A-H])*$/i.test(writtenNote) ? writtenNote : "" : question.researchReview || question.radiologyReview || question.communityReview ? repeatedWrittenAnswer || bareCommunityNote ? "" : question.sourceAnswerNote || "" : question.surgeryReview && /\b(?:if|not sure|doctor|because|then|most likely)\b/i.test(question.sourceAnswerNote || "") ? question.sourceAnswerNote : "";
       const answerText = answers => answers.map(answer => {
         const option = question.options.find(item => item.id === answer);
         const imageChoice = richMedia && (option?.images || []).length;
@@ -2118,7 +2129,8 @@
         ${!canScore ? `<p class="source-note">Not scored: ${escapeHtml(question.giftReview?.ungradedReason || "The original question is incomplete.")}</p>` : ""}
         ${different || review.objection ? `<div class="medicine-objection">${different ? `<strong>${review.confidence === "supported" ? "Reviewed answer" : "Suggested answer"}: ${answerText(review.answers)}</strong>` : ""}${review.objection ? `<p>${escapeHtml(review.objection)}</p>` : ""}</div>` : ""}
         <p class="medicine-explanation"><strong>Explanation</strong>${escapeHtml(review.explanation)}</p>
-        <div class="medicine-source">${review.basis === "lecture" && evidence ? `Source: ${escapeHtml(evidence.title)} · ${pageLabel} ${evidence.page}` : question.researchReview || question.radiologyReview || question.communityReview ? "Concept explanation" : "Clinical explanation"}${evidence ? `<details class="medicine-slide"><summary>${evidenceSummary}</summary>${(question.surgeryReview || question.researchReview || question.radiologyReview || question.communityReview) && evidence.relation === "background" ? `<p class="source-note">${escapeHtml(evidence.title)} · ${pageLabel} ${evidence.page}</p>` : ""}<blockquote>${escapeHtml(evidence.quote)}</blockquote><a href="${escapeHtml(evidence.url)}" target="_blank" rel="noopener noreferrer">${sourceParagraph ? "Open full document" : "Open full lecture"} ↗</a>${evidenceImage ? `<a href="${escapeHtml(evidenceImage)}" target="_blank" rel="noopener noreferrer" aria-label="Open slide image at full size"><img src="${escapeHtml(evidenceImage)}" alt="${escapeHtml(evidence.title)} — ${pageLabel} ${evidence.page}" loading="lazy"></a>` : ""}</details>` : ""}</div>
+        <div class="medicine-source">${review.basis === "pending" ? "Explanation pending" : review.basis === "lecture" && evidence ? `Source: ${escapeHtml(evidence.title)} · ${pageLabel} ${evidence.page}` : question.researchReview || question.radiologyReview || question.communityReview ? "Concept explanation" : "Clinical explanation"}${evidence ? `<details class="medicine-slide"><summary>${evidenceSummary}</summary>${(question.surgeryReview || question.researchReview || question.radiologyReview || question.communityReview) && evidence.relation === "background" ? `<p class="source-note">${escapeHtml(evidence.title)} · ${pageLabel} ${evidence.page}</p>` : ""}<blockquote>${escapeHtml(evidence.quote)}</blockquote><a href="${escapeHtml(evidence.url)}" target="_blank" rel="noopener noreferrer">${sourceParagraph ? "Open full document" : "Open full lecture"} ↗</a>${evidenceImage ? `<a href="${escapeHtml(evidenceImage)}" target="_blank" rel="noopener noreferrer" aria-label="Open slide image at full size"><img src="${escapeHtml(evidenceImage)}" alt="${escapeHtml(evidence.title)} — ${pageLabel} ${evidence.page}" loading="lazy"></a>` : ""}</details>` : ""}</div>
+        ${question.sourceTranscript ? `<details class="medicine-slide"><summary>Original question text</summary><p style="white-space:pre-wrap">${escapeHtml(question.sourceTranscript)}</p></details>` : ""}
         ${(review.references || []).length ? `<div class="reference-list">${review.references.map(reference => `<a href="${escapeHtml(reference.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(reference.title)} ↗</a>`).join("")}</div>` : ""}
         ${sourceRefs ? `<p class="source-note">${bankName} · ${escapeHtml(sourceRefs)}</p>` : ""}
       </div>`;
@@ -2129,7 +2141,7 @@
     }
 
     function gradingAnswersForQuestion(question) {
-      if ((question.subjectId === "informatics" || question.subjectId === "research" || question.subjectId === "radiology" || question.subjectId === "community" || question.subjectId === "medicine" && (question.assessment === "Midterm" || question.medicineMidLecture) || question.subjectId === "surgery" && question.surgeryReview) && question.giftReview?.policy === "gift-key-first") {
+      if ((question.batchOnly || question.subjectId === "informatics" || question.subjectId === "research" || question.subjectId === "radiology" || question.subjectId === "community" || question.subjectId === "medicine" && (question.assessment === "Midterm" || question.medicineMidLecture) || question.subjectId === "surgery" && question.surgeryReview) && question.giftReview?.policy === "gift-key-first") {
         return question.giftReview.gradingAnswers;
       }
       const proposed = Array.isArray(question.aiAnswer) ? question.aiAnswer : question.aiAnswer ? [question.aiAnswer] : [];
@@ -2182,7 +2194,7 @@
     function answerQuestion(questionId, optionId) {
       const question = QUESTION_BANK.find(item => item.id === questionId);
       if (!question) return;
-      const reviewOnly = (question.subjectId === "radiology" || question.subjectId === "community") && optionId === "__reviewed__"
+      const reviewOnly = (question.batchOnly || question.subjectId === "radiology" || question.subjectId === "community") && optionId === "__reviewed__"
         && !question.options.some(option => (option.images || []).length || !isMissingSourceOption(option.text, question.subjectId));
       if (!reviewOnly && !question.options.some(option => option.id === optionId)) return;
       const wasAlreadyAnswered = Boolean(appState.quiz.answers[questionId]);
