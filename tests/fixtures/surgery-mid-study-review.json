@@ -1,0 +1,3538 @@
+{
+  "reviewedOn": "2026-10-20",
+  "scope": "Existing Surgery MID bank and current MID lecture practice",
+  "questions": 970,
+  "selectedIds": [
+    "surgery-midterm-q0001",
+    "surgery-midterm-q0002",
+    "surgery-midterm-q0003",
+    "surgery-midterm-q0004",
+    "surgery-midterm-q0005",
+    "surgery-midterm-q0006",
+    "surgery-midterm-q0007",
+    "surgery-midterm-q0008",
+    "surgery-midterm-q0009",
+    "surgery-midterm-q0010",
+    "surgery-midterm-q0011",
+    "surgery-midterm-q0012",
+    "surgery-midterm-q0013",
+    "surgery-midterm-q0014",
+    "surgery-midterm-q0015",
+    "surgery-midterm-q0016",
+    "surgery-midterm-q0017",
+    "surgery-midterm-q0018",
+    "surgery-midterm-q0019",
+    "surgery-midterm-q0020",
+    "surgery-midterm-q0021",
+    "surgery-midterm-q0022",
+    "surgery-midterm-q0023",
+    "surgery-midterm-q0024",
+    "surgery-midterm-q0025",
+    "surgery-midterm-q0026",
+    "surgery-midterm-q0027",
+    "surgery-midterm-q0028",
+    "surgery-midterm-q0029",
+    "surgery-midterm-q0030",
+    "surgery-midterm-q0031",
+    "surgery-midterm-q0032",
+    "surgery-midterm-q0033",
+    "surgery-midterm-q0034",
+    "surgery-midterm-q0035",
+    "surgery-midterm-q0036",
+    "surgery-midterm-q0037",
+    "surgery-midterm-q0038",
+    "surgery-midterm-q0039",
+    "surgery-midterm-q0040",
+    "surgery-midterm-q0041",
+    "surgery-midterm-q0042",
+    "surgery-midterm-q0043",
+    "surgery-midterm-q0044",
+    "surgery-midterm-q0045",
+    "surgery-midterm-q0046",
+    "surgery-midterm-q0047",
+    "surgery-midterm-q0048",
+    "surgery-midterm-q0049",
+    "surgery-midterm-q0050",
+    "surgery-midterm-q0051",
+    "surgery-midterm-q0052",
+    "surgery-midterm-q0053",
+    "surgery-midterm-q0054",
+    "surgery-midterm-q0055",
+    "surgery-midterm-q0056",
+    "surgery-midterm-q0057",
+    "surgery-midterm-q0058",
+    "surgery-midterm-q0059",
+    "surgery-midterm-q0060",
+    "surgery-midterm-q0061",
+    "surgery-midterm-q0062",
+    "surgery-midterm-q0063",
+    "surgery-midterm-q0064",
+    "surgery-midterm-q0065",
+    "surgery-midterm-q0066",
+    "surgery-midterm-q0067",
+    "surgery-midterm-q0068",
+    "surgery-midterm-q0069",
+    "surgery-midterm-q0070",
+    "surgery-midterm-q0071",
+    "surgery-midterm-q0072",
+    "surgery-midterm-q0073",
+    "surgery-midterm-q0074",
+    "surgery-midterm-q0075",
+    "surgery-midterm-q0076",
+    "surgery-midterm-q0077",
+    "surgery-midterm-q0078",
+    "surgery-midterm-q0079",
+    "surgery-midterm-q0080",
+    "surgery-midterm-q0081",
+    "surgery-midterm-q0082",
+    "surgery-midterm-q0083",
+    "surgery-midterm-q0084",
+    "surgery-midterm-q0085",
+    "surgery-midterm-q0086",
+    "surgery-midterm-q0087",
+    "surgery-midterm-q0088",
+    "surgery-midterm-q0089",
+    "surgery-midterm-q0090",
+    "surgery-midterm-q0091",
+    "surgery-midterm-q0092",
+    "surgery-midterm-q0093",
+    "surgery-midterm-q0094",
+    "surgery-midterm-q0095",
+    "surgery-midterm-q0096",
+    "surgery-midterm-q0097",
+    "surgery-midterm-q0098",
+    "surgery-midterm-q0099",
+    "surgery-midterm-q0100",
+    "surgery-midterm-q0101",
+    "surgery-midterm-q0102",
+    "surgery-midterm-q0103",
+    "surgery-midterm-q0104",
+    "surgery-midterm-q0105",
+    "surgery-midterm-q0106",
+    "surgery-midterm-q0107",
+    "surgery-midterm-q0108",
+    "surgery-midterm-q0109",
+    "surgery-midterm-q0110",
+    "surgery-midterm-q0111",
+    "surgery-midterm-q0112",
+    "surgery-midterm-q0113",
+    "surgery-midterm-q0114",
+    "surgery-midterm-q0115",
+    "surgery-midterm-q0116",
+    "surgery-midterm-q0117",
+    "surgery-midterm-q0118",
+    "surgery-midterm-q0119",
+    "surgery-midterm-q0120",
+    "surgery-midterm-q0121",
+    "surgery-midterm-q0122",
+    "surgery-midterm-q0123",
+    "surgery-midterm-q0124",
+    "surgery-midterm-q0125",
+    "surgery-midterm-q0126",
+    "surgery-midterm-q0127",
+    "surgery-midterm-q0128",
+    "surgery-midterm-q0129",
+    "surgery-midterm-q0130",
+    "surgery-midterm-q0131",
+    "surgery-midterm-q0132",
+    "surgery-midterm-q0133",
+    "surgery-midterm-q0134",
+    "surgery-midterm-q0135",
+    "surgery-midterm-q0136",
+    "surgery-midterm-q0137",
+    "surgery-midterm-q0138",
+    "surgery-midterm-q0139",
+    "surgery-midterm-q0140",
+    "surgery-midterm-q0141",
+    "surgery-midterm-q0142",
+    "surgery-midterm-q0143",
+    "surgery-midterm-q0144",
+    "surgery-midterm-q0145",
+    "surgery-midterm-q0146",
+    "surgery-midterm-q0147",
+    "surgery-midterm-q0148",
+    "surgery-midterm-q0149",
+    "surgery-midterm-q0150",
+    "surgery-midterm-q0151",
+    "surgery-midterm-q0152",
+    "surgery-midterm-q0153",
+    "surgery-midterm-q0154",
+    "surgery-midterm-q0155",
+    "surgery-midterm-q0156",
+    "surgery-midterm-q0157",
+    "surgery-midterm-q0158",
+    "surgery-midterm-q0159",
+    "surgery-midterm-q0160",
+    "surgery-midterm-q0161",
+    "surgery-midterm-q0162",
+    "surgery-midterm-q0163",
+    "surgery-midterm-q0164",
+    "surgery-midterm-q0165",
+    "surgery-midterm-q0166",
+    "surgery-midterm-q0167",
+    "surgery-midterm-q0168",
+    "surgery-midterm-q0169",
+    "surgery-midterm-q0170",
+    "surgery-midterm-q0171",
+    "surgery-midterm-q0172",
+    "surgery-midterm-q0173",
+    "surgery-midterm-q0174",
+    "surgery-midterm-q0175",
+    "surgery-midterm-q0176",
+    "surgery-midterm-q0177",
+    "surgery-midterm-q0178",
+    "surgery-midterm-q0179",
+    "surgery-midterm-q0180",
+    "surgery-midterm-q0181",
+    "surgery-midterm-q0182",
+    "surgery-midterm-q0183",
+    "surgery-midterm-q0184",
+    "surgery-midterm-q0185",
+    "surgery-midterm-q0186",
+    "surgery-midterm-q0187",
+    "surgery-midterm-q0188",
+    "surgery-midterm-q0189",
+    "surgery-midterm-q0190",
+    "surgery-midterm-q0191",
+    "surgery-midterm-q0192",
+    "surgery-midterm-q0193",
+    "surgery-midterm-q0194",
+    "surgery-midterm-q0195",
+    "surgery-midterm-q0196",
+    "surgery-midterm-q0197",
+    "surgery-midterm-q0198",
+    "surgery-midterm-q0199",
+    "surgery-midterm-q0200",
+    "surgery-midterm-q0201",
+    "surgery-midterm-q0202",
+    "surgery-midterm-q0203",
+    "surgery-midterm-q0204",
+    "surgery-midterm-q0205",
+    "surgery-midterm-q0206",
+    "surgery-midterm-q0207",
+    "surgery-midterm-q0208",
+    "surgery-midterm-q0209",
+    "surgery-midterm-q0210",
+    "surgery-midterm-q0211",
+    "surgery-midterm-q0212",
+    "surgery-midterm-q0213",
+    "surgery-midterm-q0214",
+    "surgery-midterm-q0215",
+    "surgery-midterm-q0216",
+    "surgery-midterm-q0217",
+    "surgery-midterm-q0218",
+    "surgery-midterm-q0219",
+    "surgery-midterm-q0220",
+    "surgery-midterm-q0221",
+    "surgery-midterm-q0222",
+    "surgery-midterm-q0223",
+    "surgery-midterm-q0224",
+    "surgery-midterm-q0225",
+    "surgery-midterm-q0226",
+    "surgery-midterm-q0227",
+    "surgery-midterm-q0228",
+    "surgery-midterm-q0229",
+    "surgery-midterm-q0230",
+    "surgery-midterm-q0231",
+    "surgery-midterm-q0232",
+    "surgery-midterm-q0233",
+    "surgery-midterm-q0234",
+    "surgery-midterm-q0235",
+    "surgery-midterm-q0236",
+    "surgery-midterm-q0237",
+    "surgery-midterm-q0238",
+    "surgery-midterm-q0239",
+    "surgery-midterm-q0240",
+    "surgery-midterm-q0241",
+    "surgery-midterm-q0242",
+    "surgery-midterm-q0243",
+    "surgery-midterm-q0244",
+    "surgery-midterm-q0245",
+    "surgery-midterm-q0246",
+    "surgery-midterm-q0247",
+    "surgery-midterm-q0248",
+    "surgery-midterm-q0249",
+    "surgery-midterm-q0250",
+    "surgery-midterm-q0251",
+    "surgery-midterm-q0252",
+    "surgery-midterm-q0253",
+    "surgery-midterm-q0254",
+    "surgery-midterm-q0255",
+    "surgery-midterm-q0256",
+    "surgery-midterm-q0257",
+    "surgery-midterm-q0258",
+    "surgery-midterm-q0259",
+    "surgery-midterm-q0260",
+    "surgery-midterm-q0261",
+    "surgery-midterm-q0262",
+    "surgery-midterm-q0263",
+    "surgery-midterm-q0264",
+    "surgery-midterm-q0265",
+    "surgery-midterm-q0266",
+    "surgery-midterm-q0267",
+    "surgery-midterm-q0268",
+    "surgery-midterm-q0269",
+    "surgery-midterm-q0270",
+    "surgery-midterm-q0271",
+    "surgery-midterm-q0272",
+    "surgery-midterm-q0273",
+    "surgery-midterm-q0274",
+    "surgery-midterm-q0275",
+    "surgery-midterm-q0276",
+    "surgery-midterm-q0277",
+    "surgery-midterm-q0278",
+    "surgery-midterm-q0279",
+    "surgery-midterm-q0280",
+    "surgery-midterm-q0281",
+    "surgery-midterm-q0282",
+    "surgery-midterm-q0283",
+    "surgery-midterm-q0284",
+    "surgery-midterm-q0285",
+    "surgery-midterm-q0295",
+    "surgery-midterm-q0296",
+    "surgery-midterm-q0297",
+    "surgery-midterm-q0298",
+    "surgery-midterm-q0299",
+    "surgery-midterm-q0300",
+    "surgery-midterm-q0301",
+    "surgery-midterm-q0302",
+    "surgery-midterm-q0303",
+    "surgery-midterm-q0304",
+    "surgery-midterm-q0305",
+    "surgery-midterm-q0306",
+    "surgery-midterm-q0307",
+    "surgery-midterm-q0308",
+    "surgery-midterm-q0309",
+    "surgery-midterm-q0310",
+    "surgery-midterm-q0311",
+    "surgery-midterm-q0312",
+    "surgery-midterm-q0313",
+    "surgery-midterm-q0314",
+    "surgery-midterm-q0315",
+    "surgery-midterm-q0316",
+    "surgery-midterm-q0317",
+    "surgery-midterm-q0318",
+    "surgery-midterm-q0319",
+    "surgery-midterm-q0320",
+    "surgery-midterm-q0321",
+    "surgery-midterm-q0322",
+    "surgery-midterm-q0323",
+    "surgery-midterm-q0324",
+    "surgery-midterm-q0325",
+    "surgery-midterm-q0326",
+    "surgery-midterm-q0327",
+    "surgery-midterm-q0328",
+    "surgery-midterm-q0329",
+    "surgery-midterm-q0330",
+    "surgery-midterm-q0331",
+    "surgery-midterm-q0332",
+    "surgery-midterm-q0333",
+    "surgery-midterm-q0334",
+    "surgery-midterm-q0335",
+    "surgery-midterm-q0336",
+    "surgery-midterm-q0337",
+    "surgery-midterm-q0338",
+    "surgery-midterm-q0339",
+    "surgery-midterm-q0340",
+    "surgery-midterm-q0341",
+    "surgery-midterm-q0342",
+    "surgery-midterm-q0343",
+    "surgery-midterm-q0344",
+    "surgery-midterm-q0345",
+    "surgery-midterm-q0346",
+    "surgery-midterm-q0347",
+    "surgery-midterm-q0348",
+    "surgery-midterm-q0349",
+    "surgery-midterm-q0350",
+    "surgery-midterm-q0351",
+    "surgery-midterm-q0352",
+    "surgery-midterm-q0353",
+    "surgery-midterm-q0354",
+    "surgery-midterm-q0355",
+    "surgery-midterm-q0356",
+    "surgery-midterm-q0357",
+    "surgery-midterm-q0358",
+    "surgery-midterm-q0359",
+    "surgery-midterm-q0360",
+    "surgery-midterm-q0361",
+    "surgery-midterm-q0362",
+    "surgery-midterm-q0363",
+    "surgery-midterm-q0364",
+    "surgery-midterm-q0365",
+    "surgery-midterm-q0366",
+    "surgery-midterm-q0367",
+    "surgery-midterm-q0368",
+    "surgery-midterm-q0369",
+    "surgery-midterm-q0370",
+    "surgery-midterm-q0371",
+    "surgery-midterm-q0372",
+    "surgery-midterm-q0373",
+    "surgery-midterm-q0374",
+    "surgery-midterm-q0375",
+    "surgery-midterm-q0376",
+    "surgery-midterm-q0377",
+    "surgery-midterm-q0378",
+    "surgery-midterm-q0379",
+    "surgery-midterm-q0380",
+    "surgery-midterm-q0381",
+    "surgery-midterm-q0382",
+    "surgery-midterm-q0383",
+    "surgery-midterm-q0384",
+    "surgery-midterm-q0385",
+    "surgery-midterm-q0386",
+    "surgery-midterm-q0387",
+    "surgery-midterm-q0388",
+    "surgery-midterm-q0389",
+    "surgery-midterm-q0390",
+    "surgery-midterm-q0391",
+    "surgery-midterm-q0392",
+    "surgery-midterm-q0393",
+    "surgery-midterm-q0394",
+    "surgery-midterm-q0395",
+    "surgery-midterm-q0396",
+    "surgery-midterm-q0397",
+    "surgery-midterm-q0398",
+    "surgery-midterm-q0399",
+    "surgery-midterm-q0400",
+    "surgery-midterm-q0401",
+    "surgery-midterm-q0402",
+    "surgery-midterm-q0403",
+    "surgery-midterm-q0404",
+    "surgery-midterm-q0405",
+    "surgery-midterm-q0406",
+    "surgery-midterm-q0407",
+    "surgery-midterm-q0408",
+    "surgery-midterm-q0409",
+    "surgery-midterm-q0410",
+    "surgery-midterm-q0411",
+    "surgery-midterm-q0412",
+    "surgery-midterm-q0413",
+    "surgery-midterm-q0414",
+    "surgery-midterm-q0415",
+    "surgery-midterm-q0416",
+    "surgery-midterm-q0417",
+    "surgery-midterm-q0418",
+    "surgery-midterm-q0419",
+    "surgery-midterm-q0420",
+    "surgery-midterm-q0421",
+    "surgery-midterm-q0422",
+    "surgery-midterm-q0423",
+    "surgery-midterm-q0424",
+    "surgery-midterm-q0425",
+    "surgery-midterm-q0426",
+    "surgery-midterm-q0427",
+    "surgery-midterm-q0428",
+    "surgery-midterm-q0429",
+    "surgery-midterm-q0430",
+    "surgery-midterm-q0431",
+    "surgery-midterm-q0432",
+    "surgery-midterm-q0433",
+    "surgery-midterm-q0434",
+    "surgery-midterm-q0435",
+    "surgery-midterm-q0436",
+    "surgery-midterm-q0437",
+    "surgery-midterm-q0438",
+    "surgery-midterm-q0439",
+    "surgery-midterm-q0440",
+    "surgery-midterm-q0441",
+    "surgery-midterm-q0442",
+    "surgery-midterm-q0443",
+    "surgery-midterm-q0444",
+    "surgery-midterm-q0445",
+    "surgery-midterm-q0446",
+    "surgery-midterm-q0447",
+    "surgery-midterm-q0448",
+    "surgery-midterm-q0449",
+    "surgery-midterm-q0450",
+    "surgery-midterm-q0451",
+    "surgery-midterm-q0452",
+    "surgery-midterm-q0453",
+    "surgery-midterm-q0454",
+    "surgery-midterm-q0455",
+    "surgery-midterm-q0456",
+    "surgery-midterm-q0457",
+    "surgery-midterm-q0458",
+    "surgery-midterm-q0459",
+    "surgery-midterm-q0460",
+    "surgery-midterm-q0461",
+    "surgery-midterm-q0462",
+    "surgery-midterm-q0463",
+    "surgery-midterm-q0464",
+    "surgery-midterm-q0465",
+    "surgery-midterm-q0466",
+    "surgery-midterm-q0467",
+    "surgery-midterm-q0468",
+    "surgery-midterm-q0469",
+    "surgery-midterm-q0470",
+    "surgery-midterm-q0471",
+    "surgery-midterm-q0472",
+    "surgery-midterm-q0473",
+    "surgery-midterm-q0474",
+    "surgery-midterm-q0475",
+    "surgery-midterm-q0476",
+    "surgery-midterm-q0477",
+    "surgery-midterm-q0478",
+    "surgery-midterm-q0479",
+    "surgery-midterm-q0480",
+    "surgery-midterm-q0481",
+    "surgery-midterm-q0482",
+    "surgery-midterm-q0483",
+    "surgery-midterm-q0484",
+    "surgery-midterm-q0485",
+    "surgery-midterm-q0486",
+    "surgery-midterm-q0487",
+    "surgery-midterm-q0488",
+    "surgery-midterm-q0489",
+    "surgery-midterm-q0490",
+    "surgery-midterm-q0491",
+    "surgery-midterm-q0492",
+    "surgery-midterm-q0493",
+    "surgery-midterm-q0494",
+    "surgery-midterm-q0495",
+    "surgery-midterm-q0496",
+    "surgery-midterm-q0497",
+    "surgery-midterm-q0498",
+    "surgery-midterm-q0499",
+    "surgery-midterm-q0500",
+    "surgery-midterm-q0501",
+    "surgery-midterm-q0502",
+    "surgery-midterm-q0503",
+    "surgery-midterm-q0504",
+    "surgery-midterm-q0505",
+    "surgery-midterm-q0506",
+    "surgery-midterm-q0507",
+    "surgery-midterm-q0508",
+    "surgery-midterm-q0509",
+    "surgery-midterm-q0510",
+    "surgery-midterm-q0511",
+    "surgery-midterm-q0512",
+    "surgery-midterm-q0513",
+    "surgery-midterm-q0514",
+    "surgery-midterm-q0515",
+    "surgery-midterm-q0516",
+    "surgery-midterm-q0517",
+    "surgery-midterm-q0518",
+    "surgery-midterm-q0519",
+    "surgery-midterm-q0520",
+    "surgery-midterm-q0521",
+    "surgery-midterm-q0522",
+    "surgery-midterm-q0523",
+    "surgery-midterm-q0524",
+    "surgery-midterm-q0525",
+    "surgery-midterm-q0526",
+    "surgery-midterm-q0527",
+    "surgery-midterm-q0528",
+    "surgery-midterm-q0529",
+    "surgery-midterm-q0530",
+    "surgery-midterm-q0531",
+    "surgery-midterm-q0532",
+    "surgery-midterm-q0533",
+    "surgery-midterm-q0534",
+    "surgery-midterm-q0535",
+    "surgery-midterm-q0536",
+    "surgery-midterm-q0537",
+    "surgery-midterm-q0538",
+    "surgery-midterm-q0539",
+    "surgery-midterm-q0540",
+    "surgery-midterm-q0541",
+    "surgery-midterm-q0542",
+    "surgery-midterm-q0543",
+    "surgery-midterm-q0544",
+    "surgery-midterm-q0545",
+    "surgery-midterm-q0546",
+    "surgery-midterm-q0547",
+    "surgery-midterm-q0548",
+    "surgery-midterm-q0549",
+    "surgery-midterm-q0550",
+    "surgery-midterm-q0551",
+    "surgery-midterm-q0552",
+    "surgery-midterm-q0553",
+    "surgery-midterm-q0554",
+    "surgery-midterm-q0555",
+    "surgery-midterm-q0556",
+    "surgery-midterm-q0557",
+    "surgery-midterm-q0558",
+    "surgery-midterm-q0559",
+    "surgery-midterm-q0560",
+    "surgery-midterm-q0561",
+    "surgery-midterm-q0562",
+    "surgery-midterm-q0563",
+    "surgery-midterm-q0564",
+    "surgery-midterm-q0565",
+    "surgery-midterm-q0566",
+    "surgery-midterm-q0567",
+    "surgery-midterm-q0568",
+    "surgery-midterm-q0569",
+    "surgery-midterm-q0570",
+    "surgery-midterm-q0571",
+    "surgery-midterm-q0572",
+    "surgery-midterm-q0573",
+    "surgery-midterm-q0574",
+    "surgery-midterm-q0575",
+    "surgery-midterm-q0576",
+    "surgery-midterm-q0577",
+    "surgery-midterm-q0578",
+    "surgery-midterm-q0579",
+    "surgery-midterm-q0580",
+    "surgery-midterm-q0581",
+    "surgery-midterm-q0582",
+    "surgery-midterm-q0583",
+    "surgery-midterm-q0584",
+    "surgery-midterm-q0585",
+    "surgery-midterm-q0586",
+    "surgery-midterm-q0587",
+    "surgery-midterm-q0588",
+    "surgery-midterm-q0589",
+    "surgery-midterm-q0590",
+    "surgery-midterm-q0591",
+    "surgery-midterm-q0592",
+    "surgery-midterm-q0593",
+    "surgery-midterm-q0594",
+    "surgery-midterm-q0595",
+    "surgery-midterm-q0596",
+    "surgery-midterm-q0597",
+    "surgery-midterm-q0598",
+    "surgery-midterm-q0599",
+    "surgery-midterm-q0600",
+    "surgery-midterm-q0601",
+    "surgery-midterm-q0602",
+    "surgery-midterm-q0603",
+    "surgery-midterm-q0604",
+    "surgery-midterm-q0605",
+    "surgery-midterm-q0606",
+    "surgery-midterm-q0607",
+    "surgery-midterm-q0608",
+    "surgery-midterm-q0609",
+    "surgery-midterm-q0610",
+    "surgery-midterm-q0611",
+    "surgery-midterm-q0612",
+    "surgery-midterm-q0613",
+    "surgery-midterm-q0614",
+    "surgery-midterm-q0615",
+    "surgery-midterm-q0616",
+    "surgery-midterm-q0617",
+    "surgery-midterm-q0618",
+    "surgery-midterm-q0619",
+    "surgery-midterm-q0620",
+    "surgery-midterm-q0621",
+    "surgery-midterm-q0622",
+    "surgery-midterm-q0623",
+    "surgery-midterm-q0624",
+    "surgery-midterm-q0625",
+    "surgery-midterm-q0626",
+    "surgery-midterm-q0627",
+    "surgery-midterm-q0628",
+    "surgery-midterm-q0629",
+    "surgery-midterm-q0630",
+    "surgery-midterm-q0631",
+    "surgery-midterm-q0632",
+    "surgery-midterm-q0633",
+    "surgery-midterm-q0634",
+    "surgery-midterm-q0635",
+    "surgery-midterm-q0636",
+    "surgery-midterm-q0637",
+    "surgery-midterm-q0638",
+    "surgery-midterm-q0639",
+    "surgery-midterm-q0640",
+    "surgery-midterm-q0641",
+    "surgery-midterm-q0642",
+    "surgery-midterm-q0643",
+    "surgery-midterm-q0644",
+    "surgery-midterm-q0645",
+    "surgery-midterm-q0646",
+    "surgery-midterm-q0647",
+    "surgery-midterm-q0648",
+    "surgery-midterm-q0649",
+    "surgery-midterm-q0650",
+    "surgery-midterm-q0651",
+    "surgery-midterm-q0652",
+    "surgery-midterm-q0653",
+    "surgery-midterm-q0654",
+    "surgery-midterm-q0655",
+    "surgery-midterm-q0656",
+    "surgery-midterm-q0657",
+    "surgery-midterm-q0658",
+    "surgery-midterm-q0659",
+    "surgery-midterm-q0660",
+    "surgery-midterm-q0661",
+    "surgery-midterm-q0662",
+    "surgery-midterm-q0663",
+    "surgery-midterm-q0664",
+    "surgery-midterm-q0665",
+    "surgery-midterm-q0666",
+    "surgery-midterm-q0667",
+    "surgery-midterm-q0668",
+    "surgery-midterm-q0669",
+    "surgery-midterm-q0670",
+    "surgery-midterm-q0671",
+    "surgery-midterm-q0672",
+    "surgery-midterm-q0673",
+    "surgery-midterm-q0674",
+    "surgery-midterm-q0675",
+    "surgery-midterm-q0676",
+    "surgery-midterm-q0677",
+    "surgery-midterm-q0678",
+    "surgery-midterm-q0679",
+    "surgery-midterm-q0680",
+    "surgery-midterm-q0681",
+    "surgery-midterm-q0682",
+    "surgery-midterm-q0683",
+    "surgery-midterm-q0684",
+    "surgery-midterm-q0685",
+    "surgery-midterm-q0686",
+    "surgery-midterm-q0687",
+    "surgery-midterm-q0688",
+    "surgery-midterm-q0689",
+    "surgery-midterm-q0690",
+    "surgery-midterm-q0691",
+    "surgery-midterm-q0692",
+    "surgery-midterm-q0693",
+    "surgery-midterm-q0694",
+    "surgery-midterm-q0695",
+    "surgery-midterm-q0696",
+    "surgery-midterm-q0697",
+    "surgery-midterm-q0698",
+    "surgery-midterm-q0699",
+    "surgery-midterm-q0700",
+    "surgery-midterm-q0701",
+    "surgery-midterm-q0702",
+    "surgery-midterm-q0703",
+    "surgery-midterm-q0704",
+    "surgery-midterm-q0705",
+    "surgery-midterm-q0706",
+    "surgery-midterm-q0707",
+    "surgery-midterm-q0708",
+    "surgery-midterm-q0709",
+    "surgery-midterm-q0710",
+    "surgery-midterm-q0711",
+    "surgery-midterm-q0712",
+    "surgery-midterm-q0713",
+    "surgery-midterm-q0714",
+    "surgery-midterm-q0715",
+    "surgery-midterm-q0716",
+    "surgery-midterm-q0717",
+    "surgery-midterm-q0718",
+    "surgery-midterm-q0719",
+    "surgery-midterm-q0720",
+    "surgery-midterm-q0721",
+    "surgery-midterm-q0722",
+    "surgery-midterm-q0723",
+    "surgery-midterm-q0724",
+    "surgery-midterm-q0725",
+    "surgery-midterm-q0726",
+    "surgery-midterm-q0727",
+    "surgery-midterm-q0728",
+    "surgery-midterm-q0729",
+    "surgery-midterm-q0730",
+    "surgery-midterm-q0731",
+    "surgery-midterm-q0732",
+    "surgery-midterm-q0733",
+    "surgery-midterm-q0734",
+    "surgery-midterm-q0735",
+    "surgery-midterm-q0736",
+    "surgery-midterm-q0737",
+    "surgery-midterm-q0738",
+    "surgery-midterm-q0739",
+    "surgery-midterm-q0740",
+    "surgery-midterm-q0741",
+    "surgery-midterm-q0742",
+    "surgery-midterm-q0743",
+    "surgery-midterm-q0744",
+    "surgery-midterm-q0745",
+    "surgery-midterm-q0746",
+    "surgery-midterm-q0747",
+    "surgery-midterm-q0748",
+    "surgery-midterm-q0749",
+    "surgery-midterm-q0750",
+    "surgery-midterm-q0751",
+    "surgery-midterm-q0752",
+    "surgery-midterm-q0753",
+    "surgery-midterm-q0754",
+    "surgery-midterm-q0755",
+    "surgery-midterm-q0756",
+    "surgery-midterm-q0757",
+    "surgery-midterm-q0758",
+    "surgery-midterm-q0759",
+    "surgery-midterm-q0760",
+    "surgery-midterm-q0761",
+    "surgery-midterm-q0762",
+    "surgery-midterm-q0763",
+    "surgery-midterm-q0764",
+    "surgery-midterm-q0765",
+    "surgery-midterm-q0766",
+    "surgery-midterm-q0767",
+    "surgery-midterm-q0768",
+    "surgery-midterm-q0769",
+    "surgery-midterm-q0770",
+    "surgery-midterm-q0771",
+    "surgery-midterm-q0772",
+    "surgery-midterm-q0773",
+    "surgery-midterm-q0774",
+    "surgery-midterm-q0775",
+    "surgery-midterm-q0776",
+    "surgery-midterm-q0777",
+    "surgery-midterm-q0778",
+    "surgery-midterm-q0779",
+    "surgery-midterm-q0780",
+    "surgery-midterm-q0781",
+    "surgery-midterm-q0782",
+    "surgery-midterm-q0783",
+    "surgery-midterm-q0784",
+    "surgery-midterm-q0785",
+    "surgery-midterm-q0786",
+    "surgery-midterm-q0787",
+    "surgery-midterm-q0788",
+    "surgery-midterm-q0789",
+    "surgery-midterm-q0790",
+    "surgery-midterm-q0791",
+    "surgery-midterm-q0792",
+    "surgery-midterm-q0793",
+    "surgery-midterm-q0794",
+    "surgery-midterm-q0795",
+    "surgery-midterm-q0796",
+    "surgery-midterm-q0797",
+    "surgery-midterm-q0798",
+    "surgery-midterm-q0799",
+    "surgery-midterm-q0800",
+    "surgery-midterm-q0801",
+    "surgery-midterm-q0802",
+    "surgery-midterm-q0803",
+    "surgery-midterm-q0804",
+    "surgery-midterm-q0805",
+    "surgery-midterm-q0806",
+    "surgery-midterm-q0807",
+    "surgery-midterm-q0808",
+    "surgery-midterm-q0809",
+    "surgery-midterm-q0810",
+    "surgery-midterm-q0811",
+    "surgery-midterm-q0812",
+    "surgery-midterm-q0813",
+    "surgery-midterm-q0814",
+    "surgery-midterm-q0815",
+    "surgery-midterm-q0816",
+    "surgery-midterm-q0817",
+    "surgery-midterm-q0818",
+    "surgery-midterm-q0819",
+    "surgery-midterm-q0820",
+    "surgery-midterm-q0821",
+    "surgery-midterm-q0822",
+    "surgery-midterm-q0823",
+    "surgery-midterm-q0824",
+    "surgery-midterm-q0825",
+    "surgery-midterm-q0826",
+    "surgery-midterm-q0827",
+    "surgery-midterm-q0828",
+    "surgery-midterm-q0829",
+    "surgery-midterm-q0830",
+    "surgery-midterm-q0831",
+    "surgery-midterm-q0832",
+    "surgery-midterm-q0833",
+    "surgery-midterm-q0834",
+    "surgery-midterm-q0835",
+    "surgery-midterm-q0836",
+    "surgery-midterm-q0837",
+    "surgery-midterm-q0838",
+    "surgery-midterm-q0839",
+    "surgery-midterm-q0840",
+    "surgery-midterm-q0841",
+    "surgery-midterm-q0842",
+    "surgery-midterm-q0843",
+    "surgery-midterm-q0844",
+    "surgery-midterm-q0845",
+    "surgery-midterm-q0846",
+    "surgery-midterm-q0847",
+    "surgery-midterm-q0848",
+    "surgery-midterm-q0849",
+    "surgery-midterm-q0850",
+    "surgery-midterm-q0851",
+    "surgery-midterm-q0852",
+    "surgery-midterm-q0853",
+    "surgery-midterm-q0854",
+    "surgery-midterm-q0855",
+    "surgery-midterm-q0856",
+    "surgery-midterm-q0857",
+    "surgery-midterm-q0858",
+    "surgery-midterm-q0859",
+    "surgery-midterm-q0860",
+    "surgery-midterm-q0861",
+    "surgery-midterm-q0862",
+    "surgery-midterm-q0863",
+    "surgery-midterm-q0864",
+    "surgery-midterm-q0865",
+    "surgery-midterm-q0866",
+    "surgery-midterm-q0867",
+    "surgery-midterm-q0868",
+    "surgery-midterm-q0869",
+    "surgery-midterm-q0870",
+    "surgery-midterm-q0871",
+    "surgery-midterm-q0872",
+    "surgery-midterm-q0873",
+    "surgery-midterm-q0874",
+    "surgery-midterm-q0875",
+    "surgery-midterm-q0876",
+    "surgery-midterm-q0877",
+    "surgery-midterm-q0878",
+    "surgery-midterm-q0879",
+    "surgery-midterm-q0880",
+    "surgery-midterm-q0881",
+    "surgery-midterm-q0882",
+    "surgery-midterm-q0883",
+    "surgery-midterm-q0884",
+    "surgery-midterm-q0885",
+    "surgery-midterm-q0886",
+    "surgery-midterm-q0887",
+    "surgery-midterm-q0888",
+    "surgery-midterm-q0889",
+    "surgery-midterm-q0890",
+    "surgery-midterm-q0891",
+    "surgery-midterm-q0892",
+    "surgery-midterm-q0893",
+    "surgery-midterm-q0894",
+    "surgery-midterm-q0895",
+    "surgery-midterm-q0896",
+    "surgery-midterm-q0897",
+    "surgery-midterm-q0898",
+    "surgery-midterm-q0899",
+    "surgery-midterm-q0900",
+    "surgery-midterm-q0901",
+    "surgery-midterm-q0902",
+    "surgery-midterm-q0903",
+    "surgery-midterm-q0904",
+    "surgery-midterm-q0905",
+    "surgery-midterm-q0906",
+    "surgery-midterm-q0907",
+    "surgery-midterm-q0908",
+    "surgery-midterm-q0909",
+    "surgery-midterm-q0910",
+    "surgery-midterm-q0911",
+    "surgery-midterm-q0912",
+    "surgery-midterm-q0913",
+    "surgery-midterm-q0914",
+    "surgery-midterm-q0915",
+    "surgery-midterm-q0916",
+    "surgery-midterm-q0917",
+    "surgery-midterm-q0918",
+    "surgery-midterm-q0919",
+    "surgery-midterm-q0920",
+    "surgery-midterm-q0921",
+    "surgery-midterm-q0922",
+    "surgery-midterm-q0923",
+    "surgery-midterm-q0924",
+    "surgery-midterm-q0925",
+    "surgery-midterm-q0926",
+    "surgery-midterm-q0927",
+    "surgery-midterm-q0928",
+    "surgery-midterm-q0929",
+    "surgery-midterm-q0930",
+    "surgery-midterm-q0931",
+    "surgery-midterm-q0932",
+    "surgery-midterm-q0933",
+    "surgery-midterm-q0934",
+    "surgery-midterm-q0935",
+    "surgery-midterm-q0936",
+    "surgery-midterm-q0937",
+    "surgery-midterm-q0938",
+    "surgery-midterm-q0939",
+    "surgery-midterm-q0940",
+    "surgery-midterm-q0941",
+    "surgery-midterm-q0942",
+    "surgery-midterm-q0943",
+    "surgery-final-q0959",
+    "surgery-final-q0969",
+    "surgery-final-q0984",
+    "surgery-final-q1028",
+    "surgery-final-q1032",
+    "surgery-final-q1036",
+    "surgery-final-q1129",
+    "surgery-final-q1154",
+    "surgery-final-q1157",
+    "surgery-final-q1159",
+    "surgery-final-q1160",
+    "surgery-final-q1161",
+    "surgery-final-q1163",
+    "surgery-final-q1164",
+    "surgery-final-q1166",
+    "surgery-final-q1167",
+    "surgery-final-q1169",
+    "surgery-final-q1170",
+    "surgery-final-q1173",
+    "surgery-final-q1174",
+    "surgery-final-q1176",
+    "surgery-final-q1179",
+    "surgery-final-q1181",
+    "surgery-final-q1182",
+    "surgery-final-q1185",
+    "surgery-final-q1186",
+    "surgery-final-q1187",
+    "surgery-final-q1190",
+    "surgery-final-q1191",
+    "surgery-final-q1193",
+    "surgery-final-q1194",
+    "surgery-final-q1195",
+    "surgery-final-q1212",
+    "surgery-final-q1216",
+    "surgery-final-q1217",
+    "surgery-final-q1218"
+  ],
+  "corrections": {
+    "surgery-midterm-q0001": {
+      "after": {
+        "stem": "A patient stabbed a single stab to the Anterior abdominal wall, vitals were taken: 80 pulse rate, 120/80 Bp, 99% on room air. What is the indication to take him to the OR?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Abdominal tenderness with rebound"
+          },
+          {
+            "id": "B",
+            "text": "Bile in NG tube"
+          },
+          {
+            "id": "C",
+            "text": "Don‘t excrete gas nor stool"
+          },
+          {
+            "id": "D",
+            "text": ""
+          }
+        ],
+        "sourceAnswer": "A",
+        "incompleteSource": true
+      },
+      "source": {
+        "filename": "surgery-mid.docx",
+        "sha256": "3625071140ca3cde8d29f410f8a8a71976a18b68190f384fa0b526c09d977eea",
+        "paragraphs": [
+          {
+            "index": 254,
+            "text": "Q21.A patient stabbed a single stab to the Anterior abdominal wall, vitals were taken: 80 pulse rate, 120/80 Bp, 99% on room air."
+          },
+          {
+            "index": 255,
+            "text": "What is the indication to take him to the OR"
+          },
+          {
+            "index": 256,
+            "text": "Abdominal tenderness with rebound"
+          },
+          {
+            "index": 257,
+            "text": "Bile in NG tube"
+          },
+          {
+            "index": 258,
+            "text": "Don‘t excrete gas nor stool"
+          },
+          {
+            "index": 259,
+            "text": " "
+          },
+          {
+            "index": 260,
+            "text": "Answer :A"
+          }
+        ]
+      },
+      "reason": "The question prompt became option A; the original first actual choice is rebound tenderness and Gift A refers to it. The source has only three clinical choices; do not invent D. Existing AI B must be remapped if retained."
+    },
+    "surgery-midterm-q0064": {
+      "after": {
+        "options": [
+          {
+            "id": "A",
+            "text": "Vomiting"
+          },
+          {
+            "id": "B",
+            "text": "Intestinal Fistula"
+          },
+          {
+            "id": "C",
+            "text": "Diarrhea"
+          },
+          {
+            "id": "D",
+            "text": "Constipation"
+          }
+        ],
+        "sourceAnswer": [
+          "B",
+          "C"
+        ],
+        "sourceAnswerNote": "B & C",
+        "incompleteSource": false
+      },
+      "source": {
+        "filename": "surgery-mid.docx",
+        "sha256": "3625071140ca3cde8d29f410f8a8a71976a18b68190f384fa0b526c09d977eea",
+        "paragraphs": [
+          {
+            "index": 3813,
+            "text": "Q3: PH: 7.2 ,­ Bicarbonate: 8 , CO2: 40 ­ with metabolic acidosis. What is the symptom that you may find that most likely caused this?"
+          },
+          {
+            "index": 3814,
+            "text": "A. Vomiting"
+          },
+          {
+            "index": 3815,
+            "text": "B. Intestinal Fistula"
+          },
+          {
+            "index": 3816,
+            "text": "C. Diarrhea"
+          },
+          {
+            "index": 3817,
+            "text": "D. Constipation Answer: B & C"
+          }
+        ]
+      },
+      "reason": "The source explicitly includes Answer: B & C inline after option D. Restoring the missing recorded key is not a medical override. ABG consistency still needs clinical review."
+    },
+    "surgery-midterm-q0177": {
+      "after": {
+        "stem": "A 29 years old lady involved in a road traffic accident. At presentation, she had the following vital sign: O sat 88% at room air, BP: 80/69, HR: 105MIN, Chest X-ray shown What is the first step in the management?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Bilateral chest tube insertion"
+          },
+          {
+            "id": "B",
+            "text": "Endotracheal intubation"
+          },
+          {
+            "id": "C",
+            "text": "Intravenous fluid"
+          },
+          {
+            "id": "D",
+            "text": ""
+          }
+        ],
+        "sourceAnswer": null,
+        "incompleteSource": true
+      },
+      "source": {
+        "filename": "surgery-mid.docx",
+        "sha256": "3625071140ca3cde8d29f410f8a8a71976a18b68190f384fa0b526c09d977eea",
+        "paragraphs": [
+          {
+            "index": 3220,
+            "text": "Q51: A 29 years old lady involved in a road traffic accident. At presentation, she had the following vital sign:  O sat 88% at room air,  BP: 80/69,  HR: 105MIN,  Chest X-ray shown"
+          },
+          {
+            "index": 3221,
+            "text": "What is the first step in the management"
+          },
+          {
+            "index": 3222,
+            "text": "Bilateral chest tube insertion"
+          },
+          {
+            "index": 3223,
+            "text": "Endotracheal intubation"
+          },
+          {
+            "index": 3224,
+            "text": "Intravenous fluid"
+          },
+          {
+            "index": 3225,
+            "text": "Answer: "
+          },
+          {
+            "index": 3226,
+            "text": ""
+          }
+        ]
+      },
+      "reason": "The management prompt became option A, shifting the real choices by one. No source key is present and D is absent; do not create a key. Existing AI C would mean IV fluid after restoration, so a fresh review is required."
+    },
+    "surgery-midterm-q0753": {
+      "after": {
+        "stem": "A man had a traffic accident with multiple fractures .. hypertensive , bradycardia with fixed dilated pupils and loss of gag and cough reflexes ..what is the diagnosis ?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Central brain herniation"
+          },
+          {
+            "id": "B",
+            "text": "Hemothorax"
+          },
+          {
+            "id": "C",
+            "text": "Cardiac tamponade"
+          },
+          {
+            "id": "D",
+            "text": "Ruptured bowel"
+          }
+        ],
+        "sourceAnswer": "A",
+        "incompleteSource": false
+      },
+      "source": {
+        "filename": "surgery-final.docx",
+        "sha256": "fb6a390293bd688ed04b0ad2af0a6b48b7148da747462ea7b2dbf5c8c173c75e",
+        "paragraphs": [
+          {
+            "index": 2745,
+            "text": "Q13: A man had a traffic accident with multiple fractures .. hypertensive , bradycardia with fixed dilated pupils and loss of gag and cough reflexes ..what is the diagnosis ?"
+          },
+          {
+            "index": 2746,
+            "text": "A. Central brain herniationB. HemothoraxC. Cardiac tamponade"
+          },
+          {
+            "index": 2747,
+            "text": "D. Ruptured bowel"
+          },
+          {
+            "index": 2748,
+            "text": "Answer: A"
+          }
+        ]
+      },
+      "reason": "The review script restored the real options but left A/B/C duplicated at the end of the stem. Original stem and options are separable and complete."
+    },
+    "surgery-final-q1217": {
+      "after": {
+        "options": [
+          {
+            "id": "A",
+            "text": "Hydrocelectomy"
+          },
+          {
+            "id": "B",
+            "text": "Observation"
+          },
+          {
+            "id": "C",
+            "text": "Needle aspiration"
+          },
+          {
+            "id": "D",
+            "text": "Orchidopexy"
+          }
+        ],
+        "sourceAnswer": "B",
+        "sourceAnswerNote": "B",
+        "incompleteSource": false
+      },
+      "source": {
+        "filename": "surgery-mid.docx",
+        "sha256": "3625071140ca3cde8d29f410f8a8a71976a18b68190f384fa0b526c09d977eea",
+        "paragraphs": [
+          {
+            "index": 3952,
+            "text": "Q20: A 6 months old baby brought to you complaining of left hydrocoele what is your management?"
+          },
+          {
+            "index": 3953,
+            "text": "A. Hydrocelectomy"
+          },
+          {
+            "index": 3954,
+            "text": "B. Observation"
+          },
+          {
+            "index": 3955,
+            "text": "C. Needle aspiration "
+          },
+          {
+            "index": 3956,
+            "text": "D. OrchidopexyAnswer: B "
+          }
+        ]
+      },
+      "reason": "Original D and Answer B were swallowed into runtime C. This restores a genuinely recorded Gift B and its original options, without adding a medical key."
+    },
+    "surgery-midterm-q0065": {
+      "after": {
+        "sourceAnswer": [
+          "A",
+          "B"
+        ],
+        "sourceAnswerNote": "A and B . If you had to choose one go with B because lactate is rapidly metabolised to bicarb."
+      },
+      "source": {
+        "filename": "surgery-final.docx",
+        "sha256": "fb6a390293bd688ed04b0ad2af0a6b48b7148da747462ea7b2dbf5c8c173c75e",
+        "paragraphs": [
+          {
+            "index": 2789,
+            "text": "Q19: What are the contents of ringer's solution?"
+          },
+          {
+            "index": 2790,
+            "text": "A. Sodium, chloride, lactate, potassium"
+          },
+          {
+            "index": 2791,
+            "text": "B. Sodium, chloride, potassium, calcium"
+          },
+          {
+            "index": 2792,
+            "text": "C. Calcium, lactate, sodium, magnesium"
+          },
+          {
+            "index": 2793,
+            "text": "D. Calcium, glucose, sodium, magnesium"
+          },
+          {
+            "index": 2794,
+            "text": "Answer: A and B . If you had to choose one go with B because lactate is rapidly metabolised to bicarb."
+          }
+        ]
+      },
+      "reason": "The displayed stem and option order match this original occurrence. The original Answer line explicitly joins or lists these alternatives with and, &, or or. Restore the source wording, including any uncertainty; this is not a clinical replacement key."
+    },
+    "surgery-midterm-q0257": {
+      "after": {
+        "sourceAnswer": [
+          "A",
+          "D"
+        ],
+        "sourceAnswerNote": "A or D (not sure)"
+      },
+      "source": {
+        "filename": "surgery-final.docx",
+        "sha256": "fb6a390293bd688ed04b0ad2af0a6b48b7148da747462ea7b2dbf5c8c173c75e",
+        "paragraphs": [
+          {
+            "index": 2936,
+            "text": "Q14: Newly born baby with flat reddish lesion covering half of his face, the lesion turns blue"
+          },
+          {
+            "index": 2937,
+            "text": "when crying but never increases in size. Which one of the following is the best modality in"
+          },
+          {
+            "index": 2938,
+            "text": "treating such case without scars?"
+          },
+          {
+            "index": 2939,
+            "text": "A. laser therapy sessions"
+          },
+          {
+            "index": 2940,
+            "text": "B. Radiotherapy because of proliferation potential"
+          },
+          {
+            "index": 2941,
+            "text": "C. Surgical treatment"
+          },
+          {
+            "index": 2942,
+            "text": "D. Steroids"
+          },
+          {
+            "index": 2943,
+            "text": "Answer: A or D (not sure) "
+          }
+        ]
+      },
+      "reason": "The displayed stem and option order match this original occurrence. The original Answer line explicitly joins or lists these alternatives with and, &, or or. Restore the source wording, including any uncertainty; this is not a clinical replacement key."
+    },
+    "surgery-midterm-q0320": {
+      "after": {
+        "sourceAnswer": [
+          "C",
+          "D"
+        ],
+        "sourceAnswerNote": "C&D"
+      },
+      "source": {
+        "filename": "surgery-mid.docx",
+        "sha256": "3625071140ca3cde8d29f410f8a8a71976a18b68190f384fa0b526c09d977eea",
+        "paragraphs": [
+          {
+            "index": 2586,
+            "text": "Q10: Female had an RTA, she was brought to the hospital by ambulance, the time she arrived she was unconscious with BP: 60/40 PR 60, we give her 2000 ml of 0.9NS and 4 PRBCs. After that her vitals are BP: 80/50 PR 60. What is next?"
+          },
+          {
+            "index": 2587,
+            "text": "A. Resuscitate her with more normal saline"
+          },
+          {
+            "index": 2588,
+            "text": "B. PRBCs "
+          },
+          {
+            "index": 2589,
+            "text": "C. IV infusion of dopamine "
+          },
+          {
+            "index": 2590,
+            "text": "D. IV infusion of dobutamine "
+          },
+          {
+            "index": 2591,
+            "text": "Answer: C&D "
+          }
+        ]
+      },
+      "reason": "The displayed stem and option order match this original occurrence. The original Answer line explicitly joins or lists these alternatives with and, &, or or. Restore the source wording, including any uncertainty; this is not a clinical replacement key."
+    },
+    "surgery-midterm-q0456": {
+      "after": {
+        "sourceAnswer": [
+          "C",
+          "D"
+        ],
+        "sourceAnswerNote": "C&D. Treatment of acute pancreatitis is supportive (IV fluid, Electrolyte replacement and analgesics). In case of infective necrosis we give antibiotics for preventing septic complications."
+      },
+      "source": {
+        "filename": "surgery-mid.docx",
+        "sha256": "3625071140ca3cde8d29f410f8a8a71976a18b68190f384fa0b526c09d977eea",
+        "paragraphs": [
+          {
+            "index": 3572,
+            "text": "Q26: Alcoholic patient came with nausea and vomiting, having pancreatitis. His brother is a dentist and told you to give him antibiotics to prevent exacerbation of infection. "
+          },
+          {
+            "index": 3573,
+            "text": "What will you do?"
+          },
+          {
+            "index": 3574,
+            "text": "A. Give iv antibiotics"
+          },
+          {
+            "index": 3575,
+            "text": "B. Give oral antibiotics"
+          },
+          {
+            "index": 3576,
+            "text": "C. Reassure"
+          },
+          {
+            "index": 3577,
+            "text": "D. Analgesics 1st "
+          },
+          {
+            "index": 3578,
+            "text": "Answer: C&D. Treatment of acute pancreatitis is supportive (IV fluid, Electrolyte replacement and analgesics). In case of infective necrosis we give antibiotics for preventing septic complications."
+          }
+        ]
+      },
+      "reason": "The displayed stem and option order match this original occurrence. The original Answer line explicitly joins or lists these alternatives with and, &, or or. Restore the source wording, including any uncertainty; this is not a clinical replacement key."
+    },
+    "surgery-midterm-q0481": {
+      "after": {
+        "sourceAnswer": [
+          "B",
+          "C"
+        ],
+        "sourceAnswerNote": "B and C"
+      },
+      "source": {
+        "filename": "surgery-final.docx",
+        "sha256": "fb6a390293bd688ed04b0ad2af0a6b48b7148da747462ea7b2dbf5c8c173c75e",
+        "paragraphs": [
+          {
+            "index": 3342,
+            "text": "Q16: What are the nerve fibers that carry out pain sensation from pancreas?"
+          },
+          {
+            "index": 3343,
+            "text": "A. Sympathetic"
+          },
+          {
+            "index": 3344,
+            "text": "B. Anterior vagus"
+          },
+          {
+            "index": 3345,
+            "text": "C. Posterior vagus"
+          },
+          {
+            "index": 3346,
+            "text": "D. Direct connection to lumbosacral"
+          },
+          {
+            "index": 3347,
+            "text": "Answer: B and C"
+          }
+        ]
+      },
+      "reason": "The displayed stem and option order match this original occurrence. The original Answer line explicitly joins or lists these alternatives with and, &, or or. Restore the source wording, including any uncertainty; this is not a clinical replacement key."
+    },
+    "surgery-midterm-q0505": {
+      "after": {
+        "sourceAnswer": [
+          "A",
+          "D"
+        ],
+        "sourceAnswerNote": "A & D, If the question wants to differentiate between crohn's and UC then the answer is D, but if its a general question about crohn's alone then most likely A:"
+      },
+      "source": {
+        "filename": "surgery-mid.docx",
+        "sha256": "3625071140ca3cde8d29f410f8a8a71976a18b68190f384fa0b526c09d977eea",
+        "paragraphs": [
+          {
+            "index": 5124,
+            "text": "Q15: A 25 year old female presents to your clinic complaining of 3 months history of recurrent crampy abdominal pain Which one of the following points in history is suggestive of crohn's disease?"
+          },
+          {
+            "index": 5125,
+            "text": "A. Family history of inflammatory bowel disease "
+          },
+          {
+            "index": 5126,
+            "text": "B. History of being non smoker"
+          },
+          {
+            "index": 5127,
+            "text": "C. History of bloody diarrhea "
+          },
+          {
+            "index": 5128,
+            "text": "D. History of perianal fissure"
+          },
+          {
+            "index": 5129,
+            "text": "Answer: A & D, If the question wants to differentiate between crohn's and UC then the answer is D, but if its a general question about crohn's alone then most likely A:"
+          }
+        ]
+      },
+      "reason": "The displayed stem and option order match this original occurrence. The original Answer line explicitly joins or lists these alternatives with and, &, or or. Restore the source wording, including any uncertainty; this is not a clinical replacement key."
+    },
+    "surgery-midterm-q0531": {
+      "after": {
+        "sourceAnswer": [
+          "A",
+          "C"
+        ],
+        "sourceAnswerNote": "A or C"
+      },
+      "source": {
+        "filename": "surgery-final.docx",
+        "sha256": "fb6a390293bd688ed04b0ad2af0a6b48b7148da747462ea7b2dbf5c8c173c75e",
+        "paragraphs": [
+          {
+            "index": 2773,
+            "text": "Q17: Which of the following is bad prognostic for colon cancer?"
+          },
+          {
+            "index": 2774,
+            "text": "A. Mucinous "
+          },
+          {
+            "index": 2775,
+            "text": "B. Depleted goblet cell "
+          },
+          {
+            "index": 2776,
+            "text": "C. Jaundice"
+          },
+          {
+            "index": 2777,
+            "text": "D. Gene changes"
+          },
+          {
+            "index": 2778,
+            "text": "Answer: A or C"
+          }
+        ]
+      },
+      "reason": "The displayed stem and option order match this original occurrence. The original Answer line explicitly joins or lists these alternatives with and, &, or or. Restore the source wording, including any uncertainty; this is not a clinical replacement key."
+    },
+    "surgery-midterm-q0605": {
+      "after": {
+        "sourceAnswer": [
+          "A",
+          "D"
+        ],
+        "sourceAnswerNote": "A or D - The doctor says D but Davidsons says A."
+      },
+      "source": {
+        "filename": "surgery-mid.docx",
+        "sha256": "3625071140ca3cde8d29f410f8a8a71976a18b68190f384fa0b526c09d977eea",
+        "paragraphs": [
+          {
+            "index": 5271,
+            "text": "Q36: A 60 year old previously healthy man presented with massive rectal bleeding . Which one of the following is the most common cause of bleeding?"
+          },
+          {
+            "index": 5272,
+            "text": "A. Diverticulosis of colon "
+          },
+          {
+            "index": 5273,
+            "text": "B. Ulcerative colitis "
+          },
+          {
+            "index": 5274,
+            "text": "C. External hemorrhoid"
+          },
+          {
+            "index": 5275,
+            "text": "D. Carcinoma of colon"
+          },
+          {
+            "index": 5276,
+            "text": "Answer: A or D - The doctor says D but Davidsons says A."
+          }
+        ]
+      },
+      "reason": "The displayed stem and option order match this original occurrence. The original Answer line explicitly joins or lists these alternatives with and, &, or or. Restore the source wording, including any uncertainty; this is not a clinical replacement key."
+    },
+    "surgery-midterm-q0641": {
+      "after": {
+        "sourceAnswer": [
+          "A",
+          "B"
+        ],
+        "sourceAnswerNote": "A&B"
+      },
+      "source": {
+        "filename": "surgery-mid.docx",
+        "sha256": "3625071140ca3cde8d29f410f8a8a71976a18b68190f384fa0b526c09d977eea",
+        "paragraphs": [
+          {
+            "index": 3488,
+            "text": "Q16 : A 32 year old man who is truck driver , developed multiple perianal fistulas, what's the"
+          },
+          {
+            "index": 3489,
+            "text": "most appropriate surgical treatment?"
+          },
+          {
+            "index": 3490,
+            "text": "A. Fistulectomy"
+          },
+          {
+            "index": 3491,
+            "text": "B. Seton"
+          },
+          {
+            "index": 3492,
+            "text": "C. Vasodilators"
+          },
+          {
+            "index": 3493,
+            "text": "D. Warm bath "
+          },
+          {
+            "index": 3494,
+            "text": "Answer: A&B"
+          }
+        ]
+      },
+      "reason": "The displayed stem and option order match this original occurrence. The original Answer line explicitly joins or lists these alternatives with and, &, or or. Restore the source wording, including any uncertainty; this is not a clinical replacement key."
+    },
+    "surgery-midterm-q0644": {
+      "after": {
+        "sourceAnswer": [
+          "B",
+          "D"
+        ],
+        "sourceAnswerNote": "D and B remember that ruptured Diverticulitis is category B emergency"
+      },
+      "source": {
+        "filename": "surgery-mid.docx",
+        "sha256": "3625071140ca3cde8d29f410f8a8a71976a18b68190f384fa0b526c09d977eea",
+        "paragraphs": [
+          {
+            "index": 4179,
+            "text": "Q12: A 72 year old lady known to have DM, Hypertension and high LDL, presented 1 day ago with diffuse rectal bleeding and severe abdominal pain. What is the diagnosis?"
+          },
+          {
+            "index": 4180,
+            "text": "A. Sigmoid cancer"
+          },
+          {
+            "index": 4181,
+            "text": "B. Ischemic bowel"
+          },
+          {
+            "index": 4182,
+            "text": "C. Hemorrhoid with bleeding"
+          },
+          {
+            "index": 4183,
+            "text": "D. Diverticulitis"
+          },
+          {
+            "index": 4184,
+            "text": "Answer: D and B remember that ruptured Diverticulitis is category B emergency "
+          }
+        ]
+      },
+      "reason": "The displayed stem and option order match this original occurrence. The original Answer line explicitly joins or lists these alternatives with and, &, or or. Restore the source wording, including any uncertainty; this is not a clinical replacement key."
+    },
+    "surgery-midterm-q0726": {
+      "after": {
+        "sourceAnswer": [
+          "A",
+          "C"
+        ],
+        "sourceAnswerNote": "A or C"
+      },
+      "source": {
+        "filename": "surgery-mid.docx",
+        "sha256": "3625071140ca3cde8d29f410f8a8a71976a18b68190f384fa0b526c09d977eea",
+        "paragraphs": [
+          {
+            "index": 549,
+            "text": "Q11: Which of the following is a rare presentation in progressive lung cancer?"
+          },
+          {
+            "index": 550,
+            "text": "A. Urinary retention "
+          },
+          {
+            "index": 551,
+            "text": "B. Cough and hemoptysis "
+          },
+          {
+            "index": 552,
+            "text": "C. Hypercalcemia"
+          },
+          {
+            "index": 553,
+            "text": "D. Headache"
+          },
+          {
+            "index": 554,
+            "text": ""
+          },
+          {
+            "index": 555,
+            "text": "Answer: A or C"
+          }
+        ]
+      },
+      "reason": "The displayed stem and option order match this original occurrence. The original Answer line explicitly joins or lists these alternatives with and, &, or or. Restore the source wording, including any uncertainty; this is not a clinical replacement key."
+    },
+    "surgery-midterm-q0750": {
+      "after": {
+        "sourceAnswer": [
+          "B",
+          "C"
+        ],
+        "sourceAnswerNote": "C & B"
+      },
+      "source": {
+        "filename": "surgery-mid.docx",
+        "sha256": "3625071140ca3cde8d29f410f8a8a71976a18b68190f384fa0b526c09d977eea",
+        "paragraphs": [
+          {
+            "index": 3071,
+            "text": "Q31: A 20 years old male is admitted to the ER. He was with his friends at a restaurant and suddenly he started complaining of shortness of breath ‬ What is seen in this patient ?"
+          },
+          {
+            "index": 3072,
+            "text": "A. Laryngeal spasm"
+          },
+          {
+            "index": 3073,
+            "text": "B. Laryngeal edema"
+          },
+          {
+            "index": 3074,
+            "text": "C. Bronchospasm"
+          },
+          {
+            "index": 3075,
+            "text": "D. Tracheal compression"
+          },
+          {
+            "index": 3076,
+            "text": "Answer: C & B"
+          }
+        ]
+      },
+      "reason": "The displayed stem and option order match this original occurrence. The original Answer line explicitly joins or lists these alternatives with and, &, or or. Restore the source wording, including any uncertainty; this is not a clinical replacement key."
+    },
+    "surgery-midterm-q0520": {
+      "after": {
+        "images": []
+      },
+      "source": {
+        "filename": "surgery-mid.docx",
+        "sha256": "3625071140ca3cde8d29f410f8a8a71976a18b68190f384fa0b526c09d977eea",
+        "paragraphs": [
+          {
+            "index": 2676,
+            "text": "Q22: Which of the following is the recommended age group for starting screening for colorectal cancer?"
+          },
+          {
+            "index": 2677,
+            "text": "A. 50 "
+          },
+          {
+            "index": 2678,
+            "text": "B. 45 "
+          },
+          {
+            "index": 2679,
+            "text": "C. 25 "
+          },
+          {
+            "index": 2680,
+            "text": "D. 40"
+          },
+          {
+            "index": 2681,
+            "text": "Answer: B"
+          },
+          {
+            "index": 2682,
+            "text": ""
+          },
+          {
+            "index": 2683,
+            "text": "Q23: What is the type of hernia in this picture?"
+          },
+          {
+            "index": 2684,
+            "text": "A. Rolling"
+          },
+          {
+            "index": 2685,
+            "text": "B. Mixed"
+          },
+          {
+            "index": 2686,
+            "text": "C. Paraesophageal"
+          },
+          {
+            "index": 2687,
+            "text": "D. Hiatal"
+          },
+          {
+            "index": 2688,
+            "text": "Answer: B"
+          }
+        ]
+      },
+      "reason": "The importer attached a floating diagram between questions to preceding colorectal screening Q22. The diagram is a hiatal hernia and belongs to immediately following Q23, which explicitly asks for its hernia type."
+    },
+    "surgery-midterm-q0387": {
+      "after": {
+        "images": [
+          "question-media/surgery/midterm-6f2d7023c7864bbc.png"
+        ]
+      },
+      "source": {
+        "filename": "surgery-mid.docx",
+        "sha256": "3625071140ca3cde8d29f410f8a8a71976a18b68190f384fa0b526c09d977eea",
+        "paragraphs": [
+          {
+            "index": 2676,
+            "text": "Q22: Which of the following is the recommended age group for starting screening for colorectal cancer?"
+          },
+          {
+            "index": 2677,
+            "text": "A. 50 "
+          },
+          {
+            "index": 2678,
+            "text": "B. 45 "
+          },
+          {
+            "index": 2679,
+            "text": "C. 25 "
+          },
+          {
+            "index": 2680,
+            "text": "D. 40"
+          },
+          {
+            "index": 2681,
+            "text": "Answer: B"
+          },
+          {
+            "index": 2682,
+            "text": ""
+          },
+          {
+            "index": 2683,
+            "text": "Q23: What is the type of hernia in this picture?"
+          },
+          {
+            "index": 2684,
+            "text": "A. Rolling"
+          },
+          {
+            "index": 2685,
+            "text": "B. Mixed"
+          },
+          {
+            "index": 2686,
+            "text": "C. Paraesophageal"
+          },
+          {
+            "index": 2687,
+            "text": "D. Hiatal"
+          },
+          {
+            "index": 2688,
+            "text": "Answer: B"
+          }
+        ]
+      },
+      "reason": "The immediately preceding image-only paragraph 2682 contains the matching hiatal-hernia diagram; Q23 asks its type and is keyed B Mixed. There is no intervening question. The source image is byte-for-byte the existing runtime media file that was wrongly assigned to Q22."
+    }
+  },
+  "placements": {
+    "surgery-midterm-q0132": {
+      "before": "Trauma",
+      "lecture": "Arterial Disease",
+      "reason": "The choices ask arterial localization of calf pain; the stem is too sparse to select one artery."
+    },
+    "surgery-midterm-q0148": {
+      "before": "Trauma",
+      "lecture": "Gastric Outlet, Small and Large Bowel Obstruction",
+      "reason": "Adhesive small-bowel obstruction years after laparotomy, not acute trauma assessment."
+    },
+    "surgery-midterm-q0186": {
+      "before": "Trauma",
+      "lecture": "Arterial Disease",
+      "reason": "Transient unilateral limb weakness and carotid/MCA disease options address cerebrovascular arterial disease."
+    },
+    "surgery-midterm-q0082": {
+      "before": "Surgical Infection",
+      "lecture": "Common Thoracic and Lung Disease",
+      "reason": "Lung abscess management is explicitly taught in the Thoracic lecture."
+    },
+    "surgery-midterm-q0639": {
+      "before": "Surgical Infection",
+      "lecture": "Common Anorectal Conditions",
+      "reason": "Draining natal-cleft pilonidal sinus is an anorectal topic."
+    },
+    "surgery-midterm-q0258": {
+      "before": "Wound Healing & Management",
+      "lecture": "Venous Disease",
+      "reason": "Telangiectasia is a superficial venous/vascular classification topic, not wound repair."
+    },
+    "surgery-midterm-q0166": {
+      "before": "Trauma",
+      "lecture": "Common Neurosurgical Problems",
+      "reason": "Dental infection with a ring-enhancing brain abscess; no traumatic presentation."
+    },
+    "surgery-midterm-q0174": {
+      "before": "Trauma",
+      "lecture": "Common Neurosurgical Problems",
+      "reason": "Brain tumor with vasogenic edema treated with dexamethasone; no trauma."
+    },
+    "surgery-midterm-q0193": {
+      "before": "Trauma",
+      "lecture": "Common Neurosurgical Problems",
+      "reason": "General headache warning signs without an injury."
+    },
+    "surgery-midterm-q0211": {
+      "before": "Trauma",
+      "lecture": "Common Neurosurgical Problems",
+      "reason": "Child with spinal compression symptoms without an injury."
+    },
+    "surgery-midterm-q0230": {
+      "before": "Wound Healing & Management",
+      "lecture": "Common Skin and Soft Tissue Tumors",
+      "reason": "Question asks diagnosis or treatment of a skin/soft-tissue tumor, cyst, or vascular lesion rather than wound healing."
+    },
+    "surgery-midterm-q0243": {
+      "before": "Wound Healing & Management",
+      "lecture": "Common Skin and Soft Tissue Tumors",
+      "reason": "Question asks diagnosis or treatment of a skin/soft-tissue tumor, cyst, or vascular lesion rather than wound healing."
+    },
+    "surgery-midterm-q0247": {
+      "before": "Wound Healing & Management",
+      "lecture": "Common Skin and Soft Tissue Tumors",
+      "reason": "Question asks diagnosis or treatment of a skin/soft-tissue tumor, cyst, or vascular lesion rather than wound healing."
+    },
+    "surgery-midterm-q0248": {
+      "before": "Wound Healing & Management",
+      "lecture": "Common Skin and Soft Tissue Tumors",
+      "reason": "Question asks diagnosis or treatment of a skin/soft-tissue tumor, cyst, or vascular lesion rather than wound healing."
+    },
+    "surgery-midterm-q0249": {
+      "before": "Wound Healing & Management",
+      "lecture": "Common Skin and Soft Tissue Tumors",
+      "reason": "Question asks diagnosis or treatment of a skin/soft-tissue tumor, cyst, or vascular lesion rather than wound healing."
+    },
+    "surgery-midterm-q0250": {
+      "before": "Wound Healing & Management",
+      "lecture": "Common Skin and Soft Tissue Tumors",
+      "reason": "Question asks diagnosis or treatment of a skin/soft-tissue tumor, cyst, or vascular lesion rather than wound healing."
+    },
+    "surgery-midterm-q0251": {
+      "before": "Wound Healing & Management",
+      "lecture": "Common Skin and Soft Tissue Tumors",
+      "reason": "Question asks diagnosis or treatment of a skin/soft-tissue tumor, cyst, or vascular lesion rather than wound healing."
+    },
+    "surgery-midterm-q0252": {
+      "before": "Wound Healing & Management",
+      "lecture": "Common Skin and Soft Tissue Tumors",
+      "reason": "Question asks diagnosis or treatment of a skin/soft-tissue tumor, cyst, or vascular lesion rather than wound healing."
+    },
+    "surgery-midterm-q0253": {
+      "before": "Wound Healing & Management",
+      "lecture": "Common Skin and Soft Tissue Tumors",
+      "reason": "Question asks diagnosis or treatment of a skin/soft-tissue tumor, cyst, or vascular lesion rather than wound healing."
+    },
+    "surgery-midterm-q0256": {
+      "before": "Wound Healing & Management",
+      "lecture": "Common Skin and Soft Tissue Tumors",
+      "reason": "Question asks diagnosis or treatment of a skin/soft-tissue tumor, cyst, or vascular lesion rather than wound healing."
+    },
+    "surgery-midterm-q0257": {
+      "before": "Wound Healing & Management",
+      "lecture": "Common Skin and Soft Tissue Tumors",
+      "reason": "Question asks diagnosis or treatment of a skin/soft-tissue tumor, cyst, or vascular lesion rather than wound healing."
+    },
+    "surgery-midterm-q0261": {
+      "before": "Wound Healing & Management",
+      "lecture": "Common Skin and Soft Tissue Tumors",
+      "reason": "Question asks diagnosis or treatment of a skin/soft-tissue tumor, cyst, or vascular lesion rather than wound healing."
+    },
+    "surgery-midterm-q0263": {
+      "before": "Wound Healing & Management",
+      "lecture": "Common Skin and Soft Tissue Tumors",
+      "reason": "Question asks diagnosis or treatment of a skin/soft-tissue tumor, cyst, or vascular lesion rather than wound healing."
+    },
+    "surgery-midterm-q0264": {
+      "before": "Wound Healing & Management",
+      "lecture": "Common Skin and Soft Tissue Tumors",
+      "reason": "Question asks diagnosis or treatment of a skin/soft-tissue tumor, cyst, or vascular lesion rather than wound healing."
+    },
+    "surgery-midterm-q0265": {
+      "before": "Wound Healing & Management",
+      "lecture": "Common Skin and Soft Tissue Tumors",
+      "reason": "Question asks diagnosis or treatment of a skin/soft-tissue tumor, cyst, or vascular lesion rather than wound healing."
+    },
+    "surgery-midterm-q0266": {
+      "before": "Wound Healing & Management",
+      "lecture": "Common Skin and Soft Tissue Tumors",
+      "reason": "Question asks diagnosis or treatment of a skin/soft-tissue tumor, cyst, or vascular lesion rather than wound healing."
+    },
+    "surgery-midterm-q0268": {
+      "before": "Wound Healing & Management",
+      "lecture": "Common Skin and Soft Tissue Tumors",
+      "reason": "Question asks diagnosis or treatment of a skin/soft-tissue tumor, cyst, or vascular lesion rather than wound healing."
+    },
+    "surgery-midterm-q0269": {
+      "before": "Wound Healing & Management",
+      "lecture": "Common Skin and Soft Tissue Tumors",
+      "reason": "Question asks diagnosis or treatment of a skin/soft-tissue tumor, cyst, or vascular lesion rather than wound healing."
+    },
+    "surgery-midterm-q0372": {
+      "before": "Abdominal Wall, Umbilicus and Hernia",
+      "lecture": "Neck Swellings",
+      "reason": "The stem is Zenker/pharyngeal pouch and is directly taught in Neck p11; current Hernia classification is wrong."
+    },
+    "surgery-midterm-q0384": {
+      "before": "Abdominal Wall, Umbilicus and Hernia",
+      "lecture": "Neck Swellings",
+      "reason": "Duplicate pharyngeal-pouch presentation, directly taught in Neck p11; preserve existing visibility when considering transfer."
+    },
+    "surgery-midterm-q0449": {
+      "before": "Upper Abdominal Pain",
+      "lecture": "Common Neurosurgical Problems",
+      "reason": "Birth brachial-plexus injury is unrelated to Upper Abdominal Pain; the available options also omit classic C5–C6. No matching source deck was found for this precise topic."
+    },
+    "surgery-midterm-q0464": {
+      "before": "Upper Abdominal Pain",
+      "lecture": "Surgical Complications",
+      "reason": "This tests postoperative pulmonary embolism following immobility rather than liver-cyst diagnosis."
+    },
+    "surgery-midterm-q0466": {
+      "before": "Upper Abdominal Pain",
+      "lecture": "Nutritional Support of Surgical Patients",
+      "reason": "This is kwashiorkor, not Upper Abdominal Pain."
+    },
+    "surgery-midterm-q0475": {
+      "before": "Upper Abdominal Pain",
+      "lecture": "Common Congenital Neurosurgical Diseases",
+      "reason": "This tests meningocele contents rather than upper abdominal disease; no specific teaching page is claimed."
+    },
+    "surgery-midterm-q0563": {
+      "before": "Generalized Abdominal Pain",
+      "lecture": "Gastric Outlet, Small and Large Bowel Obstruction",
+      "reason": "The surgical history points to possible adhesive obstruction; stem remains incomplete."
+    },
+    "surgery-midterm-q0568": {
+      "before": "Generalized Abdominal Pain",
+      "lecture": "Lower Abdominal Pain",
+      "reason": "The chronic diarrhea/weight-loss case tests IBD; its options do not contain a characteristic Crohn feature."
+    },
+    "surgery-midterm-q0584": {
+      "before": "Gastric Outlet, Small and Large Bowel Obstruction",
+      "lecture": "Common Skin and Soft Tissue Tumors",
+      "reason": "The stem tests infantile hemangioma proliferation and is unrelated to bowel obstruction."
+    },
+    "surgery-midterm-q0587": {
+      "before": "Perforation of Viscus",
+      "lecture": "Gastric Outlet, Small and Large Bowel Obstruction",
+      "reason": "It asks initial management of uncomplicated postoperative adhesive SBO, not current perforation."
+    },
+    "surgery-midterm-q0598": {
+      "before": "Gastrointestinal Hemorrhage",
+      "lecture": "Gastric Outlet, Small and Large Bowel Obstruction",
+      "reason": "It is the same adhesive SBO treatment case, not GI hemorrhage."
+    },
+    "surgery-midterm-q0624": {
+      "before": "Jaundice",
+      "lecture": "Breast Disease",
+      "reason": "It asks about nipple discharge and duct ectasia, not jaundice."
+    },
+    "surgery-midterm-q0678": {
+      "before": "Breast Disease",
+      "lecture": "Lower Abdominal Pain",
+      "reason": "It tests bowel radiation injury, directly discussed in Central/Lower p12; breast cancer is only past history."
+    },
+    "surgery-midterm-q0698": {
+      "before": "Breast Disease",
+      "lecture": "Lower Abdominal Pain",
+      "reason": "It tests MSH2/Lynch colorectal cancer risk rather than breast disease."
+    },
+    "surgery-midterm-q0801": {
+      "before": "Lower Abdominal Pain",
+      "lecture": "Principles of Surgical Oncology",
+      "reason": "It asks the serotonin marker of carcinoid/neuroendocrine tumor rather than a lower-pain presentation."
+    },
+    "surgery-midterm-q0841": {
+      "before": "Arterial Disease",
+      "lecture": "Infarction of Viscus",
+      "reason": "This asks atrial fibrillation embolism to the superior mesenteric artery, a bowel-infarction topic rather than lower-limb arterial disease."
+    },
+    "surgery-midterm-q0743": {
+      "before": "Common Thoracic and Lung Disease",
+      "lecture": "Surgical Complications",
+      "reason": "Ventilator-associated pneumonia risk, rather than primary thoracic disease."
+    },
+    "surgery-midterm-q0745": {
+      "before": "Common Thoracic and Lung Disease",
+      "lecture": "Trauma",
+      "reason": "Blunt left-upper-quadrant trauma and acute imaging assessment."
+    },
+    "surgery-midterm-q0747": {
+      "before": "Common Thoracic and Lung Disease",
+      "lecture": "Nutritional Support of Surgical Patients",
+      "reason": "Cancer nutritional support, rather than thoracic diagnosis."
+    },
+    "surgery-midterm-q0753": {
+      "before": "Common Thoracic and Lung Disease",
+      "lecture": "Trauma",
+      "reason": "Emergency assessment of intracranial herniation after head injury."
+    },
+    "surgery-midterm-q0758": {
+      "before": "Common Thoracic and Lung Disease",
+      "lecture": "Surgical Complications",
+      "reason": "Postoperative pneumonia."
+    },
+    "surgery-midterm-q0759": {
+      "before": "Common Thoracic and Lung Disease",
+      "lecture": "Surgical Complications",
+      "reason": "Postoperative pneumonia."
+    },
+    "surgery-midterm-q0762": {
+      "before": "Common Thoracic and Lung Disease",
+      "lecture": "Surgical Complications",
+      "reason": "Assessment of early postoperative fever."
+    },
+    "surgery-midterm-q0893": {
+      "before": "Lower Abdominal Pain",
+      "lecture": "Infarction of Viscus",
+      "reason": "Sudden abdominal pain out of proportion to examination after atrial fibrillation is acute mesenteric ischemia."
+    }
+  },
+  "lectureVisibilityRepairs": [
+    "surgery-midterm-q0334",
+    "surgery-midterm-q0335",
+    "surgery-midterm-q0336",
+    "surgery-midterm-q0338",
+    "surgery-midterm-q0339",
+    "surgery-midterm-q0651",
+    "surgery-midterm-q0652",
+    "surgery-midterm-q0653",
+    "surgery-midterm-q0654",
+    "surgery-midterm-q0655",
+    "surgery-midterm-q0656",
+    "surgery-midterm-q0657",
+    "surgery-midterm-q0658",
+    "surgery-midterm-q0659",
+    "surgery-midterm-q0660",
+    "surgery-midterm-q0661",
+    "surgery-midterm-q0662",
+    "surgery-midterm-q0663",
+    "surgery-midterm-q0664",
+    "surgery-midterm-q0665",
+    "surgery-midterm-q0666",
+    "surgery-midterm-q0667",
+    "surgery-midterm-q0668",
+    "surgery-midterm-q0669",
+    "surgery-midterm-q0670",
+    "surgery-midterm-q0671",
+    "surgery-midterm-q0672",
+    "surgery-midterm-q0673",
+    "surgery-midterm-q0674",
+    "surgery-midterm-q0675",
+    "surgery-midterm-q0676",
+    "surgery-midterm-q0677",
+    "surgery-midterm-q0678",
+    "surgery-midterm-q0679",
+    "surgery-midterm-q0680",
+    "surgery-midterm-q0681",
+    "surgery-midterm-q0682",
+    "surgery-midterm-q0683",
+    "surgery-midterm-q0684",
+    "surgery-midterm-q0685",
+    "surgery-midterm-q0686",
+    "surgery-midterm-q0687",
+    "surgery-midterm-q0688",
+    "surgery-midterm-q0689",
+    "surgery-midterm-q0690",
+    "surgery-midterm-q0691",
+    "surgery-midterm-q0692",
+    "surgery-midterm-q0693",
+    "surgery-midterm-q0694",
+    "surgery-midterm-q0695",
+    "surgery-midterm-q0696",
+    "surgery-midterm-q0697",
+    "surgery-midterm-q0698",
+    "surgery-midterm-q0699",
+    "surgery-midterm-q0700",
+    "surgery-midterm-q0701",
+    "surgery-midterm-q0702",
+    "surgery-midterm-q0703",
+    "surgery-midterm-q0704",
+    "surgery-midterm-q0705",
+    "surgery-midterm-q0706",
+    "surgery-midterm-q0707",
+    "surgery-midterm-q0708",
+    "surgery-midterm-q0709",
+    "surgery-midterm-q0710",
+    "surgery-midterm-q0711",
+    "surgery-midterm-q0712",
+    "surgery-midterm-q0713"
+  ],
+  "primaryMidterm": 934,
+  "existingMidLectureFinalIds": [
+    "surgery-final-q0959",
+    "surgery-final-q0969",
+    "surgery-final-q0984",
+    "surgery-final-q1028",
+    "surgery-final-q1032",
+    "surgery-final-q1036",
+    "surgery-final-q1129",
+    "surgery-final-q1154",
+    "surgery-final-q1157",
+    "surgery-final-q1159",
+    "surgery-final-q1160",
+    "surgery-final-q1161",
+    "surgery-final-q1163",
+    "surgery-final-q1164",
+    "surgery-final-q1166",
+    "surgery-final-q1167",
+    "surgery-final-q1169",
+    "surgery-final-q1170",
+    "surgery-final-q1173",
+    "surgery-final-q1174",
+    "surgery-final-q1176",
+    "surgery-final-q1179",
+    "surgery-final-q1181",
+    "surgery-final-q1182",
+    "surgery-final-q1185",
+    "surgery-final-q1186",
+    "surgery-final-q1187",
+    "surgery-final-q1190",
+    "surgery-final-q1191",
+    "surgery-final-q1193",
+    "surgery-final-q1194",
+    "surgery-final-q1195",
+    "surgery-final-q1212",
+    "surgery-final-q1216",
+    "surgery-final-q1217",
+    "surgery-final-q1218"
+  ],
+  "lectureBased": 468,
+  "clinical": 502,
+  "confidence": {
+    "supported": 634,
+    "preference": 282,
+    "unresolved": 54
+  },
+  "objections": 301,
+  "uniqueSlideImages": 173,
+  "imageBytes": 58759565,
+  "sources": [
+    {
+      "id": "1-_0C8SPWRFv6md8PU5lDMQEnxUFSOT1h",
+      "title": "L17- Common Anorectal Conditions.pdf",
+      "team": "Team 445",
+      "pageCount": 11,
+      "sha256": "51942e3d4a777ba0a1d597500c4b7ee37e73fad87be44934ce7b3f1df0b60bd3"
+    },
+    {
+      "id": "13i6jgPUXHLH-IPUxPOvAhMxqDtlPc92b",
+      "title": "L4) Transfusion of blood and plasma products.pdf",
+      "team": "Team 444",
+      "pageCount": 20,
+      "sha256": "46b87557d793ae64987ee6dbfc93e39c28120d2cf5aada47ae60201662052dbb"
+    },
+    {
+      "id": "14ONJdgC0SMtDG57WybK7J_Ze29BYjszc",
+      "title": "14) 351 SURG Venous Diseases, Lymphatic Diseases, and Compartment.pdf",
+      "team": "Current 445 male lecturer slides",
+      "pageCount": 17,
+      "sha256": "98789cbf502cd6bec129712b6cc47401ef05bfe021e68d505feb737b48a0b149"
+    },
+    {
+      "id": "1Bar3aLYkoEb35LViqQCjPVo7hfX54fzu",
+      "title": "L9-Presentation & Management Of Common Thoracic Diseases.pdf",
+      "team": "Team 445",
+      "pageCount": 15,
+      "sha256": "f10220fe51d13d5009e9d45375963f0e37c6412e91058f5fc8d059ba5de53072"
+    },
+    {
+      "id": "1Ee2mJnZTCx9OhB6ELlhrvUCi3bYNWbNG",
+      "title": "T6. Bowel obstruction and ischemia.pdf",
+      "team": "Team 443",
+      "pageCount": 14,
+      "sha256": "b41ff3eb62d3468abbc618f72d13922e96870abf3c68824d147e14e6ebb45f0f"
+    },
+    {
+      "id": "1Fv6NiRwldacQWhOXGWJC2bupy3zaNskf",
+      "title": "L2 - Intravenous  Fluids & Electrolytes",
+      "team": "Team 445",
+      "pageCount": 12,
+      "sha256": "d18c5bc4d980e872c2dd4520b39a7d3c25ee7fd55a746fe9d4e054a318a1616d"
+    },
+    {
+      "id": "1Gkgcq9GDUW8CzmkOu0XXllGq5DPQC8n4",
+      "title": "L21- Pathophysiology and interpretation of pain in surgical patient.pdf",
+      "team": "Team 445",
+      "pageCount": 14,
+      "sha256": "8801b8950673407f26b2e733542019f595d42489da44231697cb8fd82aca697a"
+    },
+    {
+      "id": "1Gq5tAReDxiCth4iwAfm0myrrgcE1CY-T",
+      "title": "L10 Venous Diseases.pdf",
+      "team": "Team 444",
+      "pageCount": 17,
+      "sha256": "c1713f8293613b3727a8dc04241734146c56d24bbaa4f76a750bb7429d0477f3"
+    },
+    {
+      "id": "1IFhv3ubcmyoUs_eOapfabSNC9XygQ1tv",
+      "title": "L5. Shock and metabolic response to injury .pdf",
+      "team": "Team 445",
+      "pageCount": 14,
+      "sha256": "351c7c2be00206116696e480f94f8625c27437b4295da074b55374b63fba6950"
+    },
+    {
+      "id": "1KO2nKtdVPsLFzbt6BNnCOiShPYxymJic",
+      "title": "L1) Trauma.pdf",
+      "team": "Team 444",
+      "pageCount": 18,
+      "sha256": "633d43306efcb7b935f3ffd7d1ef2e068c46274371d629db1646e45d5fffa2dd"
+    },
+    {
+      "id": "1NPqDumcxC1ZYmHE8NjtJcMtF-fd_w0lP",
+      "title": "L1- Introduction to surgery (1).pdf",
+      "team": "Team 445",
+      "pageCount": 8,
+      "sha256": "ed055db4c2920087cc721fc3c40a950c15781e083a40f14c6c116dfc9e84f712"
+    },
+    {
+      "id": "1NzTkTWyZmtT3GdvxBeU5whfRthnSHRAJ",
+      "title": "L9) Arterial Diseases",
+      "team": "Team 444",
+      "pageCount": 31,
+      "sha256": "404dbae9b0a8662333a359813f09d3a1ac3ea329e331742b44e5eb88512459af"
+    },
+    {
+      "id": "1RjXe1PYHzD0n17cn3ycd-TLs2dr5FJ-E",
+      "title": "T1) Generalized abdominal pain, and Upper abdominal pain",
+      "team": "Team 444",
+      "pageCount": 12,
+      "sha256": "3ced2d55966297b42a4b1521063eb3a45812995f32621739d60b1dbca73f103f"
+    },
+    {
+      "id": "1Uv12cW8wfiQ_KxRe4yLCDUO2HSGsXTSn",
+      "title": "T4. Gastric Outlet, Small and Large Bowel Obstruction (Tutorial).pdf",
+      "team": "Team 443",
+      "pageCount": 24,
+      "sha256": "8185f50902da5139b3bf2a60b9602fe85b51c5b2120c3ea79634a951fde74184"
+    },
+    {
+      "id": "1Vn6cJftQ9-X1IrBoRDuaf0su6q9N19h8",
+      "title": "L7- Principles of Surgical Oncology.pdf",
+      "team": "Team 445",
+      "pageCount": 13,
+      "sha256": "c1b7fd58c0d544797920db0ffde1b7b942eb1300a8e83b2203772381127c1dde"
+    },
+    {
+      "id": "1XCHk20UxoYR7Y-t7XpVwDCDPgxczLUzD",
+      "title": "L11 Vascular investigations.pdf",
+      "team": "Team 444",
+      "pageCount": 16,
+      "sha256": "7f425595eee5c977181256b1a3bdcb95aa7398154ca4220e1983a9a677a2127a"
+    },
+    {
+      "id": "1Xp8XihE2_s94k1Sd2mA0Q9e0cQw4pZa8",
+      "title": "T1. Generalized abdominal pain and upper abdominal pain .pdf",
+      "team": "Team 443",
+      "pageCount": 29,
+      "sha256": "646123c2095a05d41dc58c8c66207435dfcb4b9afc2ae86fcfef08884d83a94e"
+    },
+    {
+      "id": "1ZrgW74yPq1GNxXWlSdC2xQkdkBdS9v16",
+      "title": "L4- Transfusion of Blood Products.pdf",
+      "team": "Team 445",
+      "pageCount": 19,
+      "sha256": "21b99b2ccfdf884b833b46ad2a1d849f6699d19a8213605c2f6c5b295a3ee0f8"
+    },
+    {
+      "id": "1aWUte5mNyVw9wQ-vg2Sbeme-d0oV8cxK",
+      "title": "L10- Common esophageal disorder 2.pdf",
+      "team": "Team 445",
+      "pageCount": 12,
+      "sha256": "557aa0de8e5b898ebdbf7a32bdc70dfd299111dc5bb989176f99f1aa9701e38a"
+    },
+    {
+      "id": "1bG_4DexMcLkb4LlEIuco6p-T7XKErB1d",
+      "title": "L6- Nutrition of the Surgical patient.pdf",
+      "team": "Team 445",
+      "pageCount": 8,
+      "sha256": "d353027c02f03c673328f4c61a9768372a440be9ce858755ff489e564f73aea2"
+    },
+    {
+      "id": "1bqCwO7gTItLr9lKfT32CBInTpjiPc-IA",
+      "title": "T3. Abdominal wall, umbilicus and hernia.pdf",
+      "team": "Team 443",
+      "pageCount": 13,
+      "sha256": "b636961833cc8c8a910968571535d51e96e27bdcd2fe2a551052459f49b70998"
+    },
+    {
+      "id": "1cXqN8z8Sjo90BRHq_mXnOliQqYqglqbi",
+      "title": "T2)Abdominal Wall, Umbilicus & Hernia.pdf",
+      "team": "Team 444",
+      "pageCount": 11,
+      "sha256": "e81dbe508c2b2c370bf0c7b477c6b298f412c381bd4a35a0260f032f3f428d17"
+    },
+    {
+      "id": "1cYUpiLnObMNwQc0w6QWYRDJwNMDOWjK5",
+      "title": "T7 Breast diseases.pdf",
+      "team": "Team 444",
+      "pageCount": 29,
+      "sha256": "37ed139600d4d2faa7c50b9f66d4c03263277170dc5b4993a0f0d705da525e11"
+    },
+    {
+      "id": "1iglwxaUlY7SyK6siK5_f9zGxLqKoVIM9",
+      "title": "L7)Cardiac Science.pdf",
+      "team": "Team 444",
+      "pageCount": 34,
+      "sha256": "d8a75e322cc1078d79c73367fe07f67739a49256b13be34016196b851b329589"
+    },
+    {
+      "id": "1ihNhbasbnVzKd-R7EKbKGuWwTnvukixA",
+      "title": "T5. Intra-Abdominal hemorrhage  and gastrointestinal hemorrhage  .pdf",
+      "team": "Team 443",
+      "pageCount": 14,
+      "sha256": "31136128da11b2d312eb9e7944aec08885fcee8ba6ec433d6ffb525b514f929b"
+    },
+    {
+      "id": "1m0Ov1jwk6xZNUrK4clrl8GC1jQe9vwfj",
+      "title": "T1- Approach to Venous ulcer.pdf",
+      "team": "Team 445",
+      "pageCount": 14,
+      "sha256": "6800121f513bd98914395bcc001fd731cae50e5e1e8dd4d939c7a79958ed1bc7"
+    },
+    {
+      "id": "1nhu7NmkrlOd2m3hPU2zUVRSf-k3L9U2O",
+      "title": "Obesity - Tutorial Students.pdf",
+      "team": "Current 445 male lecturer slides",
+      "pageCount": 41,
+      "sha256": "d34be8c32b082f3fcea46a952cd86ce1286d13fa23e75ce430099ed9c2a8141b"
+    },
+    {
+      "id": "1p_Aqghil7DHPZrcBcXj8g6KdQ-y_z8A5",
+      "title": "T6 Perforation & Infarction of Viscus.pdf",
+      "team": "Team 444",
+      "pageCount": 13,
+      "sha256": "d5276ec716bace21c74ce3d4491c223df9d9cdcd45267cc020d349c765c23cc0"
+    },
+    {
+      "id": "1s9jnfIAgH-XosFWleSM5hfLCSGtZGFdD",
+      "title": "T6 Neck swelling .pdf",
+      "team": "Team 444",
+      "pageCount": 13,
+      "sha256": "0d34340ceefc5360e48ab953e77f20c899ff9be0bfc4b15bca0a448b2ce09d05"
+    },
+    {
+      "id": "1txC32FSGFkh1VEVnIpjxKCNi2xiDz4ET",
+      "title": "SURG 351 - Hernia.pdf",
+      "team": "Current 445 male lecturer slides",
+      "pageCount": 41,
+      "sha256": "8dd48cfab8037bcfb593ae03f63d9fb1ad23a93fad34d347a7357c8f844cfe48"
+    },
+    {
+      "id": "1ufaEaT5bdy02FnU7IvFdc0YI42KmZY10",
+      "title": "T2. Central Abdominal Pain and Lower Abdominal Pain..pdf",
+      "team": "Team 443",
+      "pageCount": 27,
+      "sha256": "6757d381d0892903e98509452b09df65027e102caf13f223541c4f55e42565d9"
+    },
+    {
+      "id": "1wy1InsCbMaZszyYl24MBRP-ugjafy7sU",
+      "title": "L3- General complications of surgery.pdf",
+      "team": "Team 445",
+      "pageCount": 14,
+      "sha256": "1586713f6421550f647f510909d3a7ff95091e1ac36d1dcc578601cb563b292a"
+    },
+    {
+      "id": "1yUNyCsbbsWsDkNTxCHXORfTkchMYbMbu",
+      "title": "L8. Wound healing & management .pdf",
+      "team": "Team 445",
+      "pageCount": 16,
+      "sha256": "156873366a74d68b207a29190bab29c70e10cc0a2ac9092a1fc5fe174b6488c4"
+    }
+  ],
+  "pageChecks": [
+    {
+      "pdfId": "1KO2nKtdVPsLFzbt6BNnCOiShPYxymJic",
+      "page": 14,
+      "textKind": "flowText",
+      "textSha256": "a53bca43b76a000172329a944b3bf2315c1a24606ade31bca7e02ff7a6078e74"
+    },
+    {
+      "pdfId": "1IFhv3ubcmyoUs_eOapfabSNC9XygQ1tv",
+      "page": 10,
+      "textKind": "flowText",
+      "textSha256": "8086c0c51edc049c2a09f1019d742a337191b8b43c18401e95645af9bf7f11a6"
+    },
+    {
+      "pdfId": "1IFhv3ubcmyoUs_eOapfabSNC9XygQ1tv",
+      "page": 7,
+      "textKind": "flowText",
+      "textSha256": "72279fdac2c292219744a3b48ef41d43fea8fcdeae55f9810a899feb820eeec0"
+    },
+    {
+      "pdfId": "1KO2nKtdVPsLFzbt6BNnCOiShPYxymJic",
+      "page": 8,
+      "textKind": "flowText",
+      "textSha256": "38e6b1a3d898a1a1d862225ed4f1eac280ddec666ee62c2d95bcfc72a8e839ac"
+    },
+    {
+      "pdfId": "1yUNyCsbbsWsDkNTxCHXORfTkchMYbMbu",
+      "page": 3,
+      "textKind": "flowText",
+      "textSha256": "ed7e4a993b2800d922b4d3ea51535ef1ff26e001690b5b6feac58f3865fc1fbf"
+    },
+    {
+      "pdfId": "1IFhv3ubcmyoUs_eOapfabSNC9XygQ1tv",
+      "page": 3,
+      "textKind": "flowText",
+      "textSha256": "5d070a90e9771c9ebdfb1f08a7cedaa476c79ba436881e4d6c5173845eb22781"
+    },
+    {
+      "pdfId": "1IFhv3ubcmyoUs_eOapfabSNC9XygQ1tv",
+      "page": 4,
+      "textKind": "flowText",
+      "textSha256": "06a6fb8eca3df3fd1ed18b89faf11a5a4336ad9bb571a5032c5f3fa217bd0bb1"
+    },
+    {
+      "pdfId": "1IFhv3ubcmyoUs_eOapfabSNC9XygQ1tv",
+      "page": 5,
+      "textKind": "flowText",
+      "textSha256": "be618715b330973b134ee6a6d2d05f03a0ad3d49f081249928c960f23da90967"
+    },
+    {
+      "pdfId": "1IFhv3ubcmyoUs_eOapfabSNC9XygQ1tv",
+      "page": 2,
+      "textKind": "flowText",
+      "textSha256": "b043afc2135c443b72b8e883df0b2a22bba7a4a78843a063136f89b4b5f80b4a"
+    },
+    {
+      "pdfId": "1Gq5tAReDxiCth4iwAfm0myrrgcE1CY-T",
+      "page": 14,
+      "textKind": "flowText",
+      "textSha256": "c1d9b4ae0deabc6df637c051f57ef392410086d89dafb531c9f279848a433c46"
+    },
+    {
+      "pdfId": "1NzTkTWyZmtT3GdvxBeU5whfRthnSHRAJ",
+      "page": 7,
+      "textKind": "flowText",
+      "textSha256": "38064657320fc0f20e8c14dc0693b190c1ee4f99fb40611dfc21bd812e00692b"
+    },
+    {
+      "pdfId": "1m0Ov1jwk6xZNUrK4clrl8GC1jQe9vwfj",
+      "page": 9,
+      "textKind": "flowText",
+      "textSha256": "1a62f1e47bc2b90cd5f99ff2615a359816643d20c9ff46fc3c99e38e94b1fecf"
+    },
+    {
+      "pdfId": "1IFhv3ubcmyoUs_eOapfabSNC9XygQ1tv",
+      "page": 8,
+      "textKind": "flowText",
+      "textSha256": "a9296fe75c945400e65aa7de7f4b532fb902955380c07bdaba1da18c6294d9fb"
+    },
+    {
+      "pdfId": "1ZrgW74yPq1GNxXWlSdC2xQkdkBdS9v16",
+      "page": 16,
+      "textKind": "flowText",
+      "textSha256": "b0c862b98f3c8d6b243675d5985bcad1058d6d2abb687fa3276b399934a69b81"
+    },
+    {
+      "pdfId": "13i6jgPUXHLH-IPUxPOvAhMxqDtlPc92b",
+      "page": 6,
+      "textKind": "flowText",
+      "textSha256": "ecb692d2b7b0b5b62a53ca5480dc62e8b1723d8814b040ba66b2cf9bd644a481"
+    },
+    {
+      "pdfId": "1KO2nKtdVPsLFzbt6BNnCOiShPYxymJic",
+      "page": 3,
+      "textKind": "flowText",
+      "textSha256": "2fa75a532ba6da6fe6758893c84f432b37fdc40268d9cf1c5d6eecba98d4e0c6"
+    },
+    {
+      "pdfId": "1ZrgW74yPq1GNxXWlSdC2xQkdkBdS9v16",
+      "page": 3,
+      "textKind": "flowText",
+      "textSha256": "0ae745f7bff50a37f053626b8b0e318aa75a4618f71f8338fa34f686429a62c2"
+    },
+    {
+      "pdfId": "1Fv6NiRwldacQWhOXGWJC2bupy3zaNskf",
+      "page": 5,
+      "textKind": "flowText",
+      "textSha256": "a40f79ba80d8e12a85dfcb74eb9fce2e9612f92f82cf670a944cdc926818bb28"
+    },
+    {
+      "pdfId": "1Fv6NiRwldacQWhOXGWJC2bupy3zaNskf",
+      "page": 7,
+      "textKind": "flowText",
+      "textSha256": "eeea17f0778ba8c13c8209e1a280acbd5458019e44e3cb86f64e0ae846cc38e9"
+    },
+    {
+      "pdfId": "1Fv6NiRwldacQWhOXGWJC2bupy3zaNskf",
+      "page": 3,
+      "textKind": "flowText",
+      "textSha256": "1555301fccb20eed96b0b25243c52087a60ed0e63a4f38ab670189bde4066814"
+    },
+    {
+      "pdfId": "1Fv6NiRwldacQWhOXGWJC2bupy3zaNskf",
+      "page": 9,
+      "textKind": "flowText",
+      "textSha256": "a149508422c36e25749b15794ff9a64e8818e427a5c6bf540412fa422ab21bc0"
+    },
+    {
+      "pdfId": "1yUNyCsbbsWsDkNTxCHXORfTkchMYbMbu",
+      "page": 9,
+      "textKind": "flowText",
+      "textSha256": "de989996bcbaec6ecaa2b4ef7670062be3f7ec5884df196afcda8d67e86ac287"
+    },
+    {
+      "pdfId": "1yUNyCsbbsWsDkNTxCHXORfTkchMYbMbu",
+      "page": 12,
+      "textKind": "flowText",
+      "textSha256": "2c1987736020b14ab2e8fdb672210ba24a1fc0484fd5f2879ba0a1bfba337b81"
+    },
+    {
+      "pdfId": "1-_0C8SPWRFv6md8PU5lDMQEnxUFSOT1h",
+      "page": 7,
+      "textKind": "flowText",
+      "textSha256": "cd4d30c829bd5eb9d1d78a3c01ec979c95ac64b7333554750e374129c1f31f08"
+    },
+    {
+      "pdfId": "1NPqDumcxC1ZYmHE8NjtJcMtF-fd_w0lP",
+      "page": 5,
+      "textKind": "flowText",
+      "textSha256": "c6ff41646d3fd621daa56bcce8326fe329b223d7ec5042a92e425f791cf5aa68"
+    },
+    {
+      "pdfId": "1yUNyCsbbsWsDkNTxCHXORfTkchMYbMbu",
+      "page": 10,
+      "textKind": "flowText",
+      "textSha256": "92ec331e70f105d375d5f0443643af84a6decca50a422955b3e5f72f215bd66c"
+    },
+    {
+      "pdfId": "1KO2nKtdVPsLFzbt6BNnCOiShPYxymJic",
+      "page": 9,
+      "textKind": "flowText",
+      "textSha256": "1d3a6cfff088e30fe6d11332962027ecdb88bd15bb482791ede0b0534fe3b8d5"
+    },
+    {
+      "pdfId": "1KO2nKtdVPsLFzbt6BNnCOiShPYxymJic",
+      "page": 10,
+      "textKind": "flowText",
+      "textSha256": "0f93f69063b8e1633a735591c68c6b873740b5b320aff3abdee722cbc183d8e3"
+    },
+    {
+      "pdfId": "1KO2nKtdVPsLFzbt6BNnCOiShPYxymJic",
+      "page": 12,
+      "textKind": "flowText",
+      "textSha256": "636201fbf82f51447660a0f11516bb86cdd9cc881ad8868e27dc99c737fb9032"
+    },
+    {
+      "pdfId": "1KO2nKtdVPsLFzbt6BNnCOiShPYxymJic",
+      "page": 7,
+      "textKind": "flowText",
+      "textSha256": "187243d2c48d53c9a967d1816ba28406b61571bebde3abd8fa93497bb77a915b"
+    },
+    {
+      "pdfId": "1ZrgW74yPq1GNxXWlSdC2xQkdkBdS9v16",
+      "page": 12,
+      "textKind": "flowText",
+      "textSha256": "54250885a493111a461655f8c139e063a008e09e4190cf29af984d3b810512e6"
+    },
+    {
+      "pdfId": "1KO2nKtdVPsLFzbt6BNnCOiShPYxymJic",
+      "page": 17,
+      "textKind": "flowText",
+      "textSha256": "97914756f50ac8c032c9988433da5e319951ab04c2e946fcbbf4e12f4d4cabde"
+    },
+    {
+      "pdfId": "1KO2nKtdVPsLFzbt6BNnCOiShPYxymJic",
+      "page": 6,
+      "textKind": "flowText",
+      "textSha256": "0bfcedc1d84b8b893ebbe1b332c8445d7374cf2db7d2335d1cb4c4f72afe42ec"
+    },
+    {
+      "pdfId": "1wy1InsCbMaZszyYl24MBRP-ugjafy7sU",
+      "page": 10,
+      "textKind": "flowText",
+      "textSha256": "69fbb14b4753d98c981a8ef73910ad5e2d840a7109ff891d6a1f065a7f61defe"
+    },
+    {
+      "pdfId": "1bG_4DexMcLkb4LlEIuco6p-T7XKErB1d",
+      "page": 5,
+      "textKind": "flowText",
+      "textSha256": "8eb22e09ee869702d46a62b26a81ab3de8708a84ee8900d68130427c65455f14"
+    },
+    {
+      "pdfId": "1KO2nKtdVPsLFzbt6BNnCOiShPYxymJic",
+      "page": 11,
+      "textKind": "flowText",
+      "textSha256": "9a21ec50bc82a480c26b593d88248ab6985772beed18032bb6b7ac4f6329a544"
+    },
+    {
+      "pdfId": "1yUNyCsbbsWsDkNTxCHXORfTkchMYbMbu",
+      "page": 5,
+      "textKind": "flowText",
+      "textSha256": "36084c5ebf11240508d6a72c276c855d2c2163b371a1f185cc884da55cb05846"
+    },
+    {
+      "pdfId": "1yUNyCsbbsWsDkNTxCHXORfTkchMYbMbu",
+      "page": 6,
+      "textKind": "flowText",
+      "textSha256": "2e9af0511091200a59bcfc74a8b0d4ff3b9fc7c082942ea9580f6fa1587c2e58"
+    },
+    {
+      "pdfId": "1yUNyCsbbsWsDkNTxCHXORfTkchMYbMbu",
+      "page": 7,
+      "textKind": "flowText",
+      "textSha256": "570669e66f3777ee9bacb300abcd1734d354dae17376cbec507fd43eb1e6e6aa"
+    },
+    {
+      "pdfId": "1yUNyCsbbsWsDkNTxCHXORfTkchMYbMbu",
+      "page": 4,
+      "textKind": "flowText",
+      "textSha256": "ca3f9a74fee1a091ef142706ee4a07a4b35c61af607942c51e581e1df2437875"
+    },
+    {
+      "pdfId": "1Gq5tAReDxiCth4iwAfm0myrrgcE1CY-T",
+      "page": 6,
+      "textKind": "flowText",
+      "textSha256": "dd283ffa7320ab348ee2a3a92c6c8fabdfe5cf4368864a1d4e778f2a1d0c1cb4"
+    },
+    {
+      "pdfId": "1IFhv3ubcmyoUs_eOapfabSNC9XygQ1tv",
+      "page": 6,
+      "textKind": "flowText",
+      "textSha256": "cb9ad7665a1e16951b2745d572b58442a6e206c90f35e9cfb81353b6cdfbad2b"
+    },
+    {
+      "pdfId": "1ZrgW74yPq1GNxXWlSdC2xQkdkBdS9v16",
+      "page": 11,
+      "textKind": "flowText",
+      "textSha256": "c27ccdb7c57574cf03f5736e4d36c630ba6715f4bb41c05d2049a17a3341fa7d"
+    },
+    {
+      "pdfId": "1bG_4DexMcLkb4LlEIuco6p-T7XKErB1d",
+      "page": 3,
+      "textKind": "flowText",
+      "textSha256": "b1914f2367bd9fa5f71ef6a04fcf4c1933527fb4ad9d7065d1c8b59b9106e8e9"
+    },
+    {
+      "pdfId": "1ZrgW74yPq1GNxXWlSdC2xQkdkBdS9v16",
+      "page": 6,
+      "textKind": "flowText",
+      "textSha256": "d6a10eb3f4ea12b6e6865f6f9c7a3b6ec1027acbc137f27b104636e643976e1b"
+    },
+    {
+      "pdfId": "1ZrgW74yPq1GNxXWlSdC2xQkdkBdS9v16",
+      "page": 7,
+      "textKind": "flowText",
+      "textSha256": "6d4ce3f8bebd23bf6739de2cbe5bb0d532b6cdab859fcb1bc3907a6ac4500ff5"
+    },
+    {
+      "pdfId": "1ZrgW74yPq1GNxXWlSdC2xQkdkBdS9v16",
+      "page": 10,
+      "textKind": "flowText",
+      "textSha256": "c7307d575da6cdb4bd0e76df4031d4133f312c4bb8a31e03642f9e89b619d750"
+    },
+    {
+      "pdfId": "1ZrgW74yPq1GNxXWlSdC2xQkdkBdS9v16",
+      "page": 14,
+      "textKind": "flowText",
+      "textSha256": "b577b6ba601261c1bbfe6e668cbc707abefb9a21900476cfe49569d95e0a372b"
+    },
+    {
+      "pdfId": "1ZrgW74yPq1GNxXWlSdC2xQkdkBdS9v16",
+      "page": 5,
+      "textKind": "flowText",
+      "textSha256": "a29f0ec9bdc46a87dd925a8f26d68a2ed6358447cbe57f8103df2cebeefb37f1"
+    },
+    {
+      "pdfId": "1ZrgW74yPq1GNxXWlSdC2xQkdkBdS9v16",
+      "page": 4,
+      "textKind": "flowText",
+      "textSha256": "6f3f33bd7619559a2f9f5fee1a850beaa7056cc75464f6877ae9162810f60357"
+    },
+    {
+      "pdfId": "1ZrgW74yPq1GNxXWlSdC2xQkdkBdS9v16",
+      "page": 13,
+      "textKind": "flowText",
+      "textSha256": "4c137154525b7a745751c2a466008059cfb9a337ed24d5f67a83edbacb2cb10c"
+    },
+    {
+      "pdfId": "1NPqDumcxC1ZYmHE8NjtJcMtF-fd_w0lP",
+      "page": 6,
+      "textKind": "flowText",
+      "textSha256": "fdba804e716de73718967b9ddbe6c405069c3f6dec62f79519c078d82c0bb802"
+    },
+    {
+      "pdfId": "1txC32FSGFkh1VEVnIpjxKCNi2xiDz4ET",
+      "page": 12,
+      "textKind": "flowText",
+      "textSha256": "407ae8fbf5ec8e58879f23e350b615ae6b033b68cbab4ab86ba10cb9948db7a6"
+    },
+    {
+      "pdfId": "1txC32FSGFkh1VEVnIpjxKCNi2xiDz4ET",
+      "page": 30,
+      "textKind": "flowText",
+      "textSha256": "a43f1e22558bca7b7a859f70114f84e6745268343d9b87582167056133abb354"
+    },
+    {
+      "pdfId": "1cXqN8z8Sjo90BRHq_mXnOliQqYqglqbi",
+      "page": 8,
+      "textKind": "flowText",
+      "textSha256": "c33b8e617210fc10cf33cbf9a1a02dfb5757bdfe43d958df264bb889a4d2d080"
+    },
+    {
+      "pdfId": "1bqCwO7gTItLr9lKfT32CBInTpjiPc-IA",
+      "page": 4,
+      "textKind": "flowText",
+      "textSha256": "a8485714c6bf8f11daefe9f1f4c46ff4ba2dee6a2f2f9af2d1c9f542b40e29c2"
+    },
+    {
+      "pdfId": "1cXqN8z8Sjo90BRHq_mXnOliQqYqglqbi",
+      "page": 10,
+      "textKind": "flowText",
+      "textSha256": "4c2de6727c960a6545d2735a56687e8f7b68d15e6b37360c0104c1695f0093b9"
+    },
+    {
+      "pdfId": "1cXqN8z8Sjo90BRHq_mXnOliQqYqglqbi",
+      "page": 5,
+      "textKind": "flowText",
+      "textSha256": "912fe61fd79585f50e00167eac4802048b5777893e4014b5130b81c2fa7e9b72"
+    },
+    {
+      "pdfId": "1bqCwO7gTItLr9lKfT32CBInTpjiPc-IA",
+      "page": 11,
+      "textKind": "flowText",
+      "textSha256": "16f2048aac018f01aebdb0d421501c9daa87631c1fffb2325933724796ec2f3b"
+    },
+    {
+      "pdfId": "1bqCwO7gTItLr9lKfT32CBInTpjiPc-IA",
+      "page": 12,
+      "textKind": "flowText",
+      "textSha256": "b885a2da2c05fb78a7b60a5b00c71bb0735544f369059192ac7d93a2733cfddb"
+    },
+    {
+      "pdfId": "1txC32FSGFkh1VEVnIpjxKCNi2xiDz4ET",
+      "page": 27,
+      "textKind": "flowText",
+      "textSha256": "0d72cf77950d23d0093dfe18c2c8e04530826e573b7b6c56e84cd51a930d51d6"
+    },
+    {
+      "pdfId": "1txC32FSGFkh1VEVnIpjxKCNi2xiDz4ET",
+      "page": 11,
+      "textKind": "flowText",
+      "textSha256": "7f91ce83bce0384a4949c2e665859e8b0eb36a39b2c731decec9e8fc35876434"
+    },
+    {
+      "pdfId": "1txC32FSGFkh1VEVnIpjxKCNi2xiDz4ET",
+      "page": 24,
+      "textKind": "flowText",
+      "textSha256": "949d7e13fcb9328046717ae63c34c2a4f8a9915195955c11fa68164ff4ca2696"
+    },
+    {
+      "pdfId": "1s9jnfIAgH-XosFWleSM5hfLCSGtZGFdD",
+      "page": 11,
+      "textKind": "flowText",
+      "textSha256": "80b5c0c2ed39e080d08d4c2baecf940d3f88560d02ad577a8c75c7f296d239cf"
+    },
+    {
+      "pdfId": "1txC32FSGFkh1VEVnIpjxKCNi2xiDz4ET",
+      "page": 15,
+      "textKind": "flowText",
+      "textSha256": "8c57c8c2a285ad4d6ad6b6edd3c5b656efdd1510b62140d8a538dca85607e56b"
+    },
+    {
+      "pdfId": "1-_0C8SPWRFv6md8PU5lDMQEnxUFSOT1h",
+      "page": 8,
+      "textKind": "flowText",
+      "textSha256": "51f8ea550c98c533d947c1bd0bec662485b55324962bc94d462cd432260dbf33"
+    },
+    {
+      "pdfId": "1aWUte5mNyVw9wQ-vg2Sbeme-d0oV8cxK",
+      "page": 5,
+      "textKind": "flowText",
+      "textSha256": "c16cdf7d00336c9a4f25e4831d1a59cfa569651531259ac66ed3f8168ff0c18e"
+    },
+    {
+      "pdfId": "1txC32FSGFkh1VEVnIpjxKCNi2xiDz4ET",
+      "page": 21,
+      "textKind": "flowText",
+      "textSha256": "71210e1010ee9c7467ebd2465a49b4368b048f29a520440ed282f0b2cbfcb885"
+    },
+    {
+      "pdfId": "1txC32FSGFkh1VEVnIpjxKCNi2xiDz4ET",
+      "page": 34,
+      "textKind": "flowText",
+      "textSha256": "5336e81e0a3c94c0c4c0f3af9c25feed3e326372e7f9f1e22acfccabe3e972ac"
+    },
+    {
+      "pdfId": "1RjXe1PYHzD0n17cn3ycd-TLs2dr5FJ-E",
+      "page": 2,
+      "textKind": "flowText",
+      "textSha256": "a4bccf3c084d284480d8c461520719c41cf21e60a5f1a2b85f60efbeda1762b6"
+    },
+    {
+      "pdfId": "1RjXe1PYHzD0n17cn3ycd-TLs2dr5FJ-E",
+      "page": 5,
+      "textKind": "flowText",
+      "textSha256": "06a6d380c89cfdbbf10dc7d0414a9950f8fb3be32616066eeb62299270da7db8"
+    },
+    {
+      "pdfId": "1Xp8XihE2_s94k1Sd2mA0Q9e0cQw4pZa8",
+      "page": 20,
+      "textKind": "flowText",
+      "textSha256": "8cc893f59bc9948bd2b91b4e072b0eddbc03ce6fcb46641cf77bd073f6812475"
+    },
+    {
+      "pdfId": "1RjXe1PYHzD0n17cn3ycd-TLs2dr5FJ-E",
+      "page": 7,
+      "textKind": "flowText",
+      "textSha256": "f55a3f3ef596ea04126373467e25b0ae423adcacbff39a0e274170df71d08b37"
+    },
+    {
+      "pdfId": "1Xp8XihE2_s94k1Sd2mA0Q9e0cQw4pZa8",
+      "page": 12,
+      "textKind": "flowText",
+      "textSha256": "fa4749784c7d8bb4424fe7f00fd6d8186a4adaf16d853aa0d77ad7ef71703f7f"
+    },
+    {
+      "pdfId": "1Gkgcq9GDUW8CzmkOu0XXllGq5DPQC8n4",
+      "page": 8,
+      "textKind": "flowText",
+      "textSha256": "d6de458d8ecaa61978716ba8433a06d03f18f14c039868379c369b52a2991892"
+    },
+    {
+      "pdfId": "1RjXe1PYHzD0n17cn3ycd-TLs2dr5FJ-E",
+      "page": 8,
+      "textKind": "flowText",
+      "textSha256": "96f77a6f7cb7bc38ad5270e125ad6af0740063057b39468882e8eeeac06ca910"
+    },
+    {
+      "pdfId": "1Xp8XihE2_s94k1Sd2mA0Q9e0cQw4pZa8",
+      "page": 13,
+      "textKind": "flowText",
+      "textSha256": "b0c16a390524ad1d9f7e8ef3e827cd53cfd34e4350392ead397d38b66d53a512"
+    },
+    {
+      "pdfId": "1ihNhbasbnVzKd-R7EKbKGuWwTnvukixA",
+      "page": 7,
+      "textKind": "flowText",
+      "textSha256": "7745d1a7018401e3a70bac9d4ec1fef45e423152e5baafb65052fdc917c1dab6"
+    },
+    {
+      "pdfId": "1Gkgcq9GDUW8CzmkOu0XXllGq5DPQC8n4",
+      "page": 7,
+      "textKind": "flowText",
+      "textSha256": "cfdc9df9321d3c9e15531305e1f99f081fcc80448062b6a087187a967f025a33"
+    },
+    {
+      "pdfId": "1Xp8XihE2_s94k1Sd2mA0Q9e0cQw4pZa8",
+      "page": 19,
+      "textKind": "flowText",
+      "textSha256": "4676ab31e192da17be9b1f6fe06507fe6d75bb94c32d228a5e3fbeebde64fcac"
+    },
+    {
+      "pdfId": "1Uv12cW8wfiQ_KxRe4yLCDUO2HSGsXTSn",
+      "page": 2,
+      "textKind": "flowText",
+      "textSha256": "b0ba21390c8f529f5b235de8a2eabbc26836fec5dee6c7b9dc2bcc5ef2844b86"
+    },
+    {
+      "pdfId": "1p_Aqghil7DHPZrcBcXj8g6KdQ-y_z8A5",
+      "page": 6,
+      "textKind": "flowText",
+      "textSha256": "3c2cf3651d8bb5fae664705a09a93b20cb814ad4bde26d0f9275fd8de558d4bb"
+    },
+    {
+      "pdfId": "1Ee2mJnZTCx9OhB6ELlhrvUCi3bYNWbNG",
+      "page": 7,
+      "textKind": "flowText",
+      "textSha256": "09f7594b5a52fc7f183e7c0ee73456eb3d6bf23eeb429ee3ecd6bf82ee55de3e"
+    },
+    {
+      "pdfId": "1ufaEaT5bdy02FnU7IvFdc0YI42KmZY10",
+      "page": 22,
+      "textKind": "flowText",
+      "textSha256": "efe6e004ea958ec1261bbc709a85069e009ad6a60dd7493b79b6d95a8f6e97f5"
+    },
+    {
+      "pdfId": "1ufaEaT5bdy02FnU7IvFdc0YI42KmZY10",
+      "page": 17,
+      "textKind": "flowText",
+      "textSha256": "fff3b7bd6c1156112ebd624498efe193d22623031a3215fc282dd9b0e4118be3"
+    },
+    {
+      "pdfId": "1Gkgcq9GDUW8CzmkOu0XXllGq5DPQC8n4",
+      "page": 5,
+      "textKind": "flowText",
+      "textSha256": "98b540d9a69a0fa5e0143e0dd2c11128f31b050c7ba37392ac598745ea09cb1d"
+    },
+    {
+      "pdfId": "1ufaEaT5bdy02FnU7IvFdc0YI42KmZY10",
+      "page": 25,
+      "textKind": "flowText",
+      "textSha256": "68c129cbd7d94d1ebcd1c3bcb5190664c741fc8f9a2877b2a64f3613ce3733f7"
+    },
+    {
+      "pdfId": "1Uv12cW8wfiQ_KxRe4yLCDUO2HSGsXTSn",
+      "page": 6,
+      "textKind": "flowText",
+      "textSha256": "3b240f027d2aa3c1447b8cf897a26d011021f3c851a6df6722a170a790caf85d"
+    },
+    {
+      "pdfId": "1p_Aqghil7DHPZrcBcXj8g6KdQ-y_z8A5",
+      "page": 4,
+      "textKind": "flowText",
+      "textSha256": "793d8e0965db4a9f6a3f0d22aad744d3afdcbc21b08c60d9e2833bb234061630"
+    },
+    {
+      "pdfId": "1Uv12cW8wfiQ_KxRe4yLCDUO2HSGsXTSn",
+      "page": 17,
+      "textKind": "flowText",
+      "textSha256": "e0bc02a2898b9dfa36c65b389143e4be5b298eab26a1f4aa7f6c5e432ef2b703"
+    },
+    {
+      "pdfId": "1p_Aqghil7DHPZrcBcXj8g6KdQ-y_z8A5",
+      "page": 10,
+      "textKind": "flowText",
+      "textSha256": "a7272a0fbb20a23888ed853c4b87661979887578c7ef790715d13269890beb89"
+    },
+    {
+      "pdfId": "1p_Aqghil7DHPZrcBcXj8g6KdQ-y_z8A5",
+      "page": 9,
+      "textKind": "flowText",
+      "textSha256": "6cd1d8cc85ac882f3822c09f38cbde5137b6b73b21f5dbd61542b5598add737d"
+    },
+    {
+      "pdfId": "1ihNhbasbnVzKd-R7EKbKGuWwTnvukixA",
+      "page": 6,
+      "textKind": "flowText",
+      "textSha256": "ae4f3579b55998b1ff4be33a7437a7da5c347d31f12fbf601f9dc5c2b7264048"
+    },
+    {
+      "pdfId": "1ihNhbasbnVzKd-R7EKbKGuWwTnvukixA",
+      "page": 10,
+      "textKind": "flowText",
+      "textSha256": "80a67733af45b8d7e5c2b4d1d927cd4b3c663f491ea2968b6de48b379a97b1d6"
+    },
+    {
+      "pdfId": "1cYUpiLnObMNwQc0w6QWYRDJwNMDOWjK5",
+      "page": 10,
+      "textKind": "flowText",
+      "textSha256": "d1d77dbbe532a0153a525309a073e9c2400cca504fa4f8c3109887d896d8583b"
+    },
+    {
+      "pdfId": "1Ee2mJnZTCx9OhB6ELlhrvUCi3bYNWbNG",
+      "page": 5,
+      "textKind": "flowText",
+      "textSha256": "67cd0900fe87a0fd2d842406d01c214897e3a45c3b9238288ba5182d389b4079"
+    },
+    {
+      "pdfId": "1-_0C8SPWRFv6md8PU5lDMQEnxUFSOT1h",
+      "page": 6,
+      "textKind": "flowText",
+      "textSha256": "a8485f6de95606322edfbd48b9de34369e48552f7ae2ef4d751668cff7c09343"
+    },
+    {
+      "pdfId": "1-_0C8SPWRFv6md8PU5lDMQEnxUFSOT1h",
+      "page": 9,
+      "textKind": "flowText",
+      "textSha256": "36741d17040a947c59134595e317bf8a989e5a6b2daa4a6c47413cf1deda163d"
+    },
+    {
+      "pdfId": "1-_0C8SPWRFv6md8PU5lDMQEnxUFSOT1h",
+      "page": 10,
+      "textKind": "flowText",
+      "textSha256": "d7e4aafcd8b321b84a9a742888df1d063b8aa7006460441f49c3eaaf8422ec84"
+    },
+    {
+      "pdfId": "1s9jnfIAgH-XosFWleSM5hfLCSGtZGFdD",
+      "page": 7,
+      "textKind": "flowText",
+      "textSha256": "cea4fb541e2c10f33f2c5dc69eb87b08407bb8d78c206fdec660fa2663c84ca3"
+    },
+    {
+      "pdfId": "1s9jnfIAgH-XosFWleSM5hfLCSGtZGFdD",
+      "page": 4,
+      "textKind": "flowText",
+      "textSha256": "86c14d71075c057012d0810d334507ce44d57b11f65aab4edda21efc24c5d0e3"
+    },
+    {
+      "pdfId": "1s9jnfIAgH-XosFWleSM5hfLCSGtZGFdD",
+      "page": 10,
+      "textKind": "flowText",
+      "textSha256": "677a416e5ae970b052ee47af787dae7dc88901afa1a23520f05447ea2992122b"
+    },
+    {
+      "pdfId": "1s9jnfIAgH-XosFWleSM5hfLCSGtZGFdD",
+      "page": 6,
+      "textKind": "flowText",
+      "textSha256": "8e930fc8164479df7813ddd9afeabd1de8fd8f9bc0606b64964fba3ea270eeeb"
+    },
+    {
+      "pdfId": "1s9jnfIAgH-XosFWleSM5hfLCSGtZGFdD",
+      "page": 8,
+      "textKind": "flowText",
+      "textSha256": "6525c725c658ea0aad33b0e34acd9cc30aa7f84da8468c178d7dee7c67ac7a5a"
+    },
+    {
+      "pdfId": "1s9jnfIAgH-XosFWleSM5hfLCSGtZGFdD",
+      "page": 12,
+      "textKind": "flowText",
+      "textSha256": "ba653be28fe5187f603d1f877a88ed1d228d456be7aad8344f0b38c62aa3f2fc"
+    },
+    {
+      "pdfId": "1cYUpiLnObMNwQc0w6QWYRDJwNMDOWjK5",
+      "page": 5,
+      "textKind": "flowText",
+      "textSha256": "64241ba2aaade93e1db837755ef9e823efce437feed6dcc886249b3431ead462"
+    },
+    {
+      "pdfId": "1cYUpiLnObMNwQc0w6QWYRDJwNMDOWjK5",
+      "page": 11,
+      "textKind": "flowText",
+      "textSha256": "f3dba1cc7493a6ae4e578c0f9a5185aaf04d5147f2de1012526200af19c49856"
+    },
+    {
+      "pdfId": "1ufaEaT5bdy02FnU7IvFdc0YI42KmZY10",
+      "page": 12,
+      "textKind": "flowText",
+      "textSha256": "f67c4a011daa725e756a8f588a294c2c19c1402273e581db44e0626b40f2630a"
+    },
+    {
+      "pdfId": "1cYUpiLnObMNwQc0w6QWYRDJwNMDOWjK5",
+      "page": 6,
+      "textKind": "flowText",
+      "textSha256": "d2d00ed95cd9ed32c6101079dff34366d065a0fb4349a2c46378a8eab1a0ad72"
+    },
+    {
+      "pdfId": "1cYUpiLnObMNwQc0w6QWYRDJwNMDOWjK5",
+      "page": 3,
+      "textKind": "flowText",
+      "textSha256": "86bc16d86d104e15033680341c3580d08442e752be0b278b255f1f9cab3a9ac1"
+    },
+    {
+      "pdfId": "1cYUpiLnObMNwQc0w6QWYRDJwNMDOWjK5",
+      "page": 24,
+      "textKind": "flowText",
+      "textSha256": "745c58e785c384b26b671a9823759a59a83774a29c574cb870fd3fdd1539ee18"
+    },
+    {
+      "pdfId": "1cYUpiLnObMNwQc0w6QWYRDJwNMDOWjK5",
+      "page": 12,
+      "textKind": "flowText",
+      "textSha256": "a86aad4cabe60badf023d8926fc10c502d91a3ea98f5b68f7fac2d25fefafa16"
+    },
+    {
+      "pdfId": "1cYUpiLnObMNwQc0w6QWYRDJwNMDOWjK5",
+      "page": 25,
+      "textKind": "flowText",
+      "textSha256": "433a93cc5010c6dc18b01fc787550362f05a52fac774e46a6b103eadc8d49187"
+    },
+    {
+      "pdfId": "1Bar3aLYkoEb35LViqQCjPVo7hfX54fzu",
+      "page": 3,
+      "textKind": "flowText",
+      "textSha256": "6b75789b708610300013f66b0cd1bde3212e7bdb150ad56ccc3f3d9c659ee922"
+    },
+    {
+      "pdfId": "1Bar3aLYkoEb35LViqQCjPVo7hfX54fzu",
+      "page": 4,
+      "textKind": "flowText",
+      "textSha256": "9cd79e282742e429af534287a309db033425f1b9b5fc27ea681022c53a079c45"
+    },
+    {
+      "pdfId": "1Bar3aLYkoEb35LViqQCjPVo7hfX54fzu",
+      "page": 5,
+      "textKind": "flowText",
+      "textSha256": "a0a33fa904f5f6a98bb58c0a372acbe06b5c4ba1c082f4dff6e5784461e1e4bb"
+    },
+    {
+      "pdfId": "1Bar3aLYkoEb35LViqQCjPVo7hfX54fzu",
+      "page": 6,
+      "textKind": "flowText",
+      "textSha256": "e9a85646a901e141954ebe5d74e04a085d0583b6ea82b760192af5efa9ae1382"
+    },
+    {
+      "pdfId": "1Bar3aLYkoEb35LViqQCjPVo7hfX54fzu",
+      "page": 9,
+      "textKind": "flowText",
+      "textSha256": "6f29382c5bcaa7693c81988c8bab412464725a2c78a213d49b9b92e182742fa1"
+    },
+    {
+      "pdfId": "1Bar3aLYkoEb35LViqQCjPVo7hfX54fzu",
+      "page": 11,
+      "textKind": "flowText",
+      "textSha256": "0773c351876d08955eb9150a5728ae8d17db5a287fc63930e1819d28ce646818"
+    },
+    {
+      "pdfId": "1Bar3aLYkoEb35LViqQCjPVo7hfX54fzu",
+      "page": 8,
+      "textKind": "flowText",
+      "textSha256": "74b0d8da729e0da03d34f2f8aa671b64bf5bf19a59fabb160b726df4ce05ddb2"
+    },
+    {
+      "pdfId": "1KO2nKtdVPsLFzbt6BNnCOiShPYxymJic",
+      "page": 13,
+      "textKind": "flowText",
+      "textSha256": "e48b817654eeb3ebc7767b834e252adbc81bccc56bdd270d75a86c68fc8d020a"
+    },
+    {
+      "pdfId": "1Bar3aLYkoEb35LViqQCjPVo7hfX54fzu",
+      "page": 10,
+      "textKind": "flowText",
+      "textSha256": "17a6fd5007e4c826a89c527e12800618eabb94d66afdee04f17f6203fed6d0d5"
+    },
+    {
+      "pdfId": "1iglwxaUlY7SyK6siK5_f9zGxLqKoVIM9",
+      "page": 12,
+      "textKind": "flowText",
+      "textSha256": "b4d0c38b2fd76173cdf13c3f7835ca8a3b24f086302732c233044cbab432609f"
+    },
+    {
+      "pdfId": "1iglwxaUlY7SyK6siK5_f9zGxLqKoVIM9",
+      "page": 17,
+      "textKind": "flowText",
+      "textSha256": "3e69cb0a5e61a3d6b22827a61c136c13510e529378bb6ded9049aa7306d0e326"
+    },
+    {
+      "pdfId": "1wy1InsCbMaZszyYl24MBRP-ugjafy7sU",
+      "page": 3,
+      "textKind": "flowText",
+      "textSha256": "7d3bd5c743528ee6cccaebde1e6b4a3374a77e5836f205b408e9f7bce8c631a5"
+    },
+    {
+      "pdfId": "1wy1InsCbMaZszyYl24MBRP-ugjafy7sU",
+      "page": 2,
+      "textKind": "flowText",
+      "textSha256": "dce6dec04c02ba65900ce9ebdd01d5dd4a239d8b7c47ec7da424d8857d7a0f54"
+    },
+    {
+      "pdfId": "1aWUte5mNyVw9wQ-vg2Sbeme-d0oV8cxK",
+      "page": 10,
+      "textKind": "flowText",
+      "textSha256": "a184f39803c0e5a1cf14d6d22de229739a5506e0b9daaf841ec9e3c2ed87b703"
+    },
+    {
+      "pdfId": "1aWUte5mNyVw9wQ-vg2Sbeme-d0oV8cxK",
+      "page": 6,
+      "textKind": "flowText",
+      "textSha256": "d0c01ac0f9afa49987ed6d4c36ea27dee6edf872145a9467f2f9ae1c8c52439d"
+    },
+    {
+      "pdfId": "1aWUte5mNyVw9wQ-vg2Sbeme-d0oV8cxK",
+      "page": 4,
+      "textKind": "flowText",
+      "textSha256": "eb39307fb5a5e6994ffef0f421f93178cb08252a7c2762e170cc79c875787d5c"
+    },
+    {
+      "pdfId": "1aWUte5mNyVw9wQ-vg2Sbeme-d0oV8cxK",
+      "page": 9,
+      "textKind": "flowText",
+      "textSha256": "68ad65c776478c1c9ba240808b320b74fba89c224604deaad5afc0c6210dcd80"
+    },
+    {
+      "pdfId": "1aWUte5mNyVw9wQ-vg2Sbeme-d0oV8cxK",
+      "page": 8,
+      "textKind": "flowText",
+      "textSha256": "0f79239527f8ae2ac2ead3c5c8b3c1a01c2776f6e8befd23b1e3d137298389ee"
+    },
+    {
+      "pdfId": "1iglwxaUlY7SyK6siK5_f9zGxLqKoVIM9",
+      "page": 18,
+      "textKind": "flowText",
+      "textSha256": "f7244530d78af571405a45569921ac65b9a6de953d527831bdaa69881b0d997b"
+    },
+    {
+      "pdfId": "1iglwxaUlY7SyK6siK5_f9zGxLqKoVIM9",
+      "page": 26,
+      "textKind": "flowText",
+      "textSha256": "cdd90f52cf66180be3d58fdc85ccd705135be2106ef9b1143d6b2f6bb3b1de5a"
+    },
+    {
+      "pdfId": "1iglwxaUlY7SyK6siK5_f9zGxLqKoVIM9",
+      "page": 28,
+      "textKind": "flowText",
+      "textSha256": "4388789cc48bae29f94bbed7a8bbbf03dba22fc5ad7e264a10073c2cd2769d64"
+    },
+    {
+      "pdfId": "1iglwxaUlY7SyK6siK5_f9zGxLqKoVIM9",
+      "page": 21,
+      "textKind": "flowText",
+      "textSha256": "c90650d3ee1ea4c4bc24899ee06ee47b2e2616ff58c246cb0384c1e14eca8703"
+    },
+    {
+      "pdfId": "1iglwxaUlY7SyK6siK5_f9zGxLqKoVIM9",
+      "page": 6,
+      "textKind": "flowText",
+      "textSha256": "e27688c98fc2e796d16ce18eb794d4761c9b3d140c4a20a7703de4bc75d00535"
+    },
+    {
+      "pdfId": "1iglwxaUlY7SyK6siK5_f9zGxLqKoVIM9",
+      "page": 13,
+      "textKind": "flowText",
+      "textSha256": "110279169b7d8873c31e68e842d0d6b8369017808a0e864381a5aebdc7254833"
+    },
+    {
+      "pdfId": "1NzTkTWyZmtT3GdvxBeU5whfRthnSHRAJ",
+      "page": 21,
+      "textKind": "flowText",
+      "textSha256": "9cfeb596dfc530a96bd5222561f8d639902195d4406d46c72b7824442716987e"
+    },
+    {
+      "pdfId": "1iglwxaUlY7SyK6siK5_f9zGxLqKoVIM9",
+      "page": 24,
+      "textKind": "flowText",
+      "textSha256": "8b44e37b7843028bf10529528245c04cd25e0077fe14d463631b6b6578bf1fc3"
+    },
+    {
+      "pdfId": "1NzTkTWyZmtT3GdvxBeU5whfRthnSHRAJ",
+      "page": 18,
+      "textKind": "flowText",
+      "textSha256": "251772a245caf8fc45ad88ce8a554c1e66133ab0d9cf8482e041eff9bacd72e9"
+    },
+    {
+      "pdfId": "1NzTkTWyZmtT3GdvxBeU5whfRthnSHRAJ",
+      "page": 12,
+      "textKind": "flowText",
+      "textSha256": "1db6a71f282ad5decbe0adce4dde14978a6c08fa3c83ac119eef7b9c6cf9208a"
+    },
+    {
+      "pdfId": "1NzTkTWyZmtT3GdvxBeU5whfRthnSHRAJ",
+      "page": 20,
+      "textKind": "flowText",
+      "textSha256": "203291c3090817d464dbd13b6c463fcb116e94f1cb31c8fb4fe35266b2acf164"
+    },
+    {
+      "pdfId": "1NzTkTWyZmtT3GdvxBeU5whfRthnSHRAJ",
+      "page": 24,
+      "textKind": "flowText",
+      "textSha256": "967ac2d8dc5b6699ec63cae89a52dda7bb6b8b7f547351d84318736554a02907"
+    },
+    {
+      "pdfId": "1NzTkTWyZmtT3GdvxBeU5whfRthnSHRAJ",
+      "page": 27,
+      "textKind": "flowText",
+      "textSha256": "80ec55d2996233f4ec2d01835ba575ceedfb7b90592c68ad7d26aaf07326505c"
+    },
+    {
+      "pdfId": "1NzTkTWyZmtT3GdvxBeU5whfRthnSHRAJ",
+      "page": 28,
+      "textKind": "flowText",
+      "textSha256": "85bf71bdef4d3bc15653cf998a448e62703e51bc77ca0a8097dd5d31d9931e16"
+    },
+    {
+      "pdfId": "1p_Aqghil7DHPZrcBcXj8g6KdQ-y_z8A5",
+      "page": 5,
+      "textKind": "flowText",
+      "textSha256": "77c4feb91e36ffd12f5a96d43222530986feef0ea5610f0ab96c668532f77716"
+    },
+    {
+      "pdfId": "1XCHk20UxoYR7Y-t7XpVwDCDPgxczLUzD",
+      "page": 3,
+      "textKind": "flowText",
+      "textSha256": "b5b7d55f9a2b9c5c1c0d319c7dc8ab0e6c31bb12d1c5c83bd45e8a95b6d51d4c"
+    },
+    {
+      "pdfId": "1NzTkTWyZmtT3GdvxBeU5whfRthnSHRAJ",
+      "page": 3,
+      "textKind": "flowText",
+      "textSha256": "49bfd186849cc2b141ea5953c2248a3732df823faee1b6b8ed167af5c9be04dc"
+    },
+    {
+      "pdfId": "1NzTkTWyZmtT3GdvxBeU5whfRthnSHRAJ",
+      "page": 25,
+      "textKind": "flowText",
+      "textSha256": "efa0b11d1f3da4adeec4995a98ee19bf5b3d77e98398ca5338ae17a17a727f7c"
+    },
+    {
+      "pdfId": "1NzTkTWyZmtT3GdvxBeU5whfRthnSHRAJ",
+      "page": 23,
+      "textKind": "flowText",
+      "textSha256": "d6909a560ba18d52fd36c9b47c815b3a8ab97276469cec9dfe3f4c22b130bc47"
+    },
+    {
+      "pdfId": "1ZrgW74yPq1GNxXWlSdC2xQkdkBdS9v16",
+      "page": 2,
+      "textKind": "flowText",
+      "textSha256": "ada50235fd9f785363ae6530990dcd6d7040856cb99d81c4253e9b3ff8b387bc"
+    },
+    {
+      "pdfId": "1NzTkTWyZmtT3GdvxBeU5whfRthnSHRAJ",
+      "page": 6,
+      "textKind": "flowText",
+      "textSha256": "8e0642b219f69e5f6c80b15832e40dac32eaf7ad02bf5505173b4eb3c7c585e5"
+    },
+    {
+      "pdfId": "1XCHk20UxoYR7Y-t7XpVwDCDPgxczLUzD",
+      "page": 5,
+      "textKind": "flowText",
+      "textSha256": "db988bd9c1538ded1af85bcd463fd382915dde51743a8a80dad0721b081ef4d4"
+    },
+    {
+      "pdfId": "1XCHk20UxoYR7Y-t7XpVwDCDPgxczLUzD",
+      "page": 13,
+      "textKind": "flowText",
+      "textSha256": "6608ca075543eec4bef4f7127e5695fe8208c4f04d0978a2527b12afdb778f57"
+    },
+    {
+      "pdfId": "1XCHk20UxoYR7Y-t7XpVwDCDPgxczLUzD",
+      "page": 9,
+      "textKind": "flowText",
+      "textSha256": "1f3dbd36306e5b7010ce455fc132d112f9858b92f913e2092c980cb43640f851"
+    },
+    {
+      "pdfId": "1XCHk20UxoYR7Y-t7XpVwDCDPgxczLUzD",
+      "page": 7,
+      "textKind": "flowText",
+      "textSha256": "fba91a7eb482d06a9c71721dea3c2997b1b3d6343a36774f89a9ded4e340864e"
+    },
+    {
+      "pdfId": "1NzTkTWyZmtT3GdvxBeU5whfRthnSHRAJ",
+      "page": 26,
+      "textKind": "flowText",
+      "textSha256": "3a236dd86807cbb7350fcec40b4eb30c203ebc25337e962ecc92ac3d018376e5"
+    },
+    {
+      "pdfId": "1NzTkTWyZmtT3GdvxBeU5whfRthnSHRAJ",
+      "page": 8,
+      "textKind": "flowText",
+      "textSha256": "ea301feee1bc3c4f4eabb246d183d978ce0c264066271626341cdac44c62e0dd"
+    },
+    {
+      "pdfId": "14ONJdgC0SMtDG57WybK7J_Ze29BYjszc",
+      "page": 16,
+      "textKind": "flowText",
+      "textSha256": "c86582bd97301e1c98bded148398ee48dd9e01761e1c992b4c1180d5dfc14ce2"
+    },
+    {
+      "pdfId": "1XCHk20UxoYR7Y-t7XpVwDCDPgxczLUzD",
+      "page": 2,
+      "textKind": "flowText",
+      "textSha256": "36a8c56c7a6a4329cb37e98e6eb8f89ba3faadd6e64aef24c3145f3bcc4f840c"
+    },
+    {
+      "pdfId": "1NzTkTWyZmtT3GdvxBeU5whfRthnSHRAJ",
+      "page": 5,
+      "textKind": "flowText",
+      "textSha256": "6132da08939e5e72bd671184be49e4a4022660cf708b45aeb9b306e06211a989"
+    },
+    {
+      "pdfId": "1NzTkTWyZmtT3GdvxBeU5whfRthnSHRAJ",
+      "page": 19,
+      "textKind": "flowText",
+      "textSha256": "087eac86c5be1001619c6f8e7189c081c0f1cdc07550ddeb28f3b501023c0ad2"
+    },
+    {
+      "pdfId": "1m0Ov1jwk6xZNUrK4clrl8GC1jQe9vwfj",
+      "page": 3,
+      "textKind": "flowText",
+      "textSha256": "48a385ad57275bc1ea5e893bc16bd8d7510df1396df41c21eafa2fc0a86532c9"
+    },
+    {
+      "pdfId": "1Gq5tAReDxiCth4iwAfm0myrrgcE1CY-T",
+      "page": 10,
+      "textKind": "flowText",
+      "textSha256": "b97692aad847d499444c9d49b7feaa49e1b8b187c1d03e014d6ef10ec18ef2db"
+    },
+    {
+      "pdfId": "1m0Ov1jwk6xZNUrK4clrl8GC1jQe9vwfj",
+      "page": 2,
+      "textKind": "flowText",
+      "textSha256": "965b1dd41cd5e87102277e815156674413cdad7636e65acd65e158f1b6b951bf"
+    },
+    {
+      "pdfId": "1Gq5tAReDxiCth4iwAfm0myrrgcE1CY-T",
+      "page": 11,
+      "textKind": "flowText",
+      "textSha256": "0496861c9a87731b974805347c29d4b5568638e1db3a231cbcaacb8d4d447270"
+    },
+    {
+      "pdfId": "14ONJdgC0SMtDG57WybK7J_Ze29BYjszc",
+      "page": 10,
+      "textKind": "flowText",
+      "textSha256": "39dbf19744275706d233c2d039964459f77395cde919b7990db412a78e041146"
+    },
+    {
+      "pdfId": "1Gq5tAReDxiCth4iwAfm0myrrgcE1CY-T",
+      "page": 9,
+      "textKind": "flowText",
+      "textSha256": "7de5e5ce2f7e77a43505de87f9d07a1cec6909342fda86e5e6f3040217f78717"
+    },
+    {
+      "pdfId": "14ONJdgC0SMtDG57WybK7J_Ze29BYjszc",
+      "page": 7,
+      "textKind": "flowText",
+      "textSha256": "f77e669c5f75689e4a95c70e63574abe7dc237ca6c3b16c6d58dd3c5b2027f20"
+    },
+    {
+      "pdfId": "1Gq5tAReDxiCth4iwAfm0myrrgcE1CY-T",
+      "page": 12,
+      "textKind": "flowText",
+      "textSha256": "94df609d8120484654618f2b1f6b01d12fc564f6f63a2ec2656b8d4a5be79f7b"
+    },
+    {
+      "pdfId": "1m0Ov1jwk6xZNUrK4clrl8GC1jQe9vwfj",
+      "page": 7,
+      "textKind": "flowText",
+      "textSha256": "aaa5b68756ec3da796197937387695d8ec9f6df7e6e6e1bf303775fc59ccaedb"
+    },
+    {
+      "pdfId": "1XCHk20UxoYR7Y-t7XpVwDCDPgxczLUzD",
+      "page": 11,
+      "textKind": "flowText",
+      "textSha256": "288ad212533fce3b908f3a39a694070b32a7fe5a67a3a1a416bebd7fd7d90409"
+    },
+    {
+      "pdfId": "1m0Ov1jwk6xZNUrK4clrl8GC1jQe9vwfj",
+      "page": 11,
+      "textKind": "flowText",
+      "textSha256": "2294771693bc3a399a93e49fe66fc864396ed3bcc0b454d46b1b446a5e74ced6"
+    }
+  ]
+}

@@ -1208,6 +1208,7 @@
   <script src="surgery-data.js?v=20260923-surgery-legacy-order"></script>
   <script src="surgery-midterm-reviews.js?v=20260924-hide-nutrition"></script>
   <script src="surgery-reference-overrides.js?v=20260929-reference-priority"></script>
+  <script src="surgery-mid-study-review.js?v=20261020-surgery-study1"></script>
   <script src="community-catalog.js?v=20260929-community-final-structure"></script>
   <script src="community-data.js?v=20260929-community-mid"></script>
   <script src="informatics-catalog.js?v=20261008-final-2"></script>
@@ -1963,19 +1964,24 @@
 
     function renderQuestion(question, index, total = 1) {
       const selected = appState.quiz.answers[question.id] || null;
-      const medicineStudy = question.subjectId === "medicine" && question.medicineReview;
-      const revealed = Boolean(selected) || medicineStudy && question.options.every(option => !option.text.trim());
+      const studyReview = question.subjectId === "medicine" ? question.medicineReview : question.subjectId === "surgery" ? question.surgeryReview : null;
+      const displayOptions = studyReview ? question.options.filter(option => option.text.trim() && (!question.surgeryReview || !isMissingSourceOption(option.text))) : question.options;
+      const revealed = Boolean(selected) || studyReview && !displayOptions.length;
       const acceptedAnswers = sourceAnswers(question);
       const proposedAnswers = Array.isArray(question.aiAnswer) ? question.aiAnswer : (question.aiAnswer ? [question.aiAnswer] : []);
       const reviewStatuses = ["needs-review", "conflict"];
       const gradingAnswers = gradingAnswersForQuestion(question);
       const giftReview = question.giftReview;
       const sourceLocations = question.sourceLocations || [];
-      const sourceRefs = sourceLocations.map(location => [
+      const sourceRefs = sourceLocations.map(location => question.surgeryReview ? [
+        (location.originalAssessment || location.assessment) === "Q Bank" ? null : location.originalAssessment || location.assessment,
+        location.batch ? `Batch ${location.batch}` : null,
+        location.questionNumber ? `Q${location.questionNumber}` : null
+      ].filter(Boolean).join(" · ") : [
         question.subjectId === "surgery" && String(location.batch) === "444" && location.sourceType === "Q Bank" ? null : location.sourceType,
-        location.assessment,
+        question.surgeryReview ? location.originalAssessment || location.assessment : location.assessment,
         location.batch ? batchDisplayName(question.subjectId, location.batch) : null,
-        question.subjectId === "surgery" ? null : (location.questionNumber ? `Q${location.questionNumber}` : null)
+        question.subjectId === "surgery" && !question.surgeryReview ? null : (location.questionNumber ? `Q${location.questionNumber}` : null)
       ].filter(Boolean).join(" · ")).join(" · ");
       const repeatedBatches = [...new Set(sourceLocations.map(location => location.batch).filter(Boolean))]
         .sort((a, b) => Number(b) - Number(a));
@@ -1992,8 +1998,10 @@
       const displayedBatch = appState.navigation.mode === "batch"
         ? appState.navigation.batch || question.sourceBatch
         : newestBatch > 0 ? String(newestBatch) : question.sourceBatch;
-      const examLabel = question.subjectId === "medicine" ? [...new Set(sourceLocations.map(location => location.assessment).filter(Boolean))].join(" / ") || question.assessment : question.assessment;
-      const questionMeta = appState.navigation.mode === "lecture-mix" && question.subjectId !== "informatics" && question.subjectId !== "medicine"
+      const examLabel = question.subjectId === "medicine" || question.surgeryReview ? [...new Set(sourceLocations.map(location => question.surgeryReview ? location.originalAssessment || location.assessment : location.assessment).filter(Boolean))].join(" / ") || question.assessment : question.assessment;
+      const questionMeta = question.surgeryReview
+        ? [examLabel, displayedBatch ? `Batch ${displayedBatch}` : null].filter(Boolean).join(" · ")
+        : appState.navigation.mode === "lecture-mix" && question.subjectId !== "informatics" && question.subjectId !== "medicine"
         ? "Mixed lecture quiz"
         : [appState.navigation.mode === "batch" ? appState.navigation.assessment : examLabel, sourceMetaLabel, displayedBatch ? batchDisplayName(question.subjectId, displayedBatch) : null, question.subjectId === "medicine" && appState.navigation.mode === "lecture-mix" ? null : question.subjectId === "informatics" ? question.lecture : appState.navigation.mode === "cycle" && appState.navigation.assessment === "Midterm" ? question.lecture : question.cycle].filter(Boolean).join(" · ");
       const aiText = giftReview
@@ -2013,14 +2021,14 @@
           ${repeatText ? `<p class="repeat-note">${escapeHtml(repeatText)}</p>` : ""}
           ${(question.images || []).length ? `<div class="question-images">${question.images.map((image, imageIndex) => `<img src="${escapeHtml(image)}" alt="Question image ${imageIndex + 1}" loading="lazy">`).join("")}</div>` : ""}
           <div class="options">
-            ${question.options.filter(option => !medicineStudy || option.text.trim()).map(option => {
+            ${displayOptions.map(option => {
               const selectedClass = selected === option.id ? " selected" : "";
               const resultClass = revealed && gradingAnswers.includes(option.id) ? " correct" : (revealed && gradingAnswers.length && selected === option.id ? " incorrect" : "");
               return `<button class="option-button${selectedClass}${resultClass}" type="button" data-question="${question.id}" data-option="${option.id}" aria-pressed="${selected === option.id}"><span class="option-letter">${escapeHtml(option.sourceLabel || option.id)}</span><span>${escapeHtml(option.text)}</span></button>`;
             }).join("")}
           </div>
-          <div class="answer-panel${revealed ? " visible" : ""}${(medicineStudy ? medicineStudy.objection || giftReview?.ungradedReason : giftReview ? giftReview.warning || giftReview.ungradedReason : reviewStatuses.includes(question.verification)) ? " review" : ""}">
-            ${medicineStudy ? renderMedicineExplanation(question, sourceRefs) : `
+          <div class="answer-panel${revealed ? " visible" : ""}${(studyReview ? studyReview.objection || giftReview?.ungradedReason : giftReview ? giftReview.warning || giftReview.ungradedReason : reviewStatuses.includes(question.verification)) ? " review" : ""}">
+            ${studyReview ? renderMedicineExplanation(question, sourceRefs, studyReview) : `
             <p class="answer-summary">${giftReview ? "Gift key" : "Reference answer"}: ${escapeHtml(question.sourceAnswerNote || acceptedAnswers.join(" or ") || "Not provided")}${giftReview ? gradingAnswers.length ? " · used for bank-based practice" : " · not scored" : reviewStatuses.includes(question.verification) ? " · needs review" : question.verification === "source-only" ? " · reference answer only" : ""}</p>
             ${giftReview && (question.subjectId !== "informatics" || giftReview.ungradedReason) ? `<p class="source-note">${escapeHtml(giftReview.ungradedReason || "Answer feedback follows the recorded Gift key. Review notes explain possible interpretations and lecture differences; they do not replace the key.")}${acceptedAnswers.length > 1 ? " Multiple recorded keys are retained." : ""}</p>` : ""}
             ${question.subjectId === "informatics" ? "" : `<p class="ai-note">${escapeHtml(aiText)}</p>`}
@@ -2037,26 +2045,32 @@
         </article>`;
     }
 
-    function renderMedicineExplanation(question, sourceRefs = "") {
-      const review = question.medicineReview;
+    function renderMedicineExplanation(question, sourceRefs = "", review = question.medicineReview) {
       const key = sourceAnswers(question);
-      const answerText = answers => answers.map(answer => `${escapeHtml(answer)} — ${escapeHtml(question.options.find(option => option.id === answer)?.text || "Option missing in Gift")}`).join(" or ");
+      const bankName = question.subjectId === "surgery" && question.sourceLabel === "Q Bank" ? "Q Bank" : "Gift";
+      const originalNote = question.surgeryReview && /\b(?:if|not sure|doctor|because|then|most likely)\b/i.test(question.sourceAnswerNote || "") ? question.sourceAnswerNote : "";
+      const answerText = answers => answers.map(answer => `${escapeHtml(answer)} — ${escapeHtml(question.options.find(option => option.id === answer)?.text || `Option missing in ${bankName}`)}`).join(" or ");
       const different = review.answers.length && (review.answers.length !== key.length || review.answers.some(answer => !key.includes(answer)));
       const evidence = review.evidence;
       const canScore = gradingAnswersForQuestion(question).length > 0;
       return `<div class="medicine-feedback" lang="en" dir="ltr">
-        <p class="answer-summary">Gift answer: ${key.length ? answerText(key) : "Not provided"}</p>
+        <p class="answer-summary">${bankName} answer: ${key.length ? answerText(key) : "Not provided"}</p>
+        ${originalNote ? `<p class="source-note">Original bank note: ${escapeHtml(originalNote)}</p>` : ""}
         ${!canScore ? `<p class="source-note">Not scored: ${escapeHtml(question.giftReview?.ungradedReason || "The original question is incomplete.")}</p>` : ""}
         ${different || review.objection ? `<div class="medicine-objection">${different ? `<strong>${review.confidence === "supported" ? "Reviewed answer" : "Suggested answer"}: ${answerText(review.answers)}</strong>` : ""}${review.objection ? `<p>${escapeHtml(review.objection)}</p>` : ""}</div>` : ""}
         <p class="medicine-explanation"><strong>Explanation</strong>${escapeHtml(review.explanation)}</p>
         <div class="medicine-source">${review.basis === "lecture" && evidence ? `Source: ${escapeHtml(evidence.title)} · PDF page ${evidence.page}` : "Clinical explanation"}${evidence ? `<details class="medicine-slide"><summary>${evidence.relation === "background" ? "Related slide" : "View supporting slide"}</summary><blockquote>${escapeHtml(evidence.quote)}</blockquote><a href="${escapeHtml(evidence.url)}" target="_blank" rel="noopener noreferrer">Open full lecture ↗</a>${evidence.image ? `<a href="${escapeHtml(evidence.image)}" target="_blank" rel="noopener noreferrer" aria-label="Open slide image at full size"><img src="${escapeHtml(evidence.image)}" alt="${escapeHtml(evidence.title)} — PDF page ${evidence.page}" loading="lazy"></a>` : ""}</details>` : ""}</div>
         ${(review.references || []).length ? `<div class="reference-list">${review.references.map(reference => `<a href="${escapeHtml(reference.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(reference.title)} ↗</a>`).join("")}</div>` : ""}
-        ${sourceRefs ? `<p class="source-note">Gift · ${escapeHtml(sourceRefs)}</p>` : ""}
+        ${sourceRefs ? `<p class="source-note">${bankName} · ${escapeHtml(sourceRefs)}</p>` : ""}
       </div>`;
     }
 
+    function isMissingSourceOption(text) {
+      return !String(text || "").trim() || /^(?:option text was not recorded in (?:the )?source|answer choices were not recorded in (?:the )?source|not provided(?: in (?:the )?source)?|missing|unavailable|[A-D])\.?$/i.test(String(text).trim());
+    }
+
     function gradingAnswersForQuestion(question) {
-      if ((question.subjectId === "informatics" || question.subjectId === "medicine" && (question.assessment === "Midterm" || question.medicineMidLecture)) && question.giftReview?.policy === "gift-key-first") {
+      if ((question.subjectId === "informatics" || question.subjectId === "medicine" && (question.assessment === "Midterm" || question.medicineMidLecture) || question.subjectId === "surgery" && question.surgeryReview) && question.giftReview?.policy === "gift-key-first") {
         return question.giftReview.gradingAnswers;
       }
       const proposed = Array.isArray(question.aiAnswer) ? question.aiAnswer : question.aiAnswer ? [question.aiAnswer] : [];

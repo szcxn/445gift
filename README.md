@@ -11,6 +11,7 @@ A responsive question bank for Medicine, Surgery, Community Medicine, and Inform
 - Mobile-first, static hosting with no account required
 - Duplicate protection using stable question IDs, source locations, and normalized stems
 - Concise English update strip highlighting new study features
+- Permanent Arabic reminder to refresh the page periodically for updates
 
 ## Project structure
 
@@ -27,6 +28,8 @@ A responsive question bank for Medicine, Surgery, Community Medicine, and Inform
 - `surgery-data.js` — Surgery questions
 - `surgery-catalog.js` — Surgery lecture structure
 - `surgery-reference-overrides.js` — Surgery source labels and reference corrections
+- `surgery-mid-study-review.js` — individual Surgery MID explanations, verified original slide excerpts, source reconstruction and Gift-first grading
+- `lecture-media/surgery-mid/` — original supporting Surgery lecture pages, opened on request
 - `community-data.js` — Community Medicine questions
 - `community-catalog.js` — Community Medicine lecture structure
 - `informatics-data.js` — 376 Midterm question occurrences, preserving Gift keys and source locations
@@ -68,7 +71,13 @@ For a subject organized directly by lecture, set `cycle` to `null`. For cycle-ba
 
 When correcting a published question, prefer an override file so the imported source bank remains intact. Keep `sourceAnswer` unchanged, place an independently reviewed answer in `aiAnswer`, and use `verification` to distinguish `confirmed`, `supported`, `conflict`, `needs-review`, and `source-only` items.
 
-Medicine MID has a separate practice policy: `giftReview.gradingAnswers` follows the recorded Gift key. Both initial rendering and click feedback use the same grading helper. Do not use `aiAnswer` or an independently reviewed answer to overwrite this MID grading policy. Other subjects and assessments retain their existing behavior.
+Medicine MID and reviewed Surgery MID questions have a separate practice policy: `giftReview.gradingAnswers` follows the recorded Gift key. Both initial rendering and click feedback use the same grading helper. Do not use `aiAnswer` or an independently reviewed answer to overwrite this grading policy. Other subjects and assessments retain their existing behavior.
+
+The Surgery MID study layer covers 970 existing questions: 934 primary Midterm records and 36 existing Final-source records already used in MID lecture practice. Of these, 468 explanations use directly matching lecture teaching and 502 are explicitly clinical explanations. There are 54 unresolved questions whose available information does not establish a unique reviewed choice. Every question has an individual English explanation using the same compact feedback layout as Medicine: the original bank answer, a reviewed alternative only when needed, one explanation, and optional slide evidence. The available source inventory contains 33 complete original PDFs (604 pages), labelled by their actual team or lecturer. A lecture citation requires an exact quotation on the stated original PDF page. Related background slides are distinguished from direct answer support; a topic match alone is not evidence. Clinical explanations are labelled explicitly when matching teaching is unavailable. Missing pediatric or infection teaching is not replaced with unrelated lecture citations.
+
+Source reconstruction is restricted to documented importer defects checked against the original DOCX hashes and exact paragraphs: swallowed question/option text, dropped parts of multi-answer notes, and a floating hiatal-hernia image previously attached to colorectal screening. Restored keys match the original source; they are separate from medical objections. Blank or placeholder options are hidden, and incomplete or explicitly uncertain source questions are not scored. Corrected topic placement preserves original assessment, batch, source locations and stable progress IDs. An obsolete reference-label filter is removed for 68 reviewed Breast, Neck and Perioperative questions so they are accessible in their lecture groups. The nine previously excluded Nutrition records remain excluded, and unselected Final records are untouched. This correction work adds no public update announcement.
+
+Build the Surgery layer with `scripts/build-surgery-mid-study-review.py` using the private reviewed inputs and original files outside the repository. The builder independently re-extracts cited PDF pages and verifies original bank paragraphs, image bytes, quotation text and published slide-image hashes. The public audit fixture is `tests/fixtures/surgery-mid-study-review.json`. `node tests/surgery-mid-study-review.test.cjs` checks all 970 reviews, source repairs, original grading, every answer click and revisited feedback, exact slide assets, stable displayed IDs, and unchanged other subjects and Final scope.
 
 The current MID explanation layer is `medicine-mid-study-review.js`, loaded after the grading policy. All 687 questions show the Gift answer and a concise, question-specific explanation. A reviewed alternative appears only when it differs, with a clear reason for any disagreement or source limitation. The review covers all 27 available Teamwork 444 lecture PDFs (637 pages), including physician notes: 604 explanations use matching lecture teaching and 83 are explicitly labelled clinical explanations. There are 26 unresolved items whose missing or conflicting source details prevent a unique answer; they still have explanations. Original keys, grading, stems, options, tables, media, IDs, order and saved progress remain unchanged.
 
