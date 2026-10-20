@@ -1,6 +1,6 @@
 # Gift 445 Medical Question Bank
 
-A responsive question bank for Medicine, Surgery, Community Medicine, and Informatics.
+A responsive question bank for Medicine, Surgery, Community Medicine, Informatics, and Research.
 
 ## Features
 
@@ -34,6 +34,9 @@ A responsive question bank for Medicine, Surgery, Community Medicine, and Inform
 - `community-catalog.js` — Community Medicine lecture structure
 - `informatics-data.js` — 376 Midterm question occurrences, preserving Gift keys and source locations
 - `informatics-catalog.js` — five original Midterm lectures in teaching order
+- `research-catalog.js` — the Research tracking sheet's 33 MID sessions and 20 Final session names
+- `research-data.js` — individually explained MID-topic questions from both original Gift banks, retaining each source exam and key
+- `lecture-media/research-mid/` — verified original PDF pages, expanded on request; PowerPoint evidence uses original slide numbers
 - `lecture-media/informatics/` — original lecture PDFs and verified page images
 - `question-media/` — source images used by questions
 - `445-logo.png` — public branding
@@ -106,6 +109,16 @@ Release validation: `node tests/medicine-mid-publish.test.cjs` (all 687 Medicine
 Original-PDF evidence audit: 622 questions have checked original-page excerpts: 443 teaching passages and 179 explicitly marked background-only passages. 37 current-block questions have no verified supporting passage and show no lecture page claim; 28 older or unassigned questions also have no verified passage. Two excerpts are visually checked figure labels. Text quotations retain original wording with whitespace normalization only. Topic-only citations from earlier review stages are replaced at runtime by `medicine-mid-lecture-evidence.js`; they are not displayed as verified evidence. Original PDFs, full extracted page text, and the independent PDF validation script remain in the private reference directory outside the published site. Source-file hashes and page limits are recorded in the portable manifest in `tests/fixtures/`.
 
 ## Local preview
+
+### Research MID (2026-10-20)
+
+The Research tab of the linked 445 tracking sheet determines the scope: 22 theory sessions and 11 tutorials for MID, plus 11 theory and 9 tutorial names for Final. The Final catalog is names only with no active question collection. MID practice contains 640 original source occurrences: 440 from the MID bank and 200 matching questions from the Final bank. Their original assessment, batch, question number, options, answer annotations and Gift keys remain intact. The 266 Final-only questions and one unreconstructable MID topic reminder remain outside the published question bank.
+
+Every included occurrence has an individual English explanation, independently checked against its stem, options and numerical data. 539 explanations use direct lecture teaching; 101 are labelled concept explanations with the limits of related evidence made clear. Reviewed alternatives appear separately from Gift. Nineteen questions cannot establish a unique reviewed answer; they still have explanations. Missing choices, contradictory data, equivalent options and other source defects receive neutral feedback where appropriate. Normal scoring follows the original Gift key.
+
+Available sources comprise 29 original PDFs (394 pages) and five original PowerPoint presentations (217 slides), including physician notes. Their Drive parent is MED444, not a falsely labelled Team445 source; the current 445 tracking sheet controls assessment scope. No dedicated References Manager slide file was found. Citations use the actual PDF page or original PowerPoint slide number. The builder independently verifies source hashes, re-extracts every cited passage, and renders 94 original PDF pages for lazy loading; PowerPoint text is verified directly in the original slide/linked SmartArt XML and links to the source deck. All 27 native question tables and five question-image occurrences are preserved, including explicit shared-case placement.
+
+`scripts/audit-research-source.py` verifies all 907 source occurrences directly against the native MID document and original Final DOCX. `scripts/build-research-mid.py` uses the private source files and authored reviews in `../work/research-mid-review`, publishing only MID-topic questions. `tests/research-mid.test.cjs` checks the complete production script order, all 640 source records, original grading and all 2,518 answer click/revisit, the 53 catalog names, empty Final practice, source quotations and assets, and unchanged existing subjects. The portable proof is `tests/fixtures/research-mid.json`; full bank originals and deferred question content remain private. Existing update-strip wording is preserved.
 
 Informatics (2026-10-08): Midterm only, with 376 original question occurrences across 12 batches and five lectures. The 72 questions still deferred as presumed Final remain outside the site. One previously deferred SQL question (432 Q27) was restored after finding an explicit SQL database-query example on AI PDF page 65. All 376 visible questions have individual English explanations comparing the question with supplied slide passages: 222 have direct concept evidence and 154 have related context with explicitly identified evidence limits. Unsupported source details are not presented as quotations or established lecture answers. Each explanation now has a separate visible slide-answer panel. It distinguishes a supported choice, a qualified slide-based preference, and no conclusively supported option; bank keys and grading remain unchanged. Original PDFs, PDF page numbers (cover = 1), exact excerpts and expandable slide images accompany the explanations.
 
