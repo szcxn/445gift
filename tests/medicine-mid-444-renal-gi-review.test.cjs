@@ -71,10 +71,12 @@ assert.ok(target.filter(q => q.verification === "conflict").every(q => q.referen
 const counts = JSON.parse(JSON.stringify(context.window.GIFT445_MID_444_REVIEW_COUNTS));
 assert.deepEqual(counts, { total: 663, lectureAnchored: 656, outsideLecture: 7, conflict: 40, needsReview: 102 });
 assert.ok(html.includes('class="site-updates" lang="en" dir="ltr"'));
-assert.ok(html.includes("Medicine MID"));
+assert.ok(html.includes("Latest update:</strong> Menu improved"));
 const donationSection = html.match(/<section class="donation-section"[\s\S]*?<\/section>/)[0];
 assert.ok(donationSection.includes('lang="ar" dir="rtl"') && donationSection.includes("اضغط هنا للتبرع عبر إحسان"));
-assert.ok(!/\p{Script=Arabic}/u.test(html.replace(donationSection, "")), "The study interface must be in English; Ehsan remains Arabic");
+const refreshNotice = html.match(/<p class="refresh-notice"[\s\S]*?<\/p>/)[0];
+assert.ok(refreshNotice.includes('lang="ar" dir="rtl"') && refreshNotice.includes("حدثوا الصفحة بشكل دوري عشان توصلكم التحديثات"));
+assert.ok(!/\p{Script=Arabic}/u.test(html.replace(donationSection, "").replace(refreshNotice, "")), "The study interface must be in English; Ehsan and the refresh reminder remain Arabic");
 const medicalReviewStyle = html.match(/\.lecture-evidence, \.review-opinion\s*\{([^}]+)\}/)[1];
 assert.ok(/direction:\s*ltr/.test(medicalReviewStyle), "English medical reviews must retain LTR styles");
 for (const q of after.filter(q => q.lectureEvidence)) {

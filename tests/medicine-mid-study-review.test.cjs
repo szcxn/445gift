@@ -128,5 +128,5 @@ const missingKeyOption = byId.get('medicine-midterm-443-git-hepatobiliary-q049')
 assert.equal(missingKeyOption.sourceAnswer, 'D');
 assert.deepEqual(missingKeyOption.medicineReview.answers, ['C']);
 assert.deepEqual(missingKeyOption.giftReview.gradingAnswers, []);
-assert.match(html, /Latest update:<\/strong> Informatics added/);
+assert.match(html, /Previous update:<\/strong> Informatics added/);
 console.log(`PASS: ${mid.length} Medicine MID study explanations; Gift keys and grading preserved; simple feedback, conditional objections, exact-page slide assets, all-choice feedback and reload behavior; other scopes untouched.`);

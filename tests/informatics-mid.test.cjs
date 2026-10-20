@@ -39,7 +39,9 @@ for(const q of questions)for(const option of q.options){
 }
 for(const q of questions){const a=q.informaticsSlideAnswer;assert.ok(a);assert.ok(['supported','preference','unresolved'].includes(a.confidence));if(a.confidence==='unresolved')assert.equal(a.answers.length,0);for(const answer of a.answers)assert.ok(q.options.some(o=>o.id===answer&&o.text));const output=r.renderQuestion(q,0);assert.ok(output.includes(r.escapeHtml(a.basis)));}
 for(const [batch,number,answer,confidence] of [['443',1,'A','supported'],['443',25,'A','supported'],['443',11,'B','preference'],['434',16,'A','preference'],['435',11,'B','preference']]){const q=questions.find(q=>q.sourceBatch===batch&&q.sourceLocations[0].questionNumber===number);assert.deepEqual(q.informaticsSlideAnswer.answers,[answer]);assert.equal(q.informaticsSlideAnswer.confidence,confidence);assert.ok(!q.giftReview.gradingAnswers.includes(answer));}
-assert.match(html,/Informatics added/);assert.match(html,/2026-10-08/);
+assert.match(html,/Informatics added/);assert.match(html,/2026-10-20/);
+assert.match(html,/Latest update:<\/strong> Menu improved/);
+assert.match(html,/<p class="refresh-notice" lang="ar" dir="rtl"><strong>تنبيه:<\/strong> حدثوا الصفحة بشكل دوري عشان توصلكم التحديثات\.<\/p>/);
 load('openLecture');let opened=null;c.openQuestionSet=(title,items)=>{opened=plain(items)};c.isQuestionAvailableInLecture=()=>true;
 c.openLecture('informatics',null,'AI in Healthcare');assert.equal(opened.length,17);assert.equal(new Set(opened.map(q=>q.id)).size,17);assert.equal(opened.filter(q=>q.lecture==='AI in Healthcare').length,17);
 const both=questions.filter(q=>q.informaticsLectures.some(l=>['AI in Healthcare','Clinical Decision Support'].includes(l)));assert.equal(both.length,79);assert.equal(new Set(both.map(q=>q.id)).size,79);

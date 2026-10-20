@@ -73,5 +73,5 @@ assert.deepEqual(byId.get('medicine-final-434-hematology-oncology-q048').medicin
 assert.deepEqual(byId.get('medicine-final-432-endocrinology-q028').medicineReview.answers,['A','C']);
 const blank=byId.get('medicine-final-443-cardiology-q001');delete renderer.appState.quiz.answers[blank.id];
 const blankOutput=renderer.renderQuestion(blank,0);assert.match(blankOutput,/answer-panel visible/);assert.doesNotMatch(blankOutput,/class="option-button/);assert.match(blankOutput,/Not scored:/);
-assert.match(html, /Latest update:<\/strong> Informatics added/);
+assert.match(html, /Previous update:<\/strong> Informatics added/);
 console.log(`PASS: ${selected.length} individually reviewed Final questions in matching MID lectures; all765 source occurrences conserved, three exam-key variants separated, original options restored, all-choice Gift grading/reload, mixed exam labels, source assets, existing MID reviews and other subjects preserved.`);
