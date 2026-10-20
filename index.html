@@ -537,6 +537,10 @@
       --subject-color: #c4a5ff !important;
     }
 
+    :root[data-theme="dark"] .subject-card[data-subject="radiology"] {
+      --subject-color: #67e8f9 !important;
+    }
+
     .workspace {
       display: none;
       margin-top: 14px;
@@ -804,6 +808,11 @@
       border-radius: 10px;
       background: #fff;
     }
+    .question-image-link { display: block; color: var(--accent); text-decoration: none; }
+    .question-image-link span { display: block; padding: 7px 3px; font-size: 12px; text-align: right; text-decoration: underline; text-underline-offset: 3px; }
+    .radiology-choice-image { display: block; width: auto; max-width: 100%; max-height: 320px; object-fit: contain; margin-top: 7px; border-radius: 6px; background: #fff; }
+    .radiology-choice-links { display: flex; flex-wrap: wrap; gap: 5px 14px; padding: 7px 3px; font-size: 12px; }
+    .radiology-choice-links a { color: var(--accent); text-underline-offset: 3px; }
     .options { display: grid; gap: 8px; }
 
     .option-button {
@@ -1153,7 +1162,7 @@
     <section class="hero" aria-labelledby="page-title">
       <div class="hero-copy">
         <h1 id="page-title">A Structured Medical Question Bank.</h1>
-        <p class="intro">A structured question bank for Medicine, Surgery, Community Medicine, Informatics, and Research—organized for focused, continuous review.</p>
+        <p class="intro">A structured question bank for Medicine, Surgery, Community Medicine, Informatics, Research, and Radiology—organized for focused, continuous review.</p>
         <div class="hero-points" aria-label="Study features">
           <span class="hero-point">Subject based</span>
           <span class="hero-point">Batch review</span>
@@ -1222,13 +1231,16 @@
   <script src="informatics-final-resources.js?v=20261008-final-2"></script>
   <script src="research-catalog.js?v=20261020-research-mid-1"></script>
   <script src="research-data.js?v=20261020-research-mid-1"></script>
+  <script src="radiology-catalog.js?v=20261020-radiology-mid-1"></script>
+  <script src="radiology-data.js?v=20261020-radiology-mid-1"></script>
   <script>
     const SUBJECTS = [
       { id: "medicine", name: "Medicine", code: "MED", index: "01", description: "Review the full bank or study by batch, cycle, and lecture.", color: "#087eb6" },
       { id: "surgery", name: "Surgery", code: "SUR", index: "02", description: "Review questions by batch, cycle, or lecture.", color: "#d45b4e" },
       { id: "community", name: "Community Medicine", code: "COM", index: "03", description: "Review midterm questions and browse the final lecture structure.", color: "#168c82" },
       { id: "informatics", name: "Informatics", code: "INF", index: "04", description: "Study by lecture or batch, with slide-based Midterm reviews and organized Final questions.", color: "#b77900" },
-      { id: "research", name: "Research", code: "RES", index: "05", description: "Study Midterm topics with explained Gift questions from both banks. Browse Final lecture names for later.", color: "#7651ad" }
+      { id: "research", name: "Research", code: "RES", index: "05", description: "Study Midterm topics with explained Gift questions from both banks. Browse Final lecture names for later.", color: "#7651ad" },
+      { id: "radiology", name: "Radiology", code: "RAD", index: "06", description: "Study Midterm topics with explained Gift questions and checked lecture references. Browse Final lecture names for later.", color: "#0097a7" }
     ];
 
     const CYCLE_ORDER = [
@@ -1249,7 +1261,8 @@
       ...(window.GIFT445_COMMUNITY_QUESTIONS || []),
       ...(window.GIFT445_INFORMATICS_QUESTIONS || []),
       ...(window.GIFT445_INFORMATICS_FINAL_QUESTIONS || []),
-      ...(window.GIFT445_RESEARCH_QUESTIONS || [])
+      ...(window.GIFT445_RESEARCH_QUESTIONS || []),
+      ...(window.GIFT445_RADIOLOGY_QUESTIONS || [])
     ].filter(question => !question.excluded));
 
     function deduplicateQuestions(questions) {
@@ -1271,7 +1284,7 @@
           .join("||");
         const tableKey = JSON.stringify((question.sourceTables || []).map(table => table.rows));
         const questionVariantKey = stemKey && optionSetKey
-          ? `${question.subjectId || "unknown"}|||${stemKey}|||${optionSetKey}|||${tableKey}${question.subjectId === "informatics" || question.subjectId === "research" || question.medicineSourceVariantOf || question.medicineMidLecture ? `|||${question.id}` : ""}`
+          ? `${question.subjectId || "unknown"}|||${stemKey}|||${optionSetKey}|||${tableKey}${question.subjectId === "informatics" || question.subjectId === "research" || question.subjectId === "radiology" || question.medicineSourceVariantOf || question.medicineMidLecture ? `|||${question.id}` : ""}`
           : "";
         const duplicate = seenIds.has(question.id)
           || (questionVariantKey && seenQuestionVariants.has(questionVariantKey));
@@ -1494,6 +1507,8 @@
             ? (window.GIFT445_INFORMATICS_CATALOG || [])
           : subjectId === "research"
             ? (window.GIFT445_RESEARCH_CATALOG || [])
+          : subjectId === "radiology"
+            ? (window.GIFT445_RADIOLOGY_CATALOG || [])
           : [];
       const catalogLectures = lectureCatalog.flatMap(group => group.lectures);
       const catalogAssessments = [...new Set(lectureCatalog.map(group => group.assessment).filter(Boolean))];
@@ -1529,13 +1544,14 @@
         ${workspaceHeader(subject.name, "Selected subject")}
         ${subjectId === "informatics" ? `<p class="source-note">Midterm practice: 376 Midterm questions + 240 Final-bank questions on Midterm topics, with slide-based explanations. Final-only questions are organized for later explanation. Each question keeps its original batch and exam label.</p>` : ""}
         ${subjectId === "research" ? `<p class="source-note">Midterm practice includes matching questions from the Midterm and Final Gift banks, with explanations and checked lecture references. Original exam labels and Gift keys are retained. Final is a lecture list only; its questions have not been added.</p>` : ""}
+        ${subjectId === "radiology" ? `<p class="source-note">Midterm practice follows the verified lecture list, with explanations and checked lecture references. Original exam labels and Gift keys are retained. Final is a lecture list only.</p>` : ""}
         ${(questions.length || assessments.length) ? `<section class="route-section">
           <div class="route-section-head"><h3>Quick Review</h3><p>Progress is saved on this device.</p></div>
           <div class="route-grid">
             ${questions.length ? `<button class="route-card featured collection-card" type="button" data-mode="all"><strong>All ${escapeHtml(subject.name)} Questions</strong><span>${questionCountLabel(questions.length)} in one sequence</span></button>` : ""}
             ${assessments.map(assessment => {
               const count = questionsForAssessment(subjectId, assessment).length;
-              return `<button class="route-card collection-card" type="button" data-mode="assessment" data-assessment="${escapeHtml(assessment)}" ${count ? "" : "disabled"}><strong>${escapeHtml(assessment)}</strong><span>${count ? questionCountLabel(count) : subjectId === "research" && assessment === "Final" ? "Lecture names only" : "No questions from Gift"}</span></button>`;
+              return `<button class="route-card collection-card" type="button" data-mode="assessment" data-assessment="${escapeHtml(assessment)}" ${count ? "" : "disabled"}><strong>${escapeHtml(assessment)}</strong><span>${count ? questionCountLabel(count) : subjectId === "research" && assessment === "Final" ? "Lecture names only" : subjectId === "radiology" && assessment === "Final" ? "Lecture names only" : "No questions from Gift"}</span></button>`;
             }).join("")}
           </div>
         </section>` : ""}
@@ -1547,7 +1563,7 @@
               <span class="batch-toggle-icon" aria-hidden="true">⌄</span>
             </button>
             <div class="batch-panel" id="batch-list" hidden><div class="route-grid">
-              ${batches.map(({ assessment, batch }) => `<button class="route-card batch-card" type="button" data-assessment="${escapeHtml(assessment)}" data-batch="${escapeHtml(batch)}"><strong>${escapeHtml(batchDisplayName(subjectId, batch))} · ${escapeHtml(assessment)}${subjectId === "research" && assessment === "Final" ? " · Midterm topics" : ""}</strong><span>${escapeHtml(batchCountLabel(subjectId, assessment, batch))}</span></button>`).join("")}
+              ${batches.map(({ assessment, batch }) => `<button class="route-card batch-card" type="button" data-assessment="${escapeHtml(assessment)}" data-batch="${escapeHtml(batch)}"><strong>${escapeHtml(batchDisplayName(subjectId, batch))} · ${escapeHtml(assessment)}${(subjectId === "research" || subjectId === "radiology") && assessment === "Final" ? " · Midterm topics" : ""}</strong><span>${escapeHtml(batchCountLabel(subjectId, assessment, batch))}</span></button>`).join("")}
             </div></div>
           </section>` : lectureCatalog.length ? `
           <section class="route-section">
@@ -1595,7 +1611,7 @@
                   <div class="route-grid">
                     ${group.lectures.map(lecture => {
                       const count = questions.filter(question => !question.cycle && (subjectId === "informatics" ? (question.informaticsLectures || [question.lecture]).includes(lecture) : question.lecture === lecture) && isQuestionAvailableInLecture(question, subjectId)).length;
-                      return `<button class="route-card direct-lecture-card" type="button" data-lecture="${escapeHtml(lecture)}" ${count ? "" : "disabled"}><strong>${escapeHtml(lecture)}</strong><span>${count ? questionCountLabel(count) : subjectId === "research" && assessment === "Final" ? "Lecture names only" : "No questions from Gift"}${subjectId === "informatics" && count > questions.filter(question => question.lecture === lecture).length ? ` · ${questions.filter(question => question.lecture === lecture).length} primary · ${count - questions.filter(question => question.lecture === lecture).length} shared` : ""}</span></button>`;
+                      return `<button class="route-card direct-lecture-card" type="button" data-lecture="${escapeHtml(lecture)}" ${count ? "" : "disabled"}><strong>${escapeHtml(lecture)}</strong><span>${count ? questionCountLabel(count) : subjectId === "research" && assessment === "Final" ? "Lecture names only" : subjectId === "radiology" && assessment === "Final" ? "Lecture names only" : "No questions from Gift"}${subjectId === "informatics" && count > questions.filter(question => question.lecture === lecture).length ? ` · ${questions.filter(question => question.lecture === lecture).length} primary · ${count - questions.filter(question => question.lecture === lecture).length} shared` : ""}</span></button>`;
                     }).join("")}
                   </div>
                 </section>`).join("")}
@@ -1761,7 +1777,7 @@
             ${cycles.map(cycle => {
               const lectures = [...grouped.get(cycle).entries()].sort((a, b) => (a[1].order - b[1].order) || a[0].localeCompare(b[0]));
               return `<section class="lecture-mix-group">
-                <h3>${escapeHtml(cycle === "General" && subjectId === "informatics" ? "Informatics Lectures and Pending Topics" : cycle === "General" && (subjectId === "community" || subjectId === "research") ? "Midterm Lectures" : cycle)}</h3>
+                <h3>${escapeHtml(cycle === "General" && subjectId === "informatics" ? "Informatics Lectures and Pending Topics" : cycle === "General" && (subjectId === "community" || subjectId === "research" || subjectId === "radiology") ? "Midterm Lectures" : cycle)}</h3>
                 <div class="lecture-mix-options">
                   ${lectures.map(([lecture, details]) => `<label class="lecture-mix-option">
                     <input class="lecture-mix-check" type="checkbox" data-cycle="${escapeHtml(cycle === "General" ? "" : cycle)}" data-lecture="${escapeHtml(lecture)}">
@@ -1844,7 +1860,7 @@
       const questions = questionsFor(subjectId).filter(question => (subjectId === "informatics" ? (question.informaticsLectures || [question.lecture]).includes(lecture) : question.lecture === lecture)
         && isQuestionAvailableInLecture(question, subjectId)
         && (!cycle || question.cycle === cycle));
-      if (subjectId === "surgery" || subjectId === "medicine" || subjectId === "community" || subjectId === "informatics" || subjectId === "research") {
+      if (subjectId === "surgery" || subjectId === "medicine" || subjectId === "community" || subjectId === "informatics" || subjectId === "research" || subjectId === "radiology") {
         questions.sort((left, right) => (left.referenceOrder ?? Number.MAX_SAFE_INTEGER) - (right.referenceOrder ?? Number.MAX_SAFE_INTEGER));
       }
       openQuestionSet(lecture, questions, { subjectId, cycle, lecture, mode: "lecture", assessment: null, batch: null, title: lecture }, resume);
@@ -1884,6 +1900,7 @@
 
     function questionsForAssessment(subjectId, assessment) {
       if (subjectId === "research") return questionsFor(subjectId).filter(question => question.researchPracticeAssessment === assessment);
+      if (subjectId === "radiology") return questionsFor(subjectId).filter(question => question.radiologyPracticeAssessment === assessment);
       if (subjectId === "informatics" && assessment === "Midterm") return questionsFor(subjectId).filter(question => question.assessment === "Midterm" || (question.informaticsPracticeScopes || []).includes("Midterm"));
       if (subjectId === "surgery") {
         return questionsFor(subjectId).filter(question => question.assessment === assessment);
@@ -1958,6 +1975,9 @@
       workspaceElement.querySelectorAll(".option-button").forEach(button => {
         button.addEventListener("click", () => answerQuestion(button.dataset.question, button.dataset.option));
       });
+      workspaceElement.querySelectorAll(".review-question-button").forEach(button => {
+        button.addEventListener("click", () => answerQuestion(button.dataset.question, "__reviewed__"));
+      });
       workspaceElement.scrollIntoView({ behavior: "smooth", block: "nearest" });
     }
 
@@ -1979,8 +1999,8 @@
 
     function renderQuestion(question, index, total = 1) {
       const selected = appState.quiz.answers[question.id] || null;
-      const studyReview = question.subjectId === "medicine" ? question.medicineReview : question.subjectId === "surgery" ? question.surgeryReview : question.subjectId === "research" ? question.researchReview : null;
-      const displayOptions = studyReview ? question.options.filter(option => option.text.trim() && (!(question.surgeryReview || question.researchReview) || !isMissingSourceOption(option.text))) : question.options;
+      const studyReview = question.subjectId === "medicine" ? question.medicineReview : question.subjectId === "surgery" ? question.surgeryReview : question.subjectId === "research" ? question.researchReview : question.subjectId === "radiology" ? question.radiologyReview : null;
+      const displayOptions = studyReview ? question.options.filter(option => question.subjectId === "radiology" && (option.images || []).length || option.text.trim() && (!(question.surgeryReview || question.researchReview || question.radiologyReview) || !isMissingSourceOption(option.text))) : question.options;
       const revealed = Boolean(selected) || studyReview && !displayOptions.length;
       const acceptedAnswers = sourceAnswers(question);
       const proposedAnswers = Array.isArray(question.aiAnswer) ? question.aiAnswer : (question.aiAnswer ? [question.aiAnswer] : []);
@@ -1988,7 +2008,7 @@
       const gradingAnswers = gradingAnswersForQuestion(question);
       const giftReview = question.giftReview;
       const sourceLocations = question.sourceLocations || [];
-      const sourceRefs = sourceLocations.map(location => question.surgeryReview || question.researchReview ? [
+      const sourceRefs = sourceLocations.map(location => question.surgeryReview || question.researchReview || question.radiologyReview ? [
         (location.originalAssessment || location.assessment) === "Q Bank" ? null : location.originalAssessment || location.assessment,
         location.batch ? `Batch ${location.batch}` : null,
         location.questionNumber ? `Q${location.questionNumber}` : null
@@ -2014,8 +2034,8 @@
         ? appState.navigation.batch || question.sourceBatch
         : newestBatch > 0 ? String(newestBatch) : question.sourceBatch;
       const examLabel = question.subjectId === "medicine" || question.surgeryReview ? [...new Set(sourceLocations.map(location => question.surgeryReview ? location.originalAssessment || location.assessment : location.assessment).filter(Boolean))].join(" / ") || question.assessment : question.assessment;
-      const questionMeta = question.surgeryReview || question.researchReview
-        ? [examLabel, displayedBatch ? `Batch ${displayedBatch}` : null, question.researchReview && !["lecture", "lecture-mix"].includes(appState.navigation.mode) ? question.lecture : null].filter(Boolean).join(" · ")
+      const questionMeta = question.surgeryReview || question.researchReview || question.radiologyReview
+        ? [examLabel, displayedBatch ? `Batch ${displayedBatch}` : null, (question.researchReview || question.radiologyReview) && !["lecture", "lecture-mix"].includes(appState.navigation.mode) ? question.lecture : null].filter(Boolean).join(" · ")
         : appState.navigation.mode === "lecture-mix" && question.subjectId !== "informatics" && question.subjectId !== "medicine"
         ? "Mixed lecture quiz"
         : [appState.navigation.mode === "batch" ? appState.navigation.assessment : examLabel, sourceMetaLabel, displayedBatch ? batchDisplayName(question.subjectId, displayedBatch) : null, question.subjectId === "medicine" && appState.navigation.mode === "lecture-mix" ? null : question.subjectId === "informatics" ? question.lecture : appState.navigation.mode === "cycle" && appState.navigation.assessment === "Midterm" ? question.lecture : question.cycle].filter(Boolean).join(" · ");
@@ -2034,12 +2054,16 @@
           <p class="question-stem">${escapeHtml(question.stem)}</p>
           ${renderSourceTables(question)}
           ${repeatText ? `<p class="repeat-note">${escapeHtml(repeatText)}</p>` : ""}
-          ${(question.images || []).length ? `<div class="question-images">${question.images.map((image, imageIndex) => `<img src="${escapeHtml(image)}" alt="Question image ${imageIndex + 1}" loading="lazy">`).join("")}</div>` : ""}
+          ${(question.images || []).length ? `<div class="question-images">${question.images.map((image, imageIndex) => question.subjectId === "radiology" ? `<a class="question-image-link" href="${escapeHtml(image)}" target="_blank" rel="noopener noreferrer" aria-label="Open question image ${imageIndex + 1} at full size"><img src="${escapeHtml(image)}" alt="Question image ${imageIndex + 1}" loading="lazy"><span>Open full-size image ↗</span></a>` : `<img src="${escapeHtml(image)}" alt="Question image ${imageIndex + 1}" loading="lazy">`).join("")}</div>` : ""}
           <div class="options">
             ${displayOptions.map(option => {
               const selectedClass = selected === option.id ? " selected" : "";
               const resultClass = revealed && gradingAnswers.includes(option.id) ? " correct" : (revealed && gradingAnswers.length && selected === option.id ? " incorrect" : "");
-              return `<button class="option-button${selectedClass}${resultClass}" type="button" data-question="${question.id}" data-option="${option.id}" aria-pressed="${selected === option.id}"><span class="option-letter">${escapeHtml(option.sourceLabel || option.id)}</span><span>${escapeHtml(option.text)}</span></button>`;
+              const choiceImages = question.subjectId === "radiology" ? option.images || [] : [];
+              const choiceLabel = option.sourceLabel || option.id;
+              const choiceText = choiceImages.length && isMissingSourceOption(option.text) ? "" : option.text;
+              const button = `<button class="option-button${selectedClass}${resultClass}" type="button" data-question="${question.id}" data-option="${option.id}" aria-pressed="${selected === option.id}"><span class="option-letter">${escapeHtml(choiceLabel)}</span><span>${escapeHtml(choiceText)}${choiceImages.map((image, imageIndex) => `<img class="radiology-choice-image" src="${escapeHtml(image)}" alt="Choice ${escapeHtml(choiceLabel)} image ${imageIndex + 1}" loading="lazy">`).join("")}</span></button>`;
+              return choiceImages.length ? `<div class="radiology-choice">${button}<div class="radiology-choice-links">${choiceImages.map((image, imageIndex) => `<a href="${escapeHtml(image)}" target="_blank" rel="noopener noreferrer">Open choice ${escapeHtml(choiceLabel)} image${choiceImages.length > 1 ? ` ${imageIndex + 1}` : ""} ↗</a>`).join("")}</div></div>` : button;
             }).join("")}
           </div>
           <div class="answer-panel${revealed ? " visible" : ""}${(studyReview ? studyReview.objection || giftReview?.ungradedReason : giftReview ? giftReview.warning || giftReview.ungradedReason : reviewStatuses.includes(question.verification)) ? " review" : ""}">
@@ -2055,7 +2079,8 @@
             ${!giftReview && question.reviewOpinion ? `<p class="review-opinion" lang="en" dir="ltr"><strong>${question.subjectId === "medicine" && question.assessment === "Midterm" ? "Clinical interpretation (separate from the lecture text):" : "Medical review:"}</strong> ${escapeHtml(question.reviewOpinion)}</p>` : ""}
             <p class="source-note">Reference: ${escapeHtml(question.sourceLabel || `${subject?.name || "Medical"} Question Bank`)}${sourceRefs ? ` · ${escapeHtml(sourceRefs)}` : ""}</p>
             ${(question.references || []).length ? `<div class="reference-list">${question.references.map(reference => `<a href="${escapeHtml(reference.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(reference.title)} ↗</a>`).join("")}</div>` : ""}
-            `}
+            `}${question.subjectId === "radiology" && revealed && (question.answerImages || []).length ? `<div class="question-images">${question.answerImages.map((image, imageIndex) => `<a class="question-image-link" href="${escapeHtml(image)}" target="_blank" rel="noopener noreferrer" aria-label="Open answer illustration ${imageIndex + 1} at full size"><img src="${escapeHtml(image)}" alt="Answer illustration ${imageIndex + 1}" loading="lazy"><span>Open full-size illustration ↗</span></a>`).join("")}</div>` : ""}
+            ${question.subjectId === "radiology" && !displayOptions.length ? `<button class="text-button review-question-button" type="button" data-question="${question.id}" ${selected ? "disabled" : ""}>${selected ? "Reviewed" : "Mark reviewed"}</button>` : ""}
           </div>
         </article>`;
     }
@@ -2063,19 +2088,27 @@
     function renderMedicineExplanation(question, sourceRefs = "", review = question.medicineReview) {
       const key = sourceAnswers(question);
       const bankName = question.subjectId === "surgery" && question.sourceLabel === "Q Bank" ? "Q Bank" : "Gift";
-      const originalNote = question.researchReview ? question.sourceAnswerNote || "" : question.surgeryReview && /\b(?:if|not sure|doctor|because|then|most likely)\b/i.test(question.sourceAnswerNote || "") ? question.sourceAnswerNote : "";
-      const answerText = answers => answers.map(answer => `${escapeHtml(answer)} — ${escapeHtml(question.options.find(option => option.id === answer)?.text || `Option missing in ${bankName}`)}`).join(" or ");
+      const writtenGiftAnswer = question.subjectId === "radiology" ? question.sourceAnswerText || "" : "";
+      const repeatedWrittenAnswer = writtenGiftAnswer && (question.sourceAnswerNote || "").replace(/^\s*(?:Self\s+)?Answer\s*:\s*/i, "").trim() === writtenGiftAnswer.trim();
+      const originalNote = question.researchReview || question.radiologyReview ? repeatedWrittenAnswer ? "" : question.sourceAnswerNote || "" : question.surgeryReview && /\b(?:if|not sure|doctor|because|then|most likely)\b/i.test(question.sourceAnswerNote || "") ? question.sourceAnswerNote : "";
+      const answerText = answers => answers.map(answer => {
+        const option = question.options.find(item => item.id === answer);
+        const imageChoice = question.subjectId === "radiology" && (option?.images || []).length;
+        const label = imageChoice ? option.sourceLabel || answer : answer;
+        const text = imageChoice && isMissingSourceOption(option.text) ? "Image choice" : option?.text || `Option missing in ${bankName}`;
+        return `${escapeHtml(label)} — ${escapeHtml(text)}`;
+      }).join(" or ");
       const different = review.answers.length && (review.answers.length !== key.length || review.answers.some(answer => !key.includes(answer)));
       const evidence = review.evidence;
       const canScore = gradingAnswersForQuestion(question).length > 0;
-      const pageLabel = question.researchReview && evidence?.unit === "slide" ? "Slide" : "PDF page";
+      const pageLabel = (question.researchReview || question.radiologyReview) && evidence?.unit === "slide" ? "Slide" : "PDF page";
       return `<div class="medicine-feedback" lang="en" dir="ltr">
-        <p class="answer-summary">${bankName} answer: ${key.length ? answerText(key) : "Not provided"}</p>
+        <p class="answer-summary">${bankName} answer: ${key.length ? answerText(key) : writtenGiftAnswer ? escapeHtml(writtenGiftAnswer) : "Not provided"}</p>
         ${originalNote ? `<p class="source-note">Original bank note: ${escapeHtml(originalNote)}</p>` : ""}
         ${!canScore ? `<p class="source-note">Not scored: ${escapeHtml(question.giftReview?.ungradedReason || "The original question is incomplete.")}</p>` : ""}
         ${different || review.objection ? `<div class="medicine-objection">${different ? `<strong>${review.confidence === "supported" ? "Reviewed answer" : "Suggested answer"}: ${answerText(review.answers)}</strong>` : ""}${review.objection ? `<p>${escapeHtml(review.objection)}</p>` : ""}</div>` : ""}
         <p class="medicine-explanation"><strong>Explanation</strong>${escapeHtml(review.explanation)}</p>
-        <div class="medicine-source">${review.basis === "lecture" && evidence ? `Source: ${escapeHtml(evidence.title)} · ${pageLabel} ${evidence.page}` : question.researchReview ? "Concept explanation" : "Clinical explanation"}${evidence ? `<details class="medicine-slide"><summary>${evidence.relation === "background" ? "Related slide" : "View supporting slide"}</summary>${(question.surgeryReview || question.researchReview) && evidence.relation === "background" ? `<p class="source-note">${escapeHtml(evidence.title)} · ${pageLabel} ${evidence.page}</p>` : ""}<blockquote>${escapeHtml(evidence.quote)}</blockquote><a href="${escapeHtml(evidence.url)}" target="_blank" rel="noopener noreferrer">Open full lecture ↗</a>${evidence.image ? `<a href="${escapeHtml(evidence.image)}" target="_blank" rel="noopener noreferrer" aria-label="Open slide image at full size"><img src="${escapeHtml(evidence.image)}" alt="${escapeHtml(evidence.title)} — ${pageLabel} ${evidence.page}" loading="lazy"></a>` : ""}</details>` : ""}</div>
+        <div class="medicine-source">${review.basis === "lecture" && evidence ? `Source: ${escapeHtml(evidence.title)} · ${pageLabel} ${evidence.page}` : question.researchReview || question.radiologyReview ? "Concept explanation" : "Clinical explanation"}${evidence ? `<details class="medicine-slide"><summary>${evidence.relation === "background" ? "Related slide" : "View supporting slide"}</summary>${(question.surgeryReview || question.researchReview || question.radiologyReview) && evidence.relation === "background" ? `<p class="source-note">${escapeHtml(evidence.title)} · ${pageLabel} ${evidence.page}</p>` : ""}<blockquote>${escapeHtml(evidence.quote)}</blockquote><a href="${escapeHtml(evidence.url)}" target="_blank" rel="noopener noreferrer">Open full lecture ↗</a>${evidence.image ? `<a href="${escapeHtml(evidence.image)}" target="_blank" rel="noopener noreferrer" aria-label="Open slide image at full size"><img src="${escapeHtml(evidence.image)}" alt="${escapeHtml(evidence.title)} — ${pageLabel} ${evidence.page}" loading="lazy"></a>` : ""}</details>` : ""}</div>
         ${(review.references || []).length ? `<div class="reference-list">${review.references.map(reference => `<a href="${escapeHtml(reference.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(reference.title)} ↗</a>`).join("")}</div>` : ""}
         ${sourceRefs ? `<p class="source-note">${bankName} · ${escapeHtml(sourceRefs)}</p>` : ""}
       </div>`;
@@ -2086,7 +2119,7 @@
     }
 
     function gradingAnswersForQuestion(question) {
-      if ((question.subjectId === "informatics" || question.subjectId === "research" || question.subjectId === "medicine" && (question.assessment === "Midterm" || question.medicineMidLecture) || question.subjectId === "surgery" && question.surgeryReview) && question.giftReview?.policy === "gift-key-first") {
+      if ((question.subjectId === "informatics" || question.subjectId === "research" || question.subjectId === "radiology" || question.subjectId === "medicine" && (question.assessment === "Midterm" || question.medicineMidLecture) || question.subjectId === "surgery" && question.surgeryReview) && question.giftReview?.policy === "gift-key-first") {
         return question.giftReview.gradingAnswers;
       }
       const proposed = Array.isArray(question.aiAnswer) ? question.aiAnswer : question.aiAnswer ? [question.aiAnswer] : [];
@@ -2135,7 +2168,10 @@
 
     function answerQuestion(questionId, optionId) {
       const question = QUESTION_BANK.find(item => item.id === questionId);
-      if (!question || !question.options.some(option => option.id === optionId)) return;
+      if (!question) return;
+      const reviewOnly = question.subjectId === "radiology" && optionId === "__reviewed__"
+        && !question.options.some(option => (option.images || []).length || !isMissingSourceOption(option.text));
+      if (!reviewOnly && !question.options.some(option => option.id === optionId)) return;
       const wasAlreadyAnswered = Boolean(appState.quiz.answers[questionId]);
       appState.quiz.answers[questionId] = optionId;
       persistState();
@@ -2149,6 +2185,10 @@
         button.setAttribute("aria-pressed", String(isSelected));
       });
       card.querySelector(".answer-panel").classList.add("visible");
+      if (reviewOnly) {
+        const reviewButton = card.querySelector(".review-question-button");
+        if (reviewButton) { reviewButton.disabled = true; reviewButton.textContent = "Reviewed"; }
+      }
       const progress = workspaceElement.querySelector(".quiz-progress");
       const answered = appState.quiz.questionIds.filter(id => appState.quiz.answers[id]).length;
       if (progress) {
