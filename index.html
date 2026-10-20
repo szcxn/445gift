@@ -1208,7 +1208,7 @@
   <script src="surgery-data.js?v=20260923-surgery-legacy-order"></script>
   <script src="surgery-midterm-reviews.js?v=20260924-hide-nutrition"></script>
   <script src="surgery-reference-overrides.js?v=20260929-reference-priority"></script>
-  <script src="surgery-mid-study-review.js?v=20261020-surgery-study1"></script>
+  <script src="surgery-mid-study-review.js?v=20261020-surgery-study2"></script>
   <script src="community-catalog.js?v=20260929-community-final-structure"></script>
   <script src="community-data.js?v=20260929-community-mid"></script>
   <script src="informatics-catalog.js?v=20261008-final-2"></script>
@@ -1568,7 +1568,9 @@
               ${catalogAssessments.map(assessment => {
                 const groups = lectureCatalog.filter(group => group.assessment === assessment);
                 const sessionCount = groups.reduce((total, group) => total + group.lectures.length, 0);
-                const questionCount = subjectId === "informatics" && assessment === "Final"
+                const questionCount = subjectId === "surgery" && assessment === "Midterm"
+                  ? questions.filter(question => !question.cycle && isQuestionAvailableInLecture(question, subjectId) && groups.some(group => group.lectures.includes(question.lecture))).length
+                  : subjectId === "informatics" && assessment === "Final"
                   ? questions.filter(question => groups.some(group => group.lectures.some(lecture => (question.informaticsLectures || [question.lecture]).includes(lecture)))).length
                   : questionsForAssessment(subjectId, assessment).length;
                 const sessionLabel = subjectId === "informatics" && assessment === "Final" ? "4 lectures · 6 pending topics" : `${sessionCount} lectures`;
@@ -2059,7 +2061,7 @@
         ${!canScore ? `<p class="source-note">Not scored: ${escapeHtml(question.giftReview?.ungradedReason || "The original question is incomplete.")}</p>` : ""}
         ${different || review.objection ? `<div class="medicine-objection">${different ? `<strong>${review.confidence === "supported" ? "Reviewed answer" : "Suggested answer"}: ${answerText(review.answers)}</strong>` : ""}${review.objection ? `<p>${escapeHtml(review.objection)}</p>` : ""}</div>` : ""}
         <p class="medicine-explanation"><strong>Explanation</strong>${escapeHtml(review.explanation)}</p>
-        <div class="medicine-source">${review.basis === "lecture" && evidence ? `Source: ${escapeHtml(evidence.title)} · PDF page ${evidence.page}` : "Clinical explanation"}${evidence ? `<details class="medicine-slide"><summary>${evidence.relation === "background" ? "Related slide" : "View supporting slide"}</summary><blockquote>${escapeHtml(evidence.quote)}</blockquote><a href="${escapeHtml(evidence.url)}" target="_blank" rel="noopener noreferrer">Open full lecture ↗</a>${evidence.image ? `<a href="${escapeHtml(evidence.image)}" target="_blank" rel="noopener noreferrer" aria-label="Open slide image at full size"><img src="${escapeHtml(evidence.image)}" alt="${escapeHtml(evidence.title)} — PDF page ${evidence.page}" loading="lazy"></a>` : ""}</details>` : ""}</div>
+        <div class="medicine-source">${review.basis === "lecture" && evidence ? `Source: ${escapeHtml(evidence.title)} · PDF page ${evidence.page}` : "Clinical explanation"}${evidence ? `<details class="medicine-slide"><summary>${evidence.relation === "background" ? "Related slide" : "View supporting slide"}</summary>${question.surgeryReview && evidence.relation === "background" ? `<p class="source-note">${escapeHtml(evidence.title)} · PDF page ${evidence.page}</p>` : ""}<blockquote>${escapeHtml(evidence.quote)}</blockquote><a href="${escapeHtml(evidence.url)}" target="_blank" rel="noopener noreferrer">Open full lecture ↗</a>${evidence.image ? `<a href="${escapeHtml(evidence.image)}" target="_blank" rel="noopener noreferrer" aria-label="Open slide image at full size"><img src="${escapeHtml(evidence.image)}" alt="${escapeHtml(evidence.title)} — PDF page ${evidence.page}" loading="lazy"></a>` : ""}</details>` : ""}</div>
         ${(review.references || []).length ? `<div class="reference-list">${review.references.map(reference => `<a href="${escapeHtml(reference.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(reference.title)} ↗</a>`).join("")}</div>` : ""}
         ${sourceRefs ? `<p class="source-note">${bankName} · ${escapeHtml(sourceRefs)}</p>` : ""}
       </div>`;

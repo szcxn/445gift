@@ -7515,7 +7515,7 @@
     ],
     "confidence": "supported",
     "basis": "clinical",
-    "explanation": "Transillumination helps identify a fluid-filled hydrocele. Bowel or omentum in a hernia usually does not transmit light, so this finding is more useful than tenderness alone.",
+    "explanation": "Hydrocele contains fluid and usually transilluminates, while a solid testicular tumor usually does not. Both can be painless, so lack of tenderness is less useful than transillumination.",
     "objection": "",
     "evidence": null,
     "references": []
@@ -7575,17 +7575,17 @@
     "explanation": "The femoral hernia neck is below the inguinal ligament and below and lateral to the pubic tubercle. An inguinal hernia is above and medial to the pubic tubercle.",
     "objection": "",
     "evidence": {
-      "pdfId": "1txC32FSGFkh1VEVnIpjxKCNi2xiDz4ET",
-      "title": "Current 445 male lecturer slides · SURG 351 - Hernia",
-      "page": 30,
-      "quote": "Comes out through the femoral ring into the femoral canal. • The hernia neck lies below and lateral to the inguinal ligament (lateral to the pubic tubercle). • Very narrow neck.",
+      "pdfId": "1bqCwO7gTItLr9lKfT32CBInTpjiPc-IA",
+      "title": "Team 443 · T3. Abdominal wall, umbilicus and hernia",
+      "page": 10,
+      "quote": "Localization: inferior to the inguinal ligament, lateral to the pubic tubercle, and medial to the femoral vein",
       "relation": "teaching",
-      "sourceSha256": "8dd48cfab8037bcfb593ae03f63d9fb1ad23a93fad34d347a7357c8f844cfe48",
-      "pageTextSha256": "a43f1e22558bca7b7a859f70114f84e6745268343d9b87582167056133abb354",
+      "sourceSha256": "b636961833cc8c8a910968571535d51e96e27bdcd2fe2a551052459f49b70998",
+      "pageTextSha256": "3ed6a45aab56cce078ebdce11a041750b6c2670af90fb822dc4cc577677be8ad",
       "textKind": "flowText",
-      "url": "https://drive.google.com/file/d/1txC32FSGFkh1VEVnIpjxKCNi2xiDz4ET/view?usp=drivesdk",
-      "image": "lecture-media/surgery-mid/1txC32FSGFkh1VEVnIpjxKCNi2xiDz4ET-030.jpg",
-      "imageSha256": "e32a4f9bd812d5457918ea6be6e9db25a576413c03ee5b0d4f48d60f8e7e781b"
+      "url": "https://drive.google.com/file/d/1bqCwO7gTItLr9lKfT32CBInTpjiPc-IA/view?usp=drivesdk",
+      "image": "lecture-media/surgery-mid/1bqCwO7gTItLr9lKfT32CBInTpjiPc-IA-010.jpg",
+      "imageSha256": "ee982743c04548eee19338208e101a99ad9aca140f41a24f15be8f87d6ed9758"
     },
     "references": []
   },
@@ -7761,7 +7761,7 @@
       "pdfId": "1bqCwO7gTItLr9lKfT32CBInTpjiPc-IA",
       "title": "Team 443 · T3. Abdominal wall, umbilicus and hernia",
       "page": 12,
-      "quote": "Strangulation ● The vessels supplying the bowel within a hernia may be compressed by the neck of the sac or by the constricting ring through which the hernia passes. The contents initially become swollen as a result of venous congestion, and there is exudation of a blood- stained fluid. The arterial supply is subsequently compromised and gangrene follows. Bacteria and toxins pass out through the bowel wall, causing l",
+      "quote": "Strangulation ● The vessels supplying the bowel within a hernia may be compressed by the neck of the sac or by the constricting ring through which the hernia passes. The contents initially become swollen as a result of venous congestion, and there is exudation of a blood- stained fluid. The arterial supply is subsequently compromised and gangrene follows. Bacteria and toxins pass out through the bowel wall, causing local peritonitis.",
       "relation": "teaching",
       "sourceSha256": "b636961833cc8c8a910968571535d51e96e27bdcd2fe2a551052459f49b70998",
       "pageTextSha256": "b885a2da2c05fb78a7b60a5b00c71bb0735544f369059192ac7d93a2733cfddb",
@@ -7784,7 +7784,7 @@
       "pdfId": "1bqCwO7gTItLr9lKfT32CBInTpjiPc-IA",
       "title": "Team 443 · T3. Abdominal wall, umbilicus and hernia",
       "page": 12,
-      "quote": "Strangulation ● The vessels supplying the bowel within a hernia may be compressed by the neck of the sac or by the constricting ring through which the hernia passes. The contents initially become swollen as a result of venous congestion, and there is exudation of a blood- stained fluid. The arterial supply is subsequently compromised and gangrene follows. Bacteria and toxins pass out through the bowel wall, causing l",
+      "quote": "Strangulation ● The vessels supplying the bowel within a hernia may be compressed by the neck of the sac or by the constricting ring through which the hernia passes. The contents initially become swollen as a result of venous congestion, and there is exudation of a blood- stained fluid. The arterial supply is subsequently compromised and gangrene follows. Bacteria and toxins pass out through the bowel wall, causing local peritonitis.",
       "relation": "teaching",
       "sourceSha256": "b636961833cc8c8a910968571535d51e96e27bdcd2fe2a551052459f49b70998",
       "pageTextSha256": "b885a2da2c05fb78a7b60a5b00c71bb0735544f369059192ac7d93a2733cfddb",
@@ -7804,17 +7804,17 @@
     "explanation": "A femoral hernia passes through the femoral ring into the femoral canal. This narrow space lies medial to the femoral vein and below the inguinal ligament.",
     "objection": "",
     "evidence": {
-      "pdfId": "1txC32FSGFkh1VEVnIpjxKCNi2xiDz4ET",
-      "title": "Current 445 male lecturer slides · SURG 351 - Hernia",
-      "page": 30,
-      "quote": "Comes out through the femoral ring into the femoral canal. • The hernia neck lies below and lateral to the inguinal ligament (lateral to the pubic tubercle). • Very narrow neck.",
+      "pdfId": "1bqCwO7gTItLr9lKfT32CBInTpjiPc-IA",
+      "title": "Team 443 · T3. Abdominal wall, umbilicus and hernia",
+      "page": 10,
+      "quote": "A femoral hernia projects through the femoral ring and passes down the femoral canal, which is 1.25 cm long.",
       "relation": "teaching",
-      "sourceSha256": "8dd48cfab8037bcfb593ae03f63d9fb1ad23a93fad34d347a7357c8f844cfe48",
-      "pageTextSha256": "a43f1e22558bca7b7a859f70114f84e6745268343d9b87582167056133abb354",
+      "sourceSha256": "b636961833cc8c8a910968571535d51e96e27bdcd2fe2a551052459f49b70998",
+      "pageTextSha256": "3ed6a45aab56cce078ebdce11a041750b6c2670af90fb822dc4cc577677be8ad",
       "textKind": "flowText",
-      "url": "https://drive.google.com/file/d/1txC32FSGFkh1VEVnIpjxKCNi2xiDz4ET/view?usp=drivesdk",
-      "image": "lecture-media/surgery-mid/1txC32FSGFkh1VEVnIpjxKCNi2xiDz4ET-030.jpg",
-      "imageSha256": "e32a4f9bd812d5457918ea6be6e9db25a576413c03ee5b0d4f48d60f8e7e781b"
+      "url": "https://drive.google.com/file/d/1bqCwO7gTItLr9lKfT32CBInTpjiPc-IA/view?usp=drivesdk",
+      "image": "lecture-media/surgery-mid/1bqCwO7gTItLr9lKfT32CBInTpjiPc-IA-010.jpg",
+      "imageSha256": "ee982743c04548eee19338208e101a99ad9aca140f41a24f15be8f87d6ed9758"
     },
     "references": []
   },
@@ -7918,17 +7918,17 @@
     "explanation": "A groin lump below the inguinal ligament is characteristic of a femoral hernia. The narrow femoral ring gives this hernia a substantial risk of incarceration and strangulation.",
     "objection": "",
     "evidence": {
-      "pdfId": "1txC32FSGFkh1VEVnIpjxKCNi2xiDz4ET",
-      "title": "Current 445 male lecturer slides · SURG 351 - Hernia",
-      "page": 30,
-      "quote": "Comes out through the femoral ring into the femoral canal. • The hernia neck lies below and lateral to the inguinal ligament (lateral to the pubic tubercle). • Very narrow neck.",
+      "pdfId": "1bqCwO7gTItLr9lKfT32CBInTpjiPc-IA",
+      "title": "Team 443 · T3. Abdominal wall, umbilicus and hernia",
+      "page": 10,
+      "quote": "Localization: inferior to the inguinal ligament, lateral to the pubic tubercle, and medial to the femoral vein",
       "relation": "teaching",
-      "sourceSha256": "8dd48cfab8037bcfb593ae03f63d9fb1ad23a93fad34d347a7357c8f844cfe48",
-      "pageTextSha256": "a43f1e22558bca7b7a859f70114f84e6745268343d9b87582167056133abb354",
+      "sourceSha256": "b636961833cc8c8a910968571535d51e96e27bdcd2fe2a551052459f49b70998",
+      "pageTextSha256": "3ed6a45aab56cce078ebdce11a041750b6c2670af90fb822dc4cc577677be8ad",
       "textKind": "flowText",
-      "url": "https://drive.google.com/file/d/1txC32FSGFkh1VEVnIpjxKCNi2xiDz4ET/view?usp=drivesdk",
-      "image": "lecture-media/surgery-mid/1txC32FSGFkh1VEVnIpjxKCNi2xiDz4ET-030.jpg",
-      "imageSha256": "e32a4f9bd812d5457918ea6be6e9db25a576413c03ee5b0d4f48d60f8e7e781b"
+      "url": "https://drive.google.com/file/d/1bqCwO7gTItLr9lKfT32CBInTpjiPc-IA/view?usp=drivesdk",
+      "image": "lecture-media/surgery-mid/1bqCwO7gTItLr9lKfT32CBInTpjiPc-IA-010.jpg",
+      "imageSha256": "ee982743c04548eee19338208e101a99ad9aca140f41a24f15be8f87d6ed9758"
     },
     "references": []
   },
@@ -7941,17 +7941,17 @@
     "explanation": "The location below the inguinal ligament identifies a femoral hernia. Inguinal hernias have their neck above the ligament.",
     "objection": "",
     "evidence": {
-      "pdfId": "1txC32FSGFkh1VEVnIpjxKCNi2xiDz4ET",
-      "title": "Current 445 male lecturer slides · SURG 351 - Hernia",
-      "page": 30,
-      "quote": "Comes out through the femoral ring into the femoral canal. • The hernia neck lies below and lateral to the inguinal ligament (lateral to the pubic tubercle). • Very narrow neck.",
+      "pdfId": "1bqCwO7gTItLr9lKfT32CBInTpjiPc-IA",
+      "title": "Team 443 · T3. Abdominal wall, umbilicus and hernia",
+      "page": 10,
+      "quote": "Localization: inferior to the inguinal ligament, lateral to the pubic tubercle, and medial to the femoral vein",
       "relation": "teaching",
-      "sourceSha256": "8dd48cfab8037bcfb593ae03f63d9fb1ad23a93fad34d347a7357c8f844cfe48",
-      "pageTextSha256": "a43f1e22558bca7b7a859f70114f84e6745268343d9b87582167056133abb354",
+      "sourceSha256": "b636961833cc8c8a910968571535d51e96e27bdcd2fe2a551052459f49b70998",
+      "pageTextSha256": "3ed6a45aab56cce078ebdce11a041750b6c2670af90fb822dc4cc577677be8ad",
       "textKind": "flowText",
-      "url": "https://drive.google.com/file/d/1txC32FSGFkh1VEVnIpjxKCNi2xiDz4ET/view?usp=drivesdk",
-      "image": "lecture-media/surgery-mid/1txC32FSGFkh1VEVnIpjxKCNi2xiDz4ET-030.jpg",
-      "imageSha256": "e32a4f9bd812d5457918ea6be6e9db25a576413c03ee5b0d4f48d60f8e7e781b"
+      "url": "https://drive.google.com/file/d/1bqCwO7gTItLr9lKfT32CBInTpjiPc-IA/view?usp=drivesdk",
+      "image": "lecture-media/surgery-mid/1bqCwO7gTItLr9lKfT32CBInTpjiPc-IA-010.jpg",
+      "imageSha256": "ee982743c04548eee19338208e101a99ad9aca140f41a24f15be8f87d6ed9758"
     },
     "references": []
   },
@@ -8010,17 +8010,17 @@
     "explanation": "A widened femoral ring allows a femoral hernia to pass into the femoral canal. The expected clinical landmark is a neck below and lateral to the pubic tubercle.",
     "objection": "The phrase “left and lateral” omits the important inferior position, so the intended femoral diagnosis is conditional.",
     "evidence": {
-      "pdfId": "1txC32FSGFkh1VEVnIpjxKCNi2xiDz4ET",
-      "title": "Current 445 male lecturer slides · SURG 351 - Hernia",
-      "page": 30,
-      "quote": "Comes out through the femoral ring into the femoral canal. • The hernia neck lies below and lateral to the inguinal ligament (lateral to the pubic tubercle). • Very narrow neck.",
+      "pdfId": "1bqCwO7gTItLr9lKfT32CBInTpjiPc-IA",
+      "title": "Team 443 · T3. Abdominal wall, umbilicus and hernia",
+      "page": 10,
+      "quote": "Localization: inferior to the inguinal ligament, lateral to the pubic tubercle, and medial to the femoral vein",
       "relation": "background",
-      "sourceSha256": "8dd48cfab8037bcfb593ae03f63d9fb1ad23a93fad34d347a7357c8f844cfe48",
-      "pageTextSha256": "a43f1e22558bca7b7a859f70114f84e6745268343d9b87582167056133abb354",
+      "sourceSha256": "b636961833cc8c8a910968571535d51e96e27bdcd2fe2a551052459f49b70998",
+      "pageTextSha256": "3ed6a45aab56cce078ebdce11a041750b6c2670af90fb822dc4cc577677be8ad",
       "textKind": "flowText",
-      "url": "https://drive.google.com/file/d/1txC32FSGFkh1VEVnIpjxKCNi2xiDz4ET/view?usp=drivesdk",
-      "image": "lecture-media/surgery-mid/1txC32FSGFkh1VEVnIpjxKCNi2xiDz4ET-030.jpg",
-      "imageSha256": "e32a4f9bd812d5457918ea6be6e9db25a576413c03ee5b0d4f48d60f8e7e781b"
+      "url": "https://drive.google.com/file/d/1bqCwO7gTItLr9lKfT32CBInTpjiPc-IA/view?usp=drivesdk",
+      "image": "lecture-media/surgery-mid/1bqCwO7gTItLr9lKfT32CBInTpjiPc-IA-010.jpg",
+      "imageSha256": "ee982743c04548eee19338208e101a99ad9aca140f41a24f15be8f87d6ed9758"
     },
     "references": []
   },
@@ -8238,7 +8238,7 @@
       "pdfId": "1bqCwO7gTItLr9lKfT32CBInTpjiPc-IA",
       "title": "Team 443 · T3. Abdominal wall, umbilicus and hernia",
       "page": 12,
-      "quote": "Strangulation ● The vessels supplying the bowel within a hernia may be compressed by the neck of the sac or by the constricting ring through which the hernia passes. The contents initially become swollen as a result of venous congestion, and there is exudation of a blood- stained fluid. The arterial supply is subsequently compromised and gangrene follows. Bacteria and toxins pass out through the bowel wall, causing l",
+      "quote": "Strangulation ● The vessels supplying the bowel within a hernia may be compressed by the neck of the sac or by the constricting ring through which the hernia passes. The contents initially become swollen as a result of venous congestion, and there is exudation of a blood- stained fluid. The arterial supply is subsequently compromised and gangrene follows. Bacteria and toxins pass out through the bowel wall, causing local peritonitis.",
       "relation": "teaching",
       "sourceSha256": "b636961833cc8c8a910968571535d51e96e27bdcd2fe2a551052459f49b70998",
       "pageTextSha256": "b885a2da2c05fb78a7b60a5b00c71bb0735544f369059192ac7d93a2733cfddb",
@@ -8254,7 +8254,7 @@
       "B"
     ],
     "confidence": "supported",
-    "basis": "lecture",
+    "basis": "clinical",
     "explanation": "The ilioinguinal nerve lies in the inguinal canal and is vulnerable during open groin hernia repair. Injury can cause numbness or pain around the groin, upper medial thigh and anterior scrotum.",
     "objection": "",
     "evidence": {
@@ -8262,7 +8262,7 @@
       "title": "Team 444 · T2)Abdominal Wall, Umbilicus & Hernia",
       "page": 8,
       "quote": "llioinguinal: inguinal area and small parts of the scrotum and upper thigh",
-      "relation": "teaching",
+      "relation": "background",
       "sourceSha256": "e81dbe508c2b2c370bf0c7b477c6b298f412c381bd4a35a0260f032f3f428d17",
       "pageTextSha256": "c33b8e617210fc10cf33cbf9a1a02dfb5757bdfe43d958df264bb889a4d2d080",
       "textKind": "flowText",
@@ -8325,17 +8325,17 @@
     "explanation": "Femoral hernias have a narrow neck and a high risk of becoming incarcerated or strangulated. A painful femoral hernia needs prompt surgical assessment rather than routine observation.",
     "objection": "",
     "evidence": {
-      "pdfId": "1txC32FSGFkh1VEVnIpjxKCNi2xiDz4ET",
-      "title": "Current 445 male lecturer slides · SURG 351 - Hernia",
-      "page": 30,
-      "quote": "Comes out through the femoral ring into the femoral canal. • The hernia neck lies below and lateral to the inguinal ligament (lateral to the pubic tubercle). • Very narrow neck.",
+      "pdfId": "1bqCwO7gTItLr9lKfT32CBInTpjiPc-IA",
+      "title": "Team 443 · T3. Abdominal wall, umbilicus and hernia",
+      "page": 10,
+      "quote": "A femoral hernia is particularly likely to obstruct and strangulate (indeed, 40% of such hernias present this way), and therefore surgical intervention is indicated .",
       "relation": "teaching",
-      "sourceSha256": "8dd48cfab8037bcfb593ae03f63d9fb1ad23a93fad34d347a7357c8f844cfe48",
-      "pageTextSha256": "a43f1e22558bca7b7a859f70114f84e6745268343d9b87582167056133abb354",
+      "sourceSha256": "b636961833cc8c8a910968571535d51e96e27bdcd2fe2a551052459f49b70998",
+      "pageTextSha256": "3ed6a45aab56cce078ebdce11a041750b6c2670af90fb822dc4cc577677be8ad",
       "textKind": "flowText",
-      "url": "https://drive.google.com/file/d/1txC32FSGFkh1VEVnIpjxKCNi2xiDz4ET/view?usp=drivesdk",
-      "image": "lecture-media/surgery-mid/1txC32FSGFkh1VEVnIpjxKCNi2xiDz4ET-030.jpg",
-      "imageSha256": "e32a4f9bd812d5457918ea6be6e9db25a576413c03ee5b0d4f48d60f8e7e781b"
+      "url": "https://drive.google.com/file/d/1bqCwO7gTItLr9lKfT32CBInTpjiPc-IA/view?usp=drivesdk",
+      "image": "lecture-media/surgery-mid/1bqCwO7gTItLr9lKfT32CBInTpjiPc-IA-010.jpg",
+      "imageSha256": "ee982743c04548eee19338208e101a99ad9aca140f41a24f15be8f87d6ed9758"
     },
     "references": []
   },
@@ -8948,10 +8948,10 @@
     "answers": [
       "B"
     ],
-    "confidence": "supported",
+    "confidence": "preference",
     "basis": "clinical",
-    "explanation": "A groin swelling that appears on standing and disappears when supine favors an inguinal hernia. The examination should confirm reducibility and a cough impulse and identify the neck of the swelling.",
-    "objection": "",
+    "explanation": "A swelling that appears on standing and disappears when supine may be reducible, as with a hernia. The source does not give its location, and a communicating hydrocele can also change with position. B is the likely intended answer, but examination is needed to distinguish the choices.",
+    "objection": "The stem omits the swelling’s location and the examination findings needed to distinguish hernia from communicating hydrocele.",
     "evidence": {
       "pdfId": "1txC32FSGFkh1VEVnIpjxKCNi2xiDz4ET",
       "title": "Current 445 male lecturer slides · SURG 351 - Hernia",
@@ -8965,7 +8965,12 @@
       "image": "lecture-media/surgery-mid/1txC32FSGFkh1VEVnIpjxKCNi2xiDz4ET-027.jpg",
       "imageSha256": "97fe522605ecbd5b8b4cb1542d5d45c1e2931abb98875d7e196c008e9492bcae"
     },
-    "references": []
+    "references": [
+      {
+        "title": "American Academy of Pediatrics: Communicating Hydrocele",
+        "url": "https://www.healthychildren.org/English/health-issues/conditions/abdominal/pages/Communicating-Hydrocele.aspx"
+      }
+    ]
   },
   "surgery-midterm-q0408": {
     "answers": [
@@ -9193,7 +9198,7 @@
       "pdfId": "1bqCwO7gTItLr9lKfT32CBInTpjiPc-IA",
       "title": "Team 443 · T3. Abdominal wall, umbilicus and hernia",
       "page": 12,
-      "quote": "Strangulation ● The vessels supplying the bowel within a hernia may be compressed by the neck of the sac or by the constricting ring through which the hernia passes. The contents initially become swollen as a result of venous congestion, and there is exudation of a blood- stained fluid. The arterial supply is subsequently compromised and gangrene follows. Bacteria and toxins pass out through the bowel wall, causing l",
+      "quote": "Strangulation ● The vessels supplying the bowel within a hernia may be compressed by the neck of the sac or by the constricting ring through which the hernia passes. The contents initially become swollen as a result of venous congestion, and there is exudation of a blood- stained fluid. The arterial supply is subsequently compromised and gangrene follows. Bacteria and toxins pass out through the bowel wall, causing local peritonitis.",
       "relation": "teaching",
       "sourceSha256": "b636961833cc8c8a910968571535d51e96e27bdcd2fe2a551052459f49b70998",
       "pageTextSha256": "b885a2da2c05fb78a7b60a5b00c71bb0735544f369059192ac7d93a2733cfddb",
@@ -9534,7 +9539,7 @@
       "pdfId": "1Xp8XihE2_s94k1Sd2mA0Q9e0cQw4pZa8",
       "title": "Team 443 · T1. Generalized abdominal pain and upper abdominal pain ",
       "page": 12,
-      "quote": "gastritis , esophagitis: Upper endoscopy. gastric ulcer. Or juvenile ulcer : gastroscopy colon cance",
+      "quote": "gastritis , esophagitis: Upper endoscopy. gastric ulcer. Or juvenile ulcer : gastroscopy",
       "relation": "background",
       "sourceSha256": "646123c2095a05d41dc58c8c66207435dfcb4b9afc2ae86fcfef08884d83a94e",
       "pageTextSha256": "fa4749784c7d8bb4424fe7f00fd6d8186a4adaf16d853aa0d77ad7ef71703f7f",
@@ -9938,7 +9943,7 @@
       "pdfId": "1Xp8XihE2_s94k1Sd2mA0Q9e0cQw4pZa8",
       "title": "Team 443 · T1. Generalized abdominal pain and upper abdominal pain ",
       "page": 13,
-      "quote": "Best modality for biliary tree is Magnetic resonance cholangiopancreatography (MRCP) (diagnostic). Cholethi",
+      "quote": "Best modality for biliary tree is Magnetic resonance cholangiopancreatography (MRCP) (diagnostic).",
       "relation": "teaching",
       "sourceSha256": "646123c2095a05d41dc58c8c66207435dfcb4b9afc2ae86fcfef08884d83a94e",
       "pageTextSha256": "b0c16a390524ad1d9f7e8ef3e827cd53cfd34e4350392ead397d38b66d53a512",
@@ -10026,7 +10031,7 @@
       "pdfId": "1Xp8XihE2_s94k1Sd2mA0Q9e0cQw4pZa8",
       "title": "Team 443 · T1. Generalized abdominal pain and upper abdominal pain ",
       "page": 12,
-      "quote": "gastritis , esophagitis: Upper endoscopy. gastric ulcer. Or juvenile ulcer : gastroscopy colon cance",
+      "quote": "gastritis , esophagitis: Upper endoscopy. gastric ulcer. Or juvenile ulcer : gastroscopy",
       "relation": "teaching",
       "sourceSha256": "646123c2095a05d41dc58c8c66207435dfcb4b9afc2ae86fcfef08884d83a94e",
       "pageTextSha256": "fa4749784c7d8bb4424fe7f00fd6d8186a4adaf16d853aa0d77ad7ef71703f7f",
@@ -10163,7 +10168,7 @@
       "pdfId": "1Gkgcq9GDUW8CzmkOu0XXllGq5DPQC8n4",
       "title": "Team 445 · L21- Pathophysiology and interpretation of pain in surgical patient",
       "page": 7,
-      "quote": "C fibres with sympathetic /splanchnic nerve",
+      "quote": "C fibres with sympathetic /splanchnic nerves",
       "relation": "teaching",
       "sourceSha256": "8801b8950673407f26b2e733542019f595d42489da44231697cb8fd82aca697a",
       "pageTextSha256": "cfdc9df9321d3c9e15531305e1f99f081fcc80448062b6a087187a967f025a33",
@@ -10186,7 +10191,7 @@
       "pdfId": "1Xp8XihE2_s94k1Sd2mA0Q9e0cQw4pZa8",
       "title": "Team 443 · T1. Generalized abdominal pain and upper abdominal pain ",
       "page": 12,
-      "quote": "gastritis , esophagitis: Upper endoscopy. gastric ulcer. Or juvenile ulcer : gastroscopy colon cance",
+      "quote": "gastritis , esophagitis: Upper endoscopy. gastric ulcer. Or juvenile ulcer : gastroscopy",
       "relation": "background",
       "sourceSha256": "646123c2095a05d41dc58c8c66207435dfcb4b9afc2ae86fcfef08884d83a94e",
       "pageTextSha256": "fa4749784c7d8bb4424fe7f00fd6d8186a4adaf16d853aa0d77ad7ef71703f7f",
@@ -10729,7 +10734,7 @@
       "pdfId": "1p_Aqghil7DHPZrcBcXj8g6KdQ-y_z8A5",
       "title": "Team 444 · T6 Perforation & Infarction of Viscus",
       "page": 6,
-      "quote": "The SMA supplies blood to the all small bowe",
+      "quote": "The SMA supplies blood to the all small bowel",
       "relation": "teaching",
       "sourceSha256": "d5276ec716bace21c74ce3d4491c223df9d9cdcd45267cc020d349c765c23cc0",
       "pageTextSha256": "3c2cf3651d8bb5fae664705a09a93b20cb814ad4bde26d0f9275fd8de558d4bb",
@@ -11106,14 +11111,24 @@
   },
   "surgery-midterm-q0538": {
     "answers": [
-      "A"
+      "A",
+      "D"
     ],
     "confidence": "preference",
     "basis": "clinical",
-    "explanation": "Tumor differentiation is a recognized pathological prognostic feature; a moderately differentiated tumor is generally less favorable than a well-differentiated one. Stage is more important overall, and goblet-cell depletion alone is not a standard major prognostic measure.",
-    "objection": "The key selects C, but this feature does not support the claimed prognostic ranking; A is the more defensible listed pathology comparison.",
+    "explanation": "Tumor differentiation is relevant to prognosis, and both A and D describe differentiation grades. The question does not ask for the worse grade, so it does not distinguish these two choices. Overall prognosis depends strongly on the depth of invasion, lymph node involvement and distant spread.",
+    "objection": "Goblet-cell depletion alone is not an established major prognostic factor. The question is ambiguous because both A and D describe tumor differentiation; there is no basis to select A alone.",
     "evidence": null,
-    "references": []
+    "references": [
+      {
+        "title": "NCI SEER: Colorectal tumor grade",
+        "url": "https://training.seer.cancer.gov/colorectal/cancer-evaluation/grade.html"
+      },
+      {
+        "title": "NCI: Colon Cancer Treatment (PDQ), prognostic factors",
+        "url": "https://www.cancer.gov/types/colorectal/hp/colon-treatment-pdq"
+      }
+    ]
   },
   "surgery-midterm-q0539": {
     "answers": [
@@ -11498,19 +11513,17 @@
     "references": []
   },
   "surgery-midterm-q0563": {
-    "answers": [
-      "B"
-    ],
-    "confidence": "preference",
-    "basis": "lecture",
-    "explanation": "Previous abdominal surgery raises suspicion for adhesive small bowel obstruction. The diagnosis needs accompanying evidence such as vomiting, distension, obstipation or dilated bowel on imaging; prior surgery alone is not enough.",
-    "objection": "The supplied A key is not supported by a focal appendicitis history, and the abbreviated stem lacks enough detail for certainty.",
+    "answers": [],
+    "confidence": "unresolved",
+    "basis": "clinical",
+    "explanation": "This short stem does not provide enough information to identify the cause of the diffuse abdominal pain. If the previous operation was abdominal, adhesions would make small bowel obstruction a possibility. The type of operation and symptoms of obstruction are not supplied, so B cannot be confirmed and A is not established either.",
+    "objection": "The source does not identify the earlier procedure or provide findings that distinguish appendicitis from obstruction or another acute abdominal cause.",
     "evidence": {
       "pdfId": "1Uv12cW8wfiQ_KxRe4yLCDUO2HSGsXTSn",
       "title": "Team 443 · T4. Gastric Outlet, Small and Large Bowel Obstruction (Tutorial)",
       "page": 2,
       "quote": "The most common causes of small intestinal obstruction are adhesions (60%), obstructed hernia (20%) and malignancy (primary and secondary -5-8%). In the large bowel, colorectal adenocarcinoma predominates (>70%, followed by stricturing diverticular disease (10%) and sigmoid volvulus (5%).",
-      "relation": "teaching",
+      "relation": "background",
       "sourceSha256": "8185f50902da5139b3bf2a60b9602fe85b51c5b2120c3ea79634a951fde74184",
       "pageTextSha256": "b0ba21390c8f529f5b235de8a2eabbc26836fec5dee6c7b9dc2bcc5ef2844b86",
       "textKind": "flowText",
@@ -11518,7 +11531,12 @@
       "image": "lecture-media/surgery-mid/1Uv12cW8wfiQ_KxRe4yLCDUO2HSGsXTSn-002.jpg",
       "imageSha256": "ac4757e0b62fa3c7b43982cd536f61fa9d969f8681c8581e59e6e6f68cdd58f4"
     },
-    "references": []
+    "references": [
+      {
+        "title": "NIDDK: Abdominal adhesions, causes and obstruction symptoms",
+        "url": "https://www.niddk.nih.gov/health-information/digestive-diseases/abdominal-adhesions"
+      }
+    ]
   },
   "surgery-midterm-q0564": {
     "answers": [
@@ -11526,15 +11544,15 @@
       "B"
     ],
     "confidence": "preference",
-    "basis": "lecture",
-    "explanation": "Both shifting dullness and a fluid thrill can demonstrate ascites. Shifting dullness is a common bedside test, while a fluid thrill is generally easier to elicit with larger volumes.",
+    "basis": "clinical",
+    "explanation": "Both shifting dullness and a fluid thrill are bedside tests for ascites. Shifting dullness detects the movement of free fluid when the patient turns, while a fluid thrill is felt across the abdomen. A succussion splash points to retained fluid and gas in the stomach rather than ascites.",
     "objection": "The single-answer key B does not make A false; both are examination signs of free fluid.",
     "evidence": {
       "pdfId": "1ufaEaT5bdy02FnU7IvFdc0YI42KmZY10",
       "title": "Team 443 · T2. Central Abdominal Pain and Lower Abdominal Pain.",
       "page": 25,
-      "quote": "Shifting dullness: free flui",
-      "relation": "teaching",
+      "quote": "Shifting dullness: free fluid",
+      "relation": "background",
       "sourceSha256": "6757d381d0892903e98509452b09df65027e102caf13f223541c4f55e42565d9",
       "pageTextSha256": "68c129cbd7d94d1ebcd1c3bcb5190664c741fc8f9a2877b2a64f3613ce3733f7",
       "textKind": "flowText",
@@ -11542,7 +11560,12 @@
       "image": "lecture-media/surgery-mid/1ufaEaT5bdy02FnU7IvFdc0YI42KmZY10-025.jpg",
       "imageSha256": "c6d35555580f9fe81d6f84dcd69cf9b85ac32e82dad1ec0d01c6e921468a1845"
     },
-    "references": []
+    "references": [
+      {
+        "title": "Stanford Medicine 25: Shifting dullness and fluid thrill in ascites",
+        "url": "https://stanfordmedicine25.stanford.edu/the25/avp.html"
+      }
+    ]
   },
   "surgery-midterm-q0565": {
     "answers": [
@@ -11617,7 +11640,7 @@
     "answers": [],
     "confidence": "unresolved",
     "basis": "clinical",
-    "explanation": "A prolonged diarrheal illness with weight loss and right lower abdominal localization raises suspicion for Crohn’s disease. Its inflammation can extend through the bowel wall; disease restricted to the mucosa is more typical of ulcerative colitis.",
+    "explanation": "Five months of non-bloody diarrhea with right lower abdominal pain raises suspicion for Crohn’s disease, but does not establish the diagnosis. Crohn’s inflammation can extend through the bowel wall; disease limited to the mucosa is more typical of ulcerative colitis. None of the listed findings is specific enough to resolve this question.",
     "objection": "None of the choices gives a specific Crohn’s feature, and D conflicts with the suggested diagnosis.",
     "evidence": null,
     "references": [
@@ -11639,7 +11662,7 @@
       "pdfId": "1Gkgcq9GDUW8CzmkOu0XXllGq5DPQC8n4",
       "title": "Team 445 · L21- Pathophysiology and interpretation of pain in surgical patient",
       "page": 8,
-      "quote": "Migration midline → one side → visceral process reaching the parietal peritoneum A, Associations Vomiting, Fever, Jaundice, Urine, Bowel",
+      "quote": "Migration midline → one side → visceral process reaching the parietal peritoneum",
       "relation": "teaching",
       "sourceSha256": "8801b8950673407f26b2e733542019f595d42489da44231697cb8fd82aca697a",
       "pageTextSha256": "d6de458d8ecaa61978716ba8433a06d03f18f14c039868379c369b52a2991892",
@@ -11662,7 +11685,7 @@
       "pdfId": "1Gkgcq9GDUW8CzmkOu0XXllGq5DPQC8n4",
       "title": "Team 445 · L21- Pathophysiology and interpretation of pain in surgical patient",
       "page": 8,
-      "quote": "Migration midline → one side → visceral process reaching the parietal peritoneum A, Associations Vomiting, Fever, Jaundice, Urine, Bowel",
+      "quote": "Migration midline → one side → visceral process reaching the parietal peritoneum",
       "relation": "teaching",
       "sourceSha256": "8801b8950673407f26b2e733542019f595d42489da44231697cb8fd82aca697a",
       "pageTextSha256": "d6de458d8ecaa61978716ba8433a06d03f18f14c039868379c369b52a2991892",
@@ -12073,7 +12096,7 @@
       "pdfId": "1ihNhbasbnVzKd-R7EKbKGuWwTnvukixA",
       "title": "Team 443 · T5. Intra-Abdominal hemorrhage  and gastrointestinal hemorrhage  ",
       "page": 6,
-      "quote": "Colon diverticula and angiodysplasia accounting for most of the case",
+      "quote": "Colon diverticula and angiodysplasia accounting for most of the cases",
       "relation": "background",
       "sourceSha256": "31136128da11b2d312eb9e7944aec08885fcee8ba6ec433d6ffb525b514f929b",
       "pageTextSha256": "ae4f3579b55998b1ff4be33a7437a7da5c347d31f12fbf601f9dc5c2b7264048",
@@ -12199,7 +12222,7 @@
       "pdfId": "1ihNhbasbnVzKd-R7EKbKGuWwTnvukixA",
       "title": "Team 443 · T5. Intra-Abdominal hemorrhage  and gastrointestinal hemorrhage  ",
       "page": 6,
-      "quote": "Colon diverticula and angiodysplasia accounting for most of the case",
+      "quote": "Colon diverticula and angiodysplasia accounting for most of the cases",
       "relation": "teaching",
       "sourceSha256": "31136128da11b2d312eb9e7944aec08885fcee8ba6ec433d6ffb525b514f929b",
       "pageTextSha256": "ae4f3579b55998b1ff4be33a7437a7da5c347d31f12fbf601f9dc5c2b7264048",
@@ -12314,7 +12337,7 @@
       "pdfId": "1ihNhbasbnVzKd-R7EKbKGuWwTnvukixA",
       "title": "Team 443 · T5. Intra-Abdominal hemorrhage  and gastrointestinal hemorrhage  ",
       "page": 6,
-      "quote": "Colon diverticula and angiodysplasia accounting for most of the case",
+      "quote": "Colon diverticula and angiodysplasia accounting for most of the cases",
       "relation": "teaching",
       "sourceSha256": "31136128da11b2d312eb9e7944aec08885fcee8ba6ec433d6ffb525b514f929b",
       "pageTextSha256": "ae4f3579b55998b1ff4be33a7437a7da5c347d31f12fbf601f9dc5c2b7264048",
@@ -12665,7 +12688,7 @@
       "pdfId": "1p_Aqghil7DHPZrcBcXj8g6KdQ-y_z8A5",
       "title": "Team 444 · T6 Perforation & Infarction of Viscus",
       "page": 6,
-      "quote": "The SMA supplies blood to the all small bowe",
+      "quote": "The SMA supplies blood to the all small bowel",
       "relation": "teaching",
       "sourceSha256": "d5276ec716bace21c74ce3d4491c223df9d9cdcd45267cc020d349c765c23cc0",
       "pageTextSha256": "3c2cf3651d8bb5fae664705a09a93b20cb814ad4bde26d0f9275fd8de558d4bb",
@@ -12688,7 +12711,7 @@
       "pdfId": "1p_Aqghil7DHPZrcBcXj8g6KdQ-y_z8A5",
       "title": "Team 444 · T6 Perforation & Infarction of Viscus",
       "page": 6,
-      "quote": "The SMA supplies blood to the all small bowe",
+      "quote": "The SMA supplies blood to the all small bowel",
       "relation": "teaching",
       "sourceSha256": "d5276ec716bace21c74ce3d4491c223df9d9cdcd45267cc020d349c765c23cc0",
       "pageTextSha256": "3c2cf3651d8bb5fae664705a09a93b20cb814ad4bde26d0f9275fd8de558d4bb",
@@ -13045,7 +13068,7 @@
       "pdfId": "1ihNhbasbnVzKd-R7EKbKGuWwTnvukixA",
       "title": "Team 443 · T5. Intra-Abdominal hemorrhage  and gastrointestinal hemorrhage  ",
       "page": 6,
-      "quote": "Colon diverticula and angiodysplasia accounting for most of the case",
+      "quote": "Colon diverticula and angiodysplasia accounting for most of the cases",
       "relation": "background",
       "sourceSha256": "31136128da11b2d312eb9e7944aec08885fcee8ba6ec433d6ffb525b514f929b",
       "pageTextSha256": "ae4f3579b55998b1ff4be33a7437a7da5c347d31f12fbf601f9dc5c2b7264048",
@@ -13114,7 +13137,7 @@
       "pdfId": "1-_0C8SPWRFv6md8PU5lDMQEnxUFSOT1h",
       "title": "Team 445 · L17- Common Anorectal Conditions",
       "page": 10,
-      "quote": "left lateral, right anterior right posterior l",
+      "quote": "left lateral, right anterior right posterior",
       "relation": "teaching",
       "sourceSha256": "51942e3d4a777ba0a1d597500c4b7ee37e73fad87be44934ce7b3f1df0b60bd3",
       "pageTextSha256": "d7e4aafcd8b321b84a9a742888df1d063b8aa7006460441f49c3eaaf8422ec84",
@@ -13137,7 +13160,7 @@
       "pdfId": "1ihNhbasbnVzKd-R7EKbKGuWwTnvukixA",
       "title": "Team 443 · T5. Intra-Abdominal hemorrhage  and gastrointestinal hemorrhage  ",
       "page": 6,
-      "quote": "Colon diverticula and angiodysplasia accounting for most of the case",
+      "quote": "Colon diverticula and angiodysplasia accounting for most of the cases",
       "relation": "background",
       "sourceSha256": "31136128da11b2d312eb9e7944aec08885fcee8ba6ec433d6ffb525b514f929b",
       "pageTextSha256": "ae4f3579b55998b1ff4be33a7437a7da5c347d31f12fbf601f9dc5c2b7264048",
@@ -13240,7 +13263,7 @@
       "pdfId": "1s9jnfIAgH-XosFWleSM5hfLCSGtZGFdD",
       "title": "Team 444 · T6 Neck swelling ",
       "page": 6,
-      "quote": "The most common cause of a swelling in the neck is an enlarged lymph gland most common causes of such enlargement are infection and secondary tumour deposits. Systemic illness: m",
+      "quote": "The most common cause of a swelling in the neck is an enlarged lymph gland most common causes of such enlargement are infection and secondary tumour deposits.",
       "relation": "teaching",
       "sourceSha256": "0d34340ceefc5360e48ab953e77f20c899ff9be0bfc4b15bca0a448b2ce09d05",
       "pageTextSha256": "8e930fc8164479df7813ddd9afeabd1de8fd8f9bc0606b64964fba3ea270eeeb",
@@ -13263,7 +13286,7 @@
       "pdfId": "1s9jnfIAgH-XosFWleSM5hfLCSGtZGFdD",
       "title": "Team 444 · T6 Neck swelling ",
       "page": 6,
-      "quote": "The most common cause of a swelling in the neck is an enlarged lymph gland most common causes of such enlargement are infection and secondary tumour deposits. Systemic illness: m",
+      "quote": "The most common cause of a swelling in the neck is an enlarged lymph gland most common causes of such enlargement are infection and secondary tumour deposits.",
       "relation": "teaching",
       "sourceSha256": "0d34340ceefc5360e48ab953e77f20c899ff9be0bfc4b15bca0a448b2ce09d05",
       "pageTextSha256": "8e930fc8164479df7813ddd9afeabd1de8fd8f9bc0606b64964fba3ea270eeeb",
@@ -13401,7 +13424,7 @@
       "pdfId": "1s9jnfIAgH-XosFWleSM5hfLCSGtZGFdD",
       "title": "Team 444 · T6 Neck swelling ",
       "page": 7,
-      "quote": "FNA biopsy For nodules Reported using Bethesda syste",
+      "quote": "FNA biopsy For nodules Reported using Bethesda system",
       "relation": "background",
       "sourceSha256": "0d34340ceefc5360e48ab953e77f20c899ff9be0bfc4b15bca0a448b2ce09d05",
       "pageTextSha256": "cea4fb541e2c10f33f2c5dc69eb87b08407bb8d78c206fdec660fa2663c84ca3",
@@ -13799,7 +13822,7 @@
       "pdfId": "1cYUpiLnObMNwQc0w6QWYRDJwNMDOWjK5",
       "title": "Team 444 · T7 Breast diseases",
       "page": 11,
-      "quote": "Triple Assessment of Breast Mass H & PE Imaging Biops",
+      "quote": "Triple Assessment of Breast Mass H & PE Imaging Biopsy",
       "relation": "background",
       "sourceSha256": "37ed139600d4d2faa7c50b9f66d4c03263277170dc5b4993a0f0d705da525e11",
       "pageTextSha256": "f3dba1cc7493a6ae4e578c0f9a5185aaf04d5147f2de1012526200af19c49856",
@@ -13822,7 +13845,7 @@
       "pdfId": "1cYUpiLnObMNwQc0w6QWYRDJwNMDOWjK5",
       "title": "Team 444 · T7 Breast diseases",
       "page": 11,
-      "quote": "Triple Assessment of Breast Mass H & PE Imaging Biops",
+      "quote": "Triple Assessment of Breast Mass H & PE Imaging Biopsy",
       "relation": "background",
       "sourceSha256": "37ed139600d4d2faa7c50b9f66d4c03263277170dc5b4993a0f0d705da525e11",
       "pageTextSha256": "f3dba1cc7493a6ae4e578c0f9a5185aaf04d5147f2de1012526200af19c49856",
@@ -13932,7 +13955,7 @@
       "pdfId": "1cYUpiLnObMNwQc0w6QWYRDJwNMDOWjK5",
       "title": "Team 444 · T7 Breast diseases",
       "page": 11,
-      "quote": "Fibroadenoma smooth, rubbery, very mobile, well-defined, ben",
+      "quote": "Fibroadenoma smooth, rubbery, very mobile, well-defined, benign",
       "relation": "background",
       "sourceSha256": "37ed139600d4d2faa7c50b9f66d4c03263277170dc5b4993a0f0d705da525e11",
       "pageTextSha256": "f3dba1cc7493a6ae4e578c0f9a5185aaf04d5147f2de1012526200af19c49856",
@@ -14003,7 +14026,7 @@
       "pdfId": "1cYUpiLnObMNwQc0w6QWYRDJwNMDOWjK5",
       "title": "Team 444 · T7 Breast diseases",
       "page": 11,
-      "quote": "Triple Assessment of Breast Mass H & PE Imaging Biops",
+      "quote": "Triple Assessment of Breast Mass H & PE Imaging Biopsy",
       "relation": "background",
       "sourceSha256": "37ed139600d4d2faa7c50b9f66d4c03263277170dc5b4993a0f0d705da525e11",
       "pageTextSha256": "f3dba1cc7493a6ae4e578c0f9a5185aaf04d5147f2de1012526200af19c49856",
@@ -14143,7 +14166,7 @@
       "pdfId": "1cYUpiLnObMNwQc0w6QWYRDJwNMDOWjK5",
       "title": "Team 444 · T7 Breast diseases",
       "page": 25,
-      "quote": "You cant differentiate the phyliodus with fibroadenoma by biopsy you have to exi",
+      "quote": "You cant differentiate the phyliodus with fibroadenoma by biopsy you have to exise",
       "relation": "teaching",
       "sourceSha256": "37ed139600d4d2faa7c50b9f66d4c03263277170dc5b4993a0f0d705da525e11",
       "pageTextSha256": "433a93cc5010c6dc18b01fc787550362f05a52fac774e46a6b103eadc8d49187",
@@ -14205,15 +14228,15 @@
       "B"
     ],
     "confidence": "preference",
-    "basis": "lecture",
-    "explanation": "Thick or cheesy nipple material can result from dilated ducts containing retained debris, which favors duct ectasia. Weight loss or a palpable mass still requires triple assessment to exclude cancer.",
-    "objection": "The source key selects invasive cancer, but the discharge description supports duct ectasia and does not establish malignancy.",
+    "basis": "clinical",
+    "explanation": "If the material is coming from the nipple, thick retained duct secretions can favor duct ectasia. The stem says discharge from a breast mass without locating its opening, so this remains a tentative interpretation. The mass and weight loss need full breast assessment and tissue sampling when indicated.",
+    "objection": "The source key selects invasive cancer without diagnostic confirmation. Duct ectasia is a tentative alternative only if the discharge is from the nipple; the cited slide does not describe cheesy material.",
     "evidence": {
       "pdfId": "1cYUpiLnObMNwQc0w6QWYRDJwNMDOWjK5",
       "title": "Team 444 · T7 Breast diseases",
       "page": 10,
-      "quote": "Milky high prolactin or physiological lactation (usually bilateral) Blood most concerning for malignancy (duct carcinoma) or intraductal papilloma (often benign) Serous concerning for possible malignancy Brown/ green usually benign, seen in fibrocystic changes or duct ectasia Yellow/ purulent infection (pus)",
-      "relation": "teaching",
+      "quote": "Brown/ green usually benign, seen in fibrocystic changes or duct ectasia",
+      "relation": "background",
       "sourceSha256": "37ed139600d4d2faa7c50b9f66d4c03263277170dc5b4993a0f0d705da525e11",
       "pageTextSha256": "d1d77dbbe532a0153a525309a073e9c2400cca504fa4f8c3109887d896d8583b",
       "textKind": "flowText",
@@ -14221,7 +14244,12 @@
       "image": "lecture-media/surgery-mid/1cYUpiLnObMNwQc0w6QWYRDJwNMDOWjK5-010.jpg",
       "imageSha256": "65ab86e9815549d61cc8dbf9b0731c944f49eb9bb9dfb926d22f5822b79c8254"
     },
-    "references": []
+    "references": [
+      {
+        "title": "American Cancer Society: Duct Ectasia",
+        "url": "https://www.cancer.org/cancer/types/breast-cancer/non-cancerous-breast-conditions/duct-ectasia.html"
+      }
+    ]
   },
   "surgery-midterm-q0705": {
     "answers": [
@@ -14258,16 +14286,16 @@
     "answers": [
       "A"
     ],
-    "confidence": "supported",
-    "basis": "lecture",
-    "explanation": "Multiple bilateral simple cysts without suspicious findings are usually benign and can be managed with reassurance. Aspiration is useful when a particular cyst is painful or otherwise needs further assessment.",
-    "objection": "",
+    "confidence": "preference",
+    "basis": "clinical",
+    "explanation": "Multiple bilateral cysts are often benign. Reassurance is reasonable once clinical assessment and ultrasound confirm a simple cyst pattern without suspicious features. A painful or complex lesion may need aspiration or tissue assessment.",
+    "objection": "The source does not state that the cysts are simple or give the imaging features required for reassurance alone.",
     "evidence": {
       "pdfId": "1cYUpiLnObMNwQc0w6QWYRDJwNMDOWjK5",
       "title": "Team 444 · T7 Breast diseases",
       "page": 5,
       "quote": "Simple cyst Can be painful Fluid-filled, sudden fluid accumulation —> stretching —> pain Aspirate if symptomatic, do not remove if mild/asymptomatic bc (recurrence is common)",
-      "relation": "teaching",
+      "relation": "background",
       "sourceSha256": "37ed139600d4d2faa7c50b9f66d4c03263277170dc5b4993a0f0d705da525e11",
       "pageTextSha256": "64241ba2aaade93e1db837755ef9e823efce437feed6dcc886249b3431ead462",
       "textKind": "flowText",
@@ -14275,7 +14303,12 @@
       "image": "lecture-media/surgery-mid/1cYUpiLnObMNwQc0w6QWYRDJwNMDOWjK5-005.jpg",
       "imageSha256": "75024b587298bf1c9e34726d992a7e096dcec358bbf6a9ad71621c74b426ea3d"
     },
-    "references": []
+    "references": [
+      {
+        "title": "National Cancer Institute: Benign Breast Conditions",
+        "url": "https://www.cancer.gov/types/breast/causes-risk-factors/benign-breast-lumps"
+      }
+    ]
   },
   "surgery-midterm-q0709": {
     "answers": [
@@ -14334,15 +14367,15 @@
     "evidence": {
       "pdfId": "1cYUpiLnObMNwQc0w6QWYRDJwNMDOWjK5",
       "title": "Team 444 · T7 Breast diseases",
-      "page": 5,
-      "quote": "Simple cyst Can be painful Fluid-filled, sudden fluid accumulation —> stretching —> pain Aspirate if symptomatic, do not remove if mild/asymptomatic bc (recurrence is common)",
+      "page": 23,
+      "quote": "If any internal echoes are demonstrated, ultrasound-guided needle aspiration is recommended to fully exclude malignancy.",
       "relation": "background",
       "sourceSha256": "37ed139600d4d2faa7c50b9f66d4c03263277170dc5b4993a0f0d705da525e11",
-      "pageTextSha256": "64241ba2aaade93e1db837755ef9e823efce437feed6dcc886249b3431ead462",
+      "pageTextSha256": "3bd3bd6c18e6e0200153f4fa12d47b25377916ef8a18fe528aecc5cd0eeca2c2",
       "textKind": "flowText",
       "url": "https://drive.google.com/file/d/1cYUpiLnObMNwQc0w6QWYRDJwNMDOWjK5/view?usp=drivesdk",
-      "image": "lecture-media/surgery-mid/1cYUpiLnObMNwQc0w6QWYRDJwNMDOWjK5-005.jpg",
-      "imageSha256": "75024b587298bf1c9e34726d992a7e096dcec358bbf6a9ad71621c74b426ea3d"
+      "image": "lecture-media/surgery-mid/1cYUpiLnObMNwQc0w6QWYRDJwNMDOWjK5-023.jpg",
+      "imageSha256": "65a99941dc20e79df762fb9774afd2218724e4a6d388da8ea7475eef531d2746"
     },
     "references": []
   },
@@ -18313,7 +18346,7 @@
     ],
     "confidence": "supported",
     "basis": "lecture",
-    "explanation": "Atrial fibrillation after myocardial infarction creates a risk of mesenteric arterial embolism. Sudden severe pain despite relatively normal examination findings is a classic presentation of acute mesenteric ischemia.",
+    "explanation": "Atrial fibrillation after myocardial infarction creates a risk of mesenteric arterial embolism. Sudden abdominal pain in this setting strongly suggests acute mesenteric ischemia. Normal vital signs do not exclude an early ischemic event.",
     "objection": "",
     "evidence": {
       "pdfId": "1Ee2mJnZTCx9OhB6ELlhrvUCi3bYNWbNG",
@@ -19658,7 +19691,7 @@
       "pdfId": "1Gkgcq9GDUW8CzmkOu0XXllGq5DPQC8n4",
       "title": "Team 445 · L21- Pathophysiology and interpretation of pain in surgical patient",
       "page": 7,
-      "quote": "Patient behaviour Restless, writhing, nauseated Lies still; hurts to move or c",
+      "quote": "Patient behaviour Restless, writhing, nauseated Lies still; hurts to move or cough",
       "relation": "teaching",
       "sourceSha256": "8801b8950673407f26b2e733542019f595d42489da44231697cb8fd82aca697a",
       "pageTextSha256": "cfdc9df9321d3c9e15531305e1f99f081fcc80448062b6a087187a967f025a33",
@@ -20314,11 +20347,6 @@
     "lecture": "Common Congenital Neurosurgical Diseases",
     "reason": "This tests meningocele contents rather than upper abdominal disease; no specific teaching page is claimed."
   },
-  "surgery-midterm-q0563": {
-    "before": "Generalized Abdominal Pain",
-    "lecture": "Gastric Outlet, Small and Large Bowel Obstruction",
-    "reason": "The surgical history points to possible adhesive obstruction; stem remains incomplete."
-  },
   "surgery-midterm-q0568": {
     "before": "Generalized Abdominal Pain",
     "lecture": "Lower Abdominal Pain",
@@ -20402,7 +20430,7 @@
   "surgery-midterm-q0893": {
     "before": "Lower Abdominal Pain",
     "lecture": "Infarction of Viscus",
-    "reason": "Sudden abdominal pain out of proportion to examination after atrial fibrillation is acute mesenteric ischemia."
+    "reason": "Sudden abdominal pain after atrial fibrillation points to mesenteric ischemia, a visceral-infarction topic."
   }
 };
   const lectureVisibilityRepairs = new Set(["surgery-midterm-q0334", "surgery-midterm-q0335", "surgery-midterm-q0336", "surgery-midterm-q0338", "surgery-midterm-q0339", "surgery-midterm-q0651", "surgery-midterm-q0652", "surgery-midterm-q0653", "surgery-midterm-q0654", "surgery-midterm-q0655", "surgery-midterm-q0656", "surgery-midterm-q0657", "surgery-midterm-q0658", "surgery-midterm-q0659", "surgery-midterm-q0660", "surgery-midterm-q0661", "surgery-midterm-q0662", "surgery-midterm-q0663", "surgery-midterm-q0664", "surgery-midterm-q0665", "surgery-midterm-q0666", "surgery-midterm-q0667", "surgery-midterm-q0668", "surgery-midterm-q0669", "surgery-midterm-q0670", "surgery-midterm-q0671", "surgery-midterm-q0672", "surgery-midterm-q0673", "surgery-midterm-q0674", "surgery-midterm-q0675", "surgery-midterm-q0676", "surgery-midterm-q0677", "surgery-midterm-q0678", "surgery-midterm-q0679", "surgery-midterm-q0680", "surgery-midterm-q0681", "surgery-midterm-q0682", "surgery-midterm-q0683", "surgery-midterm-q0684", "surgery-midterm-q0685", "surgery-midterm-q0686", "surgery-midterm-q0687", "surgery-midterm-q0688", "surgery-midterm-q0689", "surgery-midterm-q0690", "surgery-midterm-q0691", "surgery-midterm-q0692", "surgery-midterm-q0693", "surgery-midterm-q0694", "surgery-midterm-q0695", "surgery-midterm-q0696", "surgery-midterm-q0697", "surgery-midterm-q0698", "surgery-midterm-q0699", "surgery-midterm-q0700", "surgery-midterm-q0701", "surgery-midterm-q0702", "surgery-midterm-q0703", "surgery-midterm-q0704", "surgery-midterm-q0705", "surgery-midterm-q0706", "surgery-midterm-q0707", "surgery-midterm-q0708", "surgery-midterm-q0709", "surgery-midterm-q0710", "surgery-midterm-q0711", "surgery-midterm-q0712", "surgery-midterm-q0713"]);

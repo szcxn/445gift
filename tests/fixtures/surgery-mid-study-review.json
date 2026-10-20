@@ -2052,11 +2052,6 @@
       "lecture": "Common Congenital Neurosurgical Diseases",
       "reason": "This tests meningocele contents rather than upper abdominal disease; no specific teaching page is claimed."
     },
-    "surgery-midterm-q0563": {
-      "before": "Generalized Abdominal Pain",
-      "lecture": "Gastric Outlet, Small and Large Bowel Obstruction",
-      "reason": "The surgical history points to possible adhesive obstruction; stem remains incomplete."
-    },
     "surgery-midterm-q0568": {
       "before": "Generalized Abdominal Pain",
       "lecture": "Lower Abdominal Pain",
@@ -2140,7 +2135,7 @@
     "surgery-midterm-q0893": {
       "before": "Lower Abdominal Pain",
       "lecture": "Infarction of Viscus",
-      "reason": "Sudden abdominal pain out of proportion to examination after atrial fibrillation is acute mesenteric ischemia."
+      "reason": "Sudden abdominal pain after atrial fibrillation points to mesenteric ischemia, a visceral-infarction topic."
     }
   },
   "lectureVisibilityRepairs": [
@@ -2252,16 +2247,16 @@
     "surgery-final-q1217",
     "surgery-final-q1218"
   ],
-  "lectureBased": 468,
-  "clinical": 502,
+  "lectureBased": 463,
+  "clinical": 507,
   "confidence": {
-    "supported": 634,
-    "preference": 282,
-    "unresolved": 54
+    "supported": 632,
+    "preference": 283,
+    "unresolved": 55
   },
-  "objections": 301,
-  "uniqueSlideImages": 173,
-  "imageBytes": 58759565,
+  "objections": 303,
+  "uniqueSlideImages": 174,
+  "imageBytes": 59474408,
   "sources": [
     {
       "id": "1-_0C8SPWRFv6md8PU5lDMQEnxUFSOT1h",
@@ -2815,10 +2810,10 @@
       "textSha256": "407ae8fbf5ec8e58879f23e350b615ae6b033b68cbab4ab86ba10cb9948db7a6"
     },
     {
-      "pdfId": "1txC32FSGFkh1VEVnIpjxKCNi2xiDz4ET",
-      "page": 30,
+      "pdfId": "1bqCwO7gTItLr9lKfT32CBInTpjiPc-IA",
+      "page": 10,
       "textKind": "flowText",
-      "textSha256": "a43f1e22558bca7b7a859f70114f84e6745268343d9b87582167056133abb354"
+      "textSha256": "3ed6a45aab56cce078ebdce11a041750b6c2670af90fb822dc4cc577677be8ad"
     },
     {
       "pdfId": "1cXqN8z8Sjo90BRHq_mXnOliQqYqglqbi",
@@ -3173,6 +3168,12 @@
       "page": 25,
       "textKind": "flowText",
       "textSha256": "433a93cc5010c6dc18b01fc787550362f05a52fac774e46a6b103eadc8d49187"
+    },
+    {
+      "pdfId": "1cYUpiLnObMNwQc0w6QWYRDJwNMDOWjK5",
+      "page": 23,
+      "textKind": "flowText",
+      "textSha256": "3bd3bd6c18e6e0200153f4fa12d47b25377916ef8a18fe528aecc5cd0eeca2c2"
     },
     {
       "pdfId": "1Bar3aLYkoEb35LViqQCjPVo7hfX54fzu",

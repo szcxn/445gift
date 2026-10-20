@@ -137,7 +137,8 @@ for qid, baseline in targets.items():
         source = sources[fid]
         quote = norm(evidence['quote'])
         assert quote and not re.search(r'[\u0600-\u06ff]|\(cid:', quote), (qid, 'Unreadable quote')
-        matches = [kind for kind, text in actual[(fid, number)].items() if quote in text]
+        end_boundary = r'(?![A-Za-z0-9])' if re.search(r'[A-Za-z0-9]$', quote) else ''
+        matches = [kind for kind, text in actual[(fid, number)].items() if re.search(re.escape(quote) + end_boundary, text)]
         assert matches, (qid, fid, number, 'Quote absent from original page', quote)
         assert evidence['relation'] in ('teaching', 'background'), qid
         assert review['basis'] != 'lecture' or evidence['relation'] == 'teaching', qid
@@ -171,6 +172,9 @@ for qid, baseline in targets.items():
         output[qid]['ungradedReason'] = review['ungradedReason'].strip()
 
 payload = json.dumps(output, ensure_ascii=False, indent=2)
+for image_path in image_dir.glob('*.jpg'):
+    if image_path.name not in rendered:
+        image_path.unlink()
 repairs = json.dumps(corrections, ensure_ascii=False, indent=2)
 js = """// Surgery MID: source-bank grading with separate, individually reviewed explanations.
 (() => {

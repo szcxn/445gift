@@ -94,6 +94,10 @@ const displayed = renderer.deduplicateQuestions(live.filter(q => !q.excluded));
 assert.equal(displayed.length, 1212, 'Source reconstruction must preserve all previously displayed questions');
 assert.equal(displayed.filter(q => q.assessment === 'Midterm').length, 934);
 assert.deepEqual(displayed.map(q => q.id), original.filter(q => !q.excluded).map(q => q.id), 'Existing saved question IDs changed during display deduplication');
+const midLectureTitles = new Set(plain(after.window.GIFT445_SURGERY_CATALOG).filter(block => block.assessment === 'Midterm').flatMap(block => block.lectures));
+const currentMidPractice = displayed.filter(q => !q.cycle && !q.hideFromLecture && midLectureTitles.has(q.lecture));
+assert.equal(currentMidPractice.length, 928);
+assert.ok(currentMidPractice.every(q => q.surgeryReview), 'A current MID lecture still exposes unaudited legacy feedback');
 vm.runInContext(html.slice(html.indexOf('    function renderQuestion(question,'), html.indexOf('    function questionCountLabel(')), renderer);
 // This helper sits later in the UI source, outside the renderer segment.
 const batchStart = html.indexOf('    function batchDisplayName(');
