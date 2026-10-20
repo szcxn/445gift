@@ -1429,8 +1429,9 @@
     function renderSubjects() {
       subjectsElement.innerHTML = SUBJECTS.map(subject => {
         const subjectQuestions = questionsFor(subject.id);
-        const count = subjectQuestions.length;
-        const countLabel = count ? questionCountLabel(count) : "Coming soon";
+        const sourceSets = Object.values(window.GIFT445_ORIGINAL_BATCH_INDEX?.[subject.id] || {});
+        const count = sourceSets.length ? sourceSets.reduce((total, ids) => total + ids.length, 0) : subjectQuestions.length;
+        const countLabel = count ? `${questionCountLabel(count)}${sourceSets.length ? " · Original banks" : ""}` : "Coming soon";
         return `
           <button class="subject-card" style="--subject-color:${subject.color}" data-subject="${subject.id}" aria-label="Open ${subject.name}">
             <span class="card-top">
@@ -2015,7 +2016,7 @@
       const selected = appState.quiz.answers[question.id] || null;
       const studyReview = (question.subjectId === "medicine" ? question.medicineReview : question.subjectId === "surgery" ? question.surgeryReview : question.subjectId === "research" ? question.researchReview : question.subjectId === "radiology" ? question.radiologyReview : question.subjectId === "community" ? question.communityReview : null) || question.batchReview;
       const richMedia = question.batchOnly || question.subjectId === "radiology" || question.subjectId === "community";
-      const displayOptions = studyReview ? question.options.filter(option => richMedia && (option.images || []).length || option.text.trim() && (!(question.batchOnly || question.surgeryReview || question.researchReview || question.radiologyReview || question.communityReview) || !isMissingSourceOption(option.text, question.subjectId))) : question.options;
+      const displayOptions = studyReview ? question.options.filter(option => richMedia && (option.images || []).length || option.text.trim() && (!(question.batchOnly || question.surgeryReview || question.researchReview || question.radiologyReview || question.communityReview) || !isMissingSourceOption(option.text, question.subjectId, question.batchOnly))) : question.options;
       const revealed = Boolean(selected) || studyReview && !displayOptions.length;
       const acceptedAnswers = sourceAnswers(question);
       const proposedAnswers = Array.isArray(question.aiAnswer) ? question.aiAnswer : (question.aiAnswer ? [question.aiAnswer] : []);
@@ -2076,7 +2077,7 @@
               const resultClass = revealed && gradingAnswers.includes(option.id) ? " correct" : (revealed && gradingAnswers.length && selected === option.id ? " incorrect" : "");
               const choiceImages = richMedia ? option.images || [] : [];
               const choiceLabel = option.sourceLabel || option.id;
-              const choiceText = choiceImages.length && isMissingSourceOption(option.text, question.subjectId) ? "" : option.text;
+              const choiceText = choiceImages.length && isMissingSourceOption(option.text, question.subjectId, question.batchOnly) ? "" : option.text;
               const button = `<button class="option-button${selectedClass}${resultClass}" type="button" data-question="${question.id}" data-option="${option.id}" aria-pressed="${selected === option.id}"><span class="option-letter">${escapeHtml(choiceLabel)}</span><span>${escapeHtml(choiceText)}${choiceImages.map((image, imageIndex) => `<img class="radiology-choice-image" src="${escapeHtml(image)}" alt="Choice ${escapeHtml(choiceLabel)} image ${imageIndex + 1}" loading="lazy">`).join("")}</span></button>`;
               return choiceImages.length ? `<div class="radiology-choice">${button}<div class="radiology-choice-links">${choiceImages.map((image, imageIndex) => `<a href="${escapeHtml(image)}" target="_blank" rel="noopener noreferrer">Open choice ${escapeHtml(choiceLabel)} image${choiceImages.length > 1 ? ` ${imageIndex + 1}` : ""} ↗</a>`).join("")}</div></div>` : button;
             }).join("")}
@@ -2113,7 +2114,7 @@
         const option = question.options.find(item => item.id === answer);
         const imageChoice = richMedia && (option?.images || []).length;
         const label = imageChoice || question.communityReview ? option?.sourceLabel || answer : answer;
-        const text = imageChoice && isMissingSourceOption(option.text, question.subjectId) ? "Image choice" : option?.text || `Option missing in ${bankName}`;
+        const text = imageChoice && isMissingSourceOption(option.text, question.subjectId, question.batchOnly) ? "Image choice" : option?.text || `Option missing in ${bankName}`;
         return `${escapeHtml(label)} — ${escapeHtml(text)}`;
       }).join(" or ");
       const different = review.answers.length && (review.answers.length !== key.length || review.answers.some(answer => !key.includes(answer)));
@@ -2136,8 +2137,8 @@
       </div>`;
     }
 
-    function isMissingSourceOption(text, subjectId = null) {
-      return subjectId === "community" && /^[?؟\s]+$/.test(String(text || "")) || !String(text || "").trim() || /^(?:option text was not recorded in (?:the )?source|answer choices were not recorded in (?:the )?source|not provided(?: in (?:the )?source)?|missing|unavailable|[A-D])\.?$/i.test(String(text).trim());
+    function isMissingSourceOption(text, subjectId = null, originalBatch = false) {
+      return subjectId === "community" && /^[?؟\s]+$/.test(String(text || "")) || !String(text || "").trim() || /^(?:option text was not recorded in (?:the )?source|answer choices were not recorded in (?:the )?source|not provided(?: in (?:the )?source)?|missing|unavailable)\.?$/i.test(String(text).trim()) || !originalBatch && /^[A-D]\.?$/i.test(String(text).trim());
     }
 
     function gradingAnswersForQuestion(question) {
@@ -2195,7 +2196,7 @@
       const question = QUESTION_BANK.find(item => item.id === questionId);
       if (!question) return;
       const reviewOnly = (question.batchOnly || question.subjectId === "radiology" || question.subjectId === "community") && optionId === "__reviewed__"
-        && !question.options.some(option => (option.images || []).length || !isMissingSourceOption(option.text, question.subjectId));
+        && !question.options.some(option => (option.images || []).length || !isMissingSourceOption(option.text, question.subjectId, question.batchOnly));
       if (!reviewOnly && !question.options.some(option => option.id === optionId)) return;
       const wasAlreadyAnswered = Boolean(appState.quiz.answers[questionId]);
       appState.quiz.answers[questionId] = optionId;

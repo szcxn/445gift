@@ -11,6 +11,8 @@ assert.deepEqual(Object.fromEntries(Object.keys(fixture.counts).map(s=>[s,c.ques
 assert.deepEqual(Array.from(c.QUESTION_BANK).filter(q=>!q.batchOnly).map(q=>q.id).sort(),fixture.studyIds.slice().sort(),'Lecture study IDs changed while restoring original batches');
 let checkedSets=0,total=0;
 c.SUBJECTS=Object.keys(fixture.counts).map(id=>({id,name:id}));for(const n of ['captureAnalytics','persistState','renderQuestionSetView','renderResumePanel'])c[n]=()=>{};c.quizAnalyticsProperties=()=>({});
+load('renderSubjects');load('questionCountLabel');c.subjectsElement={innerHTML:''};c.document={querySelectorAll:()=>[]};c.renderSubjects();
+for(const n of Object.values(fixture.counts))assert.ok(c.subjectsElement.innerHTML.includes(`${n} questions · Original banks`),'Home cards must show the complete original banks, not just the MID lecture subset');
 for(const [s,sets]of Object.entries(fixture.index)){
  let subjectTotal=0;
  for(const [key,ids]of Object.entries(sets)){
@@ -44,10 +46,11 @@ assert.equal(medFinal.find(q=>q.sourceLocations[0].questionNumber===39).sourceAn
 const surFinal=Array.from(c.questionsForBatch('surgery','Final','437'));
 assert.equal(surFinal.find(q=>q.sourceLocations[0].questionNumber===48).sourceAnswer,null);assert.equal(surFinal.find(q=>q.sourceLocations[0].questionNumber===88).sourceAnswer,null);
 const renderer={appState:{navigation:{mode:'batch',assessment:'Final',batch:'442'},quiz:{answers:{},questionIds:[],currentIndex:0}},SUBJECTS:c.SUBJECTS,QUESTION_BANK:c.QUESTION_BANK,escapeHtml:v=>String(v??'').replace(/[&<>'"]/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[ch])),persistState(){},captureAnalytics(){},quizAnalyticsProperties:()=>({}),completedQuizKeys:new Set(),currentQuizKey:()=> 'batch-test'};vm.createContext(renderer);vm.runInContext(html.slice(html.indexOf('    function renderQuestion(question,'),html.indexOf('    function questionCountLabel(')),renderer);renderer.batchDisplayName=c.batchDisplayName;
+assert.equal(renderer.isMissingSourceOption('A','surgery',true),false,'A is valid original choice text, for example a blood group');
 let clicks=0;
 for(const q of c.QUESTION_BANK.filter(q=>q.batchOnly)){
  renderer.appState.quiz={answers:{},questionIds:[q.id],currentIndex:0};let out=renderer.renderQuestion(q,0,1);assert.ok(out.includes(q.id));
- const visible=q.options.filter(o=>o.images?.length||o.text.trim()&&!renderer.isMissingSourceOption(o.text,q.subjectId));
+ const visible=q.options.filter(o=>o.images?.length||o.text.trim()&&!renderer.isMissingSourceOption(o.text,q.subjectId,q.batchOnly));
  const choices=visible.length?visible.map(o=>o.id):['__reviewed__'];
  for(const optionId of choices){
   const buttons=visible.map(o=>({dataset:{option:o.id},classList:{toggle(){}},setAttribute(){}}));renderer.workspaceElement={querySelector:s=>s.includes('data-question-card')?{querySelectorAll:()=>buttons,querySelector:()=>({classList:{add(){}}})}:null};
