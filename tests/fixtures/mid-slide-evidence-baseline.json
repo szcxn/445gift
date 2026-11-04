@@ -1,0 +1,39 @@
+{
+  "description": "Effective bank before the MID evidence overlay. Only review.evidence and review.basis may change; original order and every other field are protected.",
+  "reviewKeys": [
+    "medicineReview",
+    "surgeryReview",
+    "communityReview",
+    "researchReview",
+    "radiologyReview",
+    "batchReview"
+  ],
+  "questions": 8945,
+  "sha256": "041567fc5d9abceb5c4494d2edd7a698fa7fb98c4f8e2c22cc54f7c696aef9e8",
+  "subjects": {
+    "medicine": {
+      "questions": 2887,
+      "sha256": "0da67bfc89051da64cee20b2abd78b5ffb29626b1aaea97926aaf71a5c229f07"
+    },
+    "surgery": {
+      "questions": 2350,
+      "sha256": "eb8573a3920dbd7731acc4e7b25af8a5ba4e4e708878bcebb8507eaa64ad62a3"
+    },
+    "community": {
+      "questions": 851,
+      "sha256": "bef3ae8c416aae518d17ffaa42783cb5593259264557b2cb3fc9034d5c807d8c"
+    },
+    "informatics": {
+      "questions": 879,
+      "sha256": "29c9c413af0f5664e3dc8e6ed879f1ade90ed27f4ee9172350f4cf0a764cc251"
+    },
+    "research": {
+      "questions": 907,
+      "sha256": "444460b9d9aaff3869bc79bde40a444262a18d82589bf5bc07b782b0a7df0ea1"
+    },
+    "radiology": {
+      "questions": 1071,
+      "sha256": "31bec4374442861c4de503cbb95b86961b83929054dac2b146afc862322c1718"
+    }
+  }
+}

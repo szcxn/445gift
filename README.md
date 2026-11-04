@@ -157,3 +157,26 @@ The Final catalog links actual Drive lecture files 6–9: Telemedicine/mHealth/W
 `node tests/informatics-final.test.cjs` checks immutable source records, scope membership, repeated numbering, image placement, all-choice Gift grading, preserved source labels, deferred explanations, direct conflicts and the four ordered lecture-file links. Other subjects remain unchanged. No deployment is performed by these source builders.
 
 Informatics cleanup (2026-10-08): AI now has 23 primary questions (17 Midterm-source and 6 Final-source). All 28 cross-listed occurrences remain under their original primary lectures. Explanations show the question-specific reasoning before the exact slide evidence, with repeated administrative wording removed. Precision Medicine questions 443 Q39 and 442 Q6 remain Final-only; their draft notes are retained privately for the later Final review.
+
+### MID source images and references (2026-11-04)
+
+`mid-slide-evidence.js` completes source references after the final bank assembly. It attaches authentic PDF pages, original presentation slides and native speaker-note pages without changing imported questions or review answers. Explicitly linked original-batch copies inherit the same evidence. Independent batch records keep their own review.
+
+Community now has source references and page images for **595 of 635** MID-topic occurrences: 358 have direct teaching and 237 have related context. The review recovered 51 previously missing references and 273 missing images. Available Team445 material is preferred, including newly located Burden of Disease and Maternal Health PDFs; MED444 material supplies additional teaching where needed. Lecturer slides, team notes and supplementary teaching from another block retain their own attribution. The remaining 40 occurrences have no verified course passage attached.
+
+The audit covers authored MID reviews, including original Final-bank questions assigned to MID lectures:
+
+| Subject | Reviewed occurrences | Missing lecture passage before | Missing lecture passage after | Missing images recovered |
+| --- | ---: | ---: | ---: | ---: |
+| Community Medicine | 635 | 91 | 40 | 273 |
+| Research | 640 | 4 | 4 | 20 |
+| Radiology | 663 | 121 | 101 | 143 |
+| Medicine | 835 | 61 | 57 | 4 |
+| Surgery | 972 | 361 | 341 | 20 |
+| Informatics | 616 | 0 | 0 | 0 |
+
+“Missing lecture passage” means that no verified course excerpt is attached; some of these explanations have separate scientific references. Remaining gaps stay explicit and available external references remain visible. Background teaching is labelled “Related source” with its limits. Source titles and positions appear for both direct and background evidence. Diagram summaries appear as summaries; exact fragments remain separate quotations.
+
+Presentation exports include hidden slides and preserve original slide numbering. Twenty-eight existing quotations come from speaker notes. Twenty-seven are visible on authentic notes-page images. For `community-final-431-q011`, the native notes export clips the quoted item: its original slide is shown only as context and the quotation is explicitly attributed to the speaker notes. No reconstructed text image is presented as an original slide.
+
+The portable regression test, `node tests/mid-slide-evidence.test.cjs`, checks all 8,945 runtime records, all 6,446 original batch occurrences, 782 evidence patches and 297 cited image assets, including hashes, dimensions, source positions, immutable grading/content, inheritance, and rendered source labels. Original source files, extraction records and visual proof sheets remain outside the published repository. The update strip is unchanged.

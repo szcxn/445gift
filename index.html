@@ -1235,6 +1235,7 @@
   <script src="radiology-data.js?v=20261020-radiology-mid-1"></script>
   <script src="batch-source-repairs.js?v=20261020-batch-audit-1"></script>
   <script src="original-batches.js?v=20261020-complete-batches-1"></script>
+  <script src="mid-slide-evidence.js?v=20261104-mid-sources-1"></script>
   <script>
     const SUBJECTS = [
       { id: "medicine", name: "Medicine", code: "MED", index: "01", description: "Review the full bank or study by batch, cycle, and lecture.", color: "#087eb6" },
@@ -1257,7 +1258,7 @@
       "Hematology & Oncology"
     ];
 
-    const QUESTION_BANK = deduplicateQuestions(window.GIFT445_EXTEND_BATCH_BANK(window.GIFT445_REPAIR_BANK([
+    const QUESTION_BANK = window.GIFT445_COMPLETE_MID_EVIDENCE(deduplicateQuestions(window.GIFT445_EXTEND_BATCH_BANK(window.GIFT445_REPAIR_BANK([
       ...(window.GIFT445_QUESTIONS || []),
       ...(window.GIFT445_SURGERY_QUESTIONS || []),
       ...(window.GIFT445_COMMUNITY_QUESTIONS || []),
@@ -1265,7 +1266,7 @@
       ...(window.GIFT445_INFORMATICS_FINAL_QUESTIONS || []),
       ...(window.GIFT445_RESEARCH_QUESTIONS || []),
       ...(window.GIFT445_RADIOLOGY_QUESTIONS || [])
-    ].filter(question => !question.excluded))));
+    ].filter(question => !question.excluded)))));
 
     function deduplicateQuestions(questions) {
       const seenIds = new Set();
@@ -2120,17 +2121,21 @@
       const different = review.answers.length && (review.answers.length !== key.length || review.answers.some(answer => !key.includes(answer)));
       const evidence = review.evidence;
       const canScore = gradingAnswersForQuestion(question).length > 0;
-      const sourceParagraph = Boolean(question.communityReview && evidence?.unit === "paragraph");
-      const pageLabel = sourceParagraph ? "Source paragraph" : (question.researchReview || question.radiologyReview || question.communityReview) && evidence?.unit === "slide" ? "Slide" : "PDF page";
+      const sourceParagraph = evidence?.unit === "paragraph";
+      const speakerNotes = evidence?.textKind === "speaker-notes";
+      const pageLabel = sourceParagraph ? "Source paragraph" : evidence?.unit === "slide" ? "Slide" : "PDF page";
+      const sourceLocation = speakerNotes ? `Speaker notes for Slide ${evidence.page}` : `${pageLabel} ${evidence?.page}`;
       const evidenceImage = sourceParagraph ? null : evidence?.image;
-      const evidenceSummary = sourceParagraph ? evidence.relation === "background" ? "Related source text" : "View supporting text" : evidence?.relation === "background" ? "Related slide" : "View supporting slide";
+      const relatedSource = evidence?.relation === "background";
+      const evidenceSummary = sourceParagraph ? relatedSource ? "Related source text" : "View supporting text" : speakerNotes ? relatedSource ? "Related speaker notes" : "View supporting notes" : relatedSource ? "Related slide" : "View supporting slide";
+      const sourceExcerpt = evidence ? `${evidence.sourceSummary ? `<p class="source-note"><strong>Source summary:</strong> ${escapeHtml(evidence.sourceSummary)}</p>` : ""}${evidence.quoteKind === "summary" && !evidence.quoteParts?.length ? "" : (evidence.quoteParts || [evidence.quote]).map(quote => `<blockquote>${escapeHtml(quote)}</blockquote>`).join("")}` : "";
       return `<div class="medicine-feedback" lang="en" dir="ltr">
         <p class="answer-summary">${bankName} answer: ${key.length ? answerText(key) : writtenGiftAnswer ? escapeHtml(writtenGiftAnswer) : "Not provided"}</p>
         ${originalNote ? `<p class="source-note">Original bank note: ${escapeHtml(originalNote)}</p>` : ""}
         ${!canScore ? `<p class="source-note">Not scored: ${escapeHtml(question.giftReview?.ungradedReason || "The original question is incomplete.")}</p>` : ""}
         ${different || review.objection ? `<div class="medicine-objection">${different ? `<strong>${review.confidence === "supported" ? "Reviewed answer" : "Suggested answer"}: ${answerText(review.answers)}</strong>` : ""}${review.objection ? `<p>${escapeHtml(review.objection)}</p>` : ""}</div>` : ""}
         <p class="medicine-explanation"><strong>Explanation</strong>${escapeHtml(review.explanation)}</p>
-        <div class="medicine-source">${review.basis === "pending" ? "Explanation pending" : review.basis === "lecture" && evidence ? `Source: ${escapeHtml(evidence.title)} · ${pageLabel} ${evidence.page}` : question.researchReview || question.radiologyReview || question.communityReview ? "Concept explanation" : "Clinical explanation"}${evidence ? `<details class="medicine-slide"><summary>${evidenceSummary}</summary>${(question.surgeryReview || question.researchReview || question.radiologyReview || question.communityReview) && evidence.relation === "background" ? `<p class="source-note">${escapeHtml(evidence.title)} · ${pageLabel} ${evidence.page}</p>` : ""}<blockquote>${escapeHtml(evidence.quote)}</blockquote><a href="${escapeHtml(evidence.url)}" target="_blank" rel="noopener noreferrer">${sourceParagraph ? "Open full document" : "Open full lecture"} ↗</a>${evidenceImage ? `<a href="${escapeHtml(evidenceImage)}" target="_blank" rel="noopener noreferrer" aria-label="Open slide image at full size"><img src="${escapeHtml(evidenceImage)}" alt="${escapeHtml(evidence.title)} — ${pageLabel} ${evidence.page}" loading="lazy"></a>` : ""}</details>` : ""}</div>
+        <div class="medicine-source">${evidence ? `${relatedSource ? "Related source" : "Source"}: ${escapeHtml(evidence.title)}${evidence.cohortLabel ? ` · ${escapeHtml(evidence.cohortLabel)}` : ""} · ${escapeHtml(sourceLocation)}${relatedSource ? `<p class="source-note">This source explains a related point; it does not establish the answer.</p>` : ""}<details class="medicine-slide"><summary>${evidenceSummary}</summary>${sourceExcerpt}${evidence.note ? `<p class="source-note">${escapeHtml(evidence.note)}</p>` : ""}${speakerNotes ? `<p class="source-note">The quoted text is from the lecturer's speaker notes.${evidence.imageRole === "slideContextOnly" ? " The image below shows the original slide for context; the quotation is in its notes, not on the slide itself." : " The image below shows the original notes page."}</p>` : ""}<a href="${escapeHtml(evidence.url)}" target="_blank" rel="noopener noreferrer">${sourceParagraph ? "Open full document" : "Open full lecture"} ↗</a>${evidenceImage ? `<a href="${escapeHtml(evidenceImage)}" target="_blank" rel="noopener noreferrer" aria-label="Open source image at full size"><img src="${escapeHtml(evidenceImage)}" alt="${escapeHtml(evidence.title)} — ${escapeHtml(sourceLocation)}${evidence.imageRole === "slideContextOnly" ? " (slide context only)" : ""}" loading="lazy"></a>` : ""}${evidence.slideImage ? `<a href="${escapeHtml(evidence.slideImage)}" target="_blank" rel="noopener noreferrer">Open original slide ↗</a>` : ""}</details>` : review.basis === "pending" ? "Explanation pending" : `${question.researchReview || question.radiologyReview || question.communityReview ? "Concept explanation" : "Clinical explanation"}<p class="source-note">No verified lecture passage is attached to this explanation.</p>`}</div>
         ${question.sourceTranscript ? `<details class="medicine-slide"><summary>Original question text</summary><p style="white-space:pre-wrap">${escapeHtml(question.sourceTranscript)}</p></details>` : ""}
         ${(review.references || []).length ? `<div class="reference-list">${review.references.map(reference => `<a href="${escapeHtml(reference.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(reference.title)} ↗</a>`).join("")}</div>` : ""}
         ${sourceRefs ? `<p class="source-note">${bankName} · ${escapeHtml(sourceRefs)}</p>` : ""}
