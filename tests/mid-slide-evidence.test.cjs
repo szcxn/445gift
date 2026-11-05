@@ -55,6 +55,9 @@ for (const match of html.matchAll(/<script src="([^"?]+)/g)) {
   assert.ok(fs.existsSync(filename), `Missing application script: ${match[1]}`);
   vm.runInContext(fs.readFileSync(filename, 'utf8'), context, {filename: match[1]});
 }
+// This fixture records the November 4 MID-source stage. The later Informatics
+// Final review has its own full-runtime conservation and rendering test.
+if (context.window.GIFT445_COMPLETE_INFORMATICS_FINAL) context.window.GIFT445_COMPLETE_INFORMATICS_FINAL = bank => bank;
 installFunctions(context);
 assert.equal(typeof context.window.GIFT445_COMPLETE_MID_EVIDENCE, 'function');
 const patches = plain(context.window.GIFT445_MID_EVIDENCE_PATCHES);
