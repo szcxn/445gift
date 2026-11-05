@@ -258,6 +258,9 @@ for (const question of final) {
 }
 
 const noop = () => {};
+const sourceFooter = renderer.renderInformaticsFinalExplanation(final.find(question => question.informaticsFinalReview), 'Gift · Final · Batch 443 · Q13');
+assert.match(sourceFooter, /Gift · Final · Batch 443 · Q13/);
+assert.doesNotMatch(sourceFooter, /Gift · Gift/);
 const stub = () => ({addEventListener: noop, classList: {add: noop}, disabled: false, innerHTML: ''});
 renderer.captureAnalytics = noop; renderer.workspaceHeader = text => text; renderer.bindWorkspaceClose = noop;
 renderer.workspaceElement = {innerHTML: '', classList: {add: noop}, querySelector: () => null, querySelectorAll: () => [], scrollIntoView: noop};
