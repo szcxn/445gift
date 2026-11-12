@@ -51,6 +51,9 @@ function installFunctions(context) {
 const context = {window: {}};
 vm.createContext(context);
 for (const match of html.matchAll(/<script src="([^"?]+)/g)) {
+  if (match[1] === "informatics-mid-445.js") continue; // Separate 445 MID PDF release.
+  // Later native Gift repairs are covered by medicine-native-repairs.test.cjs.
+  if (match[1] === "medicine-native-repairs.js") continue;
   const filename = path.join(root, match[1]);
   assert.ok(fs.existsSync(filename), `Missing application script: ${match[1]}`);
   vm.runInContext(fs.readFileSync(filename, 'utf8'), context, {filename: match[1]});

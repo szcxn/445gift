@@ -1,0 +1,123 @@
+.mistakes-panel {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 18px;
+  margin: 0 0 18px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: linear-gradient(105deg, var(--panel), var(--accent-soft));
+}
+
+.mistakes-symbol {
+  display: grid;
+  flex: 0 0 40px;
+  height: 40px;
+  place-items: center;
+  border: 1px solid var(--line-strong);
+  border-radius: 12px;
+  color: var(--accent);
+  background: var(--panel);
+  font-size: 22px;
+  line-height: 1;
+}
+
+.mistakes-panel-copy { flex: 1; min-width: 0; }
+.mistakes-panel-copy strong { display: block; font-size: 15px; }
+.mistakes-panel-copy p, .mistakes-note { margin: 4px 0 0; color: var(--muted); font-size: 13px; line-height: 1.5; }
+.mistakes-panel .text-button { color: var(--accent); border-color: var(--line-strong); background: var(--panel); }
+.mistakes-panel .text-button:hover { border-color: var(--accent); }
+
+.mistakes-filters {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin: 18px 0;
+}
+
+.mistakes-filters label { min-width: 0; color: var(--muted); font-size: 12px; font-weight: 700; }
+.mistakes-filters select {
+  width: 100%;
+  min-height: 44px;
+  margin-top: 5px;
+  padding: 7px 10px;
+  border: 1px solid var(--line-strong);
+  border-radius: 9px;
+  background: var(--panel);
+  color: var(--text);
+  font: inherit;
+  text-overflow: ellipsis;
+}
+.mistakes-filters select:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+.mistakes-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; }
+.mistakes-actions > .mistakes-note { flex: 1; min-width: min(100%, 10rem); margin: 0; }
+.mistakes-list { display: grid; gap: 8px; padding: 0; margin: 14px 0; list-style: none; }
+.mistakes-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--panel);
+}
+.mistakes-item-copy { flex: 1; min-width: 0; }
+.mistakes-item-copy strong {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  font-size: 13px;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+.mistakes-item-copy p { margin: 4px 0 0; color: var(--muted); font-size: 12px; line-height: 1.45; }
+.mistakes-item .text-button { flex: 0 0 auto; color: var(--accent); }
+.mistakes-empty {
+  margin: 16px 0 0;
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--panel);
+  color: var(--muted);
+  line-height: 1.5;
+}
+.mistakes-weak-topic {
+  display: inline-block;
+  margin-top: 13px;
+  padding: 5px 9px;
+  border-radius: 8px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.quiz-result-slot:empty { display: none; }
+.quiz-result {
+  margin: 16px 0 0;
+  padding: clamp(14px, 3.5vw, 24px);
+  border: 1px solid var(--line-strong);
+  border-radius: 16px;
+  background: linear-gradient(145deg, var(--panel), var(--accent-soft));
+}
+.quiz-result-top { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; }
+.quiz-result-copy { flex: 1; min-width: 9rem; }
+.quiz-result h3 { margin: 0; font-size: 18px; }
+.quiz-result-percent { color: var(--accent); font-size: clamp(30px, 8vw, 46px); font-weight: 800; line-height: 1.1; }
+.quiz-result-stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin: 16px 0 0; }
+.quiz-result-stats div { padding: 9px; border: 1px solid var(--line); border-radius: 10px; background: var(--panel); }
+.quiz-result-stats dt { color: var(--muted); font-size: 11px; line-height: 1.45; }
+.quiz-result-stats dd { margin: 3px 0 0; font-size: 18px; font-weight: 750; }
+.quiz-result .mistakes-actions { margin-top: 12px; }
+.mistake-practice-feedback { color: var(--accent); font-weight: 700; }
+.mistake-practice .option-button:disabled { cursor: default; }
+
+@media (max-width: 560px) {
+  .mistakes-panel { flex-wrap: wrap; padding: 12px; }
+  .mistakes-panel > button { flex: 1 0 100%; }
+  .mistakes-filters { grid-template-columns: 1fr; gap: 8px; }
+  .mistakes-item { align-items: stretch; flex-direction: column; gap: 7px; }
+  .mistakes-item .text-button { align-self: flex-start; }
+}

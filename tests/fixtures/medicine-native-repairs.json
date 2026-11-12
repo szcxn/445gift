@@ -1,0 +1,387 @@
+{
+  "sources": {
+    "Midterm": {
+      "sha256": "46f8c8c07aa2631b71db60d11762f9356e0ad8281037b6da631574665ac21752",
+      "filename": "Copy of MID.docx"
+    },
+    "Final": {
+      "sha256": "47caf163ea492698d1afa0ab562b2e52c77cf167aed3425ac8c813fd70af99b6",
+      "filename": "Medicine Final - All Years MCQs_.docx"
+    }
+  },
+  "scopedBatchOccurrences": {
+    "Midterm": 695,
+    "Final": 147
+  },
+  "sourceTables": [
+    {
+      "location": [
+        "Midterm",
+        "442",
+        39
+      ],
+      "ids": [
+        "medicine-midterm-442-nephrology-q039",
+        "batch-medicine-midterm-442-p857-q39"
+      ],
+      "nestedCount": 12,
+      "cellsSha256": "9cd02bfa50c242c1cac0db7e3f615a70f0724d5bd30bf57bf61dc1cdadf3c86c"
+    },
+    {
+      "location": [
+        "Midterm",
+        "441",
+        35
+      ],
+      "ids": [
+        "medicine-midterm-441-cardiology-q035",
+        "batch-medicine-midterm-441-p1198-q35"
+      ],
+      "nestedCount": 0,
+      "cellsSha256": "bfa1e4731d43ac1669f556c969e0cd762c72b656c2f8eda7c0c64933a723aaf8"
+    },
+    {
+      "location": [
+        "Midterm",
+        "441",
+        41
+      ],
+      "ids": [
+        "medicine-midterm-441-nephrology-q041",
+        "batch-medicine-midterm-441-p1246-q41"
+      ],
+      "nestedCount": 0,
+      "cellsSha256": "56053351c48279849e10f9d1a9b164b7348102451f2b83216edf3b6c9427396a"
+    },
+    {
+      "location": [
+        "Midterm",
+        "441",
+        42
+      ],
+      "ids": [
+        "medicine-midterm-441-nephrology-q042",
+        "batch-medicine-midterm-441-p1256-q42"
+      ],
+      "nestedCount": 0,
+      "cellsSha256": "0de35d2e6b589f5ab3137d7c018d57a180599c15fdb2abf7a25fc4f116e7ec0c"
+    },
+    {
+      "location": [
+        "Midterm",
+        "441",
+        44
+      ],
+      "ids": [
+        "medicine-midterm-441-nephrology-q044",
+        "batch-medicine-midterm-441-p1274-q44"
+      ],
+      "nestedCount": 0,
+      "cellsSha256": "484b6281bbc51b4801e13aa115841c75effb0496363364b926589098fba4ff8e"
+    },
+    {
+      "location": [
+        "Midterm",
+        "441",
+        52
+      ],
+      "ids": [
+        "medicine-midterm-441-git-hepatobiliary-q052",
+        "batch-medicine-midterm-441-p1340-q52"
+      ],
+      "nestedCount": 0,
+      "cellsSha256": "0db5e7cb6ca90c2aae8c10d13b00dc661734dc761420190e2199cfe7094eca16"
+    },
+    {
+      "location": [
+        "Midterm",
+        "441",
+        57
+      ],
+      "ids": [
+        "medicine-midterm-441-git-hepatobiliary-q057",
+        "batch-medicine-midterm-441-p1380-q57"
+      ],
+      "nestedCount": 0,
+      "cellsSha256": "ef27da0a6ef592ec293096a8be0281d4488f5d866f598442c53d30bc3fa9b079"
+    },
+    {
+      "location": [
+        "Midterm",
+        "439",
+        35
+      ],
+      "ids": [
+        "medicine-midterm-439-nephrology-q035",
+        "batch-medicine-midterm-439-p1765-q35"
+      ],
+      "nestedCount": 0,
+      "cellsSha256": "199da4f217aef0aef6b390692464412bfdc398433c063d1d5af23b59b9fee385"
+    },
+    {
+      "location": [
+        "Midterm",
+        "439",
+        36
+      ],
+      "ids": [
+        "medicine-midterm-439-nephrology-q036",
+        "batch-medicine-midterm-439-p1777-q36"
+      ],
+      "nestedCount": 0,
+      "cellsSha256": "7f1bfb1616e233a8450ec20d24c05af96d3d448da0cf7057b843e388b527e764"
+    },
+    {
+      "location": [
+        "Midterm",
+        "439",
+        37
+      ],
+      "ids": [
+        "medicine-midterm-439-nephrology-q037",
+        "batch-medicine-midterm-439-p1791-q37"
+      ],
+      "nestedCount": 0,
+      "cellsSha256": "4ca2fb8939b26f9fa9da5e4c8f053c43d1551bde4a500db424af4fd85e8f4dac"
+    },
+    {
+      "location": [
+        "Midterm",
+        "439",
+        38
+      ],
+      "ids": [
+        "medicine-midterm-439-nephrology-q038",
+        "batch-medicine-midterm-439-p1804-q38"
+      ],
+      "nestedCount": 0,
+      "cellsSha256": "2f8e36cbbf460f8040880b763481d1defd39e00282dd16d3344e6a29d4768fdf"
+    },
+    {
+      "location": [
+        "Midterm",
+        "439",
+        39
+      ],
+      "ids": [
+        "medicine-midterm-439-nephrology-q039",
+        "batch-medicine-midterm-439-p1817-q39"
+      ],
+      "nestedCount": 0,
+      "cellsSha256": "19c7d3a905623a1e077351562f9b233e085fb88d45f973be4ff60c83547b75a3"
+    },
+    {
+      "location": [
+        "Midterm",
+        "439",
+        40
+      ],
+      "ids": [
+        "medicine-midterm-439-nephrology-q040",
+        "batch-medicine-midterm-439-p1830-q40"
+      ],
+      "nestedCount": 0,
+      "cellsSha256": "bf9aeb82d6d161f92b0efd537e0ba7aaa61ff009c40b66e6f11eaeaee243be07"
+    },
+    {
+      "location": [
+        "Midterm",
+        "439",
+        41
+      ],
+      "ids": [
+        "medicine-midterm-439-nephrology-q041",
+        "batch-medicine-midterm-439-p1843-q41"
+      ],
+      "nestedCount": 0,
+      "cellsSha256": "511fa669e90ce54a90bf5ae431def1214aece8abfbb616672426ca10384149f1"
+    },
+    {
+      "location": [
+        "Midterm",
+        "439",
+        42
+      ],
+      "ids": [
+        "medicine-midterm-439-nephrology-q042",
+        "batch-medicine-midterm-439-p1856-q42"
+      ],
+      "nestedCount": 0,
+      "cellsSha256": "458c09c1830a88d8880fd98a503ce7bde08a7d021dc9b4df3b1d9ec2c38649e6"
+    },
+    {
+      "location": [
+        "Midterm",
+        "439",
+        43
+      ],
+      "ids": [
+        "medicine-midterm-439-nephrology-q043",
+        "batch-medicine-midterm-439-p1870-q43"
+      ],
+      "nestedCount": 0,
+      "cellsSha256": "5c143951489300a05923b071eec53df1eeccd3f6ee439deb09485ab7a020140d"
+    },
+    {
+      "location": [
+        "Midterm",
+        "439",
+        44
+      ],
+      "ids": [
+        "medicine-midterm-439-nephrology-q044",
+        "batch-medicine-midterm-439-p1883-q44"
+      ],
+      "nestedCount": 0,
+      "cellsSha256": "575c2b38776cd828f209013e8ce846382216df5e3c53ae52537c8d2c7f1e2097"
+    },
+    {
+      "location": [
+        "Midterm",
+        "439",
+        57
+      ],
+      "ids": [
+        "medicine-midterm-439-nephrology-q057",
+        "batch-medicine-midterm-439-p2032-q57"
+      ],
+      "nestedCount": 0,
+      "cellsSha256": "1d64d7a102b7132f3a77407e0522dd0e28008f983a49c9a1508da933903c1912"
+    },
+    {
+      "location": [
+        "Midterm",
+        "439",
+        58
+      ],
+      "ids": [
+        "medicine-midterm-439-nephrology-q058",
+        "batch-medicine-midterm-439-p2046-q58"
+      ],
+      "nestedCount": 0,
+      "cellsSha256": "17b0da6daf6b99e7648f946c717747576951a0d0d0eb0baa60f061d6600f1101"
+    },
+    {
+      "location": [
+        "Midterm",
+        "438",
+        21
+      ],
+      "ids": [
+        "medicine-midterm-438-pulmonary-q021",
+        "batch-medicine-midterm-438-p2229-q21"
+      ],
+      "nestedCount": 0,
+      "cellsSha256": "3be5e23d83adba043486c5e75d8c1bc942efa7a6783070a7d83023bf39518872"
+    },
+    {
+      "location": [
+        "Midterm",
+        "438",
+        32
+      ],
+      "ids": [
+        "medicine-midterm-438-nephrology-q032",
+        "batch-medicine-midterm-438-p2311-q32"
+      ],
+      "nestedCount": 0,
+      "cellsSha256": "ed2460d6f9a3b3a14543e640a3036878a1316437ce8af2fe112a75daa12a1018"
+    },
+    {
+      "location": [
+        "Midterm",
+        "438",
+        41
+      ],
+      "ids": [
+        "medicine-midterm-438-nephrology-q041",
+        "batch-medicine-midterm-438-p2384-q41"
+      ],
+      "nestedCount": 0,
+      "cellsSha256": "bac580bd3331f6add7ebe243b64c3eb03328ebb2c3d405f9fa6074ad8ab17ad1"
+    },
+    {
+      "location": [
+        "Final",
+        "443",
+        2
+      ],
+      "ids": [
+        "medicine-final-443-git-hepatobiliary-q002",
+        "batch-medicine-final-443-p88-q2"
+      ],
+      "nestedCount": 0,
+      "cellsSha256": "c7dff16d724aaf152684b250daccd9051ab7535f62e29001e8243e2e630e3ae6"
+    },
+    {
+      "location": [
+        "Final",
+        "442",
+        9
+      ],
+      "ids": [
+        "medicine-final-443-git-hepatobiliary-q002",
+        "batch-medicine-final-442-p786-q9"
+      ],
+      "nestedCount": 0,
+      "cellsSha256": "c7dff16d724aaf152684b250daccd9051ab7535f62e29001e8243e2e630e3ae6"
+    }
+  ],
+  "clinicalImages": [
+    {
+      "location": [
+        "Midterm",
+        "442",
+        43
+      ],
+      "ids": [
+        "medicine-midterm-442-git-hepatobiliary-q043",
+        "batch-medicine-midterm-442-p894-q43"
+      ],
+      "sha256": "985bd4c9fdafc9017d6b97ea9c9a4f6347eee3492725214917cb8d21f638093d"
+    },
+    {
+      "location": [
+        "Final",
+        "442",
+        3
+      ],
+      "ids": [
+        "medicine-final-442-cardiology-q003",
+        "batch-medicine-final-442-p729-q3"
+      ],
+      "sha256": "20b67dcee4d281a06519d5f005b0ae14a1e65291b86ee964afb21bc7e8fb3c20"
+    },
+    {
+      "location": [
+        "Final",
+        "438",
+        13
+      ],
+      "ids": [
+        "medicine-final-438-mixed-medicine-q013",
+        "batch-medicine-final-438-p2894-q13"
+      ],
+      "sha256": "271ba3b78c002f855e201a41689f1860ae987449fc3dedab8df0c3f7a67688f1"
+    }
+  ],
+  "patchIds": [
+    "batch-medicine-final-429-p6340-q52",
+    "batch-medicine-final-442-p786-q9",
+    "batch-medicine-final-443-p88-q2",
+    "batch-medicine-midterm-436-p2964-q15",
+    "batch-medicine-midterm-436-p3209-q46",
+    "batch-medicine-midterm-439-p2032-q57",
+    "batch-medicine-midterm-439-p2046-q58",
+    "batch-medicine-midterm-441-p1380-q57",
+    "medicine-443-mid-arrhythmia-q12",
+    "medicine-443-mid-ie-q05",
+    "medicine-final-429-pulmonary-q052",
+    "medicine-final-443-git-hepatobiliary-q002",
+    "medicine-midterm-436-cardiology-q015",
+    "medicine-midterm-436-pulmonary-q046",
+    "medicine-midterm-439-nephrology-q057",
+    "medicine-midterm-439-nephrology-q058",
+    "medicine-midterm-441-git-hepatobiliary-q057"
+  ]
+}

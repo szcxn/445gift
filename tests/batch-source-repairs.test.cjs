@@ -1,7 +1,8 @@
 const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),vm=require('node:vm');
 const root=path.resolve(__dirname,'..'),html=fs.readFileSync(path.join(root,'index.html'),'utf8'),fixture=JSON.parse(fs.readFileSync(path.join(root,'tests/fixtures/batch-source-repairs.json')));
 const live={window:{}};vm.createContext(live);
-for(const m of html.matchAll(/<script src="([^"?]+)/g))vm.runInContext(fs.readFileSync(path.join(root,m[1]),'utf8'),live);
+// The submitted Batch 445 PDF has a separate full-runtime test.
+for(const m of html.matchAll(/<script src="([^"?]+)/g))if(m[1]!=="informatics-mid-445.js")vm.runInContext(fs.readFileSync(path.join(root,m[1]),'utf8'),live);
 const plain=x=>JSON.parse(JSON.stringify(x));
 function load(name){const a=html.indexOf(`    function ${name}(`),b=html.indexOf('\n    }\n',a)+6;assert.ok(a>=0,name);vm.runInContext(html.slice(a,b),live);}
 for(const name of ['deduplicateQuestions','questionsFor','questionsForBatch','batchCountLabel','questionCountLabel','questionsForAssessment','isQuestionAvailableInLecture','newestQuestionBatch','orderQuestionsNewestFirst','openQuestionSet','openLecture','openCollection','openSubject','batchDisplayName'])load(name);

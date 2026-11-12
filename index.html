@@ -6,6 +6,7 @@
   <meta name="theme-color" content="#eef7fb">
   <title>Gift 445 — Medical Question Bank</title>
   <link rel="icon" type="image/png" href="445-logo.png">
+  <link rel="stylesheet" href="study-tracking.css?v=1">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Amiri+Quran&amp;family=Cairo:wght@600;700&amp;family=Tajawal:wght@400;500;700&amp;display=swap" rel="stylesheet">
@@ -1152,7 +1153,7 @@
         <span class="site-updates-label" id="site-updates-title">آخر التحديثات</span>
         <time datetime="2026-11-12">١٢ نوفمبر ٢٠٢٦</time>
       </div>
-      <p><strong>أحدث تحديث:</strong> قيفت الإنفورماتيكس: فصل الميد والفاينل، ترتيب الباتشات حسب الملفات الأصلية، ومراجعة تصنيف أسئلة الفاينل.</p>
+      <p><strong>أحدث تحديث:</strong> إضافة ميزة مراجعة الأخطاء وعرض النتائج بعد إكمال الحل، وتجديد مراجع ميد ميديسن، ومراجعة أسئلة فاينل الإنفورماتكس وإرفاق المراجع المتاحة.</p>
       <p><strong>تحديث سابق:</strong> إضافة مادتي الراديولوجي والريسيرش: أسئلة الميد مرتبة حسب المحاضرات، مع شروح واضحة والاستدلال بالمحاضرات عند توفر الدليل، والحفاظ على إجابات القيفت الأصلية.</p>
       <p><strong>تحديث سابق:</strong> تطوير ضخم لشروح إجابات الباطنة والسيرجري للميد: عرض أبسط وأوضح للإجابة والشرح، مع الاستدلال بالسلايدات عند توفر الدليل، وتوضيح الإجابات المختلف عليها، والحفاظ على مفتاح القيفت الأصلي.</p>
       <p><strong>تحديث سابق:</strong> إضافة مادة الإنفورماتكس: أسئلة الميد مرتبة حسب المحاضرات، مع شروح مدعومة بالسلايدات والحفاظ على إجابات القيفت الأصلية.</p>
@@ -1183,6 +1184,7 @@
         <p>Select a subject to begin a clear, structured review.</p>
       </div>
       <aside class="resume-panel" id="resume-panel" aria-live="polite"></aside>
+      <aside class="mistakes-panel" id="mistakes-panel" aria-label="Mistake review"></aside>
       <div class="subjects" id="subjects"></div>
       <section class="workspace" id="workspace" aria-live="polite"></section>
     </section>
@@ -1236,10 +1238,14 @@
   <script src="radiology-data.js?v=20261020-radiology-mid-1"></script>
   <script src="batch-source-repairs.js?v=20261020-batch-audit-1"></script>
   <script src="original-batches.js?v=20261020-complete-batches-1"></script>
+  <script src="medicine-native-repairs.js?v=1"></script>
   <script src="mid-slide-evidence.js?v=20261104-mid-sources-1"></script>
+  <script src="medicine-445-evidence.js?v=20261112-2"></script>
+  <script src="study-tracking.js?v=1"></script>
   <script src="informatics-final-review.js?v=20261112-source-audit-1"></script>
   <script src="informatics-source-repeats.js?v=20261112-1"></script>
-  <script src="informatics-source-navigation.js?v=20261112-1"></script>
+  <script src="informatics-mid-445.js?v=20261112-2"></script>
+  <script src="informatics-source-navigation.js?v=20261112-2"></script>
   <script src="informatics-mid-source-integrity.js?v=20261112-1"></script>
   <script>
     const SUBJECTS = [
@@ -1268,6 +1274,7 @@
       ...(window.GIFT445_SURGERY_QUESTIONS || []),
       ...(window.GIFT445_COMMUNITY_QUESTIONS || []),
       ...(window.GIFT445_INFORMATICS_QUESTIONS || []),
+      ...(window.GIFT445_INFORMATICS_445_QUESTIONS || []),
       ...(window.GIFT445_INFORMATICS_FINAL_QUESTIONS || []),
       ...(window.GIFT445_RESEARCH_QUESTIONS || []),
       ...(window.GIFT445_RADIOLOGY_QUESTIONS || [])
@@ -1309,7 +1316,7 @@
       version: 1,
       savedAt: 0,
       navigation: { subjectId: null, cycle: null, lecture: null, mode: null, assessment: null, batch: null, title: null },
-      quiz: { questionIds: [], currentIndex: 0, answers: {}, flagged: [], mode: null }
+      quiz: { questionIds: [], currentIndex: 0, answers: {}, firstAnswers: {}, flagged: [], mode: null }
     });
 
     const root = document.documentElement;
@@ -1317,9 +1324,17 @@
     const subjectsElement = document.getElementById("subjects");
     const workspaceElement = document.getElementById("workspace");
     const resumePanel = document.getElementById("resume-panel");
+    const mistakesPanel = document.getElementById("mistakes-panel");
     const saveStatus = document.getElementById("save-status");
+    const studyTracking = window.GIFT445_STUDY_TRACKING;
+    const questionById = new Map(QUESTION_BANK.map(question => [question.id, question]));
     const completedQuizKeys = new Set();
     let appState = loadSavedState();
+    let mistakeHistory = studyTracking.loadHistory();
+    let mistakeReview = studyTracking.loadReview();
+    let mistakeFilters = null;
+    let mistakeSavingAvailable = true;
+    let pendingMistakeWrites = 0;
 
     function captureAnalytics(eventName, properties = {}) {
       if (!window.posthog?.capture) return;
@@ -1364,6 +1379,7 @@
         const subjectId = SUBJECTS.some(subject => subject.id === parsed.navigation?.subjectId)
           ? parsed.navigation.subjectId
           : null;
+        const answers = studyTracking.answerMap(parsed.quiz?.answers);
         return {
           version: 1,
           savedAt: Number(parsed.savedAt) || 0,
@@ -1379,7 +1395,8 @@
           quiz: {
             questionIds: Array.isArray(parsed.quiz?.questionIds) ? parsed.quiz.questionIds.filter(id => typeof id === "string") : [],
             currentIndex: Math.max(0, Number(parsed.quiz?.currentIndex) || 0),
-            answers: parsed.quiz?.answers && typeof parsed.quiz.answers === "object" ? parsed.quiz.answers : {},
+            answers,
+            firstAnswers: studyTracking.answerMap(parsed.quiz?.firstAnswers ?? answers),
             flagged: Array.isArray(parsed.quiz?.flagged) ? parsed.quiz.flagged.filter(id => typeof id === "string") : [],
             mode: typeof parsed.quiz?.mode === "string" ? parsed.quiz.mode : null
           }
@@ -1728,7 +1745,7 @@
           <div class="route-section-head"><h3>Cycle Practice</h3><p>One continuous test across all questions in this cycle.</p></div>
           <div class="route-grid">
             <button class="route-card featured cycle-all-card" type="button"><strong>Test all ${escapeHtml(cycle)} questions</strong><span>${questionCountLabel(questions.length)} · ${answeredInCycle} answered</span></button>
-            ${reviewedMidQuestions.length ? `<button class="route-card featured cycle-mid-review-card" type="button"><strong>MID 444 · Lecture Review</strong><span>${questionCountLabel(reviewedMidQuestions.length)} · ${subjectId === "medicine" ? "Includes related Final questions" : "Lecture pages, medical notes, and reviewed answers"}</span></button>` : ""}
+            ${reviewedMidQuestions.length ? `<button class="route-card featured cycle-mid-review-card" type="button"><strong>MID · Lecture Review</strong><span>${questionCountLabel(reviewedMidQuestions.length)} · ${subjectId === "medicine" ? "Includes related Final questions" : "Lecture pages, medical notes, and reviewed answers"}</span></button>` : ""}
           </div>
         </section>
         <section class="route-section">
@@ -1895,7 +1912,7 @@
     function openCycleQuestions(subjectId, cycle, resume = false, assessment = null) {
       const questions = questionsFor(subjectId).filter(question => question.cycle === cycle && (!assessment || question.assessment === assessment || subjectId === "medicine" && assessment === "Midterm" && question.medicineMidLecture));
       if (assessment === "Midterm") questions.sort((left, right) => (left.lectureOrder ?? 999) - (right.lectureOrder ?? 999) || (left.referenceOrder ?? 999999) - (right.referenceOrder ?? 999999));
-      const title = assessment ? `${cycle} · MID 444 Lecture Review` : `All ${cycle} Questions`;
+      const title = assessment ? `${cycle} · MID Lecture Review` : `All ${cycle} Questions`;
       openQuestionSet(title, questions, { subjectId, cycle, lecture: null, mode: "cycle", assessment, batch: null, title }, resume);
     }
 
@@ -1988,7 +2005,7 @@
 
     function renderQuestionSetView() {
       const subject = SUBJECTS.find(item => item.id === appState.navigation.subjectId);
-      const questions = appState.quiz.questionIds.map(id => QUESTION_BANK.find(question => question.id === id)).filter(Boolean);
+      const questions = appState.quiz.questionIds.map(id => questionById.get(id)).filter(Boolean);
       if (!subject || !questions.length) return openSubject(appState.navigation.subjectId || "medicine");
       appState.quiz.currentIndex = Math.min(Math.max(0, appState.quiz.currentIndex), questions.length - 1);
       const index = appState.quiz.currentIndex;
@@ -2008,6 +2025,7 @@
             <button class="primary-button" type="button" data-action="next" ${index === questions.length - 1 ? "disabled" : ""}>Next</button>
           </div>
         </div>
+        <div class="quiz-result-slot" aria-live="polite"></div>
         <div class="question-list">${renderQuestion(question, index, questions.length)}</div>`;
       workspaceElement.classList.add("visible");
       bindWorkspaceClose();
@@ -2015,11 +2033,12 @@
       workspaceElement.querySelector('[data-action="previous"]').addEventListener("click", () => moveQuestion(-1));
       workspaceElement.querySelector('[data-action="next"]').addEventListener("click", () => moveQuestion(1));
       workspaceElement.querySelectorAll(".option-button").forEach(button => {
-        button.addEventListener("click", () => answerQuestion(button.dataset.question, button.dataset.option));
+        button.addEventListener("click", () => recordQuizAnswer(question, button.dataset.option, questions));
       });
       workspaceElement.querySelectorAll(".review-question-button").forEach(button => {
-        button.addEventListener("click", () => answerQuestion(button.dataset.question, "__reviewed__"));
+        button.addEventListener("click", () => recordQuizAnswer(question, "__reviewed__", questions));
       });
+      renderQuizResult(questions, appState.quiz.firstAnswers);
       workspaceElement.scrollIntoView({ behavior: "smooth", block: "nearest" });
     }
 
@@ -2039,10 +2058,10 @@
       workspaceElement.querySelector(".close-button").addEventListener("click", closeWorkspace);
     }
 
-    function renderQuestion(question, index, total = 1) {
-      const selected = appState.quiz.answers[question.id] || null;
-      const studyReview = question.informaticsFinalReview || (question.subjectId === "medicine" ? question.medicineReview : question.subjectId === "surgery" ? question.surgeryReview : question.subjectId === "research" ? question.researchReview : question.subjectId === "radiology" ? question.radiologyReview : question.subjectId === "community" ? question.communityReview : null) || question.batchReview;
-      const richMedia = question.batchOnly || question.subjectId === "radiology" || question.subjectId === "community" || Boolean(question.informaticsFinalReview);
+    function renderQuestion(question, index, total = 1, selected = appState.quiz.answers[question.id] || null) {
+      const informaticsReview = question.informaticsBatch445Review || question.informaticsFinalReview;
+      const studyReview = informaticsReview || (question.subjectId === "medicine" ? question.medicineReview : question.subjectId === "surgery" ? question.surgeryReview : question.subjectId === "research" ? question.researchReview : question.subjectId === "radiology" ? question.radiologyReview : question.subjectId === "community" ? question.communityReview : null) || question.batchReview;
+      const richMedia = question.batchOnly || question.subjectId === "radiology" || question.subjectId === "community" || Boolean(informaticsReview);
       const displayOptions = studyReview ? question.options.filter(option => richMedia && (option.images || []).length || option.text.trim() && (!(question.batchOnly || question.surgeryReview || question.researchReview || question.radiologyReview || question.communityReview) || !isMissingSourceOption(option.text, question.subjectId, question.batchOnly))) : question.options;
       const revealed = Boolean(selected) || studyReview && !displayOptions.length;
       const acceptedAnswers = sourceAnswers(question);
@@ -2095,9 +2114,10 @@
       return `
         <article class="question-card" data-question-card="${question.id}">
           <div class="question-meta"><span>${giftLocation && appState.navigation.mode === "batch" ? `Entry ${index + 1} of ${total}` : `Question ${index + 1} of ${total}`}</span><span>${escapeHtml(questionMeta)}</span></div>
-          ${giftLocation ? `<p class="source-note"><a href="${escapeHtml(giftLocation.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(giftLocation.title)} ↗</a> · ${escapeHtml(giftLocation.number)}${giftLocation.paragraph ? ` · ${escapeHtml(giftLocation.paragraph)}` : ""}${giftLocation.repeated ? " · Also appears elsewhere in Gift" : ""}</p>` : ""}
+          ${giftLocation ? `<p class="source-note">${giftLocation.url ? `<a href="${escapeHtml(giftLocation.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(giftLocation.title)} ↗</a>` : escapeHtml(giftLocation.title)} · ${escapeHtml(giftLocation.number)}${giftLocation.paragraph ? ` · ${escapeHtml(giftLocation.paragraph)}` : ""}${giftLocation.repeated ? " · Also appears elsewhere in Gift" : ""}</p>` : ""}
           <p class="question-stem">${escapeHtml(question.stem)}</p>
           ${renderSourceTables(question)}
+          ${question.medicineNativeSourceNote ? `<p class="question-table-note">${escapeHtml(question.medicineNativeSourceNote)}</p>` : ""}
           ${repeatText ? `<p class="repeat-note">${escapeHtml(repeatText)}</p>` : ""}
           ${(question.images || []).length ? `<div class="question-images">${question.images.map((image, imageIndex) => richMedia ? `<a class="question-image-link" href="${escapeHtml(image)}" target="_blank" rel="noopener noreferrer" aria-label="Open question image ${imageIndex + 1} at full size"><img src="${escapeHtml(image)}" alt="Question image ${imageIndex + 1}" loading="lazy"><span>Open full-size image ↗</span></a>` : `<img src="${escapeHtml(image)}" alt="Question image ${imageIndex + 1}" loading="lazy">`).join("")}</div>` : ""}
           <div class="options">
@@ -2112,7 +2132,7 @@
             }).join("")}
           </div>
           <div class="answer-panel${revealed ? " visible" : ""}${(studyReview ? studyReview.objection || giftReview?.ungradedReason : giftReview ? giftReview.warning || giftReview.ungradedReason : reviewStatuses.includes(question.verification)) ? " review" : ""}">
-            ${question.informaticsFinalReview ? renderInformaticsFinalExplanation(question, sourceRefs) : studyReview ? renderMedicineExplanation(question, sourceRefs, studyReview) : `
+            ${informaticsReview ? renderInformaticsFinalExplanation(question, sourceRefs, informaticsReview) : studyReview ? renderMedicineExplanation(question, sourceRefs, studyReview) : `
             <p class="answer-summary">${giftReview ? "Gift key" : "Reference answer"}: ${escapeHtml(question.sourceAnswerNote || acceptedAnswers.join(" or ") || "Not provided")}${giftReview ? gradingAnswers.length ? " · used for bank-based practice" : " · not scored" : reviewStatuses.includes(question.verification) ? " · needs review" : question.verification === "source-only" ? " · reference answer only" : ""}</p>
             ${giftReview && (question.subjectId !== "informatics" || giftReview.ungradedReason) ? `<p class="source-note">${escapeHtml(giftReview.ungradedReason || "Answer feedback follows the recorded Gift key. Review notes explain possible interpretations and lecture differences; they do not replace the key.")}${acceptedAnswers.length > 1 ? " Multiple recorded keys are retained." : ""}</p>` : ""}
             ${question.subjectId === "informatics" ? "" : `<p class="ai-note">${escapeHtml(aiText)}</p>`}
@@ -2120,19 +2140,17 @@
             ${question.subjectId === "informatics" && question.lecture ? `<p class="source-note"><strong>Lecture classification:</strong> ${escapeHtml(question.lecture)} (primary)${(question.informaticsLectures || []).filter(lecture => lecture !== question.lecture).map(lecture => ` · ${escapeHtml(lecture)} (shared topic)`).join("")}</p>` : ""}
             ${question.subjectId === "informatics" && question.informaticsSlideAnswer ? `<p class="review-opinion" lang="en" dir="ltr"><strong>${question.informaticsSlideAnswer.confidence === "supported" ? "Slide answer:" : question.informaticsSlideAnswer.confidence === "preference" ? "Likely slide answer (not conclusive):" : "Slide answer:"}</strong> ${question.informaticsSlideAnswer.answers.length ? question.informaticsSlideAnswer.answers.map(answer => `${escapeHtml(answer)} — ${escapeHtml(question.options.find(option => option.id === answer)?.text || "")}`).join(" or ") : "No single option can be established from the supplied slides."}${acceptedAnswers.length && question.informaticsSlideAnswer.answers.length && !question.informaticsSlideAnswer.answers.every(answer => acceptedAnswers.includes(answer)) ? " <strong>Differs from Gift; source grading is retained.</strong>" : ""}${question.informaticsSlideAnswer.confidence === "preference" && question.informaticsSlideAnswer.basis ? `<br>${escapeHtml(question.informaticsSlideAnswer.basis)}` : ""}</p>` : ""}
             ${question.informaticsFinalOutOfScope ? `<p class="source-note">No matching passage in the supplied course lectures has been verified for this question. The original question remains in its Gift batch.</p>` : question.subjectId === "informatics" && question.informaticsReviewStatus === "deferred" ? `<p class="source-note">Explanation deferred. This question is organized by topic; the Gift key is retained.</p>` : giftReview ? `<p class="review-opinion" lang="en" dir="ltr"><strong>${question.subjectId === "informatics" ? "Explanation:" : "Tentative interpretation:"}</strong> ${escapeHtml(giftReview.interpretation)}</p>` : !question.reviewOpinion ? `<p class="answer-explanation"><strong>${question.subjectId === "medicine" && question.assessment === "Midterm" ? "Clinical interpretation (separate from the lecture text): " : ""}</strong>${escapeHtml(question.explanation)}</p>` : ""}
-            ${renderLectureEvidence(question)}
+            ${question.subjectId === "medicine" ? renderMedicine445Source(question) : renderLectureEvidence(question)}
             ${!giftReview && question.reviewOpinion ? `<p class="review-opinion" lang="en" dir="ltr"><strong>${question.subjectId === "medicine" && question.assessment === "Midterm" ? "Clinical interpretation (separate from the lecture text):" : "Medical review:"}</strong> ${escapeHtml(question.reviewOpinion)}</p>` : ""}
             <p class="source-note">Reference: ${escapeHtml(question.sourceLabel || `${subject?.name || "Medical"} Question Bank`)}${sourceRefs ? ` · ${escapeHtml(sourceRefs)}` : ""}</p>
             ${(question.references || []).length ? `<div class="reference-list">${question.references.map(reference => `<a href="${escapeHtml(reference.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(reference.title)} ↗</a>`).join("")}</div>` : ""}
-            `}${richMedia && revealed && (question.answerImages || []).length ? `<div class="question-images">${question.answerImages.map((image, imageIndex) => `<a class="question-image-link" href="${escapeHtml(image)}" target="_blank" rel="noopener noreferrer" aria-label="Open answer illustration ${imageIndex + 1} at full size"><img src="${escapeHtml(image)}" alt="Answer illustration ${imageIndex + 1}" loading="lazy"><span>Open full-size illustration ↗</span></a>`).join("")}</div>` : ""}
-            ${giftLocation && (question.sourceTranscript || question.sourceText) && (!studyReview || question.informaticsFinalReview) ? `<details class="medicine-slide"><summary>Original Gift question text</summary><p style="white-space:pre-wrap">${escapeHtml(question.sourceTranscript || question.sourceText)}</p></details>` : ""}
+            `}${(question.answerImages || []).length ? `<div class="question-images">${question.answerImages.map((image, imageIndex) => `<a class="question-image-link" href="${escapeHtml(image)}" target="_blank" rel="noopener noreferrer" aria-label="Open answer illustration ${imageIndex + 1} at full size"><img src="${escapeHtml(image)}" alt="Answer illustration ${imageIndex + 1}" loading="lazy"><span>Open full-size illustration ↗</span></a>`).join("")}</div>` : ""}
             ${richMedia && !displayOptions.length ? `<button class="text-button review-question-button" type="button" data-question="${question.id}" ${selected ? "disabled" : ""}>${selected ? "Reviewed" : "Mark reviewed"}</button>` : ""}
           </div>
         </article>`;
     }
 
-    function renderInformaticsFinalExplanation(question, sourceRefs = "") {
-      const review = question.informaticsFinalReview;
+    function renderInformaticsFinalExplanation(question, sourceRefs = "", review = question.informaticsFinalReview) {
       const key = sourceAnswers(question);
       const answerText = answers => answers.map(answer => `${escapeHtml(answer)} — ${escapeHtml(question.options.find(option => option.id === answer)?.text || "")}`).join(" or ");
       const different = review.answers.length && (review.answers.length !== key.length || review.answers.some(answer => !key.includes(answer)));
@@ -2158,6 +2176,26 @@
       </div>`;
     }
 
+    function renderMedicine445Source(question) {
+      const evidence = typeof window !== "undefined" ? window.GIFT445_MEDICINE_445_EVIDENCE?.[question.id] : null;
+      if (!evidence) {
+        return `<p class="source-note">No supporting passage from MED445 has been verified for this question.</p>${renderLectureEvidence(question)}`;
+      }
+      const location = `${evidence.unit === "slide" ? "Slide" : "PDF page"} ${evidence.page}`;
+      const related = evidence.relation === "background";
+      return `<div class="medicine-source">
+        ${related ? "Related MED445 source" : "MED445 reference"}: ${escapeHtml(evidence.title)} · ${escapeHtml(evidence.cohortLabel)} · ${escapeHtml(location)}
+        ${related ? '<p class="source-note">This passage covers a related point. It does not establish the exact answer.</p>' : ""}
+        ${evidence.note ? `<p class="source-note">${escapeHtml(evidence.note)}</p>` : ""}
+        <details class="medicine-slide"><summary>View source</summary>
+          ${evidence.sourceSummary ? `<p class="source-note"><strong>Figure summary</strong> ${escapeHtml(evidence.sourceSummary)}</p>` : ""}
+          ${(evidence.quoteParts || [evidence.quote]).map(quote => `<blockquote>${escapeHtml(quote)}</blockquote>`).join("")}
+          <a href="${escapeHtml(evidence.url)}" target="_blank" rel="noopener noreferrer">Open source ↗</a>
+          ${evidence.image ? `<a href="${escapeHtml(evidence.image)}" target="_blank" rel="noopener noreferrer" aria-label="Open source image at full size"><img src="${escapeHtml(evidence.image)}" alt="${escapeHtml(evidence.title)} · ${escapeHtml(location)}" loading="lazy"></a>` : ""}
+        </details>
+      </div>`;
+    }
+
     function renderMedicineExplanation(question, sourceRefs = "", review = question.medicineReview) {
       const key = sourceAnswers(question);
       const bankName = question.subjectId === "surgery" && question.sourceLabel === "Q Bank" ? "Q Bank" : "Gift";
@@ -2175,7 +2213,10 @@
         return `${escapeHtml(label)} — ${escapeHtml(text)}`;
       }).join(" or ");
       const different = review.answers.length && (review.answers.length !== key.length || review.answers.some(answer => !key.includes(answer)));
-      const evidence = review.evidence;
+      const med445Evidence = question.subjectId === "medicine" && typeof window !== "undefined"
+        ? window.GIFT445_MEDICINE_445_EVIDENCE?.[question.id]
+        : null;
+      const evidence = med445Evidence || review.evidence;
       const canScore = gradingAnswersForQuestion(question).length > 0;
       const sourceParagraph = evidence?.unit === "paragraph";
       const speakerNotes = evidence?.textKind === "speaker-notes";
@@ -2190,8 +2231,9 @@
         ${originalNote ? `<p class="source-note">Original bank note: ${escapeHtml(originalNote)}</p>` : ""}
         ${!canScore ? `<p class="source-note">Not scored: ${escapeHtml(question.giftReview?.ungradedReason || "The original question is incomplete.")}</p>` : ""}
         ${different || review.objection ? `<div class="medicine-objection">${different ? `<strong>${review.confidence === "supported" ? "Reviewed answer" : "Suggested answer"}: ${answerText(review.answers)}</strong>` : ""}${review.objection ? `<p>${escapeHtml(review.objection)}</p>` : ""}</div>` : ""}
-        <p class="medicine-explanation"><strong>Explanation</strong>${escapeHtml(review.explanation)}</p>
-        <div class="medicine-source">${evidence ? `${relatedSource ? "Related source" : "Source"}: ${escapeHtml(evidence.title)}${evidence.cohortLabel ? ` · ${escapeHtml(evidence.cohortLabel)}` : ""} · ${escapeHtml(sourceLocation)}${relatedSource ? `<p class="source-note">This source explains a related point; it does not establish the answer.</p>` : ""}<details class="medicine-slide"><summary>${evidenceSummary}</summary>${sourceExcerpt}${evidence.note ? `<p class="source-note">${escapeHtml(evidence.note)}</p>` : ""}${speakerNotes ? `<p class="source-note">The quoted text is from the lecturer's speaker notes.${evidence.imageRole === "slideContextOnly" ? " The image below shows the original slide for context; the quotation is in its notes, not on the slide itself." : " The image below shows the original notes page."}</p>` : ""}<a href="${escapeHtml(evidence.url)}" target="_blank" rel="noopener noreferrer">${sourceParagraph ? "Open full document" : "Open full lecture"} ↗</a>${evidenceImage ? `<a href="${escapeHtml(evidenceImage)}" target="_blank" rel="noopener noreferrer" aria-label="Open source image at full size"><img src="${escapeHtml(evidenceImage)}" alt="${escapeHtml(evidence.title)} — ${escapeHtml(sourceLocation)}${evidence.imageRole === "slideContextOnly" ? " (slide context only)" : ""}" loading="lazy"></a>` : ""}${evidence.slideImage ? `<a href="${escapeHtml(evidence.slideImage)}" target="_blank" rel="noopener noreferrer">Open original slide ↗</a>` : ""}</details>` : review.basis === "pending" ? "Explanation pending" : `${question.researchReview || question.radiologyReview || question.communityReview ? "Concept explanation" : "Clinical explanation"}<p class="source-note">No verified lecture passage is attached to this explanation.</p>`}</div>
+        <p class="medicine-explanation"><strong>Explanation</strong>${escapeHtml(med445Evidence?.explanation || review.explanation)}</p>
+        ${question.subjectId === "medicine" && !med445Evidence && evidence ? '<p class="source-note">No supporting passage from MED445 has been verified for this question.</p>' : ""}
+        ${med445Evidence ? renderMedicine445Source(question) : `<div class="medicine-source">${evidence ? `${relatedSource ? "Related source" : "Source"}: ${escapeHtml(evidence.title)}${evidence.cohortLabel ? ` · ${escapeHtml(evidence.cohortLabel)}` : ""} · ${escapeHtml(sourceLocation)}${relatedSource ? `<p class="source-note">This source explains a related point; it does not establish the answer.</p>` : ""}<details class="medicine-slide"><summary>${evidenceSummary}</summary>${sourceExcerpt}${evidence.note ? `<p class="source-note">${escapeHtml(evidence.note)}</p>` : ""}${speakerNotes ? `<p class="source-note">The quoted text is from the lecturer's speaker notes.${evidence.imageRole === "slideContextOnly" ? " The image below shows the original slide for context; the quotation is in its notes, not on the slide itself." : " The image below shows the original notes page."}</p>` : ""}<a href="${escapeHtml(evidence.url)}" target="_blank" rel="noopener noreferrer">${sourceParagraph ? "Open full document" : "Open full lecture"} ↗</a>${evidenceImage ? `<a href="${escapeHtml(evidenceImage)}" target="_blank" rel="noopener noreferrer" aria-label="Open source image at full size"><img src="${escapeHtml(evidenceImage)}" alt="${escapeHtml(evidence.title)} — ${escapeHtml(sourceLocation)}${evidence.imageRole === "slideContextOnly" ? " (slide context only)" : ""}" loading="lazy"></a>` : ""}${evidence.slideImage ? `<a href="${escapeHtml(evidence.slideImage)}" target="_blank" rel="noopener noreferrer">Open original slide ↗</a>` : ""}</details>` : review.basis === "pending" ? "Explanation pending" : `${question.researchReview || question.radiologyReview || question.communityReview ? "Concept explanation" : "Clinical explanation"}<p class="source-note">${question.subjectId === "medicine" ? "No supporting passage from MED445 has been verified for this question." : "No verified lecture passage is attached to this explanation."}</p>`}</div>`}
         ${question.sourceTranscript ? `<details class="medicine-slide"><summary>Original question text</summary><p style="white-space:pre-wrap">${escapeHtml(question.sourceTranscript)}</p></details>` : ""}
         ${(review.references || []).length ? `<div class="reference-list">${review.references.map(reference => `<a href="${escapeHtml(reference.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(reference.title)} ↗</a>`).join("")}</div>` : ""}
         ${sourceRefs ? `<p class="source-note">${bankName} · ${escapeHtml(sourceRefs)}</p>` : ""}
@@ -2299,6 +2341,272 @@
       }
     }
 
+    function quizScoreGrading(question) {
+      const options = new Set(question.options.filter(option =>
+        option.images?.length || !isMissingSourceOption(option.text, question.subjectId, question.batchOnly)
+      ).map(option => option.id));
+      return { options, correct: new Set(gradingAnswersForQuestion(question).filter(id => options.has(id))) };
+    }
+
+    function importSavedMistakes() {
+      const updates = [];
+      for (const [id, answer] of Object.entries(appState.quiz.firstAnswers)) {
+        const question = questionById.get(id);
+        if (!question || mistakeHistory[id]) continue;
+        const { options, correct } = quizScoreGrading(question);
+        if (correct.size && options.has(answer) && !correct.has(answer)) {
+          const now = appState.savedAt || Date.now();
+          studyTracking.record(mistakeHistory, id, false, false, now);
+          updates.push({ id, correct: false, now, seed: true });
+        }
+      }
+      if (updates.length) commitMistakes(updates);
+    }
+
+    function commitMistakes(updates) {
+      pendingMistakeWrites += 1;
+      Promise.resolve(studyTracking.commitHistory(updates)).then(saved => {
+        pendingMistakeWrites -= 1;
+        mistakeSavingAvailable = mistakeSavingAvailable && saved;
+        if (!pendingMistakeWrites && mistakeSavingAvailable) mistakeHistory = studyTracking.loadHistory();
+        renderMistakesPanel();
+        if (workspaceElement.querySelector(".mistakes-filters")) renderMistakesView();
+      });
+    }
+
+    function updateMistake(question, correct, retry = false) {
+      const now = Date.now();
+      if (!studyTracking.record(mistakeHistory, question.id, correct, retry, now)) return;
+      commitMistakes([{ id: question.id, correct, retry, now }]);
+      renderMistakesPanel();
+    }
+
+    function recordQuizAnswer(question, optionId, questions) {
+      const previous = appState.quiz.answers[question.id];
+      const { options, correct } = quizScoreGrading(question);
+      if (options.has(optionId) && !options.has(appState.quiz.firstAnswers[question.id])) {
+        appState.quiz.firstAnswers[question.id] = options.has(previous) ? previous : optionId;
+      }
+      answerQuestion(question.id, optionId);
+      if (previous !== optionId && correct.size && options.has(optionId) && !correct.has(optionId)) {
+        updateMistake(question, false);
+      }
+      renderQuizResult(questions, appState.quiz.firstAnswers, { scrollOnCompletion: true });
+    }
+
+    function renderQuizResult(questions, answers, { retry = false, scrollOnCompletion = false } = {}) {
+      const slot = workspaceElement.querySelector(".quiz-result-slot");
+      if (!slot) return;
+      const result = studyTracking.summarize(questions, answers, quizScoreGrading);
+      const wasComplete = Boolean(slot.querySelector(".quiz-result"));
+      if (!result.complete) {
+        const index = retry ? mistakeReview.index : appState.quiz.currentIndex;
+        slot.innerHTML = index === questions.length - 1
+          ? '<div class="mistakes-actions"><p class="mistakes-note">Finish the remaining scored questions to see your result.</p><button type="button" class="text-button" data-action="unanswered">Go to first unanswered</button></div>' : "";
+        slot.querySelector('[data-action="unanswered"]')?.addEventListener("click", () => {
+          const next = questions.findIndex(question => question.id === result.unanswered[0]);
+          if (next < 0) return;
+          if (retry) goToMistakeQuestion(next);
+          else {
+            appState.quiz.currentIndex = next;
+            persistState();
+            renderQuestionSetView();
+          }
+        });
+        return;
+      }
+      const percent = result.scored ? new Intl.NumberFormat(undefined, { style: "percent", maximumFractionDigits: 1 }).format(result.correct / result.scored) : "—";
+      const details = result.scored
+        ? `${result.correct} of ${result.scored} scored questions correct. ${retry ? "Score for this retry." : "Score uses first recorded answers, including answers carried over from other sets."}`
+        : "This set has no questions with a usable grading key.";
+      slot.innerHTML = `
+        <section class="quiz-result" aria-label="${retry ? "Mistake review result" : "Quiz result"}">
+          <div class="quiz-result-top">
+            <div class="quiz-result-copy"><h3>${retry ? "Mistake review result" : "Quiz result"}</h3><p class="mistakes-note">${details}</p></div>
+            <strong class="quiz-result-percent">${percent}</strong>
+          </div>
+          <dl class="quiz-result-stats">
+            <div><dt>Correct</dt><dd>${result.correct}</dd></div>
+            <div><dt>Incorrect</dt><dd>${result.incorrect}</dd></div>
+            <div><dt>Not scored</dt><dd>${result.ungraded}</dd></div>
+          </dl>
+          ${result.missed.length ? `<div class="mistakes-actions"><button type="button" class="text-button" data-action="missed">Review missed questions</button></div>` : ""}
+        </section>`;
+      slot.querySelector('[data-action="missed"]')?.addEventListener("click", () => showMistakes(result.missed));
+      if (scrollOnCompletion && !wasComplete && result.scored) {
+        slot.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+
+    function availableMistakes(scope = null) {
+      const rows = [];
+      for (const [id, entry] of Object.entries(mistakeHistory)) {
+        if (scope && !scope.has(id)) continue;
+        const question = questionById.get(id);
+        if (!question || !quizScoreGrading(question).correct.size) continue;
+        rows.push({ question, entry, topic: question.cycle || question.lecture || "General" });
+      }
+      return rows.sort((a, b) => b.entry.lastMissedAt - a.entry.lastMissedAt || a.question.id.localeCompare(b.question.id));
+    }
+
+    function renderMistakesPanel() {
+      const rows = availableMistakes();
+      const mastered = rows.filter(row => row.entry.mastered).length;
+      const status = rows.length
+        ? `${rows.length - mastered} to practice · ${mastered} mastered`
+        : "Missed questions are saved here for another try.";
+      mistakesPanel.innerHTML = `
+        <span class="mistakes-symbol" aria-hidden="true">↻</span>
+        <div class="mistakes-panel-copy"><strong>My mistakes</strong><p>${status}</p></div>
+        <button type="button" class="text-button">Review mistakes</button>`;
+      mistakesPanel.querySelector("button").addEventListener("click", () => showMistakes());
+    }
+
+    function showMistakes(ids = null) {
+      mistakeFilters = { scope: ids ? new Set(ids) : null, subject: "", topic: "", status: ids ? "all" : "practice", page: 0 };
+      renderMistakesView(true);
+    }
+
+    function renderMistakesView(scroll = false, focusFilter = null) {
+      const filter = mistakeFilters;
+      const all = availableMistakes(filter.scope);
+      const subjectRows = all.filter(row => !filter.subject || row.question.subjectId === filter.subject);
+      const counts = new Map();
+      for (const row of subjectRows) {
+        const key = row.topic;
+        const group = counts.get(key) || { total: 0, practice: 0 };
+        group.total += 1;
+        group.practice += Number(!row.entry.mastered);
+        counts.set(key, group);
+      }
+      const topics = [...counts].sort(([nameA, a], [nameB, b]) => b.practice - a.practice || nameA.localeCompare(nameB));
+      const filtered = subjectRows.filter(row => (!filter.topic || row.topic === filter.topic)
+        && (filter.status === "all" || row.entry.mastered === (filter.status === "mastered")));
+      const pageSize = 10;
+      const pageCount = Math.max(1, Math.ceil(filtered.length / pageSize));
+      filter.page = Math.min(filter.page, pageCount - 1);
+      const visibleRows = filtered.slice(filter.page * pageSize, (filter.page + 1) * pageSize);
+      const option = (value, label, current) => `<option value="${escapeHtml(value)}"${value === current ? " selected" : ""}>${escapeHtml(label)}</option>`;
+      const savedRetryQuestions = (mistakeReview?.ids || []).filter(id => questionById.has(id));
+      const retryLabel = savedRetryQuestions.every(id => mistakeReview.answers[id]) ? "View last retry" : "Continue retry";
+      const weakTopic = topics.find(([, group]) => group.practice > 0);
+      workspaceElement.innerHTML = `
+        ${workspaceHeader(filter.scope ? "Missed in this quiz" : "My mistakes", "Study progress")}
+        <p class="mistakes-note">${mistakeSavingAvailable ? "Saved in this browser. Answer correctly on a retry to mark a question mastered." : "Local saving is unavailable. New practice may be lost if you reload."}</p>
+        ${!filter.topic && weakTopic ? `<div class="mistakes-weak-topic">Most to review: <strong>${escapeHtml(weakTopic[0])}</strong> · ${weakTopic[1].practice}</div>` : ""}
+        <div class="mistakes-filters">
+          <label>Subject<select data-filter="subject">${option("", "All subjects", filter.subject)}${SUBJECTS.filter(subject => all.some(row => row.question.subjectId === subject.id)).map(subject => option(subject.id, subject.name, filter.subject)).join("")}</select></label>
+          <label>Block or lecture<select data-filter="topic">${option("", "All topics", filter.topic)}${topics.map(([topic, group]) => option(topic, `${topic} (${group.practice} to practice)`, filter.topic)).join("")}</select></label>
+          <label>Status<select data-filter="status">${option("practice", "To practice", filter.status)}${option("mastered", "Mastered", filter.status)}${option("all", "All saved", filter.status)}</select></label>
+        </div>
+        <div class="mistakes-actions">
+          <p class="mistakes-note">${questionCountLabel(filtered.length)}</p>
+          ${filter.scope ? '<button type="button" class="text-button" data-action="all-mistakes">All saved mistakes</button>' : ""}
+          ${!filter.scope && savedRetryQuestions.length ? `<button type="button" class="text-button" data-action="continue-retry">${retryLabel}</button>` : ""}
+          ${filtered.length ? '<button type="button" class="primary-button" data-action="start-retry">Practice these questions</button>' : ""}
+        </div>
+        ${visibleRows.length ? `
+          <ol class="mistakes-list">${visibleRows.map(({ question, entry, topic }) => {
+            const subject = SUBJECTS.find(item => item.id === question.subjectId);
+            return `<li class="mistakes-item"><div class="mistakes-item-copy"><strong>${escapeHtml(question.stem)}</strong><p>${escapeHtml(subject?.name || "")} · ${escapeHtml(topic)} · ${entry.misses} missed · ${entry.mastered ? "Mastered" : "To practice"}</p></div><button type="button" class="text-button" data-retry-id="${escapeHtml(question.id)}" aria-label="Retry question">${entry.mastered ? "Practice again" : "Retry"}</button></li>`;
+          }).join("")}</ol>
+          ${pageCount > 1 ? `<div class="mistakes-actions"><p class="mistakes-note">Page ${filter.page + 1} of ${pageCount}</p><button type="button" class="text-button" data-page="-1" ${filter.page === 0 ? "disabled" : ""}>Previous</button><button type="button" class="text-button" data-page="1" ${filter.page + 1 === pageCount ? "disabled" : ""}>Next</button></div>` : ""}
+        ` : `<p class="mistakes-empty">${all.length ? "No saved questions match these filters." : "Your missed questions will appear here as you practice."}</p>`}`;
+      workspaceElement.classList.add("visible");
+      bindWorkspaceClose();
+      workspaceElement.querySelectorAll("[data-filter]").forEach(select => {
+        select.addEventListener("change", () => {
+          const name = select.dataset.filter;
+          filter[name] = select.value;
+          if (name === "subject") filter.topic = "";
+          filter.page = 0;
+          renderMistakesView(false, name);
+        });
+      });
+      workspaceElement.querySelectorAll("[data-page]").forEach(button => {
+        button.addEventListener("click", () => {
+          filter.page += Number(button.dataset.page);
+          renderMistakesView(true);
+        });
+      });
+      workspaceElement.querySelectorAll("[data-retry-id]").forEach(button => {
+        button.addEventListener("click", () => startMistakeReview([button.dataset.retryId]));
+      });
+      workspaceElement.querySelector('[data-action="all-mistakes"]')?.addEventListener("click", () => showMistakes());
+      workspaceElement.querySelector('[data-action="continue-retry"]')?.addEventListener("click", () => renderMistakeReview(true));
+      workspaceElement.querySelector('[data-action="start-retry"]')?.addEventListener("click", () => startMistakeReview(filtered.map(row => row.question.id)));
+      if (focusFilter) workspaceElement.querySelector(`[data-filter="${focusFilter}"]`)?.focus();
+      if (scroll) workspaceElement.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+
+    function startMistakeReview(ids) {
+      if (!ids.length) return;
+      mistakeReview = { ids: [...new Set(ids)], index: 0, answers: studyTracking.answerMap() };
+      if (!studyTracking.saveReview(mistakeReview)) mistakeSavingAvailable = false;
+      renderMistakeReview(true);
+    }
+
+    function goToMistakeQuestion(index) {
+      if (!mistakeReview || index < 0 || index >= mistakeReview.ids.length) return;
+      mistakeReview.index = index;
+      if (!studyTracking.saveReview(mistakeReview)) mistakeSavingAvailable = false;
+      renderMistakeReview(true);
+    }
+
+    function recordMistakeRetry(question, optionId) {
+      const { options, correct } = quizScoreGrading(question);
+      if (!options.has(optionId) || mistakeReview.answers[question.id] || !correct.size) return;
+      mistakeReview.answers[question.id] = optionId;
+      updateMistake(question, correct.has(optionId), true);
+      if (!studyTracking.saveReview(mistakeReview)) mistakeSavingAvailable = false;
+      renderMistakeReview(false, true);
+    }
+
+    function renderMistakeReview(scroll = false, revealResult = false) {
+      const ids = mistakeReview?.ids.filter(id => {
+        const question = questionById.get(id);
+        return question && quizScoreGrading(question).correct.size;
+      }) || [];
+      if (!ids.length) return showMistakes();
+      mistakeReview.ids = ids;
+      const questions = ids.map(id => questionById.get(id));
+      const index = mistakeReview.index = Math.min(mistakeReview.index, questions.length - 1);
+      const question = questions[index];
+      const selected = mistakeReview.answers[question.id] || null;
+      const answered = questions.filter(item => mistakeReview.answers[item.id]).length;
+      const correct = selected && quizScoreGrading(question).correct.has(selected);
+      const subject = SUBJECTS.find(item => item.id === question.subjectId);
+      workspaceElement.innerHTML = `
+        ${workspaceHeader("Retry missed questions", "My mistakes")}
+        <nav class="workspace-path" aria-label="Breadcrumb"><button type="button" class="crumb-button" data-action="back-mistakes">My mistakes</button><span>›</span><span>${escapeHtml(subject?.name || "Review")}</span></nav>
+        <div class="quiz-toolbar">
+          <span class="quiz-progress"><strong>${index + 1} of ${questions.length}</strong> · ${answered} answered</span>
+          <div class="quiz-actions">
+            <button class="text-button" type="button" data-action="previous" ${index === 0 ? "disabled" : ""}>Previous</button>
+            <button class="primary-button" type="button" data-action="next" ${index === questions.length - 1 ? "disabled" : ""}>Next</button>
+          </div>
+        </div>
+        <div class="quiz-result-slot" aria-live="polite"></div>
+        <div class="question-list mistake-practice">${renderQuestion(question, index, questions.length, selected)}</div>
+        ${selected ? `<p class="mistake-practice-feedback" role="status" tabindex="-1">${correct ? "Correct on retry. Marked mastered." : "Still to practice. This question stays in your review list."}</p>` : ""}
+        ${mistakeSavingAvailable ? "" : '<p class="mistakes-note">Local saving is unavailable. This retry may be lost if you reload.</p>'}`;
+      workspaceElement.classList.add("visible");
+      bindWorkspaceClose();
+      workspaceElement.querySelector('[data-action="back-mistakes"]').addEventListener("click", () => {
+        if (!mistakeFilters) showMistakes();
+        else renderMistakesView(true);
+      });
+      workspaceElement.querySelector('[data-action="previous"]').addEventListener("click", () => goToMistakeQuestion(index - 1));
+      workspaceElement.querySelector('[data-action="next"]').addEventListener("click", () => goToMistakeQuestion(index + 1));
+      workspaceElement.querySelectorAll(".option-button").forEach(button => {
+        button.disabled = Boolean(selected);
+        button.addEventListener("click", () => recordMistakeRetry(question, button.dataset.option));
+      });
+      renderQuizResult(questions, mistakeReview.answers, { retry: true, scrollOnCompletion: revealResult });
+      if (revealResult) workspaceElement.querySelector(".mistake-practice-feedback")?.focus({ preventScroll: true });
+      if (scroll) workspaceElement.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+
     function sourceAnswers(question) {
       if (Array.isArray(question.sourceAnswer)) return question.sourceAnswer;
       return question.sourceAnswer ? [question.sourceAnswer] : [];
@@ -2348,11 +2656,23 @@
 
     applyTheme(root.dataset.theme || "light");
     renderSubjects();
+    importSavedMistakes();
+    renderMistakesPanel();
     window.addEventListener("pagehide", persistState);
     window.addEventListener("storage", event => {
-      if (event.key !== STORAGE_KEY) return;
-      appState = loadSavedState();
-      renderResumePanel();
+      if ((event.key === studyTracking.HISTORY_KEY || event.key === null) && !pendingMistakeWrites) {
+        mistakeHistory = studyTracking.loadHistory();
+        renderMistakesPanel();
+        if (workspaceElement.querySelector(".mistakes-filters")) renderMistakesView();
+      }
+      if ((event.key === studyTracking.REVIEW_KEY || event.key === null) && !workspaceElement.querySelector(".mistake-practice")) {
+        mistakeReview = studyTracking.loadReview();
+        if (workspaceElement.querySelector(".mistakes-filters")) renderMistakesView();
+      }
+      if ((event.key === STORAGE_KEY || event.key === null) && !workspaceElement.querySelector(".question-list:not(.mistake-practice)")) {
+        appState = loadSavedState();
+        renderResumePanel();
+      }
     });
   </script>
 </body>

@@ -1,0 +1,441 @@
+{
+  "filename": "Medical Informatics Midterm Gifts.pdf",
+  "sha256": "4f9a0252200d3494f751749788f77f8d98f876aab48627624fb59f98a648c383",
+  "questions": [
+    {
+      "number": 1,
+      "page": 1,
+      "pageEnd": 1,
+      "key": "B",
+      "contentSha256": "383315d3b18115742ecf2e4dcd464d41f9ab73320a0d0fe6ef456111ae5df626"
+    },
+    {
+      "number": 2,
+      "page": 1,
+      "pageEnd": 1,
+      "key": "C",
+      "contentSha256": "bbcc78c7bbaabfdc62daf7c4d07d0c4b3c63a903fed2dc03dd0461eece3dd7e5"
+    },
+    {
+      "number": 3,
+      "page": 1,
+      "pageEnd": 1,
+      "key": "C",
+      "contentSha256": "e5463cd12875260c57341cccfa5ef56cfd0dba9ecfe942b06ad657316c706427"
+    },
+    {
+      "number": 4,
+      "page": 1,
+      "pageEnd": 1,
+      "key": "A",
+      "contentSha256": "760b9eaf206f066c2427d10514d6bd20b8a2f600851e02384e2f93de1632f1c4"
+    },
+    {
+      "number": 5,
+      "page": 2,
+      "pageEnd": 2,
+      "key": "A",
+      "contentSha256": "09c5f1420c07f82a14850042a6b41082e2048b3f73ccfc189f1372c40ffb7a87"
+    },
+    {
+      "number": 6,
+      "page": 2,
+      "pageEnd": 2,
+      "key": "D",
+      "contentSha256": "3fcc3658202a1d03074bc942c34d78172136798cba0bb94129de70fa714a5ba5"
+    },
+    {
+      "number": 7,
+      "page": 2,
+      "pageEnd": 2,
+      "key": "B",
+      "contentSha256": "2b243b0ddec403a4513589b9e6f07758d27c213b69c0cc89710138f1c5cf4d3c"
+    },
+    {
+      "number": 8,
+      "page": 2,
+      "pageEnd": 2,
+      "key": "A",
+      "contentSha256": "cbba6486ee4985afb8c6dbcf6ae048a0b6954ea74abfb09500b829d0170af69e"
+    },
+    {
+      "number": 9,
+      "page": 3,
+      "pageEnd": 3,
+      "key": "B",
+      "contentSha256": "9d8a21be89ad40cfa1b49cae9d95f010aa9c378e717470c9c24c2601aabefa3c"
+    },
+    {
+      "number": 10,
+      "page": 3,
+      "pageEnd": 3,
+      "key": "A",
+      "contentSha256": "324f8903597777150952f9b50f81d503d171212f2c641167e5e1f0b76e583986"
+    },
+    {
+      "number": 11,
+      "page": 3,
+      "pageEnd": 3,
+      "key": "B",
+      "contentSha256": "101c9c1f85bc0d872966a22697875d79e246e5fdf3c200be9c289eb005d214a3"
+    },
+    {
+      "number": 12,
+      "page": 3,
+      "pageEnd": 3,
+      "key": "A",
+      "contentSha256": "a766cbc2a763a2c7a1a9e1ad0db3f96170445302d201a14d3ebdb9b001cff1bb"
+    },
+    {
+      "number": 13,
+      "page": 3,
+      "pageEnd": 4,
+      "key": "B",
+      "contentSha256": "cf7f0918ebd96d907fd22f35134bfac6d9d65097d6d8d1fc33e74d4b793a5b4b"
+    },
+    {
+      "number": 14,
+      "page": 4,
+      "pageEnd": 4,
+      "key": "C",
+      "contentSha256": "5da4d701dcdb5deb2e7c4603acd8efc965833b378c4f9a8c6fae5aa29f10be7b"
+    },
+    {
+      "number": 15,
+      "page": 4,
+      "pageEnd": 4,
+      "key": "D",
+      "contentSha256": "c3406185160961af57f1e4d619141e5de48ab77d5baf1e97f8fe87da3a49ded8"
+    },
+    {
+      "number": 16,
+      "page": 4,
+      "pageEnd": 4,
+      "key": "C",
+      "contentSha256": "20a4ca4f2164b5736474411150211d248402ff0f845a926669f0dd3455ba31e9"
+    },
+    {
+      "number": 17,
+      "page": 4,
+      "pageEnd": 5,
+      "key": "C",
+      "contentSha256": "67db9485036c9b54b78b1809a70942099607fce804a20bca8d3b200db7840742"
+    },
+    {
+      "number": 18,
+      "page": 5,
+      "pageEnd": 5,
+      "key": "D",
+      "contentSha256": "4282b44723894555ee9c46c8983afe1b44d6da67ebcc8481ab4316144da5c5e1"
+    },
+    {
+      "number": 19,
+      "page": 5,
+      "pageEnd": 5,
+      "key": "D",
+      "contentSha256": "99c1ca4ef3e6ddeb298986e38464108f6b5450b9d50fdbb7ce4819a537368b20"
+    },
+    {
+      "number": 20,
+      "page": 5,
+      "pageEnd": 5,
+      "key": "A",
+      "contentSha256": "3d1c9620bc4e9531df38cc22f7049f00239bd8a95d967273ee9404313d726508"
+    },
+    {
+      "number": 21,
+      "page": 5,
+      "pageEnd": 6,
+      "key": "B",
+      "contentSha256": "9f263a9e7f81c9461242abdf45269f2e3c846aa0c82f78b37aab74277a680a95"
+    },
+    {
+      "number": 22,
+      "page": 6,
+      "pageEnd": 6,
+      "key": "A",
+      "contentSha256": "ba7a375d70a2c248108de0176e46e5be6b4137af91370817260eeb9c2d8a8047"
+    },
+    {
+      "number": 23,
+      "page": 6,
+      "pageEnd": 6,
+      "key": "C",
+      "contentSha256": "dffbde8f182f5321ef1328f3c0bec109a776f0e7d9a54b10daacd02c32cd9ed8"
+    },
+    {
+      "number": 24,
+      "page": 6,
+      "pageEnd": 6,
+      "key": "B",
+      "contentSha256": "be721227309402420aa793a37e119695d2a54b4d91cd82da983383b306bd17e3"
+    },
+    {
+      "number": 25,
+      "page": 6,
+      "pageEnd": 6,
+      "key": "C",
+      "contentSha256": "26352be08b44b45e74463af514588c683a4141615b6dc95b2c0fb0bb75e6b50d"
+    },
+    {
+      "number": 26,
+      "page": 7,
+      "pageEnd": 7,
+      "key": "D",
+      "contentSha256": "7fd2f3c156c73540d47881f8e466634406e86c7476e827f60fd29c7fc48222e1"
+    },
+    {
+      "number": 27,
+      "page": 7,
+      "pageEnd": 7,
+      "key": "B",
+      "contentSha256": "0d4efed87413c77a70891e2b270128549e9fdca82beb244c33fc3d41d4405aed"
+    },
+    {
+      "number": 28,
+      "page": 7,
+      "pageEnd": 7,
+      "key": "A",
+      "contentSha256": "9973b75333338c92f3417a6e766c8ea31c7c49798744e0bb272bf62b5035f8c0"
+    },
+    {
+      "number": 29,
+      "page": 7,
+      "pageEnd": 7,
+      "key": "C",
+      "contentSha256": "1976b9a241aba9f5e5efa4154d4ab7d3eeaa40796086e167925eb0c3f92cfebb"
+    },
+    {
+      "number": 30,
+      "page": 8,
+      "pageEnd": 8,
+      "key": "B",
+      "contentSha256": "87b0b4cfc9a5933c0d95b573db0e1d7cba1ca00cc98c5e48497c0b5a97143fec"
+    },
+    {
+      "number": 31,
+      "page": 8,
+      "pageEnd": 8,
+      "key": "A",
+      "contentSha256": "26a9199a59da1fe4fe0939979a55c5cecdf86911a73a55cdbfe012c45d1a80d4"
+    },
+    {
+      "number": 32,
+      "page": 8,
+      "pageEnd": 8,
+      "key": "C",
+      "contentSha256": "25e9053566036b1422d48d5da8ed2bbd1fb8d9c5122f7eb71006db0cdadca874"
+    },
+    {
+      "number": 33,
+      "page": 8,
+      "pageEnd": 8,
+      "key": "B",
+      "contentSha256": "692f603527e2c3509e72f241936f25502f72e3ace86d5188f2fce151ffd654d8"
+    },
+    {
+      "number": 34,
+      "page": 8,
+      "pageEnd": 9,
+      "key": "A",
+      "contentSha256": "a76eaf9adf3fc136fca1a79c1d61907ef28509a91b9725abe7a233529762cd54"
+    },
+    {
+      "number": 35,
+      "page": 9,
+      "pageEnd": 9,
+      "key": "A",
+      "contentSha256": "3c9339c47127134723d0d66cc6e7aa40f681f38bde4dddc070e678f8aaa2445c"
+    },
+    {
+      "number": 36,
+      "page": 9,
+      "pageEnd": 9,
+      "key": "A",
+      "contentSha256": "9bc08aa7b1d006a1b7e304b74d67fab4644c6faca683049aedf1c440658770ed"
+    },
+    {
+      "number": 37,
+      "page": 9,
+      "pageEnd": 9,
+      "key": "D",
+      "contentSha256": "9181644e0749bd76f0cbc320d9db4d87197a3fe2259df910fffa42ffd11f0f2d"
+    }
+  ],
+  "assets": {
+    "lecture-media/informatics/batch-445-evidence/team444-L5-003.jpg": {
+      "sourceId": "team444-L5",
+      "sourceSha256": "b79239320e3c094d204f81d9b5be20c5018a5343afcd431dd283cb8d254b8469",
+      "pdfPage": 3,
+      "imageSha256": "82c061de46f785bcf90868acd7de54403506b4a452f9204fa93d17eb7ed17feb"
+    },
+    "lecture-media/informatics/pages/01-introduction-005.jpg": {
+      "sourceId": "team444-L1",
+      "sourceSha256": "ce7b9b5b5ffbd5ad1feb6842fd96a43c7a8cf6697024900cc11636578354c282",
+      "pdfPage": 5,
+      "imageSha256": "4fdc9954db1db3e75ca66a7e52015e5cf057f8ee5e5f2a16692dbd8b6bc013ef"
+    },
+    "lecture-media/informatics/batch-445-evidence/1Ae0-DPTwlORCVVkIkLRO7F79yMkexibO-007.jpg": {
+      "sourceId": "1Ae0-DPTwlORCVVkIkLRO7F79yMkexibO",
+      "sourceSha256": "49ebb47c0597eec58536e611f75d50cb79f5d14c7e5913a68874c45d92842d64",
+      "pdfPage": 7,
+      "imageSha256": "cf2e9779347cd0f20c3b7ec651c6575625b6b68cc3e08ab976ccf9350dda5c1e"
+    },
+    "lecture-media/informatics/pages/05-overgaard-024.jpg": {
+      "sourceId": "team444-L5",
+      "sourceSha256": "b79239320e3c094d204f81d9b5be20c5018a5343afcd431dd283cb8d254b8469",
+      "pdfPage": 24,
+      "imageSha256": "e9a473348058f42f150ff1a5c8e469d305be899b36e9bc3f94bda5871b03b372"
+    },
+    "lecture-media/informatics/pages/04-cds-003.jpg": {
+      "sourceId": "team444-L4",
+      "sourceSha256": "6788f6cadc9e9a0e002b463311b8f20f0f08fe7e349cafbf282f5ba47eff510e",
+      "pdfPage": 3,
+      "imageSha256": "e5abc234fd9ff4035f02584a3fec9b11a2f28a465fc166c3604a228152cf5e69"
+    },
+    "lecture-media/informatics/pages/04-cds-006.jpg": {
+      "sourceId": "team444-L4",
+      "sourceSha256": "6788f6cadc9e9a0e002b463311b8f20f0f08fe7e349cafbf282f5ba47eff510e",
+      "pdfPage": 6,
+      "imageSha256": "758d6da5129fbfa19b292358a03e968e3c5ff9a760aa55bf7e2f3f75a663a11a"
+    },
+    "lecture-media/informatics/batch-445-evidence/team444-L5-014.jpg": {
+      "sourceId": "team444-L5",
+      "sourceSha256": "b79239320e3c094d204f81d9b5be20c5018a5343afcd431dd283cb8d254b8469",
+      "pdfPage": 14,
+      "imageSha256": "ce53f190442ba902061cdc7f63fb52db3c024fd4ffb74212f87777e658149170"
+    },
+    "lecture-media/informatics/batch-445-evidence/1Ae0-DPTwlORCVVkIkLRO7F79yMkexibO-015.jpg": {
+      "sourceId": "1Ae0-DPTwlORCVVkIkLRO7F79yMkexibO",
+      "sourceSha256": "49ebb47c0597eec58536e611f75d50cb79f5d14c7e5913a68874c45d92842d64",
+      "pdfPage": 15,
+      "imageSha256": "bf841f077f56796b5039d295bb331f81830b20596dd446193d9b54ff1c0fe66e"
+    },
+    "lecture-media/informatics/pages/03-ehr-009.jpg": {
+      "sourceId": "team444-L3",
+      "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
+      "pdfPage": 9,
+      "imageSha256": "acaf42babf4d6c82d1c353073917379ccca6f9ba553ca139c664d2efab6dc864"
+    },
+    "lecture-media/informatics/pages/03-ehr-006.jpg": {
+      "sourceId": "team444-L3",
+      "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
+      "pdfPage": 6,
+      "imageSha256": "6b318c60dcba3aba682c4bb1017b8efa2cedcbfc52ee48042f7d5616ac91e15c"
+    },
+    "lecture-media/informatics/batch-445-evidence/team444-L5-004.jpg": {
+      "sourceId": "team444-L5",
+      "sourceSha256": "b79239320e3c094d204f81d9b5be20c5018a5343afcd431dd283cb8d254b8469",
+      "pdfPage": 4,
+      "imageSha256": "3dc53401268a7f3214e10c527c2c36a1911ca4f1791893fb4633c1344d80ca47"
+    },
+    "lecture-media/informatics/batch-445-evidence/1Zo45YQ3bEHlixPFa4nxBV8i_swBeyQNv-014.jpg": {
+      "sourceId": "1Zo45YQ3bEHlixPFa4nxBV8i_swBeyQNv",
+      "sourceSha256": "aabae63b20b3a0be482860869864bb2b2e20984d8546ab8ef97f1068701b454f",
+      "pdfPage": 14,
+      "imageSha256": "bc252ed431e8ece49209446dfab75e43962062e4b78ff89d79325cf00713cf47"
+    },
+    "lecture-media/informatics/pages/03-ehr-007.jpg": {
+      "sourceId": "team444-L3",
+      "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
+      "pdfPage": 7,
+      "imageSha256": "53b5deda3e5bd810392b7a118d9ac7f496fe1b2f8633c6835b8e2e7898f9f35d"
+    },
+    "lecture-media/informatics/pages/04-cds-008.jpg": {
+      "sourceId": "team444-L4",
+      "sourceSha256": "6788f6cadc9e9a0e002b463311b8f20f0f08fe7e349cafbf282f5ba47eff510e",
+      "pdfPage": 8,
+      "imageSha256": "be199b46ded09deaa73bd6fb369cc60c896c80d5ce7b5be33f0fc7ba42f5031a"
+    },
+    "lecture-media/informatics/pages/04-cds-009.jpg": {
+      "sourceId": "team444-L4",
+      "sourceSha256": "6788f6cadc9e9a0e002b463311b8f20f0f08fe7e349cafbf282f5ba47eff510e",
+      "pdfPage": 9,
+      "imageSha256": "5414f5873dfaffe107be1f1ed23717ca5b6e228bf7823d92113d55608f4e1191"
+    },
+    "lecture-media/informatics/pages/02-clinical-data-003.jpg": {
+      "sourceId": "team444-L2",
+      "sourceSha256": "929278290c1a2a8e42f4ea2d8407dc13fb8d54d942a5989c6c8d0adffe493040",
+      "pdfPage": 3,
+      "imageSha256": "88b80dcd37d7cf15cc34b8623810a9f9e4c14201c76a466cf591a0e26de0de6f"
+    },
+    "lecture-media/informatics/pages/02-clinical-data-004.jpg": {
+      "sourceId": "team444-L2",
+      "sourceSha256": "929278290c1a2a8e42f4ea2d8407dc13fb8d54d942a5989c6c8d0adffe493040",
+      "pdfPage": 4,
+      "imageSha256": "a7cde83bc08843890effa8377203c2d8c91f761dbd1352ba8e0c4ea95d143add"
+    },
+    "lecture-media/informatics/pages/02-clinical-data-008.jpg": {
+      "sourceId": "team444-L2",
+      "sourceSha256": "929278290c1a2a8e42f4ea2d8407dc13fb8d54d942a5989c6c8d0adffe493040",
+      "pdfPage": 8,
+      "imageSha256": "13eb0d9f312c0b446118bd33371a707bb0f07c6dcb2e748e9b7480b267887739"
+    },
+    "lecture-media/informatics/pages/02-clinical-data-006.jpg": {
+      "sourceId": "team444-L2",
+      "sourceSha256": "929278290c1a2a8e42f4ea2d8407dc13fb8d54d942a5989c6c8d0adffe493040",
+      "pdfPage": 6,
+      "imageSha256": "ee9b901d0cb5c7183de105b710f6a2502f518181e054b38f0f0b0d4351e05cf4"
+    },
+    "lecture-media/informatics/pages/02-clinical-data-007.jpg": {
+      "sourceId": "team444-L2",
+      "sourceSha256": "929278290c1a2a8e42f4ea2d8407dc13fb8d54d942a5989c6c8d0adffe493040",
+      "pdfPage": 7,
+      "imageSha256": "fa2a1afc55e7033e777827dc0586740178286055c0cc94a7b93999db9530578b"
+    },
+    "lecture-media/informatics/pages/02-clinical-data-005.jpg": {
+      "sourceId": "team444-L2",
+      "sourceSha256": "929278290c1a2a8e42f4ea2d8407dc13fb8d54d942a5989c6c8d0adffe493040",
+      "pdfPage": 5,
+      "imageSha256": "d1c64da436dd3be826d410767cabf1165518478324da12f3b8cbac3356b90803"
+    },
+    "lecture-media/informatics/pages/01-introduction-007.jpg": {
+      "sourceId": "team444-L1",
+      "sourceSha256": "ce7b9b5b5ffbd5ad1feb6842fd96a43c7a8cf6697024900cc11636578354c282",
+      "pdfPage": 7,
+      "imageSha256": "e8df12eb178100e49b6e548373e613d5a730e949446a67141ea0afd7e6d02c3e"
+    },
+    "lecture-media/informatics/batch-445-evidence/1eVIwQIA3wHU1Ll0ElqhuSqFHkvubumXh-017.jpg": {
+      "sourceId": "1eVIwQIA3wHU1Ll0ElqhuSqFHkvubumXh",
+      "sourceSha256": "c4ebd67e28420b13c9248f0d2e3e0e176f87aab8d5862a2b301825ae270502f6",
+      "pdfPage": 17,
+      "imageSha256": "f14ee77ce9b7fb8ada13d761ad42cfda63061192ef8c86a799e56d20c358a0e6"
+    },
+    "lecture-media/informatics/pages/03-ehr-008.jpg": {
+      "sourceId": "team444-L3",
+      "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
+      "pdfPage": 8,
+      "imageSha256": "8d4bec1c35e9f1220a7ba24317ebd8419b314539a964cd7ed69ec7f548a65646"
+    },
+    "lecture-media/informatics/pages/04-cds-012.jpg": {
+      "sourceId": "team444-L4",
+      "sourceSha256": "6788f6cadc9e9a0e002b463311b8f20f0f08fe7e349cafbf282f5ba47eff510e",
+      "pdfPage": 12,
+      "imageSha256": "a8f6e1cfb60fc95236dc3b0f779abc7529980b3eeabc830887012379008fb3d2"
+    },
+    "lecture-media/informatics/pages/01-introduction-008.jpg": {
+      "sourceId": "team444-L1",
+      "sourceSha256": "ce7b9b5b5ffbd5ad1feb6842fd96a43c7a8cf6697024900cc11636578354c282",
+      "pdfPage": 8,
+      "imageSha256": "3c8ba5c9f8cbcb06c933f59896f05d7396fa4358e028b3116d92d307ef8ee0ea"
+    },
+    "lecture-media/informatics/pages/04-cds-004.jpg": {
+      "sourceId": "team444-L4",
+      "sourceSha256": "6788f6cadc9e9a0e002b463311b8f20f0f08fe7e349cafbf282f5ba47eff510e",
+      "pdfPage": 4,
+      "imageSha256": "b6375578140ff4b25313ff2e9640e3795781fb7653c9002db53b85a431b4c7f3"
+    },
+    "lecture-media/informatics/pages/01-introduction-006.jpg": {
+      "sourceId": "team444-L1",
+      "sourceSha256": "ce7b9b5b5ffbd5ad1feb6842fd96a43c7a8cf6697024900cc11636578354c282",
+      "pdfPage": 6,
+      "imageSha256": "4d7c21bc7f2118b0e0d1a26dd663b19ba0495260513794f87e4ff3ddf1817f88"
+    },
+    "lecture-media/informatics/batch-445-evidence/1Zo45YQ3bEHlixPFa4nxBV8i_swBeyQNv-012.jpg": {
+      "sourceId": "1Zo45YQ3bEHlixPFa4nxBV8i_swBeyQNv",
+      "sourceSha256": "aabae63b20b3a0be482860869864bb2b2e20984d8546ab8ef97f1068701b454f",
+      "pdfPage": 12,
+      "imageSha256": "03b72928d7e18b4cffaa5573391fbeea6b5f407d2f101ca7d44a13ab3f132bde"
+    }
+  }
+}

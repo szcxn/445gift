@@ -39,6 +39,15 @@
   function location(question) {
     const source = question.sourceLocations?.[0];
     if (!source || !files[source.assessment]) return null;
+    if (source.filename && Number.isInteger(source.pdfPage)) {
+      return {
+        url: null,
+        title: `Gift ${source.assessment} · Batch ${source.batch}`,
+        number: `Original Q${source.questionNumber}`,
+        paragraph: `${source.filename} · PDF page ${source.pdfPage}${source.pdfPageEnd > source.pdfPage ? `–${source.pdfPageEnd}` : ""}`,
+        repeated: repeatGroup.has(question.id)
+      };
+    }
     const paragraph = source.paragraph ?? source.paragraphIndex;
     return {
       url: files[source.assessment],

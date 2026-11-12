@@ -49,9 +49,14 @@ function installFunctions(context) {
 
 const context = {window: {}};
 vm.createContext(context);
+let extendBatchesBeforeMedicineRepairs;
 for (const match of html.matchAll(/<script src="([^"?]+)/g)) {
+  if (match[1] === "informatics-mid-445.js") continue; // Separate 445 MID PDF release.
   const file = path.join(root, match[1]);
   assert.ok(fs.existsSync(file), `Missing application module: ${match[1]}`);
+  if (match[1] === 'medicine-native-repairs.js') {
+    extendBatchesBeforeMedicineRepairs = context.window.GIFT445_EXTEND_BATCH_BANK;
+  }
   vm.runInContext(fs.readFileSync(file, 'utf8'), context, {filename: match[1]});
 }
 installFunctions(context);
@@ -67,10 +72,18 @@ assert.ok(start >= 0 && end > start);
 const code = html.slice(start, end).replace('const QUESTION_BANK', 'window.__FINAL_COMPLETE_TEST_BANK');
 assert.match(code, /GIFT445_COMPLETE_INFORMATICS_FINAL\(/, 'The visible bank bypasses the tested completion layer');
 context.window.GIFT445_COMPLETE_INFORMATICS_FINAL = bank => bank;
+const extendProductionBatches = context.window.GIFT445_EXTEND_BATCH_BANK;
+if (extendBatchesBeforeMedicineRepairs) {
+  // Check the historical snapshot before the separately tested Medicine corrections.
+  context.window.GIFT445_EXTEND_BATCH_BANK = extendBatchesBeforeMedicineRepairs;
+}
+vm.runInContext(code, context);
+const historical = plain(context.window.__FINAL_COMPLETE_TEST_BANK).filter(question => !isFinal(question));
+assert.equal(hash(canonical(historical.map(beforeMidAudit))), fixture.otherRuntimeSha256);
+context.window.GIFT445_EXTEND_BATCH_BANK = extendProductionBatches;
 vm.runInContext(code, context);
 const before = context.window.__FINAL_COMPLETE_TEST_BANK;
 assert.equal(before.length, fixture.runtimeCount);
-assert.equal(hash(canonical(plain(before).filter(question => !isFinal(question)).map(beforeMidAudit))), fixture.otherRuntimeSha256);
 const oldFinal = plain(before).filter(isFinal);
 assert.equal(hash(canonical(oldFinal.map(sourceProjection))), fixture.finalSourceSha256);
 assert.equal(hash(canonical(oldFinal.map(nativeProjection))), fixture.nativeInventorySha256,
@@ -94,7 +107,7 @@ const bank = plain(context.window.__FINAL_COMPLETE_TEST_BANK);
 assert.deepEqual(bank, plain(completed), 'The application differs from the tested completion result');
 assert.equal(bank.length, fixture.runtimeCount);
 assert.equal(new Set(bank.map(question => question.id)).size, bank.length);
-assert.equal(hash(canonical(bank.filter(question => !isFinal(question)).map(beforeMidAudit))), fixture.otherRuntimeSha256,
+assert.deepEqual(bank.filter(question => !isFinal(question)), plain(before).filter(question => !isFinal(question)),
   'Another subject, original MID record or batch-only question changed');
 const final = bank.filter(isFinal);
 assert.equal(final.length, 431);
