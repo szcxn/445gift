@@ -3,7 +3,7 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('n
 const communityFixture=JSON.parse(fs.readFileSync(path.join(__dirname,'fixtures/community-mid-review.json')));
 const root=path.resolve(__dirname,'..'),html=fs.readFileSync(path.join(root,'index.html'),'utf8'),fixture=JSON.parse(fs.readFileSync(path.join(__dirname,'fixtures/informatics-mid.json'))),c={window:{}};
 vm.createContext(c);
-for(const m of html.matchAll(/<script src="([^"?]+)/g)){const p=path.join(root,m[1]);if(fs.existsSync(p))vm.runInContext(fs.readFileSync(p,'utf8'),c);}
+for(const m of html.matchAll(/<script src="([^"?]+)/g)){if(m[1]==='informatics-source-navigation.js')continue;const p=path.join(root,m[1]);if(fs.existsSync(p))vm.runInContext(fs.readFileSync(p,'utf8'),c);}
 const plain=x=>JSON.parse(JSON.stringify(x)),questions=plain(c.window.GIFT445_INFORMATICS_QUESTIONS),hidden=new Set(fixture.hiddenIds);
 const arabicOcr=/[\u0600-\u06ff\u0750-\u077f\ufb50-\ufdff\ufe70-\ufeff]/u;
 assert.equal(questions.length,376);assert.equal(new Set(questions.map(q=>q.id)).size,376);assert.equal(hidden.size,72);
@@ -31,7 +31,7 @@ assert.equal(c.questionsFor('informatics').length,376);
 assert.deepEqual(Object.fromEntries(['medicine','surgery','community'].map(s=>[s,c.questionsFor(s).length])),{medicine:1424,surgery:1212,community:communityFixture.counts.selected});
 const ordered=c.orderQuestionsNewestFirst(c.questionsFor('informatics'),'Midterm');for(let i=1;i<ordered.length;i++)assert.ok(Number(ordered[i-1].sourceBatch)>=Number(ordered[i].sourceBatch));
 const b443=c.questionsForBatch('informatics','Midterm','443');assert.equal(b443.length,40);assert.equal(b443[16].sourceLocations[0].questionNumber,null);assert.equal(b443[15].sourceLocations[0].questionNumber,16);assert.equal(b443[17].sourceLocations[0].questionNumber,18);
-const r={appState:{quiz:{answers:{},questionIds:questions.map(q=>q.id),currentIndex:0},navigation:{mode:'batch',assessment:'Midterm'}},SUBJECTS:[{id:'informatics',name:'Informatics'}],QUESTION_BANK:questions,batchDisplayName:(_,b)=>`Batch ${b}`,escapeHtml:v=>String(v??'').replace(/[&<>'"]/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[ch])),persistState:()=>{},captureAnalytics:()=>{},quizAnalyticsProperties:()=>({}),completedQuizKeys:new Set(),currentQuizKey:()=> 'test'};
+const r={window:{},appState:{quiz:{answers:{},questionIds:questions.map(q=>q.id),currentIndex:0},navigation:{mode:'batch',assessment:'Midterm'}},SUBJECTS:[{id:'informatics',name:'Informatics'}],QUESTION_BANK:questions,batchDisplayName:(_,b)=>`Batch ${b}`,escapeHtml:v=>String(v??'').replace(/[&<>'"]/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[ch])),persistState:()=>{},captureAnalytics:()=>{},quizAnalyticsProperties:()=>({}),completedQuizKeys:new Set(),currentQuizKey:()=> 'test'};
 vm.createContext(r);vm.runInContext(html.slice(html.indexOf('    function renderQuestion(question,'),html.indexOf('    function questionCountLabel(')),r);
 for(const q of questions)for(const option of q.options){
  const buttons=q.options.map(o=>{const b={dataset:{option:o.id},classes:new Set(),setAttribute(){}};b.classList={toggle(name,on){if(on)b.classes.add(name);else b.classes.delete(name)}};return b;});
@@ -41,8 +41,8 @@ for(const q of questions)for(const option of q.options){
 }
 for(const q of questions){const a=q.informaticsSlideAnswer;assert.ok(a);assert.ok(['supported','preference','unresolved'].includes(a.confidence));if(a.confidence==='unresolved')assert.equal(a.answers.length,0);for(const answer of a.answers)assert.ok(q.options.some(o=>o.id===answer&&o.text));const output=r.renderQuestion(q,0);assert.ok(output.includes(r.escapeHtml(a.basis)));}
 for(const [batch,number,answer,confidence] of [['443',1,'A','supported'],['443',25,'A','supported'],['443',11,'B','preference'],['434',16,'A','preference'],['435',11,'B','preference']]){const q=questions.find(q=>q.sourceBatch===batch&&q.sourceLocations[0].questionNumber===number);assert.deepEqual(q.informaticsSlideAnswer.answers,[answer]);assert.equal(q.informaticsSlideAnswer.confidence,confidence);assert.ok(!q.giftReview.gradingAnswers.includes(answer));}
-assert.match(html,/إضافة مادة الإنفورماتكس/);assert.match(html,/2026-10-20/);
-assert.match(html,/أحدث تحديث:<\/strong> إضافة مادتي الراديولوجي والريسيرش/);
+assert.match(html,/إضافة مادة الإنفورماتكس/);assert.match(html,/<time datetime="\d{4}-\d{2}-\d{2}">/);
+assert.match(html,/تحديث سابق:<\/strong> إضافة مادتي الراديولوجي والريسيرش/);
 assert.match(html,/<p class="refresh-notice" lang="ar" dir="rtl"><strong>تنبيه:<\/strong> حدثوا الصفحة بشكل دوري عشان توصلكم التحديثات\.<\/p>/);
 load('openLecture');let opened=null;c.openQuestionSet=(title,items)=>{opened=plain(items)};c.isQuestionAvailableInLecture=()=>true;
 c.openLecture('informatics',null,'AI in Healthcare');assert.equal(opened.length,17);assert.equal(new Set(opened.map(q=>q.id)).size,17);assert.equal(opened.filter(q=>q.lecture==='AI in Healthcare').length,17);

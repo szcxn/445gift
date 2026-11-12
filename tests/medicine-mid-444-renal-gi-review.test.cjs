@@ -73,7 +73,7 @@ assert.deepEqual(counts, { total: 663, lectureAnchored: 656, outsideLecture: 7, 
 assert.ok(html.includes('class="site-updates" lang="ar" dir="rtl"'));
 assert.ok(html.includes("تحديث سابق:</strong> تطوير ضخم لشروح إجابات الباطنة والسيرجري للميد"));
 const siteUpdates = html.match(/<aside class="site-updates"[\s\S]*?<\/aside>/)[0];
-assert.ok(siteUpdates.includes("آخر التحديثات") && siteUpdates.includes("٢٠ أكتوبر ٢٠٢٦"));
+assert.ok(siteUpdates.includes("آخر التحديثات") && /<time datetime="\d{4}-\d{2}-\d{2}">[^<]*[٠-٩][^<]*<\/time>/.test(siteUpdates));
 const donationSection = html.match(/<section class="donation-section"[\s\S]*?<\/section>/)[0];
 assert.ok(donationSection.includes('lang="ar" dir="rtl"') && donationSection.includes("اضغط هنا للتبرع عبر إحسان"));
 const refreshNotice = html.match(/<p class="refresh-notice"[\s\S]*?<\/p>/)[0];

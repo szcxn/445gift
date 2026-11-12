@@ -1,0 +1,42 @@
+// Manually verified repeats in the original Informatics Gift banks.
+// Members have the same usable options and keyed answer text; source letters can differ.
+// Collapse only within a study selection, after its filters and ordering.
+// Keep all occurrences, keys, numbering and order in original batch routes.
+window.GIFT445_INFORMATICS_SOURCE_REPEATS = [
+  ["informatics-mid-443-p0091", "informatics-mid-439-p0803", "informatics-mid-438-p1219", "informatics-final-434-p1852-q03"],
+  ["informatics-mid-439-p0886", "informatics-mid-438-p1138"],
+  ["informatics-mid-439-p1052", "informatics-mid-438-p1280"],
+  ["informatics-mid-438-p1255", "informatics-final-436-p1563-q20"],
+  ["informatics-mid-437-p1492", "informatics-mid-435-p2106"],
+  ["informatics-mid-438-p1324", "informatics-mid-437-p1418"],
+  ["informatics-mid-437-p1536", "informatics-mid-435-p2084"],
+  ["informatics-mid-434-p2275", "informatics-final-434-p2108-q38", "informatics-mid-433-p2361"],
+  ["informatics-mid-434-p2231", "informatics-mid-433-p2414"],
+  ["informatics-mid-434-p2331", "informatics-mid-433-p2423"],
+  ["informatics-mid-433-p2378", "informatics-mid-431-p2671"],
+  ["informatics-mid-432-p2463", "informatics-mid-431-p2717"],
+  ["informatics-mid-432-p2478", "informatics-mid-430-p2968"],
+  ["informatics-mid-431-p2695", "informatics-mid-430-p3102"],
+  ["batch-informatics-mid-434-p2335", "batch-informatics-mid-432-p2507"],
+  ["batch-informatics-mid-432-p2490", "batch-informatics-mid-430-p3031"],
+  ["informatics-mid-438-p1195", "informatics-final-434-p2059-q31"],
+  ["informatics-final-437-p1113-q22", "informatics-mid-436-p1681"],
+  ["informatics-mid-436-p1871", "informatics-final-433-p2627-q54"],
+  ["informatics-mid-435-p2120", "informatics-final-433-p2331-q13"],
+  ["informatics-mid-434-p2240", "informatics-final-434-p2018-q25"],
+  ["informatics-final-432-p2692-q01", "informatics-mid-430-p2852"],
+  ["batch-informatics-mid-436-p1843", "informatics-final-433-p2667-q59"],
+  ["informatics-final-434-p1997-q22", "batch-informatics-mid-434-p2337"],
+  ["informatics-final-434-p1979-q20", "batch-informatics-mid-432-p2493"],
+  ["informatics-final-432-p2759-q10", "batch-informatics-mid-432-p2505"],
+  ["informatics-final-433-p2294-q08", "informatics-final-432-p2713-q04", "batch-informatics-mid-430-p2983"],
+  ["informatics-final-443-p0133-q10", "informatics-final-437-p1037-q12"],
+  ["informatics-final-442-p0550-q30", "informatics-final-433-p2301-q09"],
+  ["informatics-final-441-p0569-q01", "informatics-final-438-p0881-q31"],
+  ["informatics-final-438-p0767-q13", "informatics-final-437-p1044-q13"],
+  ["informatics-final-438-p0774-q14", "informatics-final-434-p2218-q52"],
+  ["informatics-final-437-p0993-q06", "informatics-final-434-p1986-q21"],
+  ["informatics-final-437-p1007-q08", "informatics-final-437-p1359-q55", "informatics-final-434-p2170-q46"],
+  ["informatics-final-436-p1480-q14", "informatics-final-434-p1877-q06"],
+  ["informatics-final-433-p2280-q06", "informatics-final-431-p3125-q23"]
+];

@@ -1211,20 +1211,22 @@
         "url": "lecture-media/informatics/02-clinical-data.pdf#page=6",
         "pdfPage": 6,
         "quoteParts": [
-          "Staging the process of cleaning the data from any incorrect or missing values."
+          "Staging",
+          "the process of cleaning the data from any incorrect or missing values."
         ],
-        "quote": "Staging the process of cleaning the data from any incorrect or missing values.",
+        "quote": "Staging",
         "supportRole": "direct",
         "sourceKind": "lecture-notes",
         "sourceSha256": "929278290c1a2a8e42f4ea2d8407dc13fb8d54d942a5989c6c8d0adffe493040",
-        "verificationMethod": "text",
+        "verificationMethod": "visual",
         "image": "lecture-media/informatics/pages/02-clinical-data-006.jpg",
         "imageSha256": "ee9b901d0cb5c7183de105b710f6a2502f518181e054b38f0f0b0d4351e05cf4",
         "imageDimensions": [
           1488,
           2105
         ],
-        "sourcePageCount": 14
+        "sourcePageCount": 14,
+        "sourceSection": "Clinical data warehouse table"
       }
     ],
     "references": []
@@ -2345,7 +2347,7 @@
           "what will happen?"
         ],
         "quote": "Predictive Analysis:",
-        "supportRole": "direct",
+        "supportRole": "related",
         "sourceKind": "lecture-notes",
         "sourceSha256": "929278290c1a2a8e42f4ea2d8407dc13fb8d54d942a5989c6c8d0adffe493040",
         "verificationMethod": "visual",
@@ -5437,8 +5439,30 @@
     "basis": "interpretation",
     "explanation": "The important numerical rule is to avoid unnecessary trailing zeros: 850.0 and 850.00 can be misread if the decimal point is missed. Both 850 mg and 850 milligram express the same dose without that error-prone formatting. The Joint Commission does not prohibit mg merely because it is abbreviated, so these options do not uniquely distinguish the Gift answer.",
     "objection": "The alternatives include two equivalent safe dose formats; the recorded Gift key is not uniquely distinguishable.",
-    "basisNote": "Verified against the medication-notation standard; no specific matching passage was located in the supplied course PDF.",
-    "evidence": [],
+    "basisNote": "The EHR course page identifies trailing zeroes as a prescribing-error issue. The full Joint Commission list and exact choice wording are separate from this course passage.",
+    "evidence": [
+      {
+        "sourceId": "team444-L3",
+        "lectureTitle": "Team 444 · L3 · Electronic Health Records",
+        "url": "lecture-media/informatics/03-ehr.pdf#page=6",
+        "pdfPage": 6,
+        "quoteParts": [
+          "the issue of illegibility that is associated with errors in ordering drugs with similar names, trailing zeroes,reduce under and over-prescribing"
+        ],
+        "quote": "the issue of illegibility that is associated with errors in ordering drugs with similar names, trailing zeroes,reduce under and over-prescribing",
+        "supportRole": "related",
+        "sourceKind": "lecture-notes",
+        "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
+        "verificationMethod": "text",
+        "image": "lecture-media/informatics/pages/03-ehr-006.jpg",
+        "imageSha256": "6b318c60dcba3aba682c4bb1017b8efa2cedcbfc52ee48042f7d5616ac91e15c",
+        "imageDimensions": [
+          1488,
+          2105
+        ],
+        "sourcePageCount": 12
+      }
+    ],
     "references": [
       {
         "title": "Joint Commission — medication abbreviations and dose designations",
@@ -5492,8 +5516,31 @@
     "basis": "interpretation",
     "explanation": "Name, address, occupation and similar personal characteristics describe the patient rather than a disease episode or treatment. They are commonly grouped as demographic information, making A the best answer. Some identifiers are also used administratively, so the categories can overlap. This specific demographic classification comes from the separate HL7 reference; no matching course passage was found.",
     "objection": "",
-    "basisNote": "The course passage does not define demographics; HL7 supplies the more specific classification.",
-    "evidence": [],
+    "basisNote": "The supplied L9 PDF gives examples of demographic data in its inherited team notes. This is relevant context, not a separate lecturer answer.",
+    "evidence": [
+      {
+        "sourceId": "1h7L0vrIQ2CeqfQwC7l5TPpqkN1CpQ4R7",
+        "lectureTitle": "Team 444 · L9) Health data privacy, confidentiality, security .pdf",
+        "url": "https://drive.google.com/file/d/1h7L0vrIQ2CeqfQwC7l5TPpqkN1CpQ4R7",
+        "pdfPage": 10,
+        "quoteParts": [
+          "Examples of demographic data: name, address, occupation zip code, salary."
+        ],
+        "quote": "Examples of demographic data: name, address, occupation zip code, salary.",
+        "supportRole": "related",
+        "sourceKind": "reference-notes",
+        "sourceSha256": "449057a6f8431827e84a37eab95c03d76ff55beee428d1883ecded271c9dbfa3",
+        "verificationMethod": "text",
+        "image": "lecture-media/informatics/final-evidence/1h7L0vrIQ2CeqfQwC7l5TPpqkN1CpQ4R7-010.jpg",
+        "imageSha256": "d43d9619fad035f044877d9a977c610098875d8e666f0159a11cef046184867a",
+        "imageDimensions": [
+          1626,
+          2300
+        ],
+        "sourcePageCount": 15,
+        "sourceSection": "Golden notes (inherited Team443)"
+      }
+    ],
     "references": [
       {
         "title": "HL7 — Manage Patient Demographics",
@@ -6648,8 +6695,30 @@
     "basis": "interpretation",
     "explanation": "Both 120 mg and 120 milligram state the same dose without an unnecessary decimal. The versions containing 120.0 add a trailing zero that can increase the risk of a tenfold reading error. Writing milligram in full does not make mg unacceptable under the cited rule. A and C are therefore equivalent safe formats among these choices.",
     "objection": "The alternatives include two equivalent safe dose formats; the recorded Gift key is not uniquely distinguishable.",
-    "basisNote": "Verified against the medication-notation standard; no specific matching passage was located in the supplied course PDF.",
-    "evidence": [],
+    "basisNote": "The EHR course page identifies trailing zeroes as a prescribing-error issue. The full Joint Commission list and exact choice wording are separate from this course passage.",
+    "evidence": [
+      {
+        "sourceId": "team444-L3",
+        "lectureTitle": "Team 444 · L3 · Electronic Health Records",
+        "url": "lecture-media/informatics/03-ehr.pdf#page=6",
+        "pdfPage": 6,
+        "quoteParts": [
+          "the issue of illegibility that is associated with errors in ordering drugs with similar names, trailing zeroes,reduce under and over-prescribing"
+        ],
+        "quote": "the issue of illegibility that is associated with errors in ordering drugs with similar names, trailing zeroes,reduce under and over-prescribing",
+        "supportRole": "related",
+        "sourceKind": "lecture-notes",
+        "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
+        "verificationMethod": "text",
+        "image": "lecture-media/informatics/pages/03-ehr-006.jpg",
+        "imageSha256": "6b318c60dcba3aba682c4bb1017b8efa2cedcbfc52ee48042f7d5616ac91e15c",
+        "imageDimensions": [
+          1488,
+          2105
+        ],
+        "sourcePageCount": 12
+      }
+    ],
     "references": [
       {
         "title": "Joint Commission — medication abbreviations and dose designations",
@@ -8093,7 +8162,7 @@
           "privacy is the right and desire of a person to control the disclosure of personal health information."
         ],
         "quote": "privacy is the right and desire of a person to control the disclosure of personal health information.",
-        "supportRole": "direct",
+        "supportRole": "related",
         "sourceKind": "reference-notes",
         "sourceSha256": "449057a6f8431827e84a37eab95c03d76ff55beee428d1883ecded271c9dbfa3",
         "verificationMethod": "text",
@@ -8660,8 +8729,31 @@
     "basis": "interpretation",
     "explanation": "Name, address, occupation and salary range describe personal and population characteristics rather than a clinical measurement, so D is the likely intended demographic category. Administrative records may also store these details, making their uses overlap. The separate HL7 demographic reference supports the classification; no matching course definition was found. The original uncertain, unscored Gift status remains unchanged.",
     "objection": "",
-    "basisNote": "Demographic is the intended category; the course passage itself does not define that category.",
-    "evidence": [],
+    "basisNote": "The supplied L9 PDF gives examples of demographic data in its inherited team notes. This is relevant context, not a separate lecturer answer.",
+    "evidence": [
+      {
+        "sourceId": "1h7L0vrIQ2CeqfQwC7l5TPpqkN1CpQ4R7",
+        "lectureTitle": "Team 444 · L9) Health data privacy, confidentiality, security .pdf",
+        "url": "https://drive.google.com/file/d/1h7L0vrIQ2CeqfQwC7l5TPpqkN1CpQ4R7",
+        "pdfPage": 10,
+        "quoteParts": [
+          "Examples of demographic data: name, address, occupation zip code, salary."
+        ],
+        "quote": "Examples of demographic data: name, address, occupation zip code, salary.",
+        "supportRole": "related",
+        "sourceKind": "reference-notes",
+        "sourceSha256": "449057a6f8431827e84a37eab95c03d76ff55beee428d1883ecded271c9dbfa3",
+        "verificationMethod": "text",
+        "image": "lecture-media/informatics/final-evidence/1h7L0vrIQ2CeqfQwC7l5TPpqkN1CpQ4R7-010.jpg",
+        "imageSha256": "d43d9619fad035f044877d9a977c610098875d8e666f0159a11cef046184867a",
+        "imageDimensions": [
+          1626,
+          2300
+        ],
+        "sourcePageCount": 15,
+        "sourceSection": "Golden notes (inherited Team443)"
+      }
+    ],
     "references": [
       {
         "title": "HL7 — Manage Patient Demographics",
@@ -8678,8 +8770,30 @@
     "basis": "interpretation",
     "explanation": "The unsafe feature in 250.0 and 250.00 is the unnecessary trailing zero after the decimal point. If that point is missed, the dose can be read as much larger. Both 250 milligram and 250 mg avoid that problem and represent the same dose. The rule does not require replacing every occurrence of mg with the full word.",
     "objection": "The alternatives include two equivalent safe dose formats; the recorded Gift key is not uniquely distinguishable.",
-    "basisNote": "Verified against the medication-notation standard; no specific matching passage was located in the supplied course PDF.",
-    "evidence": [],
+    "basisNote": "The EHR course page identifies trailing zeroes as a prescribing-error issue. The full Joint Commission list and exact choice wording are separate from this course passage.",
+    "evidence": [
+      {
+        "sourceId": "team444-L3",
+        "lectureTitle": "Team 444 · L3 · Electronic Health Records",
+        "url": "lecture-media/informatics/03-ehr.pdf#page=6",
+        "pdfPage": 6,
+        "quoteParts": [
+          "the issue of illegibility that is associated with errors in ordering drugs with similar names, trailing zeroes,reduce under and over-prescribing"
+        ],
+        "quote": "the issue of illegibility that is associated with errors in ordering drugs with similar names, trailing zeroes,reduce under and over-prescribing",
+        "supportRole": "related",
+        "sourceKind": "lecture-notes",
+        "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
+        "verificationMethod": "text",
+        "image": "lecture-media/informatics/pages/03-ehr-006.jpg",
+        "imageSha256": "6b318c60dcba3aba682c4bb1017b8efa2cedcbfc52ee48042f7d5616ac91e15c",
+        "imageDimensions": [
+          1488,
+          2105
+        ],
+        "sourcePageCount": 12
+      }
+    ],
     "references": [
       {
         "title": "Joint Commission — medication abbreviations and dose designations",
@@ -10664,7 +10778,7 @@
           "Preventable adverse drug event: An injury or harm occurred as a result of a medication error."
         ],
         "quote": "Preventable adverse drug event: An injury or harm occurred as a result of a medication error.",
-        "supportRole": "direct",
+        "supportRole": "related",
         "sourceKind": "teamwork-lecture-notes",
         "sourceSha256": "f607b9ba2b03dbb84e7fdb7d129dd751a9e937cb3149231c87a0d96418cdf9b0",
         "verificationMethod": "text",
@@ -10974,8 +11088,31 @@
     "basis": "interpretation",
     "explanation": "Name, address, contact details and age describe who the patient is rather than a disease measurement, so D is the intended demographic category. Administrative functions also use these details, which explains some overlap with A. The separate HL7 demographic specification supports this classification; no matching demographic-definition passage was found in the inspected course pages.",
     "objection": "",
-    "basisNote": "The cited lecture does not itself define demographics; HL7 supports the specific category.",
-    "evidence": [],
+    "basisNote": "The supplied L9 PDF gives examples of demographic data in its inherited team notes. This is relevant context, not a separate lecturer answer.",
+    "evidence": [
+      {
+        "sourceId": "1h7L0vrIQ2CeqfQwC7l5TPpqkN1CpQ4R7",
+        "lectureTitle": "Team 444 · L9) Health data privacy, confidentiality, security .pdf",
+        "url": "https://drive.google.com/file/d/1h7L0vrIQ2CeqfQwC7l5TPpqkN1CpQ4R7",
+        "pdfPage": 10,
+        "quoteParts": [
+          "Examples of demographic data: name, address, occupation zip code, salary."
+        ],
+        "quote": "Examples of demographic data: name, address, occupation zip code, salary.",
+        "supportRole": "related",
+        "sourceKind": "reference-notes",
+        "sourceSha256": "449057a6f8431827e84a37eab95c03d76ff55beee428d1883ecded271c9dbfa3",
+        "verificationMethod": "text",
+        "image": "lecture-media/informatics/final-evidence/1h7L0vrIQ2CeqfQwC7l5TPpqkN1CpQ4R7-010.jpg",
+        "imageSha256": "d43d9619fad035f044877d9a977c610098875d8e666f0159a11cef046184867a",
+        "imageDimensions": [
+          1626,
+          2300
+        ],
+        "sourcePageCount": 15,
+        "sourceSection": "Golden notes (inherited Team443)"
+      }
+    ],
     "references": [
       {
         "title": "HL7 — Manage Patient Demographics",
@@ -11002,7 +11139,7 @@
           "privacy is the right and desire of a person to control the disclosure of personal health information."
         ],
         "quote": "privacy is the right and desire of a person to control the disclosure of personal health information.",
-        "supportRole": "direct",
+        "supportRole": "related",
         "sourceKind": "reference-notes",
         "sourceSha256": "449057a6f8431827e84a37eab95c03d76ff55beee428d1883ecded271c9dbfa3",
         "verificationMethod": "text",
@@ -12313,8 +12450,31 @@
     "basis": "interpretation",
     "explanation": "Name, identifying number and address are used to describe and identify a patient, making demographic data the likely intended category, C. A clinical datum concerns a health observation, while a narrative is a format and a dataset is a collection. The separate demographic standard supports this classification, while recognizing administrative uses of identifiers; no matching course definition was found.",
     "objection": "",
-    "basisNote": "Demographic data are not explicitly defined in the attached course passage.",
-    "evidence": [],
+    "basisNote": "The supplied L9 PDF gives examples of demographic data in its inherited team notes. This is relevant context, not a separate lecturer answer.",
+    "evidence": [
+      {
+        "sourceId": "1h7L0vrIQ2CeqfQwC7l5TPpqkN1CpQ4R7",
+        "lectureTitle": "Team 444 · L9) Health data privacy, confidentiality, security .pdf",
+        "url": "https://drive.google.com/file/d/1h7L0vrIQ2CeqfQwC7l5TPpqkN1CpQ4R7",
+        "pdfPage": 10,
+        "quoteParts": [
+          "Examples of demographic data: name, address, occupation zip code, salary."
+        ],
+        "quote": "Examples of demographic data: name, address, occupation zip code, salary.",
+        "supportRole": "related",
+        "sourceKind": "reference-notes",
+        "sourceSha256": "449057a6f8431827e84a37eab95c03d76ff55beee428d1883ecded271c9dbfa3",
+        "verificationMethod": "text",
+        "image": "lecture-media/informatics/final-evidence/1h7L0vrIQ2CeqfQwC7l5TPpqkN1CpQ4R7-010.jpg",
+        "imageSha256": "d43d9619fad035f044877d9a977c610098875d8e666f0159a11cef046184867a",
+        "imageDimensions": [
+          1626,
+          2300
+        ],
+        "sourcePageCount": 15,
+        "sourceSection": "Golden notes (inherited Team443)"
+      }
+    ],
     "references": [
       {
         "title": "HL7 — Manage Patient Demographics",
@@ -12852,7 +13012,7 @@
           "The collection, organization, and analysis of large amounts of biological data, using computers and databases."
         ],
         "quote": "The collection, organization, and analysis of large amounts of biological data, using computers and databases.",
-        "supportRole": "direct",
+        "supportRole": "related",
         "sourceKind": "lecture-notes",
         "sourceSha256": "ce7b9b5b5ffbd5ad1feb6842fd96a43c7a8cf6697024900cc11636578354c282",
         "verificationMethod": "text",
@@ -13581,8 +13741,7 @@
       "Electronic Health Records"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-443-p0077-q02": {
@@ -13592,8 +13751,7 @@
       "Clinical Data and Big Data"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-443-p0084-q03": {
@@ -13610,12 +13768,10 @@
     "lecture": "Telemedicine, mHealth and Wearables",
     "lectureOrder": 6,
     "informaticsLectures": [
-      "Telemedicine, mHealth and Wearables",
-      "Introduction to Medical Informatics"
+      "Telemedicine, mHealth and Wearables"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-443-p0098-q05": {
@@ -13645,8 +13801,7 @@
       "AI in Healthcare"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-443-p0119-q08": {
@@ -13656,8 +13811,7 @@
       "Electronic Health Records"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-443-p0126-q09": {
@@ -13667,8 +13821,7 @@
       "Electronic Health Records"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-443-p0133-q10": {
@@ -13678,8 +13831,7 @@
       "Electronic Health Records"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-443-p0140-q11": {
@@ -13689,8 +13841,7 @@
       "Electronic Health Records"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-443-p0147-q12": {
@@ -13724,15 +13875,13 @@
     ]
   },
   "informatics-final-443-p0165-q15": {
-    "lecture": "Patient Safety in Clinical Informatics",
-    "lectureOrder": 7,
+    "lecture": "Electronic Health Records",
+    "lectureOrder": 3,
     "informaticsLectures": [
-      "Patient Safety in Clinical Informatics",
       "Electronic Health Records"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-443-p0172-q16": {
@@ -13742,8 +13891,7 @@
       "Clinical Decision Support"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-443-p0179-q17": {
@@ -13753,8 +13901,7 @@
       "Clinical Decision Support"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-443-p0186-q18": {
@@ -13764,8 +13911,7 @@
       "Introduction to Medical Informatics"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-443-p0193-q19": {
@@ -13775,8 +13921,7 @@
       "Introduction to Medical Informatics"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-443-p0200-q20": {
@@ -13786,8 +13931,7 @@
       "Introduction to Medical Informatics"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-443-p0207-q21": {
@@ -13797,8 +13941,7 @@
       "Introduction to Medical Informatics"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-443-p0214-q22": {
@@ -13808,8 +13951,7 @@
       "Clinical Data and Big Data"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-443-p0221-q23": {
@@ -13819,8 +13961,7 @@
       "Clinical Data and Big Data"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-443-p0228-q24": {
@@ -13830,8 +13971,7 @@
       "Clinical Data and Big Data"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-443-p0235-q25": {
@@ -13841,8 +13981,7 @@
       "Clinical Data and Big Data"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-443-p0242-q26": {
@@ -13852,8 +13991,7 @@
       "Clinical Data and Big Data"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-443-p0249-q27": {
@@ -13863,8 +14001,7 @@
       "Clinical Decision Support"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-443-p0256-q28": {
@@ -13874,8 +14011,7 @@
       "Clinical Decision Support"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-443-p0263-q29": {
@@ -13885,8 +14021,7 @@
       "Clinical Decision Support"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-443-p0270-q30": {
@@ -13896,8 +14031,7 @@
       "Clinical Decision Support"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-443-p0277-q31": {
@@ -13907,8 +14041,7 @@
       "Clinical Decision Support"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-443-p0284-q32": {
@@ -13918,8 +14051,7 @@
       "Clinical Decision Support"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-443-p0291-q33": {
@@ -13929,8 +14061,7 @@
       "Clinical Decision Support"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-443-p0298-q34": {
@@ -13940,8 +14071,7 @@
       "Clinical Decision Support"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-443-p0305-q35": {
@@ -14011,8 +14141,7 @@
       "Clinical Data and Big Data"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-442-p0357-q03": {
@@ -14062,8 +14191,7 @@
       "AI in Healthcare"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-442-p0392-q08": {
@@ -14093,8 +14221,7 @@
       "Electronic Health Records"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-442-p0413-q11": {
@@ -14124,8 +14251,7 @@
       "Introduction to Medical Informatics"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-442-p0434-q14": {
@@ -14135,8 +14261,7 @@
       "Clinical Decision Support"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-442-p0442-q15": {
@@ -14146,8 +14271,7 @@
       "Clinical Decision Support"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-442-p0449-q16": {
@@ -14157,8 +14281,7 @@
       "Electronic Health Records"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-442-p0456-q17": {
@@ -14168,8 +14291,7 @@
       "Clinical Data and Big Data"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-442-p0463-q18": {
@@ -14179,8 +14301,7 @@
       "Electronic Health Records"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-442-p0470-q19": {
@@ -14190,8 +14311,7 @@
       "Electronic Health Records"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-442-p0477-q20": {
@@ -14201,8 +14321,7 @@
       "Electronic Health Records"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-442-p0484-q21": {
@@ -14212,8 +14331,7 @@
       "Electronic Health Records"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-442-p0491-q22": {
@@ -14233,8 +14351,7 @@
       "Introduction to Medical Informatics"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-442-p0506-q24": {
@@ -14244,8 +14361,7 @@
       "Clinical Decision Support"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-442-p0514-q25": {
@@ -14275,8 +14391,7 @@
       "AI in Healthcare"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-442-p0536-q28": {
@@ -14286,8 +14401,7 @@
       "Clinical Data and Big Data"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-442-p0543-q29": {
@@ -14297,8 +14411,7 @@
       "AI in Healthcare"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-442-p0550-q30": {
@@ -14318,8 +14431,7 @@
       "Clinical Decision Support"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-441-p0569-q01": {
@@ -14329,8 +14441,7 @@
       "Clinical Data and Big Data"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-441-p0582-q03": {
@@ -14340,8 +14451,7 @@
       "Clinical Decision Support"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-441-p0588-q04": {
@@ -14351,8 +14461,7 @@
       "Clinical Data and Big Data"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-441-p0593-q05": {
@@ -14372,8 +14481,7 @@
       "Clinical Data and Big Data"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-441-p0607-q07": {
@@ -14383,8 +14491,7 @@
       "Electronic Health Records"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-441-p0615-q08": {
@@ -14404,20 +14511,17 @@
       "Introduction to Medical Informatics"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-441-p0629-q10": {
     "lecture": "Telemedicine, mHealth and Wearables",
     "lectureOrder": 6,
     "informaticsLectures": [
-      "Telemedicine, mHealth and Wearables",
-      "Introduction to Medical Informatics"
+      "Telemedicine, mHealth and Wearables"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-441-p0643-q12": {
@@ -14427,8 +14531,7 @@
       "Clinical Data and Big Data"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-441-p0650-q13": {
@@ -14438,8 +14541,7 @@
       "Clinical Decision Support"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-441-p0656-q14": {
@@ -14449,8 +14551,7 @@
       "Clinical Data and Big Data"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-441-p0662-q15": {
@@ -14467,12 +14568,10 @@
     "lecture": "Telemedicine, mHealth and Wearables",
     "lectureOrder": 6,
     "informaticsLectures": [
-      "Telemedicine, mHealth and Wearables",
-      "Introduction to Medical Informatics"
+      "Telemedicine, mHealth and Wearables"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-438-p0682-q01": {
@@ -14482,8 +14581,7 @@
       "Introduction to Medical Informatics"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-438-p0689-q02": {
@@ -14503,8 +14601,7 @@
       "Introduction to Medical Informatics"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-438-p0703-q04": {
@@ -14514,8 +14611,7 @@
       "Electronic Health Records"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-438-p0710-q05": {
@@ -14525,20 +14621,17 @@
       "Clinical Data and Big Data"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-438-p0718-q06": {
-    "lecture": "Patient Safety in Clinical Informatics",
-    "lectureOrder": 7,
+    "lecture": "Electronic Health Records",
+    "lectureOrder": 3,
     "informaticsLectures": [
-      "Patient Safety in Clinical Informatics",
       "Electronic Health Records"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-438-p0732-q08": {
@@ -14558,8 +14651,7 @@
       "Introduction to Medical Informatics"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-438-p0746-q10": {
@@ -14569,8 +14661,7 @@
       "Electronic Health Records"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-438-p0753-q11": {
@@ -14580,8 +14671,7 @@
       "Clinical Data and Big Data"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-438-p0767-q13": {
@@ -14591,8 +14681,7 @@
       "Electronic Health Records"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-438-p0774-q14": {
@@ -14602,8 +14691,7 @@
       "Electronic Health Records"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-438-p0782-q15": {
@@ -14617,14 +14705,13 @@
     ]
   },
   "informatics-final-438-p0789-q16": {
-    "lecture": "Electronic Health Records",
-    "lectureOrder": 3,
+    "lecture": "Clinical Decision Support",
+    "lectureOrder": 4,
     "informaticsLectures": [
-      "Electronic Health Records"
+      "Clinical Decision Support"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-438-p0796-q17": {
@@ -14634,8 +14721,7 @@
       "Clinical Decision Support"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-438-p0803-q18": {
@@ -14645,8 +14731,7 @@
       "Clinical Decision Support"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-438-p0810-q19": {
@@ -14656,8 +14741,7 @@
       "Electronic Health Records"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-438-p0824-q21": {
@@ -14667,8 +14751,7 @@
       "Clinical Data and Big Data"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-438-p0832-q24": {
@@ -14678,8 +14761,7 @@
       "Clinical Data and Big Data"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-438-p0839-q25": {
@@ -14689,8 +14771,7 @@
       "Electronic Health Records"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-438-p0846-q26": {
@@ -14700,8 +14781,7 @@
       "Clinical Data and Big Data"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-438-p0853-q27": {
@@ -14721,8 +14801,7 @@
       "Clinical Decision Support"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-438-p0867-q29": {
@@ -14732,8 +14811,7 @@
       "Introduction to Medical Informatics"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-438-p0874-q30": {
@@ -14743,8 +14821,7 @@
       "Electronic Health Records"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-438-p0881-q31": {
@@ -14754,8 +14831,7 @@
       "Clinical Data and Big Data"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-438-p0888-q32": {
@@ -14805,8 +14881,7 @@
       "Clinical Decision Support"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-438-p0930-q38": {
@@ -14826,8 +14901,7 @@
       "Clinical Data and Big Data"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-437-p0958-q01": {
@@ -14837,8 +14911,7 @@
       "Electronic Health Records"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-437-p0965-q02": {
@@ -14848,8 +14921,7 @@
       "Clinical Decision Support"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-437-p0972-q03": {
@@ -14859,8 +14931,7 @@
       "Clinical Decision Support"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-437-p0979-q04": {
@@ -14870,8 +14941,7 @@
       "Clinical Decision Support"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-437-p1000-q07": {
@@ -14881,8 +14951,7 @@
       "Clinical Decision Support"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-437-p1007-q08": {
@@ -14902,8 +14971,7 @@
       "Electronic Health Records"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-437-p1021-q10": {
@@ -14913,8 +14981,7 @@
       "Clinical Decision Support"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-437-p1030-q11": {
@@ -14924,8 +14991,7 @@
       "Electronic Health Records"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-437-p1037-q12": {
@@ -14935,8 +15001,7 @@
       "Electronic Health Records"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-437-p1044-q13": {
@@ -14946,8 +15011,7 @@
       "Electronic Health Records"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-437-p1051-q14": {
@@ -14957,8 +15021,7 @@
       "Clinical Decision Support"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-437-p1058-q15": {
@@ -14968,15 +15031,14 @@
       "Introduction to Medical Informatics"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-437-p1067-q16": {
-    "lecture": "Patient Safety in Clinical Informatics",
-    "lectureOrder": 7,
+    "lecture": "Electronic Health Records",
+    "lectureOrder": 3,
     "informaticsLectures": [
-      "Patient Safety in Clinical Informatics"
+      "Electronic Health Records"
     ],
     "informaticsPracticeScopes": [
       "Final"
@@ -14989,19 +15051,17 @@
       "Clinical Decision Support"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-437-p1088-q19": {
-    "lecture": "Clinical Data and Big Data",
-    "lectureOrder": 2,
+    "lecture": "Health Data Privacy, Confidentiality and Security",
+    "lectureOrder": 9,
     "informaticsLectures": [
-      "Clinical Data and Big Data"
+      "Health Data Privacy, Confidentiality and Security"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-437-p1106-q21": {
@@ -15011,8 +15071,7 @@
       "Introduction to Medical Informatics"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-437-p1113-q22": {
@@ -15022,8 +15081,7 @@
       "Clinical Data and Big Data"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-437-p1120-q23": {
@@ -15033,20 +15091,17 @@
       "Electronic Health Records"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-437-p1127-q24": {
-    "lecture": "Patient Safety in Clinical Informatics",
-    "lectureOrder": 7,
+    "lecture": "Electronic Health Records",
+    "lectureOrder": 3,
     "informaticsLectures": [
-      "Patient Safety in Clinical Informatics",
       "Electronic Health Records"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-437-p1134-q25": {
@@ -15056,8 +15111,7 @@
       "Electronic Health Records"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-437-p1144-q26": {
@@ -15077,8 +15131,7 @@
       "Clinical Decision Support"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-437-p1158-q28": {
@@ -15098,8 +15151,7 @@
       "Electronic Health Records"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-437-p1194-q33": {
@@ -15119,8 +15171,7 @@
       "Electronic Health Records"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-437-p1208-q35": {
@@ -15140,8 +15191,7 @@
       "Clinical Data and Big Data"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-437-p1227-q38": {
@@ -15151,8 +15201,7 @@
       "Electronic Health Records"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-437-p1234-q39": {
@@ -15182,8 +15231,7 @@
       "Introduction to Medical Informatics"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-437-p1274-q44": {
@@ -15203,20 +15251,17 @@
       "Clinical Data and Big Data"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-437-p1288-q46": {
-    "lecture": "Patient Safety in Clinical Informatics",
-    "lectureOrder": 7,
+    "lecture": "Electronic Health Records",
+    "lectureOrder": 3,
     "informaticsLectures": [
-      "Patient Safety in Clinical Informatics",
       "Electronic Health Records"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-437-p1306-q48": {
@@ -15226,8 +15271,7 @@
       "Electronic Health Records"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-437-p1320-q50": {
@@ -15237,8 +15281,7 @@
       "Clinical Decision Support"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-437-p1338-q52": {
@@ -15248,8 +15291,7 @@
       "Electronic Health Records"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-437-p1345-q53": {
@@ -15259,8 +15301,7 @@
       "Clinical Decision Support"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-437-p1352-q54": {
@@ -15270,8 +15311,7 @@
       "Electronic Health Records"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-437-p1359-q55": {
@@ -15291,8 +15331,7 @@
       "Electronic Health Records"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-437-p1376-q57": {
@@ -15302,16 +15341,13 @@
       "Electronic Health Records"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-437-p1383-q58": {
-    "lecture": "Patient Safety in Clinical Informatics",
-    "lectureOrder": 7,
-    "informaticsLectures": [
-      "Patient Safety in Clinical Informatics"
-    ],
+    "lecture": null,
+    "lectureOrder": null,
+    "informaticsLectures": [],
     "informaticsPracticeScopes": [
       "Final"
     ]
@@ -15323,8 +15359,7 @@
       "Electronic Health Records"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-437-p1397-q60": {
@@ -15334,15 +15369,14 @@
       "Electronic Health Records"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-436-p1407-q01": {
-    "lecture": "Patient Safety in Clinical Informatics",
-    "lectureOrder": 7,
+    "lecture": "Electronic Health Records",
+    "lectureOrder": 3,
     "informaticsLectures": [
-      "Patient Safety in Clinical Informatics"
+      "Electronic Health Records"
     ],
     "informaticsPracticeScopes": [
       "Final"
@@ -15359,15 +15393,13 @@
     ]
   },
   "informatics-final-436-p1409-q03": {
-    "lecture": "Patient Safety in Clinical Informatics",
-    "lectureOrder": 7,
+    "lecture": "Electronic Health Records",
+    "lectureOrder": 3,
     "informaticsLectures": [
-      "Patient Safety in Clinical Informatics",
       "Electronic Health Records"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-436-p1410-q05": {
@@ -15377,8 +15409,7 @@
       "Clinical Data and Big Data"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-436-p1421-q06": {
@@ -15398,8 +15429,7 @@
       "Clinical Data and Big Data"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-436-p1435-q08": {
@@ -15409,8 +15439,7 @@
       "Clinical Data and Big Data"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-436-p1441-q09": {
@@ -15420,8 +15449,7 @@
       "Electronic Health Records"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-436-p1466-q12": {
@@ -15431,8 +15459,7 @@
       "Clinical Data and Big Data"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-436-p1473-q13": {
@@ -15442,8 +15469,7 @@
       "Clinical Data and Big Data"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-436-p1480-q14": {
@@ -15453,19 +15479,15 @@
       "Clinical Data and Big Data"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-436-p1487-q15": {
-    "lecture": "Clinical Data and Big Data",
-    "lectureOrder": 2,
-    "informaticsLectures": [
-      "Clinical Data and Big Data"
-    ],
+    "lecture": null,
+    "lectureOrder": null,
+    "informaticsLectures": [],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-436-p1494-q16": {
@@ -15475,8 +15497,7 @@
       "Clinical Data and Big Data"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-436-p1502-q17": {
@@ -15486,8 +15507,7 @@
       "Clinical Data and Big Data"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-436-p1516-q19": {
@@ -15497,8 +15517,7 @@
       "Introduction to Medical Informatics"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-436-p1523-q20": {
@@ -15508,8 +15527,7 @@
       "Introduction to Medical Informatics"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-436-p1542-q22": {
@@ -15519,8 +15537,7 @@
       "Clinical Data and Big Data"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-436-p1549-q23": {
@@ -15530,8 +15547,7 @@
       "Clinical Data and Big Data"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-436-p1563-q20": {
@@ -15541,8 +15557,7 @@
       "Electronic Health Records"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-436-p1570-q21": {
@@ -15552,8 +15567,7 @@
       "Clinical Decision Support"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-436-p1582-q22": {
@@ -15563,8 +15577,7 @@
       "Introduction to Medical Informatics"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-436-p1610-q26": {
@@ -15574,16 +15587,13 @@
       "Electronic Health Records"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-435-p1618-q01": {
-    "lecture": "Patient Safety in Clinical Informatics",
-    "lectureOrder": 7,
-    "informaticsLectures": [
-      "Patient Safety in Clinical Informatics"
-    ],
+    "lecture": null,
+    "lectureOrder": null,
+    "informaticsLectures": [],
     "informaticsPracticeScopes": [
       "Final"
     ]
@@ -15595,8 +15605,7 @@
       "Clinical Data and Big Data"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-435-p1639-q04": {
@@ -15606,19 +15615,17 @@
       "Clinical Data and Big Data"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-435-p1646-q05": {
-    "lecture": "Clinical Decision Support",
-    "lectureOrder": 4,
+    "lecture": "Clinical Data and Big Data",
+    "lectureOrder": 2,
     "informaticsLectures": [
-      "Clinical Decision Support"
+      "Clinical Data and Big Data"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-435-p1653-q06": {
@@ -15628,8 +15635,7 @@
       "Clinical Data and Big Data"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-435-p1666-q08": {
@@ -15639,8 +15645,7 @@
       "Clinical Decision Support"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-435-p1675-q09": {
@@ -15660,8 +15665,7 @@
       "Clinical Data and Big Data"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-435-p1690-q11": {
@@ -15671,8 +15675,7 @@
       "Clinical Data and Big Data"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-435-p1696-q12": {
@@ -15692,8 +15695,7 @@
       "Clinical Data and Big Data"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-435-p1710-q14": {
@@ -15703,8 +15705,7 @@
       "Clinical Decision Support"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-435-p1717-q15": {
@@ -15714,8 +15715,7 @@
       "Clinical Decision Support"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-435-p1724-q16": {
@@ -15725,8 +15725,7 @@
       "Electronic Health Records"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-435-p1739-q18": {
@@ -15736,8 +15735,7 @@
       "Introduction to Medical Informatics"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-435-p1748-q19": {
@@ -15757,8 +15755,7 @@
       "Clinical Decision Support"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-435-p1771-q22": {
@@ -15768,26 +15765,21 @@
       "Clinical Data and Big Data"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-435-p1778-q23": {
-    "lecture": "Patient Safety in Clinical Informatics",
-    "lectureOrder": 7,
-    "informaticsLectures": [
-      "Patient Safety in Clinical Informatics"
-    ],
+    "lecture": null,
+    "lectureOrder": null,
+    "informaticsLectures": [],
     "informaticsPracticeScopes": [
       "Final"
     ]
   },
   "informatics-final-435-p1785-q24": {
-    "lecture": "Patient Safety in Clinical Informatics",
-    "lectureOrder": 7,
-    "informaticsLectures": [
-      "Patient Safety in Clinical Informatics"
-    ],
+    "lecture": null,
+    "lectureOrder": null,
+    "informaticsLectures": [],
     "informaticsPracticeScopes": [
       "Final"
     ]
@@ -15809,8 +15801,7 @@
       "Introduction to Medical Informatics"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-435-p1816-q28": {
@@ -15820,19 +15811,17 @@
       "Clinical Data and Big Data"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-435-p1824-q29": {
-    "lecture": "Clinical Decision Support",
-    "lectureOrder": 4,
+    "lecture": "Electronic Health Records",
+    "lectureOrder": 3,
     "informaticsLectures": [
-      "Clinical Decision Support"
+      "Electronic Health Records"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-435-p1831-q30": {
@@ -15842,8 +15831,7 @@
       "Clinical Decision Support"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-434-p1838-q01": {
@@ -15853,8 +15841,7 @@
       "Clinical Decision Support"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-434-p1845-q02": {
@@ -15864,8 +15851,7 @@
       "Clinical Data and Big Data"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-434-p1852-q03": {
@@ -15885,8 +15871,7 @@
       "Clinical Decision Support"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-434-p1866-q05": {
@@ -15906,26 +15891,24 @@
       "Clinical Data and Big Data"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-434-p1884-q07": {
-    "lecture": "Clinical Data and Big Data",
-    "lectureOrder": 2,
+    "lecture": "Health Data Privacy, Confidentiality and Security",
+    "lectureOrder": 9,
     "informaticsLectures": [
-      "Clinical Data and Big Data"
+      "Health Data Privacy, Confidentiality and Security"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-434-p1891-q08": {
-    "lecture": "Patient Safety in Clinical Informatics",
-    "lectureOrder": 7,
+    "lecture": "Electronic Health Records",
+    "lectureOrder": 3,
     "informaticsLectures": [
-      "Patient Safety in Clinical Informatics"
+      "Electronic Health Records"
     ],
     "informaticsPracticeScopes": [
       "Final"
@@ -15942,22 +15925,19 @@
     ]
   },
   "informatics-final-434-p1913-q11": {
-    "lecture": "Clinical Decision Support",
-    "lectureOrder": 4,
+    "lecture": "Clinical Data and Big Data",
+    "lectureOrder": 2,
     "informaticsLectures": [
-      "Clinical Decision Support"
+      "Clinical Data and Big Data"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-434-p1919-q12": {
-    "lecture": "Patient Safety in Clinical Informatics",
-    "lectureOrder": 7,
-    "informaticsLectures": [
-      "Patient Safety in Clinical Informatics"
-    ],
+    "lecture": null,
+    "lectureOrder": null,
+    "informaticsLectures": [],
     "informaticsPracticeScopes": [
       "Final"
     ]
@@ -15969,8 +15949,7 @@
       "Introduction to Medical Informatics"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-434-p1933-q14": {
@@ -16000,8 +15979,7 @@
       "Introduction to Medical Informatics"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-434-p1959-q17": {
@@ -16011,8 +15989,7 @@
       "Electronic Health Records"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-434-p1972-q19": {
@@ -16022,8 +15999,7 @@
       "Clinical Data and Big Data"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-434-p1979-q20": {
@@ -16037,25 +16013,19 @@
     ]
   },
   "informatics-final-434-p1997-q22": {
-    "lecture": "Clinical Data and Big Data",
-    "lectureOrder": 2,
-    "informaticsLectures": [
-      "Clinical Data and Big Data"
-    ],
+    "lecture": null,
+    "lectureOrder": null,
+    "informaticsLectures": [],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-434-p2011-q24": {
-    "lecture": "Clinical Data and Big Data",
-    "lectureOrder": 2,
-    "informaticsLectures": [
-      "Clinical Data and Big Data"
-    ],
+    "lecture": null,
+    "lectureOrder": null,
+    "informaticsLectures": [],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-434-p2018-q25": {
@@ -16065,8 +16035,7 @@
       "Clinical Data and Big Data"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-434-p2025-q26": {
@@ -16076,8 +16045,7 @@
       "Introduction to Medical Informatics"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-434-p2032-q27": {
@@ -16087,8 +16055,7 @@
       "Clinical Data and Big Data"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-434-p2045-q29": {
@@ -16098,8 +16065,7 @@
       "Clinical Data and Big Data"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-434-p2059-q31": {
@@ -16109,8 +16075,7 @@
       "Electronic Health Records"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-434-p2066-q32": {
@@ -16120,30 +16085,25 @@
       "Clinical Data and Big Data"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-434-p2073-q33": {
-    "lecture": "AI in Healthcare",
-    "lectureOrder": 5,
+    "lecture": "Clinical Decision Support",
+    "lectureOrder": 4,
     "informaticsLectures": [
-      "AI in Healthcare"
+      "Clinical Decision Support"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-434-p2081-q34": {
-    "lecture": "Clinical Data and Big Data",
-    "lectureOrder": 2,
-    "informaticsLectures": [
-      "Clinical Data and Big Data"
-    ],
+    "lecture": null,
+    "lectureOrder": null,
+    "informaticsLectures": [],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-434-p2094-q36": {
@@ -16153,19 +16113,17 @@
       "Electronic Health Records"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-434-p2101-q37": {
-    "lecture": "Clinical Data and Big Data",
-    "lectureOrder": 2,
+    "lecture": "Clinical Decision Support",
+    "lectureOrder": 4,
     "informaticsLectures": [
-      "Clinical Data and Big Data"
+      "Clinical Decision Support"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-434-p2108-q38": {
@@ -16175,8 +16133,7 @@
       "Introduction to Medical Informatics"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-434-p2121-q40": {
@@ -16186,8 +16143,7 @@
       "Electronic Health Records"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-434-p2128-q41": {
@@ -16197,8 +16153,7 @@
       "Electronic Health Records"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-434-p2135-q42": {
@@ -16208,19 +16163,15 @@
       "Clinical Data and Big Data"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-434-p2142-q43": {
-    "lecture": "AI in Healthcare",
-    "lectureOrder": 5,
-    "informaticsLectures": [
-      "AI in Healthcare"
-    ],
+    "lecture": null,
+    "lectureOrder": null,
+    "informaticsLectures": [],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-434-p2163-q45": {
@@ -16250,8 +16201,7 @@
       "Clinical Decision Support"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-434-p2204-q50": {
@@ -16261,8 +16211,7 @@
       "Electronic Health Records"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-434-p2211-q51": {
@@ -16282,8 +16231,7 @@
       "Electronic Health Records"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-434-p2232-q54": {
@@ -16297,11 +16245,9 @@
     ]
   },
   "informatics-final-433-p2242-q01": {
-    "lecture": "Patient Safety in Clinical Informatics",
-    "lectureOrder": 7,
-    "informaticsLectures": [
-      "Patient Safety in Clinical Informatics"
-    ],
+    "lecture": null,
+    "lectureOrder": null,
+    "informaticsLectures": [],
     "informaticsPracticeScopes": [
       "Final"
     ]
@@ -16313,8 +16259,7 @@
       "Electronic Health Records"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-433-p2256-q03": {
@@ -16334,8 +16279,7 @@
       "Electronic Health Records"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-433-p2287-q07": {
@@ -16345,8 +16289,7 @@
       "Clinical Data and Big Data"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-433-p2294-q08": {
@@ -16376,19 +16319,15 @@
       "Clinical Decision Support"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-433-p2324-q12": {
-    "lecture": "Introduction to Medical Informatics",
-    "lectureOrder": 1,
-    "informaticsLectures": [
-      "Introduction to Medical Informatics"
-    ],
+    "lecture": null,
+    "lectureOrder": null,
+    "informaticsLectures": [],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-433-p2331-q13": {
@@ -16398,8 +16337,7 @@
       "Electronic Health Records"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-433-p2345-q15": {
@@ -16419,8 +16357,7 @@
       "Introduction to Medical Informatics"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-433-p2366-q18": {
@@ -16430,8 +16367,7 @@
       "Clinical Decision Support"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-433-p2373-q19": {
@@ -16451,16 +16387,13 @@
       "Clinical Data and Big Data"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-433-p2387-q21": {
-    "lecture": "Patient Safety in Clinical Informatics",
-    "lectureOrder": 7,
-    "informaticsLectures": [
-      "Patient Safety in Clinical Informatics"
-    ],
+    "lecture": null,
+    "lectureOrder": null,
+    "informaticsLectures": [],
     "informaticsPracticeScopes": [
       "Final"
     ]
@@ -16472,8 +16405,7 @@
       "Introduction to Medical Informatics"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-433-p2402-q23": {
@@ -16503,8 +16435,7 @@
       "Electronic Health Records"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-433-p2438-q28": {
@@ -16518,14 +16449,11 @@
     ]
   },
   "informatics-final-433-p2447-q29": {
-    "lecture": "Introduction to Medical Informatics",
-    "lectureOrder": 1,
-    "informaticsLectures": [
-      "Introduction to Medical Informatics"
-    ],
+    "lecture": null,
+    "lectureOrder": null,
+    "informaticsLectures": [],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-433-p2454-q30": {
@@ -16535,8 +16463,7 @@
       "Clinical Data and Big Data"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-433-p2468-q32": {
@@ -16546,8 +16473,7 @@
       "Clinical Decision Support"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-433-p2475-q33": {
@@ -16557,8 +16483,7 @@
       "Electronic Health Records"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-433-p2482-q34": {
@@ -16568,19 +16493,17 @@
       "Clinical Data and Big Data"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-433-p2498-q36": {
-    "lecture": "Clinical Data and Big Data",
-    "lectureOrder": 2,
+    "lecture": "Health Data Privacy, Confidentiality and Security",
+    "lectureOrder": 9,
     "informaticsLectures": [
-      "Clinical Data and Big Data"
+      "Health Data Privacy, Confidentiality and Security"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-433-p2505-q37": {
@@ -16610,16 +16533,13 @@
       "Electronic Health Records"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-433-p2526-q40": {
-    "lecture": "Patient Safety in Clinical Informatics",
-    "lectureOrder": 7,
-    "informaticsLectures": [
-      "Patient Safety in Clinical Informatics"
-    ],
+    "lecture": null,
+    "lectureOrder": null,
+    "informaticsLectures": [],
     "informaticsPracticeScopes": [
       "Final"
     ]
@@ -16631,8 +16551,7 @@
       "Introduction to Medical Informatics"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-433-p2561-q45": {
@@ -16642,8 +16561,7 @@
       "Introduction to Medical Informatics"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-433-p2572-q46": {
@@ -16653,8 +16571,7 @@
       "Electronic Health Records"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-433-p2579-q47": {
@@ -16684,8 +16601,7 @@
       "Introduction to Medical Informatics"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-433-p2600-q50": {
@@ -16705,8 +16621,7 @@
       "Clinical Decision Support"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-433-p2613-q52": {
@@ -16726,8 +16641,7 @@
       "Electronic Health Records"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-433-p2641-q56": {
@@ -16747,19 +16661,17 @@
       "Introduction to Medical Informatics"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-433-p2660-q58": {
-    "lecture": "Clinical Decision Support",
-    "lectureOrder": 4,
+    "lecture": "Clinical Data and Big Data",
+    "lectureOrder": 2,
     "informaticsLectures": [
-      "Clinical Decision Support"
+      "Clinical Data and Big Data"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-433-p2667-q59": {
@@ -16769,16 +16681,13 @@
       "Clinical Data and Big Data"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-433-p2674-q60": {
-    "lecture": "Patient Safety in Clinical Informatics",
-    "lectureOrder": 7,
-    "informaticsLectures": [
-      "Patient Safety in Clinical Informatics"
-    ],
+    "lecture": null,
+    "lectureOrder": null,
+    "informaticsLectures": [],
     "informaticsPracticeScopes": [
       "Final"
     ]
@@ -16790,8 +16699,7 @@
       "Introduction to Medical Informatics"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-432-p2699-q02": {
@@ -16801,8 +16709,7 @@
       "Clinical Data and Big Data"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-432-p2706-q03": {
@@ -16812,8 +16719,7 @@
       "Clinical Decision Support"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-432-p2713-q04": {
@@ -16833,16 +16739,13 @@
       "Electronic Health Records"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-432-p2738-q07": {
-    "lecture": "Patient Safety in Clinical Informatics",
-    "lectureOrder": 7,
-    "informaticsLectures": [
-      "Patient Safety in Clinical Informatics"
-    ],
+    "lecture": null,
+    "lectureOrder": null,
+    "informaticsLectures": [],
     "informaticsPracticeScopes": [
       "Final"
     ]
@@ -16854,30 +16757,23 @@
       "Electronic Health Records"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-432-p2752-q09": {
-    "lecture": "Clinical Data and Big Data",
-    "lectureOrder": 2,
-    "informaticsLectures": [
-      "Clinical Data and Big Data"
-    ],
+    "lecture": null,
+    "lectureOrder": null,
+    "informaticsLectures": [],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-432-p2759-q10": {
-    "lecture": "Clinical Data and Big Data",
-    "lectureOrder": 2,
-    "informaticsLectures": [
-      "Clinical Data and Big Data"
-    ],
+    "lecture": null,
+    "lectureOrder": null,
+    "informaticsLectures": [],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-432-p2766-q11": {
@@ -16897,8 +16793,7 @@
       "Clinical Data and Big Data"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-432-p2780-q13": {
@@ -16908,8 +16803,7 @@
       "Clinical Decision Support"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-432-p2794-q15": {
@@ -16919,8 +16813,7 @@
       "Introduction to Medical Informatics"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-432-p2801-q16": {
@@ -16930,8 +16823,7 @@
       "Clinical Data and Big Data"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-432-p2808-q17": {
@@ -16941,27 +16833,23 @@
       "Electronic Health Records"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-432-p2816-q18": {
-    "lecture": "Clinical Data and Big Data",
-    "lectureOrder": 2,
+    "lecture": "Health Data Privacy, Confidentiality and Security",
+    "lectureOrder": 9,
     "informaticsLectures": [
-      "Clinical Data and Big Data"
+      "Health Data Privacy, Confidentiality and Security"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-432-p2823-q19": {
-    "lecture": "Patient Safety in Clinical Informatics",
-    "lectureOrder": 7,
-    "informaticsLectures": [
-      "Patient Safety in Clinical Informatics"
-    ],
+    "lecture": null,
+    "lectureOrder": null,
+    "informaticsLectures": [],
     "informaticsPracticeScopes": [
       "Final"
     ]
@@ -16973,8 +16861,7 @@
       "Electronic Health Records"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-432-p2837-q21": {
@@ -16994,8 +16881,7 @@
       "Clinical Decision Support"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-432-p2851-q23": {
@@ -17015,8 +16901,7 @@
       "Electronic Health Records"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-432-p2872-q26": {
@@ -17026,8 +16911,7 @@
       "Introduction to Medical Informatics"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-432-p2879-q27": {
@@ -17037,8 +16921,7 @@
       "Electronic Health Records"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-432-p2893-q29": {
@@ -17098,8 +16981,7 @@
       "Electronic Health Records"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-431-p2973-q03": {
@@ -17109,8 +16991,7 @@
       "Introduction to Medical Informatics"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-431-p2980-q04": {
@@ -17120,8 +17001,7 @@
       "Electronic Health Records"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-431-p2993-q06": {
@@ -17141,8 +17021,7 @@
       "Electronic Health Records"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-431-p3015-q09": {
@@ -17152,8 +17031,7 @@
       "Electronic Health Records"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-431-p3022-q10": {
@@ -17163,8 +17041,7 @@
       "Introduction to Medical Informatics"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-431-p3033-q11": {
@@ -17178,21 +17055,17 @@
     ]
   },
   "informatics-final-431-p3040-q12": {
-    "lecture": "Patient Safety in Clinical Informatics",
-    "lectureOrder": 7,
-    "informaticsLectures": [
-      "Patient Safety in Clinical Informatics"
-    ],
+    "lecture": null,
+    "lectureOrder": null,
+    "informaticsLectures": [],
     "informaticsPracticeScopes": [
       "Final"
     ]
   },
   "informatics-final-431-p3047-q13": {
-    "lecture": "Patient Safety in Clinical Informatics",
-    "lectureOrder": 7,
-    "informaticsLectures": [
-      "Patient Safety in Clinical Informatics"
-    ],
+    "lecture": null,
+    "lectureOrder": null,
+    "informaticsLectures": [],
     "informaticsPracticeScopes": [
       "Final"
     ]
@@ -17204,8 +17077,7 @@
       "Electronic Health Records"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-431-p3082-q17": {
@@ -17215,8 +17087,7 @@
       "Introduction to Medical Informatics"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-431-p3096-q19": {
@@ -17226,16 +17097,13 @@
       "Introduction to Medical Informatics"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-431-p3103-q20": {
-    "lecture": "Patient Safety in Clinical Informatics",
-    "lectureOrder": 7,
-    "informaticsLectures": [
-      "Patient Safety in Clinical Informatics"
-    ],
+    "lecture": null,
+    "lectureOrder": null,
+    "informaticsLectures": [],
     "informaticsPracticeScopes": [
       "Final"
     ]
@@ -17257,20 +17125,17 @@
       "Clinical Decision Support"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-431-p3132-q24": {
     "lecture": "Telemedicine, mHealth and Wearables",
     "lectureOrder": 6,
     "informaticsLectures": [
-      "Telemedicine, mHealth and Wearables",
-      "Introduction to Medical Informatics"
+      "Telemedicine, mHealth and Wearables"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-431-p3139-q25": {
@@ -17280,8 +17145,7 @@
       "Electronic Health Records"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-431-p3146-q26": {
@@ -17295,11 +17159,9 @@
     ]
   },
   "informatics-final-431-p3167-q29": {
-    "lecture": "Patient Safety in Clinical Informatics",
-    "lectureOrder": 7,
-    "informaticsLectures": [
-      "Patient Safety in Clinical Informatics"
-    ],
+    "lecture": null,
+    "lectureOrder": null,
+    "informaticsLectures": [],
     "informaticsPracticeScopes": [
       "Final"
     ]
@@ -17311,8 +17173,7 @@
       "Clinical Decision Support"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-431-p3188-q32": {
@@ -17322,8 +17183,7 @@
       "Clinical Decision Support"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   },
   "informatics-final-431-p3203-q34": {
@@ -17333,8 +17193,7 @@
       "Electronic Health Records"
     ],
     "informaticsPracticeScopes": [
-      "Final",
-      "Midterm"
+      "Final"
     ]
   }
 };
@@ -18165,7 +18024,10 @@
       const review = reviews[question.id];
       if (!review) return {...question, lecture: null, informaticsLectures: [], hideFromLecture: true,
         informaticsFinalOutOfScope: true, informaticsReviewStatus: "deferred"};
-      return {...question, ...placements[question.id], hideFromLecture: false,
+      const placement = placements[question.id];
+      const verifiedPlacement = Boolean(placement.lecture);
+      return {...question, ...placement, hideFromLecture: !verifiedPlacement,
+        informaticsFinalLectureUnverified: !verifiedPlacement,
         informaticsReviewStatus: "reviewed", informaticsFinalReview: review,
         explanation: review.explanation, informaticsEvidence: review.evidence,
         informaticsEvidenceStatus: review.basis === "lecture" ? "direct" : review.evidence.length ? "related" : "unavailable",

@@ -16,6 +16,11 @@ const hash = value => crypto.createHash('sha256').update(value).digest('hex');
 // inside an original option is source content, not whitespace to be discarded.
 const normalize = text => String(text).split(/[\p{White_Space}\u001c-\u001f]+/u).filter(Boolean).join(' ');
 const isFinal = question => question.subjectId === 'informatics' && question.assessment === 'Final';
+const beforeMidAudit = question => {
+  if (question.subjectId !== 'informatics' || question.assessment !== 'Midterm' || !question.sourceOccurrenceIntegrity) return question;
+  const {sourceOccurrenceIntegrity, sourceTranscript, ...original} = question;
+  return original;
+};
 const sourceProjection = question => ({
   ...Object.fromEntries(fixture.sourceFields.filter(key => key in question).map(key => [key, question[key]])),
   giftPolicy: question.giftReview.policy,
@@ -65,7 +70,7 @@ context.window.GIFT445_COMPLETE_INFORMATICS_FINAL = bank => bank;
 vm.runInContext(code, context);
 const before = context.window.__FINAL_COMPLETE_TEST_BANK;
 assert.equal(before.length, fixture.runtimeCount);
-assert.equal(hash(canonical(plain(before).filter(question => !isFinal(question)))), fixture.otherRuntimeSha256);
+assert.equal(hash(canonical(plain(before).filter(question => !isFinal(question)).map(beforeMidAudit))), fixture.otherRuntimeSha256);
 const oldFinal = plain(before).filter(isFinal);
 assert.equal(hash(canonical(oldFinal.map(sourceProjection))), fixture.finalSourceSha256);
 assert.equal(hash(canonical(oldFinal.map(nativeProjection))), fixture.nativeInventorySha256,
@@ -89,7 +94,7 @@ const bank = plain(context.window.__FINAL_COMPLETE_TEST_BANK);
 assert.deepEqual(bank, plain(completed), 'The application differs from the tested completion result');
 assert.equal(bank.length, fixture.runtimeCount);
 assert.equal(new Set(bank.map(question => question.id)).size, bank.length);
-assert.equal(hash(canonical(bank.filter(question => !isFinal(question)))), fixture.otherRuntimeSha256,
+assert.equal(hash(canonical(bank.filter(question => !isFinal(question)).map(beforeMidAudit))), fixture.otherRuntimeSha256,
   'Another subject, original MID record or batch-only question changed');
 const final = bank.filter(isFinal);
 assert.equal(final.length, 431);
@@ -100,6 +105,13 @@ assert.equal(hash(canonical(final.map(nativeProjection))), fixture.nativeInvento
 
 const byId = new Map(bank.map(question => [question.id, question]));
 const courseLectures = new Set(fixture.courseLectures);
+const sourceLecture = new Map([
+  ...fixture.courseLectures.slice(0, 5).map((lecture, index) => [`team444-L${index + 1}`, lecture]),
+  ['1DMkrjtv4Jx0cRPriZ_Gq4ggQ4TehrOKB', fixture.courseLectures[5]],
+  ['1iMs82SSGkUZYixU596G7OjwOCisOLVng', fixture.courseLectures[6]],
+  ['182Eb2lnOvjMES7eUOe2Oz37bL-LJp0oT', fixture.courseLectures[7]],
+  ['1h7L0vrIQ2CeqfQwC7l5TPpqkN1CpQ4R7', fixture.courseLectures[8]]
+]);
 const expectedReviewIds = new Set([
   ...oldFinal.filter(question => courseLectures.has(question.lecture)).map(question => question.id),
   ...fixture.recoveredIds
@@ -108,6 +120,11 @@ assert.equal(expectedReviewIds.size, 351);
 assert.deepEqual(Object.keys(reviews).sort(), [...expectedReviewIds].sort(), 'A source question was omitted, duplicated or reviewed outside the nine lectures');
 const outside = final.filter(question => !expectedReviewIds.has(question.id));
 assert.equal(outside.length, 80);
+const placed = final.filter(question => question.lecture);
+assert.equal(placed.length, 327);
+assert.equal(final.filter(question => question.informaticsFinalLectureUnverified).length, 24);
+assert.deepEqual(fixture.courseLectures.map(lecture => placed.filter(question => question.lecture === lecture).length),
+  [36, 61, 77, 52, 4, 31, 28, 11, 27], 'Verified lecture coverage changed');
 for (const question of final) {
   assert.equal(question.batchOnly, undefined, 'Final source occurrences must not become duplicate bank-only copies');
   assert.equal(question.assessment, 'Final');
@@ -116,9 +133,18 @@ for (const question of final) {
   if (review) {
     assert.deepEqual(question.informaticsFinalReview, review, `${question.id}: authored review is not visible`);
     assert.equal(question.informaticsReviewStatus, 'reviewed');
-    assert.ok(courseLectures.has(question.lecture), `${question.id}: invented lecture`);
-    assert.ok(question.informaticsLectures.length && question.informaticsLectures.every(lecture => courseLectures.has(lecture)), question.id);
-    assert.ok(!question.hideFromLecture && !question.informaticsFinalOutOfScope, question.id);
+    assert.ok(!question.informaticsFinalOutOfScope, question.id);
+    if (review.evidence.some(passage => sourceLecture.has(passage.sourceId))) {
+      assert.ok(courseLectures.has(question.lecture), `${question.id}: invented lecture`);
+      assert.deepEqual(question.informaticsLectures, [question.lecture], `${question.id}: duplicate lecture placement`);
+      assert.ok(review.evidence.some(passage => sourceLecture.get(passage.sourceId) === question.lecture),
+        `${question.id}: primary lecture has no verified matching passage`);
+      assert.ok(!question.hideFromLecture && !question.informaticsFinalLectureUnverified, question.id);
+    } else {
+      assert.equal(question.lecture, null, `${question.id}: invented lecture for interpretation only`);
+      assert.deepEqual(question.informaticsLectures, []);
+      assert.ok(question.hideFromLecture && question.informaticsFinalLectureUnverified, question.id);
+    }
     assert.ok(review.explanation.trim().length >= 140, `${question.id}: missing individual explanation`);
     assert.doesNotMatch(review.explanation, /provides the matching rule or definition|verification is pending|Explanation deferred/i, question.id);
     assert.doesNotMatch(review.explanation + review.objection + review.basisNote, /[\u0600-\u06ff\ufb50-\ufdff\ufe70-\ufeff]/u, question.id);
@@ -195,8 +221,27 @@ for (const [batch, count] of Object.entries(fixture.batchCounts)) {
   assert.deepEqual(actual.map(question => question.id), fixture.batchIds[batch], `Batch ${batch}: source order, repeated numbering or occurrences changed`);
   assert.deepEqual(plain(context.window.GIFT445_ORIGINAL_BATCH_INDEX.informatics[`Final|${batch}`]), fixture.batchIds[batch]);
 }
-assert.equal(context.questionsForAssessment('informatics', 'Final').length, 431, 'The complete Final bank was filtered by lecture scope');
-assert.equal(context.questionsForAssessment('informatics', 'Midterm').length, 620);
+const sourceBank = context.window.GIFT445_INFORMATICS_BANK;
+assert.equal(sourceBank.entries(bank, 'Final').length, 431, 'Final source inventory was filtered by lecture scope');
+assert.equal(sourceBank.entries(bank, 'Midterm').length, 448, 'Midterm source inventory was filtered by lecture scope');
+assert.equal(sourceBank.practice(sourceBank.entries(bank)).length, 838);
+for (const [assessment, expected] of [['Midterm', 432], ['Final', 420]]) {
+  const practice = context.questionsForAssessment('informatics', assessment);
+  assert.equal(practice.length, expected);
+  assert.ok(practice.every(question => question.assessment === assessment), 'Assessment practice mixed two original Gift files');
+  assert.deepEqual(plain(practice), plain(sourceBank.order(practice)), 'Practice no longer follows the original file');
+  const original = sourceBank.entries(bank, assessment);
+  assert.deepEqual(plain(original.map(q => q.id)), plain(Object.entries(context.window.GIFT445_ORIGINAL_BATCH_INDEX.informatics)
+    .filter(([key]) => key.startsWith(`${assessment}|`)).flatMap(([, ids]) => ids)), 'Source order changed');
+  assert.ok(original.every(question => sourceBank.location(question)?.url.startsWith('https://docs.google.com/document/d/')));
+}
+assert.equal(sourceBank.location(byId.get('informatics-mid-443-p0197')).number, 'Unnumbered in source');
+assert.equal(sourceBank.location(byId.get('informatics-final-436-p1409-q02')).number, 'Original Q2');
+for (const title of fixture.courseLectures) {
+  const practice = sourceBank.lecture(bank.filter(q => q.subjectId === 'informatics'), [title]);
+  assert.ok(practice.every(q => q.lecture === title && !q.hideFromLecture && !q.batchOnly));
+  assert.deepEqual(plain(practice), plain(sourceBank.practice(practice)), `${title}: a confirmed repeat entered the lecture route`);
+}
 assert.equal(context.window.GIFT445_INFORMATICS_FINAL_COMPLETE, true);
 assert.deepEqual(plain(context.window.GIFT445_INFORMATICS_CATALOG).flatMap(group => group.lectures), fixture.courseLectures);
 assert.equal(context.window.GIFT445_INFORMATICS_CATALOG.length, 2);
@@ -243,7 +288,7 @@ for (const question of final) {
       const key = [question.sourceAnswer].flat().filter(Boolean);
       if (!key.length) assert.doesNotMatch(output, /Differs from Gift/, `${question.id}: blank key falsely labelled a conflict`);
     } else {
-      assert.match(output, /outside the nine supplied course lectures/, question.id);
+      assert.match(output, /No matching passage in the supplied course lectures has been verified/, question.id);
       assert.doesNotMatch(output, /<strong>Explanation|Course reference:|Related course context:|Supplementary study file:/, question.id);
     }
     for (const button of buttons) {
@@ -269,8 +314,10 @@ assert.doesNotMatch(renderer.workspaceElement.innerHTML, /Waiting for Lecture Fi
 const cards = [...renderer.workspaceElement.innerHTML.matchAll(/class="route-card direct-lecture-card"[^>]*data-lecture="([^"]+)"/g)].map(match => match[1]);
 assert.equal(cards.length, 9);
 assert.deepEqual(cards, fixture.courseLectures.map(renderer.escapeHtml));
-assert.match(renderer.workspaceElement.innerHTML, /431 questions/);
-assert.match(renderer.workspaceElement.innerHTML, /620 questions/);
+assert.match(renderer.workspaceElement.innerHTML, /431 original entries · 420 questions for practice/);
+assert.match(renderer.workspaceElement.innerHTML, /448 original entries · 432 questions for practice/);
+assert.match(renderer.workspaceElement.innerHTML, /838 questions for practice · 879 original entries/);
+assert.doesNotMatch(renderer.workspaceElement.innerHTML, /620 questions/);
 const elements = new Map();
 renderer.workspaceElement.querySelector = selector => {if (!elements.has(selector)) elements.set(selector, stub()); return elements.get(selector);};
 renderer.openLectureMixer('informatics');
@@ -279,6 +326,20 @@ assert.equal(mixedLectures.length, 9);
 assert.deepEqual([...mixedLectures].sort(), fixture.courseLectures.map(renderer.escapeHtml).sort());
 assert.doesNotMatch(renderer.workspaceElement.innerHTML, /pending|lecture waiting/i);
 
+// An old MID quick review could be paused on a Final entry. Follow that exact
+// saved entry into its correct bank instead of resetting the question or answer.
+const savedFinal = byId.get('informatics-final-437-p1044-q13');
+renderer.renderQuestionSetView = noop;
+renderer.appState.navigation = {subjectId: 'informatics', mode: 'assessment', assessment: 'Midterm'};
+renderer.appState.quiz = {questionIds: [savedFinal.id], currentIndex: 0, answers: {[savedFinal.id]: 'C'}, flagged: [savedFinal.id]};
+renderer.resumeNavigation();
+assert.equal(renderer.appState.navigation.assessment, 'Final');
+assert.equal(renderer.appState.quiz.questionIds.length, 420);
+assert.equal(renderer.appState.quiz.questionIds[renderer.appState.quiz.currentIndex], savedFinal.id);
+assert.equal(renderer.appState.quiz.answers[savedFinal.id], 'C');
+assert.equal(renderer.appState.quiz.flagged[0], savedFinal.id);
+assert.ok(!renderer.appState.quiz.questionIds.includes('informatics-final-438-p0767-q13'), 'The saved repeat and its equivalent both entered practice');
+
 // Regression cases independently recovered through actual diagram inspection.
 assert.deepEqual(reviews['informatics-final-442-p0543-q29'].answers, ['A']);
 assert.ok(reviews['informatics-final-442-p0543-q29'].evidence.some(passage => passage.sourceId === 'team444-L5' && passage.pdfPage === 8 && passage.supportRole === 'direct'));
@@ -286,6 +347,15 @@ assert.deepEqual(reviews['informatics-final-441-p0588-q04'].answers, ['A']);
 assert.ok(reviews['informatics-final-441-p0588-q04'].evidence.some(passage => passage.sourceId === 'team444-L2' && passage.pdfPage === 4 && passage.supportRole === 'direct'));
 assert.deepEqual(reviews['informatics-final-442-p0499-q23'].answers, ['A']);
 assert.equal(byId.get('informatics-final-442-p0499-q23').sourceAnswer, 'C');
+assert.equal(byId.get('informatics-final-443-p0165-q15').lecture, 'Electronic Health Records', 'E-iatrogenesis definition is from L3');
+assert.equal(byId.get('informatics-final-438-p0789-q16').lecture, 'Clinical Decision Support', 'CDSS alert fatigue is from L4');
+const demographicReview = byId.get('informatics-final-437-p1088-q19');
+assert.equal(demographicReview.lecture, 'Health Data Privacy, Confidentiality and Security');
+assert.ok(demographicReview.informaticsFinalReview.evidence.some(passage => passage.pdfPage === 10
+  && passage.sourceKind === 'reference-notes' && passage.supportRole === 'related'));
+assert.equal(byId.get('informatics-final-435-p1785-q24').lecture, null, 'Sodium sulphate terminology has no verified course placement');
+assert.deepEqual(reviews['informatics-final-443-p0242-q26'].evidence[0].quoteParts,
+  ['Staging', 'the process of cleaning the data from any incorrect or missing values.'], 'Separate source table cells stay separate');
 assert.deepEqual(reviews['informatics-final-435-p1703-q13'].answers, []);
 assert.match(reviews['informatics-final-435-p1703-q13'].explanation, /incomplete|incompleteness/i);
 // Location alone does not establish a record's interoperability scope.
@@ -299,4 +369,4 @@ for (const id of ['informatics-final-442-p0357-q03', 'informatics-final-441-p066
   assert.match(reviews[id].objection, /Both offered classifications apply/);
 }
 
-console.log(`PASS: all 431 native Final occurrences and 11 batches preserved; 351 individual reviews, 80 original-bank questions outside the nine supplied lectures; ${Object.keys(assets).length} authentic source pages, ${clicks} all-choice/reload checks; original Gift grading and all other runtime records unchanged.`);
+console.log(`PASS: 448 MID and 431 Final original entries kept in source order; 432 MID and 420 Final practice questions, 838 combined; 351 individual Final reviews with 327 verified primary placements; ${Object.keys(assets).length} authentic source pages and ${clicks} all-choice/reload checks.`);

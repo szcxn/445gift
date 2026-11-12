@@ -1150,9 +1150,9 @@
     <aside class="site-updates" lang="ar" dir="rtl" aria-labelledby="site-updates-title">
       <div class="site-updates-head">
         <span class="site-updates-label" id="site-updates-title">آخر التحديثات</span>
-        <time datetime="2026-11-05">٥ نوفمبر ٢٠٢٦</time>
+        <time datetime="2026-11-12">١٢ نوفمبر ٢٠٢٦</time>
       </div>
-      <p><strong>أحدث تحديث:</strong> إضافة قيفت فاينل الإنفورماتيكس.</p>
+      <p><strong>أحدث تحديث:</strong> قيفت الإنفورماتيكس: فصل الميد والفاينل، ترتيب الباتشات حسب الملفات الأصلية، ومراجعة تصنيف أسئلة الفاينل.</p>
       <p><strong>تحديث سابق:</strong> إضافة مادتي الراديولوجي والريسيرش: أسئلة الميد مرتبة حسب المحاضرات، مع شروح واضحة والاستدلال بالمحاضرات عند توفر الدليل، والحفاظ على إجابات القيفت الأصلية.</p>
       <p><strong>تحديث سابق:</strong> تطوير ضخم لشروح إجابات الباطنة والسيرجري للميد: عرض أبسط وأوضح للإجابة والشرح، مع الاستدلال بالسلايدات عند توفر الدليل، وتوضيح الإجابات المختلف عليها، والحفاظ على مفتاح القيفت الأصلي.</p>
       <p><strong>تحديث سابق:</strong> إضافة مادة الإنفورماتكس: أسئلة الميد مرتبة حسب المحاضرات، مع شروح مدعومة بالسلايدات والحفاظ على إجابات القيفت الأصلية.</p>
@@ -1237,7 +1237,10 @@
   <script src="batch-source-repairs.js?v=20261020-batch-audit-1"></script>
   <script src="original-batches.js?v=20261020-complete-batches-1"></script>
   <script src="mid-slide-evidence.js?v=20261104-mid-sources-1"></script>
-  <script src="informatics-final-review.js?v=20261105-final-review-1"></script>
+  <script src="informatics-final-review.js?v=20261112-source-audit-1"></script>
+  <script src="informatics-source-repeats.js?v=20261112-1"></script>
+  <script src="informatics-source-navigation.js?v=20261112-1"></script>
+  <script src="informatics-mid-source-integrity.js?v=20261112-1"></script>
   <script>
     const SUBJECTS = [
       { id: "medicine", name: "Medicine", code: "MED", index: "01", description: "Review the full bank or study by batch, cycle, and lecture.", color: "#087eb6" },
@@ -1260,7 +1263,7 @@
       "Hematology & Oncology"
     ];
 
-    const QUESTION_BANK = window.GIFT445_COMPLETE_INFORMATICS_FINAL(window.GIFT445_COMPLETE_MID_EVIDENCE(deduplicateQuestions(window.GIFT445_EXTEND_BATCH_BANK(window.GIFT445_REPAIR_BANK([
+    const QUESTION_BANK = window.GIFT445_AUDIT_INFORMATICS_MID(window.GIFT445_COMPLETE_INFORMATICS_FINAL(window.GIFT445_COMPLETE_MID_EVIDENCE(deduplicateQuestions(window.GIFT445_EXTEND_BATCH_BANK(window.GIFT445_REPAIR_BANK([
       ...(window.GIFT445_QUESTIONS || []),
       ...(window.GIFT445_SURGERY_QUESTIONS || []),
       ...(window.GIFT445_COMMUNITY_QUESTIONS || []),
@@ -1268,7 +1271,7 @@
       ...(window.GIFT445_INFORMATICS_FINAL_QUESTIONS || []),
       ...(window.GIFT445_RESEARCH_QUESTIONS || []),
       ...(window.GIFT445_RADIOLOGY_QUESTIONS || [])
-    ].filter(question => !question.excluded))))));
+    ].filter(question => !question.excluded)))))));
 
     function deduplicateQuestions(questions) {
       const seenIds = new Set();
@@ -1507,6 +1510,9 @@
       const subject = SUBJECTS.find(item => item.id === subjectId);
       if (!subject) return;
       const questions = questionsFor(subjectId);
+      const informaticsBank = subjectId === "informatics" ? window.GIFT445_INFORMATICS_BANK : null;
+      const originalEntries = informaticsBank?.entries(QUESTION_BANK);
+      const allPractice = informaticsBank ? informaticsBank.practice(originalEntries) : questions;
       const lectureCatalog = subjectId === "surgery"
         ? (window.GIFT445_SURGERY_CATALOG || [])
         : subjectId === "community"
@@ -1550,17 +1556,18 @@
 
       workspaceElement.innerHTML = (questions.length || catalogLectures.length) ? `
         ${workspaceHeader(subject.name, "Selected subject")}
-        ${subjectId === "informatics" ? `<p class="source-note">${window.GIFT445_INFORMATICS_FINAL_COMPLETE ? "Lecture practice follows the nine supplied course lectures. By Batch contains every original Gift question, including older topics outside these lectures. Each question keeps its original exam, batch and key." : "Midterm practice: 376 Midterm questions + 240 Final-bank questions on Midterm topics, with slide-based explanations. Final-only questions are organized for later explanation. Each question keeps its original batch and exam label."}</p>` : ""}
+        ${informaticsBank ? `<p class="source-note">Midterm and Final follow their separate Gift files. Quick Review skips confirmed repeats. By Batch preserves every original entry, including repeated or missing question numbers. By Lecture uses the primary course topic and may draw from either file.</p>` : subjectId === "informatics" ? `<p class="source-note">${window.GIFT445_INFORMATICS_FINAL_COMPLETE ? "Lecture practice follows the nine supplied course lectures. By Batch contains every original Gift question, including older topics outside these lectures. Each question keeps its original exam, batch and key." : "Midterm practice: 376 Midterm questions + 240 Final-bank questions on Midterm topics, with slide-based explanations. Final-only questions are organized for later explanation. Each question keeps its original batch and exam label."}</p>` : ""}
         ${subjectId === "research" ? `<p class="source-note">Midterm lecture practice includes linked questions from both Gift banks, with explanations and checked lecture references. By Batch contains the complete original papers. Final lecture practice is a list of lecture names for later.</p>` : ""}
         ${subjectId === "radiology" ? `<p class="source-note">Midterm lecture practice follows the verified lecture list, with explanations and checked lecture references. By Batch contains the complete original papers. Final lecture practice is a list of lecture names for later.</p>` : ""}
         ${subjectId === "community" ? `<p class="source-note">Midterm lecture practice includes linked questions from both Gift banks, with explanations and checked lecture references. By Batch contains the complete original papers. Final lecture practice is a list of lecture names for later.</p>` : ""}
         ${(questions.length || assessments.length) ? `<section class="route-section">
           <div class="route-section-head"><h3>Quick Review</h3><p>Progress is saved on this device.</p></div>
           <div class="route-grid">
-            ${questions.length ? `<button class="route-card featured collection-card" type="button" data-mode="all"><strong>All ${escapeHtml(subject.name)} Study Questions</strong><span>${questionCountLabel(questions.length)} in one sequence</span></button>` : ""}
+            ${allPractice.length ? `<button class="route-card featured collection-card" type="button" data-mode="all"><strong>All ${escapeHtml(subject.name)} ${informaticsBank ? "Questions" : "Study Questions"}</strong><span>${questionCountLabel(allPractice.length)}${informaticsBank ? ` for practice · ${originalEntries.length} original entries` : " in one sequence"}</span></button>` : ""}
             ${assessments.map(assessment => {
               const count = questionsForAssessment(subjectId, assessment).length;
-              return `<button class="route-card collection-card" type="button" data-mode="assessment" data-assessment="${escapeHtml(assessment)}" ${count ? "" : "disabled"}><strong>${escapeHtml(assessment)}</strong><span>${count ? questionCountLabel(count) : subjectId === "research" && assessment === "Final" ? "Lecture names only" : subjectId === "radiology" && assessment === "Final" ? "Lecture names only" : subjectId === "community" && assessment === "Final" ? "Lecture names only" : "No questions from Gift"}</span></button>`;
+              const sourceCount = informaticsBank?.entries(QUESTION_BANK, assessment).length;
+              return `<button class="route-card collection-card" type="button" data-mode="assessment" data-assessment="${escapeHtml(assessment)}" ${count ? "" : "disabled"}><strong>${escapeHtml(assessment)}</strong><span>${informaticsBank ? `${sourceCount} original entries · ${questionCountLabel(count)} for practice` : count ? questionCountLabel(count) : subjectId === "research" && assessment === "Final" ? "Lecture names only" : subjectId === "radiology" && assessment === "Final" ? "Lecture names only" : subjectId === "community" && assessment === "Final" ? "Lecture names only" : "No questions from Gift"}</span></button>`;
             }).join("")}
           </div>
         </section>` : ""}
@@ -1607,13 +1614,14 @@
               ${catalogAssessments.map(assessment => {
                 const groups = lectureCatalog.filter(group => group.assessment === assessment);
                 const sessionCount = groups.reduce((total, group) => total + group.lectures.length, 0);
-                const questionCount = subjectId === "surgery" && assessment === "Midterm"
+                const questionCount = informaticsBank ? informaticsBank.lecture(questions, groups.flatMap(group => group.lectures)).length
+                  : subjectId === "surgery" && assessment === "Midterm"
                   ? questions.filter(question => !question.cycle && isQuestionAvailableInLecture(question, subjectId) && groups.some(group => group.lectures.includes(question.lecture))).length
                   : subjectId === "informatics" && assessment === "Final"
                   ? questions.filter(question => groups.some(group => group.lectures.some(lecture => (question.informaticsLectures || [question.lecture]).includes(lecture)))).length
                   : questionsForAssessment(subjectId, assessment).length;
                 const sessionLabel = `${sessionCount} lectures`;
-                return `<button class="route-card lecture-assessment-card" type="button" data-lecture-assessment="${escapeHtml(assessment)}" aria-expanded="false"><strong>${escapeHtml(assessment)}</strong><span>${groups.length} blocks · ${sessionLabel}${questionCount ? ` · ${questionCountLabel(questionCount)}` : ""}</span></button>`;
+                return `<button class="route-card lecture-assessment-card" type="button" data-lecture-assessment="${escapeHtml(assessment)}" aria-expanded="false"><strong>${escapeHtml(assessment)}${informaticsBank ? " Lectures" : ""}</strong><span>${groups.length} blocks · ${sessionLabel}${questionCount ? ` · ${questionCountLabel(questionCount)}` : ""}</span></button>`;
               }).join("")}
             </div>
             ${catalogAssessments.map(assessment => `<div class="lecture-assessment-panel lecture-mix-groups" data-lecture-panel="${escapeHtml(assessment)}" hidden>
@@ -1621,8 +1629,9 @@
                   <h3>${escapeHtml(group.block)}</h3>
                   <div class="route-grid">
                     ${group.lectures.map(lecture => {
-                      const count = subjectId === "community" && assessment === "Final" ? 0 : questions.filter(question => !question.cycle && (subjectId === "informatics" ? (question.informaticsLectures || [question.lecture]).includes(lecture) : question.lecture === lecture) && isQuestionAvailableInLecture(question, subjectId)).length;
-                      return `<button class="route-card direct-lecture-card" type="button" data-lecture="${escapeHtml(lecture)}" ${count ? "" : "disabled"}><strong>${escapeHtml(lecture)}</strong><span>${count ? questionCountLabel(count) : subjectId === "research" && assessment === "Final" ? "Lecture names only" : subjectId === "radiology" && assessment === "Final" ? "Lecture names only" : subjectId === "community" && assessment === "Final" ? "Lecture names only" : "No questions from Gift"}${subjectId === "informatics" && count > questions.filter(question => question.lecture === lecture).length ? ` · ${questions.filter(question => question.lecture === lecture).length} primary · ${count - questions.filter(question => question.lecture === lecture).length} shared` : ""}</span></button>`;
+                      const lecturePractice = informaticsBank?.lecture(questions, [lecture]);
+                      const count = lecturePractice ? lecturePractice.length : subjectId === "community" && assessment === "Final" ? 0 : questions.filter(question => !question.cycle && (subjectId === "informatics" ? (question.informaticsLectures || [question.lecture]).includes(lecture) : question.lecture === lecture) && isQuestionAvailableInLecture(question, subjectId)).length;
+                      return `<button class="route-card direct-lecture-card" type="button" data-lecture="${escapeHtml(lecture)}" ${count ? "" : "disabled"}><strong>${escapeHtml(lecture)}</strong><span>${count ? questionCountLabel(count) : subjectId === "research" && assessment === "Final" ? "Lecture names only" : subjectId === "radiology" && assessment === "Final" ? "Lecture names only" : subjectId === "community" && assessment === "Final" ? "Lecture names only" : "No questions from Gift"}${lecturePractice?.length ? ` · ${lecturePractice.filter(q => q.assessment === "Midterm").length} Gift Midterm · ${lecturePractice.filter(q => q.assessment === "Final").length} Gift Final` : !informaticsBank && subjectId === "informatics" && count > questions.filter(question => question.lecture === lecture).length ? ` · ${questions.filter(question => question.lecture === lecture).length} primary · ${count - questions.filter(question => question.lecture === lecture).length} shared` : ""}</span></button>`;
                     }).join("")}
                   </div>
                 </section>`).join("")}
@@ -1750,16 +1759,18 @@
     function openLectureMixer(subjectId, cycleFilter = null) {
       const subject = SUBJECTS.find(item => item.id === subjectId);
       if (!subject) return;
-      const questions = questionsFor(subjectId).filter(question => question.lecture
+      const informaticsBank = subjectId === "informatics" ? window.GIFT445_INFORMATICS_BANK : null;
+      const eligible = questionsFor(subjectId).filter(question => question.lecture
         && isQuestionAvailableInLecture(question, subjectId)
         && (!cycleFilter || question.cycle === cycleFilter));
+      const questions = informaticsBank ? informaticsBank.order(eligible) : eligible;
       const grouped = new Map();
 
       questions.forEach(question => {
         const cycle = question.cycle || "General";
         if (!grouped.has(cycle)) grouped.set(cycle, new Map());
         const lectures = grouped.get(cycle);
-        const memberships = subjectId === "informatics" ? question.informaticsLectures || [question.lecture] : [question.lecture];
+        const memberships = subjectId === "informatics" && !informaticsBank ? question.informaticsLectures || [question.lecture] : [question.lecture];
         memberships.forEach(lecture => {
           const current = lectures.get(lecture) || { count: 0, order: Infinity };
           current.count += 1;
@@ -1792,7 +1803,7 @@
                 <div class="lecture-mix-options">
                   ${lectures.map(([lecture, details]) => `<label class="lecture-mix-option">
                     <input class="lecture-mix-check" type="checkbox" data-cycle="${escapeHtml(cycle === "General" ? "" : cycle)}" data-lecture="${escapeHtml(lecture)}">
-                    <span><strong>${escapeHtml(lecture)}</strong><small>${questionCountLabel(details.count)}</small></span>
+                    <span><strong>${escapeHtml(lecture)}</strong><small>${questionCountLabel(informaticsBank ? informaticsBank.lecture(questions, [lecture]).length : details.count)}</small></span>
                   </label>`).join("")}
                 </div>
               </section>`;
@@ -1818,8 +1829,8 @@
       function selectedLectureQuestions() {
         const selected = checks.filter(check => check.checked);
         const selectedKeys = new Set(selected.map(check => `${check.dataset.cycle}|${check.dataset.lecture}`));
-        const selectedQuestions = questions.filter(question => (subjectId === "informatics" ? question.informaticsLectures || [question.lecture] : [question.lecture]).some(lecture => selectedKeys.has(`${question.cycle || ""}|${lecture}`)));
-        return { selected, selectedQuestions };
+        const selectedQuestions = questions.filter(question => (subjectId === "informatics" && !informaticsBank ? question.informaticsLectures || [question.lecture] : [question.lecture]).some(lecture => selectedKeys.has(`${question.cycle || ""}|${lecture}`)));
+        return { selected, selectedQuestions: informaticsBank ? informaticsBank.practice(selectedQuestions) : selectedQuestions };
       }
 
       function updateLectureMixSummary() {
@@ -1868,6 +1879,10 @@
     }
 
     function openLecture(subjectId, cycle, lecture, resume = false) {
+      if (subjectId === "informatics" && window.GIFT445_INFORMATICS_BANK) {
+        const questions = questionsFor(subjectId).filter(question => question.lecture === lecture && isQuestionAvailableInLecture(question, subjectId));
+        return openQuestionSet(lecture, questions, { subjectId, cycle, lecture, mode: "lecture", assessment: null, batch: null, title: lecture }, resume);
+      }
       const questions = questionsFor(subjectId).filter(question => (subjectId === "informatics" ? (question.informaticsLectures || [question.lecture]).includes(lecture) : question.lecture === lecture)
         && isQuestionAvailableInLecture(question, subjectId)
         && (!cycle || question.cycle === cycle));
@@ -1916,7 +1931,11 @@
         : `${sourceEntries} source entries · ${questions.length} unique questions`;
     }
 
-    function questionsForAssessment(subjectId, assessment) {
+    function questionsForAssessment(subjectId, assessment, preferredId = null) {
+      if (subjectId === "informatics" && window.GIFT445_INFORMATICS_BANK) {
+        const bank = window.GIFT445_INFORMATICS_BANK;
+        return bank.practice(bank.entries(QUESTION_BANK, assessment), preferredId);
+      }
       if (subjectId === "community") return assessment === "Final" ? [] : questionsFor(subjectId).filter(question => (question.communityPracticeAssessment || question.assessment) === assessment);
       if (subjectId === "research") return questionsFor(subjectId).filter(question => question.researchPracticeAssessment === assessment);
       if (subjectId === "radiology") return questionsFor(subjectId).filter(question => question.radiologyPracticeAssessment === assessment);
@@ -1930,10 +1949,12 @@
     function openCollection(subjectId, mode, assessment = null, batch = null, resume = false) {
       const subject = SUBJECTS.find(item => item.id === subjectId);
       if (!subject) return;
-      let questions = questionsFor(subjectId);
-      let title = `All ${subject.name} Study Questions`;
+      const informaticsBank = subjectId === "informatics" ? window.GIFT445_INFORMATICS_BANK : null;
+      const preferredId = resume ? appState.quiz.questionIds[appState.quiz.currentIndex] : null;
+      let questions = informaticsBank ? informaticsBank.entries(QUESTION_BANK) : questionsFor(subjectId);
+      let title = `All ${subject.name}${informaticsBank ? "" : " Study"} Questions`;
       if (mode === "assessment") {
-        questions = questionsForAssessment(subjectId, assessment);
+        questions = questionsForAssessment(subjectId, assessment, preferredId);
         title = `All ${assessment} Questions`;
       } else if (mode === "batch") {
         questions = questionsForBatch(subjectId, assessment, batch);
@@ -1948,11 +1969,13 @@
 
     function openQuestionSet(title, questions, navigation, resume = false) {
       if (!questions.length) return;
-      const ordered = ["batch", "lecture-mix"].includes(navigation.mode)
-        ? questions
+      const currentQuestionId = appState.quiz.questionIds[appState.quiz.currentIndex];
+      const informaticsBank = navigation.subjectId === "informatics" ? window.GIFT445_INFORMATICS_BANK : null;
+      const ordered = navigation.mode === "batch" ? questions
+        : informaticsBank ? informaticsBank.practice(navigation.mode === "lecture-mix" ? questions : informaticsBank.order(questions), resume ? currentQuestionId : null)
+        : navigation.mode === "lecture-mix" ? questions
         : orderQuestionsNewestFirst(questions, navigation.assessment);
       const ids = ordered.map(question => question.id);
-      const currentQuestionId = appState.quiz.questionIds[appState.quiz.currentIndex];
       const resumeIndex = resume ? ids.indexOf(currentQuestionId) : -1;
       appState.navigation = navigation;
       appState.quiz.questionIds = ids;
@@ -2068,9 +2091,11 @@
         : question.verification === "source-only"
         ? "Reference status: the recorded answer is retained; individual medical verification is pending."
         : `AI opinion: ${question.aiSuggestion || "No single answer can be confirmed from the available information."}`;
+      const giftLocation = question.subjectId === "informatics" ? window.GIFT445_INFORMATICS_BANK?.location(question) : null;
       return `
         <article class="question-card" data-question-card="${question.id}">
-          <div class="question-meta"><span>Question ${index + 1} of ${total}</span><span>${escapeHtml(questionMeta)}</span></div>
+          <div class="question-meta"><span>${giftLocation && appState.navigation.mode === "batch" ? `Entry ${index + 1} of ${total}` : `Question ${index + 1} of ${total}`}</span><span>${escapeHtml(questionMeta)}</span></div>
+          ${giftLocation ? `<p class="source-note"><a href="${escapeHtml(giftLocation.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(giftLocation.title)} ↗</a> · ${escapeHtml(giftLocation.number)}${giftLocation.paragraph ? ` · ${escapeHtml(giftLocation.paragraph)}` : ""}${giftLocation.repeated ? " · Also appears elsewhere in Gift" : ""}</p>` : ""}
           <p class="question-stem">${escapeHtml(question.stem)}</p>
           ${renderSourceTables(question)}
           ${repeatText ? `<p class="repeat-note">${escapeHtml(repeatText)}</p>` : ""}
@@ -2094,12 +2119,13 @@
             ${giftReview?.managementNote ? `<p class="review-opinion" lang="en" dir="ltr">${escapeHtml(giftReview.managementNote)}</p>` : ""}
             ${question.subjectId === "informatics" && question.lecture ? `<p class="source-note"><strong>Lecture classification:</strong> ${escapeHtml(question.lecture)} (primary)${(question.informaticsLectures || []).filter(lecture => lecture !== question.lecture).map(lecture => ` · ${escapeHtml(lecture)} (shared topic)`).join("")}</p>` : ""}
             ${question.subjectId === "informatics" && question.informaticsSlideAnswer ? `<p class="review-opinion" lang="en" dir="ltr"><strong>${question.informaticsSlideAnswer.confidence === "supported" ? "Slide answer:" : question.informaticsSlideAnswer.confidence === "preference" ? "Likely slide answer (not conclusive):" : "Slide answer:"}</strong> ${question.informaticsSlideAnswer.answers.length ? question.informaticsSlideAnswer.answers.map(answer => `${escapeHtml(answer)} — ${escapeHtml(question.options.find(option => option.id === answer)?.text || "")}`).join(" or ") : "No single option can be established from the supplied slides."}${acceptedAnswers.length && question.informaticsSlideAnswer.answers.length && !question.informaticsSlideAnswer.answers.every(answer => acceptedAnswers.includes(answer)) ? " <strong>Differs from Gift; source grading is retained.</strong>" : ""}${question.informaticsSlideAnswer.confidence === "preference" && question.informaticsSlideAnswer.basis ? `<br>${escapeHtml(question.informaticsSlideAnswer.basis)}` : ""}</p>` : ""}
-            ${question.informaticsFinalOutOfScope ? `<p class="source-note">This original bank question is outside the nine supplied course lectures. It is retained in its original batch; a lecture explanation has not been added.</p>` : question.subjectId === "informatics" && question.informaticsReviewStatus === "deferred" ? `<p class="source-note">Explanation deferred. This question is organized by topic; the Gift key is retained.</p>` : giftReview ? `<p class="review-opinion" lang="en" dir="ltr"><strong>${question.subjectId === "informatics" ? "Explanation:" : "Tentative interpretation:"}</strong> ${escapeHtml(giftReview.interpretation)}</p>` : !question.reviewOpinion ? `<p class="answer-explanation"><strong>${question.subjectId === "medicine" && question.assessment === "Midterm" ? "Clinical interpretation (separate from the lecture text): " : ""}</strong>${escapeHtml(question.explanation)}</p>` : ""}
+            ${question.informaticsFinalOutOfScope ? `<p class="source-note">No matching passage in the supplied course lectures has been verified for this question. The original question remains in its Gift batch.</p>` : question.subjectId === "informatics" && question.informaticsReviewStatus === "deferred" ? `<p class="source-note">Explanation deferred. This question is organized by topic; the Gift key is retained.</p>` : giftReview ? `<p class="review-opinion" lang="en" dir="ltr"><strong>${question.subjectId === "informatics" ? "Explanation:" : "Tentative interpretation:"}</strong> ${escapeHtml(giftReview.interpretation)}</p>` : !question.reviewOpinion ? `<p class="answer-explanation"><strong>${question.subjectId === "medicine" && question.assessment === "Midterm" ? "Clinical interpretation (separate from the lecture text): " : ""}</strong>${escapeHtml(question.explanation)}</p>` : ""}
             ${renderLectureEvidence(question)}
             ${!giftReview && question.reviewOpinion ? `<p class="review-opinion" lang="en" dir="ltr"><strong>${question.subjectId === "medicine" && question.assessment === "Midterm" ? "Clinical interpretation (separate from the lecture text):" : "Medical review:"}</strong> ${escapeHtml(question.reviewOpinion)}</p>` : ""}
             <p class="source-note">Reference: ${escapeHtml(question.sourceLabel || `${subject?.name || "Medical"} Question Bank`)}${sourceRefs ? ` · ${escapeHtml(sourceRefs)}` : ""}</p>
             ${(question.references || []).length ? `<div class="reference-list">${question.references.map(reference => `<a href="${escapeHtml(reference.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(reference.title)} ↗</a>`).join("")}</div>` : ""}
             `}${richMedia && revealed && (question.answerImages || []).length ? `<div class="question-images">${question.answerImages.map((image, imageIndex) => `<a class="question-image-link" href="${escapeHtml(image)}" target="_blank" rel="noopener noreferrer" aria-label="Open answer illustration ${imageIndex + 1} at full size"><img src="${escapeHtml(image)}" alt="Answer illustration ${imageIndex + 1}" loading="lazy"><span>Open full-size illustration ↗</span></a>`).join("")}</div>` : ""}
+            ${giftLocation && (question.sourceTranscript || question.sourceText) && (!studyReview || question.informaticsFinalReview) ? `<details class="medicine-slide"><summary>Original Gift question text</summary><p style="white-space:pre-wrap">${escapeHtml(question.sourceTranscript || question.sourceText)}</p></details>` : ""}
             ${richMedia && !displayOptions.length ? `<button class="text-button review-question-button" type="button" data-question="${question.id}" ${selected ? "disabled" : ""}>${selected ? "Reviewed" : "Mark reviewed"}</button>` : ""}
           </div>
         </article>`;
@@ -2125,6 +2151,7 @@
         ${different || review.objection ? `<div class="medicine-objection">${different ? `<strong>${review.confidence === "supported" ? "Reviewed answer" : "Suggested answer"}: ${answerText(review.answers)}</strong>` : ""}${review.objection ? `<p>${escapeHtml(review.objection)}</p>` : ""}</div>` : ""}
         <p class="medicine-explanation"><strong>Explanation</strong>${escapeHtml(review.explanation)}</p>
         ${review.basisNote ? `<p class="source-note">${escapeHtml(review.basisNote)}</p>` : ""}
+        ${question.informaticsFinalLectureUnverified ? `<p class="source-note">No matching course passage has been verified for lecture placement. This question remains in its original Gift bank.</p>` : ""}
         <div class="medicine-source">${passages.length ? passages.map(passage => `<details class="medicine-slide"><summary>${passage.sourceKind === "study-file" ? "Supplementary study file" : passage.supportRole === "related" ? "Related course context" : "Course reference"}: ${escapeHtml(passage.lectureTitle)} · PDF page ${passage.pdfPage}${passage.sourceSection ? ` · ${escapeHtml(passage.sourceSection)}` : ""}</summary>${passage.supportRole === "related" ? `<p class="source-note">This passage explains related context; it does not establish the exact answer.</p>` : ""}${passage.sourceKind === "study-file" ? `<p class="source-note">A compiled student study file. Its wording is not presented as an original lecturer quotation.</p>` : ""}${passage.excerpts.map(quote => `<blockquote>${escapeHtml(quote)}</blockquote>`).join("")}<a href="${escapeHtml(passage.url)}" target="_blank" rel="noopener noreferrer">Open source ↗</a><a href="${escapeHtml(passage.image)}" target="_blank" rel="noopener noreferrer" aria-label="Open source page at full size"><img src="${escapeHtml(passage.image)}" alt="${escapeHtml(passage.lectureTitle)} — PDF page ${passage.pdfPage}" loading="lazy"></a></details>`).join("") : "No verified course passage establishes this answer; the explanation is a reviewed interpretation."}</div>
         ${review.references.length ? `<div class="reference-list">${review.references.map(reference => `<a href="${escapeHtml(reference.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(reference.title)} ↗</a>`).join("")}</div>` : ""}
         ${sourceRefs ? `<p class="source-note">${escapeHtml(sourceRefs)}</p>` : ""}
@@ -2287,6 +2314,20 @@
 
     function resumeNavigation() {
       const { subjectId, cycle, lecture, mode, assessment, batch } = appState.navigation;
+      if (subjectId === "informatics" && window.GIFT445_INFORMATICS_BANK) {
+        const savedId = appState.quiz.questionIds[appState.quiz.currentIndex];
+        const saved = QUESTION_BANK.find(question => question.id === savedId && question.subjectId === subjectId);
+        if (saved && mode === "assessment" && saved.assessment !== assessment) return openCollection(subjectId, mode, saved.assessment, null, true);
+        if (saved && mode === "lecture" && (saved.lecture !== lecture || saved.hideFromLecture)) {
+          if (saved.lecture && !saved.hideFromLecture) return openLecture(subjectId, cycle, saved.lecture, true);
+          return openCollection(subjectId, "batch", saved.assessment, saved.sourceBatch, true);
+        }
+        if (saved && mode === "lecture-mix") {
+          const byId = new Map(QUESTION_BANK.map(question => [question.id, question]));
+          const questions = appState.quiz.questionIds.map(id => byId.get(id)).filter(question => question?.subjectId === subjectId && (question.id === savedId || question.lecture && !question.hideFromLecture));
+          return openQuestionSet(appState.navigation.title || "Mixed Lecture Quiz", questions, appState.navigation, true);
+        }
+      }
       if (subjectId && mode === "lecture-picker") return openLectureMixer(subjectId);
       if (subjectId && mode === "lecture-mix" && appState.quiz.questionIds.length) return renderQuestionSetView();
       if (subjectId && ["all", "assessment", "batch"].includes(mode)) return openCollection(subjectId, mode, assessment, batch, true);

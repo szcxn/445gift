@@ -2,7 +2,7 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('n
 // Community now has its own audited source-conservation fixture.
 const communityFixture=JSON.parse(fs.readFileSync(path.join(__dirname,'fixtures/community-mid-review.json')));
 const root=path.resolve(__dirname,'..'),html=fs.readFileSync(path.join(root,'index.html'),'utf8'),c={window:{}},plain=x=>JSON.parse(JSON.stringify(x));vm.createContext(c);
-for(const m of html.matchAll(/<script src="([^"?]+)/g)){const p=path.join(root,m[1]);if(fs.existsSync(p))vm.runInContext(fs.readFileSync(p,'utf8'),c);}
+for(const m of html.matchAll(/<script src="([^"?]+)/g)){if(m[1]==='informatics-source-navigation.js')continue;const p=path.join(root,m[1]);if(fs.existsSync(p))vm.runInContext(fs.readFileSync(p,'utf8'),c);}
 const final=plain(c.window.GIFT445_INFORMATICS_FINAL_QUESTIONS),mid=plain(c.window.GIFT445_INFORMATICS_QUESTIONS),fixture=JSON.parse(fs.readFileSync(path.join(root,'tests/fixtures/informatics-final.json')));
 const arabicOcr=/[\u0600-\u06ff\u0750-\u077f\ufb50-\ufdff\ufe70-\ufeff]/u;
 assert.equal(final.length,431);assert.equal(new Set(final.map(q=>q.id)).size,431);
@@ -35,7 +35,7 @@ const find=(b,n)=>final.find(q=>q.sourceBatch===b&&q.sourceLocations[0].question
 for(const [b,n,gift,slide] of [['443',9,'B','C'],['442',23,'C','A'],['438',30,'B','D']]){const q=find(b,n);assert.equal(q.sourceAnswer,gift);assert.deepEqual(plain(c.gradingAnswersForQuestion(q)),[gift]);assert.deepEqual(q.informaticsSlideAnswer.answers,[slide]);}
 assert.equal(find('435',20).images.length,0);assert.match(find('435',21).images[0],/confusion-table/);assert.match(find('442',22).sourceIssues.join(' '),/no corresponding image/);
 const resources=plain(c.window.GIFT445_INFORMATICS_FINAL_LECTURES);assert.deepEqual(resources.map(r=>r.lectureOrder),[6,7,8,9]);assert.ok(resources.every(r=>r.url.startsWith('https://drive.google.com/')));
-const r={appState:{quiz:{answers:{},questionIds:final.map(q=>q.id),currentIndex:0},navigation:{mode:'lecture-mix',assessment:'Midterm'}},SUBJECTS:[{id:'informatics',name:'Informatics'}],QUESTION_BANK:final,batchDisplayName:(_,b)=>`Batch ${b}`,escapeHtml:v=>String(v??'').replace(/[&<>'"]/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[ch])),persistState:()=>{},captureAnalytics:()=>{},quizAnalyticsProperties:()=>({}),completedQuizKeys:new Set(),currentQuizKey:()=> 'test'};
+const r={window:{},appState:{quiz:{answers:{},questionIds:final.map(q=>q.id),currentIndex:0},navigation:{mode:'lecture-mix',assessment:'Midterm'}},SUBJECTS:[{id:'informatics',name:'Informatics'}],QUESTION_BANK:final,batchDisplayName:(_,b)=>`Batch ${b}`,escapeHtml:v=>String(v??'').replace(/[&<>'"]/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[ch])),persistState:()=>{},captureAnalytics:()=>{},quizAnalyticsProperties:()=>({}),completedQuizKeys:new Set(),currentQuizKey:()=> 'test'};
 vm.createContext(r);vm.runInContext(html.slice(html.indexOf('    function renderQuestion(question,'),html.indexOf('    function questionCountLabel(')),r);
 for(const q of final)for(const option of q.options){
  const buttons=q.options.map(o=>{const b={dataset:{option:o.id},classes:new Set(),setAttribute(){}};b.classList={toggle(name,on){if(on)b.classes.add(name);else b.classes.delete(name)}};return b;});
