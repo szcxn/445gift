@@ -213,4 +213,4 @@ Validation: `tests/informatics-lecture-scope.test.cjs` exercises all nine lectur
 
 ### Informatics lecture groups
 
-Midterm Lectures covers L1–L5 using verified questions from both Gift banks. Final Lectures covers L6–L9 using Gift Final questions, ordered newest batch first with original order within each batch. The complete Final bank is still available under Quick Review and By Batch. Original source entries, keys and saved answers are unchanged.
+Midterm Lectures covers L1–L5 and Final Lectures covers L6–L9. Each lecture combines verified questions from both Gift banks, ordered newest batch first with original order within each batch. The complete Final bank is still available under Quick Review and By Batch. Original source entries, keys and saved answers are unchanged.

@@ -60,7 +60,6 @@
     if (question.subjectId !== "informatics" || question.batchOnly && !question.informaticsVerifiedBatchLecture || question.hideFromLecture || !question.lecture) return false;
     const assessment = lectureAssessment(question.lecture);
     if (!assessment || !["Midterm", "Final"].includes(question.assessment) || originalAssessments.get(question.id) !== question.assessment) return false;
-    if (question.assessment === "Midterm" && assessment !== "Midterm") return false;
     const passages = question.informaticsBatch445Review?.evidence || question.informaticsFinalReview?.evidence || question.informaticsEvidence || [];
     let ownSource = false;
     for (const passage of passages) {
@@ -69,7 +68,7 @@
       if (!Number.isInteger(pdfPage) || pdfPage < 1 || !excerpts.length || excerpts.some(text => typeof text !== "string" || !text.trim())) return false;
       const source = originals.get(sourceSha256);
       if (source) {
-        if (question.assessment === "Midterm" && source.assessment !== "Midterm" || pdfPage > source.lastTeachingPage || sourceKind === "study-file") return false;
+        if (question.assessment === "Midterm" && source.assessment !== assessment || pdfPage > source.lastTeachingPage || sourceKind === "study-file") return false;
         if (source.title === question.lecture) ownSource = true;
       } else {
         const limits = midSupplements.get(sourceSha256);
@@ -81,11 +80,9 @@
 
   function lectureEntries(questions, titles, assessment = null) {
     const selected = new Set(titles);
-    const ordered = order(questions.filter(q => selected.has(q.lecture) && isLectureQuestion(q)
-      && (assessment === "Final" ? q.assessment === "Final" && lectureAssessment(q.lecture) === "Final"
-        : assessment === "Midterm" ? lectureAssessment(q.lecture) === "Midterm"
-        : true)));
-    return assessment === "Final" ? ordered.sort((a, b) => Number(b.sourceBatch) - Number(a.sourceBatch)) : ordered;
+    return order(questions.filter(q => selected.has(q.lecture) && isLectureQuestion(q)
+      && (!assessment || lectureAssessment(q.lecture) === assessment)))
+      .sort((a, b) => Number(b.sourceBatch) - Number(a.sourceBatch));
   }
 
   function lecture(questions, titles, assessment = null) {

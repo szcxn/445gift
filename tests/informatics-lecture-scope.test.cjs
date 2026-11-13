@@ -94,7 +94,7 @@ function assertScope(questionIds, chosenTitles, assessment = null) {
     const q = qById.get(id);
     assert.ok(originalSourceIds.has(id), id);
     assert.ok(chosenTitles.includes(q.lecture), `${id}: wrong lecture ${q.lecture}`);
-    if (assessment === "Final" || scope[q.lecture] === "Final") assert.equal(q.assessment, "Final", id);
+    if (assessment) assert.equal(scope[q.lecture], assessment, id);
     const evidence = q.informaticsBatch445Review?.evidence || q.informaticsFinalReview?.evidence || q.informaticsEvidence || [];
     assert.ok(evidence.some(passage => lectureSources.get(passage.sourceSha256)?.title === q.lecture), `${id}: no original page evidence for its own lecture`);
     for (const passage of evidence) {
@@ -103,7 +103,7 @@ function assertScope(questionIds, chosenTitles, assessment = null) {
         assert.ok((q.informaticsBatch445Review || q.informaticsFinalReview) && passage.sourceKind === "study-file", `${id}: unrecognized or unlabeled lecture evidence`);
         continue;
       }
-      if (q.assessment === "Midterm") assert.equal(scope[entry.title], q.assessment, `${id}: opposite assessment source page`);
+      if (q.assessment === "Midterm") assert.equal(scope[entry.title], scope[q.lecture], `${id}: opposite assessment source page`);
       assert.ok(Number.isInteger(passage.pdfPage) && passage.pdfPage >= 1 && passage.pdfPage <= entry.pages, `${id}: invalid original PDF page`);
       const excerpts = passage.quoteParts || [passage.quote];
       assert.ok(excerpts.length && excerpts.every(excerpt => typeof excerpt === "string" && excerpt.trim()), id);
@@ -137,8 +137,11 @@ for (const title of titles) {
   assert.equal(c.appState.navigation.assessment, scope[title], title);
   const actual = c.appState.quiz.questionIds;
   assertScope(actual, [title]);
-  const positions = Array.from(actual, id => sourcePosition.get(id));
-  assert.deepEqual(positions, [...positions].sort((a, b) => a - b), `Lecture did not keep Gift file order: ${title}`);
+  for (let i = 1; i < actual.length; i++) {
+    const a = qById.get(actual[i - 1]), b = qById.get(actual[i]);
+    assert.ok(+a.sourceBatch >= +b.sourceBatch, title);
+    if (a.sourceBatch === b.sourceBatch) assert.ok(sourcePosition.get(a.id) < sourcePosition.get(b.id), title);
+  }
   assert.deepEqual(Array.from(actual), ids(source.lecture(bank, [title])), title);
   scopedEntries.set(title, source.lectureEntries(bank, [title]));
   for (const [i, id] of actual.entries()) {
@@ -152,14 +155,14 @@ for (const title of titles) {
     }
   }
 }
-for (const title of midTitles) {
-  const practice = source.lecture(bank, [title], "Midterm");
+for (const title of titles.filter(t => !t.startsWith("Patient Safety"))) {
+  const practice = source.lecture(bank, [title], scope[title]);
   assert.ok(practice.some(q => q.assessment === "Midterm") && practice.some(q => q.assessment === "Final"), title);
   assert.ok(practice.every(q => q.lecture === title));
 }
-// Final Lectures contains L6–L9, using only Final-bank questions.
+// Final Lectures contains L6–L9, with verified questions from either bank.
 const finalEntries = source.lectureEntries(bank, titles, "Final");
-assert.equal(finalEntries.length, 97);
+assert.equal(finalEntries.length, 118);
 assert.ok(midTitles.every(title => source.lecture(bank, [title], "Final").length === 0));
 for (const title of finalTitles) {
   fresh();
@@ -217,7 +220,7 @@ for (const title of titles) {
   assert.ok(card, `No menu card for scoped lecture ${title}`);
   const count = source.lecture(bank, [title]).length;
   assert.match(card[2], new RegExp(`\\b${count} questions?\\b`), `Menu count differs from lecture route: ${title}`);
-  if (scope[title] === "Midterm") assert.match(card[2], /[1-9]\d* Gift Midterm · [1-9]\d* Gift Final/, title);
+  assert.match(card[2], /\d+ Gift Midterm · \d+ Gift Final/, title);
 }
 
 function runMixer(selectedTitles) {
@@ -315,4 +318,4 @@ assertResumeState(goodMid);
 assert.equal(c.appState.navigation.mode, "lecture-mix");
 assert.deepEqual(Array.from(c.appState.quiz.questionIds), [goodMid.id, oldCrossListed.id, goodFinal.id], "Legacy mixer changed the valid saved order");
 
-console.log("PASS: MID lectures cover both Gift banks; Final Lectures covers L6–L9 using Final questions; mixers and verified references agree; 916 original entries and saved positions remain intact.");
+console.log("PASS: Both lecture groups combine verified MID and Final questions by newest batch; mixers and verified references agree; 916 original entries and saved positions remain intact.");

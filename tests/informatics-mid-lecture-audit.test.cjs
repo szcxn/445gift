@@ -31,8 +31,8 @@ for (const [i, q] of audited.entries()) {
 }
 const legacyReviewed = legacy.filter(q => !q.batchOnly);
 const movedToBank = legacyReviewed.filter(q => q.hideFromLecture);
-assert.equal(movedToBank.length, 35);
-assert.equal(movedToBank.filter(q => q.informaticsEvidence.some(e => /^F[6-9]$/.test(e.lectureId))).length, 21);
+assert.equal(movedToBank.length, 14);
+assert.equal(legacyReviewed.filter(q => q.lecture && q.informaticsEvidence.some(e => /^F[6-9]$/.test(e.lectureId))).length, 21);
 assert.equal(movedToBank.filter(q => q.informaticsEvidence.length === 0).length, 14);
 assert.ok(movedToBank.every(q => !q.lecture && q.informaticsPlacementNote));
 const qid = id => legacy.find(q => q.id === id);
@@ -64,4 +64,4 @@ for (const q of source.lectureEntries(legacy, midTitles)) {
   assert.ok(q.informaticsEvidence.every(e => fs.existsSync(path.join(root, e.image))), q.id);
   assert.ok(q.informaticsSlideAnswer.confidence !== 'supported' || q.informaticsEvidence.some(e => e.supportRole === 'direct'), q.id);
 }
-console.log('PASS: original MID scope audit preserves all 448 source occurrences, moves 35 unsupported/cross-assessment entries out of lecture practice, recovers 437 Q9 and preserves separate Gift keys and lecture answers.');
+console.log('PASS: original MID scope audit preserves all 448 source occurrences, keeps 14 unsupported entries out of lecture practice and places 21 in their verified topics, recovers 437 Q9 and preserves separate Gift keys and lecture answers.');
