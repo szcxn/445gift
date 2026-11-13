@@ -690,6 +690,17 @@
       "objection": "The lecture places ophthalmology within medical image interpretation. The FDA decision summary gives a specific example of diabetic retinopathy screening.",
       "evidence": [
         {
+          "sourceId": "team444-L5",
+          "lectureTitle": "Team 444 · L5 · AI in Healthcare",
+          "pdfPage": 24,
+          "quote": "Medical image interpretation: (Radiology , Pathology , Opthalmology , Gastroenterology)",
+          "supportRole": "related",
+          "sourceKind": "lecture-compilation",
+          "url": "lecture-media/informatics/05-overgaard.pdf#page=24",
+          "image": "lecture-media/informatics/pages/05-overgaard-024.jpg",
+          "sourceSha256": "b79239320e3c094d204f81d9b5be20c5018a5343afcd431dd283cb8d254b8469"
+        },
+        {
           "sourceId": "1Ae0-DPTwlORCVVkIkLRO7F79yMkexibO",
           "lectureTitle": "AI in Healthcare · Team 445 study notes",
           "pdfPage": 7,
@@ -717,7 +728,8 @@
           "title": "FDA · IDx-DR decision summary and indications for use",
           "url": "https://www.accessdata.fda.gov/cdrh_docs/reviews/DEN180001.pdf"
         }
-      ]
+      ],
+      "basisNote": "The MID AI lecture lists ophthalmology under medical image interpretation. Diabetic retinopathy screening is an application of that concept, not a verbatim example on this course page."
     }
   },
   {
@@ -872,6 +884,17 @@
       "objection": "",
       "evidence": [
         {
+          "sourceId": "team444-L4",
+          "lectureTitle": "Team 444 · L4 · Clinical Decision Support",
+          "pdfPage": 8,
+          "quote": "Up to date: is a web-based evidence-based source for biomedical information",
+          "supportRole": "related",
+          "sourceKind": "lecture-compilation",
+          "url": "lecture-media/informatics/04-cds.pdf#page=8",
+          "image": "lecture-media/informatics/pages/04-cds-008.jpg",
+          "sourceSha256": "6788f6cadc9e9a0e002b463311b8f20f0f08fe7e349cafbf282f5ba47eff510e"
+        },
+        {
           "sourceId": "team444-L3",
           "lectureTitle": "Team 444 · L3 · Electronic Health Records",
           "pdfPage": 6,
@@ -894,7 +917,8 @@
           "sourceSha256": "aabae63b20b3a0be482860869864bb2b2e20984d8546ab8ef97f1068701b454f"
         }
       ],
-      "references": []
+      "references": [],
+      "basisNote": "MID L4 describes access to evidence-based information; MID L3 supplies the exact knowledge-support category."
     }
   },
   {
@@ -2603,6 +2627,17 @@
       "objection": "",
       "evidence": [
         {
+          "sourceId": "team444-L4",
+          "lectureTitle": "Team 444 · L4 · Clinical Decision Support",
+          "pdfPage": 9,
+          "quote": "Embedded clinical practice guidelines, order sets, and clinical pathways.",
+          "supportRole": "related",
+          "sourceKind": "lecture-compilation",
+          "url": "lecture-media/informatics/04-cds.pdf#page=9",
+          "image": "lecture-media/informatics/pages/04-cds-009.jpg",
+          "sourceSha256": "6788f6cadc9e9a0e002b463311b8f20f0f08fe7e349cafbf282f5ba47eff510e"
+        },
+        {
           "sourceId": "team444-L3",
           "lectureTitle": "Team 444 · L3 · Electronic Health Records",
           "pdfPage": 6,
@@ -2625,7 +2660,8 @@
           "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9"
         }
       ],
-      "references": []
+      "references": [],
+      "basisNote": "MID L4 lists order sets under patient care, while MID L3 gives the specific pneumonia example."
     }
   },
   {
@@ -3133,6 +3169,17 @@
       "objection": "",
       "evidence": [
         {
+          "sourceId": "team444-L3",
+          "lectureTitle": "Team 444 · L3 · Electronic Health Records",
+          "pdfPage": 10,
+          "quote": "Integration and interoperability issues",
+          "supportRole": "related",
+          "sourceKind": "lecture-compilation",
+          "url": "lecture-media/informatics/03-ehr.pdf#page=10",
+          "image": "lecture-media/informatics/pages/03-ehr-010.jpg",
+          "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9"
+        },
+        {
           "sourceId": "team444-L2",
           "lectureTitle": "Team 444 · L2 · Clinical Data and Big Data",
           "pdfPage": 5,
@@ -3144,7 +3191,8 @@
           "sourceSha256": "929278290c1a2a8e42f4ea2d8407dc13fb8d54d942a5989c6c8d0adffe493040"
         }
       ],
-      "references": []
+      "references": [],
+      "basisNote": "MID L3 identifies this as an EHR issue; MID L2 gives the exact definition of interoperability."
     }
   },
   {

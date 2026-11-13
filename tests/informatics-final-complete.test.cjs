@@ -72,6 +72,8 @@ assert.ok(start >= 0 && end > start);
 const code = html.slice(start, end).replace('const QUESTION_BANK', 'window.__FINAL_COMPLETE_TEST_BANK');
 assert.match(code, /GIFT445_COMPLETE_INFORMATICS_FINAL\(/, 'The visible bank bypasses the tested completion layer');
 context.window.GIFT445_COMPLETE_INFORMATICS_FINAL = bank => bank;
+// The native MID lecture audit has its own source-and-route regression test.
+context.window.GIFT445_AUDIT_INFORMATICS_PLACEMENT = bank => bank;
 const extendProductionBatches = context.window.GIFT445_EXTEND_BATCH_BANK;
 if (extendBatchesBeforeMedicineRepairs) {
   // Check the historical snapshot before the separately tested Medicine corrections.

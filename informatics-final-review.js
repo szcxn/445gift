@@ -1993,7 +1993,7 @@
     "basis": "interpretation",
     "explanation": "An organization-approved patient portal is designed to share patient-specific information with an authenticated patient, making A the best listed route. The broader principle is controlled access and secure transmission. A product name such as Outlook does not by itself establish whether a particular setup is approved or secure. The supplied security lecture supports those safeguards, not an absolute claim that every other channel is insecure.",
     "objection": "",
-    "basisNote": "The portal preference applies the safeguards; the cited passages do not compare all the listed products.",
+    "basisNote": "The L9 lecture supports protecting data in transit. A patient portal is a suggested application of that principle; the passage does not compare the listed products.",
     "evidence": [
       {
         "sourceId": "1h7L0vrIQ2CeqfQwC7l5TPpqkN1CpQ4R7",
@@ -2015,28 +2015,6 @@
           2300
         ],
         "sourcePageCount": 15,
-        "sourceSection": "Lecture content"
-      },
-      {
-        "sourceId": "team444-L3",
-        "lectureTitle": "Team 444 · L3 · Electronic Health Records",
-        "url": "lecture-media/informatics/03-ehr.pdf#page=3",
-        "pdfPage": 3,
-        "quoteParts": [
-          "secure messaging, text messaging, web portals, health information exchange, etc."
-        ],
-        "quote": "secure messaging, text messaging, web portals, health information exchange, etc.",
-        "supportRole": "related",
-        "sourceKind": "teamwork-lecture-notes",
-        "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
-        "verificationMethod": "text",
-        "image": "lecture-media/informatics/pages/03-ehr-003.jpg",
-        "imageSha256": "aeac1c3a99c0cf979bb9fea0908fb48825dbdbe56b9a06686f34d6e69d127b74",
-        "imageDimensions": [
-          1488,
-          2105
-        ],
-        "sourcePageCount": 12,
         "sourceSection": "Lecture content"
       }
     ],

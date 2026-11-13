@@ -62,6 +62,7 @@ for (const match of html.matchAll(/<script src="([^"?]+)/g)) {
 // Final review has its own full-runtime conservation and rendering test.
 if (context.window.GIFT445_COMPLETE_INFORMATICS_FINAL) context.window.GIFT445_COMPLETE_INFORMATICS_FINAL = bank => bank;
 if (context.window.GIFT445_AUDIT_INFORMATICS_MID) context.window.GIFT445_AUDIT_INFORMATICS_MID = bank => bank;
+if (context.window.GIFT445_AUDIT_INFORMATICS_PLACEMENT) context.window.GIFT445_AUDIT_INFORMATICS_PLACEMENT = bank => bank;
 installFunctions(context);
 assert.equal(typeof context.window.GIFT445_COMPLETE_MID_EVIDENCE, 'function');
 const patches = plain(context.window.GIFT445_MID_EVIDENCE_PATCHES);

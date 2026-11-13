@@ -436,6 +436,18 @@
       "sourceSha256": "aabae63b20b3a0be482860869864bb2b2e20984d8546ab8ef97f1068701b454f",
       "pdfPage": 12,
       "imageSha256": "03b72928d7e18b4cffaa5573391fbeea6b5f407d2f101ca7d44a13ab3f132bde"
+    },
+    "lecture-media/informatics/pages/03-ehr-010.jpg": {
+      "sourceId": "team444-L3",
+      "sourceSha256": "658eba88789fe5c25c6a15e1dbc52d100d6a038cd674fd75691ef79329f28fb9",
+      "pdfPage": 10,
+      "sourcePageCount": 12,
+      "imageSha256": "316ec02085b1a68adc4eddea89f23b3362ff26e635087ddb8b5bd9ebd3e02bac",
+      "imageDimensions": [
+        1488,
+        2105
+      ],
+      "renderMethod": "Original PDF page"
     }
   }
 }
