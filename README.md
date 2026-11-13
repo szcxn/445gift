@@ -210,3 +210,7 @@ An Informatics lecture route now requires both an original entry from the corres
 The native MID audit corrected placements and source excerpts, kept 21 Final-topic entries and 14 unverified entries in their original batches outside the lecture lists, and recovered Batch 437 Q9 using the randomized-clinical-trials passage on MID L1 PDF page 8. For example, MID Batch 443 Q4 (telepathology) cites Final L6 PDF page 4 and stays in its MID batch; introductory telemedicine terminology remains in MID when supported by L1 PDF pages 6–7. The review distinguishes exact teaching excerpts, visually checked diagram labels, related context, and explicitly labelled supplementary study notes. No supplementary file alone establishes lecture membership. The Gift keys and source media are preserved.
 
 Validation: `tests/informatics-lecture-scope.test.cjs` exercises all nine lecture routes, menu counts, scoped lecture mixes, original batch routes and saved progress. `tests/informatics-mid-lecture-audit.test.cjs` covers source conservation and the corrected or withdrawn historical assignments.
+
+### Cumulative Informatics Final practice
+
+Final Lectures covers all nine course lectures using the original Gift Final bank. Each lecture shows its verified Final questions from newest batch to oldest, with source order retained within each batch and confirmed repeats shown once. MID lecture lists still use MID questions and MID sources. Complete source batches and saved question IDs are unchanged.

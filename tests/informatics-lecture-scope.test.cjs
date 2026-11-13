@@ -87,23 +87,23 @@ for (const raw of [
 
 const aliases = new Map(plain(c.window.GIFT445_INFORMATICS_SOURCE_REPEATS).flatMap(group => group.map(id => [id, group[0]])));
 const sourcePosition = new Map(ids(source.entries(bank)).map((id, i) => [id, i]));
-function assertScope(questionIds, chosenTitles) {
+function assertScope(questionIds, chosenTitles, assessment = null) {
   assert.ok(questionIds.length, `Empty lecture selection: ${chosenTitles.join(", ")}`);
   assert.equal(new Set(questionIds.map(id => aliases.get(id) || id)).size, questionIds.length, "A verified repeat was added twice");
   for (const id of questionIds) {
     const q = qById.get(id);
     assert.ok(originalSourceIds.has(id), id);
     assert.ok(chosenTitles.includes(q.lecture), `${id}: wrong lecture ${q.lecture}`);
-    assert.equal(q.assessment, scope[q.lecture], `${id}: ${q.assessment} Gift leaked into ${scope[q.lecture]} lecture`);
+    assert.equal(q.assessment, assessment || scope[q.lecture], `${id}: ${q.assessment} Gift leaked into ${scope[q.lecture]} lecture`);
     const evidence = q.informaticsBatch445Review?.evidence || q.informaticsFinalReview?.evidence || q.informaticsEvidence || [];
     assert.ok(evidence.some(passage => lectureSources.get(passage.sourceSha256)?.title === q.lecture), `${id}: no original page evidence for its own lecture`);
     for (const passage of evidence) {
       const entry = lectureSources.get(passage.sourceSha256);
       if (!entry) {
-        assert.ok(q.informaticsBatch445Review && passage.sourceKind === "study-file", `${id}: unrecognized or unlabeled lecture evidence`);
+        assert.ok((q.informaticsBatch445Review || q.informaticsFinalReview) && passage.sourceKind === "study-file", `${id}: unrecognized or unlabeled lecture evidence`);
         continue;
       }
-      assert.equal(scope[entry.title], q.assessment, `${id}: opposite assessment source page`);
+      if (q.assessment === "Midterm") assert.equal(scope[entry.title], q.assessment, `${id}: opposite assessment source page`);
       assert.ok(Number.isInteger(passage.pdfPage) && passage.pdfPage >= 1 && passage.pdfPage <= entry.pages, `${id}: invalid original PDF page`);
       const excerpts = passage.quoteParts || [passage.quote];
       assert.ok(excerpts.length && excerpts.every(excerpt => typeof excerpt === "string" && excerpt.trim()), id);
@@ -152,6 +152,22 @@ for (const title of titles) {
     }
   }
 }
+// Cumulative Final includes the first five lectures, but never MID-bank items.
+const finalEntries = source.lectureEntries(bank, titles, "Final");
+assert.equal(finalEntries.length, 327);
+for (const title of titles) {
+  fresh();
+  c.openLecture("informatics", null, title, false, "Final");
+  assert.equal(c.appState.navigation.assessment, "Final", title);
+  const actual = c.appState.quiz.questionIds;
+  assertScope(actual, [title], "Final");
+  assert.deepEqual(Array.from(actual), ids(source.lecture(bank, [title], "Final")), title);
+  for (let i = 1; i < actual.length; i++) {
+    const a = qById.get(actual[i - 1]), b = qById.get(actual[i]);
+    assert.ok(+a.sourceBatch >= +b.sourceBatch, title);
+    if (a.sourceBatch === b.sourceBatch) assert.ok(sourcePosition.get(a.id) < sourcePosition.get(b.id), title);
+  }
+}
 const originalMidExample = scopedEntries.get(midTitles[0]).find(q => q.informaticsEvidence?.length && !q.informaticsBatch445Review);
 assert.ok(originalMidExample);
 const reference = originalMidExample.informaticsEvidence[0];
@@ -185,6 +201,10 @@ c.workspaceElement = {
 c.openSubject("informatics");
 const menu = c.workspaceElement.innerHTML;
 assert.doesNotMatch(menu, /may draw from either file|Waiting for Lecture Files/);
+const finalPanel = menu.split('data-lecture-panel="Final"')[1];
+assert.equal((finalPanel.match(/data-assessment="Final"/g) || []).length, 9);
+assert.match(menu, /Final Lectures<\/strong><span>9 lectures/);
+
 for (const title of titles) {
   const card = Array.from(menu.matchAll(/<button class="route-card direct-lecture-card"[^>]*data-lecture="([^"]*)"[^>]*>([\s\S]*?)<\/button>/g))
     .find(match => match[1] === c.escapeHtml(title));
@@ -264,9 +284,9 @@ for (const mode of ["lecture", "lecture-mix", "assessment"]) {
   c.resumeNavigation();
   assert.equal(calls.length, callCount + 1, `Legacy ${mode} did not render`);
   assertResumeState(oldCrossListed);
-  assert.equal(c.appState.navigation.assessment, "Final", `Legacy ${mode} retained wrong exam scope`);
+  if (mode !== "lecture-mix") assert.equal(c.appState.navigation.assessment, "Final", `Legacy ${mode} retained wrong exam scope`);
   assert.ok(c.appState.quiz.questionIds.every(id => qById.get(id).assessment === "Final"));
-  if (c.appState.navigation.mode === "lecture") assertScope(c.appState.quiz.questionIds, [c.appState.navigation.lecture]);
+  if (c.appState.navigation.mode === "lecture") assertScope(c.appState.quiz.questionIds, [c.appState.navigation.lecture], "Final");
 }
 
 const goodMid = source.lecture(bank, [midTitles[0]])[0];
@@ -276,6 +296,6 @@ c.appState.quiz.questionIds.push(oldCrossListed.id, goodFinal.id);
 c.resumeNavigation();
 assertResumeState(goodMid);
 assert.equal(c.appState.navigation.mode, "lecture-mix");
-assert.deepEqual(Array.from(c.appState.quiz.questionIds), [goodMid.id, goodFinal.id], "Legacy mixer kept a stale cross-listed question or changed the valid saved order");
+assert.deepEqual(Array.from(c.appState.quiz.questionIds), [goodMid.id, oldCrossListed.id, goodFinal.id], "Legacy mixer changed the valid saved order");
 
 console.log("PASS: all nine Informatics lecture routes and both mixers isolate the original exam and verified lecture evidence; 916 original entries and saved positions remain intact.");

@@ -1153,7 +1153,7 @@
         <span class="site-updates-label" id="site-updates-title">آخر التحديثات</span>
         <time datetime="2026-11-13">١٣ نوفمبر ٢٠٢٦</time>
       </div>
-      <p><strong>أحدث تحديث:</strong> فصل محاضرات الميد والفاينل في الإنفورماتيكس، ومراجعة توزيع الأسئلة ومراجعها.</p>
+      <p><strong>أحدث تحديث:</strong> فاينل الإنفورماتيكس يشمل المحاضرات التسع، والأسئلة مرتبة داخل كل محاضرة من أحدث دفعة للأقدم.</p>
       <p><strong>تحديث سابق:</strong> إضافة ميزة مراجعة الأخطاء وعرض النتائج بعد إكمال الحل، وتجديد مراجع ميد ميديسن، ومراجعة أسئلة فاينل الإنفورماتكس وإرفاق المراجع المتاحة.</p>
       <p><strong>تحديث سابق:</strong> إضافة مادتي الراديولوجي والريسيرش: أسئلة الميد مرتبة حسب المحاضرات، مع شروح واضحة والاستدلال بالمحاضرات عند توفر الدليل، والحفاظ على إجابات القيفت الأصلية.</p>
       <p><strong>تحديث سابق:</strong> تطوير ضخم لشروح إجابات الباطنة والسيرجري للميد: عرض أبسط وأوضح للإجابة والشرح، مع الاستدلال بالسلايدات عند توفر الدليل، وتوضيح الإجابات المختلف عليها، والحفاظ على مفتاح القيفت الأصلي.</p>
@@ -1246,7 +1246,7 @@
   <script src="informatics-final-review.js?v=20261113-lecture-scope"></script>
   <script src="informatics-source-repeats.js?v=20261112-1"></script>
   <script src="informatics-mid-445.js?v=20261113-lecture-scope"></script>
-  <script src="informatics-source-navigation.js?v=20261113-lecture-scope"></script>
+  <script src="informatics-source-navigation.js?v=20261113-cumulative-final"></script>
   <script src="informatics-mid-source-integrity.js?v=20261112-1"></script>
   <script src="informatics-mid-lecture-audit.js?v=20261113-1"></script>
   <script>
@@ -1544,6 +1544,9 @@
             ? (window.GIFT445_RADIOLOGY_CATALOG || [])
           : [];
       const catalogLectures = lectureCatalog.flatMap(group => group.lectures);
+      const lectureGroups = assessment => informaticsBank && assessment === "Final"
+        ? lectureCatalog.map(group => group.assessment === "Midterm" ? { ...group, block: "Lectures 1–5 · Included in Final" } : group)
+        : lectureCatalog.filter(group => group.assessment === assessment);
       const catalogAssessments = [...new Set(lectureCatalog.map(group => group.assessment).filter(Boolean))];
       const cycles = [...new Set(questions.map(question => question.cycle).filter(Boolean))]
         .sort((a, b) => {
@@ -1575,7 +1578,7 @@
 
       workspaceElement.innerHTML = (questions.length || catalogLectures.length) ? `
         ${workspaceHeader(subject.name, "Selected subject")}
-        ${informaticsBank ? `<p class="source-note">Midterm lectures use Gift Midterm questions with verified Midterm lecture references. Final lectures use Gift Final questions with verified Final lecture references. The complete original papers remain under By Batch.</p>` : subjectId === "informatics" ? `<p class="source-note">${window.GIFT445_INFORMATICS_FINAL_COMPLETE ? "Lecture practice follows the nine supplied course lectures. By Batch contains every original Gift question, including older topics outside these lectures. Each question keeps its original exam, batch and key." : "Midterm practice: 376 Midterm questions + 240 Final-bank questions on Midterm topics, with slide-based explanations. Final-only questions are organized for later explanation. Each question keeps its original batch and exam label."}</p>` : ""}
+        ${informaticsBank ? `<p class="source-note">Midterm practice covers lectures 1–5. Final practice covers all nine lectures using Gift Final questions, starting with the newest batch in each lecture. The complete original papers remain under By Batch.</p>` : subjectId === "informatics" ? `<p class="source-note">${window.GIFT445_INFORMATICS_FINAL_COMPLETE ? "Lecture practice follows the nine supplied course lectures. By Batch contains every original Gift question, including older topics outside these lectures. Each question keeps its original exam, batch and key." : "Midterm practice: 376 Midterm questions + 240 Final-bank questions on Midterm topics, with slide-based explanations. Final-only questions are organized for later explanation. Each question keeps its original batch and exam label."}</p>` : ""}
         ${subjectId === "research" ? `<p class="source-note">Midterm lecture practice includes linked questions from both Gift banks, with explanations and checked lecture references. By Batch contains the complete original papers. Final lecture practice is a list of lecture names for later.</p>` : ""}
         ${subjectId === "radiology" ? `<p class="source-note">Midterm lecture practice follows the verified lecture list, with explanations and checked lecture references. By Batch contains the complete original papers. Final lecture practice is a list of lecture names for later.</p>` : ""}
         ${subjectId === "community" ? `<p class="source-note">Midterm lecture practice includes linked questions from both Gift banks, with explanations and checked lecture references. By Batch contains the complete original papers. Final lecture practice is a list of lecture names for later.</p>` : ""}
@@ -1631,9 +1634,9 @@
             <div class="route-section-head"><h3>By Lecture</h3><p>${catalogAssessments.length > 1 ? "Choose Midterm or Final, then open a block to see its lectures." : "Open Midterm, then choose the lecture you want to review."}</p></div>
             <div class="lecture-assessment-picker">
               ${catalogAssessments.map(assessment => {
-                const groups = lectureCatalog.filter(group => group.assessment === assessment);
+                const groups = lectureGroups(assessment);
                 const sessionCount = groups.reduce((total, group) => total + group.lectures.length, 0);
-                const questionCount = informaticsBank ? informaticsBank.lecture(originalEntries, groups.flatMap(group => group.lectures)).length
+                const questionCount = informaticsBank ? informaticsBank.lecture(originalEntries, groups.flatMap(group => group.lectures), assessment).length
                   : subjectId === "surgery" && assessment === "Midterm"
                   ? questions.filter(question => !question.cycle && isQuestionAvailableInLecture(question, subjectId) && groups.some(group => group.lectures.includes(question.lecture))).length
                   : subjectId === "informatics" && assessment === "Final"
@@ -1644,13 +1647,13 @@
               }).join("")}
             </div>
             ${catalogAssessments.map(assessment => `<div class="lecture-assessment-panel lecture-mix-groups" data-lecture-panel="${escapeHtml(assessment)}" hidden>
-              ${lectureCatalog.filter(group => group.assessment === assessment).map(group => `<section class="lecture-mix-group">
+              ${lectureGroups(assessment).map(group => `<section class="lecture-mix-group">
                   <h3>${escapeHtml(group.block)}</h3>
                   <div class="route-grid">
                     ${group.lectures.map(lecture => {
-                      const lecturePractice = informaticsBank?.lecture(originalEntries, [lecture]);
+                      const lecturePractice = informaticsBank?.lecture(originalEntries, [lecture], assessment);
                       const count = lecturePractice ? lecturePractice.length : subjectId === "community" && assessment === "Final" ? 0 : questions.filter(question => !question.cycle && (subjectId === "informatics" ? (question.informaticsLectures || [question.lecture]).includes(lecture) : question.lecture === lecture) && isQuestionAvailableInLecture(question, subjectId)).length;
-                      return `<button class="route-card direct-lecture-card" type="button" data-lecture="${escapeHtml(lecture)}" ${count ? "" : "disabled"}><strong>${escapeHtml(lecture)}</strong><span>${count ? questionCountLabel(count) : subjectId === "research" && assessment === "Final" ? "Lecture names only" : subjectId === "radiology" && assessment === "Final" ? "Lecture names only" : subjectId === "community" && assessment === "Final" ? "Lecture names only" : "No questions from Gift"}${lecturePractice?.length ? ` · Gift ${assessment}` : !informaticsBank && subjectId === "informatics" && count > questions.filter(question => question.lecture === lecture).length ? ` · ${questions.filter(question => question.lecture === lecture).length} primary · ${count - questions.filter(question => question.lecture === lecture).length} shared` : ""}</span></button>`;
+                      return `<button class="route-card direct-lecture-card" type="button" data-lecture="${escapeHtml(lecture)}" ${informaticsBank ? `data-assessment="${assessment}"` : ""} ${count ? "" : "disabled"}><strong>${escapeHtml(lecture)}</strong><span>${count ? questionCountLabel(count) : subjectId === "research" && assessment === "Final" ? "Lecture names only" : subjectId === "radiology" && assessment === "Final" ? "Lecture names only" : subjectId === "community" && assessment === "Final" ? "Lecture names only" : "No questions from Gift"}${lecturePractice?.length ? ` · Gift ${assessment}` : !informaticsBank && subjectId === "informatics" && count > questions.filter(question => question.lecture === lecture).length ? ` · ${questions.filter(question => question.lecture === lecture).length} primary · ${count - questions.filter(question => question.lecture === lecture).length} shared` : ""}</span></button>`;
                     }).join("")}
                   </div>
                 </section>`).join("")}
@@ -1709,7 +1712,7 @@
       });
       workspaceElement.querySelector(".lecture-mix-card")?.addEventListener("click", () => openLectureMixer(subjectId));
       workspaceElement.querySelectorAll(".direct-lecture-card").forEach(card => {
-        card.addEventListener("click", () => openLecture(subjectId, null, card.dataset.lecture));
+        card.addEventListener("click", () => openLecture(subjectId, null, card.dataset.lecture, false, card.dataset.assessment));
       });
       appState.navigation = { subjectId, cycle: null, lecture: null, mode: null, assessment: null, batch: null, title: null };
       persistState();
@@ -1781,6 +1784,7 @@
       const informaticsBank = subjectId === "informatics" ? window.GIFT445_INFORMATICS_BANK : null;
       const eligible = (informaticsBank ? informaticsBank.entries(QUESTION_BANK) : questionsFor(subjectId)).filter(question => question.lecture
         && isQuestionAvailableInLecture(question, subjectId)
+        && (!informaticsBank || question.assessment === informaticsBank.lectureAssessment(question.lecture))
         && (!cycleFilter || question.cycle === cycleFilter));
       const questions = informaticsBank ? informaticsBank.order(eligible) : eligible;
       const grouped = new Map();
@@ -1897,11 +1901,11 @@
       return shuffled;
     }
 
-    function openLecture(subjectId, cycle, lecture, resume = false) {
+    function openLecture(subjectId, cycle, lecture, resume = false, practiceAssessment = null) {
       if (subjectId === "informatics" && window.GIFT445_INFORMATICS_BANK) {
         const bank = window.GIFT445_INFORMATICS_BANK;
-        const questions = bank.lectureEntries(bank.entries(QUESTION_BANK), [lecture]);
-        const assessment = bank.lectureAssessment(lecture);
+        const assessment = practiceAssessment || bank.lectureAssessment(lecture);
+        const questions = bank.lectureEntries(bank.entries(QUESTION_BANK), [lecture], assessment);
         return openQuestionSet(lecture, questions, { subjectId, cycle, lecture, mode: "lecture", assessment, batch: null, title: lecture }, resume);
       }
       const questions = questionsFor(subjectId).filter(question => (subjectId === "informatics" ? (question.informaticsLectures || [question.lecture]).includes(lecture) : question.lecture === lecture)
@@ -1993,7 +1997,7 @@
       const currentQuestionId = appState.quiz.questionIds[appState.quiz.currentIndex];
       const informaticsBank = navigation.subjectId === "informatics" ? window.GIFT445_INFORMATICS_BANK : null;
       const ordered = navigation.mode === "batch" ? questions
-        : informaticsBank ? informaticsBank.practice(navigation.mode === "lecture-mix" ? questions : informaticsBank.order(questions), resume ? currentQuestionId : null)
+        : informaticsBank ? informaticsBank.practice(navigation.mode === "lecture-mix" || navigation.mode === "lecture" ? questions : informaticsBank.order(questions), resume ? currentQuestionId : null)
         : navigation.mode === "lecture-mix" ? questions
         : orderQuestionsNewestFirst(questions, navigation.assessment);
       const ids = ordered.map(question => question.id);
@@ -2634,8 +2638,8 @@
         const savedId = appState.quiz.questionIds[appState.quiz.currentIndex];
         const saved = QUESTION_BANK.find(question => question.id === savedId && question.subjectId === subjectId);
         if (saved && mode === "assessment" && saved.assessment !== assessment) return openCollection(subjectId, mode, saved.assessment, null, true);
-        if (saved && mode === "lecture" && (saved.lecture !== lecture || !sourceBank.isLectureQuestion(saved))) {
-          if (sourceBank.isLectureQuestion(saved)) return openLecture(subjectId, cycle, saved.lecture, true);
+        if (saved && mode === "lecture" && (saved.lecture !== lecture || saved.assessment !== assessment || !sourceBank.isLectureQuestion(saved))) {
+          if (sourceBank.isLectureQuestion(saved)) return openLecture(subjectId, cycle, saved.lecture, true, saved.assessment);
           return openCollection(subjectId, "batch", saved.assessment, saved.sourceBatch, true);
         }
         if (mode === "lecture-mix") {
@@ -2650,7 +2654,7 @@
       if (subjectId && mode === "lecture-mix" && appState.quiz.questionIds.length) return renderQuestionSetView();
       if (subjectId && ["all", "assessment", "batch"].includes(mode)) return openCollection(subjectId, mode, assessment, batch, true);
       if (subjectId && cycle && mode === "cycle") return openCycleQuestions(subjectId, cycle, true, assessment);
-      if (subjectId && lecture) return openLecture(subjectId, cycle, lecture, true);
+      if (subjectId && lecture) return openLecture(subjectId, cycle, lecture, true, assessment);
       if (subjectId && cycle) return openCycle(subjectId, cycle);
       if (subjectId) openSubject(subjectId);
     }

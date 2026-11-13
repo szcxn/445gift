@@ -327,8 +327,8 @@ renderer.workspaceElement = {innerHTML: '', classList: {add: noop}, querySelecto
 renderer.openSubject('informatics');
 assert.doesNotMatch(renderer.workspaceElement.innerHTML, /Waiting for Lecture Files|6 pending topics|Final Lecture Files|Open original lecture/);
 const cards = [...renderer.workspaceElement.innerHTML.matchAll(/class="route-card direct-lecture-card"[^>]*data-lecture="([^"]+)"/g)].map(match => match[1]);
-assert.equal(cards.length, 9);
-assert.deepEqual(cards, fixture.courseLectures.map(renderer.escapeHtml));
+assert.equal(cards.length, 14);
+assert.deepEqual(cards, [...fixture.courseLectures.slice(0, 5), ...fixture.courseLectures].map(renderer.escapeHtml));
 assert.match(renderer.workspaceElement.innerHTML, /431 original entries · 420 questions for practice/);
 assert.match(renderer.workspaceElement.innerHTML, /448 original entries · 432 questions for practice/);
 assert.match(renderer.workspaceElement.innerHTML, /838 questions for practice · 879 original entries/);

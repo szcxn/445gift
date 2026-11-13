@@ -28,7 +28,8 @@
   const midSupplements = new Map([
     ["49ebb47c0597eec58536e611f75d50cb79f5d14c7e5913a68874c45d92842d64", [5, 19]],
     ["aabae63b20b3a0be482860869864bb2b2e20984d8546ab8ef97f1068701b454f", [5, 19]],
-    ["c4ebd67e28420b13c9248f0d2e3e0e176f87aab8d5862a2b301825ae270502f6", [5, 17]]
+    ["c4ebd67e28420b13c9248f0d2e3e0e176f87aab8d5862a2b301825ae270502f6", [5, 17]],
+    ["2fbbbde2c20b705885893198c10d707bc9c008fb77fd1322a32f80fe7c92742f", [6, 8]]
   ]);
 
   function entries(bank, assessment = null) {
@@ -58,7 +59,8 @@
   function isLectureQuestion(question) {
     if (question.subjectId !== "informatics" || question.batchOnly && !question.informaticsVerifiedBatchLecture || question.hideFromLecture || !question.lecture) return false;
     const assessment = lectureAssessment(question.lecture);
-    if (!assessment || question.assessment !== assessment || originalAssessments.get(question.id) !== assessment) return false;
+    if (!assessment || !["Midterm", "Final"].includes(question.assessment) || originalAssessments.get(question.id) !== question.assessment) return false;
+    if (question.assessment === "Midterm" && assessment !== "Midterm") return false;
     const passages = question.informaticsBatch445Review?.evidence || question.informaticsFinalReview?.evidence || question.informaticsEvidence || [];
     let ownSource = false;
     for (const passage of passages) {
@@ -67,7 +69,7 @@
       if (!Number.isInteger(pdfPage) || pdfPage < 1 || !excerpts.length || excerpts.some(text => typeof text !== "string" || !text.trim())) return false;
       const source = originals.get(sourceSha256);
       if (source) {
-        if (source.assessment !== assessment || pdfPage > source.lastTeachingPage || sourceKind === "study-file") return false;
+        if (question.assessment === "Midterm" && source.assessment !== "Midterm" || pdfPage > source.lastTeachingPage || sourceKind === "study-file") return false;
         if (source.title === question.lecture) ownSource = true;
       } else {
         const limits = midSupplements.get(sourceSha256);
@@ -77,13 +79,15 @@
     return ownSource;
   }
 
-  function lectureEntries(questions, titles) {
+  function lectureEntries(questions, titles, assessment = null) {
     const selected = new Set(titles);
-    return order(questions.filter(q => selected.has(q.lecture) && isLectureQuestion(q)));
+    const ordered = order(questions.filter(q => selected.has(q.lecture)
+      && q.assessment === (assessment || lectureAssessment(q.lecture)) && isLectureQuestion(q)));
+    return assessment === "Final" ? ordered.sort((a, b) => Number(b.sourceBatch) - Number(a.sourceBatch)) : ordered;
   }
 
-  function lecture(questions, titles) {
-    return practice(lectureEntries(questions, titles));
+  function lecture(questions, titles, assessment = null) {
+    return practice(lectureEntries(questions, titles, assessment));
   }
 
   function location(question) {
