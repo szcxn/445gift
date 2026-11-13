@@ -81,8 +81,10 @@
 
   function lectureEntries(questions, titles, assessment = null) {
     const selected = new Set(titles);
-    const ordered = order(questions.filter(q => selected.has(q.lecture)
-      && q.assessment === (assessment || lectureAssessment(q.lecture)) && isLectureQuestion(q)));
+    const ordered = order(questions.filter(q => selected.has(q.lecture) && isLectureQuestion(q)
+      && (assessment === "Final" ? q.assessment === "Final"
+        : assessment === "Midterm" ? lectureAssessment(q.lecture) === "Midterm"
+        : true)));
     return assessment === "Final" ? ordered.sort((a, b) => Number(b.sourceBatch) - Number(a.sourceBatch)) : ordered;
   }
 

@@ -94,7 +94,7 @@ function assertScope(questionIds, chosenTitles, assessment = null) {
     const q = qById.get(id);
     assert.ok(originalSourceIds.has(id), id);
     assert.ok(chosenTitles.includes(q.lecture), `${id}: wrong lecture ${q.lecture}`);
-    assert.equal(q.assessment, assessment || scope[q.lecture], `${id}: ${q.assessment} Gift leaked into ${scope[q.lecture]} lecture`);
+    if (assessment === "Final" || scope[q.lecture] === "Final") assert.equal(q.assessment, "Final", id);
     const evidence = q.informaticsBatch445Review?.evidence || q.informaticsFinalReview?.evidence || q.informaticsEvidence || [];
     assert.ok(evidence.some(passage => lectureSources.get(passage.sourceSha256)?.title === q.lecture), `${id}: no original page evidence for its own lecture`);
     for (const passage of evidence) {
@@ -151,6 +151,11 @@ for (const title of titles) {
       assert.ok(card.includes(`PDF page ${e.pdfPage}`), `${id}: missing page number`);
     }
   }
+}
+for (const title of midTitles) {
+  const practice = source.lecture(bank, [title], "Midterm");
+  assert.ok(practice.some(q => q.assessment === "Midterm") && practice.some(q => q.assessment === "Final"), title);
+  assert.ok(practice.every(q => q.lecture === title));
 }
 // Cumulative Final includes the first five lectures, but never MID-bank items.
 const finalEntries = source.lectureEntries(bank, titles, "Final");
@@ -211,8 +216,7 @@ for (const title of titles) {
   assert.ok(card, `No menu card for scoped lecture ${title}`);
   const count = source.lecture(bank, [title]).length;
   assert.match(card[2], new RegExp(`\\b${count} questions?\\b`), `Menu count differs from lecture route: ${title}`);
-  const opposite = scope[title] === "Midterm" ? "Final" : "Midterm";
-  assert.doesNotMatch(card[2], new RegExp(`[1-9]\\d* Gift ${opposite}\\b`), title);
+  if (scope[title] === "Midterm") assert.match(card[2], /[1-9]\d* Gift Midterm · [1-9]\d* Gift Final/, title);
 }
 
 function runMixer(selectedTitles) {
@@ -273,9 +277,8 @@ c.resumeNavigation();
 assertResumeState(midAlias);
 assertScope(c.appState.quiz.questionIds, [midAlias.lecture]);
 
-// The old version stored Final-bank items inside MID lecture playlists.
-// Preserve the selected occurrence and saved answer, but resume it under
-// its real Final lecture or its untouched original Final batch.
+// Preserve a saved Final-bank item in comprehensive MID lecture practice.
+// A bank-only assessment view still follows the item's original exam.
 const oldCrossListed = c.window.GIFT445_INFORMATICS_FINAL_QUESTIONS.find(q => midTitles.includes(q.lecture));
 assert.ok(oldCrossListed, "Need an actual old cross-listed Final question");
 for (const mode of ["lecture", "lecture-mix", "assessment"]) {
@@ -284,9 +287,15 @@ for (const mode of ["lecture", "lecture-mix", "assessment"]) {
   c.resumeNavigation();
   assert.equal(calls.length, callCount + 1, `Legacy ${mode} did not render`);
   assertResumeState(oldCrossListed);
-  if (mode !== "lecture-mix") assert.equal(c.appState.navigation.assessment, "Final", `Legacy ${mode} retained wrong exam scope`);
-  assert.ok(c.appState.quiz.questionIds.every(id => qById.get(id).assessment === "Final"));
-  if (c.appState.navigation.mode === "lecture") assertScope(c.appState.quiz.questionIds, [c.appState.navigation.lecture], "Final");
+  if (mode === "assessment") {
+    assert.equal(c.appState.navigation.assessment, "Final");
+    assert.ok(c.appState.quiz.questionIds.every(id => qById.get(id).assessment === "Final"));
+  }
+  if (mode === "lecture") {
+    assert.equal(c.appState.navigation.assessment, "Midterm");
+    assert.ok(c.appState.quiz.questionIds.some(id => qById.get(id).assessment === "Midterm"));
+    assertScope(c.appState.quiz.questionIds, [c.appState.navigation.lecture]);
+  }
 }
 
 const goodMid = source.lecture(bank, [midTitles[0]])[0];
@@ -298,4 +307,4 @@ assertResumeState(goodMid);
 assert.equal(c.appState.navigation.mode, "lecture-mix");
 assert.deepEqual(Array.from(c.appState.quiz.questionIds), [goodMid.id, oldCrossListed.id, goodFinal.id], "Legacy mixer changed the valid saved order");
 
-console.log("PASS: all nine Informatics lecture routes and both mixers isolate the original exam and verified lecture evidence; 916 original entries and saved positions remain intact.");
+console.log("PASS: MID lectures cover both Gift banks; cumulative Final uses only Final questions; mixers and verified references agree; 916 original entries and saved positions remain intact.");

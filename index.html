@@ -1153,7 +1153,7 @@
         <span class="site-updates-label" id="site-updates-title">آخر التحديثات</span>
         <time datetime="2026-11-13">١٣ نوفمبر ٢٠٢٦</time>
       </div>
-      <p><strong>أحدث تحديث:</strong> فاينل الإنفورماتيكس يشمل المحاضرات التسع، والأسئلة مرتبة داخل كل محاضرة من أحدث دفعة للأقدم.</p>
+      <p><strong>أحدث تحديث:</strong> محاضرات ميد الإنفورماتيكس تشمل الأسئلة المرتبطة بها من قيفت الميد والفاينل.</p>
       <p><strong>تحديث سابق:</strong> إضافة ميزة مراجعة الأخطاء وعرض النتائج بعد إكمال الحل، وتجديد مراجع ميد ميديسن، ومراجعة أسئلة فاينل الإنفورماتكس وإرفاق المراجع المتاحة.</p>
       <p><strong>تحديث سابق:</strong> إضافة مادتي الراديولوجي والريسيرش: أسئلة الميد مرتبة حسب المحاضرات، مع شروح واضحة والاستدلال بالمحاضرات عند توفر الدليل، والحفاظ على إجابات القيفت الأصلية.</p>
       <p><strong>تحديث سابق:</strong> تطوير ضخم لشروح إجابات الباطنة والسيرجري للميد: عرض أبسط وأوضح للإجابة والشرح، مع الاستدلال بالسلايدات عند توفر الدليل، وتوضيح الإجابات المختلف عليها، والحفاظ على مفتاح القيفت الأصلي.</p>
@@ -1246,7 +1246,7 @@
   <script src="informatics-final-review.js?v=20261113-lecture-scope"></script>
   <script src="informatics-source-repeats.js?v=20261112-1"></script>
   <script src="informatics-mid-445.js?v=20261113-lecture-scope"></script>
-  <script src="informatics-source-navigation.js?v=20261113-cumulative-final"></script>
+  <script src="informatics-source-navigation.js?v=20261113-comprehensive-mid"></script>
   <script src="informatics-mid-source-integrity.js?v=20261112-1"></script>
   <script src="informatics-mid-lecture-audit.js?v=20261113-1"></script>
   <script>
@@ -1578,7 +1578,7 @@
 
       workspaceElement.innerHTML = (questions.length || catalogLectures.length) ? `
         ${workspaceHeader(subject.name, "Selected subject")}
-        ${informaticsBank ? `<p class="source-note">Midterm practice covers lectures 1–5. Final practice covers all nine lectures using Gift Final questions, starting with the newest batch in each lecture. The complete original papers remain under By Batch.</p>` : subjectId === "informatics" ? `<p class="source-note">${window.GIFT445_INFORMATICS_FINAL_COMPLETE ? "Lecture practice follows the nine supplied course lectures. By Batch contains every original Gift question, including older topics outside these lectures. Each question keeps its original exam, batch and key." : "Midterm practice: 376 Midterm questions + 240 Final-bank questions on Midterm topics, with slide-based explanations. Final-only questions are organized for later explanation. Each question keeps its original batch and exam label."}</p>` : ""}
+        ${informaticsBank ? `<p class="source-note">Midterm lectures include relevant questions from both Gift banks. Final lectures cover all nine lectures using Gift Final questions, starting with the newest batch in each lecture. The complete original papers remain under By Batch.</p>` : subjectId === "informatics" ? `<p class="source-note">${window.GIFT445_INFORMATICS_FINAL_COMPLETE ? "Lecture practice follows the nine supplied course lectures. By Batch contains every original Gift question, including older topics outside these lectures. Each question keeps its original exam, batch and key." : "Midterm practice: 376 Midterm questions + 240 Final-bank questions on Midterm topics, with slide-based explanations. Final-only questions are organized for later explanation. Each question keeps its original batch and exam label."}</p>` : ""}
         ${subjectId === "research" ? `<p class="source-note">Midterm lecture practice includes linked questions from both Gift banks, with explanations and checked lecture references. By Batch contains the complete original papers. Final lecture practice is a list of lecture names for later.</p>` : ""}
         ${subjectId === "radiology" ? `<p class="source-note">Midterm lecture practice follows the verified lecture list, with explanations and checked lecture references. By Batch contains the complete original papers. Final lecture practice is a list of lecture names for later.</p>` : ""}
         ${subjectId === "community" ? `<p class="source-note">Midterm lecture practice includes linked questions from both Gift banks, with explanations and checked lecture references. By Batch contains the complete original papers. Final lecture practice is a list of lecture names for later.</p>` : ""}
@@ -1653,7 +1653,7 @@
                     ${group.lectures.map(lecture => {
                       const lecturePractice = informaticsBank?.lecture(originalEntries, [lecture], assessment);
                       const count = lecturePractice ? lecturePractice.length : subjectId === "community" && assessment === "Final" ? 0 : questions.filter(question => !question.cycle && (subjectId === "informatics" ? (question.informaticsLectures || [question.lecture]).includes(lecture) : question.lecture === lecture) && isQuestionAvailableInLecture(question, subjectId)).length;
-                      return `<button class="route-card direct-lecture-card" type="button" data-lecture="${escapeHtml(lecture)}" ${informaticsBank ? `data-assessment="${assessment}"` : ""} ${count ? "" : "disabled"}><strong>${escapeHtml(lecture)}</strong><span>${count ? questionCountLabel(count) : subjectId === "research" && assessment === "Final" ? "Lecture names only" : subjectId === "radiology" && assessment === "Final" ? "Lecture names only" : subjectId === "community" && assessment === "Final" ? "Lecture names only" : "No questions from Gift"}${lecturePractice?.length ? ` · Gift ${assessment}` : !informaticsBank && subjectId === "informatics" && count > questions.filter(question => question.lecture === lecture).length ? ` · ${questions.filter(question => question.lecture === lecture).length} primary · ${count - questions.filter(question => question.lecture === lecture).length} shared` : ""}</span></button>`;
+                      return `<button class="route-card direct-lecture-card" type="button" data-lecture="${escapeHtml(lecture)}" ${informaticsBank ? `data-assessment="${assessment}"` : ""} ${count ? "" : "disabled"}><strong>${escapeHtml(lecture)}</strong><span>${count ? questionCountLabel(count) : subjectId === "research" && assessment === "Final" ? "Lecture names only" : subjectId === "radiology" && assessment === "Final" ? "Lecture names only" : subjectId === "community" && assessment === "Final" ? "Lecture names only" : "No questions from Gift"}${lecturePractice?.length ? assessment === "Midterm" ? ` · ${lecturePractice.filter(q => q.assessment === "Midterm").length} Gift Midterm · ${lecturePractice.filter(q => q.assessment === "Final").length} Gift Final` : " · Gift Final" : !informaticsBank && subjectId === "informatics" && count > questions.filter(question => question.lecture === lecture).length ? ` · ${questions.filter(question => question.lecture === lecture).length} primary · ${count - questions.filter(question => question.lecture === lecture).length} shared` : ""}</span></button>`;
                     }).join("")}
                   </div>
                 </section>`).join("")}
@@ -1784,7 +1784,6 @@
       const informaticsBank = subjectId === "informatics" ? window.GIFT445_INFORMATICS_BANK : null;
       const eligible = (informaticsBank ? informaticsBank.entries(QUESTION_BANK) : questionsFor(subjectId)).filter(question => question.lecture
         && isQuestionAvailableInLecture(question, subjectId)
-        && (!informaticsBank || question.assessment === informaticsBank.lectureAssessment(question.lecture))
         && (!cycleFilter || question.cycle === cycleFilter));
       const questions = informaticsBank ? informaticsBank.order(eligible) : eligible;
       const grouped = new Map();
@@ -2638,7 +2637,7 @@
         const savedId = appState.quiz.questionIds[appState.quiz.currentIndex];
         const saved = QUESTION_BANK.find(question => question.id === savedId && question.subjectId === subjectId);
         if (saved && mode === "assessment" && saved.assessment !== assessment) return openCollection(subjectId, mode, saved.assessment, null, true);
-        if (saved && mode === "lecture" && (saved.lecture !== lecture || saved.assessment !== assessment || !sourceBank.isLectureQuestion(saved))) {
+        if (saved && mode === "lecture" && !sourceBank.lectureEntries([saved], [lecture], assessment || sourceBank.lectureAssessment(lecture)).length) {
           if (sourceBank.isLectureQuestion(saved)) return openLecture(subjectId, cycle, saved.lecture, true, saved.assessment);
           return openCollection(subjectId, "batch", saved.assessment, saved.sourceBatch, true);
         }

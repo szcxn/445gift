@@ -214,3 +214,5 @@ Validation: `tests/informatics-lecture-scope.test.cjs` exercises all nine lectur
 ### Cumulative Informatics Final practice
 
 Final Lectures covers all nine course lectures using the original Gift Final bank. Each lecture shows its verified Final questions from newest batch to oldest, with source order retained within each batch and confirmed repeats shown once. MID lecture lists still use MID questions and MID sources. Complete source batches and saved question IDs are unchanged.
+
+MID lecture practice also includes verified Final-bank questions on lectures 1–5 for comprehensive topic coverage. The Final route and all original batch routes remain separate.
