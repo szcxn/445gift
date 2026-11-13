@@ -211,8 +211,6 @@ The native MID audit corrected placements and source excerpts, kept 21 Final-top
 
 Validation: `tests/informatics-lecture-scope.test.cjs` exercises all nine lecture routes, menu counts, scoped lecture mixes, original batch routes and saved progress. `tests/informatics-mid-lecture-audit.test.cjs` covers source conservation and the corrected or withdrawn historical assignments.
 
-### Cumulative Informatics Final practice
+### Informatics lecture groups
 
-Final Lectures covers all nine course lectures using the original Gift Final bank. Each lecture shows its verified Final questions from newest batch to oldest, with source order retained within each batch and confirmed repeats shown once. MID lecture lists still use MID questions and MID sources. Complete source batches and saved question IDs are unchanged.
-
-MID lecture practice also includes verified Final-bank questions on lectures 1–5 for comprehensive topic coverage. The Final route and all original batch routes remain separate.
+Midterm Lectures covers L1–L5 using verified questions from both Gift banks. Final Lectures covers L6–L9 using Gift Final questions, ordered newest batch first with original order within each batch. The complete Final bank is still available under Quick Review and By Batch. Original source entries, keys and saved answers are unchanged.

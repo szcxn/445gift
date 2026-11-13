@@ -157,10 +157,11 @@ for (const title of midTitles) {
   assert.ok(practice.some(q => q.assessment === "Midterm") && practice.some(q => q.assessment === "Final"), title);
   assert.ok(practice.every(q => q.lecture === title));
 }
-// Cumulative Final includes the first five lectures, but never MID-bank items.
+// Final Lectures contains L6–L9, using only Final-bank questions.
 const finalEntries = source.lectureEntries(bank, titles, "Final");
-assert.equal(finalEntries.length, 327);
-for (const title of titles) {
+assert.equal(finalEntries.length, 97);
+assert.ok(midTitles.every(title => source.lecture(bank, [title], "Final").length === 0));
+for (const title of finalTitles) {
   fresh();
   c.openLecture("informatics", null, title, false, "Final");
   assert.equal(c.appState.navigation.assessment, "Final", title);
@@ -207,8 +208,8 @@ c.openSubject("informatics");
 const menu = c.workspaceElement.innerHTML;
 assert.doesNotMatch(menu, /may draw from either file|Waiting for Lecture Files/);
 const finalPanel = menu.split('data-lecture-panel="Final"')[1];
-assert.equal((finalPanel.match(/data-assessment="Final"/g) || []).length, 9);
-assert.match(menu, /Final Lectures<\/strong><span>9 lectures/);
+assert.equal((finalPanel.match(/data-assessment="Final"/g) || []).length, 4);
+assert.match(menu, /Final Lectures<\/strong><span>4 lectures/);
 
 for (const title of titles) {
   const card = Array.from(menu.matchAll(/<button class="route-card direct-lecture-card"[^>]*data-lecture="([^"]*)"[^>]*>([\s\S]*?)<\/button>/g))
@@ -298,6 +299,13 @@ for (const mode of ["lecture", "lecture-mix", "assessment"]) {
   }
 }
 
+// A saved L1–L5 Final lecture from the earlier layout resumes in its MID topic.
+save(oldCrossListed, { mode: "lecture", lecture: oldCrossListed.lecture, assessment: "Final" });
+c.resumeNavigation();
+assertResumeState(oldCrossListed);
+assert.equal(c.appState.navigation.assessment, "Midterm");
+assert.ok(c.appState.quiz.questionIds.some(id => qById.get(id).assessment === "Midterm"));
+
 const goodMid = source.lecture(bank, [midTitles[0]])[0];
 const goodFinal = source.lecture(bank, [finalTitles[0]])[0];
 save(goodMid, { mode: "lecture-mix", lecture: null, assessment: null });
@@ -307,4 +315,4 @@ assertResumeState(goodMid);
 assert.equal(c.appState.navigation.mode, "lecture-mix");
 assert.deepEqual(Array.from(c.appState.quiz.questionIds), [goodMid.id, oldCrossListed.id, goodFinal.id], "Legacy mixer changed the valid saved order");
 
-console.log("PASS: MID lectures cover both Gift banks; cumulative Final uses only Final questions; mixers and verified references agree; 916 original entries and saved positions remain intact.");
+console.log("PASS: MID lectures cover both Gift banks; Final Lectures covers L6–L9 using Final questions; mixers and verified references agree; 916 original entries and saved positions remain intact.");

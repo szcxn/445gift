@@ -1153,7 +1153,7 @@
         <span class="site-updates-label" id="site-updates-title">آخر التحديثات</span>
         <time datetime="2026-11-13">١٣ نوفمبر ٢٠٢٦</time>
       </div>
-      <p><strong>أحدث تحديث:</strong> محاضرات ميد الإنفورماتيكس تشمل الأسئلة المرتبطة بها من قيفت الميد والفاينل.</p>
+      <p><strong>أحدث تحديث:</strong> محاضرات ميد الإنفورماتيكس الخمس تجمع أسئلة الميد والفاينل المرتبطة بها، وقسم محاضرات الفاينل يعرض الأربع الأخيرة.</p>
       <p><strong>تحديث سابق:</strong> إضافة ميزة مراجعة الأخطاء وعرض النتائج بعد إكمال الحل، وتجديد مراجع ميد ميديسن، ومراجعة أسئلة فاينل الإنفورماتكس وإرفاق المراجع المتاحة.</p>
       <p><strong>تحديث سابق:</strong> إضافة مادتي الراديولوجي والريسيرش: أسئلة الميد مرتبة حسب المحاضرات، مع شروح واضحة والاستدلال بالمحاضرات عند توفر الدليل، والحفاظ على إجابات القيفت الأصلية.</p>
       <p><strong>تحديث سابق:</strong> تطوير ضخم لشروح إجابات الباطنة والسيرجري للميد: عرض أبسط وأوضح للإجابة والشرح، مع الاستدلال بالسلايدات عند توفر الدليل، وتوضيح الإجابات المختلف عليها، والحفاظ على مفتاح القيفت الأصلي.</p>
@@ -1246,7 +1246,7 @@
   <script src="informatics-final-review.js?v=20261113-lecture-scope"></script>
   <script src="informatics-source-repeats.js?v=20261112-1"></script>
   <script src="informatics-mid-445.js?v=20261113-lecture-scope"></script>
-  <script src="informatics-source-navigation.js?v=20261113-comprehensive-mid"></script>
+  <script src="informatics-source-navigation.js?v=lecture-groups-5-4"></script>
   <script src="informatics-mid-source-integrity.js?v=20261112-1"></script>
   <script src="informatics-mid-lecture-audit.js?v=20261113-1"></script>
   <script>
@@ -1544,9 +1544,7 @@
             ? (window.GIFT445_RADIOLOGY_CATALOG || [])
           : [];
       const catalogLectures = lectureCatalog.flatMap(group => group.lectures);
-      const lectureGroups = assessment => informaticsBank && assessment === "Final"
-        ? lectureCatalog.map(group => group.assessment === "Midterm" ? { ...group, block: "Lectures 1–5 · Included in Final" } : group)
-        : lectureCatalog.filter(group => group.assessment === assessment);
+      const lectureGroups = assessment => lectureCatalog.filter(group => group.assessment === assessment);
       const catalogAssessments = [...new Set(lectureCatalog.map(group => group.assessment).filter(Boolean))];
       const cycles = [...new Set(questions.map(question => question.cycle).filter(Boolean))]
         .sort((a, b) => {
@@ -1578,7 +1576,7 @@
 
       workspaceElement.innerHTML = (questions.length || catalogLectures.length) ? `
         ${workspaceHeader(subject.name, "Selected subject")}
-        ${informaticsBank ? `<p class="source-note">Midterm lectures include relevant questions from both Gift banks. Final lectures cover all nine lectures using Gift Final questions, starting with the newest batch in each lecture. The complete original papers remain under By Batch.</p>` : subjectId === "informatics" ? `<p class="source-note">${window.GIFT445_INFORMATICS_FINAL_COMPLETE ? "Lecture practice follows the nine supplied course lectures. By Batch contains every original Gift question, including older topics outside these lectures. Each question keeps its original exam, batch and key." : "Midterm practice: 376 Midterm questions + 240 Final-bank questions on Midterm topics, with slide-based explanations. Final-only questions are organized for later explanation. Each question keeps its original batch and exam label."}</p>` : ""}
+        ${informaticsBank ? `<p class="source-note">Midterm lectures include relevant questions from both Gift banks. Final Lectures covers lectures 6–9 using Gift Final questions, starting with the newest batch in each lecture. The complete original papers remain under By Batch.</p>` : subjectId === "informatics" ? `<p class="source-note">${window.GIFT445_INFORMATICS_FINAL_COMPLETE ? "Lecture practice follows the nine supplied course lectures. By Batch contains every original Gift question, including older topics outside these lectures. Each question keeps its original exam, batch and key." : "Midterm practice: 376 Midterm questions + 240 Final-bank questions on Midterm topics, with slide-based explanations. Final-only questions are organized for later explanation. Each question keeps its original batch and exam label."}</p>` : ""}
         ${subjectId === "research" ? `<p class="source-note">Midterm lecture practice includes linked questions from both Gift banks, with explanations and checked lecture references. By Batch contains the complete original papers. Final lecture practice is a list of lecture names for later.</p>` : ""}
         ${subjectId === "radiology" ? `<p class="source-note">Midterm lecture practice follows the verified lecture list, with explanations and checked lecture references. By Batch contains the complete original papers. Final lecture practice is a list of lecture names for later.</p>` : ""}
         ${subjectId === "community" ? `<p class="source-note">Midterm lecture practice includes linked questions from both Gift banks, with explanations and checked lecture references. By Batch contains the complete original papers. Final lecture practice is a list of lecture names for later.</p>` : ""}
@@ -2638,7 +2636,7 @@
         const saved = QUESTION_BANK.find(question => question.id === savedId && question.subjectId === subjectId);
         if (saved && mode === "assessment" && saved.assessment !== assessment) return openCollection(subjectId, mode, saved.assessment, null, true);
         if (saved && mode === "lecture" && !sourceBank.lectureEntries([saved], [lecture], assessment || sourceBank.lectureAssessment(lecture)).length) {
-          if (sourceBank.isLectureQuestion(saved)) return openLecture(subjectId, cycle, saved.lecture, true, saved.assessment);
+          if (sourceBank.isLectureQuestion(saved)) return openLecture(subjectId, cycle, saved.lecture, true, sourceBank.lectureAssessment(saved.lecture));
           return openCollection(subjectId, "batch", saved.assessment, saved.sourceBatch, true);
         }
         if (mode === "lecture-mix") {
