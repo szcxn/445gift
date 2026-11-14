@@ -17998,7 +17998,7 @@
     window.GIFT445_INFORMATICS_FINAL_COMPLETE = true;
     window.GIFT445_INFORMATICS_CATALOG = catalog;
     return bank.map(question => {
-      if (question.subjectId !== "informatics" || question.assessment !== "Final" || question.batchOnly) return question;
+      if (question.subjectId !== "informatics" || question.assessment !== "Final" || question.batchOnly || question.informaticsBatch444Review) return question;
       const review = reviews[question.id];
       if (!review) return {...question, lecture: null, informaticsLectures: [], hideFromLecture: true,
         informaticsFinalOutOfScope: true, informaticsReviewStatus: "deferred"};

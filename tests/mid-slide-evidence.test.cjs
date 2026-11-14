@@ -51,7 +51,7 @@ function installFunctions(context) {
 const context = {window: {}};
 vm.createContext(context);
 for (const match of html.matchAll(/<script src="([^"?]+)/g)) {
-  if (match[1] === "informatics-mid-445.js") continue; // Separate 445 MID PDF release.
+  if (["informatics-mid-445.js", "informatics-444.js"].includes(match[1])) continue; // Separate source PDF releases.
   // Later native Gift repairs are covered by medicine-native-repairs.test.cjs.
   if (match[1] === "medicine-native-repairs.js") continue;
   const filename = path.join(root, match[1]);

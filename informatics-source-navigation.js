@@ -60,7 +60,7 @@
     if (question.subjectId !== "informatics" || question.batchOnly && !question.informaticsVerifiedBatchLecture || question.hideFromLecture || !question.lecture) return false;
     const assessment = lectureAssessment(question.lecture);
     if (!assessment || !["Midterm", "Final"].includes(question.assessment) || originalAssessments.get(question.id) !== question.assessment) return false;
-    const passages = question.informaticsBatch445Review?.evidence || question.informaticsFinalReview?.evidence || question.informaticsEvidence || [];
+    const passages = question.informaticsBatch445Review?.evidence || question.informaticsBatch444Review?.evidence || question.informaticsFinalReview?.evidence || question.informaticsEvidence || [];
     let ownSource = false;
     for (const passage of passages) {
       const { pdfPage, sourceSha256, sourceKind, quote, quoteParts } = passage;
@@ -94,7 +94,7 @@
     if (!source || !files[source.assessment]) return null;
     if (source.filename && Number.isInteger(source.pdfPage)) {
       return {
-        url: null,
+        url: source.url || null,
         title: `Gift ${source.assessment} · Batch ${source.batch}`,
         number: `Original Q${source.questionNumber}`,
         paragraph: `${source.filename} · PDF page ${source.pdfPage}${source.pdfPageEnd > source.pdfPage ? `–${source.pdfPageEnd}` : ""}`,

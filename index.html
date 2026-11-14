@@ -1242,10 +1242,11 @@
   <script src="mid-slide-evidence.js?v=20261104-mid-sources-1"></script>
   <script src="medicine-445-evidence.js?v=20261112-2"></script>
   <script src="study-tracking.js?v=1"></script>
-  <script src="informatics-final-review.js?v=20261113-lecture-scope"></script>
+  <script src="informatics-final-review.js?v=20261114-batch-444"></script>
   <script src="informatics-source-repeats.js?v=20261112-1"></script>
   <script src="informatics-mid-445.js?v=20261113-lecture-scope"></script>
-  <script src="informatics-source-navigation.js?v=lecture-mix-newest"></script>
+  <script src="informatics-444.js?v=20261114-1"></script>
+  <script src="informatics-source-navigation.js?v=20261114-batch-444"></script>
   <script src="informatics-mid-source-integrity.js?v=20261112-1"></script>
   <script src="informatics-mid-lecture-audit.js?v=lecture-mix-newest"></script>
   <script>
@@ -1276,6 +1277,7 @@
       ...(window.GIFT445_COMMUNITY_QUESTIONS || []),
       ...(window.GIFT445_INFORMATICS_QUESTIONS || []),
       ...(window.GIFT445_INFORMATICS_445_QUESTIONS || []),
+      ...(window.GIFT445_INFORMATICS_444_QUESTIONS || []),
       ...(window.GIFT445_INFORMATICS_FINAL_QUESTIONS || []),
       ...(window.GIFT445_RESEARCH_QUESTIONS || []),
       ...(window.GIFT445_RADIOLOGY_QUESTIONS || [])
@@ -2063,7 +2065,7 @@
     }
 
     function renderQuestion(question, index, total = 1, selected = appState.quiz.answers[question.id] || null) {
-      const informaticsReview = question.informaticsBatch445Review || question.informaticsFinalReview;
+      const informaticsReview = question.informaticsBatch445Review || question.informaticsBatch444Review || question.informaticsFinalReview;
       const studyReview = informaticsReview || (question.subjectId === "medicine" ? question.medicineReview : question.subjectId === "surgery" ? question.surgeryReview : question.subjectId === "research" ? question.researchReview : question.subjectId === "radiology" ? question.radiologyReview : question.subjectId === "community" ? question.communityReview : null) || question.batchReview;
       const richMedia = question.batchOnly || question.subjectId === "radiology" || question.subjectId === "community" || Boolean(informaticsReview);
       const displayOptions = studyReview ? question.options.filter(option => richMedia && (option.images || []).length || option.text.trim() && (!(question.batchOnly || question.surgeryReview || question.researchReview || question.radiologyReview || question.communityReview) || !isMissingSourceOption(option.text, question.subjectId, question.batchOnly))) : question.options;

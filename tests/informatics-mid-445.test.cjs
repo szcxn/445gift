@@ -12,6 +12,7 @@ const plain = value => JSON.parse(JSON.stringify(value));
 function loadSite(include445) {
   const c = vm.createContext({ window: {}, appState: { navigation: { mode: "batch", assessment: "Midterm", batch: "445" } } });
   for (const match of html.matchAll(/<script src="([^"?]+)/g)) {
+    if (match[1] === "informatics-444.js") continue;
     if (!include445 && match[1] === "informatics-mid-445.js") continue;
     vm.runInContext(fs.readFileSync(path.join(root, match[1]), "utf8"), c, { filename: match[1] });
   }

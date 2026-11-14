@@ -52,14 +52,16 @@ const lectureSources = new Map([
 ]);
 
 // Original file routes must not inherit lecture restrictions or repeat
-// collapsing. The two Word inventories and Batch 445 PDF give the expected order.
+// collapsing. The historical fixtures and original Batch 444 PDF numbering give the expected order.
 const expectedBatches = {
   ...midFixture.batches,
   ...Object.fromEntries(Object.entries(finalFixture.batchIds).map(([b, rows]) => [`Final|${b}`, rows])),
-  "Midterm|445": mid445Fixture.questions.map(q => `informatics-mid-445-q${String(q.number).padStart(2, "0")}`)
+  "Midterm|445": mid445Fixture.questions.map(q => `informatics-mid-445-q${String(q.number).padStart(2, "0")}`),
+  "Midterm|444": Array.from({length: 34}, (_, i) => `informatics-mid-444-q${String(i + 1).padStart(2, "0")}`),
+  "Final|444": Array.from({length: 32}, (_, i) => `informatics-final-444-q${String(i + 1).padStart(2, "0")}`)
 };
 const originalSourceIds = new Set(Object.values(expectedBatches).flat());
-assert.equal(originalSourceIds.size, 916);
+assert.equal(originalSourceIds.size, 982);
 assert.deepEqual(new Set(ids(source.entries(bank))), originalSourceIds);
 for (const [key, expected] of Object.entries(expectedBatches)) {
   const [assessment, batch] = key.split("|");
@@ -75,6 +77,7 @@ const preservedFields = ["stem", "options", "sourceAnswer", "sourceAnswerNote", 
 for (const raw of [
   ...c.window.GIFT445_INFORMATICS_QUESTIONS,
   ...c.window.GIFT445_INFORMATICS_445_QUESTIONS,
+  ...c.window.GIFT445_INFORMATICS_444_QUESTIONS,
   ...c.window.GIFT445_INFORMATICS_FINAL_QUESTIONS
 ]) {
   const actual = qById.get(raw.id);
@@ -95,7 +98,7 @@ function assertScope(questionIds, chosenTitles, assessment = null) {
     assert.ok(originalSourceIds.has(id), id);
     assert.ok(chosenTitles.includes(q.lecture), `${id}: wrong lecture ${q.lecture}`);
     if (assessment) assert.equal(scope[q.lecture], assessment, id);
-    const evidence = q.informaticsBatch445Review?.evidence || q.informaticsFinalReview?.evidence || q.informaticsEvidence || [];
+    const evidence = q.informaticsBatch445Review?.evidence || q.informaticsBatch444Review?.evidence || q.informaticsFinalReview?.evidence || q.informaticsEvidence || [];
     assert.ok(evidence.some(passage => lectureSources.get(passage.sourceSha256)?.title === q.lecture), `${id}: no original page evidence for its own lecture`);
     for (const passage of evidence) {
       const entry = lectureSources.get(passage.sourceSha256);
@@ -128,6 +131,61 @@ const fresh = () => c.appState = {
   quiz: { questionIds: [], currentIndex: 0, answers: {}, firstAnswers: {}, flagged: [] }
 };
 
+const batch444Files = {
+  Midterm: {
+    driveId: "1ONNzWI1mIe-0JzmqtKnh1KRRym3ILB5f",
+    sha256: "6363bd2c606a4d7339f5bf00adc60512f75cd419a909ed3ce2ff59a10163d83a",
+    keys: "BABBCACB-BCAABCCAADCBCAABACCAABCAB",
+    ungraded: [6, 9]
+  },
+  Final: {
+    driveId: "13AcxzJR8ftqt6_TxoCF_K961a6VgGmcZ",
+    sha256: "6b0473a6171c120f8635a7e0e520d401f6030da7b710609946a281756bc77477",
+    keys: "BBA-BBAAAAABACBBBBBBBABBABBBBCAB",
+    ungraded: [4, 10, 14]
+  }
+};
+for (const [assessment, file] of Object.entries(batch444Files)) {
+  fresh();
+  c.openCollection("informatics", "batch", assessment, "444");
+  const questions = c.questionsForBatch("informatics", assessment, "444");
+  assert.deepEqual(Array.from(c.appState.quiz.questionIds), ids(questions));
+  for (const [i, q] of questions.entries()) {
+    const num = i + 1;
+    const loc = source.location(q);
+    assert.equal(q.sourceOccurrenceIntegrity.sha256, file.sha256);
+    assert.equal(loc.url, `https://drive.google.com/file/d/${file.driveId}/view`);
+    assert.equal(loc.number, `Original Q${num}`);
+    assert.ok(source.isLectureQuestion(q), q.id);
+    assert.equal(q.sourceAnswer || "-", file.keys[i], q.id);
+    const revealed = q.options.find(o => o.text.trim()).id;
+    const card = c.renderQuestion(q, i, questions.length, revealed);
+    assert.ok(card.includes(loc.url), q.id);
+    assert.ok(card.includes(c.escapeHtml(q.informaticsBatch444Review.explanation)), q.id);
+    assert.ok(card.includes(q.informaticsBatch444Review.evidence[0].image), q.id);
+    if (file.ungraded.includes(num)) {
+      assert.match(card, /Not scored:/);
+      assert.doesNotMatch(card, /option-button[^"]*\b(?:correct|incorrect)\b/);
+    } else {
+      assert.deepEqual(plain(c.gradingAnswersForQuestion(q)), [q.sourceAnswer]);
+    }
+    for (const option of q.options.filter(o => !o.text)) {
+      assert.doesNotMatch(card, new RegExp(`data-option="${option.id}"`));
+    }
+  }
+}
+for (const [older, newer] of [["07", "23"], ["23", "28"]]) {
+  const q444 = qById.get(`informatics-mid-444-q${older}`);
+  const q445 = qById.get(`informatics-mid-445-q${newer}`);
+  const normalized = text => text.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+  assert.equal(normalized(q444.stem), normalized(q445.stem));
+  assert.deepEqual(plain(q444.options.map(o => normalized(o.text)).sort()), plain(q445.options.map(o => normalized(o.text)).sort()));
+  assert.equal(normalized(q444.options.find(o => o.id === q444.sourceAnswer).text), normalized(q445.options.find(o => o.id === q445.sourceAnswer).text));
+  assert.equal(aliases.get(q444.id), q445.id);
+  assert.ok(!source.lecture(bank, [q444.lecture]).some(q => q.id === q444.id));
+  assert.ok(source.lecture(bank, [q445.lecture]).some(q => q.id === q445.id));
+}
+
 // Exercise the live route instead of only checking a source helper.
 const scopedEntries = new Map();
 for (const title of titles) {
@@ -148,7 +206,7 @@ for (const title of titles) {
     const q = qById.get(id);
     const card = c.renderQuestion(q, i, actual.length, q.options.find(o => o.text.trim())?.id);
     assert.ok(card.includes(`Gift ${q.assessment} · Batch ${q.sourceBatch}`), `${id}: missing original source caption`);
-    const passages = q.informaticsBatch445Review?.evidence || q.informaticsFinalReview?.evidence || q.informaticsEvidence || [];
+    const passages = q.informaticsBatch445Review?.evidence || q.informaticsBatch444Review?.evidence || q.informaticsFinalReview?.evidence || q.informaticsEvidence || [];
     for (const e of passages) {
       assert.ok(card.includes(c.escapeHtml(e.image)), `${id}: verified page not displayed`);
       assert.ok(card.includes(`PDF page ${e.pdfPage}`), `${id}: missing page number`);
@@ -162,7 +220,7 @@ for (const title of titles.filter(t => !t.startsWith("Patient Safety"))) {
 }
 // Final Lectures contains L6–L9, with verified questions from either bank.
 const finalEntries = source.lectureEntries(bank, titles, "Final");
-assert.equal(finalEntries.length, 118);
+assert.equal(finalEntries.length, 130);
 assert.ok(midTitles.every(title => source.lecture(bank, [title], "Final").length === 0));
 for (const title of finalTitles) {
   fresh();
@@ -318,4 +376,4 @@ assertResumeState(goodMid);
 assert.equal(c.appState.navigation.mode, "lecture-mix");
 assert.deepEqual(Array.from(c.appState.quiz.questionIds), [goodMid.id, oldCrossListed.id, goodFinal.id], "Legacy mixer changed the valid saved order");
 
-console.log("PASS: Both lecture groups combine verified MID and Final questions by newest batch; mixers and verified references agree; 916 original entries and saved positions remain intact.");
+console.log("PASS: Both lecture groups combine verified MID and Final questions by newest batch; mixers and verified references agree; 982 original entries and saved positions remain intact.");
