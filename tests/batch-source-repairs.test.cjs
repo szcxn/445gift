@@ -1,8 +1,8 @@
 const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),vm=require('node:vm');
 const root=path.resolve(__dirname,'..'),html=fs.readFileSync(path.join(root,'index.html'),'utf8'),fixture=JSON.parse(fs.readFileSync(path.join(root,'tests/fixtures/batch-source-repairs.json')));
 const live={window:{}};vm.createContext(live);
-// The submitted Batch 444 and 445 PDFs have separate full-runtime coverage.
-for(const m of html.matchAll(/<script src="([^"?]+)/g))if(!["informatics-mid-445.js","informatics-444.js"].includes(m[1]))vm.runInContext(fs.readFileSync(path.join(root,m[1]),'utf8'),live);
+// New PDF imports are checked separately from the original bank snapshot.
+for(const m of html.matchAll(/<script src="([^"?]+)/g))if(!["informatics-mid-445.js","informatics-444.js", "midterm-444.js"].includes(m[1]))vm.runInContext(fs.readFileSync(path.join(root,m[1]),'utf8'),live);
 const plain=x=>JSON.parse(JSON.stringify(x));
 function load(name){const a=html.indexOf(`    function ${name}(`),b=html.indexOf('\n    }\n',a)+6;assert.ok(a>=0,name);vm.runInContext(html.slice(a,b),live);}
 for(const name of ['deduplicateQuestions','questionsFor','questionsForBatch','batchCountLabel','questionCountLabel','questionsForAssessment','isQuestionAvailableInLecture','newestQuestionBatch','orderQuestionsNewestFirst','openQuestionSet','openLecture','openCollection','openSubject','batchDisplayName'])load(name);

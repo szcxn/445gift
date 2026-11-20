@@ -1,7 +1,7 @@
 const assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm'),path=require('node:path'),crypto=require('node:crypto');
 const root=path.resolve(__dirname,'..'),html=fs.readFileSync(path.join(root,'index.html'),'utf8'),fixture=JSON.parse(fs.readFileSync(path.join(root,'tests/fixtures/original-batches.json'))),c={window:{}};vm.createContext(c);
-// The submitted Batch 444 and 445 PDFs have separate full-runtime coverage.
-for(const m of html.matchAll(/<script src="([^"?]+)/g))if(!["informatics-mid-445.js","informatics-444.js"].includes(m[1]))vm.runInContext(fs.readFileSync(path.join(root,m[1]),'utf8'),c);
+// New PDF imports are checked separately from the original bank snapshot.
+for(const m of html.matchAll(/<script src="([^"?]+)/g))if(!["informatics-mid-445.js","informatics-444.js","midterm-444.js"].includes(m[1]))vm.runInContext(fs.readFileSync(path.join(root,m[1]),'utf8'),c);
 function load(name){const a=html.indexOf(`    function ${name}(`),b=html.indexOf('\n    }\n',a)+6;assert.ok(a>=0,name);vm.runInContext(html.slice(a,b),c);}
 for(const n of ['deduplicateQuestions','questionsFor','questionsForBatch','questionsForAssessment','isQuestionAvailableInLecture','newestQuestionBatch','orderQuestionsNewestFirst','openQuestionSet','openCollection','batchDisplayName'])load(n);
 const start=html.indexOf('    const QUESTION_BANK ='),end=html.indexOf('\n\n',start);vm.runInContext(html.slice(start,end).replace('const QUESTION_BANK','QUESTION_BANK'),c);

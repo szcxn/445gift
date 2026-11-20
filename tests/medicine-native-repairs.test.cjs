@@ -13,6 +13,7 @@ const plain = value => JSON.parse(JSON.stringify(value));
 function siteBank(withRepairs) {
   const context = vm.createContext({ window: {} });
   for (const script of html.matchAll(/<script src="([^"?]+)/g)) {
+    if (script[1] === "midterm-444.js") continue;
     if (!withRepairs && script[1] === "medicine-native-repairs.js") continue;
     vm.runInContext(fs.readFileSync(path.join(root, script[1]), "utf8"), context);
   }
