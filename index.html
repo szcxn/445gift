@@ -1621,7 +1621,7 @@
           <section class="route-section">
             <div class="route-section-head"><h3>By Lecture</h3><p>Select several lectures and mix their questions into one test.</p></div>
             <div class="route-grid">
-              <button class="route-card featured lecture-mix-card" type="button"><strong>Create a Mixed Lecture Quiz</strong><span>Choose from ${quizLectureCount} lectures · question order is shuffled</span></button>
+              <button class="route-card featured lecture-mix-card" type="button"><strong>Create a Mixed Lecture Quiz</strong><span>Choose from ${quizLectureCount} lectures · newest batch first</span></button>
             </div>
           </section>` : ""}
         ${cycles.length ? `
@@ -1761,7 +1761,7 @@
         <section class="route-section">
           <div class="route-section-head"><h3>By Lecture</h3><p>Questions are grouped by their matching lecture.</p></div>
         <div class="route-grid">
-          ${lectures.length >= 2 ? `<button class="route-card featured cycle-lecture-mix-card" type="button"><strong>Mix ${escapeHtml(cycle)} Lectures</strong><span>Select lectures and shuffle their questions together</span></button>` : ""}
+          ${lectures.length >= 2 ? `<button class="route-card featured cycle-lecture-mix-card" type="button"><strong>Mix ${escapeHtml(cycle)} Lectures</strong><span>Select lectures · newest batch first</span></button>` : ""}
           ${lectures.map(lecture => {
             const lectureQuestions = questions.filter(question => question.lecture === lecture && (subjectId !== "medicine" || isQuestionAvailableInLecture(question, subjectId)));
             const answered = lectureQuestions.filter(question => appState.quiz.answers[question.id]).length;
@@ -1821,7 +1821,7 @@
           <button class="crumb-button" type="button" data-action="subject">${escapeHtml(subject.name)}</button><span>›</span>${cycleFilter ? `<button class="crumb-button" type="button" data-action="cycle">${escapeHtml(cycleFilter)}</button><span>›</span>` : ""}<span>Choose lectures</span>
         </nav>
         <section class="route-section">
-          <div class="route-section-head"><h3>Select two or more lectures</h3><p>${subjectId === "informatics" ? "Questions from the selected lectures are shuffled together. Original batch labels are retained." : "The quiz hides lecture names and shuffles all selected questions together."}</p></div>
+          <div class="route-section-head"><h3>Select two or more lectures</h3><p>Start with the newest available batch. Questions are shuffled within each batch.</p></div>
           <div class="lecture-mix-groups">
             ${cycles.map(cycle => {
               const lectures = [...grouped.get(cycle).entries()].sort((a, b) => (a[1].order - b[1].order) || a[0].localeCompare(b[0]));
@@ -2000,11 +2000,15 @@
       if (!questions.length) return;
       const currentQuestionId = appState.quiz.questionIds[appState.quiz.currentIndex];
       const informaticsBank = navigation.subjectId === "informatics" ? window.GIFT445_INFORMATICS_BANK : null;
-      const ordered = navigation.mode === "batch" ? questions
-        : informaticsBank ? informaticsBank.practice(navigation.mode === "lecture-mix" || navigation.mode === "lecture" ? questions : informaticsBank.order(questions), resume ? currentQuestionId : null)
-        : navigation.mode === "lecture-mix" ? questions
-        : orderQuestionsNewestFirst(questions, navigation.assessment);
-      const ids = ordered.map(question => question.id);
+      const isBatch = navigation.mode === "batch";
+      const isMix = navigation.mode === "lecture-mix";
+      const ordered = isBatch || (isMix && resume) ? questions
+        : isMix || !informaticsBank ? orderQuestionsNewestFirst(questions, navigation.assessment)
+        : navigation.mode === "lecture" ? questions : informaticsBank.order(questions);
+      const practice = informaticsBank && !isBatch
+        ? informaticsBank.practice(ordered, resume ? currentQuestionId : null)
+        : ordered;
+      const ids = practice.map(question => question.id);
       const resumeIndex = resume ? ids.indexOf(currentQuestionId) : -1;
       appState.navigation = navigation;
       appState.quiz.questionIds = ids;

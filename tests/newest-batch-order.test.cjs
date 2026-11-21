@@ -76,9 +76,22 @@ const answers=c.appState.quiz.answers,flags=c.appState.quiz.flagged;
 c.openQuestionSet('Saved',synthetic,{subjectId:'medicine',mode:'all',assessment:null},true);
 assert.equal(c.appState.quiz.questionIds[c.appState.quiz.currentIndex],'old');assert.equal(c.appState.quiz.currentIndex,1);
 assert.equal(c.appState.quiz.answers,answers);assert.equal(c.appState.quiz.flagged,flags);
-// Starting a new set starts at the newest batch; deliberately shuffled sets stay shuffled.
-reset();c.openQuestionSet('New',synthetic,{subjectId:'medicine',mode:'all'},false);assert.equal(c.appState.quiz.currentIndex,0);assert.equal(c.appState.quiz.questionIds[0],'new');
-reset();c.openQuestionSet('Mixed',synthetic,{subjectId:'medicine',mode:'lecture-mix'},false);assert.deepEqual(plain(c.appState.quiz.questionIds),['old','new','unknown']);
+// New mixes sort pre-shuffled questions by batch and keep the shuffle within each batch.
+reset();
+c.openQuestionSet('New', synthetic, { subjectId: 'medicine', mode: 'all' });
+assert.equal(c.appState.quiz.currentIndex, 0);
+assert.equal(c.appState.quiz.questionIds[0], 'new');
+const shuffled = [synthetic[0], { id: 'same-batch', sourceBatch: '444' }, synthetic[2], synthetic[1]];
+const mix = { subjectId: 'medicine', mode: 'lecture-mix' };
+reset();
+c.openQuestionSet('Mixed', shuffled, mix);
+assert.deepEqual(plain(c.appState.quiz.questionIds), ['same-batch', 'new', 'old', 'unknown']);
+assert.equal(c.appState.quiz.currentIndex, 0);
+c.appState.quiz.questionIds = shuffled.map(question => question.id);
+c.appState.quiz.currentIndex = 1;
+c.openQuestionSet('Mixed', shuffled, mix, true);
+assert.deepEqual(plain(c.appState.quiz.questionIds), shuffled.map(question => question.id));
+assert.equal(c.appState.quiz.currentIndex, 1);
 assert.equal(JSON.stringify(c.window),originalContent,'Imported questions, keys, explanations, citations, tables, or images changed');
 for(const script of html.matchAll(/<script(?:\s[^>]*)?>([\s\S]*?)<\/script>/g)) new vm.Script(script[1]);
-console.log(`PASS: newest-batch order in ${checkedSets} real question sets; all ${Object.values(counts).reduce((a,b)=>a+b,0)} displayed question IDs/content preserved (Medicine ${counts.medicine}, Surgery ${counts.surgery}, Community ${counts.community}); within-batch and shuffled order retained; saved current question, answers and flags survive reordering.`);
+console.log(`PASS: newest-batch order in ${checkedSets} real question sets; all ${Object.values(counts).reduce((a,b)=>a+b,0)} displayed question IDs/content preserved (Medicine ${counts.medicine}, Surgery ${counts.surgery}, Community ${counts.community}); within-batch shuffle and saved mix order retained; saved current question, answers and flags survive reordering.`);

@@ -310,10 +310,15 @@ function runMixer(selectedTitles) {
   start.fire("click");
   assert.equal(c.appState.navigation.mode, "lecture-mix");
   assertScope(c.appState.quiz.questionIds, selectedTitles);
-  assert.deepEqual(new Set(c.appState.quiz.questionIds), new Set(ids(source.lecture(bank, selectedTitles))));
+  const expected = source.lecture(bank, selectedTitles);
+  assert.deepEqual(new Set(c.appState.quiz.questionIds), new Set(ids(expected)));
+  const batches = Array.from(c.appState.quiz.questionIds, id => Number(qById.get(id).sourceBatch));
+  assert.deepEqual(batches, Array.from(expected, question => Number(question.sourceBatch)).sort((a, b) => b - a));
+  assert.equal(c.appState.quiz.currentIndex, 0);
 }
 runMixer(midTitles);
 runMixer(finalTitles);
+runMixer([midTitles[0], finalTitles[0]]);
 
 function save(question, navigation) {
   fresh();
