@@ -51,7 +51,7 @@ const context = {window: {}};
 vm.createContext(context);
 let extendBatchesBeforeMedicineRepairs;
 for (const match of html.matchAll(/<script src="([^"?]+)/g)) {
-  if (["informatics-mid-445.js", "informatics-444.js", "midterm-444.js"].includes(match[1])) continue; // Separate source PDF releases.
+  if (["informatics-mid-445.js", "informatics-444.js", "midterm-444.js", "site-content-review.js"].includes(match[1])) continue; // Separate source PDF releases.
   const file = path.join(root, match[1]);
   assert.ok(fs.existsSync(file), `Missing application module: ${match[1]}`);
   if (match[1] === 'medicine-native-repairs.js') {

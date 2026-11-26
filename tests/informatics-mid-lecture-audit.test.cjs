@@ -10,7 +10,7 @@ for (const [, file] of html.matchAll(/<script src="([^"?]+)/g)) {
 }
 const fn = c.window.GIFT445_AUDIT_INFORMATICS_PLACEMENT;
 assert.equal(typeof fn, 'function');
-assert.match(html, /const QUESTION_BANK = window\.GIFT445_AUDIT_INFORMATICS_PLACEMENT\(/);
+assert.match(html, /const QUESTION_BANK = [^\n]*window\.GIFT445_AUDIT_INFORMATICS_PLACEMENT\(/);
 const original = c.window.GIFT445_EXTEND_BATCH_BANK([
   ...c.window.GIFT445_INFORMATICS_QUESTIONS,
   ...c.window.GIFT445_INFORMATICS_FINAL_QUESTIONS

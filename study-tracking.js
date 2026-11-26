@@ -75,7 +75,12 @@
     const ids = [...new Set(saved.ids.filter(id => typeof id === "string" && id))];
     if (!ids.length) return null;
     const index = Number.isSafeInteger(saved.index) ? Math.max(0, Math.min(saved.index, ids.length - 1)) : 0;
-    return { ids, index, answers: answerMap(saved.answers) };
+    return {
+      ids,
+      index,
+      answers: answerMap(saved.answers),
+      ...(Number.isSafeInteger(saved.optionLayoutVersion) ? { optionLayoutVersion: saved.optionLayoutVersion } : {})
+    };
   }
 
   function saveReview(review) {

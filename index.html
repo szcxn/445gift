@@ -1242,11 +1242,11 @@
   <script src="radiology-data.js?v=20261020-radiology-mid-1"></script>
   <script src="batch-source-repairs.js?v=20261020-batch-audit-1"></script>
   <script src="original-batches.js?v=20261020-complete-batches-1"></script>
-  <script src="midterm-444.js?v=1"></script>
+  <script src="midterm-444.js?v=medicine-evidence"></script>
   <script src="medicine-native-repairs.js?v=1"></script>
   <script src="mid-slide-evidence.js?v=20261104-mid-sources-1"></script>
   <script src="medicine-445-evidence.js?v=20261112-2"></script>
-  <script src="study-tracking.js?v=1"></script>
+  <script src="study-tracking.js?v=restored-choices"></script>
   <script src="informatics-final-review.js?v=20261114-batch-444"></script>
   <script src="informatics-source-repeats.js?v=20261112-1"></script>
   <script src="informatics-mid-445.js?v=20261113-lecture-scope"></script>
@@ -1254,6 +1254,16 @@
   <script src="informatics-source-navigation.js?v=20261114-batch-444"></script>
   <script src="informatics-mid-source-integrity.js?v=20261112-1"></script>
   <script src="informatics-mid-lecture-audit.js?v=lecture-mix-newest"></script>
+  <script src="medicine-final-audit.js?v=1"></script>
+  <script src="medicine-mid-batch-review.js?v=1"></script>
+  <script src="surgery-content-review.js?v=1"></script>
+  <script src="community-batch-review.js?v=1"></script>
+  <script src="research-content-review.js?v=1"></script>
+  <script src="radiology-content-review.js?v=1"></script>
+  <script src="older-radiology-references.js?v=1"></script>
+  <script src="existing-concept-references.js?v=1"></script>
+  <script src="medicine-research-reference-audit.js?v=1"></script>
+  <script src="site-content-review.js?v=checked-references"></script>
   <script>
     const SUBJECTS = [
       { id: "medicine", name: "Medicine", code: "MED", index: "01", description: "Review the full bank or study by batch, cycle, and lecture.", color: "#087eb6" },
@@ -1276,7 +1286,7 @@
       "Hematology & Oncology"
     ];
 
-    const QUESTION_BANK = window.GIFT445_AUDIT_INFORMATICS_PLACEMENT(window.GIFT445_AUDIT_INFORMATICS_MID(window.GIFT445_COMPLETE_INFORMATICS_FINAL(window.GIFT445_COMPLETE_MID_EVIDENCE(deduplicateQuestions(window.GIFT445_EXTEND_BATCH_BANK(window.GIFT445_REPAIR_BANK([
+    const QUESTION_BANK = (window.GIFT445_REVIEW_SITE_CONTENT || (questions => questions))(window.GIFT445_AUDIT_INFORMATICS_PLACEMENT(window.GIFT445_AUDIT_INFORMATICS_MID(window.GIFT445_COMPLETE_INFORMATICS_FINAL(window.GIFT445_COMPLETE_MID_EVIDENCE(deduplicateQuestions(window.GIFT445_EXTEND_BATCH_BANK(window.GIFT445_REPAIR_BANK([
       ...(window.GIFT445_QUESTIONS || []),
       ...(window.GIFT445_SURGERY_QUESTIONS || []),
       ...(window.GIFT445_COMMUNITY_QUESTIONS || []),
@@ -1287,7 +1297,7 @@
       ...(window.GIFT445_RESEARCH_QUESTIONS || []),
       ...(window.GIFT445_RADIOLOGY_QUESTIONS || []),
       ...(window.GIFT445_MIDTERM_444_QUESTIONS || [])
-    ].filter(question => !question.excluded))))))));
+    ].filter(question => !question.excluded)))))))));
 
     function deduplicateQuestions(questions) {
       const seenIds = new Set();
@@ -1321,8 +1331,10 @@
     }
 
     const STORAGE_KEY = "gift445-progress-v1";
+    const OPTION_LAYOUT_VERSION = 1;
     const EMPTY_STATE = Object.freeze({
       version: 1,
+      optionLayoutVersion: OPTION_LAYOUT_VERSION,
       savedAt: 0,
       navigation: { subjectId: null, cycle: null, lecture: null, mode: null, assessment: null, batch: null, title: null },
       quiz: { questionIds: [], currentIndex: 0, answers: {}, firstAnswers: {}, flagged: [], mode: null }
@@ -1340,7 +1352,7 @@
     const completedQuizKeys = new Set();
     let appState = loadSavedState();
     let mistakeHistory = studyTracking.loadHistory();
-    let mistakeReview = studyTracking.loadReview();
+    let mistakeReview = loadSavedMistakeReview();
     let mistakeFilters = null;
     let mistakeSavingAvailable = true;
     let pendingMistakeWrites = 0;
@@ -1381,6 +1393,22 @@
       return JSON.parse(JSON.stringify(EMPTY_STATE));
     }
 
+    function loadSavedAnswers(value, optionLayoutVersion) {
+      const answers = studyTracking.answerMap(value);
+      if (optionLayoutVersion >= OPTION_LAYOUT_VERSION) return answers;
+      const migrated = window.GIFT445_MIGRATE_SAVED_ANSWERS?.(answers);
+      return migrated ? studyTracking.answerMap(migrated) : answers;
+    }
+
+    function loadSavedMistakeReview() {
+      const review = studyTracking.loadReview();
+      return review ? {
+        ...review,
+        optionLayoutVersion: OPTION_LAYOUT_VERSION,
+        answers: loadSavedAnswers(review.answers, review.optionLayoutVersion)
+      } : null;
+    }
+
     function loadSavedState() {
       try {
         const parsed = JSON.parse(localStorage.getItem(STORAGE_KEY));
@@ -1388,9 +1416,10 @@
         const subjectId = SUBJECTS.some(subject => subject.id === parsed.navigation?.subjectId)
           ? parsed.navigation.subjectId
           : null;
-        const answers = studyTracking.answerMap(parsed.quiz?.answers);
+        const answers = loadSavedAnswers(parsed.quiz?.answers, parsed.optionLayoutVersion);
         return {
           version: 1,
+          optionLayoutVersion: OPTION_LAYOUT_VERSION,
           savedAt: Number(parsed.savedAt) || 0,
           navigation: {
             subjectId,
@@ -1405,7 +1434,7 @@
             questionIds: Array.isArray(parsed.quiz?.questionIds) ? parsed.quiz.questionIds.filter(id => typeof id === "string") : [],
             currentIndex: Math.max(0, Number(parsed.quiz?.currentIndex) || 0),
             answers,
-            firstAnswers: studyTracking.answerMap(parsed.quiz?.firstAnswers ?? answers),
+            firstAnswers: loadSavedAnswers(parsed.quiz?.firstAnswers ?? parsed.quiz?.answers, parsed.optionLayoutVersion),
             flagged: Array.isArray(parsed.quiz?.flagged) ? parsed.quiz.flagged.filter(id => typeof id === "string") : [],
             mode: typeof parsed.quiz?.mode === "string" ? parsed.quiz.mode : null
           }
@@ -2075,11 +2104,12 @@
     }
 
     function renderQuestion(question, index, total = 1, selected = appState.quiz.answers[question.id] || null) {
+      question = globalThis.window?.GIFT445_DISPLAY_REVIEWED_QUESTION?.(question) || question;
       const informaticsReview = question.informaticsBatch445Review || question.informaticsBatch444Review || question.informaticsFinalReview;
       const giftReviewDetails = question.midterm444Review || informaticsReview;
       const studyReview = giftReviewDetails || (question.subjectId === "medicine" ? question.medicineReview : question.subjectId === "surgery" ? question.surgeryReview : question.subjectId === "research" ? question.researchReview : question.subjectId === "radiology" ? question.radiologyReview : question.subjectId === "community" ? question.communityReview : null) || question.batchReview;
-      const richMedia = question.batchOnly || question.subjectId === "radiology" || question.subjectId === "community" || Boolean(giftReviewDetails);
-      const displayOptions = studyReview ? question.options.filter(option => richMedia && (option.images || []).length || option.text.trim() && (!(question.batchOnly || question.surgeryReview || question.researchReview || question.radiologyReview || question.communityReview) || !isMissingSourceOption(option.text, question.subjectId, question.batchOnly))) : question.options;
+      const richMedia = question.batchOnly || question.medicineFinalAudit || question.subjectId === "radiology" || question.subjectId === "community" || Boolean(giftReviewDetails);
+      const displayOptions = studyReview ? question.options.filter(option => richMedia && (option.images || []).length || option.text.trim() && (!(question.batchOnly || question.medicineFinalAudit || question.surgeryReview || question.researchReview || question.radiologyReview || question.communityReview) || !isMissingSourceOption(option.text, question.subjectId, question.batchOnly))) : question.options;
       const revealed = Boolean(selected) || studyReview && !displayOptions.length;
       const acceptedAnswers = sourceAnswers(question);
       const proposedAnswers = Array.isArray(question.aiAnswer) ? question.aiAnswer : (question.aiAnswer ? [question.aiAnswer] : []);
@@ -2137,6 +2167,7 @@
           ${question.giftPdf ? `<p class="source-note"><a href="${escapeHtml(question.giftPdf.url)}" target="_blank" rel="noopener noreferrer">Source PDF ↗</a> · Q${sourceLocations[0].questionNumber} · p. ${question.giftPdf.page}${question.giftPdf.endPage > question.giftPdf.page ? `–${question.giftPdf.endPage}` : ""}</p>` : ""}
           <p class="question-stem${question.giftPdf ? " has-source-lines" : ""}">${escapeHtml(question.stem)}</p>
           ${renderSourceTables(question)}
+          ${question.reviewedDisplayNote ? `<p class="question-table-note">${escapeHtml(question.reviewedDisplayNote)}</p>` : ""}
           ${question.medicineNativeSourceNote ? `<p class="question-table-note">${escapeHtml(question.medicineNativeSourceNote)}</p>` : ""}
           ${repeatText ? `<p class="repeat-note">${escapeHtml(repeatText)}</p>` : ""}
           ${(question.images || []).length ? `<div class="question-images">${question.images.map((image, imageIndex) => richMedia ? `<a class="question-image-link" href="${escapeHtml(image)}" target="_blank" rel="noopener noreferrer" aria-label="Open question image ${imageIndex + 1} at full size"><img src="${escapeHtml(image)}" alt="Question image ${imageIndex + 1}" loading="lazy"><span>Open full-size image ↗</span></a>` : `<img src="${escapeHtml(image)}" alt="Question image ${imageIndex + 1}" loading="lazy">`).join("")}</div>` : ""}
@@ -2166,7 +2197,7 @@
             <p class="source-note">Reference: ${escapeHtml(question.sourceLabel || `${subject?.name || "Medical"} Question Bank`)}${sourceRefs ? ` · ${escapeHtml(sourceRefs)}` : ""}</p>
             ${(question.references || []).length ? `<div class="reference-list">${question.references.map(reference => `<a href="${escapeHtml(reference.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(reference.title)} ↗</a>`).join("")}</div>` : ""}
             `}${(question.answerImages || []).length ? `<div class="question-images">${question.answerImages.map((image, imageIndex) => `<a class="question-image-link" href="${escapeHtml(image)}" target="_blank" rel="noopener noreferrer" aria-label="Open answer illustration ${imageIndex + 1} at full size"><img src="${escapeHtml(image)}" alt="Answer illustration ${imageIndex + 1}" loading="lazy"><span>Open full-size illustration ↗</span></a>`).join("")}</div>` : ""}
-            ${richMedia && !displayOptions.length ? `<button class="text-button review-question-button" type="button" data-question="${question.id}" ${selected ? "disabled" : ""}>${selected ? "Reviewed" : "Mark reviewed"}</button>` : ""}
+            ${(richMedia || studyReview && question.subjectId !== "informatics") && !displayOptions.length ? `<button class="text-button review-question-button" type="button" data-question="${question.id}" ${selected ? "disabled" : ""}>${selected ? "Reviewed" : "Mark reviewed"}</button>` : ""}
           </div>
         </article>`;
     }
@@ -2197,7 +2228,8 @@
           const summary = `${kind}: ${passage.lectureTitle} · ${location}${passage.sourceSection ? ` · ${passage.sourceSection}` : ""}`;
           const notes = [
             passage.supportRole === "related" && "This passage explains related context; it does not establish the exact answer.",
-            passage.sourceKind === "study-file" && "A compiled student study file. Its wording is not presented as an original lecturer quotation."
+            passage.sourceKind === "study-file" && "A compiled student study file. Its wording is not presented as an original lecturer quotation.",
+            question.subjectId !== "informatics" && passage.note
           ].filter(Boolean);
           return renderReferenceDetails(summary, passage, location, passage.excerpts, notes);
         }).join("") : review.references.length ? "No verified course passage establishes this answer. See the supporting references below." : "No verified course passage establishes this answer; the explanation is a reviewed interpretation."}</div>
@@ -2215,8 +2247,7 @@
       </details>`;
     }
 
-    function renderMedicine445Source(question) {
-      const evidence = typeof window !== "undefined" ? window.GIFT445_MEDICINE_445_EVIDENCE?.[question.id] : null;
+    function renderMedicine445Source(question, evidence = typeof window !== "undefined" ? window.GIFT445_MEDICINE_445_EVIDENCE?.[question.id] : null) {
       if (!evidence) {
         return `<p class="source-note">No supporting passage from MED445 has been verified for this question.</p>${renderLectureEvidence(question)}`;
       }
@@ -2247,27 +2278,31 @@
         return `${escapeHtml(label)} — ${escapeHtml(text)}`;
       }).join(" or ");
       const different = review.answers.length && (review.answers.length !== key.length || review.answers.some(answer => !key.includes(answer)));
-      const med445Evidence = question.subjectId === "medicine" && typeof window !== "undefined"
+      const legacy445Evidence = question.subjectId === "medicine" && typeof window !== "undefined"
         ? window.GIFT445_MEDICINE_445_EVIDENCE?.[question.id]
         : null;
+      const med445Evidence = question.medicineReferenceChecked
+        ? (review.evidence?.verifiedCohort === "MED445" ? review.evidence : null)
+        : legacy445Evidence;
       const evidence = med445Evidence || review.evidence;
+      const explanation = question.medicineFinalAudit || question.medicineMidBatchReview || question.medicineReferenceChecked ? review.explanation : med445Evidence?.explanation || review.explanation;
       const canScore = gradingAnswersForQuestion(question).length > 0;
       const sourceParagraph = evidence?.unit === "paragraph";
       const speakerNotes = evidence?.textKind === "speaker-notes";
       const pageLabel = sourceParagraph ? "Source paragraph" : evidence?.unit === "slide" ? "Slide" : "PDF page";
       const sourceLocation = speakerNotes ? `Speaker notes for Slide ${evidence.page}` : `${pageLabel} ${evidence?.page}`;
       const evidenceImage = sourceParagraph ? null : evidence?.image;
-      const relatedSource = evidence?.relation === "background";
+      const relatedSource = ["background", "related"].includes(evidence?.relation);
       const evidenceSummary = sourceParagraph ? relatedSource ? "Related source text" : "View supporting text" : speakerNotes ? relatedSource ? "Related speaker notes" : "View supporting notes" : relatedSource ? "Related slide" : "View supporting slide";
-      const sourceExcerpt = evidence ? `${evidence.sourceSummary ? `<p class="source-note"><strong>Source summary:</strong> ${escapeHtml(evidence.sourceSummary)}</p>` : ""}${evidence.quoteKind === "summary" && !evidence.quoteParts?.length ? "" : (evidence.quoteParts || [evidence.quote]).map(quote => `<blockquote>${escapeHtml(quote)}</blockquote>`).join("")}` : "";
+      const sourceExcerpt = evidence ? `${evidence.sourceSummary ? `<p class="source-note"><strong>Source summary:</strong> ${escapeHtml(evidence.sourceSummary)}</p>` : ""}${evidence.quoteKind === "summary" && !evidence.quoteParts?.length ? "" : (evidence.quoteParts || [evidence.quote]).filter(Boolean).map(quote => `<blockquote>${escapeHtml(quote)}</blockquote>`).join("")}` : "";
       return `<div class="medicine-feedback" lang="en" dir="ltr">
         <p class="answer-summary">${bankName} answer: ${key.length ? answerText(key) : writtenGiftAnswer ? escapeHtml(writtenGiftAnswer) : "Not provided"}</p>
         ${originalNote ? `<p class="source-note">Original bank note: ${escapeHtml(originalNote)}</p>` : ""}
         ${!canScore ? `<p class="source-note">Not scored: ${escapeHtml(question.giftReview?.ungradedReason || "The original question is incomplete.")}</p>` : ""}
         ${different || review.objection ? `<div class="medicine-objection">${different ? `<strong>${review.confidence === "supported" ? "Reviewed answer" : "Suggested answer"}: ${answerText(review.answers)}</strong>` : ""}${review.objection ? `<p>${escapeHtml(review.objection)}</p>` : ""}</div>` : ""}
-        <p class="medicine-explanation"><strong>Explanation</strong>${escapeHtml(med445Evidence?.explanation || review.explanation)}</p>
-        ${question.subjectId === "medicine" && !med445Evidence && evidence ? '<p class="source-note">No supporting passage from MED445 has been verified for this question.</p>' : ""}
-        ${med445Evidence ? renderMedicine445Source(question) : `<div class="medicine-source">${evidence ? `${relatedSource ? "Related source" : "Source"}: ${escapeHtml(evidence.title)}${evidence.cohortLabel ? ` · ${escapeHtml(evidence.cohortLabel)}` : ""} · ${escapeHtml(sourceLocation)}${relatedSource ? `<p class="source-note">This source explains a related point; it does not establish the answer.</p>` : ""}<details class="medicine-slide"><summary>${evidenceSummary}</summary>${sourceExcerpt}${evidence.note ? `<p class="source-note">${escapeHtml(evidence.note)}</p>` : ""}${speakerNotes ? `<p class="source-note">The quoted text is from the lecturer's speaker notes.${evidence.imageRole === "slideContextOnly" ? " The image below shows the original slide for context; the quotation is in its notes, not on the slide itself." : " The image below shows the original notes page."}</p>` : ""}<a href="${escapeHtml(evidence.url)}" target="_blank" rel="noopener noreferrer">${sourceParagraph ? "Open full document" : "Open full lecture"} ↗</a>${evidenceImage ? `<a href="${escapeHtml(evidenceImage)}" target="_blank" rel="noopener noreferrer" aria-label="Open source image at full size"><img src="${escapeHtml(evidenceImage)}" alt="${escapeHtml(evidence.title)} — ${escapeHtml(sourceLocation)}${evidence.imageRole === "slideContextOnly" ? " (slide context only)" : ""}" loading="lazy"></a>` : ""}${evidence.slideImage ? `<a href="${escapeHtml(evidence.slideImage)}" target="_blank" rel="noopener noreferrer">Open original slide ↗</a>` : ""}</details>` : review.basis === "pending" ? "Explanation pending" : `${question.researchReview || question.radiologyReview || question.communityReview ? "Concept explanation" : "Clinical explanation"}<p class="source-note">${question.subjectId === "medicine" ? "No supporting passage from MED445 has been verified for this question." : "No verified lecture passage is attached to this explanation."}</p>`}</div>`}
+        <p class="medicine-explanation"><strong>Explanation</strong>${escapeHtml(explanation)}</p>
+        ${question.subjectId === "medicine" && !med445Evidence && evidence && !question.medicineMidBatchReview ? '<p class="source-note">No supporting passage from MED445 has been verified for this question.</p>' : ""}
+        ${med445Evidence ? renderMedicine445Source(question, med445Evidence) : `<div class="medicine-source">${evidence ? `${relatedSource ? "Related source" : "Source"}: ${escapeHtml(evidence.title)}${evidence.cohortLabel ? ` · ${escapeHtml(evidence.cohortLabel)}` : ""} · ${escapeHtml(sourceLocation)}${relatedSource ? `<p class="source-note">This source explains a related point; it does not establish the answer.</p>` : ""}<details class="medicine-slide"><summary>${evidenceSummary}</summary>${sourceExcerpt}${evidence.note ? `<p class="source-note">${escapeHtml(evidence.note)}</p>` : ""}${speakerNotes ? `<p class="source-note">The quoted text is from the lecturer's speaker notes.${evidence.imageRole === "slideContextOnly" ? " The image below shows the original slide for context; the quotation is in its notes, not on the slide itself." : " The image below shows the original notes page."}</p>` : ""}<a href="${escapeHtml(evidence.url)}" target="_blank" rel="noopener noreferrer">${sourceParagraph ? "Open full document" : "Open full lecture"} ↗</a>${evidenceImage ? `<a href="${escapeHtml(evidenceImage)}" target="_blank" rel="noopener noreferrer" aria-label="Open source image at full size"><img src="${escapeHtml(evidenceImage)}" alt="${escapeHtml(evidence.title)} — ${escapeHtml(sourceLocation)}${evidence.imageRole === "slideContextOnly" ? " (slide context only)" : ""}" loading="lazy"></a>` : ""}${evidence.slideImage ? `<a href="${escapeHtml(evidence.slideImage)}" target="_blank" rel="noopener noreferrer">Open original slide ↗</a>` : ""}</details>` : review.basis === "pending" ? "Explanation pending" : `${question.researchReview || question.radiologyReview || question.communityReview ? "Concept explanation" : "Clinical explanation"}<p class="source-note">${question.subjectId === "medicine" ? "No supporting passage from MED445 has been verified for this question." : "No verified lecture passage is attached to this explanation."}</p>`}</div>`}
         ${question.sourceTranscript ? `<details class="medicine-slide"><summary>Original question text</summary><p style="white-space:pre-wrap">${escapeHtml(question.sourceTranscript)}</p></details>` : ""}
         ${(review.references || []).length ? `<div class="reference-list">${review.references.map(reference => `<a href="${escapeHtml(reference.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(reference.title)} ↗</a>`).join("")}</div>` : ""}
         ${sourceRefs ? `<p class="source-note">${bankName} · ${escapeHtml(sourceRefs)}</p>` : ""}
@@ -2279,7 +2314,7 @@
     }
 
     function gradingAnswersForQuestion(question) {
-      if ((question.midterm444Review || question.batchOnly || question.subjectId === "informatics" || question.subjectId === "research" || question.subjectId === "radiology" || question.subjectId === "community" || question.subjectId === "medicine" && (question.assessment === "Midterm" || question.medicineMidLecture) || question.subjectId === "surgery" && question.surgeryReview) && question.giftReview?.policy === "gift-key-first") {
+      if ((question.medicineFinalAudit || question.midterm444Review || question.batchOnly || question.subjectId === "informatics" || question.subjectId === "research" || question.subjectId === "radiology" || question.subjectId === "community" || question.subjectId === "medicine" && (question.assessment === "Midterm" || question.medicineMidLecture) || question.subjectId === "surgery" && question.surgeryReview) && question.giftReview?.policy === "gift-key-first") {
         return question.giftReview.gradingAnswers;
       }
       const proposed = Array.isArray(question.aiAnswer) ? question.aiAnswer : question.aiAnswer ? [question.aiAnswer] : [];
@@ -2332,9 +2367,13 @@
     }
 
     function answerQuestion(questionId, optionId) {
-      const question = QUESTION_BANK.find(item => item.id === questionId);
-      if (!question) return;
-      const reviewOnly = (question.batchOnly || question.subjectId === "radiology" || question.subjectId === "community" || question.informaticsFinalReview) && optionId === "__reviewed__"
+      const sourceQuestion = QUESTION_BANK.find(item => item.id === questionId);
+      if (!sourceQuestion) return;
+      const question = globalThis.window?.GIFT445_DISPLAY_REVIEWED_QUESTION?.(sourceQuestion) || sourceQuestion;
+      const canReviewWithoutChoices = question.batchOnly || question.subjectId === "radiology" || question.subjectId === "community"
+        || question.informaticsFinalReview || question.subjectId !== "informatics"
+          && (question[question.subjectId + "Review"] || question.midterm444Review || question.batchReview);
+      const reviewOnly = canReviewWithoutChoices && optionId === "__reviewed__"
         && !question.options.some(option => (option.images || []).length || !isMissingSourceOption(option.text, question.subjectId, question.batchOnly));
       if (!reviewOnly && !question.options.some(option => option.id === optionId)) return;
       const wasAlreadyAnswered = Boolean(appState.quiz.answers[questionId]);
@@ -2378,6 +2417,7 @@
     }
 
     function quizScoreGrading(question) {
+      question = globalThis.window?.GIFT445_DISPLAY_REVIEWED_QUESTION?.(question) || question;
       const options = new Set(question.options.filter(option =>
         option.images?.length || !isMissingSourceOption(option.text, question.subjectId, question.batchOnly)
       ).map(option => option.id));
@@ -2577,7 +2617,7 @@
 
     function startMistakeReview(ids) {
       if (!ids.length) return;
-      mistakeReview = { ids: [...new Set(ids)], index: 0, answers: studyTracking.answerMap() };
+      mistakeReview = { ids: [...new Set(ids)], index: 0, answers: studyTracking.answerMap(), optionLayoutVersion: OPTION_LAYOUT_VERSION };
       if (!studyTracking.saveReview(mistakeReview)) mistakeSavingAvailable = false;
       renderMistakeReview(true);
     }
@@ -2707,7 +2747,7 @@
         if (workspaceElement.querySelector(".mistakes-filters")) renderMistakesView();
       }
       if ((event.key === studyTracking.REVIEW_KEY || event.key === null) && !workspaceElement.querySelector(".mistake-practice")) {
-        mistakeReview = studyTracking.loadReview();
+        mistakeReview = loadSavedMistakeReview();
         if (workspaceElement.querySelector(".mistakes-filters")) renderMistakesView();
       }
       if ((event.key === STORAGE_KEY || event.key === null) && !workspaceElement.querySelector(".question-list:not(.mistake-practice)")) {

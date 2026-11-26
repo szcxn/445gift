@@ -53,7 +53,7 @@ vm.createContext(context);
 for (const match of html.matchAll(/<script src="([^"?]+)/g)) {
   if (["informatics-mid-445.js", "informatics-444.js", "midterm-444.js"].includes(match[1])) continue; // Separate source PDF releases.
   // Later native Gift repairs are covered by medicine-native-repairs.test.cjs.
-  if (match[1] === "medicine-native-repairs.js") continue;
+  if (["medicine-native-repairs.js", "site-content-review.js"].includes(match[1])) continue;
   const filename = path.join(root, match[1]);
   assert.ok(fs.existsSync(filename), `Missing application script: ${match[1]}`);
   vm.runInContext(fs.readFileSync(filename, 'utf8'), context, {filename: match[1]});
